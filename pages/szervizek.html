@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tesla-szervizek Magyarországon — hivatalos és független szervizek listája, szűrés város és szolgáltatás szerint, értékelések." />
+    <meta property="og:title" content="Tesla szervizek Magyarországon · tm3.hu" />
+    <meta property="og:description" content="10+ magyarországi Tesla-szerviz, értékelések és időpontfoglalás egy helyen." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tm3.hu/pages/szervizek.html" />
+    <link rel="canonical" href="https://tm3.hu/pages/szervizek.html" />
+    <title>Tesla szervizek Magyarországon · tm3.hu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    
+</head>
+<body>
+    <!-- NAV: a site.js rendereli -->
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>Szerviz kereső</span>
+            </div>
+            <span class="eyebrow">Szerviz kereső</span>
+            <h1>Magyarországi Tesla-szervizek</h1>
+            <p class="lead">
+                Hivatalos Tesla Service Centerek és független, Tesla-tanúsított szervizek.
+                Szűrés város, szolgáltatás és értékelés szerint — közösségi visszajelzések alapján.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filter-bar">
+                <input type="text" id="filter-search" placeholder="🔍 Keresés (név, város, cím)…" />
+                <select id="filter-varos">
+                    <option value="">Minden város</option>
+                </select>
+                <select id="filter-tipus">
+                    <option value="">Minden típus</option>
+                    <option value="hivatalos">Hivatalos Tesla</option>
+                    <option value="specialista">Független specialista</option>
+                </select>
+                <select id="filter-szolgaltatas">
+                    <option value="">Minden szolgáltatás</option>
+                    <option value="hv-rendszer">HV akkumulátor</option>
+                    <option value="futomu">Futómű</option>
+                    <option value="fek">Fék</option>
+                    <option value="klima">Klíma</option>
+                    <option value="12v">12V akkumulátor</option>
+                    <option value="diagnosztika">Diagnosztika</option>
+                    <option value="karosszeria">Karosszéria</option>
+                </select>
+                <label>
+                    <input type="checkbox" id="filter-premium" /> Csak ajánlott
+                </label>
+            </div>
+
+            <div id="szerviz-list" class="grid grid-3"></div>
+
+            <div id="szerviz-empty" class="empty-state" style="display:none;">
+                <h3>Nincs találat</h3>
+                <p>Próbálj más szűrőfeltételeket.</p>
+            </div>
+
+            <div class="tip-box orange" style="margin-top:40px;">
+                <strong>💡 Tipp a szervizválasztáshoz:</strong> Hivatalos Tesla Service Center elsősorban
+                garanciális javításokra érdemes; független szervizek általában 30-50%-kal olcsóbbak
+                és gyorsabbak, de komoly HV-munkákhoz mindig válassz tanúsított specialistát.
+            </div>
+
+            <div class="cta-banner">
+                <h3>Szervizet üzemeltetsz?</h3>
+                <p>Jelenleg meg vagy említve az adatbázisunkban? Kérd a prémium csomagot —
+                    kiemelés a keresőben, logó, közvetlen időpontfoglalás, részletes profil.</p>
+                <a href="mailto:hello@tm3.hu?subject=Prémium szerviz csomag" class="btn btn-primary">
+                    Érdekel a prémium csomag →
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="siteFooter"></footer>
+
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/site.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script src="../assets/js/szervizek.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Magyarországi Tesla Model 3 szervizek",
+        "description": "Hivatalos Tesla Service Centerek és független, Tesla-tanúsított szervizek Magyarországon.",
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "numberOfItems": 10
+    }
+    <script>
+</body>
+</html>

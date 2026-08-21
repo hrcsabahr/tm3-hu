@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tipikus Tesla Model 3 hibák és javítási költségek — ajtókilincs, MCU, akkumulátor modul, klíma. Tünetek, árak, szerviz ajánlók." />
+    <meta property="og:title" content="Tipikus hibák és javítási költségek · tm3.hu" />
+    <meta property="og:url" content="https://tm3.hu/pages/hibak.html" />
+    <link rel="canonical" href="https://tm3.hu/pages/hibak.html" />
+    <title>Tipikus hibák · tm3.hu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    
+</head>
+<body>
+    <!-- NAV: a site.js rendereli -->
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>Tipikus hibák</span>
+            </div>
+            <span class="eyebrow">🔧 Hibák & költségek</span>
+            <h1>Tipikus Model 3 hibák és javítási költségek</h1>
+            <p class="lead">
+                Tünetek, okok, javítási költségek — és hogy melyik szerviz vállalja.
+                Közösségi visszajelzések és hivatalos adatok alapján.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filter-bar">
+                <input type="text" id="filter-search" placeholder="🔍 Keresés hiba, kategória vagy tünet alapján…" />
+                <select id="filter-kategoria">
+                    <option value="">Minden kategória</option>
+                    <option value="karosszeria">Karosszéria</option>
+                    <option value="elektronika">Elektronika</option>
+                    <option value="villamos">Villamos</option>
+                    <option value="mechanikai">Mechanikai</option>
+                    <option value="akkumulator">Akkumulátor</option>
+                </select>
+                <select id="filter-gyak">
+                    <option value="">Minden gyakoriság</option>
+                    <option value="gyakori">Gyakori</option>
+                    <option value="közepes">Közepes</option>
+                    <option value="ritka">Ritka</option>
+                    <option value="nagyon ritka">Nagyon ritka</option>
+                </select>
+            </div>
+
+            <div id="hibak-list"></div>
+            <div id="hibak-empty" class="empty-state" style="display:none;">
+                <h3>Nincs találat</h3>
+                <p>Próbálj más szűrőfeltételeket.</p>
+            </div>
+
+            <div class="tip-box orange" style="margin-top:40px;">
+                <strong>⚠ Fontos megjegyzés:</strong> Az árak tájékoztató jellegűek, EUR-ban és HUF-ban.
+                A konkrét javítási költség függ a szerviztől, a régiótól, és az autó pontos állapotától.
+                Garancia alatt (8 év / 160 000 km az akkumulátorra) a nagyjavítások ingyenesek.
+            </div>
+
+            <div class="cta-banner">
+                <h3>Találtál egy hibát, ami nincs a listán?</h3>
+                <p>Írd meg nekünk, és felvesszük a közösségi tudásbázisba. Az adataid névtelenek maradnak.</p>
+                <a href="mailto:hello@tm3.hu?subject=Új hiba beküldése" class="btn btn-primary">Új hiba beküldése →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="siteFooter"></footer>
+
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/site.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script src="../assets/js/hibak.js"></script>
+</body>
+</html>

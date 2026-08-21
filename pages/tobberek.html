@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interaktív magyarországi töltőhálózat térkép — Tesla Supercharger, Mobiliti, E.ON, Shell Recharge, Volteum. Árak, teljesítmény, valós tapasztalatok." />
+    <meta property="og:title" content="Töltő térkép · tm3.hu" />
+    <meta property="og:description" content="Minden magyarországi Tesla-kompatibilis töltő egy helyen — térképen." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tm3.hu/pages/tobberek.html" />
+    <link rel="canonical" href="https://tm3.hu/pages/tobberek.html" />
+    <title>Töltő térkép · Magyarország · tm3.hu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- NAV: a site.js rendereli -->
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>Töltő térkép</span>
+            </div>
+            <span class="eyebrow">Töltőhálózat</span>
+            <h1>Magyarországi töltők térképen</h1>
+            <p class="lead">
+                Tesla Supercharger, Mobiliti, E.ON, Shell Recharge, Volteum —
+                minden magyarországi Tesla-kompatibilis gyorstöltő egy interaktív térképen.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="map-legend">
+                <div class="legend-item"><span class="legend-dot supercharger"></span>Tesla Supercharger</div>
+                <div class="legend-item"><span class="legend-dot mobiliti"></span>Mobiliti</div>
+                <div class="legend-item"><span class="legend-dot eon"></span>E.ON Drive</div>
+                <div class="legend-item"><span class="legend-dot shell"></span>Shell Recharge</div>
+                <div class="legend-item"><span class="legend-dot volteum"></span>Volteum</div>
+            </div>
+
+            <div id="map" class="map"></div>
+
+            <div class="grid grid-3" style="margin-top:32px;">
+                <div class="tip-box green">
+                    <strong>🧊 Téli tipp — LFP lassulás:</strong> LFP (SR+) akkumulátor 0°C alatt
+                    akár 40%-kal lassabban fogad DC töltést. Használj ütemezett töltést, hogy az
+                    autó indítás előtt melegítse az akkut.
+                </div>
+                <div class="tip-box blue">
+                    <strong>⚡ V3 vs V4 Supercharger:</strong> V3 250 kW csúcs, V4 akár 350 kW-ra
+                    is képes lesz a jövőben. Magyarországon jelenleg minden SC V3-as.
+                </div>
+                <div class="tip-box">
+                    <strong>💰 Árkalkuláció:</strong> Egy 80 kWh-s akkumulátor 10→80%-os töltése
+                    V3 Supercharger-en (140 Ft/kWh) kb. 8 000 Ft-ba kerül, és ~25 perc.
+                </div>
+            </div>
+
+            <h2 style="margin: 60px 0 24px; font-size: clamp(24px, 3vw, 32px); font-weight: 800;">Töltési sebesség táblázat</h2>
+            <div style="overflow-x:auto; border:1px solid var(--border); border-radius:var(--radius-lg); background:var(--surface);">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Típus</th>
+                            <th>Csúcs teljesítmény</th>
+                            <th>10→80% idő (LR, 82 kWh)</th>
+                            <th>~ Ár (Ft/kWh)</th>
+                            <th>Ideális</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tesla V3 Supercharger</td><td><strong>250 kW</strong></td><td>~22 perc</td><td>135–155</td><td>Hosszú utak, gyors tankolás</td></tr>
+                        <tr><td>Tesla V2 Supercharger</td><td>150 kW</td><td>~32 perc</td><td>135–155</td><td>Régi helyszínek</td></tr>
+                        <tr><td>Mobiliti DC</td><td>150 kW</td><td>~30 perc</td><td>145–155</td><td>Nem-Tesla, alkalmi</td></tr>
+                        <tr><td>E.ON Drive DC</td><td>150 kW</td><td>~30 perc</td><td>150–160</td><td>Nem-Tesla, városi</td></tr>
+                        <tr><td>Shell Recharge DC</td><td>150 kW</td><td>~30 perc</td><td>160–170</td><td>Tranzit, autópálya</td></tr>
+                        <tr><td>Volteum DC</td><td>75 kW</td><td>~55 perc</td><td>140–150</td><td>Városi, olcsóbb</td></tr>
+                        <tr><td>Otthoni AC 11 kW</td><td>11 kW</td><td>~7 óra</td><td>40–70 (éjszakai)</td><td>Mindennapi</td></tr>
+                        <tr><td>Otthoni AC 7.4 kW</td><td>7.4 kW</td><td>~10 óra</td><td>40–70 (éjszakai)</td><td>1 fázis</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer id="siteFooter"></footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/site.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script src="../assets/js/tobberek.js"></script>
+</body>
+</html>

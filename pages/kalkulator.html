@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tesla Model 3 akkumulátor-degradation kalkulátor: becsült kapacitás %, várható hatótáv, összehasonlítás más tulajdonosokkal." />
+    <meta property="og:title" content="Degradation kalkulátor · tm3.hu" />
+    <meta property="og:url" content="https://tm3.hu/pages/kalkulator.html" />
+    <link rel="canonical" href="https://tm3.hu/pages/kalkulator.html" />
+    <title>Akkumulátor degradation kalkulátor · tm3.hu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    
+</head>
+<body>
+    <!-- NAV: a site.js rendereli -->
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <a href="#">Eszközök</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>Degradation kalkulátor</span>
+            </div>
+            <span class="eyebrow">🔋 Akkumulátor</span>
+            <h1>Degradation kalkulátor</h1>
+            <p class="lead">
+                Add meg az autód adatait — megbecsüljük az akkumulátor jelenlegi állapotát,
+                a várható hatótávot, és összehasonlítjuk más hasonló tulajdonosokkal.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="calc-grid">
+                <div class="calc-card calc-inputs">
+                    <h3 style="margin-bottom:24px;">Autód adatai</h3>
+
+                    <div class="calc-field">
+                        <label>Évjárat <small id="lbl-evjarat">2022</small></label>
+                        <input type="range" id="evjarat" min="2017" max="2026" step="1" value="2022" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label>Eddig megtett km <small id="lbl-km">30 000 km</small></label>
+                        <input type="range" id="km" min="0" max="250000" step="5000" value="30000" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="valtozat">Variáns</label>
+                        <select id="valtozat">
+                            <option value="sr">Model 3 SR+ (LFP, 60 kWh)</option>
+                            <option value="lr" selected>Model 3 Long Range (NCA, 82 kWh)</option>
+                            <option value="perf">Model 3 Performance (NCA, 82 kWh)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="soc">Átlagos töltési felső limit <small>(% SoC)</small></label>
+                        <select id="soc">
+                            <option value="100">100% — mindig tele</option>
+                            <option value="90" selected>90% — napi használat</option>
+                            <option value="80">80% — kímélő</option>
+                            <option value="70">70% — nagyon kímélő</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="dc-arany">DC (Supercharger) töltési arány <small id="lbl-dc">20%</small></label>
+                        <input type="range" id="dc-arany" min="0" max="100" step="5" value="20" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="klima">Klíma</label>
+                        <select id="klima">
+                            <option value="mérsékelt" selected>Mérsékelt (mediterrán)</option>
+                            <option value="hideg">Hideg tél (−10°C átlag)</option>
+                            <option value="forro">Forró nyár (+35°C átlag)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="parkol">Parkolás</label>
+                        <select id="parkol">
+                            <option value="garazs" selected>Garázs</option>
+                            <option value="utca">Utca / szabad ég</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="calc-output">
+                    <h3>Becsült akkumulátor-állapot</h3>
+                    <div class="result" id="res-kapacitas">— %</div>
+                    <div class="result-sub" id="res-kapacitas-label">Maradó kapacitás</div>
+
+                    <ul class="result-list">
+                        <li><span>Új hatótáv (WLTP):</span> <strong id="res-hatótav-új">— km</strong></li>
+                        <li><span>Jelenlegi hatótáv (becsült):</span> <strong id="res-hatótav-most">— km</strong></li>
+                        <li><span>Téli hatótáv (−5°C):</span> <strong id="res-hatótav-tél">— km</strong></li>
+                        <li><span>Autópálya hatótáv (130 km/h):</span> <strong id="res-hatótav-autóp">— km</strong></li>
+                    </ul>
+
+                    <div class="highlight" id="res-compare">
+                        <strong>📊 Helyezés a többi tulaj között:</strong>
+                        <p style="margin:8px 0 0;color:var(--text);font-size:13px;" id="res-rank">
+                            —
+                        </p>
+                    </div>
+
+                    <div style="margin-top:16px; font-size:13px; color:var(--text-muted);">
+                        A kalkuláció figyelembe veszi: a kémiát, életkort, kilométert, töltési
+                        szokásokat, klímát és parkolást. A valós érték ±3%-kal térhet el.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-box green" style="margin-top:40px;">
+                <strong>🔧 Hogyan javíthatod az akkumulátorod állapotát?</strong>
+                <ul style="margin-top:8px; padding-left:20px;">
+                    <li>Tartsd 20-80% között a mindennapi használat során (csak utazás előtt tölts 90-100%-ra)</li>
+                    <li>Csökkentsd a DC töltési arányt — használj inkább AC-t otthon</li>
+                    <li>Parkolj garázsban télen, vagy használj előmelegítést indulás előtt</li>
+                    <li>Kerüld a 100%-os SoC hosszú ideig tartó állást (pl. nyaralás előtt tölts 50%-ra)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="siteFooter"></footer>
+
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/site.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script src="../assets/js/kalkulator.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Hogyan számolja a degradation kalkulátor a kapacitást?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A kalkulátor figyelembe veszi a kémiát (LFP vs NCA), életkort, kilométert, töltési szokásokat (SoC limit), DC (Supercharger) töltés arányát, klímát és parkolási körülményeket. Az eredmény ±3%-os pontosságú a valós mérési adatokhoz képest."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Mikor kell akkumulátor modult cserélni?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A Tesla 8 év / 160 000 km garanciát vállal a 70%-os kapacitásra. Ha az akkumulátor ez alá esik, a gyári garancia keretében ingyenesen cserélik. A gyakorlatban a Model 3 akkumulátorok ritkán esnek 80% alá 300 000 km-ig."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "LFP vagy NCA akkumulátort vegyek?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Az LFP (SR+) akkumulátor lassabban öregszik, teljesen tölthető naponta, és olcsóbb, de hidegben veszít a hatótávból. Az NCA (Long Range, Performance) nagyobb hatótávú és jobban teljesít hidegben, de érzékenyebb a magas SoC-ra. Vidéki használatra az LFP, hosszú távra az NCA javasolt."
+                }
+            }
+        ]
+    }
+    <script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tesla Model 3 magyar tulajdonosi közösség — fórum, kérdezz-felelek, profil, kommentek." />
+    <meta property="og:title" content="Közösség · tm3.hu" />
+    <meta property="og:url" content="https://tm3.hu/pages/kozosseg.html" />
+    <link rel="canonical" href="https://tm3.hu/pages/kozosseg.html" />
+    <title>Közösség · tm3.hu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    
+    <script src="https://giscus.app/client.js"
+        data-repo="tm3-hu/tm3-hu.github.io"
+        data-repo-id="R_KONFIGURÁLD_A_GISCUS_APPON"
+        data-category="Általános"
+        data-category-id="DIC_KONFIGURÁLD_A_GISCUS_APPON"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="hu"
+        crossorigin="anonymous"
+        async></script>
+</head>
+<body>
+    <!-- NAV: a site.js rendereli -->
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>Közösség</span>
+            </div>
+            <span class="eyebrow">👥 Közösség</span>
+            <h1>Magyar Tesla Model 3 közösség</h1>
+            <p class="lead">
+                Kérdezz, válaszolj, oszd meg a tapasztalataidat. A fórum GitHub Discussions
+                alapon fut — ingyenes, biztonságos, és te is GitHub-fiókkal csatlakozhatsz.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-3" style="margin-bottom:48px;">
+                <div class="szerviz-card">
+                    <div class="tag">💬</div>
+                    <h3 style="margin-top:12px;">Kommentek a cikkekhez</h3>
+                    <p class="card p">Minden szekcióhoz és cikkhez GitHub Discussions alapú
+                        komment szál — közvetlenül a GitHub-fiókoddal írhatsz.</p>
+                    <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">Lásd lentebb a beágyazott fórumot.</p>
+                </div>
+                <div class="szerviz-card">
+                    <div class="tag">📝</div>
+                    <h3 style="margin-top:12px;">Saját profil</h3>
+                    <p class="card p">A fórum a GitHub-profilodat használja. Adj meg autó-típust,
+                        évjáratot és kilométert a GitHub bio-jában, hogy a többi tulaj lássa.</p>
+                    <a href="https://github.com/settings/profile" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub profil szerkesztése →</a>
+                </div>
+                <div class="szerviz-card">
+                    <div class="tag">❓</div>
+                    <h3 style="margin-top:12px;">Kérdezz-felelek (Q&A)</h3>
+                    <p class="card p">A fórum "Q&A" kategóriájában teheted fel a Model 3
+                        tulajdonlással kapcsolatos kérdéseidet, és a tapasztaltabb tulajok válaszolnak.</p>
+                </div>
+            </div>
+
+            <h2 style="margin: 0 0 24px; font-size: clamp(24px, 3vw, 32px); font-weight: 800;">Beszélgetések</h2>
+
+            <div class="tip-box blue" style="margin-bottom:24px;">
+                <strong>ℹ Hogyan működik?</strong> A kommentek a GitHub Discussions rendszerében tárolódnak.
+                Kattints a "Bejelentkezés GitHub-bal" gombra — ingyenes GitHub-fiókkal is használható.
+                Az adataid nem kerülnek hozzánk.
+            </div>
+
+            <div class="calc-card" id="giscus-container" style="min-height: 400px;">
+                <noscript>
+                    <p>A fórum megjelenítéséhez JavaScript szükséges. Alternatívaként látogasd meg
+                    <a href="https://github.com/tm3-hu/tm3-hu.github.io/discussions" target="_blank" rel="noopener" style="color:var(--accent-2);">a GitHub Discussions oldalt</a>.</p>
+                </noscript>
+            </div>
+
+            <div class="tip-box orange" style="margin-top:32px;">
+                <strong>🛠 Beállítási segédlet a GitHub Discussions integrációhoz:</strong>
+                <ol style="margin-top:8px; padding-left:20px;">
+                    <li>GitHub-on hozz létre egy <code>tm3-hu/tm3-hu.github.io</code> repót (vagy sajátot).</li>
+                    <li>Engedélyezd a Discussions funkciót a repo Settings → Features alatt.</li>
+                    <li>Telepítsd a <a href="https://giscus.app/hu" target="_blank" rel="noopener" style="color:var(--accent-2);">giscus.app</a> alkalmazást a repóra.</li>
+                    <li>Másold ki a repo-ID-t és category-ID-t, és frissítsd a fenti script tag-eket.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <footer id="siteFooter"></footer>
+
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/site.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script>
+        // Giscus átirányítása a mi containerünkbe
+        setTimeout(() => {
+            const iframes = document.querySelectorAll('iframe.giscus-frame');
+            iframes.forEach((iframe) => {
+                const container = document.getElementById('giscus-container');
+                if (container) container.appendChild(iframe);
+            });
+        }, 1500);
+    </script>
+</body>
+</html>

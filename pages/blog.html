@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tesla Magyarország hírek, szoftverfrissítések, Supercharger újdonságok, magyar tulajdonosi tapasztalatok." />
+    <meta property="og:title" content="Hírek · tm3.hu" />
+    <meta property="og:url" content="https://tm3.hu/pages/blog.html" />
+    <link rel="canonical" href="https://tm3.hu/pages/blog.html" />
+    <title>Hírek / Blog · tm3.hu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    
+</head>
+<body>
+    <!-- NAV: a site.js rendereli -->
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>Hírek</span>
+            </div>
+            <span class="eyebrow">📰 Blog</span>
+            <h1>Tesla Magyarország hírek</h1>
+            <p class="lead">
+                Supercharger újdonságok, szoftverfrissítések, új Model 3 változatok és
+                magyar tulajdonosi tapasztalatok — naprakészen.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="filter-bar">
+                <input type="text" id="filter-search" placeholder="🔍 Keresés a cikkek között…" />
+                <select id="filter-cat">
+                    <option value="">Minden kategória</option>
+                    <option value="Supercharger">Supercharger</option>
+                    <option value="Szoftver">Szoftver</option>
+                    <option value="Tippek">Tippek</option>
+                    <option value="Tulajdonosi tapasztalat">Tulajdonosi tapasztalat</option>
+                    <option value="Pénzügyek">Pénzügyek</option>
+                </select>
+            </div>
+
+            <div class="blog-grid" id="blog-grid"></div>
+            <div id="blog-empty" class="empty-state" style="display:none;">
+                <h3>Nincs találat</h3>
+            </div>
+
+            <div class="tip-box" style="margin-top:60px;">
+                <strong>📬 Hírlevél:</strong> Iratkozz fel a heti hírlevelünkre — minden vasárnap
+                összegyűjtjük a magyar Tesla-közösség számára fontos híreket.
+                <form id="newsletter-form" style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
+                    <input type="email" placeholder="email@pelda.hu" required style="flex:1;min-width:200px;background:var(--bg);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:10px 14px;font:inherit;" />
+                    <button type="submit" class="btn btn-primary btn-sm">Feliratkozom</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="siteFooter"></footer>
+
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/site.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script src="../assets/js/blog.js"></script>
+</body>
+</html>

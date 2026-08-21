@@ -1,0 +1,36 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+
+# Node / build (ha bármi JS bundler később)
+node_modules/
+dist/
+build/
+
+# Az assets/css/_legacy.css egy backup, amit a deploy után érdemes törölni
+# (egyelőre benne hagyjuk, hogy a régi oldalak is működjenek a deploy-ig)
+
+# Local config
+.env
+.env.local
+*.local
+
+# Log
+*.log
+npm-debug.log*
+
+# Backups / temp copies (don't deploy these)
+_idx.html
+script_full.js
+*_copy.*
+*_backup.*
+*.tmp
+*.bak

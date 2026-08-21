@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tesla Model 3 valós fogyasztási adatbázis — autópálya, városi, téli fogyasztások magyar tulajdonosoktól. Saját adat beküldése." />
+    <meta property="og:title" content="Fogyasztás adatbázis · tm3.hu" />
+    <meta property="og:url" content="https://tm3.hu/pages/fogyasztas.html" />
+    <link rel="canonical" href="https://tm3.hu/pages/fogyasztas.html" />
+    <title>Valós fogyasztási adatok · tm3.hu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    
+</head>
+<body>
+    <!-- NAV: a site.js rendereli -->
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <a href="#">Eszközök</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>Fogyasztás</span>
+            </div>
+            <span class="eyebrow">📊 Közösségi adatok</span>
+            <h1>Valós fogyasztási adatbázis</h1>
+            <p class="lead">
+                Magyar Model 3 tulajdonosok valós fogyasztási adatai autópályán, városban és télen.
+                Küldd be a Te adataidat — építsük együtt a legnagyobb magyar Model 3 adatbázist.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="stat-row" id="stats">
+                <div class="stat-box"><strong id="stat-count">0</strong><span>Beküldött adat</span></div>
+                <div class="stat-box"><strong id="stat-avg">—</strong><span>Átlag (kWh/100km)</span></div>
+                <div class="stat-box"><strong id="stat-hw">—</strong><span>Autópálya átlag</span></div>
+                <div class="stat-box"><strong id="stat-winter">—</strong><span>Téli átlag</span></div>
+            </div>
+
+            <h2 style="margin: 32px 0 16px; font-size: clamp(24px, 3vw, 32px); font-weight: 800;">Új adat beküldése</h2>
+            <div class="calc-card">
+                <form id="fogyForm">
+                    <div class="calc-grid">
+                        <div class="calc-inputs">
+                            <div class="calc-field">
+                                <label for="f-tipus">Út típusa</label>
+                                <select id="f-tipus" required>
+                                    <option value="autopalya">🛣️ Autópálya (130 km/h)</option>
+                                    <option value="orszagut">🚗 Országút (90 km/h)</option>
+                                    <option value="varos">🏙️ Város</option>
+                                    <option value="tel">❄️ Tél (−5°C alatt)</option>
+                                    <option value="vegyes">🔄 Vegyes</option>
+                                </select>
+                            </div>
+                            <div class="calc-field">
+                                <label for="f-valtozat">Variáns</label>
+                                <select id="f-valtozat" required>
+                                    <option value="sr">SR+ (LFP)</option>
+                                    <option value="lr">Long Range (NCA)</option>
+                                    <option value="perf">Performance (NCA)</option>
+                                </select>
+                            </div>
+                            <div class="calc-field">
+                                <label for="f-homerseklet">Külső hőmérséklet <small>(°C)</small></label>
+                                <input type="number" id="f-homerseklet" value="20" min="-30" max="50" required />
+                            </div>
+                            <div class="calc-field">
+                                <label for="f-sebesseg">Átlagsebesség <small>(km/h)</small></label>
+                                <input type="number" id="f-sebesseg" value="90" min="20" max="200" required />
+                            </div>
+                        </div>
+                        <div class="calc-inputs">
+                            <div class="calc-field">
+                                <label for="f-kwh">Fogyasztás <small>(kWh / 100 km)</small></label>
+                                <input type="number" id="f-kwh" step="0.1" min="8" max="35" required />
+                            </div>
+                            <div class="calc-field">
+                                <label for="f-tavolsag">Mért távolság <small>(km)</small></label>
+                                <input type="number" id="f-tavolsag" value="100" min="10" required />
+                            </div>
+                            <div class="calc-field">
+                                <label for="f-regen">Használsz-e regeneratív fékezést?</label>
+                                <select id="f-regen">
+                                    <option value="igen">Igen, aktívan</option>
+                                    <option value="kozepes">Közepesen</option>
+                                    <option value="nem">Nem, inkább egy láb</option>
+                                </select>
+                            </div>
+                            <div class="calc-field">
+                                <label for="f-klima">Klíma használat</label>
+                                <select id="f-klima">
+                                    <option value="0">Kikapcsolva</option>
+                                    <option value="futes">Fűtés</option>
+                                    <option value="hutes" selected>Hűtés</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+                        <button type="submit" class="btn btn-primary">📤 Beküldés</button>
+                        <button type="button" id="export-btn" class="btn btn-ghost">💾 JSON export</button>
+                        <button type="button" id="reset-btn" class="btn btn-ghost" style="color:#ef4444;">🗑️ Saját adatok törlése</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tip-box green" style="margin-top:24px;">
+                <strong>🔒 Adatvédelem:</strong> Az adatok kizárólag a böngésződben (localStorage) tárolódnak.
+                Nem küldünk semmit semmilyen szerverre — a tiéd a privát szférád. Az "Összesített statisztika"
+                csak a böngésződben tárolt adataidat és a Magyarországi átlagot mutatja.
+            </div>
+
+            <h2 style="margin: 60px 0 16px; font-size: clamp(24px, 3vw, 32px); font-weight: 800;">Saját beküldéseid</h2>
+            <div style="overflow-x:auto;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Dátum</th>
+                            <th>Típus</th>
+                            <th>Variáns</th>
+                            <th>Hőmérséklet</th>
+                            <th>Sebesség</th>
+                            <th>Fogyasztás</th>
+                            <th>Táv</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="fogy-tbody"></tbody>
+                </table>
+            </div>
+            <div id="fogy-empty" class="empty-state">
+                <h3>Még nincs beküldött adatod</h3>
+                <p>Töltsd ki a fenti űrlapot az első méréseddel!</p>
+            </div>
+
+            <div class="cta-banner" style="margin-top:60px;">
+                <h3>Szeretnéd, ha a Te adataid is megjelennének?</h3>
+                <p>Jelenleg minden adat helyi (localStorage). Ha szeretnéd, hogy a te méréseid is
+                    bekerüljenek a nyilvános statisztikákba, küldd el nekünk az exportált JSON fájlt.</p>
+                <a href="mailto:hello@tm3.hu?subject=Fogyasztás adat beküldés" class="btn btn-primary">Adatbeküldés emailben →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="siteFooter"></footer>
+
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/site.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script src="../assets/js/fogyasztas.js"></script>
+</body>
+</html>

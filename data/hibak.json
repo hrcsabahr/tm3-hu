@@ -1,0 +1,175 @@
+{
+  "meta": {
+    "updated": "2026-08-21",
+    "forras": "Tesla Motors Club fórum, P3 Charging elemzések, hazai szervizek tapasztalatai",
+    "megjegyzes": "Az árak tájékoztató jellegűek, 2026 Q2 állapot. A garanciális esetek általában ingyenesek 8 év / 160 000 km-ig a HV-akkura."
+  },
+  "hibak": [
+    {
+      "id": "ajtokilincs",
+      "kategoria": "karosszeria",
+      "cim": "Ajtókilincs hiba (flopping handle)",
+      "evjarat": "2017-2020",
+      "gyakorisag": "gyakori",
+      "tunetek": [
+        "A kilincs nem emelkedik ki, vagy nem húzható be",
+        "Kattanás hallatszik, de a kilincs nem mozdul",
+        "A kilincs kiesik a helyéről, csak bowden lóg",
+        "Fagyott kilincs téli reggeleken"
+      ],
+      "ok": "A kilincs belső mikro-kapcsolója elhasználódik, a bowden elszakadhat, a műanyag retesz eltörik.",
+      "javitás": "Készlet cseréje (komplett kilincs) vagy bowden+kapcsoló javítása",
+      "ido_orak": "1-2",
+      "ar_eur": "280-480",
+      "ar_huf": "115000-195000",
+      "megoldo_szerviz": ["budapest-bodyshop", "budapest-ev-specialist", "budapest-pest-tesla", "budapest-buda-tesla"],
+      "megelozes": "Kerülni a kilincs erőltetését, télen jégtelenítés, kéz nélküli nyitás használata kulcskártyával.",
+      "megjegyzes": "A 2021-től gyártott Model 3-asokon a kilincs-kialakítás javult, ritkább a hiba."
+    },
+    {
+      "id": "mcu-hiba",
+      "kategoria": "elektronika",
+      "cim": "MCU (Media Control Unit) meghibásodás, eMMC kopás",
+      "evjarat": "2017-2021",
+      "gyakorisag": "közepes",
+      "tunetek": [
+        "Fekete képernyő vagy lefagyás indításkor",
+        "Érintőképernyő lassú, 10-30 másodperc késleltetés",
+        "Hang hiánya, Bluetooth-problémák, telefonkönyv üres",
+        "Vezetési beállítások elfelejtése (ülés, tükrök)"
+      ],
+      "ok": "Az MCU2 fedélzeti számítógép eMMC chipje elhasználódik az intenzív írási ciklusok miatt (log-fájlok, telemetria).",
+      "javitás": "eMMC chip csere (utólagos, olcsóbb) vagy teljes MCU modul csere",
+      "ido_orak": "2-3",
+      "ar_eur": "850-1650",
+      "ar_huf": "340000-680000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech"],
+      "megelozes": "Ritkábban használt funkciók kikapcsolása (Sentry kevesebb, kamera-felvételek ritkábban).",
+      "megjegyzes": "MCU3 (2022+) már megbízhatóbb, NAND tárolóval. Tesla garancia ideje alatt ingyenes."
+    },
+    {
+      "id": "12v-akkumulator",
+      "kategoria": "villamos",
+      "cim": "12V segédakkumulátor csere",
+      "evjarat": "2017+",
+      "gyakorisag": "gyakori",
+      "tunetek": [
+        "Indítási hibák, figyelmeztető üzenetek a műszerfalon",
+        "Érintőképernyő nem kapcsol be, fekete marad",
+        "Vészvillogók folyamatosan aktívak, nem állíthatók le",
+        "Feltöltés után sem javul a helyzet"
+      ],
+      "ok": "A 12V akkumulátor (kis segédakku) 4-6 évente cserélendő. Az újabb modelleknél Li-ion, régebbieknél ólom-savas (AGM).",
+      "javitás": "12V akkumulátor csere (Li-ion vagy AGM, márkától függően)",
+      "ido_orak": "0.5-1",
+      "ar_eur": "120-220",
+      "ar_huf": "50000-90000",
+      "megoldo_szerviz": ["budapest-ev-specialist", "debrecen-green-mobility", "gyor-ev-tech", "pecs-autovillamos", "szeged-ecomotive", "miskolc-ev-center", "szekesfehervar-emobil", "budapest-pest-tesla"],
+      "megelozes": "5 évente megelőző csere, télen gyakrabban ellenőrizni a feszültséget.",
+      "megjegyzes": "2022 után a Tesla Li-ion 12V akkura váltott, élettartama 8-10 év, de cseréje drágább."
+    },
+    {
+      "id": "futomu-csavar",
+      "kategoria": "mechanikai",
+      "cim": "Felfüggesztés csavarok lazulása",
+      "evjarat": "2018-2020",
+      "gyakorisag": "ritka",
+      "tunetek": [
+        "Zörgő, kopogó hang egyenetlen úton, fekvőrendőrnél",
+        "Kormány holtjáték növekedése, bizonytalan irányítás",
+        "Futómű-ellenőrzés során laza csavarok a lengőkaroknál",
+        "Rövidebb fékút, instabil fékezés"
+      ],
+      "ok": "A felfüggesztés csavarok nem lettek megfelelő nyomatékkal meghúzva a gyárban, vagy a kopás miatt lazulnak.",
+      "javitás": "Csavarok meghúzása előírt nyomatékkal, esetenként teljes lengőkar csere",
+      "ido_orak": "1-3",
+      "ar_eur": "150-450",
+      "ar_huf": "60000-185000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "debrecen-green-mobility", "gyor-ev-tech", "szeged-ecomotive", "miskolc-ev-center", "szekesfehervar-emobil"],
+      "megelozes": "Évente egyszer futómű-ellenőrzés, 50 000 km-enként teljes átvizsgálás.",
+      "megjegyzes": "Ismert visszahívási téma a 2018-2019-es Model 3-asoknál. A Tesla időszakos TSB-ket adott ki rá."
+    },
+    {
+      "id": "hv-modul-csere",
+      "kategoria": "akkumulator",
+      "cim": "Nagyfeszültségű akkumulátor modul csere",
+      "evjarat": "2017+",
+      "gyakorisag": "nagyon ritka",
+      "tunetek": [
+        "Fokozott, hirtelen hatótávesés (korábban 400 km, most 280 km)",
+        "BMS hibaüzenetek: 'Battery needs service'",
+        "Egyenetlen cellafeszültség, nagy szórás (>30 mV modulok közt)",
+        "Töltési sebesség drasztikus csökkenése"
+      ],
+      "ok": "Cellák degradációja, gyártási hiba, vagy fizikai sérülés (alvázaszkár).",
+      "javitás": "Modulonkénti csere (általában 1-4 modul), ritkán teljes pack csere",
+      "ido_orak": "6-12",
+      "ar_eur": "5500-14000",
+      "ar_huf": "2200000-5600000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech"],
+      "megelozes": "Nem hagyni rendszeresen 5% alá az akkut, DC-töltés max 80%-ig tartása hosszú távon.",
+      "megjegyzes": "Garancia (8 év / 160 000 km) a HV-akkura általában fedezi a cella-modul cserét, ha a degradáció a küszöb feletti."
+    },
+    {
+      "id": "klimarendszer",
+      "kategoria": "villamos",
+      "cim": "Klíma kompresszor hiba",
+      "evjarat": "2017+",
+      "gyakorisag": "ritka",
+      "tunetek": [
+        "Gyenge hűtés, felforrósodott utastér nyáron",
+        "Zörgő, kattogó hang a motortérből indításkor",
+        "Hőmérséklet-ingadozás, nem tartja a beállított fokot",
+        "R1234yf hűtőközeg szivárgás (zöld olajfoltok a kompresszornál)"
+      ],
+      "ok": "Klíma kompresszor elhasználódása, csapágy kopás, vagy elektromos hiba a kompresszor vezérlőben.",
+      "javitás": "Kompresszor csere + klímatöltés + rendszer-ellenőrzés",
+      "ido_orak": "3-5",
+      "ar_eur": "1600-2800",
+      "ar_huf": "650000-1100000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "debrecen-green-mobility", "pecs-autovillamos", "szeged-ecomotive", "szekesfehervar-emobil"],
+      "megjegyzes": "A hőszivattyús (2021+) modelleken ritkábban fordul elő, de ha igen, drágább a javítás."
+    },
+    {
+      "id": "fenyezodes",
+      "kategoria": "karosszeria",
+      "cim": "Fényezési hibák, kavicsfelverődés, korrózió",
+      "evjarat": "2017+",
+      "gyakorisag": "gyakori",
+      "tunetek": [
+        "Apró kavics által okozott sérülések az autó elején, motorháztetőn",
+        "Hólyagosodás, korrózió a kerékjáratoknál, sárvédő-íveknél",
+        "Mattulás, oxidáció több év után (különösen sötétebb színeknél)",
+        "Kisebb karcok, ami az automata mosóban keletkezett"
+      ],
+      "ok": "Vékony festékréteg (környezetvédelmi előírások miatt), kavicsok, só az utakon télen.",
+      "javitás": "PPF fólia felhelyezése (megelőzés), lokális fényezés, vagy teljes átfényezés",
+      "ido_orak": "1-4",
+      "ar_eur": "320-1700",
+      "ar_huf": "130000-690000",
+      "megoldo_szerviz": ["budapest-bodyshop", "budapest-buda-tesla"],
+      "megelozes": "PPF fólia használata az elején (300-500 ezer Ft), rendszeres viaszolás, kerékjáratok védelme.",
+      "megjegyzes": "A Tesla 2022 után vastagabb festékrétegre váltott, a korai modellek különösen érzékenyek."
+    },
+    {
+      "id": "tetouveg",
+      "kategoria": "karosszeria",
+      "cim": "Tetőüveg tömítés hiba",
+      "evjarat": "2018-2020",
+      "gyakorisag": "ritka",
+      "tunetek": [
+        "Esőzéskor víz szivárog az utastérbe, csepegés a tetőpanelről",
+        "Szélzaj a tetőnél, süvítés nagy sebességnél",
+        "Párásodás a tetőüveg belső oldalán tartósan",
+        "Látható repedés, elválás a gumi tömítésnél"
+      ],
+      "ok": "A tetőüveg tömítése nem megfelelő, a ragasztóanyag idővel elöregszik, vagy gyártási hiba.",
+      "javitás": "Tömítés cseréje, szükség esetén tetőüveg újrarögzítése",
+      "ido_orak": "2-5",
+      "ar_eur": "550-1200",
+      "ar_huf": "220000-480000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-buda-tesla", "budapest-bodyshop"],
+      "megjegyzes": "Garanciális javítás, ha a tömítés gyári hibás. Utána saját költségre."
+    }
+  ]
+}

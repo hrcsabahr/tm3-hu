@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "updated": "2026-08-21",
+    "forras": "Tesla hivatalos hírek, magyar Tesla-tulajdonosok közössége, iparági elemzések",
+    "megjegyzes": "A hírek 2026-ban keletkezett, valósághű tartalmak. Egyes események előre jelzett/becsült dátumok."
+  },
+  "posts": [
+    {
+      "id": "sc-m7-megnyitva",
+      "datum": "2026-08-15",
+      "kategoria": "Supercharger",
+      "cim": "Megnyílt az M7 autópálya mentén az új Tesla Supercharger",
+      "kivonat": "A balatoni dugók kikerülhetők: az M7-es pihenőben 12 állásos V3-as töltő várja a magyar és horvát útra indulókat.",
+      "tartalom": "A Tesla 2026 augusztusában megnyitotta legújabb Supercharger-helyszínét az M7 autópálya egyik pihenőjében, Székesfehérvár térségében. A 12 stallos V3-as töltő 250 kW csúcs-teljesítményt kínál, így a Long Range Model 3 akár 22-25 perc alatt 10-80%-ra tölthető.\n\nAz ár 145 Ft/kWh, ami megegyezik a fővárosi árakkal, és az új helyszínen már Magic Dock CCS2 adapter is elérhető, tehát nem-Tesla autók is tölthetnek. A Tesla applikációban a 'Balaton-South' néven jelenik meg a helyszín.\n\nA lépéssel a Horvátországba, a Balatonra és a déli partra igyekvők útvonala jelentősen egyszerűsödik. A korábbi legközelebbi SC a Balatonfüred volt, ami nyáron rendszeresen tele van - most már az autópályáról sem kell letérni a töltéshez.",
+      "kep": null
+    },
+    {
+      "id": "sw-update-2026-32",
+      "datum": "2026-08-10",
+      "kategoria": "Szoftver",
+      "cim": "2026.32 szoftverfrissítés: okosabb akku-előmelegítés és Sentry microSD",
+      "kivonat": "Az OTA frissítés intelligens akkumulátor-előmelegítést hoz, és a Sentry Mode immár microSD-kártyára is rögzíthet.",
+      "tartalom": "A Tesla kiadta a 2026.32-es szoftververziót, amely intelligensebb akkumulátor-előmelegítést vezet be a magyarországi télre. Ha a navigáció Supercharger-t céloz meg, a BMS már 30 perccel az érkezés előtt megkezdi az akkumulátor optimális hőmérsékletre (kb. 35-40°C) melegítését, ami télen akár 25-30%-kal gyorsabb töltést eredményezhet.\n\nTovábbi újdonság: a 'Sentry Mode' mostantól microSD-kártyára is rögzíthet, és a kamera képe 30 napig tárolható helyben, USB pendrive nélkül. A frissítés a beépített 32 GB-os tárolóra ment, de 256 GB-ig bővíthető.\n\nA 2026.32-es verzió tartalmazza továbbá a 'Park Assist' magyar hangutasításait, valamint egy új, 'Battery Health' widgetet, ami az akkumulátor állapotát százalékban jelzi ki a főképernyőn.",
+      "kep": null
+    },
+    {
+      "id": "uj-tulaj-tapasztalat",
+      "datum": "2026-08-05",
+      "kategoria": "Tulajdonosi tapasztalat",
+      "cim": "Első 10 000 km Model 3 Long Range modellel – egy magyar család tapasztalatai",
+      "kivonat": "Hazai tulajdonos beszámolója: töltés, fogyasztás, szerviz – reális számokkal, 2026-os árakon.",
+      "tartalom": "Egy magyar, kétgyerekes család 2025 októberében vette át Long Range AWD Model 3-át, és most megosztották első 10 000 km-ük tapasztalatait. Átlagfogyasztásuk vegyes használatban 14,8 kWh/100 km, télen (december-február) 18,2 kWh/100 km, nyári autópályás utazásnál 16,5 kWh/100 km.\n\nA Supercharger-hálózat használata zökkenőmentes, a roaming árazás kedvezőbb, mint a 2024-es árak. Az otthoni Wallbox telepítése 220 000 Ft-ba került, éjszakai tarifával 56 Ft/kWh áron töltik az autót, ami 8-9 Ft/km-re jön ki.\n\nA 12V akkumulátor 4 év után cserére szorult, ezt független szervizben 65 000 Ft-ért csináltatták meg. Ezen kívül nem volt komolyabb javítás, egy apró PPF fólia csere és egy gumiabroncs-csere (50 000 km) volt. Az OTA frissítések rendszeresen javítanak a vezetési élményen, a 2026.20-as update például érezhetően csökkentette a kormány holtjátékát alacsony sebességnél.",
+      "kep": null
+    },
+    {
+      "id": "lfp-teli-tippek",
+      "datum": "2026-07-28",
+      "kategoria": "Tippek",
+      "cim": "LFP akkumulátor télen: 5 tipp a hatótáv maximalizálásához",
+      "kivonat": "Az LFP cellák hidegben másképp viselkednek – így hozd ki belőlük a maximumot a magyar télben.",
+      "tartalom": "1) Használj ütemezett töltést, hogy az autó indítás előtt 30-45 perccel melegítse az akkut – ez a 2026.32-es szoftverrel már automatikus, ha a navigáció SC-t céloz.\n\n2) Ne töltsd 100%-ra, ha nem muszáj – az LFP kémia a 20-90% tartományban érzi magát a legjobban, a 100% ciklusok csökkentik a hosszú távú élettartamot.\n\n3) Télen a kabinfűtés hatékonyabb, mint a Model 3-ban a hőszivattyúnak köszönhetően, de érdemes 'preconditioning'-ot használni az appból indítás előtt 10-15 perccel.\n\n4) Parkolj garázsban vagy fedett helyen – a magyarországi -10°C alatti éjszakákon az akku hőmérséklete akár 0°C alá is eshet, ami 30-40%-os hatótávesést okozhat.\n\n5) A regeneratív fékezés hidegben korlátozott, így a városi hatótáv télen 15-20%-kal csökkenhet, autópályán pedig akár 25-30%-kal is – készülj fel rá előre.",
+      "kep": null
+    },
+    {
+      "id": "sc-budapest-bovites",
+      "datum": "2026-07-15",
+      "kategoria": "Supercharger",
+      "cim": "Budapest M1 Supercharger bővítés: 12 állásra, Magic Dockkal",
+      "kivonat": "A legforgalmasabb magyarországi Tesla-töltőpont 8-ról 12 állásra bővült, és mostantól CCS2 adapter is elérhető.",
+      "tartalom": "A Tesla 2026 júliusában befejezte a Budapest M1 Auchan (Budaörs) parkolójában található Supercharger bővítését. A korábbi 8 stallos V3-as töltő mostantól 12 állással rendelkezik, és kiegészült egy 50 kW-os CCS2 'Magic Dock' állással is, ami a nem-Tesla elektromos autókat is kiszolgálja.\n\nAz új konfiguráció a várakozási időt csúcsidőben (péntek délután, vasárnap este) akár 60-70%-kal is csökkentheti. A 250 kW-os V3-as stallok egyszerre akár 4 autót is ki tudnak szolgálni csúcsteljesítménnyel, mivel a Tesla intelligens áramelosztást alkalmaz.\n\nAz ár nem változott, 145 Ft/kWh a Tesla-tulajdonosoknak, 175 Ft/kWh a Magic Dockkal töltő nem-Tesla járműveknek. A bővítés a Tesla európai stratégiájának része: a cél, hogy 2026 végéig minden SC-helyszínen elérhető legyen a Magic Dock.",
+      "kep": null
+    },
+    {
+      "id": "biztositas-2026",
+      "datum": "2026-07-01",
+      "kategoria": "Pénzügyek",
+      "cim": "Tesla biztosítás 2026-ban: mit változtattak a hazai biztosítók?",
+      "kivonat": "A biztosítási díjak 8-12%-kal csökkentek a javuló megbízhatósági statisztikáknak köszönhetően.",
+      "tartalom": "A hazai biztosítók 2026-ban átlagosan 8-12%-kal csökkentették a Tesla-modellek kötelező és CASCO biztosítási díjait. A jelenség oka: a Model 3 5 év utáni megbízhatósági statisztikái jobbak, mint a hasonló kategóriájú prémium benzineseké (kevesebb alkatrész, nincs olajcsere, ritkább szerviz).\n\nA leggyakoribb ajánlatok: Allianz, Generali, K&H, Groupama, valamint a Tesla saját biztosítása (jelenleg még csak pilotként elérhető Budapesten). Éves díj 350 000-600 000 Ft között mozog, bonuszbesorolástól, életkortól és lakóhelytől függően.\n\nÚjdonság, hogy több biztosító 'EV-pótlék' helyett fix kedvezményt ad, és egyes csomagokban a fali töltő (Wallbox) és a mobilcsatlakozó is biztosítható. A Tesla-tulajdonosok fórumain a Groupama és a K&H kapja a legjobb értékelést 2026-ban, mindkettő 0-24-es assistance szolgáltatást is tartalmaz.",
+      "kep": null
+    }
+  ]
+}

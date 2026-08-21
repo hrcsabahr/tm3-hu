@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tesla Model 3 SR+, Long Range és Performance - reszponzív one-page: akkumulátor, hatótáv, töltés, degradation, szerviz." />
+    <meta property="og:title" content="Tesla Model 3 — Minden, amit tudni érdemes (2024)" />
+    <meta property="og:description" content="Magyar Tesla Model 3 tudásbázis: akkumulátor, degradation, TCO, szervizek." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://tm3.hu/assets/img/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tesla Model 3 — Minden, amit tudni érdemes" />
+    <meta name="twitter:description" content="Magyar Tesla Model 3 tudásbázis, szervizek, töltők és kalkulátorok." />
+    <meta name="twitter:image" content="https://tm3.hu/assets/img/og-image.svg" />
+    <title>Tesla Model 3 — Minden, amit tudni érdemes (2024)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/design-system.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/_legacy.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- NAV: a site.js rendereli (lásd: assets/js/site.js) -->
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-inner">
+            <span class="hero-eyebrow">
+                <span class="dot"></span>
+                2024-es frissítés
+            </span>
+            <h1 class="hero-title">
+                Tesla Model 3<br />
+                <span class="accent">SR+ · Long Range · Performance</span>
+            </h1>
+            <p class="hero-sub">
+                Minden, amit a világ legnépszerűbb elektromos autójáról tudni érdemes —
+                akkumulátor-kémia, valós hatótáv, degradation, töltési görbék és
+                üzemeltetési költségek egy helyen.
+            </p>
+            <div class="hero-cta">
+                <a href="#variants" class="btn btn--primary">Variánsok összehasonlítása</a>
+                <a href="#cells" class="btn btn--ghost">Akkumulátor technológia →</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="label">WLTP max hatótáv</div>
+                    <div class="value">629<span class="unit">km</span></div>
+                </div>
+                <div class="hero-stat">
+                    <div class="label">Performance végsebesség</div>
+                    <div class="value">261<span class="unit">km/h</span></div>
+                </div>
+                <div class="hero-stat">
+                    <div class="label">0–100 km/h</div>
+                    <div class="value">3.3<span class="unit">s</span></div>
+                </div>
+                <div class="hero-stat">
+                    <div class="label">DC csúcs töltés</div>
+                    <div class="value">250<span class="unit">kW</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true">
+            <span>Görgess</span>
+            <span class="line"></span>
+        </div>
+    </section>
+
+    <!-- ===== VARIANTS ===== -->
+    <section id="variants" class="section">
+        <div class="container">
+            <header class="section-head">
+                <h2>A három variáns</h2>
+                <p>Válaszd ki, hogyan szeretnél vezetni — városban, országúton vagy a pályán.</p>
+            </header>
+
+            <div class="variant-grid">
+                <article class="variant-card" data-variant="sr">
+                    <div class="variant-tag">Belépő szint</div>
+                    <h3>Model 3 SR+</h3>
+                    <p class="variant-sub">RWD · LFP akkumulátor</p>
+                    <ul class="variant-specs">
+                        <li><span>WLTP hatótáv</span><strong>510 km</strong></li>
+                        <li><span>0–100 km/h</span><strong>6.1 s</strong></li>
+                        <li><span>Végsebesség</span><strong>201 km/h</strong></li>
+                        <li><span>Akkumulátor (hasznos)</span><strong>60 kWh</strong></li>
+                        <li><span>DC csúcs töltés</span><strong>170 kW</strong></li>
+                        <li><span>Induló ár (EU)</span><strong>~ €39 990</strong></li>
+                    </ul>
+                </article>
+
+                <article class="variant-card highlight" data-variant="lr">
+                    <div class="variant-tag best">Legjobb ár/érték</div>
+                    <h3>Model 3 Long Range</h3>
+                    <p class="variant-sub">AWD · NCA / NCM811</p>
+                    <ul class="variant-specs">
+                        <li><span>WLTP hatótáv</span><strong>629 km</strong></li>
+                        <li><span>0–100 km/h</span><strong>4.4 s</strong></li>
+                        <li><span>Végsebesség</span><strong>233 km/h</strong></li>
+                        <li><span>Akkumulátor (hasznos)</span><strong>82 kWh</strong></li>
+                        <li><span>DC csúcs töltés</span><strong>250 kW</strong></li>
+                        <li><span>Induló ár (EU)</span><strong>~ €49 990</strong></li>
+                    </ul>
+                </article>
+
+                <article class="variant-card" data-variant="perf">
+                    <div class="variant-tag sport">Sport változat</div>
+                    <h3>Model 3 Performance</h3>
+                    <p class="variant-sub">AWD · Track szoftver</p>
+                    <ul class="variant-specs">
+                        <li><span>WLTP hatótáv</span><strong>528 km</strong></li>
+                        <li><span>0–100 km/h</span><strong>3.3 s</strong></li>
+                        <li><span>Végsebesség</span><strong>261 km/h</strong></li>
+                        <li><span>Akkumulátor (hasznos)</span><strong>82 kWh</strong></li>
+                        <li><span>DC csúcs töltés</span><strong>250 kW</strong></li>
+                        <li><span>Induló ár (EU)</span><strong>~ €59 990</strong></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BATTERY CELL TYPES ===== -->
+    <section id="cells" class="section section-alt">
+        <div class="container">
+            <header class="section-head">
+                <h2>Akkumulátor cellatípusok</h2>
+                <p>Három fő kémia — más energiasűrűség, más élettartam, más klíma-tolerancia.</p>
+            </header>
+
+            <div class="cell-grid">
+                <div class="cell-card">
+                    <div class="cell-badge lfp">LFP</div>
+                    <h3>Lítium-vas-foszfát</h3>
+                    <p class="cell-formula">LiFePO₄</p>
+                    <div class="cell-pros">
+                        <h4>✅ Előnyök</h4>
+                        <ul>
+                            <li>3 000+ töltési ciklus (extrém hosszú élettartam)</li>
+                            <li>100%-ra tölthető naponta károsodás nélkül</li>
+                            <li>Jobb hideg-meleg stabilitás, kisebb tűzveszély</li>
+                            <li>Olcsóbb, kobalmentes</li>
+                        </ul>
+                    </div>
+                    <div class="cell-cons">
+                        <h4>⚠ Hátrányok</h4>
+                        <ul>
+                            <li>Alacsonyabb energiasűrűség (~160 Wh/kg)</li>
+                            <li>Hidegben érezhető hatótávesés</li>
+                            <li>Lassabb DC töltés elfogadható tartományban</li>
+                        </ul>
+                    </div>
+                    <div class="cell-use">Model 3 SR+ (2023-tól, CATL)</div>
+                </div>
+
+                <div class="cell-card">
+                    <div class="cell-badge nca">NCA</div>
+                    <h3>Nikkel-kobalt-alumínium</h3>
+                    <p class="cell-formula">LiNiCoAlO₂</p>
+                    <div class="cell-pros">
+                        <h4>✅ Előnyök</h4>
+                        <ul>
+                            <li>Magas energiasűrűség (~250–280 Wh/kg)</li>
+                            <li>Kiváló teljesítmény-leadás (sport)</li>
+                            <li>Hosszú tapasztalat (Panasonic @ Tesla)</li>
+                        </ul>
+                    </div>
+                    <div class="cell-cons">
+                        <h4>⚠ Hátrányok</h4>
+                        <ul>
+                            <li>Érzékenyebb a magas SoC-ra (80% felett)</li>
+                            <li>Hőstabilitás rosszabb, mint NCM/LFP</li>
+                            <li>Kobalt-függőség</li>
+                        </ul>
+                    </div>
+                    <div class="cell-use">Model 3 LR / Performance (Panasonic 2170)</div>
+                </div>
+
+                <div class="cell-card">
+                    <div class="cell-badge ncm">NCM811</div>
+                    <h3>Nikkel-kobalt-mangán 8:1:1</h3>
+                    <p class="cell-formula">LiNi₀.₈Co₀.₁Mn₀.₁O₂</p>
+                    <div class="cell-pros">
+                        <h4>✅ Előnyök</h4>
+                        <ul>
+                            <li>Jó egyensúly: energiasűrűség és élettartam</li>
+                            <li>Magasabb töltési feszültség elfogadható</li>
+                            <li>Csökkentett kobalt-tartalom (etikusabb)</li>
+                        </ul>
+                    </div>
+                    <div class="cell-cons">
+                        <h4>⚠ Hátrányok</h4>
+                        <ul>
+                            <li>Drágább, mint LFP</li>
+                            <li>Érzékeny a túltöltésre és hőre</li>
+                            <li>Az NCA-hoz képest valamivel alacsonyabb ciklus-szám</li>
+                        </ul>
+                    </div>
+                    <div class="cell-use">Model 3 LR (LG, kínai piac), részben új modellek</div>
+                </div>
+            </div>
+
+            <div class="energy-density">
+                <h4 class="ed-title">Energiasűrűség összehasonlítás</h4>
+                <div class="ed-bar" style="--w: 57%; --c: #f59e0b;">
+                    <span class="ed-label">LFP</span>
+                    <span class="ed-val">~160 Wh/kg</span>
+                </div>
+                <div class="ed-bar" style="--w: 89%; --c: #ef4444;">
+                    <span class="ed-label">NCM811</span>
+                    <span class="ed-val">~250 Wh/kg</span>
+                </div>
+                <div class="ed-bar" style="--w: 95%; --c: #8b5cf6;">
+                    <span class="ed-label">NCA</span>
+                    <span class="ed-val">~270 Wh/kg</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RANGE ===== -->
+    <section id="range" class="section">
+        <div class="container">
+            <header class="section-head">
+                <h2>Hatótávolság variánsonként</h2>
+                <p>Három mérési standard — a valós érték általában a kettő közé esik, időjárásfüggő.</p>
+            </header>
+
+            <div class="range-grid">
+                <div class="range-card">
+                    <h3>SR+ <small>(RWD, LFP)</small></h3>
+                    <div class="range-rows">
+                        <div class="range-row"><span>WLTP</span><strong>510 km</strong></div>
+                        <div class="range-row"><span>EPA</span><strong>438 km</strong></div>
+                        <div class="range-row real"><span>Valós (vegyes)</span><strong>~380–430 km</strong></div>
+                        <div class="range-row real"><span>Autópálya, 130 km/h</span><strong>~300 km</strong></div>
+                        <div class="range-row real"><span>Tél, −5 °C</span><strong>~280 km</strong></div>
+                    </div>
+                </div>
+
+                <div class="range-card highlight">
+                    <h3>Long Range <small>(AWD, NCA)</small></h3>
+                    <div class="range-rows">
+                        <div class="range-row"><span>WLTP</span><strong>629 km</strong></div>
+                        <div class="range-row"><span>EPA</span><strong>576 km</strong></div>
+                        <div class="range-row real"><span>Valós (vegyes)</span><strong>~500–560 km</strong></div>
+                        <div class="range-row real"><span>Autópálya, 130 km/h</span><strong>~390 km</strong></div>
+                        <div class="range-row real"><span>Tél, −5 °C</span><strong>~360 km</strong></div>
+                    </div>
+                </div>
+
+                <div class="range-card">
+                    <h3>Performance <small>(AWD, Track)</small></h3>
+                    <div class="range-rows">
+                        <div class="range-row"><span>WLTP</span><strong>528 km</strong></div>
+                        <div class="range-row"><span>EPA</span><strong>507 km</strong></div>
+                        <div class="range-row real"><span>Valós (vegyes)</span><strong>~430–490 km</strong></div>
+                        <div class="range-row real"><span>Autópálya, 130 km/h</span><strong>~360 km</strong></div>
+                        <div class="range-row real"><span>Tél, −5 °C</span><strong>~330 km</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="range-note">
+                💡 <strong>Tipp:</strong> 20–80% SoC tartományban a degradation minimális, és a regeneratív
+                fékezés akár 15%-kal növelheti a városi hatótávot.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== CHARGING ===== -->
+    <section id="charging" class="section section-alt">
+        <div class="container">
+            <header class="section-head">
+                <h2>Töltési adatok</h2>
+                <p>AC és DC — az igazi sebességet a hőmenedzsment és a SoC görbe határozza meg.</p>
+            </header>
+
+            <div class="charging-grid">
+                <div class="charge-card">
+                    <div class="charge-icon">⚡</div>
+                    <h3>AC (otthoni / Type 2)</h3>
+                    <ul>
+                        <li><strong>SR+:</strong> 7.4 kW (1 fázis) / 11 kW (3 fázis)</li>
+                        <li><strong>LR / Performance:</strong> 11 kW (3 fázis)</li>
+                        <li>0 → 100% idő (11 kW): 6–8 óra</li>
+                        <li>Ajánlott mindennapi használatra — olcsóbb, kíméletesebb</li>
+                    </ul>
+                </div>
+
+                <div class="charge-card">
+                    <div class="charge-icon">🔋</div>
+                    <h3>DC Supercharger (CCS2)</h3>
+                    <ul>
+                        <li><strong>SR+ csúcs:</strong> 170 kW (10–80% ~25 perc)</li>
+                        <li><strong>LR / Performance csúcs:</strong> 250 kW</li>
+                        <li>V3/V4 Supercharger: 5 perc = ~120 km hatótáv</li>
+                        <li>A BMS 10–70% SoC tartományban tartja a csúcsot, utána fokozatosan csökkent</li>
+                    </ul>
+                </div>
+
+                <div class="charge-card wide">
+                    <div class="charge-icon">📊</div>
+                    <h3>SoC / teljesítmény görbe (Long Range, V4 Supercharger)</h3>
+                    <div class="soc-curve">
+                        <div class="soc-bar" style="--w:100%;--c:#22c55e"><span>10%</span><b>250 kW</b></div>
+                        <div class="soc-bar" style="--w:100%;--c:#22c55e"><span>30%</span><b>245 kW</b></div>
+                        <div class="soc-bar" style="--w:96%;--c:#84cc16"><span>50%</span><b>235 kW</b></div>
+                        <div class="soc-bar" style="--w:78%;--c:#eab308"><span>70%</span><b>190 kW</b></div>
+                        <div class="soc-bar" style="--w:52%;--c:#f97316"><span>80%</span><b>125 kW</b></div>
+                        <div class="soc-bar" style="--w:28%;--c:#ef4444"><span>90%</span><b>65 kW</b></div>
+                        <div class="soc-bar" style="--w:14%;--c:#7f1d1d"><span>100%</span><b>35 kW</b></div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="charging-tip">
+                🧠 <strong>Tudtad?</strong> A Supercharger ára kb. €0.35–0.55/kWh (országtól függően),
+                az otthoni éjszakai áram pedig gyakran €0.10–0.18/kWh — a különbség akár 4×.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== DEGRADATION ===== -->
+    <section id="degradation" class="section">
+        <div class="container">
+            <header class="section-head">
+                <h2>Akkumulátor degradation</h2>
+                <p>Átlagos kapacitásveszteség az évek és a kilométer függvényében. Adatok: Tesloop, P3 Charging, Tesla-fiatal flották.</p>
+            </header>
+
+            <div class="deg-tabs" role="tablist">
+                <button class="deg-tab active" data-mode="years" role="tab" aria-selected="true">Évek szerint</button>
+                <button class="deg-tab" data-mode="km" role="tab" aria-selected="false">Kilométer szerint</button>
+                <button class="deg-tab" data-mode="chem" role="tab" aria-selected="false">Kémia összehasonlítás</button>
+            </div>
+
+            <div class="chart-wrap">
+                <canvas id="degChart" aria-label="Degradation chart"></canvas>
+            </div>
+
+            <div class="deg-insights">
+                <div class="insight-card">
+                    <span class="insight-num">~5%</span>
+                    <p>kapacitásveszteség az első 30 000 km-ben (NCA, „bejáratódás")</p>
+                </div>
+                <div class="insight-card">
+                    <span class="insight-num">~8%</span>
+                    <p>veszteség 100 000 km-en (NCA), LFP-nél csak ~4%</p>
+                </div>
+                <div class="insight-card">
+                    <span class="insight-num">~12%</span>
+                    <p>200 000 km-en (NCA) — még mindig 88%-os használható kapacitás</p>
+                </div>
+                <div class="insight-card">
+                    <span class="insight-num">8 év</span>
+                    <p>Tesla garancia a 70%-os kapacitásra (LR/PF), 8 év / 160 000 km</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICE COSTS ===== -->
+    <section id="service" class="section section-alt">
+        <div class="container">
+            <header class="section-head">
+                <h2>Szerviz költségek</h2>
+                <p>Jellemző javítások és árak (EU, 2024) — messze alacsonyabb, mint egy hasonló teljesítményű benzines autóé.</p>
+            </header>
+
+            <div class="service-table-wrap">
+                <table class="service-table">
+                    <thead>
+                        <tr>
+                            <th>Javítás / karbantartás</th>
+                            <th>Gyakoriság</th>
+                            <th>Becsült ár (€)</th>
+                            <th>Megjegyzés</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gumiabroncs csere (4 db, prémium)</td>
+                            <td>30–50 000 km</td>
+                            <td>400 – 900</td>
+                            <td>A 2.0 Performance gyári méret 235/40 R19</td>
+                        </tr>
+                        <tr>
+                            <td>Fékbetét csere (elöl)</td>
+                            <td>80–120 000 km</td>
+                            <td>200 – 350</td>
+                            <td>A regen miatt ritkán kell</td>
+                        </tr>
+                        <tr>
+                            <td>Fékbetét csere (hátul)</td>
+                            <td>120–200 000 km</td>
+                            <td>180 – 320</td>
+                            <td>Regeneratív fékezés miatt nagyon hosszú élettartam</td>
+                        </tr>
+                        <tr>
+                            <td>Klíma szerviz (gáz + pollenszűrő)</td>
+                            <td>2–4 évente</td>
+                            <td>150 – 280</td>
+                            <td>HEPA szűrő utólag €80–120</td>
+                        </tr>
+                        <tr>
+                            <td>12V akkumulátor csere</td>
+                            <td>4–6 évente</td>
+                            <td>120 – 200</td>
+                            <td>Kis segédakku, fontos a 12V rendszerhez</td>
+                        </tr>
+                        <tr>
+                            <td>Hűtőfolyadék csere (akkumulátor)</td>
+                            <td>4–6 évente</td>
+                            <td>180 – 280</td>
+                            <td>~12 L, speciális G48</td>
+                        </tr>
+                        <tr>
+                            <td>Ajtókilincs javítás / csere</td><td>Ritka (5+ év)</td>
+                            <td>250 – 450</td>
+                            <td>Híres „flopping handle" — 2021+ típusoknál ritkább</td>
+                        </tr>
+                        <tr>
+                            <td>Multimédia / MCU egység (CCM)</td>
+                            <td>Ritka</td>
+                            <td>800 – 1 500</td>
+                            <td>Az MCU3 már megbízhatóbb</td>
+                        </tr>
+                        <tr>
+                            <td>Nagyfeszültségű akkumulátor modul</td>
+                            <td>Nagyon ritka</td>
+                            <td>5 000 – 12 000</td>
+                            <td>8 év garancia, ritka meghibásodás</td>
+                        </tr>
+                        <tr>
+                            <td>Éves karbantartás összesen (átlag)</td>
+                            <td>Évente</td>
+                            <td>~ 250 – 400</td>
+                            <td>Jellemzően: pollenszűrő, szoftver, folyadékellenőrzés</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h4>10 éves teljes birtoklási költség (LR)</h4>
+                    <ul>
+                        <li>Szerviz + kopó alkatrész: <strong>~ €4 500</strong></li>
+                        <li>Töltés (15 000 km/év, otthon): <strong>~ €3 800</strong></li>
+                        <li>Biztosítás + adó: <strong>~ €9 000</strong></li>
+                        <li>Összesen (autó nélkül): <strong>~ €17 300 / 10 év</strong></li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h4>Összehasonlítás: BMW 330i (benzines)</h4>
+                    <ul>
+                        <li>Szerviz + kopó alkatrész: <strong>~ €8 500</strong></li>
+                        <li>Üzemanyag (15 000 km/év): <strong>~ €14 500</strong></li>
+                        <li>Biztosítás + adó: <strong>~ €10 000</strong></li>
+                        <li>Összesen: <strong>~ €33 000 / 10 év</strong></li>
+                    </ul>
+                </div>
+                <div class="service-card highlight">
+                    <div class="service-icon">📉</div>
+                    <h4>Megtakarítás: ~ €15 700 / 10 év</h4>
+                    <p>Még a Performance modell is olcsóbb üzemeltetésben, mint egy hasonló kategóriájú benzines sportkocsi — a Model 3 különösen alacsony karbantartás-igényű.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COMMUNITY / CTA ===== -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="cta-banner">
+                <span class="eyebrow">Csatlakozz</span>
+                <h3>Mondd el a Te Model 3 történetedet</h3>
+                <p>Oszd meg a valós fogyasztásodat, tapasztalataidat a szervizekről és a töltésről — légy
+                    te is a közösség része. A beküldött adatok anonimizálva jelennek meg a nyilvános
+                    statisztikákban.</p>
+                <div class="hero-cta">
+                    <a href="/pages/fogyasztas.html" class="btn btn-primary">Fogyasztás beküldése</a>
+                    <a href="/pages/kozosseg.html" class="btn btn-ghost">Közösségi fórum →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED TOOLS (BENTO GRID) ===== -->
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="eyebrow">Eszközök</span>
+                <h2>Minden, ami a Model 3 tulajdonláshoz kell</h2>
+                <p>Degradation kalkulátor, TCO, szervizek, térkép — gyorsan, adatvezérelten, magyarul.</p>
+            </header>
+
+            <div class="bento">
+                <a href="pages/kalkulator.html" class="szerviz-card bento-8" style="text-decoration:none;color:inherit;background:linear-gradient(135deg, rgba(62,106,225,0.12), rgba(34,211,238,0.04));border-color:rgba(62,106,225,0.3);">
+                    <div class="tag">🔋 Akkumulátor</div>
+                    <h3 style="font-size:28px;margin-top:16px;letter-spacing:-0.02em;">Degradation kalkulátor</h3>
+                    <p class="card p" style="font-size:15px;line-height:1.6;margin-top:8px;">Add meg az évjáratot, kilométert és töltési szokásokat —
+                        megmutatjuk a várható akkumulátor-állapotot és összehasonlítjuk más magyar tulajdonosokkal.
+                        Cohort-szimuláció 200 hasonló autó alapján.</p>
+                    <div style="display:flex;gap:32px;margin-top:24px;flex-wrap:wrap;">
+                        <div><div style="font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;">Maradó kapacitás</div><div style="font-size:24px;font-weight:500;color:var(--accent-hover);margin-top:4px;">~88-95%</div></div>
+                        <div><div style="font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;">LFP előny</div><div style="font-size:24px;font-weight:500;color:var(--accent-hover);margin-top:4px;">+8%</div></div>
+                        <div><div style="font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:0.06em;">Frissítve</div><div style="font-size:24px;font-weight:500;color:var(--accent-hover);margin-top:4px;">2026 Q2</div></div>
+                    </div>
+                    <div class="card card actions" style="margin-top:24px;">
+                        <span class="btn btn-primary btn-sm">Kalkulátor megnyitása →</span>
+                    </div>
+                </a>
+
+                <a href="pages/szervizek.html" class="szerviz-card bento-4 premium" style="text-decoration:none;color:inherit;">
+                    <div class="tag">🔧 Szervizek</div>
+                    <h3 style="margin-top:14px;">Magyar szervizek</h3>
+                    <p class="card p">10+ Tesla-szerviz, értékeléssel, szűrős keresővel.</p>
+                    <div style="font-size:32px;font-weight:500;color:var(--text);margin-top:20px;line-height:1;">10+</div>
+                    <div style="font-size:12px;color:var(--text-3);margin-top:4px;">hivatalos és független</div>
+                </a>
+
+                <a href="pages/tobberek.html" class="szerviz-card bento-4" style="text-decoration:none;color:inherit;">
+                    <div class="tag">🗺️ Térkép</div>
+                    <h3 style="margin-top:14px;">Töltőhálózat</h3>
+                    <p class="card p">Magyarország összes SC + Mobiliti + E.ON + Shell + Volteum.</p>
+                    <div style="font-size:32px;font-weight:500;color:var(--text);margin-top:20px;line-height:1;">12</div>
+                    <div style="font-size:12px;color:var(--text-3);margin-top:4px;">töltőállomás</div>
+                </a>
+
+                <a href="pages/tco.html" class="szerviz-card bento-4" style="text-decoration:none;color:inherit;">
+                    <div class="tag">💰 TCO</div>
+                    <h3 style="margin-top:14px;">10 éves költség</h3>
+                    <p class="card p">Éves km + benzines összehasonlítással.</p>
+                    <div style="font-size:32px;font-weight:500;color:var(--success);margin-top:20px;line-height:1;">~7M Ft</div>
+                    <div style="font-size:12px;color:var(--text-3);margin-top:4px;">megtakarítás</div>
+                </a>
+
+                <a href="pages/fogyasztas.html" class="szerviz-card bento-4" style="text-decoration:none;color:inherit;">
+                    <div class="tag">📊 Közösségi</div>
+                    <h3 style="margin-top:14px;">Fogyasztás</h3>
+                    <p class="card p">Magyar tulajdonosok valós mérései, beküldéssel.</p>
+                    <div style="font-size:32px;font-weight:500;color:var(--text);margin-top:20px;line-height:1;">14-22</div>
+                    <div style="font-size:12px;color:var(--text-3);margin-top:4px;">kWh/100km</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="siteFooter">
+        <!-- ide tölti a site.js a láblécet -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/pwa.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Schema.org: WebSite + Organization + FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "tm3.hu",
+        "alternateName": "Tesla Model 3 Magyar Tudásbázis",
+        "url": "https://tm3.hu",
+        "description": "A legátfogóbb magyar nyelvű Tesla Model 3 tudásbázis — akkumulátor, töltés, szerviz, kalkulátorok és közösség.",
+        "inLanguage": "hu-HU",
+        "publisher": {
+            "@type": "Organization",
+            "name": "tm3.hu",
+            "url": "https://tm3.hu",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://tm3.hu/assets/img/og-image.svg"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://tm3.hu/pages/blog.html?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Mennyire tartós a Tesla Model 3 akkumulátor?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A Tesla Model 3 akkumulátor rendkívül tartós: a Tesla 8 év / 160 000 km garanciát vállal a 70%-os kapacitásra. Valós adatok alapján 200 000 km után is 80-85%-os kapacitással működik. Az LFP (SR+) kémia még tartósabb: 95%-os kapacitás 200 000 km-en is reális."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Milyen gyakran kell szervizeltetni a Tesla Model 3-at?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A Tesla Model 3 nagyon kevés karbantartást igényel: 2 évente pollenszűrő csere, 4-6 évente 12V akkumulátor csere, 80-120 ezer km-enként fékbetét csere. Nincs olajcsere, nincs vezérműszíj, nincs kipufogó rendszer. Az éves szervizkeret jellemzően 30-50 000 Ft."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Mennyibe kerül a Tesla Model 3 töltése havonta?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "15 000 km/év futással és 80% otthoni + 20% Supercharger töltéssel számolva a havi költség kb. 27 000 Ft. Ez hasonló futásteljesítményű benzines autóval (BMW 330i) szemben havi ~95 000 Ft üzemanyagköltséget jelentene — az elektromos Tesla évi ~820 000 Ft megtakarítást hoz."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hol lehet Tesla Model 3-at szervizeltetni Magyarországon?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Magyarországon 2 hivatalos Tesla Service Center (Budapest) és több független, Tesla-tanúsított szerviz működik (pl. EV Specialist Hungary Budapest, EV-Tech Győr, Green Mobility Debrecen). A részletes szervizlista és szűrő a tm3.hu/szervizek oldalon érhető el."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>

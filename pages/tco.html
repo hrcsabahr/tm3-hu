@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tesla Model 3 10 éves teljes birtoklási költség kalkulátor — áram, biztosítás, szerviz, értékvesztés. Benzineshez viszonyított megtakarítás." />
+    <meta property="og:title" content="10 éves TCO kalkulátor · tm3.hu" />
+    <meta property="og:url" content="https://tm3.hu/pages/tco.html" />
+    <link rel="canonical" href="https://tm3.hu/pages/tco.html" />
+    <title>10 éves TCO kalkulátor · tm3.hu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/site.css" />
+    
+</head>
+<body>
+    <!-- NAV: a site.js rendereli -->
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <a href="#">Eszközök</a>
+                <span class="breadcrumb-sep">/</span>
+                <span>10 éves TCO</span>
+            </div>
+            <span class="eyebrow">💰 Költségkalkulátor</span>
+            <h1>10 éves teljes birtoklási költség</h1>
+            <p class="lead">
+                Számold ki a Tesla Model 3 teljes 10 éves költségét, és hasonlítsd össze egy
+                hasonló kategóriájú benzines autóval.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="calc-grid">
+                <div class="calc-card calc-inputs">
+                    <h3 style="margin-bottom:24px;">Használati szokásaid</h3>
+
+                    <div class="calc-field">
+                        <label>Éves futásteljesítmény <small id="lbl-km">15 000 km</small></label>
+                        <input type="range" id="eves-km" min="5000" max="50000" step="1000" value="15000" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label>Otthoni áram ára <small id="lbl-aram">60 Ft/kWh</small></label>
+                        <input type="range" id="aram-ar" min="30" max="120" step="5" value="60" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label>Supercharger / DC töltés arány <small id="lbl-dc">20%</small></label>
+                        <input type="range" id="dc-arany" min="0" max="100" step="5" value="20" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="fogyasztas">Fogyasztás <small>kWh/100 km</small></label>
+                        <select id="fogyasztas">
+                            <option value="14">14 — nagyon takarékos (városi, nyár)</option>
+                            <option value="16" selected>16 — átlagos vegyes</option>
+                            <option value="19">19 — autópálya / tél</option>
+                            <option value="22">22 — sportos / hideg</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-field">
+                        <label>Balesetmentes bónusz <small id="lbl-bonusz">B10 (50% kedvezmény)</small></label>
+                        <input type="range" id="bonusz" min="0" max="100" step="10" value="50" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="szerviz">Éves szervizkeret <small>Ft</small></label>
+                        <input type="number" id="szerviz" value="35000" min="0" step="5000" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="gumi">Gumiabroncs csere <small>évente Ft</small></label>
+                        <input type="number" id="gumi" value="25000" min="0" step="5000" />
+                    </div>
+                </div>
+
+                <div class="calc-output">
+                    <h3>Éves költség</h3>
+                    <div class="result" id="res-eves">— Ft</div>
+                    <div class="result-sub">Évente</div>
+
+                    <ul class="result-list">
+                        <li><span>Otthoni töltés:</span> <strong id="res-otthon">— Ft</strong></li>
+                        <li><span>DC / Supercharger:</span> <strong id="res-dc">— Ft</strong></li>
+                        <li><span>Biztosítás + adó:</span> <strong id="res-bizt">— Ft</strong></li>
+                        <li><span>Szerviz + kopó alkatrész:</span> <strong id="res-szerviz">— Ft</strong></li>
+                    </ul>
+
+                    <div class="highlight">
+                        <strong>10 éves TCO:</strong>
+                        <p style="font-size:32px;font-weight:800;color:var(--best);margin:8px 0 0;" id="res-10ev">— Ft</p>
+                        <p style="font-size:13px;color:var(--text-dim);margin-top:4px;">
+                            (autó vételár nélkül — csak üzemeltetés)
+                        </p>
+                    </div>
+
+                    <div class="highlight" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.3);">
+                        <strong style="color:var(--sport);">🚗 Benzines referenciával (BMW 330i):</strong>
+                        <p style="margin:8px 0 0;font-size:14px;color:var(--text);">
+                            Hasonló kategóriájú benzines autó 10 éves TCO: <strong id="res-benzines">— Ft</strong><br>
+                            Megtakarítás: <strong style="color:var(--best);" id="res-megtakaritas">— Ft</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-3" style="margin-top:48px;">
+                <div class="stat-box">
+                    <strong id="stat-ev">—</strong>
+                    <span>Ft / km</span>
+                </div>
+                <div class="stat-box">
+                    <strong id="stat-100">—</strong>
+                    <span>Ft / 100 km</span>
+                </div>
+                <div class="stat-box">
+                    <strong id="stat-toltes">—</strong>
+                    <span>DC + AC kWh/év</span>
+                </div>
+            </div>
+
+            <div class="tip-box green" style="margin-top:40px;">
+                <strong>💡 A TCO számítás nem tartalmazza:</strong>
+                <ul style="margin-top:8px; padding-left:20px;">
+                    <li>Az autó vételárát (csak az üzemeltetést)</li>
+                    <li>Értékvesztést (becsülve a Model 3 jobban tartja az értékét, mint a benzines)</li>
+                    <li>Várható akkumulátor-cserét (8 év / 160 000 km garancia általában fedezi)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer id="siteFooter"></footer>
+
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/site.js"></script>
+    <script src="../assets/js/pwa.js"></script>
+    <script src="../assets/js/tco.js"></script>
+</body>
+</html>
