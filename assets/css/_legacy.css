@@ -452,20 +452,46 @@
 /* ----------  ED BAR + SOC  ---------- */
 .ed-bar,
 .soc-bar {
+    display: grid;
+    grid-template-columns: 60px 1fr 80px;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 6px 0;
+}
+
+.ed-bar > .ed-label,
+.soc-bar > .soc-label {
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-semibold);
+    color: var(--color-text);
+}
+
+.ed-bar > .ed-track,
+.soc-bar > .soc-track {
+    height: 10px;
     background: var(--color-bg-elevated);
     border-radius: var(--radius-full);
-    height: 8px;
     overflow: hidden;
     position: relative;
 }
 
-.ed-bar > span,
-.soc-bar > span {
+.ed-bar > .ed-track > .ed-fill,
+.soc-bar > .soc-track > .soc-fill {
     display: block;
     height: 100%;
-    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-hover));
+    width: var(--w, 50%);
+    background: var(--c, var(--color-accent));
     border-radius: var(--radius-full);
     transition: width var(--t-slow);
+}
+
+.ed-bar > .ed-val,
+.soc-bar > .soc-val {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--color-text);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
 }
 
 .ed-title,
