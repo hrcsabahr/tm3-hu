@@ -493,22 +493,23 @@
 .ed-bar,
 .soc-bar {
     display: grid;
-    grid-template-columns: 60px 1fr 80px;
+    grid-template-columns: 90px 1fr 110px;
     align-items: center;
-    gap: var(--space-3);
-    padding: 6px 0;
+    gap: var(--space-4);
+    padding: 10px 0;
 }
 
 .ed-bar > .ed-label,
 .soc-bar > .soc-label {
-    font-size: var(--fs-xs);
+    font-size: var(--fs-base, 16px);
     font-weight: var(--fw-semibold);
     color: var(--color-text);
+    letter-spacing: 0;
 }
 
 .ed-bar > .ed-track,
 .soc-bar > .soc-track {
-    height: 10px;
+    height: 14px;
     background: var(--color-bg-elevated);
     border-radius: var(--radius-full);
     overflow: hidden;
@@ -527,33 +528,27 @@
 
 .ed-bar > .ed-val,
 .soc-bar > .soc-val {
-    font-size: var(--fs-sm);
+    font-size: var(--fs-lg, 18px);
     font-weight: var(--fw-semibold);
     color: var(--color-text);
     text-align: right;
     font-variant-numeric: tabular-nums;
+    letter-spacing: 0;
 }
 
-.ed-title,
-.ed-label {
-    font-size: var(--fs-xs);
-    color: var(--color-text-subtle);
-    text-transform: uppercase;
-    letter-spacing: var(--tracking-wide);
-}
-
-.ed-val {
-    font-size: var(--fs-2xl);
-    font-weight: var(--fw-bold);
-    color: var(--color-text);
-    font-variant-numeric: tabular-nums;
-}
-
+/* Energiasűrűség összehasonlítás — új, letisztult stílus (az "energy-density" wrapper-ben) */
 .energy-density {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-5);
-    align-items: center;
+    display: block;
+}
+
+.ed-title {
+    font-family: var(--font-display, 'Fraunces', serif);
+    font-size: var(--fs-xl, 22px);
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 var(--space-4) 0;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 @media (max-width: 720px) {
