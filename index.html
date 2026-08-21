@@ -227,55 +227,93 @@
         </div>
     </section>
 
-    <!-- ===== RANGE ===== -->
-    <section id="range" class="section">
-        <div class="container">
-            <header class="section-head">
-                <h2>Hatótávolság variánsonként</h2>
-                <p>Három mérési standard — a valós érték általában a kettő közé esik, időjárásfüggő.</p>
-            </header>
+        <!-- ===== BATTERY + RANGE (egymás mellett) ===== -->
+        <section id="battery-range" class="section">
+            <div class="container">
+                <header class="section-head">
+                    <h2>Akkumulátor és hatótávolság</h2>
+                    <p>Energiasűrűség a kémia szerint, és a hatótávolság variánsonként — három mérési standard és valós teszteredmények.</p>
+                </header>
 
-            <div class="range-grid">
-                <div class="range-card">
-                    <h3>SR+ <small>(RWD, LFP)</small></h3>
-                    <div class="range-rows">
-                        <div class="range-row"><span>WLTP</span><strong>510 km</strong></div>
-                        <div class="range-row"><span>EPA</span><strong>438 km</strong></div>
-                        <div class="range-row real"><span>Valós (vegyes)</span><strong>~380–430 km</strong></div>
-                        <div class="range-row real"><span>Autópálya, 130 km/h</span><strong>~300 km</strong></div>
-                        <div class="range-row real"><span>Tél, −5 °C</span><strong>~280 km</strong></div>
+                <div class="br-grid">
+
+                    <!-- BAL OSZLOP: Energiasűrűség -->
+                    <div class="br-col-energy">
+                        <h3 class="br-col-title">Energiasűrűség összehasonlítás</h3>
+                        <p class="br-col-lead">Minél magasabb az érték (Wh/kg), annál kisebb és könnyebb akkumulátor csomag éri el ugyanazt a kapacitást.</p>
+
+                        <div class="ed-bar">
+                            <span class="ed-label">LFP</span>
+                            <div class="ed-track"><span class="ed-fill" style="--w: 57%; --c: #f59e0b;"></span></div>
+                            <span class="ed-val">~160 Wh/kg</span>
+                        </div>
+                        <div class="ed-bar">
+                            <span class="ed-label">NCM811</span>
+                            <div class="ed-track"><span class="ed-fill" style="--w: 89%; --c: #ef4444;"></span></div>
+                            <span class="ed-val">~250 Wh/kg</span>
+                        </div>
+                        <div class="ed-bar">
+                            <span class="ed-label">NCA</span>
+                            <div class="ed-track"><span class="ed-fill" style="--w: 95%; --c: #8b5cf6;"></span></div>
+                            <span class="ed-val">~270 Wh/kg</span>
+                        </div>
+
+                        <p class="br-col-note">
+                            💡 Az LFP olcsóbb és hosszabb élettartamú, de nehezebb. Az NCM/NCA kompakt, de drágább és érzékenyebb a hőre.
+                        </p>
                     </div>
+
+                    <!-- JOBB OSZLOP: Hatótávolság (3-as bontás) -->
+                    <div class="br-col-range">
+                        <h3 class="br-col-title">Hatótávolság variánsonként</h3>
+                        <p class="br-col-lead">Három mérési standard — a valós érték általában a kettő közé esik, időjárásfüggő.</p>
+
+                        <div class="range-grid">
+                            <div class="range-card">
+                                <h3>SR+ <small>(RWD, LFP)</small></h3>
+                                <div class="range-rows">
+                                    <div class="range-row"><span>WLTP</span><strong>510 km</strong></div>
+                                    <div class="range-row"><span>EPA</span><strong>438 km</strong></div>
+                                    <div class="range-row real"><span>Valós (vegyes)</span><strong>~380–430 km</strong></div>
+                                    <div class="range-row real"><span>Autópálya, 130 km/h</span><strong>~300 km</strong></div>
+                                    <div class="range-row real"><span>Tél, −5 °C</span><strong>~280 km</strong></div>
+                                </div>
+                            </div>
+
+                            <div class="range-card highlight">
+                                <h3>Long Range <small>(AWD, NCA)</small></h3>
+                                <div class="range-rows">
+                                    <div class="range-row"><span>WLTP</span><strong>629 km</strong></div>
+                                    <div class="range-row"><span>EPA</span><strong>576 km</strong></div>
+                                    <div class="range-row real"><span>Valós (vegyes)</span><strong>~500–560 km</strong></div>
+                                    <div class="range-row real"><span>Autópálya, 130 km/h</span><strong>~390 km</strong></div>
+                                    <div class="range-row real"><span>Tél, −5 °C</span><strong>~360 km</strong></div>
+                                </div>
+                            </div>
+
+                            <div class="range-card">
+                                <h3>Performance <small>(AWD, Track)</small></h3>
+                                <div class="range-rows">
+                                    <div class="range-row"><span>WLTP</span><strong>528 km</strong></div>
+                                    <div class="range-row"><span>EPA</span><strong>507 km</strong></div>
+                                    <div class="range-row real"><span>Valós (vegyes)</span><strong>~430–490 km</strong></div>
+                                    <div class="range-row real"><span>Autópálya, 130 km/h</span><strong>~360 km</strong></div>
+                                    <div class="range-row real"><span>Tél, −5 °C</span><strong>~330 km</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="range-card highlight">
-                    <h3>Long Range <small>(AWD, NCA)</small></h3>
-                    <div class="range-rows">
-                        <div class="range-row"><span>WLTP</span><strong>629 km</strong></div>
-                        <div class="range-row"><span>EPA</span><strong>576 km</strong></div>
-                        <div class="range-row real"><span>Valós (vegyes)</span><strong>~500–560 km</strong></div>
-                        <div class="range-row real"><span>Autópálya, 130 km/h</span><strong>~390 km</strong></div>
-                        <div class="range-row real"><span>Tél, −5 °C</span><strong>~360 km</strong></div>
-                    </div>
-                </div>
-
-                <div class="range-card">
-                    <h3>Performance <small>(AWD, Track)</small></h3>
-                    <div class="range-rows">
-                        <div class="range-row"><span>WLTP</span><strong>528 km</strong></div>
-                        <div class="range-row"><span>EPA</span><strong>507 km</strong></div>
-                        <div class="range-row real"><span>Valós (vegyes)</span><strong>~430–490 km</strong></div>
-                        <div class="range-row real"><span>Autópálya, 130 km/h</span><strong>~360 km</strong></div>
-                        <div class="range-row real"><span>Tél, −5 °C</span><strong>~330 km</strong></div>
-                    </div>
-                </div>
+                <p class="range-note">
+                    💡 <strong>Tipp:</strong> 20–80% SoC tartományban a degradation minimális, és a regeneratív
+                    fékezés akár 15%-kal növelheti a városi hatótávot.
+                </p>
             </div>
+        </section>
 
-            <p class="range-note">
-                💡 <strong>Tipp:</strong> 20–80% SoC tartományban a degradation minimális, és a regeneratív
-                fékezés akár 15%-kal növelheti a városi hatótávot.
-            </p>
-        </div>
-    </section>
+        <!-- ===== RANGE (régi) TÖRÖLVE — összevonva a BATTERY+RANGE szekcióba ===== -->
 
     <!-- ===== CHARGING ===== -->
     <section id="charging" class="section section-alt">

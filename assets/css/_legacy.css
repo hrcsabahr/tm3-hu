@@ -233,14 +233,54 @@
 /* ----------  RANGE GRID  ---------- */
 .range-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-5);
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
     .range-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* ---------- BATTERY + RANGE (egymás mellett) ---------- */
+.br-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-6);
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .br-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.br-col-title {
+    font-family: var(--font-display, 'Fraunces', serif);
+    font-size: var(--fs-xl, 22px);
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--color-text, rgba(0, 0, 0, 0.95));
+}
+
+.br-col-lead {
+    font-size: var(--fs-sm, 14px);
+    color: var(--color-text-muted, #615D59);
+    margin: 0 0 var(--space-5) 0;
+    line-height: 1.5;
+}
+
+.br-col-note {
+    margin-top: var(--space-5);
+    padding: var(--space-4);
+    background: var(--color-bg-elevated, #F5F5F0);
+    border-left: 3px solid var(--color-accent, #0075DE);
+    border-radius: 4px;
+    font-size: var(--fs-sm, 13px);
+    color: var(--color-text-muted, #615D59);
+    line-height: 1.5;
 }
 
 .range-card {
