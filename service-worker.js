@@ -2,25 +2,42 @@
    tm3.hu — Service Worker (PWA + offline cache)
    ===================================================== */
 
-const CACHE = 'tm3-v1';
+// Repo prefix: ha a /tm3-hu/ alatt vagyunk (GitHub Pages user-site),
+// használjuk azt prefixként; ha a tm3.hu domain alatt (custom domain),
+// üres string.
+const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
+const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
+    ? '/tm3-hu'
+    : '';
+
+const CACHE = 'tm3-v2';
 const ASSETS = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/assets/css/site.css',
-    '/assets/css/design-system.css',
-    '/assets/css/_legacy.css',
-    '/assets/js/util.js',
-    '/assets/js/site.js',
-    '/assets/js/szervizek.js',
-    '/assets/js/tobberek.js',
-    '/assets/js/kalkulator.js',
-    '/assets/js/tco.js',
-    '/assets/js/fogyasztas.js',
-    '/assets/js/hibak.js',
-    '/assets/js/vasarlas.js',
-    '/assets/js/blog.js',
-    '/manifest.json',
+    `${REPO_PREFIX}/`,
+    `${REPO_PREFIX}/index.html`,
+    `${REPO_PREFIX}/styles.css`,
+    `${REPO_PREFIX}/assets/css/site.css`,
+    `${REPO_PREFIX}/assets/css/design-system.css`,
+    `${REPO_PREFIX}/assets/css/_legacy.css`,
+    `${REPO_PREFIX}/assets/js/util.js`,
+    `${REPO_PREFIX}/assets/js/site.js`,
+    `${REPO_PREFIX}/assets/js/szervizek.js`,
+    `${REPO_PREFIX}/assets/js/tobberek.js`,
+    `${REPO_PREFIX}/assets/js/kalkulator.js`,
+    `${REPO_PREFIX}/assets/js/tco.js`,
+    `${REPO_PREFIX}/assets/js/fogyasztas.js`,
+    `${REPO_PREFIX}/assets/js/hibak.js`,
+    `${REPO_PREFIX}/assets/js/vasarlas.js`,
+    `${REPO_PREFIX}/assets/js/blog.js`,
+    `${REPO_PREFIX}/pages/kalkulator.html`,
+    `${REPO_PREFIX}/pages/tco.html`,
+    `${REPO_PREFIX}/pages/blog.html`,
+    `${REPO_PREFIX}/pages/szervizek.html`,
+    `${REPO_PREFIX}/pages/tobberek.html`,
+    `${REPO_PREFIX}/pages/hibak.html`,
+    `${REPO_PREFIX}/pages/vasarlas.html`,
+    `${REPO_PREFIX}/pages/kozosseg.html`,
+    `${REPO_PREFIX}/pages/fogyasztas.html`,
+    `${REPO_PREFIX}/manifest.json`,
     'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap',
     'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
     'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',

@@ -12,15 +12,22 @@
 
     // ----- Nav -----
     const NAV_ITEMS = [
-        { href: '/index.html', label: 'Főoldal' },
-        { href: '/pages/szervizek.html', label: 'Szervizek' },
-        { href: '/pages/tobberek.html', label: 'Töltők' },
-        { href: '/pages/kalkulator.html', label: 'Degradation' },
-        { href: '/pages/tco.html', label: 'TCO' },
-        { href: '/pages/hibak.html', label: 'Hibák' },
-        { href: '/pages/vasarlas.html', label: 'Vásárlás' },
-        { href: '/pages/blog.html', label: 'Hírek' },
+        { href: 'index.html', label: 'Főoldal' },
+        { href: 'pages/szervizek.html', label: 'Szervizek' },
+        { href: 'pages/tobberek.html', label: 'Töltők' },
+        { href: 'pages/kalkulator.html', label: 'Degradation' },
+        { href: 'pages/tco.html', label: 'TCO' },
+        { href: 'pages/hibak.html', label: 'Hibák' },
+        { href: 'pages/vasarlas.html', label: 'Vásárlás' },
+        { href: 'pages/blog.html', label: 'Hírek' },
     ];
+
+    // Repo prefix: a /tm3-hu/ repo user-site-on való eléréséhez (GitHub Pages),
+    // üres ha custom domain (tm3.hu) alatt vagyunk.
+    const REPO_PREFIX = (location.pathname.startsWith('/tm3-hu') ||
+                          location.pathname.startsWith('/pages/'))
+        ? '/tm3-hu'
+        : '';
 
     const isSubpage = location.pathname.includes('/pages/');
     const root = isSubpage ? '..' : '.';
@@ -28,24 +35,33 @@
     function renderNav() {
         const current = location.pathname.replace(/\\/g, '/');
         const items = NAV_ITEMS.map(item => {
-            const href = isSubpage ? item.href.replace('/pages/', '').replace('/index.html', '/index.html') : item.href;
-            const full = isSubpage ? root + item.href.replace('/pages/', '/pages/') : item.href;
-            const active = (current === full.replace(/^\.\./, '').replace(/^\.\//, '/')) ||
-                (item.href === '/index.html' && (current === '/' || current === '/index.html' || current.endsWith('/index.html')));
-            return `<a href="${full}"${active ? ' aria-current="page"' : ''}>${item.label}</a>`;
+            const relHref = item.href;
+            const href = isSubpage
+                ? `${root}/${relHref}`
+                : `${REPO_PREFIX}/${relHref}`;
+            const pathForActive = `${REPO_PREFIX}/${relHref}`.replace(/\/+$/, '/');
+            const active = (current === pathForActive) ||
+                (item.href === 'index.html' && (current === '/' ||
+                    current.endsWith('/index.html') ||
+                    current.endsWith('/tm3-hu/')));
+            return `<a href="${href}"${active ? ' aria-current="page"' : ''}>${item.label}</a>`;
         }).join('');
 
+        const homeHref = isSubpage ? `${root}/index.html` : `${REPO_PREFIX}/index.html`;
+        const ctaHref = isSubpage
+            ? `${root}/pages/vasarlas.html`
+            : `${REPO_PREFIX}/pages/vasarlas.html`;
         const navHTML = `
             <header class="navbar" id="site-nav">
                 <div class="nav-wrap">
-                    <a href="${root}/index.html" class="brand" aria-label="tm3.hu">
+                    <a href="${homeHref}" class="brand" aria-label="tm3.hu">
                         <span class="brand-mark">M3</span>
                         <span>tm3.hu</span>
                     </a>
                     <nav class="main-nav" id="site-main-nav" aria-label="Fő navigáció">
                         ${items}
                     </nav>
-                    <a href="${root}/pages/vasarlas.html" class="nav-cta">Rendelés</a>
+                    <a href="${ctaHref}" class="nav-cta">Rendelés</a>
                     <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
                         <span></span>
                     </button>
@@ -57,6 +73,7 @@
 
     // ----- Footer -----
     function renderFooter() {
+        const footerPrefix = isSubpage ? root : REPO_PREFIX;
         const footerHTML = `
             <footer class="site-footer">
                 <div class="container">
@@ -68,25 +85,25 @@
                         <div class="footer-col">
                             <h4>Eszközök</h4>
                             <ul>
-                                <li><a href="${root}/pages/kalkulator.html">Degradation</a></li>
-                                <li><a href="${root}/pages/tco.html">10 éves TCO</a></li>
-                                <li><a href="${root}/pages/fogyasztas.html">Fogyasztás</a></li>
+                                <li><a href="${footerPrefix}/pages/kalkulator.html">Degradation</a></li>
+                                <li><a href="${footerPrefix}/pages/tco.html">10 éves TCO</a></li>
+                                <li><a href="${footerPrefix}/pages/fogyasztas.html">Fogyasztás</a></li>
                             </ul>
                         </div>
                         <div class="footer-col">
                             <h4>Információ</h4>
                             <ul>
-                                <li><a href="${root}/pages/szervizek.html">Szervizek</a></li>
-                                <li><a href="${root}/pages/tobberek.html">Töltők</a></li>
-                                <li><a href="${root}/pages/hibak.html">Hibák</a></li>
-                                <li><a href="${root}/pages/vasarlas.html">Vásárlás</a></li>
+                                <li><a href="${footerPrefix}/pages/szervizek.html">Szervizek</a></li>
+                                <li><a href="${footerPrefix}/pages/tobberek.html">Töltők</a></li>
+                                <li><a href="${footerPrefix}/pages/hibak.html">Hibák</a></li>
+                                <li><a href="${footerPrefix}/pages/vasarlas.html">Vásárlás</a></li>
                             </ul>
                         </div>
                         <div class="footer-col">
                             <h4>Közösség</h4>
                             <ul>
-                                <li><a href="${root}/pages/blog.html">Hírek</a></li>
-                                <li><a href="${root}/pages/kozosseg.html">Fórum</a></li>
+                                <li><a href="${footerPrefix}/pages/blog.html">Hírek</a></li>
+                                <li><a href="${footerPrefix}/pages/kozosseg.html">Fórum</a></li>
                             </ul>
                         </div>
                     </div>
