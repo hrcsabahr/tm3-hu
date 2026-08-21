@@ -101,11 +101,5 @@
         el.addEventListener('change', filter);
     });
 
-    document.getElementById('newsletter-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        tm3.toast('✓ Feliratkozva a hírlevélre!', 'success');
-        e.target.reset();
-    });
-
     render(data.posts.sort((a, b) => new Date(b.datum) - new Date(a.datum)));
 })();

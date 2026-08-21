@@ -18,7 +18,6 @@
         { href: 'pages/kalkulator.html', label: 'Degradation' },
         { href: 'pages/tco.html', label: 'TCO' },
         { href: 'pages/hibak.html', label: 'Hibák' },
-        { href: 'pages/vasarlas.html', label: 'Vásárlás' },
         { href: 'pages/blog.html', label: 'Hírek' },
         { href: 'pages/jogi.html', label: 'Jogi' },
     ];
@@ -49,9 +48,6 @@
         }).join('');
 
         const homeHref = isSubpage ? `${root}/index.html` : `${REPO_PREFIX}/index.html`;
-        const ctaHref = isSubpage
-            ? `${root}/pages/vasarlas.html`
-            : `${REPO_PREFIX}/pages/vasarlas.html`;
         const navHTML = `
             <header class="navbar" id="site-nav">
                 <div class="nav-wrap">
@@ -62,7 +58,6 @@
                     <nav class="main-nav" id="site-main-nav" aria-label="Fő navigáció">
                         ${items}
                     </nav>
-                    <a href="${ctaHref}" class="nav-cta">Rendelés</a>
                     <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
                         <span></span>
                     </button>
