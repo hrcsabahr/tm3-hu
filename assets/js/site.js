@@ -20,6 +20,7 @@
         { href: 'pages/hibak.html', label: 'Hibák' },
         { href: 'pages/vasarlas.html', label: 'Vásárlás' },
         { href: 'pages/blog.html', label: 'Hírek' },
+        { href: 'pages/jogi.html', label: 'Jogi' },
     ];
 
     // Repo prefix: a /tm3-hu/ repo user-site-on való eléréséhez (GitHub Pages),
@@ -108,8 +109,16 @@
                         </div>
                     </div>
                     <div class="footer-bottom">
-                        <span>© ${new Date().getFullYear()} tm3.hu · Tartalom: CC BY-SA 4.0 · Kód: MIT</span>
-                        <span>Tesla, Model 3, SR+, Long Range, Performance a Tesla, Inc. bejegyzett védjegyei.</span>
+                        <div class="footer-bottom-row">
+                            <span>© ${new Date().getFullYear()} tm3.hu · Tartalom: CC BY-SA 4.0 · Kód: MIT</span>
+                            <span>Tesla, Model 3, SR+, Long Range, Performance a Tesla, Inc. bejegyzett védjegyei.</span>
+                        </div>
+                        <div class="footer-bottom-row footer-disclaimer">
+                            <strong>⚠️ Nem hivatalos, független oldal.</strong>
+                            A tm3.hu nem kapcsolódik a Tesla, Inc.-hez, és nem annak tulajdona vagy partnere.
+                            Az itt megjelent tartalom kizárólag tájékoztató jellegű.
+                            <a href="${footerPrefix}/pages/jogi.html">Jogi tudnivalók, impresszum, adatvédelem</a>.
+                        </div>
                     </div>
                 </div>
             </footer>

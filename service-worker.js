@@ -10,7 +10,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v2';
+const CACHE = 'tm3-v3';
 const ASSETS = [
     `${REPO_PREFIX}/`,
     `${REPO_PREFIX}/index.html`,
@@ -37,6 +37,8 @@ const ASSETS = [
     `${REPO_PREFIX}/pages/vasarlas.html`,
     `${REPO_PREFIX}/pages/kozosseg.html`,
     `${REPO_PREFIX}/pages/fogyasztas.html`,
+    `${REPO_PREFIX}/pages/jogi.html`,
+    `${REPO_PREFIX}/assets/css/legal.css`,
     `${REPO_PREFIX}/manifest.json`,
     'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap',
     'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',

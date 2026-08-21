@@ -1,0 +1,233 @@
+/* ===========================================================
+   legal.css — tm3.hu jogi oldal stílusa
+   =========================================================== */
+
+.legal-page {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: var(--color-bg, #FAFAF7);
+    min-height: 100vh;
+}
+
+.legal-container {
+    max-width: 880px;
+}
+
+.legal-disclaimer-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border: 2px solid #f59e0b;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+}
+
+.legal-disclaimer-banner .disclaimer-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+
+.legal-disclaimer-banner .disclaimer-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #78350f;
+}
+
+.legal-disclaimer-banner .disclaimer-text strong {
+    color: #451a03;
+    font-weight: 700;
+}
+
+.legal-section {
+    background: var(--color-bg-card, #FFFFFF);
+    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
+    border-radius: 12px;
+    padding: 32px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.legal-section h2 {
+    font-family: var(--font-display, 'Fraunces', serif);
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    letter-spacing: -0.02em;
+    color: var(--color-text, rgba(0, 0, 0, 0.95));
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--color-border, rgba(0, 0, 0, 0.1));
+}
+
+.legal-section h3 {
+    font-family: var(--font-display, 'Fraunces', serif);
+    font-size: 19px;
+    font-weight: 600;
+    margin: 24px 0 12px 0;
+    color: var(--color-text, rgba(0, 0, 0, 0.95));
+}
+
+.legal-section p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--color-text-muted, #615D59);
+    margin: 0 0 14px 0;
+}
+
+.legal-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 20px 0;
+}
+
+.legal-list li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--color-text-muted, #615D59);
+}
+
+.legal-list li::before {
+    content: '•';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    color: var(--color-accent, #0075DE);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.legal-list li strong {
+    color: var(--color-text, rgba(0, 0, 0, 0.95));
+}
+
+.legal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 24px 0;
+    font-size: 14px;
+    background: #FAFAF7;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--color-border, rgba(0, 0, 0, 0.1));
+}
+
+.legal-table th,
+.legal-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border, rgba(0, 0, 0, 0.06));
+    vertical-align: top;
+}
+
+.legal-table th {
+    background: var(--color-bg-elevated, #F5F5F0);
+    font-weight: 600;
+    color: var(--color-text, rgba(0, 0, 0, 0.95));
+    width: 35%;
+    font-family: var(--font-display, 'Fraunces', serif);
+}
+
+.legal-table td {
+    color: var(--color-text-muted, #615D59);
+}
+
+.legal-table tr:last-child th,
+.legal-table tr:last-child td {
+    border-bottom: none;
+}
+
+.legal-table a {
+    color: var(--color-accent, #0075DE);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.legal-table a:hover {
+    text-decoration: underline;
+}
+
+.legal-section a {
+    color: var(--color-accent, #0075DE);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 117, 222, 0.3);
+    transition: border-color 0.2s ease;
+}
+
+.legal-section a:hover {
+    border-bottom-color: var(--color-accent, #0075DE);
+}
+
+.legal-note {
+    background: rgba(0, 117, 222, 0.06);
+    border-left: 3px solid var(--color-accent, #0075DE);
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 16px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.legal-note strong {
+    color: var(--color-text, rgba(0, 0, 0, 0.95));
+}
+
+.legal-update {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border, rgba(0, 0, 0, 0.08));
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-subtle, #615D59);
+}
+
+/* Anchor offset a sticky nav miatt */
+.legal-section[id] {
+    scroll-margin-top: 100px;
+}
+
+/* Reszponziv */
+@media (max-width: 720px) {
+    .legal-page {
+        padding-top: 90px;
+    }
+
+    .legal-section {
+        padding: 24px 20px;
+    }
+
+    .legal-section h2 {
+        font-size: 22px;
+    }
+
+    .legal-disclaimer-banner {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 18px;
+    }
+
+    .legal-disclaimer-banner .disclaimer-icon {
+        font-size: 28px;
+    }
+
+    .legal-table th,
+    .legal-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .legal-table th {
+        border-bottom: none;
+        padding-bottom: 4px;
+    }
+
+    .legal-table td {
+        padding-top: 4px;
+    }
+}
