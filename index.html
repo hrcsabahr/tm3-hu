@@ -296,17 +296,13 @@
 
     <!-- ===== HERO — Tesla.com-grade dark theme (P2 redesign) ===== -->
     <section id="hero" class="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__overlay"></div>
         <div class="hero__inner">
-            <span class="hero__eyebrow">2024-es modellév · SR+ · Long Range · Performance</span>
-
+            <span class="hero__eyebrow">2024-es modellév · Magyarország</span>
             <h1 class="hero__title">Model 3</h1>
+            <p class="hero__subtitle">A villámtöltés, a hatótáv és a vezethetőség újradefiniálása — egy letisztult, minden részletében átgondolt elektromos szedán.</p>
 
-            <p class="hero__subtitle">
-                A villámtöltés, a hatótáv és a vezethetőség újradefiniálása —
-                egy letisztult, minden részletében átgondolt elektromos szedán.
-            </p>
-
-            <!-- STATS — data/szervizek.json alapján (magyarországi szervizhálózat) -->
             <div class="hero__stats" role="group" aria-label="Magyarországi Tesla szervizhálózat statisztikái">
                 <div class="stat">
                     <div class="stat__value stat__value--accent">7</div>
@@ -332,7 +328,7 @@
 
             <div class="hero__cta">
                 <a href="#configure" class="btn btn--primary">Rendelés most</a>
-                <a href="#test-drive" class=" btn btn--ghost">Tesztvezetés</a>
+                <a href="#test-drive" class="btn btn--ghost">Tesztvezetés</a>
                 <a href="#compare" class="btn btn--ghost">Összehasonlítás</a>
             </div>
         </div>
@@ -340,10 +336,50 @@
         <div class="hero__scroll" aria-hidden="true">Scroll</div>
     </section>
 
+    <!--
+        VIN CHECKER
+        Bekéri a Tesla VIN számot (17 karakter), hívja a NHTSA vPIC API-t az alapadatokért
+        (Make, Model, Year, BodyClass), és a data/tesla_vin_variants.json lookup-ból adja a
+        Tesla-specifikus adatokat (akkumulátor, hatótáv, 0-100, hajtás, motor, HP, súly, gyártás).
+    -->
+    <section id="vin-checker" class="vin-section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Eszköz · VIN ellenőrzés</span>
+                <h2 class="section-title">Tesla VIN dekóder</h2>
+                <p class="section-sub">Írd be a 17 karakteres Tesla VIN számot, és megmutatjuk a jármű specifikációit — akkumulátor, hatótáv, hajtás, gyártási év.</p>
+            </header>
+
+            <form id="vin-form" class="vin-form" autocomplete="off" novalidate>
+                <label for="vin-input" class="visually-hidden">Tesla VIN szám</label>
+                <input
+                    type="text"
+                    id="vin-input"
+                    name="vin"
+                    class="vin-input"
+                    placeholder="Pl. 5YJ3E1EA1JF000123"
+                    maxlength="17"
+                    minlength="17"
+                    pattern="[A-HJ-NPR-Z0-9]{17}"
+                    spellcheck="false"
+                    required
+                    aria-describedby="vin-help"
+                />
+                <button type="submit" class="btn btn--primary vin-submit">Ellenőrzés</button>
+            </form>
+            <p id="vin-help" class="vin-help">17 karakter, A-H és J-N és P-R és Z és 0-9 (I, O, Q nélkül).</p>
+
+            <div id="vin-status" class="vin-status" role="status" aria-live="polite"></div>
+            <div id="vin-result" class="vin-result" hidden></div>
+        </div>
+    </section>
+
+
     <!-- További szekciók (Performance, Range, Charging, Interior, Szervizek...) -->
     <main id="content"></main>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
     <script src="assets/js/site.js" defer></script>
+    <script src="assets/js/vin_checker.js" defer></script>
 </body>
 </html>

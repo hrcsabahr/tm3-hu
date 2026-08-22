@@ -484,3 +484,235 @@ h4 { font-size: 18px; }
     .navbar, .site-footer, .filter-bar, .cta-banner, .nav-toggle { display: none !important; }
     body { background: white; color: black; }
 }
+
+
+/* ===== 2026-08-22 HERO REDESIGN — NAGY BETŰK, KÖNNYEN OLVASHATÓ ===== */
+.hero {
+    min-height: 90vh !important;
+    padding: 8rem 0 4rem !important;
+}
+.hero__title {
+    font-size: clamp(4rem, 8vw, 7rem) !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.04em !important;
+    margin: 1.5rem 0 !important;
+}
+.hero__eyebrow {
+    font-size: clamp(1rem, 1.4vw, 1.25rem) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.85;
+}
+.hero__subtitle {
+    font-size: clamp(1.4rem, 2vw, 1.875rem) !important;
+    line-height: 1.4 !important;
+    max-width: 720px !important;
+    font-weight: 400 !important;
+    opacity: 0.95;
+}
+.stat__value {
+    font-size: clamp(3.5rem, 5vw, 5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+}
+.stat__label {
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em;
+}
+.stat__sub {
+    font-size: 0.95rem !important;
+    opacity: 0.7;
+}
+.hero__cta .btn {
+    font-size: 1.2rem !important;
+    padding: 1rem 2rem !important;
+    font-weight: 600 !important;
+}
+
+/* ===== 2026-08-22 VIN CHECKER SECTION ===== */
+.vin-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated, #1a1a1a) 100%);
+}
+.vin-section .section-head {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.vin-section .section-eyebrow {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent, #e31937);
+    margin-bottom: 0.75rem;
+}
+.vin-section .section-title {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem;
+}
+.vin-section .section-sub {
+    font-size: 1.2rem;
+    max-width: 640px;
+    margin: 0 auto;
+    opacity: 0.85;
+}
+.vin-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 720px;
+    margin: 2rem auto 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.vin-input {
+    flex: 1 1 320px;
+    min-width: 280px;
+    padding: 1.1rem 1.4rem;
+    font-size: 1.25rem;
+    font-family: 'SF Mono', 'Consolas', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.06);
+    color: inherit;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+.vin-input:focus {
+    border-color: var(--accent, #e31937);
+    background: rgba(255, 255, 255, 0.1);
+}
+.vin-submit {
+    font-size: 1.1rem !important;
+    padding: 1.1rem 2.2rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.vin-help {
+    text-align: center;
+    font-size: 0.95rem;
+    opacity: 0.7;
+    margin: 0 auto 1.5rem;
+    max-width: 720px;
+}
+.vin-status {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 1.5rem auto 0;
+    min-height: 1.5rem;
+    color: var(--accent, #e31937);
+}
+.vin-status--ok { color: #2ea043; }
+.vin-status--error { color: #f85149; }
+.vin-result {
+    max-width: 880px;
+    margin: 2rem auto 0;
+}
+.vin-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+.vin-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+.vin-card__title {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+.vin-card__sub {
+    font-size: 1.05rem;
+    opacity: 0.75;
+    margin-top: 0.5rem;
+}
+.vin-card__vin {
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 0.9rem;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+}
+.vin-card__meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 0 0 1.5rem;
+    padding: 0;
+}
+.vin-card__meta div { margin: 0; }
+.vin-card__meta dt {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    margin-bottom: 0.25rem;
+}
+.vin-card__meta dd {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0;
+}
+.vin-specs__title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 1.5rem 0 1rem;
+}
+.vin-specs__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+.vin-spec {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+}
+.vin-spec__label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+    margin-bottom: 0.3rem;
+}
+.vin-spec__value {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+.vin-note {
+    text-align: center;
+    font-size: 1.1rem;
+    opacity: 0.85;
+    margin: 1.5rem 0 0;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
