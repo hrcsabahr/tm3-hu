@@ -9,17 +9,17 @@
 
 :root {
     /* ---- SZÍNEK (egy helyen, könnyű átírni) ---- */
-    --bg: #FAFAF7;
-    --bg-2: #F4F3EF;
-    --surface: #FFFFFF;
-    --ink: #1A1A1A;
+    --bg: #06121E;  /* 2026-08-22 OVERRIDE: blue palette */
+    --bg-2: #0E2236;  /* 2026-08-22 OVERRIDE */
+    --surface: var(--bg-card);  /* 2026-08-22 OVERRIDE */  /* 2026-08-22 override: dark theme */
+    --ink: #E8F4FF;  /* 2026-08-22 OVERRIDE */
     --ink-2: #525252;
     --ink-3: #A1A1AA;
     --ink-4: #D4D4D8;
-    --line: rgba(0, 0, 0, 0.08);
+    --line: rgba(125, 211, 252, 0.15);  /* 2026-08-22 OVERRIDE */  /* 2026-08-22 override: dark theme */
     --line-strong: rgba(0, 0, 0, 0.14);
 
-    --accent: #0075DE;
+    --accent: #38BDF8;  /* 2026-08-22 OVERRIDE: blue palette */
     --accent-hover: #005BAB;
     --accent-soft: rgba(0, 117, 222, 0.08);
 
@@ -326,8 +326,9 @@ h4 { font-size: 18px; }
 .calc-field label small { color: var(--ink-3); font-weight: 400; }
 .calc-field input[type="number"], .calc-field input[type="text"], .calc-field select, .calc-field textarea {
     width: 100%; padding: 10px 12px;
-    background: white;
-    border: 1px solid var(--line); border-radius: var(--radius);
+    background: var(--bg-card);
+    color: var(--fg);
+    border: 1px solid var(--border-soft); border-radius: var(--radius);
     font: inherit; font-size: 14px;
     transition: border-color var(--t-fast), box-shadow var(--t-fast);
 }
@@ -338,8 +339,8 @@ h4 { font-size: 18px; }
 }
 .calc-field input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none; width: 18px; height: 18px;
-    background: white; border-radius: 50%; cursor: pointer;
-    border: 2px solid var(--accent);
+    background: var(--primary); border-radius: 50%; cursor: pointer;
+    border: 2px solid var(--fg);
 }
 .calc-field input[type="range"]::-moz-range-thumb {
     width: 18px; height: 18px; background: white; border-radius: 50%;
@@ -482,7 +483,7 @@ h4 { font-size: 18px; }
    ========================================================================== */
 @media print {
     .navbar, .site-footer, .filter-bar, .cta-banner, .nav-toggle { display: none !important; }
-    body { background: white; color: black; }
+    body { background: var(--bg); color: var(--fg); }
 }
 
 
@@ -1549,4 +1550,67 @@ main label {
     color: var(--fg-muted);
     margin-bottom: 0.5rem;
     font-weight: 600;
+}
+
+
+/* ===== 2026-08-22 SUB-PAGE EMPHASIS — bigger fonts for TCO + hibak ===== */
+main.tco-page h2,
+main.tco-page h3,
+main.tco-page p,
+main.tco-page li,
+main.tco-page label,
+main.tco-page table th,
+main.tco-page table td {
+    font-size: 1.25rem;
+}
+main.tco-page h1 { font-size: clamp(3rem, 7vw, 6rem) !important; }
+main.tco-page .page-hero .lead { font-size: clamp(1.25rem, 2vw, 1.75rem) !important; }
+
+main.hibak-page h2,
+main.hibak-page h3,
+main.hibak-page p,
+main.hibak-page li,
+main.hibak-page label,
+main.hibak-page table th,
+main.hibak-page table td {
+    font-size: 1.25rem;
+}
+main.hibak-page h1 { font-size: clamp(3rem, 7vw, 6rem) !important; }
+main.hibak-page .page-hero .lead { font-size: clamp(1.25rem, 2vw, 1.75rem) !important; }
+
+/* Extra emphasis on the page-hero h1 — even on other sub-pages */
+.page-hero h1 { font-size: clamp(3rem, 7vw, 6rem) !important; }
+.page-hero .lead { font-size: clamp(1.125rem, 1.7vw, 1.5rem) !important; }
+
+/* Result/stat values on sub-pages — make them BIG and visible */
+main .res-stat,
+main .stat-value,
+main #res-kapacitas,
+main #res-hatótav-új,
+main #res-hatótav-most,
+main #res-hatótav-tél,
+main #res-hatótav-autóp,
+main #res-eves,
+main #res-10ev,
+main #res-benzines,
+main #res-megtakaritas {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: var(--primary);
+    text-shadow: 0 0 24px var(--primary-glow);
+}
+
+/* Result cards on sub-pages */
+main .result-card,
+main .result-box,
+main #res-kapacitas,
+main #res-eves,
+main #res-10ev,
+main #res-megtakaritas {
+    background: var(--bg-card) !important;
+    color: var(--fg) !important;
+    border: 1px solid var(--border-soft) !important;
+    border-radius: var(--r-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-card);
 }
