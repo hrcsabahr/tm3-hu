@@ -719,23 +719,39 @@ h4 { font-size: 18px; }
 
 /* ===== 2026-08-22 DESIGN TOKENS (P5 — Soma design concept) ===== */
 :root {
-    --bg: #0B0B0F;
-    --bg-elevated: #15151B;
-    --bg-card: #1C1C24;
-    --fg: #F5F5F7;
-    --fg-muted: #9A9AA2;
-    --fg-dim: #6B6B73;
-    --primary: #E82127;
-    --primary-hover: #FF3B3F;
-    --primary-glow: rgba(232, 33, 39, 0.45);
-    --secondary: #3E6AE0;
-    --secondary-glow: rgba(62, 106, 224, 0.35);
-    --accent: #D4AF37;
-    --success: #22C55E;
-    --warning: #F59E0B;
-    --danger: #EF4444;
-    --border: #2A2A33;
-    --border-soft: rgba(255, 255, 255, 0.08);
+    /* === 2026-08-22 BLUE PALETTE — kékes háttér, kék árnyalatok, sötét kontraszt === */
+    --bg: #06121E;             /* sötét navy kék — elsődleges háttér */
+    --bg-elevated: #0E2236;    /* közepes kék — kártyák, glass-panelek */
+    --bg-card: #122A45;        /* világosabb kék — kiemelt kártyák */
+    --bg-deep: #020A14;        /* extra sötét — kontraszt szegélyek */
+
+    --fg: #E8F4FF;             /* világos kékes-fehér — elsődleges szöveg (AAA) */
+    --fg-muted: #94B8D4;       /* közepes kék — másodlagos szöveg (AA) */
+    --fg-dim: #5A7E9C;         /* halvány kék — caption, label */
+
+    --primary: #38BDF8;         /* világos sky blue — elsődleges akcent */
+    --primary-hover: #7DD3FC;   /* világosabb cyan — hover/glow */
+    --primary-glow: rgba(56, 189, 248, 0.50);
+
+    --secondary: #06B6D4;       /* cyan — másodlagos akcent */
+    --secondary-hover: #22D3EE;
+    --secondary-glow: rgba(6, 182, 212, 0.40);
+
+    --accent: #A78BFA;          /* világos lila — Performance kiemelés */
+    --accent-hover: #C4B5FD;
+
+    --chip-bg: rgba(56, 189, 248, 0.12);
+    --chip-border: rgba(125, 211, 252, 0.40);
+    --chip-text: #BAE6FD;       /* világos kékes chip text */
+    --chip-glow: rgba(56, 189, 248, 0.30);
+
+    --success: #34D399;         /* zöld — valid VIN */
+    --warning: #FBBF24;         /* sárga — figyelem */
+    --danger: #F87171;          /* piros — hiba */
+
+    --border: #1E3A5C;          /* közepes kék — elválasztók */
+    --border-soft: rgba(125, 211, 252, 0.12);
+    --border-glow: rgba(56, 189, 248, 0.30);
 
     --font-display: 'Inter Tight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -800,8 +816,9 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(232, 33, 39, 0.25), transparent 60%),
-                radial-gradient(ellipse 60% 80% at 100% 100%, rgba(62, 106, 224, 0.15), transparent 60%);
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(56, 189, 248, 0.30), transparent 60%),
+                radial-gradient(ellipse 60% 80% at 100% 100%, rgba(6, 182, 212, 0.20), transparent 60%),
+                radial-gradient(ellipse 50% 50% at 0% 100%, rgba(167, 139, 250, 0.15), transparent 60%);
     z-index: 0;
     pointer-events: none;
 }
@@ -827,11 +844,12 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--fg-muted);
+    color: var(--chip-text);
     padding: 0.5rem 1.25rem;
-    border: 1px solid var(--border-soft);
+    border: 1px solid var(--chip-border);
     border-radius: 100px;
-    background: rgba(255, 255, 255, 0.04);
+    background: var(--chip-bg);
+    box-shadow: 0 0 24px var(--chip-glow);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     margin-bottom: 2rem;
@@ -848,7 +866,7 @@ body {
 }
 .hero__title em {
     font-style: normal;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--secondary), var(--primary));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -894,7 +912,7 @@ body {
     margin-bottom: 0.5rem;
 }
 .stat__value--accent {
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -997,11 +1015,12 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--primary);
+    color: var(--chip-text);
     padding: 0.4rem 1rem;
-    border: 1px solid rgba(232, 33, 39, 0.3);
+    border: 1px solid var(--chip-border);
     border-radius: 100px;
-    background: rgba(232, 33, 39, 0.08);
+    background: var(--chip-bg);
+    box-shadow: 0 0 20px var(--chip-glow);
     margin-bottom: 1.25rem;
 }
 .section-title {
@@ -1080,7 +1099,8 @@ body {
     position: absolute;
     inset: 0;
     border-radius: 100px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    box-shadow: 0 0 16px var(--primary-glow);
     width: var(--pct, 92%);
     transition: width 0.6s var(--ease-out);
 }
