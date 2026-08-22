@@ -148,17 +148,18 @@
         responsive: true,
         maintainAspectRatio: false,
         interaction: { mode: "index", intersect: false },
-        // Explicit chart area background — fehér, sötét betűkkel.
         backgroundColor: "#ffffff",
+        // 2026-08-22 v4: MINDEN szöveg NAGYOBB, vonalak VASTAGABBAK, pontoK NAGYOBBAK
         plugins: {
             legend: {
                 position: "top",
+                align: "start",
                 labels: {
-                    color: "#1a1a26",
-                    font: { family: "Inter", size: 16, weight: "700" },
-                    boxWidth: 18,
-                    boxHeight: 18,
-                    padding: 18,
+                    color: "#0a0a14",
+                    font: { family: "Inter", size: 17, weight: "800" },
+                    boxWidth: 22,
+                    boxHeight: 22,
+                    padding: 22,
                     usePointStyle: true,
                     pointStyle: "circle",
                 },
@@ -166,22 +167,38 @@
             title: {
                 display: true,
                 text: titles.years,
-                color: "#0a0a14",
-                font: { family: "Inter", size: 22, weight: "800" },
-                padding: { top: 6, bottom: 24 },
+                color: "#020a14",
+                font: { family: "Inter Tight", size: 26, weight: "800" },
+                padding: { top: 8, bottom: 28 },
             },
             tooltip: {
-                backgroundColor: "rgba(15, 15, 26, 0.96)",
+                enabled: true,
+                backgroundColor: "rgba(8, 47, 73, 0.97)",  /* sotet navy */
                 titleColor: "#ffffff",
-                bodyColor: "#e4e4e7",
-                borderColor: "rgba(0, 0, 0, 0.3)",
-                borderWidth: 1,
-                padding: 14,
-                cornerRadius: 10,
-                titleFont: { family: "Inter", size: 15, weight: "700" },
-                bodyFont: { family: "Inter", size: 14, weight: "600" },
+                bodyColor: "#e0f2fe",
+                borderColor: "#38bdf8",
+                borderWidth: 2,
+                padding: 16,
+                cornerRadius: 12,
+                titleFont: { family: "Inter Tight", size: 18, weight: "800" },
+                bodyFont: { family: "Inter", size: 15, weight: "700" },
+                caretSize: 8,
+                caretPadding: 8,
+                displayColors: true,
+                boxPadding: 6,
                 callbacks: {
-                    label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}%`,
+                    title: (items) => `${items[0].label} ${dataModeLabel}`,
+                    label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}% kapacitás`,
+                    afterLabel: (ctx) => {
+                        const explanations = {
+                            "NCA (Long Range)": "Nikkel-kobalt-aluminium — legnagyobb energiasűrűség, de gyorsabban kopik melegben.",
+                            "NCM811": "Nikkel-kobalt-mangán — kiegyensúlyozott teljesítmény és élettartam.",
+                            "LFP (SR+)": "Lítium-vas-foszfát — leghosszabb ciklus-élettartam, hidegben gyengébb.",
+                            "NCA (tipikus ciklusszám)": "Egy teljes ciklus = 0% → 100% feltöltés.",
+                            "LFP (extrém hosszú)": "LFP akár 4000+ ciklust is kibír 80% feletti kapacitással.",
+                        };
+                        return explanations[ctx.dataset.label] || "";
+                    },
                 },
             },
         },
@@ -191,36 +208,53 @@
                 max: 102,
                 ticks: {
                     color: "#1a1a26",
-                    font: { family: "Inter", size: 14, weight: "600" },
+                    font: { family: "Inter", size: 16, weight: "700" },
+                    padding: 8,
                     callback: (v) => `${v}%`,
                 },
-                grid: { color: "rgba(0, 0, 0, 0.10)", lineWidth: 1 },
-                border: { color: "rgba(0, 0, 0, 0.3)" },
+                grid: { color: "rgba(8, 47, 73, 0.10)", lineWidth: 1 },
+                border: { color: "rgba(8, 47, 73, 0.35)", display: true, width: 2 },
                 title: {
                     display: true,
-                    text: "Kapacitás (%)",
-                    color: "#1a1a26",
-                    font: { family: "Inter", size: 15, weight: "700" },
-                    padding: { bottom: 12 },
+                    text: "Maradék kapacitás (%)",
+                    color: "#020a14",
+                    font: { family: "Inter Tight", size: 18, weight: "800" },
+                    padding: { bottom: 16 },
                 },
             },
             x: {
                 ticks: {
                     color: "#1a1a26",
-                    font: { family: "Inter", size: 14, weight: "600" },
+                    font: { family: "Inter", size: 15, weight: "700" },
+                    padding: 8,
                 },
-                grid: { color: "rgba(0, 0, 0, 0.06)" },
-                border: { color: "rgba(0, 0, 0, 0.3)" },
+                grid: { color: "rgba(8, 47, 73, 0.06)" },
+                border: { color: "rgba(8, 47, 73, 0.35)", display: true, width: 2 },
                 title: {
                     display: true,
                     text: xLabels.years,
-                    color: "#1a1a26",
-                    font: { family: "Inter", size: 15, weight: "700" },
-                    padding: { top: 12 },
+                    color: "#020a14",
+                    font: { family: "Inter Tight", size: 18, weight: "800" },
+                    padding: { top: 16 },
                 },
             },
         },
+        elements: {
+            line: {
+                borderWidth: 5,
+                tension: 0.3,
+            },
+            point: {
+                radius: 6,
+                hoverRadius: 10,
+                hitRadius: 16,
+                borderWidth: 3,
+            },
+        },
     };
+
+    // dataModeLabel — az x-axis mértékegysége a tooltip-ben
+    let dataModeLabel = "év";  // ezt a tab click handler frissíti
 
     const chart = new Chart(canvas, {
         type: "line",
@@ -229,6 +263,7 @@
     });
 
     const tabs = document.querySelectorAll(".deg-tab");
+    const modeLabels = { years: "év", km: "km", chem: "ciklus" };
     tabs.forEach((tab) => {
         tab.addEventListener("click", () => {
             if (tab.classList.contains("active")) return;
@@ -239,6 +274,7 @@
             tab.classList.add("active");
             tab.setAttribute("aria-selected", "true");
             const mode = tab.dataset.mode;
+            dataModeLabel = modeLabels[mode] || "";
             chart.data = data[mode];
             chart.options.plugins.title.text = titles[mode];
             chart.options.scales.x.title.text = xLabels[mode];
