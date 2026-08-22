@@ -170,5 +170,38 @@
         ]
     }
     <script>
+
+
+    <!-- ===== DEGRADATION VIZUALIZÁCIÓ — CHART ===== -->
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Vizualizáció</span>
+                <h2 class="section-title">Akkumulátor degradation vizualizáció</h2>
+                <p class="section-sub">A fenti paraméterek (évjárat, kilométer, változat, használati szokások) alapján megbecsült degradáció a Tesla Model 3 három akkumulátor-kémiájára.</p>
+            </header>
+
+            <div class="deg-chart-wrap">
+                <header class="section-head" style="margin-bottom: 1.5rem;">
+                    <span class="section-eyebrow">Részletes chart</span>
+                    <h3 class="section-title" style="font-size: clamp(1.5rem, 2.5vw, 2.25rem);">Kapacitás vs. életkor</h3>
+                </header>
+
+                <div class="deg-tabs" role="tablist" aria-label="Degradáció modalitás">
+                    <button class="deg-tab active" data-mode="years" role="tab" aria-selected="true">Évek</button>
+                    <button class="deg-tab" data-mode="km" role="tab" aria-selected="false">Kilométer</button>
+                    <button class="deg-tab" data-mode="chem" role="tab" aria-selected="false">Töltési ciklusok</button>
+                </div>
+
+                <div class="deg-chart-inner">
+                    <canvas id="degChartKalk" aria-label="Akkumulátor degradáció chart" role="img"></canvas>
+                </div>
+
+                <p class="deg-note">A görbék a Tesla flottajelentések és a P3 Charging ciklustesztek alapján készültek. Az értékek átlagosak, 80% DoD és ~50% DC-töltés mellett.</p>
+            </div>
+        </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+<script src="../script.js" defer></script>
 </body>
 </html>

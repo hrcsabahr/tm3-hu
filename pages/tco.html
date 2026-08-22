@@ -144,5 +144,32 @@
     <script src="../assets/js/site.js"></script>
     <script src="../assets/js/pwa.js"></script>
     <script src="../assets/js/tco.js"></script>
+
+
+    <!-- ===== 10 ÉVES TCO ÖSSZEHASONLÍTÁS — CHART ===== -->
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Vizualizáció</span>
+                <h2 class="section-title">10 év alatt: mennyit takarítasz meg?</h2>
+                <p class="section-sub">Egy átlagos magyarországi sofőr évi 15 000 km-t fut. A Tesla Model 3 villanyüzeme és alacsony szervizigénye 10 év alatt milliókban mérhető megtakarítást jelent egy hasonló benzines szedánhoz képest.</p>
+            </header>
+
+            <div class="deg-chart-wrap">
+                <header class="section-head" style="margin-bottom: 1.5rem;">
+                    <span class="section-eyebrow">Adatok · valós TCO</span>
+                    <h3 class="section-title" style="font-size: clamp(1.5rem, 2.5vw, 2.25rem);">Kumulatív költség összehasonlítás</h3>
+                </header>
+
+                <div class="deg-chart-inner">
+                    <canvas id="tcoChart" aria-label="TCO összehasonlítás chart" role="img"></canvas>
+                </div>
+
+                <p class="deg-note">A Tesla görbe magában foglalja a vételárat, otthoni töltést (70%) + DC-töltést (30%), biztosítást, szervizt és a maradványértéket. A benzines görbe tartalmazza a vételárat, üzemanyagot, biztosítást, szervizt és a maradványértéket. Az értékek átlagos, magyarországi viszonyokra számítva.</p>
+            </div>
+        </div>
+    </section>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+<script src="../script.js" defer></script>
 </body>
 </html>

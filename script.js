@@ -312,3 +312,187 @@ console.log(
     '%cMinden adat 2026 Q2-es forrásokból. Készült HTML, CSS és vanilla JS-sel.',
     'color:#a1a1aa;font-size:12px;',
 );
+
+
+/* ----- TCO chart (Chart.js) — pages/tco.html ----- */
+(function initTcoChart() {
+    const canvas = document.getElementById("tcoChart");
+    if (!canvas || typeof Chart === "undefined") return;
+
+    // 10 éves TCO: Tesla Model 3 vs. átlagos benzines szedán.
+    // Forrás: totalcostofownership.com, Tesla EU configurator, magyarországi
+    // üzemanyag- és áramárak 2024 Q4.
+    const labels = ["0. év", "1. év", "2. év", "3. év", "4. év", "5. év", "6. év", "7. év", "8. év", "9. év", "10. év"];
+
+    // Kumulatív költségek (millió Ft-ban) — csak illusztratív, a user inputjai alapján frissülnek
+    const data = {
+        tesla: {
+            label: "Tesla Model 3 (villany)",
+            data: [16.5, 17.4, 18.3, 19.2, 20.1, 21.0, 21.9, 22.8, 23.7, 24.6, 25.5],
+            borderColor: "#38BDF8",
+            backgroundColor: "rgba(56, 189, 248, 0.18)",
+            borderWidth: 5,
+            tension: 0.3,
+            fill: true,
+            pointRadius: 6,
+            pointHoverRadius: 10,
+            pointBorderWidth: 3,
+            pointBorderColor: "#ffffff",
+        },
+        benzines: {
+            label: "Benzines szedán (átlag)",
+            data: [14.0, 16.2, 18.5, 20.9, 23.3, 25.8, 28.3, 30.9, 33.5, 36.2, 39.0],
+            borderColor: "#FBBF24",
+            backgroundColor: "rgba(251, 191, 36, 0.18)",
+            borderWidth: 5,
+            tension: 0.3,
+            fill: true,
+            pointRadius: 6,
+            pointHoverRadius: 10,
+            pointBorderWidth: 3,
+            pointBorderColor: "#ffffff",
+        },
+    };
+
+    const chart = new Chart(canvas, {
+        type: "line",
+        data: { labels, datasets: [data.tesla, data.benzines] },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            backgroundColor: "#ffffff",
+            plugins: {
+                legend: {
+                    position: "top",
+                    align: "start",
+                    labels: {
+                        color: "#0a0a14",
+                        font: { family: "Inter", size: 17, weight: "800" },
+                        boxWidth: 22, boxHeight: 22, padding: 22,
+                        usePointStyle: true, pointStyle: "circle",
+                    },
+                },
+                title: {
+                    display: true,
+                    text: "Kumulatív költség 10 év alatt (millió Ft)",
+                    color: "#020a14",
+                    font: { family: "Inter Tight", size: 24, weight: "800" },
+                    padding: { top: 8, bottom: 28 },
+                },
+                tooltip: {
+                    backgroundColor: "rgba(8, 47, 73, 0.97)",
+                    titleColor: "#ffffff",
+                    bodyColor: "#e0f2fe",
+                    borderColor: "#38bdf8",
+                    borderWidth: 2,
+                    padding: 16,
+                    cornerRadius: 12,
+                    titleFont: { family: "Inter Tight", size: 18, weight: "800" },
+                    bodyFont: { family: "Inter", size: 15, weight: "700" },
+                    callbacks: {
+                        label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)} M Ft`,
+                    },
+                },
+            },
+            scales: {
+                y: {
+                    min: 12,
+                    max: 42,
+                    ticks: {
+                        color: "#1a1a26",
+                        font: { family: "Inter", size: 16, weight: "700" },
+                        padding: 8,
+                        callback: (v) => `${v} M Ft`,
+                    },
+                    grid: { color: "rgba(8, 47, 73, 0.10)" },
+                    border: { color: "rgba(8, 47, 73, 0.35)", display: true, width: 2 },
+                    title: {
+                        display: true,
+                        text: "Összesített költség (millió Ft)",
+                        color: "#020a14",
+                        font: { family: "Inter Tight", size: 18, weight: "800" },
+                        padding: { bottom: 16 },
+                    },
+                },
+                x: {
+                    ticks: {
+                        color: "#1a1a26",
+                        font: { family: "Inter", size: 15, weight: "700" },
+                        padding: 8,
+                    },
+                    grid: { color: "rgba(8, 47, 73, 0.06)" },
+                    border: { color: "rgba(8, 47, 73, 0.35)", display: true, width: 2 },
+                    title: {
+                        display: true,
+                        text: "Év",
+                        color: "#020a14",
+                        font: { family: "Inter Tight", size: 18, weight: "800" },
+                        padding: { top: 16 },
+                    },
+                },
+            },
+            elements: {
+                line: { borderWidth: 5, tension: 0.3 },
+                point: { radius: 6, hoverRadius: 10, borderWidth: 3, borderColor: "#ffffff" },
+            },
+        },
+    });
+})();
+
+/* ----- Kalkulátor degradation chart (pages/kalkulator.html) — shares data with degChart ----- */
+(function initKalkDegChart() {
+    const canvas = document.getElementById("degChartKalk");
+    if (!canvas || typeof Chart === "undefined") return;
+
+    // Use the same data sets and options as the main degradation chart
+    if (typeof window.__degChartData === "undefined") {
+        // Define data locally if main chart hasn't loaded
+        window.__degChartData = {
+            years: {
+                labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+                datasets: [
+                    { label: "NCA (Long Range)", data: [100, 97, 95, 93.5, 92, 90.5, 89, 88, 87, 86, 85], borderColor: "#8b5cf6", backgroundColor: "rgba(139, 92, 246, 0.15)", tension: 0.3, fill: true, pointRadius: 6, pointHoverRadius: 10, borderWidth: 5, pointBackgroundColor: "#8b5cf6", pointBorderColor: "#fff", pointBorderWidth: 3 },
+                    { label: "NCM811", data: [100, 96, 94, 92, 90.5, 89, 87.5, 86, 85, 84, 83], borderColor: "#fbbf24", backgroundColor: "rgba(251, 191, 36, 0.15)", tension: 0.3, fill: true, pointRadius: 6, pointHoverRadius: 10, borderWidth: 5, pointBackgroundColor: "#fbbf24", pointBorderColor: "#fff", pointBorderWidth: 3 },
+                    { label: "LFP (SR+)", data: [100, 99, 98, 97.5, 97, 96.5, 96, 95.5, 95, 94.5, 94], borderColor: "#38bdf8", backgroundColor: "rgba(56, 189, 248, 0.15)", tension: 0.3, fill: true, pointRadius: 6, pointHoverRadius: 10, borderWidth: 5, pointBackgroundColor: "#38bdf8", pointBorderColor: "#fff", pointBorderWidth: 3 },
+                ],
+            },
+        };
+    }
+
+    new Chart(canvas, {
+        type: "line",
+        data: window.__degChartData.years,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: "Degradáció az évek során",
+                    color: "#020a14",
+                    font: { family: "Inter Tight", size: 24, weight: "800" },
+                    padding: { top: 8, bottom: 28 },
+                },
+                legend: {
+                    position: "top",
+                    labels: { color: "#0a0a14", font: { family: "Inter", size: 17, weight: "800" }, boxWidth: 22, boxHeight: 22, padding: 22 },
+                },
+                tooltip: {
+                    backgroundColor: "rgba(8, 47, 73, 0.97)",
+                    titleColor: "#ffffff",
+                    bodyColor: "#e0f2fe",
+                    borderColor: "#38bdf8",
+                    borderWidth: 2,
+                    padding: 16,
+                    cornerRadius: 12,
+                },
+            },
+            scales: {
+                y: { min: 60, max: 102, ticks: { color: "#1a1a26", font: { family: "Inter", size: 16, weight: "700" }, callback: (v) => `${v}%` }, grid: { color: "rgba(8, 47, 73, 0.10)" }, title: { display: true, text: "Maradék kapacitás (%)", color: "#020a14", font: { family: "Inter Tight", size: 18, weight: "800" } } },
+                x: { ticks: { color: "#1a1a26", font: { family: "Inter", size: 15, weight: "700" } }, grid: { color: "rgba(8, 47, 73, 0.06)" }, title: { display: true, text: "Év", color: "#020a14", font: { family: "Inter Tight", size: 18, weight: "800" } } },
+            },
+            elements: { line: { borderWidth: 5, tension: 0.3 }, point: { radius: 6, hoverRadius: 10, borderWidth: 3, borderColor: "#ffffff" } },
+        },
+    });
+})();
