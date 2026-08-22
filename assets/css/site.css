@@ -717,248 +717,586 @@ h4 { font-size: 18px; }
     border: 0;
 }
 
+/* ===== 2026-08-22 DESIGN TOKENS (P5 — Soma design concept) ===== */
+:root {
+    --bg: #0B0B0F;
+    --bg-elevated: #15151B;
+    --bg-card: #1C1C24;
+    --fg: #F5F5F7;
+    --fg-muted: #9A9AA2;
+    --fg-dim: #6B6B73;
+    --primary: #E82127;
+    --primary-hover: #FF3B3F;
+    --primary-glow: rgba(232, 33, 39, 0.45);
+    --secondary: #3E6AE0;
+    --secondary-glow: rgba(62, 106, 224, 0.35);
+    --accent: #D4AF37;
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #EF4444;
+    --border: #2A2A33;
+    --border-soft: rgba(255, 255, 255, 0.08);
 
-/* ===== 2026-08-22 HERO REDESIGN v2 — MÉG NAGYOBB BETŰK ===== */
-.hero {
-    min-height: 100vh !important;
-    padding: 10rem 0 6rem !important;
+    --font-display: 'Inter Tight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', Consolas, monospace;
+
+    --container-max: 1440px;
+    --container-pad: clamp(16px, 4vw, 48px);
+    --section-py: clamp(4rem, 8vw, 7rem);
+
+    --r-sm: 8px;
+    --r-md: 14px;
+    --r-lg: 20px;
+    --r-xl: 32px;
+
+    --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    --shadow-glow: 0 0 40px rgba(232, 33, 39, 0.4);
+    --shadow-glass: 0 24px 60px rgba(0, 0, 0, 0.5);
 }
-.hero__title {
-    font-size: clamp(5.5rem, 12vw, 10rem) !important;
-    font-weight: 900 !important;
-    line-height: 0.95 !important;
-    letter-spacing: -0.05em !important;
-    margin: 1.5rem 0 !important;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: var(--bg);
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--fg);
+    background: var(--bg);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 var(--container-pad);
+}
+
+/* ===== HERO — 100vh, glassmorphism, radial gradient ===== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 8rem 0 6rem;
+    background: var(--bg);
+}
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(232, 33, 39, 0.25), transparent 60%),
+                radial-gradient(ellipse 60% 80% at 100% 100%, rgba(62, 106, 224, 0.15), transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+}
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, transparent 60%, var(--bg) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+.hero__inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 1100px;
+    padding: 0 var(--container-pad);
 }
 .hero__eyebrow {
-    font-size: clamp(1.1rem, 1.5vw, 1.4rem) !important;
-    font-weight: 700 !important;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    opacity: 0.9;
-}
-.hero__subtitle {
-    font-size: clamp(1.6rem, 2.2vw, 2.1rem) !important;
-    line-height: 1.4 !important;
-    max-width: 760px !important;
-    font-weight: 400 !important;
-    opacity: 0.95;
-}
-.stat__value {
-    font-size: clamp(4.5rem, 6.5vw, 6.5rem) !important;
-    font-weight: 900 !important;
-    line-height: 1 !important;
-}
-.stat__label {
-    font-size: 1.25rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.02em;
-}
-.stat__sub {
-    font-size: 1.05rem !important;
-    opacity: 0.7;
-}
-.hero__cta .btn {
-    font-size: 1.3rem !important;
-    padding: 1.2rem 2.4rem !important;
-    font-weight: 700 !important;
-}
-
-/* ===== 2026-08-22 DEGRADATION SECTION — NAGY BETŰK, VILÁGOS KONTRASZT ===== */
-.deg-section {
-    padding: 6rem 0;
-    background: linear-gradient(180deg, #0a0a14 0%, #15151c 100%);
-}
-.deg-section .section-head { text-align: center; margin-bottom: 3rem; }
-.deg-section .section-eyebrow {
     display: inline-block;
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--accent, #e31937);
+    color: var(--fg-muted);
+    padding: 0.5rem 1.25rem;
+    border: 1px solid var(--border-soft);
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    margin-bottom: 2rem;
+}
+.hero__title {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 9vw, 7.5rem);
+    font-weight: 800;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    margin: 0 0 1.5rem;
+    color: var(--fg);
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+}
+.hero__title em {
+    font-style: normal;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.hero__subtitle {
+    font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+    line-height: 1.5;
+    max-width: 720px;
+    margin: 0 auto 3rem;
+    color: var(--fg-muted);
+    font-weight: 400;
+}
+
+/* Glassmorphism stat cards */
+.hero__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    max-width: 960px;
+    margin: 0 auto 3rem;
+}
+.stat {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--r-md);
+    padding: 1.5rem 1.25rem;
+    transition: transform 0.3s var(--ease-out), border-color 0.3s;
+}
+.stat:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232, 33, 39, 0.3);
+}
+.stat__value {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--fg);
+    margin-bottom: 0.5rem;
+}
+.stat__value--accent {
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+.stat__label {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: 0.25rem;
+}
+.stat__sub {
+    font-size: 0.8125rem;
+    color: var(--fg-muted);
+    font-weight: 500;
+}
+
+/* Glassmorphism CTA buttons */
+.hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.875rem;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-radius: var(--r-sm);
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out);
+    text-decoration: none;
+    white-space: nowrap;
+}
+.btn--primary {
+    background: rgba(232, 33, 39, 0.9);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(232, 33, 39, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.btn--primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(232, 33, 39, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+.btn--ghost {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: var(--fg);
+    border-color: var(--border-soft);
+}
+.btn--ghost:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero__scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--fg-muted);
+    z-index: 2;
+    animation: heroPulse 2s ease-in-out infinite;
+}
+@keyframes heroPulse {
+    0%, 100% { opacity: 0.4; transform: translateX(-50%) translateY(0); }
+    50% { opacity: 1; transform: translateX(-50%) translateY(4px); }
+}
+
+/* ===== SECTION HEADERS ===== */
+.section {
+    padding: var(--section-py) 0;
+}
+.section--alt {
+    background: var(--bg-elevated);
+}
+.section-head {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 3.5rem;
+}
+.section-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--primary);
+    padding: 0.4rem 1rem;
+    border: 1px solid rgba(232, 33, 39, 0.3);
+    border-radius: 100px;
+    background: rgba(232, 33, 39, 0.08);
+    margin-bottom: 1.25rem;
+}
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 4vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--fg);
+    margin: 0 0 1rem;
+}
+.section-sub {
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    line-height: 1.55;
+    color: var(--fg-muted);
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+/* ===== DEGRADATION — 3-COL CARD GRID + PROGRESS BARS + LIGHT CHART ===== */
+.deg-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+}
+.deg-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--r-lg);
+    padding: 1.75rem;
+    box-shadow: var(--shadow-card);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s var(--ease-out), border-color 0.3s;
+}
+.deg-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+.deg-card__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+.deg-card__label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--fg-muted);
+}
+.deg-card__value {
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--fg);
+    letter-spacing: -0.01em;
+}
+.deg-card__sub {
+    font-size: 0.875rem;
+    color: var(--fg-muted);
+    margin-bottom: 1.25rem;
+}
+.deg-card__bar {
+    position: relative;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 100px;
+    overflow: hidden;
     margin-bottom: 0.75rem;
 }
-.deg-section .section-title {
-    font-size: clamp(3rem, 5vw, 4.5rem);
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    margin: 0 0 1.25rem;
-    line-height: 1.05;
+.deg-card__bar-fill {
+    position: absolute;
+    inset: 0;
+    border-radius: 100px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    width: var(--pct, 92%);
+    transition: width 0.6s var(--ease-out);
 }
-.deg-section .section-sub {
-    font-size: 1.3rem;
-    max-width: 760px;
+.deg-card__legend {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--fg-muted);
+    letter-spacing: 0.05em;
+}
+
+/* Light mode chart container (design contrast) */
+.deg-chart-wrap {
+    max-width: 1100px;
     margin: 0 auto;
-    opacity: 0.85;
-    line-height: 1.5;
+    background: #ffffff;
+    border-radius: var(--r-lg);
+    padding: 2rem;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    color: #1a1a26;
 }
+.deg-chart-wrap .deg-section-eyebrow { color: #0B0B0F; background: rgba(11,11,15,0.06); border-color: rgba(11,11,15,0.2); }
+.deg-chart-wrap .deg-section-title { color: #0B0B0F; }
+.deg-chart-wrap .deg-section-sub { color: #3a3a3a; }
+.deg-chart-inner {
+    position: relative;
+    background: #ffffff;
+    border-radius: var(--r-md);
+    padding: 1.5rem;
+}
+.deg-chart-wrap canvas {
+    max-height: 500px;
+}
+
 .deg-tabs {
     display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    margin: 2.5rem auto 2rem;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 .deg-tab {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    font-weight: 600;
     text-transform: uppercase;
-    background: rgba(255, 255, 255, 0.04);
-    color: inherit;
-    border: 2px solid rgba(255, 255, 255, 0.12);
-    border-radius: 10px;
+    letter-spacing: 0.08em;
+    color: #1a1a26;
+    background: rgba(11, 11, 15, 0.06);
+    border: 1px solid rgba(11, 11, 15, 0.15);
+    border-radius: 100px;
     cursor: pointer;
     transition: all 0.2s;
 }
-.deg-tab:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.25); }
+.deg-tab:hover { background: rgba(11, 11, 15, 0.12); }
 .deg-tab.active {
-    background: var(--accent, #e31937);
-    border-color: var(--accent, #e31937);
+    background: var(--primary);
+    border-color: var(--primary);
     color: #fff;
 }
-.deg-chart-wrap {
-    max-width: 980px;
-    margin: 0 auto;
-    background: #ffffff;  /* VILÁGOS chart container — fehér háttér */
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 18px;
-    padding: 32px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-}
-.deg-chart-wrap canvas {
-    max-height: 480px;
-}
+
 .deg-note {
     text-align: center;
-    font-size: 1.05rem;
-    opacity: 0.65;
-    margin: 2rem auto 0;
-    max-width: 880px;
-    line-height: 1.5;
+    font-size: 0.875rem;
+    color: #555;
+    margin: 1.5rem 0 0;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-/* ===== 2026-08-22 HERO REDESIGN v2 — MÉG NAGYOBB BETŰK ===== */
-.hero {
-    min-height: 100vh !important;
-    padding: 10rem 0 6rem !important;
+/* ===== VIN CHECKER — full-width sticky form + live preview ===== */
+.vin-section {
+    padding: var(--section-py) 0;
+    background: var(--bg);
 }
-.hero__title {
-    font-size: clamp(5.5rem, 12vw, 10rem) !important;
-    font-weight: 900 !important;
-    line-height: 0.95 !important;
-    letter-spacing: -0.05em !important;
-    margin: 1.5rem 0 !important;
+.vin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
 }
-.hero__eyebrow {
-    font-size: clamp(1.1rem, 1.5vw, 1.4rem) !important;
-    font-weight: 700 !important;
+@media (max-width: 900px) {
+    .vin-grid { grid-template-columns: 1fr; }
+}
+.vin-form-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--r-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+}
+.vin-form {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+.vin-input {
+    flex: 1;
+    padding: 1.1rem 1.25rem;
+    font-family: var(--font-mono);
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
-    opacity: 0.9;
+    color: var(--fg);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1.5px solid var(--border-soft);
+    border-radius: var(--r-sm);
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
 }
-.hero__subtitle {
-    font-size: clamp(1.6rem, 2.2vw, 2.1rem) !important;
-    line-height: 1.4 !important;
-    max-width: 760px !important;
-    font-weight: 400 !important;
-    opacity: 0.95;
+.vin-input:focus {
+    border-color: var(--primary);
+    background: rgba(232, 33, 39, 0.08);
 }
-.stat__value {
-    font-size: clamp(4.5rem, 6.5vw, 6.5rem) !important;
-    font-weight: 900 !important;
-    line-height: 1 !important;
-}
-.stat__label {
-    font-size: 1.25rem !important;
-    font-weight: 700 !important;
-    letter-spacing: 0.02em;
-}
-.stat__sub {
-    font-size: 1.05rem !important;
-    opacity: 0.7;
-}
-.hero__cta .btn {
-    font-size: 1.3rem !important;
-    padding: 1.2rem 2.4rem !important;
-    font-weight: 700 !important;
-}
-
-/* ===== 2026-08-22 DEGRADATION SECTION — NAGY BETŰK, VILÁGOS KONTRASZT ===== */
-.deg-section {
-    padding: 6rem 0;
-    background: linear-gradient(180deg, #0a0a14 0%, #15151c 100%);
-}
-.deg-section .section-head { text-align: center; margin-bottom: 3rem; }
-.deg-section .section-eyebrow {
-    display: inline-block;
+.vin-submit {
+    padding: 1rem 1.75rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--r-sm);
+    font-family: var(--font-body);
     font-size: 1rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--accent, #e31937);
-    margin-bottom: 0.75rem;
-}
-.deg-section .section-title {
-    font-size: clamp(3rem, 5vw, 4.5rem);
-    font-weight: 900;
-    letter-spacing: -0.03em;
-    margin: 0 0 1.25rem;
-    line-height: 1.05;
-}
-.deg-section .section-sub {
-    font-size: 1.3rem;
-    max-width: 760px;
-    margin: 0 auto;
-    opacity: 0.85;
-    line-height: 1.5;
-}
-.deg-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 0.75rem;
-    margin: 2.5rem auto 2rem;
-    flex-wrap: wrap;
-}
-.deg-tab {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    background: rgba(255, 255, 255, 0.04);
-    color: inherit;
-    border: 2px solid rgba(255, 255, 255, 0.12);
-    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s;
 }
-.deg-tab:hover { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.25); }
-.deg-tab.active {
-    background: var(--accent, #e31937);
-    border-color: var(--accent, #e31937);
-    color: #fff;
+.vin-submit:hover { background: var(--primary-hover); transform: translateY(-2px); }
+.vin-help {
+    font-size: 0.8125rem;
+    color: var(--fg-muted);
+    margin-top: 0.75rem;
+    font-family: var(--font-mono);
 }
-.deg-chart-wrap {
-    max-width: 980px;
-    margin: 0 auto;
-    background: #ffffff;  /* VILÁGOS chart container — fehér háttér */
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 18px;
-    padding: 32px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+.vin-status {
+    margin-top: 1rem;
+    font-size: 0.9375rem;
+    color: var(--fg-muted);
+    min-height: 1.5rem;
 }
-.deg-chart-wrap canvas {
-    max-height: 480px;
+.vin-status--ok { color: var(--success); }
+.vin-status--error { color: var(--danger); }
+
+.vin-preview {
+    background: var(--bg-card);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--r-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
-.deg-note {
-    text-align: center;
-    font-size: 1.05rem;
-    opacity: 0.65;
-    margin: 2rem auto 0;
-    max-width: 880px;
-    line-height: 1.5;
+.vin-preview__title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--fg);
+}
+.vin-preview__sub {
+    font-size: 0.9375rem;
+    color: var(--fg-muted);
+}
+.vin-preview__vin {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    padding: 0.5rem 0.75rem;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: var(--r-sm);
+    display: inline-block;
+    width: fit-content;
+    margin-top: 0.5rem;
+}
+.vin-specs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+.vin-spec {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--r-sm);
+    padding: 0.75rem 1rem;
+}
+.vin-spec__label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--fg-muted);
+    margin-bottom: 0.3rem;
+}
+.vin-spec__value {
+    font-family: var(--font-display);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--fg);
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
 }
