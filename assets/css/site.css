@@ -767,7 +767,7 @@ h4 { font-size: 18px; }
 /* ===== 2026-08-22 DEGRADATION SECTION — NAGY BETŰK, VILÁGOS KONTRASZT ===== */
 .deg-section {
     padding: 6rem 0;
-    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated, #15151c) 100%);
+    background: linear-gradient(180deg, #0a0a14 0%, #15151c 100%);
 }
 .deg-section .section-head { text-align: center; margin-bottom: 3rem; }
 .deg-section .section-eyebrow {
@@ -822,11 +822,11 @@ h4 { font-size: 18px; }
 .deg-chart-wrap {
     max-width: 980px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #ffffff;  /* VILÁGOS chart container — fehér háttér */
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 18px;
-    padding: 24px;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    padding: 32px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
 }
 .deg-chart-wrap canvas {
     max-height: 480px;
@@ -890,7 +890,7 @@ h4 { font-size: 18px; }
 /* ===== 2026-08-22 DEGRADATION SECTION — NAGY BETŰK, VILÁGOS KONTRASZT ===== */
 .deg-section {
     padding: 6rem 0;
-    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated, #15151c) 100%);
+    background: linear-gradient(180deg, #0a0a14 0%, #15151c 100%);
 }
 .deg-section .section-head { text-align: center; margin-bottom: 3rem; }
 .deg-section .section-eyebrow {
@@ -945,11 +945,11 @@ h4 { font-size: 18px; }
 .deg-chart-wrap {
     max-width: 980px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: #ffffff;  /* VILÁGOS chart container — fehér háttér */
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 18px;
-    padding: 24px;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    padding: 32px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
 }
 .deg-chart-wrap canvas {
     max-height: 480px;
