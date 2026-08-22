@@ -1,3 +1,9 @@
+
+// 2026-08-22: Register chartjs-plugin-datalabels globally so all charts can use it
+if (typeof ChartDataLabels !== "undefined") {
+    Chart.register(ChartDataLabels);
+}
+
 /* =====================================================
    Tesla Model 3 Guide — Interactivity (főoldali szekciók)
    A nav és footer a site.js-ben van.
@@ -171,7 +177,7 @@
                 font: { family: "Inter Tight", size: 26, weight: "800" },
                 padding: { top: 8, bottom: 28 },
             },
-            tooltip: {
+            tooltip: { enabled: false,  /* 2026-08-22 — NO TOOLTIP */
                 enabled: true,
                 backgroundColor: "rgba(8, 47, 73, 0.97)",  /* sotet navy */
                 titleColor: "#ffffff",
@@ -380,8 +386,8 @@ console.log(
                     font: { family: "Inter Tight", size: 24, weight: "800" },
                     padding: { top: 8, bottom: 28 },
                 },
-                tooltip: {
-                    backgroundColor: "rgba(8, 47, 73, 0.97)",
+                tooltip: { enabled: false,  /* 2026-08-22 — NO TOOLTIP */
+                backgroundColor: "rgba(8, 47, 73, 0.97)",
                     titleColor: "#ffffff",
                     bodyColor: "#e0f2fe",
                     borderColor: "#38bdf8",
@@ -478,8 +484,8 @@ console.log(
                     position: "top",
                     labels: { color: "#0a0a14", font: { family: "Inter", size: 17, weight: "800" }, boxWidth: 22, boxHeight: 22, padding: 22 },
                 },
-                tooltip: {
-                    backgroundColor: "rgba(8, 47, 73, 0.97)",
+                tooltip: { enabled: false,  /* 2026-08-22 — NO TOOLTIP */
+                backgroundColor: "rgba(8, 47, 73, 0.97)",
                     titleColor: "#ffffff",
                     bodyColor: "#e0f2fe",
                     borderColor: "#38bdf8",

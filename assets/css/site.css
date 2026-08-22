@@ -12,7 +12,7 @@
     --bg: #06121E;  /* 2026-08-22 OVERRIDE: blue palette */
     --bg-2: #0E2236;  /* 2026-08-22 OVERRIDE */
     --surface: var(--bg-card);  /* 2026-08-22 OVERRIDE */  /* 2026-08-22 override: dark theme */
-    --ink: #E8F4FF;  /* 2026-08-22 OVERRIDE */
+    --ink: #F0F7FF;  /* 2026-08-22 OVERRIDE — brighter */
     --ink-2: #525252;
     --ink-3: #A1A1AA;
     --ink-4: #D4D4D8;
@@ -726,9 +726,9 @@ h4 { font-size: 18px; }
     --bg-card: #122A45;        /* világosabb kék — kiemelt kártyák */
     --bg-deep: #020A14;        /* extra sötét — kontraszt szegélyek */
 
-    --fg: #E8F4FF;             /* világos kékes-fehér — elsődleges szöveg (AAA) */
-    --fg-muted: #94B8D4;       /* közepes kék — másodlagos szöveg (AA) */
-    --fg-dim: #5A7E9C;         /* halvány kék — caption, label */
+        --fg: #F0F7FF;             /* elsődleges szöveg - majdnem fehér, könnyen olvasható */
+    --fg-muted: #D6E2EE;       /* másodlagos szöveg - világos szürke-kék, jól látható sötét háttéren */
+    --fg-dim: #AFC0D2;          /* halvány címke - világosabb szürke, még látható */         /* halvány kék — caption, label */
 
     --primary: #38BDF8;         /* világos sky blue — elsődleges akcent */
     --primary-hover: #7DD3FC;   /* világosabb cyan — hover/glow */
@@ -878,7 +878,7 @@ body {
     line-height: 1.5;
     max-width: 720px;
     margin: 0 auto 3rem;
-    color: var(--fg-muted);
+    color: #D8E3EE;  /* 2026-08-22 BRIGHTER */
     font-weight: 400;
 }
 
@@ -927,7 +927,7 @@ body {
 }
 .stat__sub {
     font-size: 0.8125rem;
-    color: var(--fg-muted);
+    color: #E0EAFA;  /* 2026-08-22 BRIGHTER */
     font-weight: 500;
 }
 
@@ -988,7 +988,7 @@ body {
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: var(--fg-muted);
+    color: #E0EAFA;  /* 2026-08-22 BRIGHTER */
     z-index: 2;
     animation: heroPulse 2s ease-in-out infinite;
 }
@@ -1442,7 +1442,7 @@ main .section h3 {
 main p, main li {
     font-size: 1.125rem;
     line-height: 1.65;
-    color: var(--fg-muted);
+    color: var(--fg);
     margin-bottom: 1rem;
 }
 main a { color: var(--primary); transition: color 0.2s; }
