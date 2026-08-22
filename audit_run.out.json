@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\hrank\.gemini\antigravity\scratch\AgentManager\AgentManagerApp\tesla-model3\audit_run.py", line 34, in <module>
+    raw_text_size = os.path.getsize(src)
+                    ^^^^^^^^^^^^^^^^^^^^
+  File "<frozen genericpath>", line 50, in getsize
+FileNotFoundError: [WinError 3] A rendszer nem találja a megadott elérési utat: 'bin\\Debug\\net10.0\\tesla-model3\\data\\szervizek.json'
