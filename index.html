@@ -374,11 +374,43 @@
         </div>
     </section>
 
+    <!--
+        AKKUMULÁTOR DEGRADÁCIÓ
+        Chart.js (script.js initDegradationChart) rajzolja ki, a degradációs görbék a
+        NCA (Long Range), NCM811 és LFP (SR+) kémiára külön-külön, három modalitásban:
+        évek, kilométer, töltési ciklusok. A degradáció a Tesla flottajelentésekből,
+        EV-database-ből és a P3 Charging ciklustesztekből származik.
+    -->
+    <section id="degradation" class="deg-section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Adatok · valós degradáció</span>
+                <h2 class="section-title">Akkumulátor degradáció</h2>
+                <p class="section-sub">A Tesla Model 3 három akkumulátor-kémiájának (NCA Long Range, NCM811, LFP SR+) valós kapacitásvesztése 10 év, 250 000 km és 4 000 ciklus alatt.</p>
+            </header>
+
+            <div class="deg-tabs" role="tablist" aria-label="Degradáció modalitás">
+                <button class="deg-tab active" data-mode="years" role="tab" aria-selected="true">Évek</button>
+                <button class="deg-tab" data-mode="km" role="tab" aria-selected="false">Kilométer</button>
+                <button class="deg-tab" data-mode="chem" role="tab" aria-selected="false">Töltési ciklusok</button>
+            </div>
+
+            <div class="deg-chart-wrap">
+                <canvas id="degChart" aria-label="Akkumulátor degradáció chart" role="img"></canvas>
+            </div>
+
+            <p class="deg-note">Forrás: Tesla flottajelentések (2024), EV-database.net, P3 Charging ciklustesztek. Az értékek átlagos, jellemzően vezetett Tesla Model 3-akra vonatkoznak (80% DoD, 50% DC-töltés).</p>
+        </div>
+    </section>
+    
+
 
     <!-- További szekciók (Performance, Range, Charging, Interior, Szervizek...) -->
     <main id="content"></main>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+    <script src="script.js" defer></script>
     <script src="assets/js/site.js" defer></script>
     <script src="assets/js/vin_checker.js" defer></script>
 </body>

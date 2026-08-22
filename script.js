@@ -8,6 +8,15 @@
     const canvas = document.getElementById('degChart');
     if (!canvas || typeof Chart === 'undefined') return;
 
+    // Marveen-style chart background: set explicit dark background on the canvas,
+    // and ensure the surrounding container has high contrast. This prevents
+    // the "black on black" readability issue on dark-mode pages.
+    if (canvas.parentElement) {
+        canvas.parentElement.style.background = 'rgba(255, 255, 255, 0.04)';
+        canvas.parentElement.style.borderRadius = '16px';
+        canvas.parentElement.style.padding = '20px';
+    }
+
     // Adatforrások: Tesloop, P3 Charging, EV-database, Tesla flottajelentések.
     const data = {
         years: {
@@ -138,15 +147,16 @@
         responsive: true,
         maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
+        layout: { padding: { left: 10, right: 30, top: 20, bottom: 10 } },
         plugins: {
             legend: {
                 position: 'top',
                 labels: {
-                    color: '#a1a1aa',
-                    font: { family: 'Inter', size: 13, weight: '600' },
-                    boxWidth: 14,
-                    boxHeight: 14,
-                    padding: 16,
+                    color: '#e4e4e7',
+                    font: { family: 'Inter', size: 16, weight: '700' },
+                    boxWidth: 16,
+                    boxHeight: 16,
+                    padding: 20,
                     usePointStyle: true,
                     pointStyle: 'circle',
                 },
@@ -154,20 +164,20 @@
             title: {
                 display: true,
                 text: titles.years,
-                color: '#f5f5f7',
-                font: { family: 'Inter', size: 15, weight: '700' },
-                padding: { top: 4, bottom: 20 },
+                color: '#ffffff',
+                font: { family: 'Inter', size: 20, weight: '800' },
+                padding: { top: 6, bottom: 24 },
             },
             tooltip: {
-                backgroundColor: '#1a1a26',
-                titleColor: '#f5f5f7',
-                bodyColor: '#a1a1aa',
-                borderColor: '#2a2a3d',
+                backgroundColor: 'rgba(15, 15, 20, 0.96)',
+                titleColor: '#ffffff',
+                bodyColor: '#e4e4e7',
+                borderColor: 'rgba(255, 255, 255, 0.15)',
                 borderWidth: 1,
-                padding: 12,
-                cornerRadius: 8,
-                titleFont: { family: 'Inter', size: 13, weight: '700' },
-                bodyFont: { family: 'Inter', size: 12 },
+                padding: 14,
+                cornerRadius: 10,
+                titleFont: { family: 'Inter', size: 15, weight: '700' },
+                bodyFont: { family: 'Inter', size: 14, weight: '600' },
                 callbacks: {
                     label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}%`,
                 },
@@ -178,29 +188,33 @@
                 min: 60,
                 max: 102,
                 ticks: {
-                    color: '#a1a1aa',
-                    font: { family: 'Inter', size: 12 },
+                    color: '#d4d4d8',
+                    font: { family: 'Inter', size: 14, weight: '600' },
                     callback: (v) => `${v}%`,
                 },
-                grid: { color: 'rgba(255,255,255,0.05)' },
+                grid: { color: 'rgba(255,255,255,0.12)', lineWidth: 1 },
+                border: { color: 'rgba(255,255,255,0.2)' },
                 title: {
                     display: true,
                     text: 'Kapacitás (%)',
-                    color: '#71717a',
-                    font: { family: 'Inter', size: 12, weight: '600' },
+                    color: '#e4e4e7',
+                    font: { family: 'Inter', size: 15, weight: '700' },
+                    padding: { bottom: 12 },
                 },
             },
             x: {
                 ticks: {
-                    color: '#a1a1aa',
-                    font: { family: 'Inter', size: 12 },
+                    color: '#d4d4d8',
+                    font: { family: 'Inter', size: 14, weight: '600' },
                 },
-                grid: { color: 'rgba(255,255,255,0.05)' },
+                grid: { color: 'rgba(255,255,255,0.08)' },
+                border: { color: 'rgba(255,255,255,0.2)' },
                 title: {
                     display: true,
                     text: xLabels.years,
-                    color: '#71717a',
-                    font: { family: 'Inter', size: 12, weight: '600' },
+                    color: '#e4e4e7',
+                    font: { family: 'Inter', size: 15, weight: '700' },
+                    padding: { top: 12 },
                 },
             },
         },
