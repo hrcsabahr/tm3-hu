@@ -1135,8 +1135,10 @@ body {
     max-height: 500px;
 }
 
-/* 2026-08-23 SPLIT: each of the 3 charts is a self-contained section inside the white wrap.
-   Section headings are dark (because the wrap is white); subtitles echo the design-system grey. */
+/* 2026-08-23 REVERT: removed .deg-chart-section wrappers — main page now uses a
+   single tabbed chart (1 line chart, 3 lines: NCA / NCM811 / LFP), same as kalkulator.html.
+   The .deg-chart-head / -eyebrow / -title / -lead block above stays — it is the
+   header of the chart-wrap and renders above the tabs. */
 .deg-chart-head {
     margin-bottom: 1.75rem;
     padding-bottom: 1.25rem;
@@ -1164,33 +1166,9 @@ body {
 .deg-chart-lead {
     font-size: 1rem;
     line-height: 1.55;
-    color: #1a1a26;  /* SÖTÉT body — fehér chart-háttéren */
+    color: #1a1a26;
     max-width: 720px;
     margin: 0;
-}
-.deg-chart-section {
-    margin-top: 2.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px dashed rgba(8, 47, 73, 0.18);  /* vizuális elválasztó a 3 chart között */
-}
-.deg-chart-section:first-of-type {
-    border-top: none;
-    padding-top: 0;
-    margin-top: 1rem;
-}
-.deg-chart-section-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.125rem, 1.6vw, 1.4rem);
-    font-weight: 700;
-    color: #020a14;  /* SÖTÉT section cím */
-    margin: 0 0 0.35rem;
-    letter-spacing: -0.01em;
-}
-.deg-chart-section-sub {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    color: #1a1a26;  /* SÖTÉT section alcím — nem szürke, mert fehér chart-wrap belsejében van */
-    margin: 0 0 1.15rem;
 }
 
 .deg-tabs {
