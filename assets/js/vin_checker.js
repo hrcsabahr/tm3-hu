@@ -111,17 +111,36 @@
         const expectedCheck = computeCheckDigit(vin);
         const checkValid = expectedCheck === checkChar;
 
-        // Variáns azonosítás: VIN prefix + modell év + meghajtás
+        // Variáns azonosítás: VIN prefix + modell év + meghajtás.
+        // SPECIÁLIS ESET: a 2018-2020-as Model 3 Performance és Long Range
+        // VIN-jében a 8. pozíció azonos 'B' — a Tesla csak szoftverben
+        // különbözteti meg. Ilyenkor ambiguousPerformance=true, és mindkét
+        // variáns listája megjelenik a felhasználónak.
         let variant = null;
-        const variants = Object.entries(t.variants || {});
-        for (const [key, v] of variants) {
+        let ambiguousPerformance = false;
+        let variants = Object.entries(t.variants || {});
+        // Szűrés: modellév + prefix + drive
+        const motorDrive = motor && motor.drive;
+        const matching = variants.filter(([_, v]) => {
             const yearInRange = year && v.model_years.includes(year);
             const prefixOk = vin.startsWith(v.vin_prefix_match);
-            const motorDrive = motor && motor.drive;
             const driveMatch = !motorDrive || motorDrive === v.drive;
-            if (yearInRange && prefixOk && driveMatch) {
-                variant = { key, ...v };
-                break;
+            return yearInRange && prefixOk && driveMatch;
+        });
+        // Ha több matching van (LR + P), a sorrend fontos: Performance a specifikációban később van
+        if (matching.length > 0) {
+            variant = matching[0][1];
+            variant.key = matching[0][0];
+            // Ha a drive AWD és több AWD variáns is van (LR + P), ambiguous
+            if (motorDrive === 'AWD' && matching.length > 1) {
+                // Ellenőrizzük, hogy van-e Performance és Long Range is
+                const hasP = matching.some(([_, v]) => v.label && v.label.includes('Performance'));
+                const hasLR = matching.some(([_, v]) => v.label && v.label.includes('Long Range'));
+                if (hasP && hasLR) {
+                    ambiguousPerformance = true;
+                    // Adjuk vissza mindkettőt a variant.ambiguousOptions tömbben
+                    variant.ambiguousOptions = matching.map(([k, v]) => ({ key: k, ...v }));
+                }
             }
         }
 
@@ -130,7 +149,7 @@
             battery, batteryChar, motor, motorChar,
             checkChar, expectedCheck, checkValid,
             year, yearChar, plant, plantChar, serial,
-            variant,
+            variant, ambiguousPerformance,
         };
     }
 
@@ -184,23 +203,53 @@
         // Specifikációk a variants táblából
         let specsHtml = '';
         if (variant) {
-            specsHtml = `
-                <div class="vin-specs">
-                    <h3 class="vin-specs__title">Specifikációk (${variant.label})</h3>
-                    <div class="vin-specs__grid">
-                        <div class="vin-spec"><div class="vin-spec__label">Hatótáv (WLTP)</div><div class="vin-spec__value">${variant.range_km_wltp} km</div></div>
-                        <div class="vin-spec"><div class="vin-spec__label">Hatótáv (EPA)</div><div class="vin-spec__value">${variant.range_km_epa} mi</div></div>
-                        <div class="vin-spec"><div class="vin-spec__label">Akkumulátor</div><div class="vin-spec__value">${variant.battery_kwh} kWh (${variant.chemistry})</div></div>
-                        <div class="vin-spec"><div class="vin-spec__label">0-100 km/h</div><div class="vin-spec__value">${variant.acceleration_0_100} s</div></div>
-                        <div class="vin-spec"><div class="vin-spec__label">Végsebesség</div><div class="vin-spec__value">${variant.top_speed_kmh} km/h</div></div>
-                        <div class="vin-spec"><div class="vin-spec__label">Meghajtás</div><div class="vin-spec__value">${variant.drive}</div></div>
-                        <div class="vin-spec"><div class="vin-spec__label">Motor</div><div class="vin-spec__value">${variant.motor}</div></div>
-                        <div class="vin-spec"><div class="vin-spec__label">Teljesítmény</div><div class="vin-spec__value">${variant.hp} HP</div></div>
-                        <div class="vin-spec"><div class="vin-spec__label">Forgatónyomaték</div><div class="vin-spec__value">${variant.torque_nm} Nm</div></div>
-                        <div class="vin-spec"><div class="vin-spec__label">Tömeg</div><div class="vin-spec__value">${variant.weight_kg} kg</div></div>
+            // Ha ambiguous (LR vs P), figyelmeztetés + mindkét variáns
+            if (d.ambiguousPerformance && variant.ambiguousOptions) {
+                const optList = variant.ambiguousOptions.map((o) => `
+                    <div class="vin-spec">
+                        <div class="vin-spec__label">${o.label}</div>
+                        <div class="vin-spec__value">
+                            <strong>${o.acceleration_0_100}s</strong> 0-100 · ${o.range_km_wltp} km WLTP<br>
+                            ${o.hp} HP · ${o.top_speed_kmh} km/h végsebesség
+                        </div>
                     </div>
-                    ${variant.factory_note ? `<p class="vin-spec-note">⚠️ <strong>Fontos:</strong> ${variant.factory_note}</p>` : ''}
-                </div>`;
+                `).join('');
+                specsHtml = `
+                    <div class="vin-specs">
+                        <h3 class="vin-specs__title">⚠️ Nem egyértelmű — Performance vagy Long Range?</h3>
+                        <div class="vin-ambiguous-note">
+                            <p><strong>A VIN 8. pozíciója "B" — ez a Tesla Motors Club fórum és a Tesla saját NHTSA Part 565 specifikációja szerint is kétféle autót jelölhet.</strong> A Tesla a 2018-2020 közötti Model 3 gyártásban a Long Range és a Performance VIN-kódját <strong>nem</strong> különböztette meg — a különbség csak a fedélzeti szoftverben van (track mode, gyorsulás-korlátozás).</p>
+                            <p>A pontos variánst a következők alapján tudod eldönteni:</p>
+                            <ul>
+                                <li><strong>0-100 km/h:</strong> Performance = 3.1-3.3s · Long Range = 4.2-4.5s</li>
+                                <li><strong>Végsebesség:</strong> Performance = 250-261 km/h · Long Range = 225 km/h</li>
+                                <li><strong>Track Mode:</strong> Performance igen · Long Range nem</li>
+                                <li><strong>Piros féknyereg:</strong> Performance igen · Long Range nem</li>
+                                <li><strong>Tulajdonosi app / Tesla fiók:</strong> a pontos modell a "Specs" alatt látható</li>
+                            </ul>
+                            <p>A Tesla hivatalos VIN Recall Search szolgáltatásában is megtekinthető: <a href="https://service.tesla.com/en-US/vin-recall-search" target="_blank" rel="noopener noreferrer">service.tesla.com/en-US/vin-recall-search</a></p>
+                        </div>
+                        <div class="vin-specs__grid vin-specs__grid--ambiguous">${optList}</div>
+                    </div>`;
+            } else {
+                specsHtml = `
+                    <div class="vin-specs">
+                        <h3 class="vin-specs__title">Specifikációk (${variant.label})</h3>
+                        <div class="vin-specs__grid">
+                            <div class="vin-spec"><div class="vin-spec__label">Hatótáv (WLTP)</div><div class="vin-spec__value">${variant.range_km_wltp} km</div></div>
+                            <div class="vin-spec"><div class="vin-spec__label">Hatótáv (EPA)</div><div class="vin-spec__value">${variant.range_km_epa} mi</div></div>
+                            <div class="vin-spec"><div class="vin-spec__label">Akkumulátor</div><div class="vin-spec__value">${variant.battery_kwh} kWh (${variant.chemistry})</div></div>
+                            <div class="vin-spec"><div class="vin-spec__label">0-100 km/h</div><div class="vin-spec__value">${variant.acceleration_0_100} s</div></div>
+                            <div class="vin-spec"><div class="vin-spec__label">Végsebesség</div><div class="vin-spec__value">${variant.top_speed_kmh} km/h</div></div>
+                            <div class="vin-spec"><div class="vin-spec__label">Meghajtás</div><div class="vin-spec__value">${variant.drive}</div></div>
+                            <div class="vin-spec"><div class="vin-spec__label">Motor</div><div class="vin-spec__value">${variant.motor}</div></div>
+                            <div class="vin-spec"><div class="vin-spec__label">Teljesítmény</div><div class="vin-spec__value">${variant.hp} HP</div></div>
+                            <div class="vin-spec"><div class="vin-spec__label">Forgatónyomaték</div><div class="vin-spec__value">${variant.torque_nm} Nm</div></div>
+                            <div class="vin-spec"><div class="vin-spec__label">Tömeg</div><div class="vin-spec__value">${variant.weight_kg} kg</div></div>
+                        </div>
+                        ${variant.factory_note ? `<p class="vin-spec-note">⚠️ <strong>Fontos:</strong> ${variant.factory_note}</p>` : ''}
+                    </div>`;
+            }
         } else {
             specsHtml = `
                 <div class="vin-specs vin-specs--unknown">

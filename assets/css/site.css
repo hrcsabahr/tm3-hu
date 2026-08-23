@@ -1479,6 +1479,47 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
 }
+
+/* 2026-08-23: ambiguous variant note — used when 8th digit is 'B' and AWD,
+   so both Long Range and Performance are possible (Tesla did not differentiate
+   in the VIN for 2018-2020 Model 3). */
+.vin-ambiguous-note {
+    background: rgba(56, 189, 248, 0.08);
+    border-left: 3px solid var(--primary);
+    border-radius: var(--r-sm);
+    padding: 1rem 1.25rem;
+    margin: 1rem 0 1.25rem;
+}
+.vin-ambiguous-note p {
+    margin: 0 0 0.65rem;
+    color: var(--fg);
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+.vin-ambiguous-note p:last-child { margin-bottom: 0; }
+.vin-ambiguous-note ul {
+    margin: 0.5rem 0 0.75rem 1.25rem;
+    color: var(--fg-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+.vin-ambiguous-note ul li { margin-bottom: 0.3rem; }
+.vin-ambiguous-note a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+.vin-specs__grid--ambiguous {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+.vin-specs__grid--ambiguous .vin-spec {
+    background: rgba(56, 189, 248, 0.06);
+    border-color: rgba(56, 189, 248, 0.25);
+}
+@media (max-width: 600px) {
+    .vin-specs__grid--ambiguous { grid-template-columns: 1fr; }
+}
 .vin-card--unknown .vin-card__sub {
     color: var(--warning);
 }

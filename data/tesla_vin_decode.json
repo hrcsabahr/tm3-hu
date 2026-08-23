@@ -80,14 +80,15 @@
   },
 
   "position_8_motor_drive": {
-    "description": "Motor / hajtás (2012+) — findmyelectric.com + NHTSA Part 565 2024+ Model 3/Y specifikus kódok",
+    "description": "Motor / hajtás (2012+) — findmyelectric.com + NHTSA Part 565 2024+ Model 3/Y specifikus kódok. MEGJEGYZÉS: a Tesla Motors Club fórum 55 Performance-tulajdonos szavazása alapján a 2018-2020 közötti Performance Model 3-ok VIN-jében a 8. pozíció 'B' volt (ugyanúgy, mint az AWD Long Range), nem 'C'. A Performance vs Long Range megkülönböztetése csak szoftveresen történt.",
     "values": {
-      "1": { "label": "Single motor — Standard/Performance (Model 3)", "drive": "RWD" },
-      "2": { "label": "Dual motor — Standard (Model 3)", "drive": "AWD" },
-      "3": { "label": "Dual motor — Performance (Model 3)", "drive": "AWD" },
-      "A": { "label": "Base A/C motor", "drive": "RWD" },
-      "B": { "label": "Base A/C motor (Tier 2)", "drive": "RWD" },
-      "C": { "label": "Base A/C motor, Tier 2 akku (31-40 kWh)", "drive": "RWD" },
+      "1": { "label": "Single motor — Standard (Model S/X régi)", "drive": "RWD" },
+      "2": { "label": "Dual motor — Standard (Model S/X)", "drive": "AWD" },
+      "3": { "label": "Single Performance motor (Model S)", "drive": "RWD" },
+      "4": { "label": "Dual motor — Performance (Model S/X)", "drive": "AWD" },
+      "A": { "label": "Single motor — Standard/Performance (Model 3, RWD)", "drive": "RWD" },
+      "B": { "label": "Dual motor — AWD (Model 3) — Long Range VAGY Performance", "drive": "AWD", "ambiguous": "A 2018-2020 közötti Performance Model 3-ok 8. pozíciója is 'B', nem 'C'. A Tesla csak szoftverben különbözteti meg a Long Range-et a Performance-től." },
+      "C": { "label": "Dual motor — Performance (Model 3, NHTSA hivatalos spec)", "drive": "AWD", "rare": "A Tesla a 2018-2020-as gyakorlatban 'B'-t használt Performance-re is; 'C' csak a NHTSA specifikációban szerepel." },
       "D": { "label": "Single motor — Standard/Performance (Model Y, standard)", "drive": "RWD" },
       "E": { "label": "Dual motor — Standard (Model Y, standard)", "drive": "AWD" },
       "F": { "label": "Dual motor — Performance (Model Y, standard)", "drive": "AWD" },
@@ -96,7 +97,8 @@
       "K": { "label": "Dual motor — hairpin tekercselés", "drive": "AWD", "winding": "hairpin" },
       "L": { "label": "Performance motor — hairpin tekercselés", "drive": "AWD", "winding": "hairpin" },
       "P2": { "label": "P2 Tri Motor (Model S Plaid)", "drive": "AWD" },
-      "R": { "label": "RWD V1 motor (Model 3, kínai)", "drive": "RWD" }
+      "R": { "label": "RWD V1 motor (Model 3, kínai)", "drive": "RWD" },
+      "S": { "label": "Single motor — Standard (DUB 600A)", "drive": "RWD" }
     }
   },
 
