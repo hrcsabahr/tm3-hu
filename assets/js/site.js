@@ -11,14 +11,20 @@
     'use strict';
 
     // ----- Nav -----
-    const NAV_ITEMS = [
-        { href: 'index.html', label: 'Főoldal' },
-        { href: 'pages/szervizek.html', label: 'Szervizek' },
+    // 2026-08-23: redesigned nav based on user feedback — group content by
+    // domain (Model 3 / Töltők / Kalkulátorok / Szerviz / Közösség / Vásárlás / Jogi)
+    // rather than by page type. Sticky order mirrors the user's information
+    // hierarchy: identity → primary tools → support → community → legal.
+    NAV_ITEMS = [
+        { href: 'index.html', label: 'Model 3' },
         { href: 'pages/tobberek.html', label: 'Töltők' },
         { href: 'pages/kalkulator.html', label: 'Degradation' },
         { href: 'pages/tco.html', label: 'TCO' },
+        { href: 'pages/szervizek.html', label: 'Szerviz' },
         { href: 'pages/hibak.html', label: 'Hibák' },
         { href: 'pages/blog.html', label: 'Hírek' },
+        { href: 'pages/vasarlas.html', label: 'Vásárlás' },
+        { href: 'pages/kozosseg.html', label: 'Közösség' },
         { href: 'pages/jogi.html', label: 'Jogi' },
     ];
 

@@ -3,21 +3,129 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Model 3 — Minden, amit tudni érdemes (2024) | Tesla Model 3 HU</title>
-    <meta name="description" content="Tesla Model 3 SR+, Long Range és Performance — reszponzív one-page: akkumulátor, hatótáv, töltés, degradation, szerviz, VIN dekóder." />
-    <meta property="og:title" content="Tesla Model 3 — Minden, amit tudni érdemes (2024)" />
-    <meta property="og:description" content="Magyar Tesla Model 3 tudásbázis: akkumulátor, degradation, TCO, szervizek, VIN dekóder." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://tm3.hu/assets/img/og-image.svg" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tesla Model 3 — Minden, amit tudni érdemes" />
-    <meta name="twitter:description" content="Magyar Tesla Model 3 tudásbázis, szervizek, VIN dekóder." />
+    <title>Tesla Model 3 – Tudásbázis, Degradáció, TCO, VIN dekóder | tm3.hu</title>
+    <meta name="description" content="Magyar Tesla Model 3 tudásbázis: akkumulátor‑degradáció, TCO kalkulátor, VIN dekóder, szervizek, töltők, hibák. Valós adatok, részletes elemzések, 2024–2026." />
+    <meta name="keywords" content="tesla model 3 magyar, tesla model 3 akkumulátor, tesla model 3 degradation, tesla model 3 vin dekóder, tesla model 3 töltés, tesla model 3 hibák, tesla model 3 tco, tesla model 3 hatótáv, tesla model 3 szerviz" />
+    <meta name="author" content="tm3.hu — Magyar Tesla Model 3 közösség" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="theme-color" content="#06121E" />
+    <link rel="canonical" href="https://tm3.hu/" />
+    <link rel="alternate" hreflang="hu" href="https://tm3.hu/" />
     <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
+    <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="tm3.hu" />
+    <meta property="og:locale" content="hu_HU" />
+    <meta property="og:title" content="Tesla Model 3 – Magyar Tudásbázis" />
+    <meta property="og:description" content="Magyar Tesla Model 3 tudásbázis: akkumulátor‑degradáció, TCO kalkulátor, VIN dekóder, szervizek, töltők, hibák. Valós adatok, 2024–2026." />
+    <meta property="og:url" content="https://tm3.hu/" />
+    <meta property="og:image" content="https://tm3.hu/assets/img/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tm3hu" />
+    <meta name="twitter:creator" content="@tm3hu" />
+    <meta name="twitter:title" content="Tesla Model 3 – Magyar Tudásbázis" />
+    <meta name="twitter:description" content="Magyar Tesla Model 3 tudásbázis: akkumulátor‑degradáció, TCO kalkulátor, VIN dekóder, szervizek, töltők, hibák. Valós adatok, 2024–2026." />
+    <meta name="twitter:image" content="https://tm3.hu/assets/img/og-image.svg" />
+    <meta name="twitter:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="assets/css/site.css" />
     <script src="assets/js/seo-head.js" defer></script>
+
+    <!-- Rich structured data (JSON-LD) — extra schemas below what seo-head.js injects -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "@id": "https://tm3.hu/#website",
+                "url": "https://tm3.hu",
+                "name": "tm3.hu — Tesla Model 3 magyar tudásbázis",
+                "alternateName": "tm3.hu",
+                "inLanguage": "hu-HU",
+                "publisher": {"@id": "https://tm3.hu/#organization"},
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://tm3.hu/?q={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "Organization",
+                "@id": "https://tm3.hu/#organization",
+                "name": "tm3.hu",
+                "alternateName": "Magyar Tesla Model 3 közösség",
+                "url": "https://tm3.hu",
+                "logo": {"@type": "ImageObject", "url": "https://tm3.hu/assets/img/icon.svg"},
+                "description": "Független, közösségi Tesla Model 3 tudásbázis — Magyarország, 2024-2026."
+            },
+            {
+                "@type": "ItemList",
+                "@id": "https://tm3.hu/#sections",
+                "name": "Tesla Model 3 tudásbázis — fő témakörök",
+                "itemListOrder": "https://schema.org/ItemListOrderAscending",
+                "numberOfItems": 6,
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Akkumulátor degradáció", "url": "https://tm3.hu/#degradation"},
+                    {"@type": "ListItem", "position": 2, "name": "TCO kalkulátor", "url": "https://tm3.hu/pages/tco.html"},
+                    {"@type": "ListItem", "position": 3, "name": "VIN dekóder", "url": "https://tm3.hu/#vin-checker"},
+                    {"@type": "ListItem", "position": 4, "name": "Szervizek és töltők", "url": "https://tm3.hu/pages/szervizek.html"},
+                    {"@type": "ListItem", "position": 5, "name": "Hibák és visszahívások", "url": "https://tm3.hu/pages/hibak.html"},
+                    {"@type": "ListItem", "position": 6, "name": "Közösség és hírek", "url": "https://tm3.hu/pages/blog.html"}
+                ]
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://tm3.hu/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Mennyi a Tesla Model 3 akkumulátor degradáció 10 év után?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A Tesla Model 3 akkumulátor degradáció nagyban függ a cella-kémiától. Az NCA (Long Range, Performance) 85-88%-ot tart 10 év / 150 000 km után, míg az LFP (SR+) 94%-ot. A ciklusszám alapján 4000 ciklus után a Performance még mindig 90% felett van."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Hogyan dekódolható a Tesla Model 3 VIN szám?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A Tesla VIN 17 karakter: az 1-3. pozíció a gyártó (5YJ=Tesla USA, LRW=Tesla Shanghai), a 4-8. pozíció a modell/konfiguráció, a 9. pozíció egy matematikai checksum, a 10. pozíció a modellév, a 11. pozíció a gyár. A tm3.hu VIN dekódere ingyenesen használható."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Mennyibe kerül 10 év alatt a Tesla Model 3 fenntartása?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "A 10 éves TCO (teljes birtoklási költség) a Tesla Model 3-nál Magyarországon jellemzően 18-25 millió Ft, ami 8-14 millió Ft-val kevesebb, mint egy hasonló kategóriájú benzines szedán (BMW 330i) esetén, főként az alacsonyabb üzemeltetési és szervizköltségeknek köszönhetően."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Hány Tesla Supercharger van Magyarországon?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "2026-ban 7 Tesla Supercharger üzemel Magyarországon: Budaörs (M1), Budapest (M5 Soroksár), Debrecen, Szeged, Győr (M1 pihenő), Balatonfüred és Székesfehérvár. Emellett Mobiliti, E.ON Drive, Shell Recharge és Volteum töltők is elérhetők."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- NAV: a site.js rendereli -->
@@ -173,6 +281,129 @@
                     <a class="vin-recall-box__cta" href="https://service.tesla.com/en-US/vin-recall-search" target="_blank" rel="noopener noreferrer">
                         Tesla VIN Recall Search megnyitása →
                     </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TCO KALKULÁTOR ELŐNÉZET ===== -->
+    <section id="tco-preview" class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Eszköz · TCO</span>
+                <h2 class="section-title">TCO kalkulátor — 10 éves birtoklási költség</h2>
+                <p class="section-sub">Számold ki a Tesla Model 3 teljes 10 éves költségét a saját használati szokásaid alapján, és hasonlítsd össze egy hasonló kategóriájú benzines szedán (BMW 330i) árával. A magyarországi üzemanyag-, áram- és szervizárak 2026 Q2-es adatok.</p>
+            </header>
+
+            <div class="tco-preview-grid">
+                <div class="tco-preview-card">
+                    <h3 class="tco-preview__title">Villany vs benzin — 10 év</h3>
+                    <div class="tco-preview__comparison">
+                        <div class="tco-preview__side tco-preview__side--ev">
+                            <span class="tco-preview__label">Tesla Model 3</span>
+                            <span class="tco-preview__value">~24 M Ft</span>
+                            <span class="tco-preview__sub">villany + töltés + szerviz + biztosítás</span>
+                        </div>
+                        <div class="tco-preview__vs">vs</div>
+                        <div class="tco-preview__side tco-preview__side--ice">
+                            <span class="tco-preview__label">BMW 330i (benzin)</span>
+                            <span class="tco-preview__value">~35 M Ft</span>
+                            <span class="tco-preview__sub">benzin + szerviz + biztosítás + adó</span>
+                        </div>
+                    </div>
+                    <a class="btn btn--primary" href="pages/tco.html">TCO kalkulátor megnyitása →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SZERVIZEK ÉS TÖLTŐK ===== -->
+    <section id="szervizek-tobberek" class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Térkép · Szervizek és töltők</span>
+                <h2 class="section-title">Magyarországi Tesla szervizek és töltők térképe</h2>
+                <p class="section-sub">10 magyarországi Tesla-szerviz (1 hivatalos Budaörs, 9 független specialista) és 7 Tesla Supercharger + Mobiliti, E.ON, Shell és Volteum gyorstöltők. Interaktív térkép, árak, telefonszámok, nyitvatartás.</p>
+            </header>
+
+            <div class="srv-tolt-overview">
+                <div class="srv-tolt-card">
+                    <span class="srv-tolt-card__icon" aria-hidden="true">🔧</span>
+                    <h3 class="srv-tolt-card__title">10 Tesla-szerviz</h3>
+                    <p>Budaörs (hivatalos), Budapest × 4, Debrecen, Győr, Miskolc, Pécs, Szeged, <strong>Székesfehérvár</strong>. Árak, szolgáltatások, értékelések.</p>
+                    <a class="btn btn--ghost" href="pages/szervizek.html">Szervizek megnyitása →</a>
+                </div>
+                <div class="srv-tolt-card">
+                    <span class="srv-tolt-card__icon" aria-hidden="true">⚡</span>
+                    <h3 class="srv-tolt-card__title">7 Tesla Supercharger + több hálózat</h3>
+                    <p>Budapest × 2 (M1, M5), Szeged, Győr, Debrecen, Balatonfüred, <strong>Székesfehérvár</strong>. Emellett Mobiliti, E.ON, Shell, Volteum.</p>
+                    <a class="btn btn--ghost" href="pages/tobberek.html">Töltő térkép megnyitása →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HIBÁK ÉS VISSZAHÍVÁSOK ===== -->
+    <section id="hibak-preview" class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Tudásbázis · Hibák</span>
+                <h2 class="section-title">Tipikus Model 3 hibák és visszahívások</h2>
+                <p class="section-sub">A leggyakoribb Model 3 meghibásodások (12V akkumulátor, ajtókilincs, futómű, felfüggesztés, szoftver), javítási költségek és a Tesla garanciális feltételek. Használt vásárlás előtt mindenképp nézd meg.</p>
+            </header>
+
+            <div class="hibak-preview-grid">
+                <div class="hibak-preview-card">
+                    <h3 class="hibak-preview__title">12V akkumulátor</h3>
+                    <p class="hibak-preview__cost">55 000 - 78 000 Ft</p>
+                    <p class="hibak-preview__note">Li-ion, márkás — 3-5 évente cserélni kell. A leggyakoribb Model 3 hiba.</p>
+                </div>
+                <div class="hibak-preview-card">
+                    <h3 class="hibak-preview__title">Ajtókilincs</h3>
+                    <p class="hibak-preview__cost">85 000 - 130 000 Ft</p>
+                    <p class="hibak-preview__note">A kilincs mechanikája elhasználódik, a mikrokapcsoló cseréje vagy az egész kilincs.</p>
+                </div>
+                <div class="hibak-preview-card">
+                    <h3 class="hibak-preview__title">Felfüggesztés</h3>
+                    <p class="hibak-preview__cost">160 000 - 320 000 Ft</p>
+                    <p class="hibak-preview__note">Lengéscsillapítók, rugók, vezérlőkarok — 80-120 ezer km után jellemző.</p>
+                </div>
+            </div>
+
+            <div class="hibak-preview-cta">
+                <a class="btn btn--primary" href="pages/hibak.html">Teljes hibakatalógus →</a>
+                <a class="btn btn--ghost" href="https://service.tesla.com/en-US/vin-recall-search" target="_blank" rel="noopener noreferrer">Tesla VIN Recall Search →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KÖZÖSSÉG ÉS HÍREK ===== -->
+    <section id="kozosseg-blog" class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Közösség · Hírek</span>
+                <h2 class="section-title">Magyar Tesla Model 3 közösség és hírek</h2>
+                <p class="section-sub">Csatlakozz a magyar Tesla-tulajdonosok közösségéhez — fórum, Discord, GitHub Discussions, helyi meetup-ok. Friss szoftverfrissítések, Supercharger-újdonságok, Model 3/Y/S/X változások.</p>
+            </header>
+
+            <div class="kozosseg-preview-grid">
+                <div class="kozosseg-preview-card">
+                    <span class="kozosseg-preview__icon" aria-hidden="true">💬</span>
+                    <h3 class="kozosseg-preview__title">Fórum és Discord</h3>
+                    <p>Magyar nyelvű Tesla-tulajdonosok közössége — tapasztalatcsere, tippek, hibabejelentés.</p>
+                    <a class="btn btn--ghost" href="pages/kozosseg.html">Csatlakozás →</a>
+                </div>
+                <div class="kozosseg-preview-card">
+                    <span class="kozosseg-preview__icon" aria-hidden="true">📰</span>
+                    <h3 class="kozosseg-preview__title">Hírek és frissítések</h3>
+                    <p>Tesla szoftverfrissítések, Supercharger újdonságok, magyarországi változások — heti rendszerességgel.</p>
+                    <a class="btn btn--ghost" href="pages/blog.html">Hírek olvasása →</a>
+                </div>
+                <div class="kozosseg-preview-card">
+                    <span class="kozosseg-preview__icon" aria-hidden="true">🛒</span>
+                    <h3 class="kozosseg-preview__title">Vásárlási útmutató</h3>
+                    <p>Új vs használt Tesla Model 3 — mire figyelj, mit ellenőrizz, hogyan tárgyalj.</p>
+                    <a class="btn btn--ghost" href="pages/vasarlas.html">Útmutató megnyitása →</a>
                 </div>
             </div>
         </div>
