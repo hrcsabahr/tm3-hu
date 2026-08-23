@@ -1130,9 +1130,18 @@ body {
     background: #ffffff;
     border-radius: var(--r-md);
     padding: 1.5rem;
+    /* 2026-08-23: fixed height so the canvas can fill it (maintainAspectRatio:false
+       needs a concrete parent height, otherwise the chart collapses to ~0px). */
+    height: 620px;
+}
+@media (max-width: 768px) {
+    .deg-chart-inner { height: 480px; }
 }
 .deg-chart-wrap canvas {
-    max-height: 760px;  /* 2026-08-23: taller chart so 3 lines + labels fit comfortably */
+    /* 2026-08-23: was 500px then 760px — replaced by .deg-chart-inner fixed height. */
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none;
 }
 
 /* 2026-08-23 REVERT: removed .deg-chart-section wrappers — main page now uses a

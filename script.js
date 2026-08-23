@@ -84,11 +84,14 @@ if (typeof ChartDataLabels !== "undefined") {
             // so the 3 battery lines are readable without hovering. Colors match the line.
             // Display every other point (dataIndex % 2 == 0) — 11 points × 3 lines would
             // otherwise create 33 overlapping labels; showing ~5-6 per line is enough.
+            // clamp:true keeps labels inside the chart canvas so they don't spill.
             datalabels: {
                 display: (ctx) => ctx.dataIndex % 2 === 0,
                 anchor: "end",
                 align: "top",
                 offset: 6,
+                clamp: true,
+                clip: true,
                 color: (ctx) => ctx.dataset.borderColor,
                 backgroundColor: "rgba(255, 255, 255, 0.85)",
                 borderRadius: 4,
@@ -252,11 +255,14 @@ if (typeof ChartDataLabels !== "undefined") {
             title: { display: true, color: "#020a14", font: { family: "Inter Tight", size: 24, weight: "800" }, padding: { top: 4, bottom: 20 } },
             // 2026-08-23: show every data point's % capacity on the chart.
             // Display every other point so 3 lines × N points don't overlap.
+            // clamp:true keeps labels inside the chart area.
             datalabels: {
                 display: (ctx) => ctx.dataIndex % 2 === 0,
                 anchor: "end",
                 align: "top",
                 offset: 6,
+                clamp: true,
+                clip: true,
                 color: (ctx) => ctx.dataset.borderColor,
                 backgroundColor: "rgba(255, 255, 255, 0.85)",
                 borderRadius: 4,
