@@ -5,10 +5,16 @@ Allow: /
 Allow: /assets/
 Allow: /pages/
 
-# Disallow: GitHub commit hash-ek és belső fájlok
+# Disallow: legacy / belső fájlok
 Disallow: /service-worker.js
 Disallow: /assets/js/util.js
+Disallow: /assets/js/seo-head.js
+Disallow: /assets/css/_legacy.css
 Disallow: /CNAME
+Disallow: /*.bak
+Disallow: /*_copy.*
+Disallow: /*_backup.*
+Disallow: /*.tmp
 
 Sitemap: https://tm3.hu/sitemap.xml
 
