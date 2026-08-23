@@ -1379,6 +1379,166 @@ body {
     color: var(--fg);
 }
 
+/* 2026-08-23: position-by-position VIN decoder UI.
+   Each .vin-pos shows one or more VIN characters, the label, and a short hint. */
+.vin-positions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 0.4rem;
+    margin: 1.25rem 0 0.75rem;
+    padding: 0.875rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: var(--r-sm);
+    border: 1px solid var(--border-soft);
+}
+.vin-pos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.5rem 0.25rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: var(--r-sm);
+    text-align: center;
+}
+.vin-pos__label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--fg-muted);
+    letter-spacing: 0.05em;
+}
+.vin-pos__char {
+    font-family: 'SF Mono', 'Consolas', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0.02em;
+}
+.vin-pos__hint {
+    font-size: 0.65rem;
+    color: var(--fg-muted);
+    line-height: 1.25;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.vin-pos--invalid .vin-pos__char {
+    color: var(--danger);
+}
+.vin-pos--invalid .vin-pos__hint {
+    color: var(--danger);
+}
+
+/* Full labelled grid (WMI / Modell / Body / Restraint / Motor / Akku / Év / Gyár / Serial) */
+.vin-decoded-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+.vin-decoded-cell {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--r-sm);
+    padding: 0.65rem 0.85rem;
+}
+.vin-decoded-cell__label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--fg-muted);
+    margin-bottom: 0.3rem;
+}
+.vin-decoded-cell__value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--fg);
+    line-height: 1.4;
+}
+
+.vin-specs--unknown {
+    display: block;
+}
+.vin-specs--unknown p {
+    color: var(--fg-muted);
+    font-size: 0.95rem;
+    padding: 0.75rem 1rem;
+    background: rgba(251, 191, 36, 0.08);
+    border-radius: var(--r-sm);
+    border-left: 3px solid var(--warning);
+}
+.vin-spec-note {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: rgba(245, 158, 11, 0.08);
+    border-left: 3px solid var(--orange);
+    border-radius: var(--r-sm);
+    color: var(--fg);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.vin-card--unknown .vin-card__sub {
+    color: var(--warning);
+}
+.vin-status--warn {
+    color: var(--warning);
+}
+
+/* 2026-08-23: official Tesla Recall Search callout below the VIN checker */
+.vin-recall-box {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(56, 189, 248, 0.02));
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-card);
+}
+.vin-recall-box__icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+.vin-recall-box__body {
+    flex: 1;
+    min-width: 0;
+}
+.vin-recall-box__body strong {
+    display: block;
+    font-size: 1.0625rem;
+    color: var(--fg);
+    margin-bottom: 0.4rem;
+}
+.vin-recall-box__body p {
+    margin: 0 0 0.75rem;
+    color: var(--fg-muted);
+    font-size: 0.9375rem;
+    line-height: 1.55;
+}
+.vin-recall-box__cta {
+    display: inline-block;
+    padding: 0.55rem 1.1rem;
+    background: var(--primary);
+    color: #02161F !important;  /* sötét szöveg a világos akcent gombon */
+    font-weight: 700;
+    font-size: 0.9375rem;
+    border-radius: var(--r-pill);
+    text-decoration: none;
+    transition: background var(--t-fast), transform var(--t-fast);
+}
+.vin-recall-box__cta:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+}
+@media (max-width: 540px) {
+    .vin-recall-box { flex-direction: column; gap: 0.75rem; padding: 1rem; }
+    .vin-recall-box__icon { font-size: 1.5rem; }
+}
+
 .visually-hidden {
     position: absolute !important;
     width: 1px; height: 1px; padding: 0; margin: -1px;
