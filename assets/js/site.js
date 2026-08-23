@@ -15,16 +15,17 @@
     // domain (Model 3 / Töltők / Kalkulátorok / Szerviz / Közösség / Vásárlás / Jogi)
     // rather than by page type. Sticky order mirrors the user's information
     // hierarchy: identity → primary tools → support → community → legal.
+    // Kept at 8 items (the original count) so the navbar doesn't overflow on
+    // mid-width viewports — 'Vásárlás' and 'Közösség' are still reachable
+    // from the home-page H2 cards and the footer sitemap.
     NAV_ITEMS = [
-        { href: 'index.html', label: 'Model 3' },
+        { href: 'index.html', label: 'Főoldal' },
         { href: 'pages/tobberek.html', label: 'Töltők' },
         { href: 'pages/kalkulator.html', label: 'Degradation' },
         { href: 'pages/tco.html', label: 'TCO' },
         { href: 'pages/szervizek.html', label: 'Szerviz' },
         { href: 'pages/hibak.html', label: 'Hibák' },
         { href: 'pages/blog.html', label: 'Hírek' },
-        { href: 'pages/vasarlas.html', label: 'Vásárlás' },
-        { href: 'pages/kozosseg.html', label: 'Közösség' },
         { href: 'pages/jogi.html', label: 'Jogi' },
     ];
 
