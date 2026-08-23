@@ -1132,7 +1132,7 @@ body {
     padding: 1.5rem;
 }
 .deg-chart-wrap canvas {
-    max-height: 500px;
+    max-height: 760px;  /* 2026-08-23: taller chart so 3 lines + labels fit comfortably */
 }
 
 /* 2026-08-23 REVERT: removed .deg-chart-section wrappers — main page now uses a
