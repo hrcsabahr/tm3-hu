@@ -13,9 +13,19 @@
     --bg-2: #0E2236;  /* 2026-08-22 OVERRIDE */
     --surface: var(--bg-card);  /* 2026-08-22 OVERRIDE */  /* 2026-08-22 override: dark theme */
     --ink: #F0F7FF;  /* 2026-08-22 OVERRIDE — brighter */
-    --ink-2: #525252;
-    --ink-3: #A1A1AA;
-    --ink-4: #D4D4D8;
+    --ink-2: #D6E2EE;  /* 2026-08-23 BRIGHTER: was #525252 (lum 82, invisible on --bg #06121E). Same value as --fg-muted, so all 15 usages are now readable on the dark sections. */
+    --ink-3: #AFC0D2;  /* 2026-08-23 BRIGHTER: was #A1A1AA (lum 167, low contrast on dark bg). Same value as --fg-dim. */
+    --ink-4: #AFC0D2;  /* 2026-08-23 BRIGHTER: was #D4D4D8 (currently unused, but kept in sync with --fg-dim). */
+
+    /* 2026-08-23: legacy aliases — several HTML pages use inline style="color:var(--text-muted)"
+       etc., referencing variables that were never defined. Mapping them onto the new
+       design-system tokens keeps those pages readable without rewriting every inline style. */
+    --text: #F0F7FF;            /* → --fg */
+    --text-muted: #D6E2EE;      /* → --fg-muted */
+    --text-dim: #AFC0D2;        /* → --fg-dim */
+    --accent-2: #38BDF8;        /* → --primary */
+    --best: #22c55e;            /* zöld — sötét háttéren kontrasztos */
+    --sport: #f59e0b;           /* narancs — sötét háttéren kontrasztos */
     --line: rgba(125, 211, 252, 0.15);  /* 2026-08-22 OVERRIDE */  /* 2026-08-22 override: dark theme */
     --line-strong: rgba(0, 0, 0, 0.14);
 
