@@ -101,19 +101,34 @@
             </div>
 
             <div class="deg-chart-wrap">
-                <header class="section-head" style="margin-bottom: 1.5rem;">
-                    <span class="section-eyebrow">Részletes chart</span>
-                    <h3 class="section-title" style="font-size: clamp(1.5rem, 2.5vw, 2.25rem);">Kapacitásvesztés modalitás szerint</h3>
+                <header class="deg-chart-head">
+                    <span class="deg-chart-eyebrow">Részletes chart</span>
+                    <h3 class="deg-chart-title">Kapacitásvesztés modalitás szerint</h3>
+                    <p class="deg-chart-lead">Három nézet, egymás alatt — évek, kilométer és töltési ciklusok szerint. Mindegyik ugyanazt a három akkumulátor-kémiát mutatja.</p>
                 </header>
 
-                <div class="deg-tabs" role="tablist" aria-label="Degradáció modalitás">
-                    <button class="deg-tab active" data-mode="years" role="tab" aria-selected="true">Évek</button>
-                    <button class="deg-tab" data-mode="km" role="tab" aria-selected="false">Kilométer</button>
-                    <button class="deg-tab" data-mode="chem" role="tab" aria-selected="false">Töltési ciklusok</button>
+                <div class="deg-chart-section">
+                    <h4 class="deg-chart-section-title">Évek szerint</h4>
+                    <p class="deg-chart-section-sub">Kapacitás (%) az évek számának függvényében. 10 éves időtáv.</p>
+                    <div class="deg-chart-inner">
+                        <canvas id="degChartYears" aria-label="Akkumulátor degradáció évek szerint" role="img"></canvas>
+                    </div>
                 </div>
 
-                <div class="deg-chart-inner">
-                    <canvas id="degChart" aria-label="Akkumulátor degradáció chart" role="img"></canvas>
+                <div class="deg-chart-section">
+                    <h4 class="deg-chart-section-title">Kilométer szerint</h4>
+                    <p class="deg-chart-section-sub">Kapacitás (%) a megtett kilométer függvényében. 0–250 000 km.</p>
+                    <div class="deg-chart-inner">
+                        <canvas id="degChartKm" aria-label="Akkumulátor degradáció kilométer szerint" role="img"></canvas>
+                    </div>
+                </div>
+
+                <div class="deg-chart-section">
+                    <h4 class="deg-chart-section-title">Töltési ciklusok szerint</h4>
+                    <p class="deg-chart-section-sub">Kapacitás (%) a teljes töltési ciklusok számának függvényében. 1 ciklus = 0% → 100%.</p>
+                    <div class="deg-chart-inner">
+                        <canvas id="degChartCycles" aria-label="Akkumulátor degradáció töltési ciklusok szerint" role="img"></canvas>
+                    </div>
                 </div>
 
                 <p class="deg-note">Forrás: Tesla flottajelentések (2024), EV-database.net, P3 Charging ciklustesztek. Átlagos értékek, 80% DoD, ~50% DC-töltés mellett.</p>

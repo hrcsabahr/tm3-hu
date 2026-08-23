@@ -1122,7 +1122,7 @@ body {
     border-radius: var(--r-lg);
     padding: 2rem;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-    color: #1a1a26;
+    color: #1a1a26;  /* sötét szöveg — fehér chart-háttérhez */
 }
 /* NOTE: .deg-chart-wrap .deg-section-{eyebrow,title,sub} rules removed 2026-08-23 — dead code, no HTML element uses these classes (verified across pages/*.html). Was causing confusion with hardcoded grey #555/#3a3a3a text. */
 .deg-chart-inner {
@@ -1133,6 +1133,64 @@ body {
 }
 .deg-chart-wrap canvas {
     max-height: 500px;
+}
+
+/* 2026-08-23 SPLIT: each of the 3 charts is a self-contained section inside the white wrap.
+   Section headings are dark (because the wrap is white); subtitles echo the design-system grey. */
+.deg-chart-head {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(8, 47, 73, 0.10);
+}
+.deg-chart-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: #0075DE;  /* sötét kék akcent — fehér chart-háttéren olvasható */
+    margin-bottom: 0.6rem;
+}
+.deg-chart-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 800;
+    color: #020a14;  /* SÖTÉT cím — fehér chart-háttéren */
+    margin: 0 0 0.6rem;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+}
+.deg-chart-lead {
+    font-size: 1rem;
+    line-height: 1.55;
+    color: #1a1a26;  /* SÖTÉT body — fehér chart-háttéren */
+    max-width: 720px;
+    margin: 0;
+}
+.deg-chart-section {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed rgba(8, 47, 73, 0.18);  /* vizuális elválasztó a 3 chart között */
+}
+.deg-chart-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 1rem;
+}
+.deg-chart-section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.125rem, 1.6vw, 1.4rem);
+    font-weight: 700;
+    color: #020a14;  /* SÖTÉT section cím */
+    margin: 0 0 0.35rem;
+    letter-spacing: -0.01em;
+}
+.deg-chart-section-sub {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #1a1a26;  /* SÖTÉT section alcím — nem szürke, mert fehér chart-wrap belsejében van */
+    margin: 0 0 1.15rem;
 }
 
 .deg-tabs {
