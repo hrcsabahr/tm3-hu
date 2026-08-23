@@ -196,6 +196,22 @@
       "nyitvatartas": "0-24",
       "v3v4": false,
       "megjegyzes": "DC gyorstöltés, Volteum applikáció szükséges. A MOM Park mélygarázsában."
+    },
+    {
+      "id": "sc-szekesfehervar",
+      "tipus": "supercharger",
+      "nev": "Tesla Supercharger Székesfehérvár (Holland fasor)",
+      "operator": "Tesla",
+      "varos": "Székesfehérvár",
+      "cim": "8000 Székesfehérvár, Holland fasor 2.",
+      "lat": 47.1898,
+      "lng": 18.4103,
+      "teljesitmeny": 250,
+      "helyek_szama": 2,
+      "ar_huf_kwh": 142,
+      "nyitvatartas": "0-24",
+      "v3v4": true,
+      "megjegyzes": "V4 Supercharger, 2 állásos. A Közép-Dunántúl fő SC-pontja, M7-es autópályáról könnyen megközelíthető. Magyarország legkisebb (2 állásos) Superchargere."
     }
   ]
 }
