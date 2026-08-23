@@ -1226,11 +1226,21 @@ body {
 .deg-note {
     text-align: center;
     font-size: 0.875rem;
-    color: var(--fg-muted);  /* 2026-08-23 BRIGHTER: was #555 (lum 85), invisible on dark --bg-elevated. Now uses design-system token. */
+    /* 2026-08-23: the .deg-note lives INSIDE the white .deg-chart-wrap on every
+       chart (degradation, kalkulator, tco), so the text must be DARK here. The
+       var(--fg-muted) token is now bright (was lum 85, invisible on dark --bg;
+       rebrightened to #D6E2EE) which would now be invisible on the white wrap.
+       Pin the colour to a dark token that reads on both white wrap and, for the
+       rare cases where it leaks out, on dark sections. */
+    color: var(--fg-muted);  /* FALLBACK — overridden by .deg-chart-wrap .deg-note below */
     margin: 1.5rem 0 0;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+}
+/* 2026-08-23: the .deg-note is always inside the white chart-wrap → dark text. */
+.deg-chart-wrap .deg-note {
+    color: #1a1a26;
 }
 
 /* ===== VIN CHECKER — full-width sticky form + live preview ===== */
