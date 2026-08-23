@@ -1124,9 +1124,7 @@ body {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
     color: #1a1a26;
 }
-.deg-chart-wrap .deg-section-eyebrow { color: #0B0B0F; background: rgba(11,11,15,0.06); border-color: rgba(11,11,15,0.2); }
-.deg-chart-wrap .deg-section-title { color: #0B0B0F; }
-.deg-chart-wrap .deg-section-sub { color: #3a3a3a; }
+/* NOTE: .deg-chart-wrap .deg-section-{eyebrow,title,sub} rules removed 2026-08-23 — dead code, no HTML element uses these classes (verified across pages/*.html). Was causing confusion with hardcoded grey #555/#3a3a3a text. */
 .deg-chart-inner {
     position: relative;
     background: #ffffff;
@@ -1168,7 +1166,7 @@ body {
 .deg-note {
     text-align: center;
     font-size: 0.875rem;
-    color: #555;
+    color: var(--fg-muted);  /* 2026-08-23 BRIGHTER: was #555 (lum 85), invisible on dark --bg-elevated. Now uses design-system token. */
     margin: 1.5rem 0 0;
     max-width: 800px;
     margin-left: auto;
