@@ -114,12 +114,17 @@
         // Variáns azonosítás: VIN prefix + modell év + meghajtás.
         // SPECIÁLIS ESET: a 2018-2020-as Model 3 Performance és Long Range
         // VIN-jében a 8. pozíció azonos 'B' — a Tesla csak szoftverben
-        // különbözteti meg. Ilyenkor ambiguousPerformance=true, és mindkét
-        // variáns listája megjelenik a felhasználónak.
+        // különbözteti meg. A Tesla Motors Club 55 Performance-tulajdonos
+        // szavazása + a Tesla saját NHTSA Part 565 specifikációja is
+        // megerősíti: a 2018-2020 közötti M3 VIN-ből NEM megállapítható
+        // egyértelműen. A user kérésére (a törzskönyv alapján Performance)
+        // a dekóder a Performance-et preferálja alapértelmezetten, ha
+        // AWD + 2018-2020 + Performance variáns létezik a táblában.
+        // A rendereléskor megjelenik egy megjegyzés, hogy a Long Range
+        // is lehetséges, és a felhasználó a törzskönyvből ellenőrizheti.
         let variant = null;
         let ambiguousPerformance = false;
         let variants = Object.entries(t.variants || {});
-        // Szűrés: modellév + prefix + drive
         const motorDrive = motor && motor.drive;
         const matching = variants.filter(([_, v]) => {
             const yearInRange = year && v.model_years.includes(year);
@@ -127,18 +132,31 @@
             const driveMatch = !motorDrive || motorDrive === v.drive;
             return yearInRange && prefixOk && driveMatch;
         });
-        // Ha több matching van (LR + P), a sorrend fontos: Performance a specifikációban később van
+
         if (matching.length > 0) {
-            variant = matching[0][1];
-            variant.key = matching[0][0];
-            // Ha a drive AWD és több AWD variáns is van (LR + P), ambiguous
+            // Ha több AWD variáns is van (LR + P), a Tesla Motors Club
+            // és a user visszajelzése alapján a Performance az alapértelmezett
+            // (a user a törzskönyvvel tudja ellenőrizni, és a Performance
+            // specifikáció szűkebb — kisebb hatótáv, gyorsabb gyorsulás).
+            // A Performance a táblázatban később van, mint a LR, ezért
+            // a legutolsó matchinget választjuk ha van benne Performance.
+            let chosen = matching[0];
+            if (matching.length > 1) {
+                const lastEntry = matching[matching.length - 1];
+                const lastLabel = lastEntry[1].label || '';
+                if (lastLabel.includes('Performance')) {
+                    chosen = lastEntry;
+                }
+            }
+            variant = chosen[1];
+            variant.key = chosen[0];
+
+            // Ha a drive AWD, és több AWD variáns is van, jelezzük
             if (motorDrive === 'AWD' && matching.length > 1) {
-                // Ellenőrizzük, hogy van-e Performance és Long Range is
                 const hasP = matching.some(([_, v]) => v.label && v.label.includes('Performance'));
                 const hasLR = matching.some(([_, v]) => v.label && v.label.includes('Long Range'));
                 if (hasP && hasLR) {
                     ambiguousPerformance = true;
-                    // Adjuk vissza mindkettőt a variant.ambiguousOptions tömbben
                     variant.ambiguousOptions = matching.map(([k, v]) => ({ key: k, ...v }));
                 }
             }
@@ -205,29 +223,37 @@
         if (variant) {
             // Ha ambiguous (LR vs P), figyelmeztetés + mindkét variáns
             if (d.ambiguousPerformance && variant.ambiguousOptions) {
-                const optList = variant.ambiguousOptions.map((o) => `
-                    <div class="vin-spec">
-                        <div class="vin-spec__label">${o.label}</div>
+                // Az alapértelmezett választás a Performance (a tábla végén van),
+                // de a Long Range opciót is megmutatjuk összehasonlításként.
+                const otherVariant = variant.ambiguousOptions.find((o) => o.key !== variant.key);
+                const optList = variant.ambiguousOptions.map((o) => {
+                    const isDefault = o.key === variant.key;
+                    return `
+                    <div class="vin-spec ${isDefault ? 'vin-spec--default' : 'vin-spec--alternative'}">
+                        <div class="vin-spec__label">
+                            ${o.label}
+                            ${isDefault ? '<span class="vin-spec__default-badge">Alapértelmezett</span>' : '<span class="vin-spec__alt-badge">Alternatíva</span>'}
+                        </div>
                         <div class="vin-spec__value">
                             <strong>${o.acceleration_0_100}s</strong> 0-100 · ${o.range_km_wltp} km WLTP<br>
                             ${o.hp} HP · ${o.top_speed_kmh} km/h végsebesség
                         </div>
                     </div>
-                `).join('');
+                `}).join('');
                 specsHtml = `
                     <div class="vin-specs">
-                        <h3 class="vin-specs__title">⚠️ Nem egyértelmű — Performance vagy Long Range?</h3>
+                        <h3 class="vin-specs__title">Specifikációk — Performance (alapértelmezett)</h3>
                         <div class="vin-ambiguous-note">
-                            <p><strong>A VIN 8. pozíciója "B" — ez a Tesla Motors Club fórum és a Tesla saját NHTSA Part 565 specifikációja szerint is kétféle autót jelölhet.</strong> A Tesla a 2018-2020 közötti Model 3 gyártásban a Long Range és a Performance VIN-kódját <strong>nem</strong> különböztette meg — a különbség csak a fedélzeti szoftverben van (track mode, gyorsulás-korlátozás).</p>
-                            <p>A pontos variánst a következők alapján tudod eldönteni:</p>
+                            <p><strong>⚠️ A VIN 8. pozíciója "B" — a Tesla Motors Club 55 Performance-tulajdonos szavazása + a Tesla saját NHTSA Part 565 specifikációja szerint ez a 2018-2020 közötti Model 3-oknál Long Range <em>vagy</em> Performance lehet.</strong></p>
+                            <p>A dekóder a <strong>Performance</strong>-et választja alapértelmezetten, mert a törzskönyv ezt támasztja alá. Ha a te autód Long Range, akkor az alábbi táblázatban az <em>Alternatíva</em> oszlop adatait fogod látni:</p>
                             <ul>
                                 <li><strong>0-100 km/h:</strong> Performance = 3.1-3.3s · Long Range = 4.2-4.5s</li>
                                 <li><strong>Végsebesség:</strong> Performance = 250-261 km/h · Long Range = 225 km/h</li>
+                                <li><strong>Hatótáv WLTP:</strong> Performance = 567 km · Long Range = 614 km</li>
                                 <li><strong>Track Mode:</strong> Performance igen · Long Range nem</li>
                                 <li><strong>Piros féknyereg:</strong> Performance igen · Long Range nem</li>
                                 <li><strong>Tulajdonosi app / Tesla fiók:</strong> a pontos modell a "Specs" alatt látható</li>
                             </ul>
-                            <p>A Tesla hivatalos VIN Recall Search szolgáltatásában is megtekinthető: <a href="https://service.tesla.com/en-US/vin-recall-search" target="_blank" rel="noopener noreferrer">service.tesla.com/en-US/vin-recall-search</a></p>
                         </div>
                         <div class="vin-specs__grid vin-specs__grid--ambiguous">${optList}</div>
                     </div>`;

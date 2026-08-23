@@ -1517,6 +1517,36 @@ body {
     background: rgba(56, 189, 248, 0.06);
     border-color: rgba(56, 189, 248, 0.25);
 }
+.vin-spec--default {
+    border-color: var(--primary) !important;
+    background: rgba(56, 189, 248, 0.1) !important;
+    box-shadow: 0 0 0 1px var(--primary);
+}
+.vin-spec--alternative {
+    border-style: dashed;
+    opacity: 0.85;
+}
+.vin-spec__default-badge,
+.vin-spec__alt-badge {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.1rem 0.45rem;
+    border-radius: 100px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    vertical-align: middle;
+}
+.vin-spec__default-badge {
+    background: var(--primary);
+    color: #02161F;
+}
+.vin-spec__alt-badge {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--fg-muted);
+    border: 1px solid var(--border-soft);
+}
 @media (max-width: 600px) {
     .vin-specs__grid--ambiguous { grid-template-columns: 1fr; }
 }
