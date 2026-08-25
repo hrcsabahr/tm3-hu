@@ -40,6 +40,13 @@
     const root = isSubpage ? '..' : '.';
 
     function renderNav() {
+        // P2 fix: ha a navbar már statikusan bent van a HTML-ben (#site-nav), ne duplikáld.
+        if (document.getElementById('site-nav')) return;
+
+        // P2 fix: ha van <nav id="nav"> placeholder, azt cseréljük le a header-re
+        // (insertAdjacentHTML 'afterbegin' a body-ba szúr, ami a placeholder ELÉ teszi
+        // a headert — így a placeholder is bent marad, és a layout elromlik).
+        const placeholder = document.getElementById('nav');
         const current = location.pathname.replace(/\\/g, '/');
         const items = NAV_ITEMS.map(item => {
             const relHref = item.href;
@@ -71,7 +78,11 @@
                 </div>
             </header>
         `;
-        document.body.insertAdjacentHTML('afterbegin', navHTML);
+        if (placeholder && placeholder.parentNode) {
+            placeholder.outerHTML = navHTML;
+        } else if (document.body) {
+            document.body.insertAdjacentHTML('afterbegin', navHTML);
+        }
     }
 
     // ----- Footer -----

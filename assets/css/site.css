@@ -104,27 +104,26 @@ h4 { font-size: 18px; }
    NAVBAR — Tesla minimal
    ========================================================================== */
 .navbar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 1000;  /* P2 fix: hero overlay felett biztosan */
     padding: 14px 0;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    border-bottom: 1px solid transparent;
+    background: rgba(11, 11, 13, 0.78);  /* sötét glassmorphism, body-hoz illeszkedik */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     transition: padding var(--t), background var(--t), border-color var(--t);
 }
 .navbar.scrolled, .navbar.is-scrolled {
     padding: 8px 0;
-    background: rgba(255, 255, 255, 0.85);
-    border-bottom-color: var(--line);
+    background: rgba(11, 11, 13, 0.92);
+    border-bottom-color: rgba(255, 255, 255, 0.14);
 }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 
 .brand, .logo {
     display: inline-flex; align-items: center; gap: 10px;
-    /* 2026-08-23 FIX: navbar background is white-translucent (rgba(255,255,255,0.7)),
-       so text must be DARK here even though --ink/--ink-2 are now light by default.
-       Using explicit dark hex so the brand stays readable regardless of theme. */
-    color: #0a0a14 !important; text-decoration: none !important;
+    /* P2 fix: sötét glass nav-on a brand szöveg legyen VILÁGOS */
+    color: #F5F5F7 !important; text-decoration: none !important;
     font-weight: 600; font-size: 16px; letter-spacing: -0.015em;
 }
 .brand-mark, .logo-mark {
@@ -142,15 +141,14 @@ h4 { font-size: 18px; }
     position: relative;
     padding: 8px 14px;
     font-size: 14px; font-weight: 500;
-    /* 2026-08-23 FIX: nav links must be dark on the white-translucent navbar.
-       Was var(--ink-2) which is now #D6E2EE (light) — invisible on white bg. */
-    color: #2a3a52 !important;
+    /* P2 fix: sötét nav-on a linkek VILÁGOSAK */
+    color: #D6E2EE !important;
     text-decoration: none !important;
     transition: color var(--t-fast);
 }
 .main-nav a:hover, .site-nav a:hover,
 .main-nav a[aria-current="page"], .site-nav a.active {
-    color: #0a0a14 !important;
+    color: #FFFFFF !important;
 }
 .main-nav a::after, .site-nav a::after, .site-nav .nav-dropdown-toggle::after {
     content: '';
@@ -179,7 +177,7 @@ h4 { font-size: 18px; }
     width: 40px; height: 40px; cursor: pointer;
     flex-direction: column; gap: 5px; align-items: center; justify-content: center; padding: 0;
 }
-.nav-toggle span { width: 18px; height: 1.5px; background: #0a0a14; border-radius: 1px; transition: var(--t-fast); }
+.nav-toggle span { width: 18px; height: 1.5px; background: #F5F5F7; border-radius: 1px; transition: var(--t-fast); }  /* P2 fix: hamburger ikon VILÁGOS sötét nav-on */
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -189,20 +187,47 @@ h4 { font-size: 18px; }
    ========================================================================== */
 .btn {
     display: inline-flex; align-items: center; justify-content: center;
-    gap: 8px; padding: 10px 18px;
-    font-family: inherit; font-size: 14px; font-weight: 600;
+    gap: 8px; padding: 12px 22px;  /* P2: 10px 18px → 12px 22px */
+    font-family: inherit; font-size: 15px; font-weight: 600;  /* P2: 14px → 15px */
     border-radius: var(--radius);
     border: 1px solid transparent; cursor: pointer;
     text-decoration: none !important;
     transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
-    line-height: 1;
+    line-height: 1.2;
 }
-.btn-sm { padding: 6px 12px; font-size: 12px; }
-.btn-lg { padding: 14px 28px; font-size: 15px; }
+.btn-sm { padding: 8px 14px; font-size: 13px; }
+.btn-lg { padding: 16px 32px; font-size: 17px; }
 .btn-primary { background: var(--accent); color: white; }
 .btn-primary:hover { background: var(--accent-hover); color: white; }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); }
 .btn-ghost:hover { background: var(--bg-2); }
+
+/* P2: preview-kártya CTA — teljes szélesség, kontrasztos, ikon opcionális */
+.btn-card {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%;
+    padding: 16px 28px;
+    margin-top: auto;  /* mindig a kártya aljára tolja */
+    background: linear-gradient(135deg, var(--accent) 0%, #0ea5e9 100%);
+    color: #FFFFFF !important;
+    font-size: 16px; font-weight: 700;
+    border-radius: 12px;
+    border: 0;
+    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+    transition: transform var(--t-fast), box-shadow var(--t-fast), filter var(--t-fast);
+}
+.btn-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(56, 189, 248, 0.4);
+    filter: brightness(1.05);
+    color: #FFFFFF !important;
+}
+.btn-card::after {
+    content: '→';
+    font-size: 18px;
+    transition: transform var(--t-fast);
+}
+.btn-card:hover::after { transform: translateX(4px); }
 .btn-link { background: transparent; color: var(--accent); padding: 0; border: 0; border-radius: 0; }
 .btn-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
@@ -2150,6 +2175,8 @@ main #res-megtakaritas {
     border-radius: var(--r-lg);
     padding: clamp(1.75rem, 3vw, 2.5rem);
     box-shadow: var(--shadow-card);
+    display: flex;          /* P2: CTA mindig alulra */
+    flex-direction: column;
 }
 .srv-tolt-card__icon {
     display: block;
@@ -2186,6 +2213,8 @@ main #res-megtakaritas {
     border-radius: var(--r-md);
     padding: clamp(1.5rem, 2.5vw, 2rem);
     transition: transform 0.2s var(--ease-out), border-color 0.2s;
+    display: flex;          /* P2: */
+    flex-direction: column;
 }
 .hibak-preview-card:hover {
     transform: translateY(-2px);
@@ -2216,9 +2245,15 @@ main #res-megtakaritas {
 .hibak-preview-cta {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.875rem;
+    gap: 1rem;
     justify-content: center;
+    align-items: stretch;
     margin-top: 1.5rem;
+}
+.hibak-preview-cta .btn-card {
+    width: auto;            /* P2: ne legyen 100%, maradjon kompakt */
+    flex: 1 1 320px;
+    max-width: 460px;
 }
 
 /* Közösség preview — bigger icons and titles */
@@ -2235,6 +2270,8 @@ main #res-megtakaritas {
     border-radius: var(--r-lg);
     padding: clamp(1.75rem, 3vw, 2.5rem);
     box-shadow: var(--shadow-card);
+    display: flex;          /* P2: CTA mindig alulra */
+    flex-direction: column;
 }
 .kozosseg-preview__icon {
     display: block;

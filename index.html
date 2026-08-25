@@ -128,8 +128,29 @@
     </script>
 </head>
 <body>
-    <!-- NAV: a site.js rendereli -->
-    <nav id="nav" aria-label="Fő navigáció"></nav>
+    <!-- P2 fix: inline statikus navbar — JS nélkül is látható. site.js renderNav ellenőrzi
+         a #site-nav létezését, és ha bent van, nem duplikál. -->
+    <header class="navbar" id="site-nav">
+        <div class="nav-wrap">
+            <a href="index.html" class="brand" aria-label="tm3.hu">
+                <span class="brand-mark">M3</span>
+                <span>tm3.hu</span>
+            </a>
+            <nav class="main-nav" id="site-main-nav" aria-label="Fő navigáció">
+                <a href="index.html" aria-current="page">Főoldal</a>
+                <a href="pages/tobberek.html">Töltők</a>
+                <a href="pages/kalkulator.html">Degradation</a>
+                <a href="pages/tco.html">TCO</a>
+                <a href="pages/szervizek.html">Szerviz</a>
+                <a href="pages/hibak.html">Hibák</a>
+                <a href="pages/blog.html">Hírek</a>
+                <a href="pages/jogi.html">Jogi</a>
+            </nav>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span>
+            </button>
+        </div>
+    </header>
 
     <!-- ===== HERO ===== -->
     <section id="hero" class="hero">
@@ -311,7 +332,7 @@
                             <span class="tco-preview__sub">benzin + szerviz + biztosítás + adó</span>
                         </div>
                     </div>
-                    <a class="btn btn--primary btn--cta" href="pages/tco.html">TCO kalkulátor megnyitása</a>
+                    <a class="btn btn-card" href="pages/tco.html">TCO kalkulátor megnyitása</a>
                 </div>
             </div>
         </div>
@@ -331,13 +352,13 @@
                     <span class="srv-tolt-card__icon" aria-hidden="true">🔧</span>
                     <h3 class="srv-tolt-card__title">10 Tesla-szerviz</h3>
                     <p>Budaörs (hivatalos), Budapest × 4, Debrecen, Győr, Miskolc, Pécs, Szeged, <strong>Székesfehérvár</strong>. Árak, szolgáltatások, értékelések.</p>
-                    <a class="btn btn--ghost" href="pages/szervizek.html">Szervizek megnyitása →</a>
+                    <a class="btn btn-card" href="pages/szervizek.html">Szervizek megnyitása</a>
                 </div>
                 <div class="srv-tolt-card">
                     <span class="srv-tolt-card__icon" aria-hidden="true">⚡</span>
                     <h3 class="srv-tolt-card__title">7 Tesla Supercharger + több hálózat</h3>
                     <p>Budapest × 2 (M1, M5), Szeged, Győr, Debrecen, Balatonfüred, <strong>Székesfehérvár</strong>. Emellett Mobiliti, E.ON, Shell, Volteum.</p>
-                    <a class="btn btn--ghost" href="pages/tobberek.html">Töltő térkép megnyitása →</a>
+                    <a class="btn btn-card" href="pages/tobberek.html">Töltő térkép megnyitása</a>
                 </div>
             </div>
         </div>
@@ -371,8 +392,8 @@
             </div>
 
             <div class="hibak-preview-cta">
-                <a class="btn btn--primary" href="pages/hibak.html">Teljes hibakatalógus →</a>
-                <a class="btn btn--ghost" href="https://service.tesla.com/en-US/vin-recall-search" target="_blank" rel="noopener noreferrer">Tesla VIN Recall Search →</a>
+                <a class="btn btn-card" style="max-width: 420px;" href="pages/hibak.html">Teljes hibakatalógus</a>
+                <a class="btn btn-card" style="max-width: 420px; background: linear-gradient(135deg, #475569 0%, #334155 100%); box-shadow: 0 4px 14px rgba(71, 85, 105, 0.25);" href="https://service.tesla.com/en-US/vin-recall-search" target="_blank" rel="noopener noreferrer">Tesla VIN Recall Search</a>
             </div>
         </div>
     </section>
@@ -391,19 +412,19 @@
                     <span class="kozosseg-preview__icon" aria-hidden="true">💬</span>
                     <h3 class="kozosseg-preview__title">Fórum és Discord</h3>
                     <p>Magyar nyelvű Tesla-tulajdonosok közössége — tapasztalatcsere, tippek, hibabejelentés.</p>
-                    <a class="btn btn--ghost" href="pages/kozosseg.html">Csatlakozás →</a>
+                    <a class="btn btn-card" href="pages/kozosseg.html">Csatlakozás</a>
                 </div>
                 <div class="kozosseg-preview-card">
                     <span class="kozosseg-preview__icon" aria-hidden="true">📰</span>
                     <h3 class="kozosseg-preview__title">Hírek és frissítések</h3>
                     <p>Tesla szoftverfrissítések, Supercharger újdonságok, magyarországi változások — heti rendszerességgel.</p>
-                    <a class="btn btn--ghost" href="pages/blog.html">Hírek olvasása →</a>
+                    <a class="btn btn-card" href="pages/blog.html">Hírek olvasása</a>
                 </div>
                 <div class="kozosseg-preview-card">
                     <span class="kozosseg-preview__icon" aria-hidden="true">🛒</span>
                     <h3 class="kozosseg-preview__title">Vásárlási útmutató</h3>
                     <p>Új vs használt Tesla Model 3 — mire figyelj, mit ellenőrizz, hogyan tárgyalj.</p>
-                    <a class="btn btn--ghost" href="pages/vasarlas.html">Útmutató megnyitása →</a>
+                    <a class="btn btn-card" href="pages/vasarlas.html">Útmutató megnyitása</a>
                 </div>
             </div>
         </div>
