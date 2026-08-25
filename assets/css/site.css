@@ -67,7 +67,11 @@
    RESET + BASE
    ========================================================================== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html {
+    scroll-behavior: auto;
+    -webkit-text-size-adjust: 100%;
+    background: var(--bg);
+}
 body {
     background: var(--bg);
     color: var(--ink);
@@ -878,7 +882,7 @@ h4 { font-size: 18px; }
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     background: var(--bg);
 }
 
@@ -1085,23 +1089,8 @@ body {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-.hero__scroll {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: #E0EAFA;  /* 2026-08-22 BRIGHTER */
-    z-index: 2;
-    animation: heroPulse 2s ease-in-out infinite;
-}
-@keyframes heroPulse {
-    0%, 100% { opacity: 0.4; transform: translateX(-50%) translateY(0); }
-    50% { opacity: 1; transform: translateX(-50%) translateY(4px); }
-}
+/* P2: .hero__scroll és @keyframes heroPulse eltávolítva — a 'Görgess lejjebb' hint
+   a hero-ból törlődött, hogy ne ösztönözzön ugrálásra. */
 
 /* ===== SECTION HEADERS ===== */
 .section {
