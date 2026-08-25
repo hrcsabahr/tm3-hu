@@ -188,6 +188,77 @@
         yearEl.forEach(el => el.textContent = new Date().getFullYear());
     }
 
+    /**
+     * P2 (design-concept-2025.md §7): stat counter animation.
+     * A .hero__stats .stat__value elemeket 0-ról a célértékre számolja, amikor
+     * láthatóvá válnak (IntersectionObserver). A szöveges suffix-eket megőrzi:
+     *   "850+"  → 0..850, "850+"
+     *   "4.5"   → 0.0..4.5, "4.5"
+     *   "7"     → 0..7, "7"
+     * prefers-reduced-motion: reduce esetén azonnal a célértéket írja ki.
+     */
+    function animateStat(el, target, suffix, decimals, duration) {
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (reduced) { el.textContent = target + suffix; return; }
+        const start = performance.now();
+        function tick(now) {
+            const t = Math.min(1, (now - start) / duration);
+            const eased = 1 - Math.pow(1 - t, 3);  // ease-out cubic
+            const val = target * eased;
+            el.textContent = val.toFixed(decimals) + suffix;
+            if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+
+    function parseStatValue(raw) {
+        // "850+" → {target: 850, suffix: "+", decimals: 0}
+        // "4.5"  → {target: 4.5, suffix: "", decimals: 1}
+        // "7"    → {target: 7, suffix: "", decimals: 0}
+        const m = String(raw).trim().match(/^(-?\d+(?:\.\d+)?)(.*)$/);
+        if (!m) return null;
+        const num = parseFloat(m[1]);
+        const suffix = m[2] || '';
+        const decimals = (m[1].split('.')[1] || '').length;
+        return { target: num, suffix, decimals };
+    }
+
+    function initStatCounters() {
+        const stats = document.querySelectorAll('.hero__stats .stat__value');
+        if (!stats.length) return;
+        // Parse + zero out initially (avoid flash of final value)
+        const parsed = [];
+        stats.forEach((el) => {
+            const p = parseStatValue(el.textContent);
+            if (!p) return;
+            el.dataset.counterTarget = String(p.target);
+            el.dataset.counterSuffix = p.suffix;
+            el.dataset.counterDecimals = String(p.decimals);
+            el.textContent = (0).toFixed(p.decimals) + p.suffix;
+            el.style.willChange = 'contents';
+            parsed.push({ el, p });
+        });
+
+        if (!('IntersectionObserver' in window)) {
+            parsed.forEach(({ el, p }) => animateStat(el, p.target, p.suffix, p.decimals, 1));
+            return;
+        }
+
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = parseFloat(el.dataset.counterTarget);
+                const suffix = el.dataset.counterSuffix;
+                const decimals = parseInt(el.dataset.counterDecimals, 10);
+                animateStat(el, target, suffix, decimals, 1200);
+                obs.unobserve(el);
+            });
+        }, { threshold: 0.4 });
+
+        parsed.forEach(({ el }) => obs.observe(el));
+    }
+
     function bindKpi() {
         const kpis = document.querySelectorAll('[data-kpi]');
         kpis.forEach(el => {
@@ -206,6 +277,7 @@
         initNavToggle();
         renderFooterYear();
         bindKpi();
+        initStatCounters();
     }
 
     if (document.readyState === 'loading') {

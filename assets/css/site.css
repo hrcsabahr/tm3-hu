@@ -879,12 +879,22 @@ body {
 .hero {
     position: relative;
     min-height: 100vh;
+    min-height: 100dvh;  /* P2: dynamic viewport height — mobil Safari address-bar safe */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     padding: 8rem 0 6rem;
     background: var(--bg);
+}
+
+/* P2: stat counter animáció — amikor a stat láthatóvá válik */
+@keyframes statCountUp {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.stat__value {
+    animation: statCountUp 600ms var(--ease-out, cubic-bezier(0.16, 1, 0.3, 1)) both;
 }
 .hero::before {
     content: '';
@@ -1674,9 +1684,23 @@ body {
     overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;
 }
 
-/* Reduced motion */
+/* Reduced motion — P2 design spec, section 7 */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto !important; }
+}
+
+/* P2: globális focus-visible accent-glow (CTA-k, linkek, inputok) */
+:focus-visible {
+    outline: 2px solid var(--accent, #38BDF8);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+.btn:focus-visible,
+.hero__cta a:focus-visible {
+    outline: 2px solid var(--accent, #38BDF8);
+    outline-offset: 4px;
+    box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25);
 }
 
 
