@@ -182,14 +182,10 @@
                 </div>
             </div>
 
-            <!-- P2: belső anchor CTA-k (#vin-checker, #degradation) eltávolítva —
-                 a user kérése: 'ne ugráljon az oldal'. A menüből + görgetéssel érhetők el. -->
-            <div class="hero__cta">
-                <a href="pages/szervizek.html" class="btn btn--ghost">Szervizek</a>
-                <a href="pages/tco.html" class="btn btn--ghost">TCO kalkulátor</a>
-            </div>
+            <!-- P2: hero CTA-k (Szervizek, TCO kalkulátor) törölve — user kérése:
+                 'a főoldalon csak a főoldal legyen, a többit nem kell felsorolni'.
+                 A navigáció a felső fix menüből történik. -->
         </div>
-        <!-- P2: hero__scroll 'Görgess lejjebb' hint eltávolítva — nem akarjuk ugrásra ösztönözni -->
     </section>
 
     <!-- ===== AKKUMULÁTOR DEGRADÁCIÓ ===== -->
@@ -295,141 +291,15 @@
                 </div>
             </div>
 
-            <div class="vin-recall-box">
-                <div class="vin-recall-box__icon" aria-hidden="true">🛡️</div>
-                <div class="vin-recall-box__body">
-                    <strong>Használt Teslát veszel, vagy aggódsz egy visszahívás miatt?</strong>
-                    <p>A Tesla hivatalos VIN Recall Search szolgáltatásában bármikor ingyenesen ellenőrizheted, hogy az autódra van-e érvényes visszahívás (recall, service campaign, vagy firmware-mandate).</p>
-                    <a class="vin-recall-box__cta" href="https://service.tesla.com/en-US/vin-recall-search" target="_blank" rel="noopener noreferrer">
-                        Tesla VIN Recall Search megnyitása →
-                    </a>
-                </div>
-            </div>
+            <!-- P2: vin-recall-box törölve — user kérése: 'más gomb/link nem kell'.
+                 A Tesla Recall Search a navbar TCO/Hibák linkjein keresztül érhető el,
+                 vagy a user saját böngészőjében keres. -->
         </div>
     </section>
 
-    <!-- ===== TCO KALKULÁTOR ELŐNÉZET ===== -->
-    <section id="tco-preview" class="section section--preview section--alt">
-        <div class="container">
-            <header class="section-head">
-                <span class="section-eyebrow">Eszköz · TCO</span>
-                <h2 class="section-title">TCO kalkulátor — 10 éves birtoklási költség</h2>
-                <p class="section-sub">Számold ki a Tesla Model 3 teljes 10 éves költségét a saját használati szokásaid alapján, és hasonlítsd össze egy hasonló kategóriájú benzines szedán (BMW 330i) árával. A magyarországi üzemanyag-, áram- és szervizárak 2026 Q2-es adatok.</p>
-            </header>
-
-            <div class="tco-preview-grid">
-                <a href="pages/tco.html" class="tco-preview-card card-link">
-                    <h3 class="tco-preview__title">Villany vs benzin — 10 év</h3>
-                    <div class="tco-preview__comparison">
-                        <div class="tco-preview__side tco-preview__side--ev">
-                            <span class="tco-preview__label">Tesla Model 3</span>
-                            <span class="tco-preview__value">~24 M Ft</span>
-                            <span class="tco-preview__sub">villany + töltés + szerviz + biztosítás</span>
-                        </div>
-                        <div class="tco-preview__vs">vs</div>
-                        <div class="tco-preview__side tco-preview__side--ice">
-                            <span class="tco-preview__label">BMW 330i (benzin)</span>
-                            <span class="tco-preview__value">~35 M Ft</span>
-                            <span class="tco-preview__sub">benzin + szerviz + biztosítás + adó</span>
-                        </div>
-                    </div>
-                    <span class="card-link__cta">TCO kalkulátor megnyitása</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== SZERVIZEK ÉS TÖLTŐK ===== -->
-    <section id="szervizek-tobberek" class="section section--preview">
-        <div class="container">
-            <header class="section-head">
-                <span class="section-eyebrow">Térkép · Szervizek és töltők</span>
-                <h2 class="section-title">Magyarországi Tesla szervizek és töltők térképe</h2>
-                <p class="section-sub">10 magyarországi Tesla-szerviz (1 hivatalos Budaörs, 9 független specialista) és 7 Tesla Supercharger + Mobiliti, E.ON, Shell és Volteum gyorstöltők. Interaktív térkép, árak, telefonszámok, nyitvatartás.</p>
-            </header>
-
-            <div class="srv-tolt-overview">
-                <a href="pages/szervizek.html" class="srv-tolt-card card-link">
-                    <span class="srv-tolt-card__icon" aria-hidden="true">🔧</span>
-                    <h3 class="srv-tolt-card__title">10 Tesla-szerviz</h3>
-                    <p>Budaörs (hivatalos), Budapest × 4, Debrecen, Győr, Miskolc, Pécs, Szeged, <strong>Székesfehérvár</strong>. Árak, szolgáltatások, értékelések.</p>
-                    <span class="card-link__cta">Szervizek megnyitása</span>
-                </a>
-                <a href="pages/tobberek.html" class="srv-tolt-card card-link">
-                    <span class="srv-tolt-card__icon" aria-hidden="true">⚡</span>
-                    <h3 class="srv-tolt-card__title">7 Tesla Supercharger + több hálózat</h3>
-                    <p>Budapest × 2 (M1, M5), Szeged, Győr, Debrecen, Balatonfüred, <strong>Székesfehérvár</strong>. Emellett Mobiliti, E.ON, Shell, Volteum.</p>
-                    <span class="card-link__cta">Töltő térkép megnyitása</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== HIBÁK ÉS VISSZAHÍVÁSOK ===== -->
-    <section id="hibak-preview" class="section section--preview section--alt">
-        <div class="container">
-            <header class="section-head">
-                <span class="section-eyebrow">Tudásbázis · Hibák</span>
-                <h2 class="section-title">Tipikus Model 3 hibák és visszahívások</h2>
-                <p class="section-sub">A leggyakoribb Model 3 meghibásodások (12V akkumulátor, ajtókilincs, futómű, felfüggesztés, szoftver), javítási költségek és a Tesla garanciális feltételek. Használt vásárlás előtt mindenképp nézd meg.</p>
-            </header>
-
-            <div class="hibak-preview-grid">
-                <div class="hibak-preview-card">
-                    <h3 class="hibak-preview__title">12V akkumulátor</h3>
-                    <p class="hibak-preview__cost">55 000 - 78 000 Ft</p>
-                    <p class="hibak-preview__note">Li-ion, márkás — 3-5 évente cserélni kell. A leggyakoribb Model 3 hiba.</p>
-                </div>
-                <div class="hibak-preview-card">
-                    <h3 class="hibak-preview__title">Ajtókilincs</h3>
-                    <p class="hibak-preview__cost">85 000 - 130 000 Ft</p>
-                    <p class="hibak-preview__note">A kilincs mechanikája elhasználódik, a mikrokapcsoló cseréje vagy az egész kilincs.</p>
-                </div>
-                <div class="hibak-preview-card">
-                    <h3 class="hibak-preview__title">Felfüggesztés</h3>
-                    <p class="hibak-preview__cost">160 000 - 320 000 Ft</p>
-                    <p class="hibak-preview__note">Lengéscsillapítók, rugók, vezérlőkarok — 80-120 ezer km után jellemző.</p>
-                </div>
-            </div>
-
-            <div class="hibak-preview-cta">
-                <a class="btn btn-card" style="max-width: 420px;" href="pages/hibak.html">Teljes hibakatalógus</a>
-                <a class="btn btn-card" style="max-width: 420px; background: linear-gradient(135deg, #475569 0%, #334155 100%); box-shadow: 0 4px 14px rgba(71, 85, 105, 0.25);" href="https://service.tesla.com/en-US/vin-recall-search" target="_blank" rel="noopener noreferrer">Tesla VIN Recall Search</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== KÖZÖSSÉG ÉS HÍREK ===== -->
-    <section id="kozosseg-blog" class="section section--preview">
-        <div class="container">
-            <header class="section-head">
-                <span class="section-eyebrow">Közösség · Hírek</span>
-                <h2 class="section-title">Magyar Tesla Model 3 közösség és hírek</h2>
-                <p class="section-sub">Csatlakozz a magyar Tesla-tulajdonosok közösségéhez — fórum, Discord, GitHub Discussions, helyi meetup-ok. Friss szoftverfrissítések, Supercharger-újdonságok, Model 3/Y/S/X változások.</p>
-            </header>
-
-            <div class="kozosseg-preview-grid">
-                <a href="pages/kozosseg.html" class="kozosseg-preview-card card-link">
-                    <span class="kozosseg-preview__icon" aria-hidden="true">💬</span>
-                    <h3 class="kozosseg-preview__title">Fórum és Discord</h3>
-                    <p>Magyar nyelvű Tesla-tulajdonosok közössége — tapasztalatcsere, tippek, hibabejelentés.</p>
-                    <span class="card-link__cta">Csatlakozás</span>
-                </a>
-                <a href="pages/blog.html" class="kozosseg-preview-card card-link">
-                    <span class="kozosseg-preview__icon" aria-hidden="true">📰</span>
-                    <h3 class="kozosseg-preview__title">Hírek és frissítések</h3>
-                    <p>Tesla szoftverfrissítések, Supercharger újdonságok, magyarországi változások — heti rendszerességgel.</p>
-                    <span class="card-link__cta">Hírek olvasása</span>
-                </a>
-                <a href="pages/vasarlas.html" class="kozosseg-preview-card card-link">
-                    <span class="kozosseg-preview__icon" aria-hidden="true">🛒</span>
-                    <h3 class="kozosseg-preview__title">Vásárlási útmutató</h3>
-                    <p>Új vs használt Tesla Model 3 — mire figyelj, mit ellenőrizz, hogyan tárgyalj.</p>
-                    <span class="card-link__cta">Útmutató megnyitása</span>
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- P2: #tco-preview, #szervizek-tobberek, #hibak-preview, #kozosseg-blog szekciók
+         törölve — user kérése: 'a főoldalon csak a főoldal legyen, a többit nem kell
+         felsorolni'. A navigáció a felső fix menüből történik minden oldalon. -->
 
     <!-- ===== FOOTER ===== -->
     <footer id="footer" role="contentinfo"></footer>
