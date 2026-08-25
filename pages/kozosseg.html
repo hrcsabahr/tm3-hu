@@ -30,7 +30,28 @@
     <script src="../assets/js/seo-head.js" defer></script>
 </head>
 <body>
-    <nav id="nav" aria-label="Fő navigáció"></nav>
+    <!-- P2: inline statikus navbar — JS nélkül is látható. -->
+    <header class="navbar" id="site-nav">
+        <div class="nav-wrap">
+            <a href="../index.html" class="brand" aria-label="tm3.hu">
+                <span class="brand-mark">M3</span>
+                <span>tm3.hu</span>
+            </a>
+            <nav class="main-nav" id="site-main-nav" aria-label="Fő navigáció">
+                <a href="../index.html">Főoldal</a>
+                <a href="tobberek.html">Töltők</a>
+                <a href="kalkulator.html">Degradation</a>
+                <a href="tco.html">TCO</a>
+                <a href="szervizek.html">Szerviz</a>
+                <a href="hibak.html">Hibák</a>
+                <a href="blog.html">Hírek</a>
+                <a href="jogi.html">Jogi</a>
+            </nav>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span>
+            </button>
+        </div>
+    </header>
     <!-- NAV: a site.js rendereli -->
 
     <section class="page-hero">

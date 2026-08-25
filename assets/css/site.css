@@ -79,6 +79,7 @@ body {
     font-size: 16px;
     line-height: 1.55;
     overflow-x: hidden;
+    padding-top: 64px;  /* P2: hely a fix navbar számára (kb. 14+36+14 = 64px) */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -108,13 +109,13 @@ h4 { font-size: 18px; }
    NAVBAR — Tesla minimal
    ========================================================================== */
 .navbar {
-    position: fixed; top: 0; left: 0; right: 0;
-    z-index: 1000;  /* P2 fix: hero overlay felett biztosan */
+    position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important;
+    z-index: 9999 !important;  /* P2 fix: minden fölé, !important-tal */
     padding: 14px 0;
-    background: rgba(11, 11, 13, 0.78);  /* sötét glassmorphism, body-hoz illeszkedik */
-    backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(11, 11, 13, 0.92);  /* P2: 0.78 → 0.92 (biztosan látszik) */
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     transition: padding var(--t), background var(--t), border-color var(--t);
 }
 .navbar.scrolled, .navbar.is-scrolled {
@@ -236,7 +237,7 @@ h4 { font-size: 18px; }
 /* ==========================================================================
    SURFACES — page-hero, section, card, filter, tip-box, badge
    ========================================================================== */
-.page-hero { padding: 180px 0 96px; border-bottom: 1px solid var(--line); }
+.page-hero { padding: 100px 0 96px; border-bottom: 1px solid var(--line); }  /* P2: 180px → 100px (body padding-top 64px miatt) */
 .section { padding: 100px 0; }
 .section-alt { background: var(--bg-2); }
 
@@ -905,13 +906,13 @@ body {
 /* ===== HERO — 100vh, glassmorphism, radial gradient ===== */
 .hero {
     position: relative;
-    min-height: 100vh;
-    min-height: 100dvh;  /* P2: dynamic viewport height — mobil Safari address-bar safe */
+    min-height: calc(100vh - 64px);
+    min-height: calc(100dvh - 64px);  /* P2: navbar (64px) alatti viewport */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 8rem 0 6rem;
+    padding: 4rem 0 6rem;  /* P2: 8rem → 4rem (a body padding-top 64px miatt) */
     background: var(--bg);
 }
 
