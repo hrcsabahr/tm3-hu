@@ -91,46 +91,15 @@
         const footerHTML = `
             <footer class="site-footer">
                 <div class="container">
-                    <div class="footer-grid">
-                        <div class="footer-col">
-                            <div class="footer-brand">tm3.hu</div>
-                            <p class="footer-tag">Magyar Tesla Model 3 tudásbázis. SR+, Long Range és Performance — adatok, kalkulátorok, közösség.</p>
-                        </div>
-                        <div class="footer-col">
-                            <h4>Eszközök</h4>
-                            <ul>
-                                <li><a href="${footerPrefix}/pages/kalkulator.html">Degradation</a></li>
-                                <li><a href="${footerPrefix}/pages/tco.html">10 éves TCO</a></li>
-                                <li><a href="${footerPrefix}/pages/fogyasztas.html">Fogyasztás</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col">
-                            <h4>Információ</h4>
-                            <ul>
-                                <li><a href="${footerPrefix}/pages/szervizek.html">Szervizek</a></li>
-                                <li><a href="${footerPrefix}/pages/tobberek.html">Töltők</a></li>
-                                <li><a href="${footerPrefix}/pages/hibak.html">Hibák</a></li>
-                                <li><a href="${footerPrefix}/pages/vasarlas.html">Vásárlás</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col">
-                            <h4>Közösség</h4>
-                            <ul>
-                                <li><a href="${footerPrefix}/pages/blog.html">Hírek</a></li>
-                                <li><a href="${footerPrefix}/pages/kozosseg.html">Fórum</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-bottom">
-                        <div class="footer-bottom-row">
+                    <div class="footer-minimal">
+                        <div class="footer-brand">tm3.hu — magyar Tesla Model 3 tudásbázis</div>
+                        <div class="footer-bottom">
                             <span>© ${new Date().getFullYear()} tm3.hu · Tartalom: CC BY-SA 4.0 · Kód: MIT</span>
-                            <span>Tesla, Model 3, SR+, Long Range, Performance a Tesla, Inc. bejegyzett védjegyei.</span>
-                        </div>
-                        <div class="footer-bottom-row footer-disclaimer">
-                            <strong>⚠️ Nem hivatalos, független oldal.</strong>
-                            A tm3.hu nem kapcsolódik a Tesla, Inc.-hez, és nem annak tulajdona vagy partnere.
-                            Az itt megjelent tartalom kizárólag tájékoztató jellegű.
-                            <a href="${footerPrefix}/pages/jogi.html">Jogi tudnivalók, impresszum, adatvédelem</a>.
+                            <span class="footer-disclaimer">
+                                <strong>⚠️ Nem hivatalos, független oldal.</strong>
+                                A tm3.hu nem kapcsolódik a Tesla, Inc.-hez.
+                                <a href="${footerPrefix}/pages/jogi.html">Jogi tudnivalók</a>.
+                            </span>
                         </div>
                     </div>
                 </div>
