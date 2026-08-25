@@ -202,32 +202,30 @@ h4 { font-size: 18px; }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-strong); }
 .btn-ghost:hover { background: var(--bg-2); }
 
-/* P2: preview-kártya CTA — teljes szélesség, kontrasztos, ikon opcionális */
+/* P2: kompakt CTA a hibak-preview-cta szekcióban (2 gomb egymás mellett).
+   Tesla Electric Blue (#3E6AE1), 40px height, 4px border-radius — "block button"
+   a card-as-link kártyákon kívül. */
 .btn-card {
-    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    width: 100%;
-    padding: 16px 28px;
-    margin-top: auto;  /* mindig a kártya aljára tolja */
-    background: linear-gradient(135deg, var(--accent) 0%, #0ea5e9 100%);
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 12px 24px;             /* P2: kompakt 16px 28px → 12px 24px */
+    background: #3E6AE1;            /* Tesla Electric Blue */
     color: #FFFFFF !important;
-    font-size: 16px; font-weight: 700;
-    border-radius: 12px;
+    font-size: 15px; font-weight: 500;  /* P2: 16px/700 → 15px/500 (Tesla-minta) */
+    border-radius: 4px;             /* P2: 12px → 4px (Tesla-minta) */
     border: 0;
-    box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
-    transition: transform var(--t-fast), box-shadow var(--t-fast), filter var(--t-fast);
+    box-shadow: none;
+    transition: background-color var(--t-fast), transform var(--t-fast);
+    text-decoration: none !important;
 }
 .btn-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(56, 189, 248, 0.4);
-    filter: brightness(1.05);
+    background: #2C4FB8;            /* Tesla hover: sötétebb blue */
+    transform: translateY(-1px);
     color: #FFFFFF !important;
 }
-.btn-card::after {
-    content: '→';
-    font-size: 18px;
-    transition: transform var(--t-fast);
+.btn-card:focus-visible {
+    outline: 2px solid var(--accent, #38BDF8);
+    outline-offset: 3px;
 }
-.btn-card:hover::after { transform: translateX(4px); }
 .btn-link { background: transparent; color: var(--accent); padding: 0; border: 0; border-radius: 0; }
 .btn-link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
@@ -2177,6 +2175,12 @@ main #res-megtakaritas {
     box-shadow: var(--shadow-card);
     display: flex;          /* P2: CTA mindig alulra */
     flex-direction: column;
+    transition: transform 0.25s var(--ease-out), border-color 0.25s, box-shadow 0.25s;
+}
+.srv-tolt-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 32px rgba(56, 189, 248, 0.12);
 }
 .srv-tolt-card__icon {
     display: block;
@@ -2199,26 +2203,56 @@ main #res-megtakaritas {
     margin: 0 0 1.5rem;
 }
 
-/* Hibák preview — bigger cards, more readable */
-.hibak-preview-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    max-width: 1100px;
-    margin: 0 auto 2.5rem;
+/* P2: preview-kártya CTA — Tesla/Polestar "card-as-link" minta.
+   A teljes kártya klikkelhető <a>, a CTA-szöveg a kártya alján kis caption stílusban. */
+.card-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none !important;
+    color: inherit;
+    /* a kártya-stílust a szülő osztály adja (srv-tolt-card, kozosseg-preview-card, tco-preview-card) */
 }
+.card-link:hover { color: inherit; }
+
+.card-link__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;             /* mindig a kártya aljára */
+    padding-top: 1.25rem;
+    color: var(--primary, #38BDF8);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    transition: color var(--t-fast), gap var(--t-fast);
+}
+.card-link__cta::after {
+    content: '→';
+    font-size: 16px;
+    transition: transform var(--t-fast);
+}
+.card-link:hover .card-link__cta {
+    color: #0ea5e9;
+    gap: 10px;
+}
+.card-link:hover .card-link__cta::after {
+    transform: translateX(3px);
+}
+
+/* Hibák preview kártyák — nincs CTA, csak adat. Hover emelés. */
 .hibak-preview-card {
     background: var(--bg-card);
     border: 1px solid var(--border-soft);
     border-radius: var(--r-md);
     padding: clamp(1.5rem, 2.5vw, 2rem);
-    transition: transform 0.2s var(--ease-out), border-color 0.2s;
-    display: flex;          /* P2: */
+    transition: transform 0.25s var(--ease-out), border-color 0.25s, box-shadow 0.25s;
+    display: flex;
     flex-direction: column;
 }
 .hibak-preview-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px);
     border-color: var(--primary);
+    box-shadow: 0 12px 32px rgba(56, 189, 248, 0.12);
 }
 .hibak-preview__title {
     font-family: var(--font-display);
@@ -2272,6 +2306,12 @@ main #res-megtakaritas {
     box-shadow: var(--shadow-card);
     display: flex;          /* P2: CTA mindig alulra */
     flex-direction: column;
+    transition: transform 0.25s var(--ease-out), border-color 0.25s, box-shadow 0.25s;
+}
+.kozosseg-preview-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 12px 32px rgba(56, 189, 248, 0.12);
 }
 .kozosseg-preview__icon {
     display: block;
