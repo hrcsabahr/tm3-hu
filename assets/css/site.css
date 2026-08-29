@@ -129,7 +129,10 @@ h4 { font-size: 18px; }
     background: rgba(11, 11, 13, 0.92);
     border-bottom-color: rgba(255, 255, 255, 0.14);
 }
-.nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+/* 2026-08-29: a navbar soha ne legyen szélesebb a viewport-nal. Ha a .main-nav
+   + .brand + .nav-cta egyutt szélesebb mint 100vw, ne legyen vizszintes scrollbar. */
+.navbar { overflow: hidden; }
 
 .brand, .logo {
     display: inline-flex; align-items: center; gap: 10px;
@@ -147,11 +150,16 @@ h4 { font-size: 18px; }
 
 .main-nav, .site-nav {
     display: flex; gap: 4px; align-items: center;
+    /* 2026-08-29: a .main-nav ne nyuljon tul a viewport-on. Ha kevés a hely,
+       a linkek flex-wrap-peljenek egy uj sorba. */
+    flex-wrap: wrap;
 }
 .main-nav a, .site-nav a, .site-nav .nav-dropdown-toggle {
     position: relative;
-    padding: 8px 14px;
-    font-size: 14px; font-weight: 500;
+    padding: 8px 12px;
+    font-size: 13px; font-weight: 500;
+    /* 2026-08-29: white-space: nowrap, hogy a linkek ne torejenek ket sorba. */
+    white-space: nowrap;
     /* P2 fix: sötét nav-on a linkek VILÁGOSAK */
     color: #D6E2EE !important;
     text-decoration: none !important;
@@ -599,6 +607,40 @@ h4 { font-size: 18px; }
 .dim { color: var(--ink-3); }
 .center { text-align: center; }
 .hide { display: none; }
+@media (max-width: 1024px) {
+    /* 2026-08-29: hamburger menu breakpoint 768 -> 1024. A .main-nav 8 linkkel
+       mar 1024px felett is szeles, ezert mar itt hamburger menure valtunk.
+       A 768px alatti media query a chart/map reszponzivitasat kezeli. */
+    .hide-tablet { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-cta { display: none; }
+    .main-nav, .site-nav {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column;
+        background: rgba(11, 11, 13, 0.96);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        backdrop-filter: blur(20px) saturate(180%);
+        border-bottom: 1px solid var(--line);
+        padding: 16px; gap: 4px;
+        transform: translateY(-10px); opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--t-fast), transform var(--t-fast);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        z-index: 9998;
+    }
+    .main-nav.is-open, .site-nav.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .main-nav a, .site-nav a {
+        width: 100%;
+        padding: 14px 18px;
+        font-size: 15px;
+        border-radius: var(--radius);
+        color: var(--ink) !important;
+    }
+    .main-nav a:hover, .main-nav a[aria-current="page"] {
+        background: rgba(56, 189, 248, 0.12);
+    }
+}
+
 @media (max-width: 768px) {
     .hide-mobile { display: none; }
     .section { padding: 64px 0; }
