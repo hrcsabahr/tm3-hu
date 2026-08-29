@@ -68,6 +68,9 @@
         banner.id = 'install-banner';
         banner.style.cssText = `
             position: fixed; bottom: 20px; left: 20px; right: 20px;
+            /* 2026-08-29: Android Chrome home indicator + iPhone safe-area
+               figyelembe vetele, hogy a banner ne keruljon a home gomb ala. */
+            bottom: calc(20px + env(safe-area-inset-bottom, 0px));
             max-width: 420px; margin: 0 auto;
             padding: 16px 20px;
             background: var(--ink, #1A1A1A);
@@ -79,6 +82,8 @@
             font-family: Inter, system-ui, sans-serif;
             font-size: 14px;
             animation: slideUp 0.3s ease;
+            /* ANDROID: tap-highlight kikapcsolasa a banner gombjain. */
+            -webkit-tap-highlight-color: transparent;
         `;
         banner.innerHTML = `
             <div style="flex:1;">

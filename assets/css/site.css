@@ -638,17 +638,32 @@ h4 { font-size: 18px; }
    - input font-size minimum 16px (iOS autozoom fix)
    - body overflow-x: hidden a vizszintes scroll megelozesere
    - hover effektek kikapcsolasa (hover: none) tap-only eszkozokon
+   - ANDROID: overscroll-behavior, tap-highlight-color, GPU acceleration
    ========================================================================== */
 html {
     /* iPhone X+ notch: a body ne nyuljon a notch ala, hanem a safe-area
        szelerol induljon. */
     overflow-x: hidden;
+    /* Android Chrome: a body ne legyen pull-to-refresh. */
+    overscroll-behavior-y: none;
+    /* Az egesz oldal szintjen a vizszintes scrollt is megakadalyozzuk. */
+    overscroll-behavior-x: none;
 }
 body {
     overflow-x: hidden;
     /* Biztonsagi zóna: ne legyen vizszintes scrollbar mobilon. */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+}
+
+/* Android-specifikus: a terkep es chart kontener belsejeben görgetni lehessen,
+   de ne triggerelje a body pull-to-refresh-et. */
+.map,
+.deg-chart-inner,
+.vin-form-card,
+.deg-tabs,
+.page-hero {
+    overscroll-behavior-y: contain;
 }
 
 /* Safe-area a fix navbarhoz: a navbar ne takarja el az iPhone notch-ot. */
@@ -680,11 +695,49 @@ a[role="button"] {
     touch-action: manipulation;
 }
 
+/* ANDROID: a tap-highlight-color kikapcsolasa a gombokon, hogy ne villanjon
+   fel egy kék/szürke keret minden tap-ra. Ehelyett a :active stílus ad
+   vizuális feedbacket. */
+.btn,
+.nav-toggle,
+.deg-tab,
+.map-controls .ctrl-btn,
+.vin-submit {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* ANDROID: a user-select: none megakadalyozza, hogy a user hosszu nyomassal
+   kijelolje a gomb szoveget, vagy a kepet elmentse a terkepen. */
+.nav-toggle,
+.map-controls .ctrl-btn,
+.deg-tab {
+    -webkit-user-select: none;
+    user-select: none;
+    /* A touch-callout (hosszu nyomas menu) kikapcsolasa a gombokon. */
+    -webkit-touch-callout: none;
+}
+
+/* ANDROID: a Leaflet terkep kontener GPU acceleration - a görgetés/zoom
+   folyékonyabb lesz, mert a böngésző a GPU-ra kényszeríti a composite-et. */
+.leaflet-container {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+}
+
 /* Inputok: minimum 16px font-size, hogy az iOS Safari ne zoomoljon. */
 input,
 select,
 textarea {
     font-size: 16px;
+}
+
+/* ANDROID Chrome: a soft keyboard megjelenesekor a fókuszban levo input
+   scrollintoview-val a latóterbe keruljon. */
+input:focus,
+select:focus,
+textarea:focus {
+    scroll-margin-top: 80px;
 }
 
 /* Hover-only effektek kikapcsolasa tap-only eszkozokon.
@@ -697,6 +750,14 @@ textarea {
     .deg-tab:active {
         transform: scale(0.98);
         transition: transform 0.1s ease;
+    }
+    /* Ripple-szeru feedback a Material Design stílusban. */
+    .btn,
+    .deg-tab,
+    .map-controls .ctrl-btn,
+    .nav-toggle {
+        position: relative;
+        overflow: hidden;
     }
 }
 

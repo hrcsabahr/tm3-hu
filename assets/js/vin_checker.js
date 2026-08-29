@@ -317,6 +317,9 @@
             status.textContent = 'A VIN 17 karakter hosszú, A-H és J-N és P-R és Z és 0-9 betűket/számokat tartalmazhat (I, O, Q nélkül).';
             status.className = 'vin-status vin-status--error';
             result.hidden = true;
+            // 2026-08-29: Android Chrome: ha a soft keyboard elfedné a status üzenetet,
+            // görgessük a status elemet a látható területre.
+            status.scrollIntoView({ block: 'center', behavior: 'smooth' });
             return;
         }
         status.className = 'vin-status';
@@ -337,6 +340,19 @@
             status.textContent = 'A VIN struktúrája érvényes, de a pontos specifikáció nem található.';
             status.className = 'vin-status vin-status--warn';
         }
+        // 2026-08-29: a result card legorditese a latoterbe, hogy mobilon
+        // a soft keyboard eltuntese utan is latszodjon a dekódolás eredménye.
+        setTimeout(() => {
+            result.scrollIntoView({ block: 'start', behavior: 'smooth' });
+        }, 100);
+    });
+
+    // 2026-08-29: az input fokuszalasakor a vin-form-card legorduljon a
+    // latoterbe, hogy a soft keyboard ne fedje el az inputot es a cimet.
+    input.addEventListener('focus', () => {
+        setTimeout(() => {
+            form.parentElement.scrollIntoView({ block: 'center', behavior: 'smooth' });
+        }, 300);  // 300ms - a soft keyboard animacio ideje
     });
 
     // Uppercase + live filter (I, O, Q nem megengedett)
