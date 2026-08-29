@@ -65,21 +65,48 @@ if (typeof ChartDataLabels !== "undefined") {
     });
 
     // LIGHT MODE: fehér háttér, SÖTÉT szövegek (chart-wrap fehér doboz).
+    // 2026-08-29: a Chart.js beepitett legend-jet VISSZAKAPCSOLJUK, mert a user
+    // a charton BELUL (alul) szeretne latni a 3 akkufajta legend-jet, nem
+    // kulon HTML blokkban. A label.text a roviditett leirast is tartalmazza.
+    const AKKU_LEGEND = {
+        'NCA (Long Range)':          'NCA · Nikkel-kobalt-alumínium — legnagyobb energiasűrűség',
+        'NCA (tipikus ciklusszám)':  'NCA · Nikkel-kobalt-alumínium — tipikus ciklusszám',
+        'NCM811':                    'NCM811 · Nikkel-kobalt-mangán — kiegyensúlyozott',
+        'LFP (SR+)':                 'LFP · Lítium-vas-foszfát — leghosszabb élettartam',
+        'LFP (extrém hosszú)':       'LFP · Lítium-vas-foszfát — extrém hosszú ciklus-élettartam',
+    };
     const baseOptions = {
         responsive: true,
         maintainAspectRatio: false,
         interaction: { mode: "index", intersect: false },
         backgroundColor: "#ffffff",
         plugins: {
-            // 2026-08-29: a beepitett Chart.js legend-et kikapcsoljuk, mert a chart
-            // alatt egy egyedi HTML legend mutatja a 3 akkufajta rovid leirasat.
             legend: {
-                display: false,
+                position: "bottom",
+                align: "center",
+                labels: {
+                    color: "#0a0a14",
+                    font: { family: "Inter", size: 13, weight: "700" },
+                    boxWidth: 16, boxHeight: 16,
+                    padding: 14,
+                    usePointStyle: true, pointStyle: "circle",
+                    generateLabels: (chart) => {
+                        return chart.data.datasets.map((ds, i) => ({
+                            text: AKKU_LEGEND[ds.label] || ds.label,
+                            fillStyle: ds.borderColor,
+                            strokeStyle: ds.borderColor,
+                            lineWidth: 0,
+                            pointStyle: "circle",
+                            hidden: !chart.isDatasetVisible(i),
+                            datasetIndex: i,
+                        }));
+                    },
+                },
             },
             title: {
                 display: true, color: "#020a14",
                 font: { family: "Inter Tight", size: 24, weight: "800" },
-                padding: { top: 4, bottom: 20 },
+                padding: { top: 4, bottom: 14 },
             },
             // 2026-08-23: every data point shows its % capacity right next to the dot,
             // so the 3 battery lines are readable without hovering. Colors match the line.

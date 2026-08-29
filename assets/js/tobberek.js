@@ -18,35 +18,18 @@
         shadowUrl:     '../vendor/leaflet/images/marker-shadow.png',
     });
 
-    // ---- Tile rétegek ----
+    // ---- Tile réteg ----
+    // A tm3.hu GitHub Pages-e alatt egyes tile-szolgaltatok "API KEY REQUIRED"
+    // PNG-t adnak vissza. A CartoDB dark_all a megbizhato - ez az egyetlen
+    // hatter, amit hasznalunk. Nincs toggle, a user nem valtogat.
     // A cache-buster query string biztositja, hogy a SW cache (ha meg aktiv)
     // NE cache-bol szolgalja a tile-okat, hanem mindig a halozatrol jöjjenek.
-    // Ez az egyetlen biztos megoldas a regi tm3-v3 SW altal cache-elt
-    // "API KEY REQUIRED" PNG-k ellen.
-    //
-    // A tm3.hu GitHub Pages-e alatt egyes tile-szolgaltatok (OSM direct,
-    // CartoCDN light_all) "API KEY REQUIRED" PNG-t adnak vissza a GitHub
-    // Pages referer policy miatt. A CartoCDN dark_all viszont megbizhatoan
-    // mukodik - ezert az alapertelmezett layer. A Voyager (CartoCDN egy
-    // masik stilus) szinten megbizhato, mint masodlagos opcio.
-    const CACHE_BUSTER = '_t=' + Date.now();
     const CARTO_DARK_TILES = L.tileLayer(
-        'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?' + CACHE_BUSTER, {
+        'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?_t=' + Date.now(), {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: 'abcd',
         maxZoom: 19,
         className: 'cartodark-layer',
-    });
-    const CARTO_VOYAGER_TILES = L.tileLayer(
-        'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?' + CACHE_BUSTER, {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19,
-    });
-    const OSM_TILES = L.tileLayer(
-        'https://tile.openstreetmap.org/{z}/{x}/{y}.png?' + CACHE_BUSTER, {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        maxZoom: 19,
     });
 
     // ---- Térkép inicializálás CartoDB Dark Matter-rel (megbizhato) ----
@@ -112,7 +95,7 @@
                 latLngs.push([t.lat, t.lng]);
             });
 
-            // ---- "Mutasd mind" gomb: fitBounds az összes markerre ----
+            // ---- "Mutasd mind" gomb: fitBounds az osszes markerre ----
             const fitBtn = document.getElementById('map-fit');
             if (fitBtn && latLngs.length > 0) {
                 fitBtn.addEventListener('click', () => {
@@ -127,35 +110,9 @@
                 }, 100);
             }
 
-            // ---- Layer-toggle gomb: Dark <-> Voyager <-> OSM ----
-            // A Light All reteget kivettuk, mert a GitHub Pages referer miatt
-            // egyes edge-eken "API KEY REQUIRED" PNG-t ad. A Voyager megbizhato.
-            const toggleBtn = document.getElementById('map-toggle');
-            if (toggleBtn) {
-                let mode = 'dark';
-                const applyLayer = () => {
-                    map.removeLayer(CARTO_DARK_TILES);
-                    map.removeLayer(CARTO_VOYAGER_TILES);
-                    map.removeLayer(OSM_TILES);
-                    if (mode === 'dark') {
-                        CARTO_DARK_TILES.addTo(map);
-                        toggleBtn.textContent = 'Voyager';
-                        toggleBtn.classList.add('active');
-                    } else if (mode === 'voyager') {
-                        CARTO_VOYAGER_TILES.addTo(map);
-                        toggleBtn.textContent = 'OSM';
-                        toggleBtn.classList.remove('active');
-                    } else {
-                        OSM_TILES.addTo(map);
-                        toggleBtn.textContent = 'Dark';
-                        toggleBtn.classList.remove('active');
-                    }
-                };
-                toggleBtn.addEventListener('click', () => {
-                    mode = (mode === 'dark') ? 'voyager' : (mode === 'voyager') ? 'osm' : 'dark';
-                    applyLayer();
-                });
-            }
+            // 2026-08-29: a layer-toggle gombot kikapcsoltuk - a user nem
+            // szeretne valtogatni a terkep hatteret. Csak a CartoDB Dark Matter
+            // marad, mint fix hatter.
         })
         .catch((err) => {
             console.error('[tobberek] JSON betöltési hiba:', err);
