@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/css/site.css" />
     
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="../vendor/leaflet/leaflet.css" />
     <script src="../assets/js/seo-head.js" defer></script>
 </head>
 <body>
@@ -70,7 +70,13 @@
                 <div class="legend-item"><span class="legend-dot volteum"></span>Volteum</div>
             </div>
 
-            <div id="map" class="map"></div>
+            <div class="map-wrap">
+                <div id="map" class="map"></div>
+                <div class="map-controls">
+                    <button type="button" class="ctrl-btn active" id="map-fit" aria-label="Összes töltő megjelenítése">Mutasd mind</button>
+                    <button type="button" class="ctrl-btn" id="map-toggle" aria-label="Réteg váltása">Világos</button>
+                </div>
+            </div>
 
             <div class="grid grid-3" style="margin-top:32px;">
                 <div class="tip-box green">
@@ -117,7 +123,7 @@
 
     <footer id="footer"></footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="../vendor/leaflet/leaflet.js" defer></script>
     <script src="../assets/js/util.js" defer></script>
     <script src="../assets/js/site.js" defer></script>
     <script src="../assets/js/pwa.js" defer></script>

@@ -486,11 +486,34 @@ h4 { font-size: 18px; }
 .map-legend { display: flex; flex-wrap: wrap; gap: 14px; padding: 14px 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); margin-bottom: 20px; }
 .legend-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); }
 .legend-dot { width: 10px; height: 10px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1); }
-.legend-dot.sc { background: #DC2626; } .legend-dot.mob { background: #059669; } .legend-dot.eon { background: #D97706; } .legend-dot.shell { background: #CA8A04; } .legend-dot.vol { background: #7C3AED; }
+/* 2026-08-29: tipus-egyezes a tobberek.html class-nevekkel (supercharger, mobiliti, eon, shell, volteum). */
+.legend-dot.supercharger { background: #DC2626; }
+.legend-dot.mobiliti    { background: #059669; }
+.legend-dot.eon         { background: #D97706; }
+.legend-dot.shell       { background: #CA8A04; }
+.legend-dot.volteum     { background: #7C3AED; }
 .map-marker { background: var(--accent) !important; color: white !important; width: 32px !important; height: 32px !important; border-radius: 50% !important; display: grid !important; place-items: center; font-weight: 700; font-size: 13px; border: 3px solid white; box-shadow: var(--shadow); }
-.map-marker.sc { background: #DC2626 !important; } .map-marker.mob { background: #059669 !important; } .map-marker.eon { background: #D97706 !important; } .map-marker.shell { background: #CA8A04 !important; } .map-marker.vol { background: #7C3AED !important; }
-.leaflet-popup-content-wrapper { border-radius: var(--radius) !important; }
-.leaflet-popup-content { font-family: var(--font) !important; }
+.map-marker.supercharger { background: #DC2626 !important; }
+.map-marker.mobiliti    { background: #059669 !important; }
+.map-marker.eon         { background: #D97706 !important; }
+.map-marker.shell       { background: #CA8A04 !important; }
+.map-marker.volteum     { background: #7C3AED !important; }
+.leaflet-popup-content-wrapper { border-radius: var(--radius) !important; background: var(--surface) !important; color: var(--ink) !important; border: 1px solid var(--line) !important; }
+.leaflet-popup-content { font-family: var(--font) !important; margin: 12px 14px !important; min-width: 220px; max-width: 280px; line-height: 1.45; }
+.leaflet-popup-content h4 { margin: 0 0 8px; font-size: 15px; color: var(--ink); font-weight: 700; }
+.leaflet-popup-content p  { margin: 4px 0; font-size: 13px; color: var(--ink-2); }
+.leaflet-popup-content p strong { color: var(--ink); }
+.leaflet-popup-tip { background: var(--surface) !important; }
+.leaflet-popup-close-button { color: var(--ink-3) !important; }
+.map-popup { color: var(--ink); }
+.map-popup h4 { margin: 0 0 8px; font-size: 15px; }
+.map-popup p  { margin: 4px 0; font-size: 13px; }
+/* 2026-08-29: terkep-vezerlok (layer toggle + fit-bounds gomb). */
+.map-controls { position: absolute; top: 12px; right: 12px; z-index: 500; display: flex; flex-direction: column; gap: 8px; }
+.map-controls .ctrl-btn { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 12px; font-family: var(--font); font-size: 13px; font-weight: 600; color: var(--ink); cursor: pointer; box-shadow: var(--shadow-sm); transition: background 0.15s; }
+.map-controls .ctrl-btn:hover { background: var(--bg-2); }
+.map-controls .ctrl-btn.active { background: var(--accent); color: white; }
+.map-wrap { position: relative; }
 
 /* ==========================================================================
    CTA BANNER

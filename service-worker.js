@@ -10,7 +10,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v3';
+const CACHE = 'tm3-v4';
 const ASSETS = [
     `${REPO_PREFIX}/`,
     `${REPO_PREFIX}/index.html`,
@@ -40,9 +40,19 @@ const ASSETS = [
     `${REPO_PREFIX}/pages/jogi.html`,
     `${REPO_PREFIX}/assets/css/legal.css`,
     `${REPO_PREFIX}/manifest.json`,
+    `${REPO_PREFIX}/vendor/leaflet/leaflet.css`,
+    `${REPO_PREFIX}/vendor/leaflet/leaflet.js`,
+    `${REPO_PREFIX}/vendor/leaflet/images/marker-icon.png`,
+    `${REPO_PREFIX}/vendor/leaflet/images/marker-icon-2x.png`,
+    `${REPO_PREFIX}/vendor/leaflet/images/marker-shadow.png`,
+    `${REPO_PREFIX}/vendor/leaflet/images/layers.png`,
+    `${REPO_PREFIX}/vendor/leaflet/images/layers-2x.png`,
     'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap',
-    'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
-    'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+    // CartoCDN dark matter tiles - API key nelkul, ingyenes, OSM-alapu
+    'https://a.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+    'https://b.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+    'https://c.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+    'https://d.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
 ];
 
 self.addEventListener('install', (event) => {
