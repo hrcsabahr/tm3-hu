@@ -646,6 +646,26 @@ h4 { font-size: 18px; }
     .section { padding: 64px 0; }
     .page-hero { padding: 120px 0 48px; }
     .container { padding: 0 20px; }
+    /* 2026-08-29: checklist #4 — body padding mobilon, hogy a tartalom ne
+       erjen a viewport szelehez. A .container mar 20px paddinget ad, de
+       a containeren kivuli elemek (footer, hero overlay) is kapjanak margot. */
+    body { padding: 10px; }
+    /* 2026-08-29: checklist #6 — tablazatok mobilon. A tablazat szethullana,
+       ha a cellak szelesebbek mint a viewport. A display:block + overflow-x:auto
+       gorgethetove teszi a tablazatot vizszintesen, hogy ne torjen szet. */
+    table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+    /* 2026-08-29: tablazat fejlec/karossag normalis megjelenese görgetéskor. */
+    table th, table td { white-space: nowrap; }
+    /* 2026-08-29: checklist #4 — h1/h2/h3 kisebb mobilon. A clamp() a
+       site.css-ben mar eleve reszponziv, de biztositunk egy explicit felso limitet. */
+    h1 { font-size: clamp(1.8rem, 6vw, 2.5rem) !important; }
+    h2 { font-size: clamp(1.5rem, 5vw, 2rem) !important; }
+    h3 { font-size: clamp(1.2rem, 4vw, 1.5rem) !important; }
     .cta-banner { padding: 48px 24px; }
     .nav-toggle { display: flex; }
     .nav-cta { display: none; }
