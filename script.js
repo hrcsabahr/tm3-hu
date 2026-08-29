@@ -71,9 +71,10 @@ if (typeof ChartDataLabels !== "undefined") {
         interaction: { mode: "index", intersect: false },
         backgroundColor: "#ffffff",
         plugins: {
+            // 2026-08-29: a beepitett Chart.js legend-et kikapcsoljuk, mert a chart
+            // alatt egy egyedi HTML legend mutatja a 3 akkufajta rovid leirasat.
             legend: {
-                position: "top", align: "start",
-                labels: { color: "#0a0a14", font: { family: "Inter", size: 17, weight: "800" }, boxWidth: 22, boxHeight: 22, padding: 22, usePointStyle: true, pointStyle: "circle" },
+                display: false,
             },
             title: {
                 display: true, color: "#020a14",
