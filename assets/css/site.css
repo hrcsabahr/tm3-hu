@@ -829,7 +829,7 @@ textarea:focus {
     .container { padding: 0 16px; }
     .page-hero { padding: 96px 0 32px; }
     .page-hero h1, .section-title { font-size: clamp(28px, 7vw, 36px) !important; }
-    .hero__subtitle, .section-sub { font-size: 16px !important; }
+    .hero__subtitle, .section-sub { font-size: 16px !important; width: 100%; box-sizing: border-box; }
     .section { padding: 48px 0; }
     .deg-chart-inner { height: 460px !important; }
     .map { height: 360px !important; }
@@ -879,6 +879,8 @@ textarea:focus {
     max-width: 720px !important;
     font-weight: 400 !important;
     opacity: 0.95;
+    width: 100%;
+    box-sizing: border-box;
 }
 .stat__value {
     font-size: clamp(3.5rem, 5vw, 5rem) !important;
@@ -1247,15 +1249,16 @@ body {
     background: linear-gradient(90deg, var(--secondary), var(--primary));
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-.hero__subtitle {
+    -webkit-text-fill-c.hero__subtitle {
     font-size: clamp(1.125rem, 1.6vw, 1.375rem);
     line-height: 1.5;
     max-width: 720px;
     margin: 0 auto 3rem;
     color: #D8E3EE;  /* 2026-08-22 BRIGHTER */
+    font-weight: 400;
+    width: 100%;
+    box-sizing: border-box;
+}026-08-22 BRIGHTER */
     font-weight: 400;
 }
 

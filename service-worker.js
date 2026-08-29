@@ -100,7 +100,7 @@ self.addEventListener('fetch', (event) => {
         return; // NEM respondWith - a bongeszo fetch-el a hálózaton
     }
 
-    // HTML: network-first, offline fallback az index.html-re.
+    // ---- HTML: network-first, offline fallback az index.html-re. ----
     if (request.headers.get('accept')?.includes('text/html')) {
         event.respondWith(
             fetch(request)
@@ -116,19 +116,21 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    // Sajat asset-ek: cache-first (offline mukodes).
+    // ---- Sajat asset-ek: NETWORK-FIRST a cache-busting miatt. ----
+    // A HTML-ek ?v= query stringet tartalmaznak, igy a bongeszo MINDIG uj
+    // URL-nek tekinti oket, es a SW cache-bol sosem szolgalja ki (mert a
+    // query stringes URL nincs cache-elve). A CSS/JS fajlok eseten is
+    // network-first kell, hogy a deploy utan azonnal latszodjon a valtozas.
+    // A cache csak offline fallback a SAJAT asset-eknel (pages/*.html stb.).
     if (url.startsWith(self.location.origin)) {
         event.respondWith(
-            caches.match(request).then((cached) => {
-                if (cached) return cached;
-                return fetch(request).then((res) => {
-                    if (res && res.status === 200) {
-                        const clone = res.clone();
-                        caches.open(CACHE).then((cache) => cache.put(request, clone));
-                    }
-                    return res;
-                });
-            })
+            fetch(request).then((res) => {
+                if (res && res.status === 200) {
+                    const clone = res.clone();
+                    caches.open(CACHE).then((cache) => cache.put(request, clone));
+                }
+                return res;
+            }).catch(() => caches.match(request))
         );
         return;
     }
