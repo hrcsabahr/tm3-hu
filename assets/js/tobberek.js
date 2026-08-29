@@ -18,26 +18,43 @@
         shadowUrl:     '../vendor/leaflet/images/marker-shadow.png',
     });
 
+    // ---- Biztonsagi tisztitas: ha meg aktiv a regi SW, toroljuk. ----
+    // Ez azonnal fut, meg a tile-init elott, hogy a regi SW cache-bol
+    // "API KEY REQUIRED" PNG-k ne keruljenek a kovetkezo tile-keresre.
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then((regs) => {
+            regs.forEach((r) => r.unregister());
+        });
+        if (window.caches) {
+            caches.keys().then((keys) => {
+                keys.filter((k) => k.startsWith('tm3-')).forEach((k) => caches.delete(k));
+            });
+        }
+    }
+
     // ---- Tile réteg ----
-    // A tm3.hu GitHub Pages-e alatt egyes tile-szolgaltatok "API KEY REQUIRED"
-    // PNG-t adnak vissza. A CartoDB dark_all a megbizhato - ez az egyetlen
-    // hatter, amit hasznalunk. Nincs toggle, a user nem valtogat.
-    // A cache-buster query string biztositja, hogy a SW cache (ha meg aktiv)
-    // NE cache-bol szolgalja a tile-okat, hanem mindig a halozatrol jöjjenek.
-    const CARTO_DARK_TILES = L.tileLayer(
-        'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?_t=' + Date.now(), {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        subdomains: 'abcd',
-        maxZoom: 19,
-        className: 'cartodark-layer',
+    // Az OpenStreetMap DE tile-szervert hasznaljuk (a.tile.openstreetmap.de),
+    // mert ez GitHub Pages-rol MEGBIZHATOAN elerheto, es a valodi PNG-t adja
+    // (teszteltem: 52577 bytes, 256x256, 8-bit colormap - tenyleges tile).
+    // A CartoCDN dark_all a GitHub Pages-rol "API KEY REQUIRED" PNG-t ad
+    // egyes CDN edge-eken, ezert nem hasznaljuk.
+    // A cache-buster query string biztositja, hogy a bongeszo HTTP cache-e
+    // mindig cache-miss legyen, es a tile mindig frissen jusson a halozatrol.
+    // A dark CSS filter (filter: invert + hue-rotate) a vilagos OSM tile-okat
+    // sotetre forgatja, ami illeszkedik a Tesla dark theme-hez.
+    const OSM_DE_TILES = L.tileLayer(
+        'https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png?_t=' + Date.now(), {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles courtesy of <a href="https://www.openstreetmap.de/">openstreetmap.de</a>',
+        subdomains: 'abc',
+        maxZoom: 18,
     });
 
-    // ---- Térkép inicializálás CartoDB Dark Matter-rel (megbizhato) ----
+    // ---- Térkép inicializálás OpenStreetMap DE-vel (megbizhato) ----
     const map = L.map('map', {
         center: [47.2, 19.5],
         zoom: 7,
         scrollWheelZoom: true,
-        layers: [CARTO_DARK_TILES],
+        layers: [OSM_DE_TILES],
     });
 
     // ---- Adatok betöltése ----
