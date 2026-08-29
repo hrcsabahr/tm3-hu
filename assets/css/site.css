@@ -514,6 +514,12 @@ h4 { font-size: 18px; }
 .map-controls .ctrl-btn:hover { background: var(--bg-2); }
 .map-controls .ctrl-btn.active { background: var(--accent); color: white; }
 .map-wrap { position: relative; }
+/* 2026-08-29: dark-filter a vilagos OSM tile-okra. A CartoCDN dark_all
+   reteg marad elerheto a "Dark" gombbal, de az OSM az elsodleges,
+   mert a CartoCDN egyes edge-ei "API KEY REQUIRED" PNG-t adnak. */
+.map .leaflet-container { filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.92); }
+.map .leaflet-control-attribution { background: rgba(0,0,0,0.6) !important; color: #ddd !important; }
+.map .leaflet-control-attribution a { color: #7dd3fc !important; }
 
 /* ==========================================================================
    CTA BANNER
