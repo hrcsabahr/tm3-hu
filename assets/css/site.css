@@ -79,7 +79,9 @@ body {
     font-size: 16px;
     line-height: 1.55;
     overflow-x: hidden;
-    padding-top: 64px;  /* P2: hely a fix navbar számára (kb. 14+36+14 = 64px) */
+    /* 2026-08-29: iPhone X+ notch: a padding-top figyelembe veszi a safe-area-inset-top
+       értékét, hogy a tartalom a navbar alatt kezdődjön, ne a notch alatt. */
+    padding-top: calc(64px + env(safe-area-inset-top, 0px));
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -111,7 +113,11 @@ h4 { font-size: 18px; }
 .navbar {
     position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important;
     z-index: 9999 !important;  /* P2 fix: minden fölé, !important-tal */
-    padding: 14px 0;
+    /* 2026-08-29: iPhone X+ notch: a padding-top figyelembe veszi a safe-area-inset-top
+       erteket, igy a navbar nem takarja el a notch-ot. */
+    padding: calc(14px + env(safe-area-inset-top, 0px)) 0 14px 0;
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
     background: rgba(11, 11, 13, 0.92);  /* P2: 0.78 → 0.92 (biztosan látszik) */
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     backdrop-filter: blur(20px) saturate(180%);
@@ -622,6 +628,104 @@ h4 { font-size: 18px; }
 @media print {
     .navbar, .site-footer, .filter-bar, .cta-banner, .nav-toggle { display: none !important; }
     body { background: var(--bg); color: var(--fg); }
+}
+
+/* ==========================================================================
+   MOBILE UX OPTIMIZATIONS (2026-08-29)
+   - safe-area-inset az iPhone notch/home indicator kezelesere
+   - touch-action: manipulation a 300ms double-tap delay kikapcsolasara
+   - tap target minimum 44x44 px (Apple HIG + Material Design)
+   - input font-size minimum 16px (iOS autozoom fix)
+   - body overflow-x: hidden a vizszintes scroll megelozesere
+   - hover effektek kikapcsolasa (hover: none) tap-only eszkozokon
+   ========================================================================== */
+html {
+    /* iPhone X+ notch: a body ne nyuljon a notch ala, hanem a safe-area
+       szelerol induljon. */
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
+    /* Biztonsagi zóna: ne legyen vizszintes scrollbar mobilon. */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+/* Safe-area a fix navbarhoz: a navbar ne takarja el az iPhone notch-ot. */
+.navbar {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+}
+
+/* Tap target 44x44 px: a fontos gombok és linkek eleg nagyok legyenek
+   ujjal is. A .btn osztaly mar eleve 44px+ magassagu, de a raw <a>
+   elemek kaphatnak paddinget. */
+.btn,
+.map-controls .ctrl-btn,
+.nav-toggle,
+.cta-banner a,
+.vin-submit {
+    min-height: 44px;
+}
+
+/* Touch-action: kikapcsolja a 300ms double-tap delayt es a pinch-zoomot
+   ahol nem kell. A terkep kontenerben a pinch-zoom kell, mashol nem. */
+.btn,
+.nav-toggle,
+.cta-banner a,
+.vin-submit,
+.deg-tab,
+.map-controls .ctrl-btn,
+a[role="button"] {
+    touch-action: manipulation;
+}
+
+/* Inputok: minimum 16px font-size, hogy az iOS Safari ne zoomoljon. */
+input,
+select,
+textarea {
+    font-size: 16px;
+}
+
+/* Hover-only effektek kikapcsolasa tap-only eszkozokon.
+   A :hover pseudo-class tap utan "beragadhat" mobilon — ezzel a media
+   query-vel csak az egeres eszkozokon aktiv hover-re valtozik a stilus. */
+@media (hover: none) {
+    /* A hover stílusok automatikusan inaktivak, ha nincs hover kepesseg.
+       Az aktiv stílusok (a:active, .is-active) maradnak a visual feedbacknek. */
+    .btn:active,
+    .deg-tab:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+    }
+}
+
+/* Reszponzivitas finomhangolas: a 768px alatti media query-t kiegeszitjuk
+   a nagyon kis kepernyokre (320-480px) is. */
+@media (max-width: 480px) {
+    .container { padding: 0 16px; }
+    .page-hero { padding: 96px 0 32px; }
+    .page-hero h1, .section-title { font-size: clamp(28px, 7vw, 36px) !important; }
+    .hero__subtitle, .section-sub { font-size: 16px !important; }
+    .section { padding: 48px 0; }
+    .deg-chart-inner { height: 460px !important; }
+    .map { height: 360px !important; }
+    .map-controls { top: 8px; right: 8px; }
+    .map-controls .ctrl-btn {
+        padding: 10px 14px;
+        font-size: 14px;
+        min-height: 40px;
+    }
+    .navbar { padding: 12px 0; }
+    .brand { font-size: 14px; }
+    .cta-banner { padding: 32px 20px; }
+    .cta-banner h2 { font-size: 24px !important; }
+}
+
+@media (max-width: 380px) {
+    /* Nagyon kis kepernyo (Galaxy Fold bezart, iPhone SE 1st gen) */
+    .container { padding: 0 12px; }
+    .map { height: 320px !important; }
 }
 
 

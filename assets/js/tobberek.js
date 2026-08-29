@@ -49,13 +49,28 @@
         maxZoom: 18,
     });
 
-    // ---- Térkép inicializálás OpenStreetMap DE-vel (megbizhato) ----
+    // ---- Terkep inicializalas OpenStreetMap DE-vel (megbizhato) ----
+    // 2026-08-29: touch optimalizalas - a pinch-zoom és a tap ketujjas
+    // zoomolas mukodjon, de ne legyen 300ms-os double-tap delay.
+    // A "dragging" true, mert a terkep huzasa fontos a touch eszkozokon.
     const map = L.map('map', {
         center: [47.2, 19.5],
         zoom: 7,
         scrollWheelZoom: true,
         layers: [OSM_DE_TILES],
+        // Touch UX: a tap-re ne legyen delay, a pinch-zoom legyen engedelyezve.
+        tap: true,
+        dragging: true,
+        touchZoom: true,
+        doubleClickZoom: true,
+        // A zoom control gombok mobilon is megjelennek, de a felhasznalo
+        // a pinch-zoom-ot preferalja - ezert kikapcsoljuk a +/- gombokat,
+        // hogy ne foglaljanak feleslegesen helyet a kepernyon.
+        zoomControl: false,
     });
+    // A pinch-zoom es a +/- gombok nelkul is, a Leaflet automatikusan
+    // megjeleniti a zoom controlt ha a user atkapcsolja desktopra.
+    L.control.zoom({ position: 'topright' }).addTo(map);
 
     // ---- Adatok betöltése ----
     const fallbackHTML = '<div class="empty-state" style="padding:40px;text-align:center;color:var(--ink-2);">' +
