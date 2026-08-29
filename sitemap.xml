@@ -1,69 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tm3.hu/</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>tm3.hu — Magyar Tesla Model 3 tudásbázis</image:title>
+      <image:caption>Magyar Tesla Model 3 tudásbázis: akkumulátor, degradáció, TCO, szervizek, töltők, közösség.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/szervizek.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>Tesla szervizek Magyarországon · tm3.hu</image:title>
+      <image:caption>Hivatalos és független Tesla-szervizek Magyarországon, értékelések és szűrés.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/szervizek.html" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/tobberek.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>Magyarországi töltő térkép · tm3.hu</image:title>
+      <image:caption>Tesla Supercharger, Mobiliti, E.ON, Shell és Volteum töltők térképen.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/tobberek.html" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/kalkulator.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>Akkumulátor-degradation kalkulátor · tm3.hu</image:title>
+      <image:caption>Becsült kapacitás% és hatótáv a Tesla Model 3 akkumulátorához.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/kalkulator.html" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/tco.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>10 éves TCO kalkulátor · tm3.hu</image:title>
+      <image:caption>Teljes birtoklási költség kalkulátor — áram, biztosítás, szerviz, értékvesztés.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/tco.html" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/hibak.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>Tipikus Tesla Model 3 hibák · tm3.hu</image:title>
+      <image:caption>Ajtókilincs, MCU, akkumulátor modul, klíma — tünetek, árak, szerviz ajánlók.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/hibak.html" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/fogyasztas.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>Valós fogyasztási adatok · tm3.hu</image:title>
+      <image:caption>Magyar tulajdonosok Tesla Model 3 fogyasztási adatai autópályán, városban, télen.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/fogyasztas.html" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/vasarlas.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>Vásárlási útmutató · tm3.hu</image:title>
+      <image:caption>Új vs használt Tesla Model 3 — mit nézz meg vásárláskor, biztosítás, regisztráció.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/vasarlas.html" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/blog.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>Hírek / Blog · tm3.hu</image:title>
+      <image:caption>Tesla Magyarország hírek, szoftverfrissítések, Supercharger újdonságok.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/blog.html" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/kozosseg.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>Közösség · tm3.hu</image:title>
+      <image:caption>Magyar Tesla Model 3 tulajdonosi közösség, fórum, kérdezz-felelek, kommentek.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/kozosseg.html" />
   </url>
   <url>
     <loc>https://tm3.hu/pages/jogi.html</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-29</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/jogi.html" />
   </url>
 </urlset>
