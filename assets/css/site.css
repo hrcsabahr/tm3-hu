@@ -135,29 +135,29 @@ h4 { font-size: 18px; }
 .navbar { overflow: hidden; }
 
 .brand, .logo {
-    display: inline-flex; align-items: center; gap: 10px;
+    display: inline-flex; align-items: center; gap: 8px;
     /* P2 fix: sötét glass nav-on a brand szöveg legyen VILÁGOS */
     color: #F5F5F7 !important; text-decoration: none !important;
-    font-weight: 600; font-size: 16px; letter-spacing: -0.015em;
+    font-weight: 600; font-size: 14px; letter-spacing: -0.015em;
 }
 .brand-mark, .logo-mark {
-    width: 28px; height: 28px;
+    width: 24px; height: 24px;
     display: grid; place-items: center;
     background: var(--accent); color: white;
     border-radius: var(--radius-sm);
-    font-weight: 700; font-size: 13px; letter-spacing: 0;
+    font-weight: 700; font-size: 11px; letter-spacing: 0;
 }
 
 .main-nav, .site-nav {
-    display: flex; gap: 4px; align-items: center;
+    display: flex; gap: 2px; align-items: center;
     /* 2026-08-29: a .main-nav ne nyuljon tul a viewport-on. Ha kevés a hely,
        a linkek flex-wrap-peljenek egy uj sorba. */
     flex-wrap: wrap;
 }
 .main-nav a, .site-nav a, .site-nav .nav-dropdown-toggle {
     position: relative;
-    padding: 8px 12px;
-    font-size: 13px; font-weight: 500;
+    padding: 7px 9px;
+    font-size: 12px; font-weight: 500;
     /* 2026-08-29: white-space: nowrap, hogy a linkek ne torejenek ket sorba. */
     white-space: nowrap;
     /* P2 fix: sötét nav-on a linkek VILÁGOSAK */
