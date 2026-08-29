@@ -126,7 +126,10 @@
     <script src="../vendor/leaflet/leaflet.js" defer></script>
     <script src="../assets/js/util.js" defer></script>
     <script src="../assets/js/site.js" defer></script>
-    <script src="../assets/js/pwa.js" defer></script>
+    <!-- 2026-08-29: a tobberek oldal szandekosan NEM tolti a pwa.js-t.
+         A korabbi tm3-v3 SW cache-elte az OSM tile-okat "API KEY REQUIRED"
+         PNG-vel, ami a terkepen atlosan megjelent. A service worker
+         eltavolitasa utan a tile-ok mindig a halozatrol jonnek. -->
     <script src="../assets/js/tobberek.js" defer></script>
 </body>
 </html>

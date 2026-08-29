@@ -2,13 +2,28 @@
 (function () {
     'use strict';
 
-    // Service worker regisztráció
+    // Service worker regisztráció - csak azokon az oldalakon, ahol tényleg
+    // kell az offline cache (NEM a terkep oldalon, mert a korabbi tm3-v3 SW
+    // cache-elte az OSM tile-okat "API KEY REQUIRED" PNG-vel, ami a terkepen
+    // atlosan megjelent). A regisztracio query stringet hasznal, hogy a
+    // bongeszo mindig uj SW-kent kezelje.
     if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/service-worker.js').catch((err) => {
-                console.warn('SW registration failed:', err);
+        const SW_VERSION = 'tm3-v6-2026-08-29';
+        const SW_URL = '/service-worker.js?v=' + encodeURIComponent(SW_VERSION);
+        // A terkep oldalon (pages/tobberek.html) kihagyjuk a SW-t.
+        const isMapPage = /\/pages\/tobberek\.html$/.test(location.pathname);
+        if (!isMapPage) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register(SW_URL).catch((err) => {
+                    console.warn('SW registration failed:', err);
+                });
             });
-        });
+        } else {
+            // A terkep oldalon kifejezetten unregistereljuk a regi SW-t, ha van.
+            navigator.serviceWorker.getRegistrations().then((regs) => {
+                regs.forEach((r) => r.unregister());
+            });
+        }
     }
 
     // Install prompt — késleltetett megjelenítés
