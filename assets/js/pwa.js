@@ -2,28 +2,46 @@
 (function () {
     'use strict';
 
-    // Service worker regisztráció - csak azokon az oldalakon, ahol tényleg
-    // kell az offline cache (NEM a terkep oldalon, mert a korabbi tm3-v3 SW
-    // cache-elte az OSM tile-okat "API KEY REQUIRED" PNG-vel, ami a terkepen
-    // atlosan megjelent). A regisztracio query stringet hasznal, hogy a
-    // bongeszo mindig uj SW-kent kezelje.
+    // Service worker regisztráció - MINDEN oldalon, hogy a tm3-v6 SW
+    // mindenhol aktiválódjon (a tobberek oldalon IS), és törölje a
+    // korabbi tm3-v3 SW cache-ét (amely "API KEY REQUIRED" PNG-ket tartalmaz).
+    // A query string biztositja, hogy a bongeszo mindig ujnak tekintse a SW-t.
     if ('serviceWorker' in navigator) {
-        const SW_VERSION = 'tm3-v6-2026-08-29';
+        const SW_VERSION = 'tm3-v6-2026-08-29-final';
         const SW_URL = '/service-worker.js?v=' + encodeURIComponent(SW_VERSION);
-        // A terkep oldalon (pages/tobberek.html) kihagyjuk a SW-t.
-        const isMapPage = /\/pages\/tobberek\.html$/.test(location.pathname);
-        if (!isMapPage) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register(SW_URL).catch((err) => {
-                    console.warn('SW registration failed:', err);
+        window.addEventListener('load', () => {
+            // Regisztracio utan azonnal kerjuk a SW-t, hogy vegye at az iranyitast.
+            navigator.serviceWorker.register(SW_URL).then((reg) => {
+                // Ha van uj SW varakozik, azonnal aktiváljuk.
+                if (reg.waiting) {
+                    reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+                }
+                // Figyeljuk a frissíteseket.
+                reg.addEventListener('updatefound', () => {
+                    const newSw = reg.installing;
+                    if (newSw) {
+                        newSw.addEventListener('statechange', () => {
+                            if (newSw.state === 'installed' && navigator.serviceWorker.controller) {
+                                newSw.postMessage({ type: 'SKIP_WAITING' });
+                            }
+                        });
+                    }
                 });
+            }).catch((err) => {
+                console.warn('SW registration failed:', err);
             });
-        } else {
-            // A terkep oldalon kifejezetten unregistereljuk a regi SW-t, ha van.
-            navigator.serviceWorker.getRegistrations().then((regs) => {
-                regs.forEach((r) => r.unregister());
-            });
-        }
+        });
+
+        // Ha az uj SW uzenetet kap SKIP_WAITING-ra, azonnal vegye at az iranyitast.
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+            // Új SW aktiválódott - a kovetkezo navigacio mar az uj SW-vel tortenik.
+            // Ha a tobberek oldalon vagyunk, frissitsuk az oldalt, hogy a tile-ok
+            // mar az uj fetch handler-en menjenek at.
+            if (window.location.pathname.endsWith('/pages/tobberek.html')) {
+                // Nem kell azonnal reload - az uj SW mar aktiv, es a kovetkezo
+                // tile-keres mar az uj fetch handler-en megy at.
+            }
+        });
     }
 
     // Install prompt — késleltetett megjelenítés

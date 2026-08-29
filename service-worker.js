@@ -65,6 +65,15 @@ self.addEventListener('install', (event) => {
     );
 });
 
+// 2026-08-29: fogadjuk a SKIP_WAITING uzenetet a fo thread-rol, hogy az uj SW
+// azonnal aktiválódjon (a pwa.js kuldi, amikor regisztracio utan varakozo SW-t
+// talal). Igy a felhasznalo nem kell zárnia-nyitnia a tabot.
+self.addEventListener('message', (event) => {
+    if (event.data && event.data.type === 'SKIP_WAITING') {
+        self.skipWaiting();
+    }
+});
+
 self.addEventListener('activate', (event) => {
     // Minden tm3-* cache-t torlunk (kivéve az aktuálisat), és unregistereljük
     // a regi SW-ket, hogy a "API KEY REQUIRED" PNG-k soha többet ne jelenjenek meg.
