@@ -25,7 +25,7 @@
         { href: 'pages/tco.html', label: 'TCO' },
         { href: 'pages/szervizek.html', label: 'Szervizek' },
         { href: 'pages/hibak.html', label: 'Hibák' },
-        { href: 'pages/blog.html', label: 'Hírek' },
+        { href: 'pages/gyik.html', label: 'GYIK' },
         { href: 'pages/jogi.html', label: 'Jogi' },
     ];
 

@@ -300,6 +300,178 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
 .section--why .card p { color: #3A3A3A; }
 .section--why .card__title { color: #0A0A0A; }
 
+/* ==========================================================================
+   GYIK oldal — accordion + kategória szűrő
+   2026-08-30: a GYIK oldal natív <details>/<summary> accordion-t használ
+   (könnyű, gyors, accessibility-barát), és egy kategória szűrősorral
+   szűkíthető a találati lista. Modern, Tesla-stílusú megjelenés.
+   ========================================================================== */
+.gyik-cat {
+    /* A filter-bar gombjai a kategóriaszűrőhöz. */
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: var(--bg-2, rgba(255, 255, 255, 0.05));
+    border: 1px solid var(--line, rgba(255, 255, 255, 0.1));
+    border-radius: var(--radius-pill, 9999px);
+    color: var(--ink-2, #D6E2EE);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.gyik-cat:hover {
+    background: var(--accent-soft, rgba(0, 117, 222, 0.08));
+    border-color: var(--accent, #0075DE);
+}
+.gyik-cat.active {
+    background: var(--accent, #0075DE);
+    border-color: var(--accent, #0075DE);
+    color: #FFFFFF;
+}
+
+.faq-list {
+    /* A kérdések listája. */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.faq-item {
+    background: var(--surface, #FFFFFF);
+    border: 1px solid var(--line, rgba(10, 10, 10, 0.08));
+    border-radius: 12px;
+    padding: 0;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    overflow: hidden;
+}
+.faq-item[open] {
+    border-color: var(--accent, #0075DE);
+    box-shadow: 0 4px 16px rgba(0, 117, 222, 0.08);
+}
+.faq-item summary {
+    /* A summary a natív accordion fejléce. */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 24px;
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+.faq-item summary::after {
+    /* Chevron ikon a summary jobb oldalán. */
+    content: '⌄';
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: rgba(0, 117, 222, 0.08);
+    color: var(--accent, #0075DE);
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+}
+.faq-item[open] summary::after {
+    transform: rotate(180deg);
+    background: var(--accent, #0075DE);
+    color: #FFFFFF;
+}
+
+.faq-q {
+    /* A kérdés szövege a summary-ban. */
+    font-family: var(--font-display, 'Inter Tight', sans-serif);
+    font-size: 1.0625rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink, #0A0A0A);
+    letter-spacing: -0.01em;
+    flex: 1;
+}
+.faq-cat {
+    /* A kategória címke a summary jobb szélén. */
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(0, 117, 222, 0.08);
+    color: var(--accent, #0075DE);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.faq-item[open] .faq-cat {
+    background: var(--accent, #0075DE);
+    color: #FFFFFF;
+}
+
+.faq-a {
+    /* A válasz szekció, ami lenyílik. */
+    padding: 0 24px 24px;
+    color: var(--ink-2, #3A3A3A);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+.faq-a p {
+    margin: 0 0 12px;
+}
+.faq-a p:last-child {
+    margin-bottom: 0;
+}
+.faq-a ul, .faq-a ol {
+    margin: 8px 0 16px;
+    padding-left: 24px;
+}
+.faq-a li {
+    margin-bottom: 6px;
+    line-height: 1.55;
+}
+.faq-a strong {
+    color: var(--ink, #0A0A0A);
+    font-weight: 600;
+}
+.faq-a a {
+    color: var(--accent, #0075DE);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+}
+.faq-a a:hover {
+    border-bottom-color: var(--accent, #0075DE);
+}
+
+@media (max-width: 640px) {
+    .faq-item summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding: 16px 18px;
+    }
+    .faq-item summary::after {
+        position: absolute;
+        top: 16px;
+        right: 18px;
+    }
+    .faq-q {
+        font-size: 0.9375rem;
+        padding-right: 36px;
+    }
+    .faq-a {
+        padding: 0 18px 18px;
+        font-size: 0.9375rem;
+    }
+}
+
 .eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 8px 16px;

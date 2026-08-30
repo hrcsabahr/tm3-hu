@@ -140,6 +140,13 @@
                     { q: 'Hogyan lehet csatlakozni a magyar Tesla-közösséghez?', a: 'A magyar Tesla-közösség legnagyobb platformjai: a Tesla Club Hungary Facebook csoport (15 000+ tag), a Reddit r/TeslaHungary, valamint a Discord szerverek és a helyi meetup-ok. A tm3.hu oldalon is elérhető egy közösségi fórum, ahol kérdéseket lehet feltenni és tapasztalatokat megosztani.' },
                 ],
         },
+        '/pages/gyik.html': {
+            title: 'GYIK — Gyakran Ismételt Kérdések · Tesla Model 3 · tm3.hu',
+            description: '18 leggyakoribb kérdés a Tesla Model 3-ról magyarul: vásárlás, akkumulátor-degradáció, töltés, szerviz, TCO, garancia. Válaszok 850+ magyar tulajdonos tapasztalatai alapján.',
+            h1: 'GYIK — Tesla Model 3 Gyakran Ismételt Kérdések',
+            type: 'website',
+            section: 'GYIK',
+        },
         '/pages/kozosseg.html': {
             title: 'Magyar Tesla Model 3 közösség — fórum és meetup · tm3.hu',
             description: 'Tesla Model 3 magyar tulajdonosi közösség: fórum, kérdezz-felelek, kommentek, meetup-ok, Discord, GitHub Discussions.',

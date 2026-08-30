@@ -123,6 +123,18 @@
     <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/kozosseg.html" />
   </url>
   <url>
+    <loc>https://tm3.hu/pages/gyik.html</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>GYIK — Tesla Model 3 gyakori kérdések · tm3.hu</image:title>
+      <image:caption>18 kidolgozott kérdés és válasz a Tesla Model 3-ról: vásárlás, akkumulátor, töltés, szerviz, TCO.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/gyik.html" />
+  </url>
+  <url>
     <loc>https://tm3.hu/pages/jogi.html</loc>
     <lastmod>2026-08-29</lastmod>
     <changefreq>yearly</changefreq>

@@ -1,9 +1,8 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-30 v10: redesign — világos, modern Tesla-stílusú hero,
-   "Miért készült?" bento szekció, hero CTA a VIN dekóderhez,
-   Article + BreadcrumbList + SoftwareApplication + WebPage
-   schema.org JSON-LD. Magyar menüpontok. CACHE nev v10-re.
+   2026-08-30 v11: GYIK (Gyakran Ismételt Kérdések) oldal —
+   pages/gyik.html + assets/js/gyik.js, FAQPage JSON-LD schema,
+   18 kidolgozott kérdéssel. CACHE nev v11-re.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -11,7 +10,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v10';
+const CACHE = 'tm3-v11';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
@@ -29,6 +28,7 @@ const ASSETS = [
     `${REPO_PREFIX}/assets/js/hibak.js`,
     `${REPO_PREFIX}/assets/js/vasarlas.js`,
     `${REPO_PREFIX}/assets/js/blog.js`,
+    `${REPO_PREFIX}/assets/js/gyik.js`,
     `${REPO_PREFIX}/assets/js/pwa.js`,
     `${REPO_PREFIX}/pages/kalkulator.html`,
     `${REPO_PREFIX}/pages/tco.html`,
@@ -37,6 +37,7 @@ const ASSETS = [
     `${REPO_PREFIX}/pages/hibak.html`,
     `${REPO_PREFIX}/pages/vasarlas.html`,
     `${REPO_PREFIX}/pages/kozosseg.html`,
+    `${REPO_PREFIX}/pages/gyik.html`,
     `${REPO_PREFIX}/pages/fogyasztas.html`,
     `${REPO_PREFIX}/pages/jogi.html`,
     // A tobberek.html szandekosan NINCS itt - a terkep oldal nem tolti a SW-t.
