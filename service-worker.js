@@ -1,10 +1,11 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-30 v13: hamburger 3-span fix deploy cache-bust.
-   User-feedback: "nincs menu a fooldalon" — a regi tm3-v12 SW cache-bol
-   a 1-span hamburgert szolgalta ki. CACHE nev v13-ra, minden ?v= query
-   string frissitve 2026-08-30-light → 2026-08-30-light-v13, hogy a
-   visszatero latogatok azonnal az uj hamburgert kapjak.
+   2026-08-30 v14: inline hamburger fallback + lenyilo menu szelesseg fix.
+   User-feedback: "scroll nem jo, hamburger nem reagal a belso oldalakon".
+   A regi tm3-v13 cache a site.js-re tamaszkodott, de a hamburger fallback
+   mostantol inline az index.html-ben van, igy a SW cache frissitese nem
+   kritikus — de a v14 biztositja, hogy a SW cache-bol is a legujabb
+   CSS/JS szolgalhato ki.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -12,7 +13,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v13';
+const CACHE = 'tm3-v14';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
