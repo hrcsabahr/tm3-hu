@@ -34,3 +34,14 @@ script_full.js
 *_backup.*
 *.tmp
 *.bak
+
+# AgentManager / dev session artifacts
+agents.db
+audit_live.py
+verify_*.png
+
+# Local Python venv (verify scripts)
+.venv/
+venv/
+__pycache__/
+*.pyc
