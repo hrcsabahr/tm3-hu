@@ -55,9 +55,20 @@
     --gap-sm: 12px;
     --gap-lg: 40px;
 
-    /* ---- TIPOGRÁFIA ---- */
+    /* ---- TIPOGRÁFIA ----
+       2026-08-30: USER REPORT — "szeretnem ha mas fontot es nagyobbat a
+       szovegnel olvashatobb legyen, vekonyabb betuk".
+       Valtas:
+       - body font-size 16px → 17px (nagyobb, olvashatobb)
+       - body line-height 1.55 → 1.65 (több sor-tér, olvashatóbb)
+       - body font-weight 400 (default, karcsú)
+       - h1-h4 font-weight 500/700/800 → 400/500/600 (vékonyabb)
+       - Fraunces (serif) → Inter Tight (modern sans-serif, mert a Google Fonts
+         link amúgy sem töltötte a Fraunces-t, így a címek Georgia-ra estek
+         vissza — most konzisztens lesz)
+       - A levelek jobban "lélegeznek" a letter-spacing csökkentésével. */
     --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-    --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --font-display: 'Inter Tight', var(--font);
 
     --t-fast: 0.15s ease;
     --t: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -76,8 +87,11 @@ body {
     background: var(--bg);
     color: var(--ink);
     font-family: var(--font);
-    font-size: 16px;
-    line-height: 1.55;
+    /* 2026-08-30: USER REPORT — nagyobb, olvashatóbb szöveg.
+       16px → 17px, line-height 1.55 → 1.65, font-weight 400 (alap). */
+    font-size: 17px;
+    line-height: 1.65;
+    font-weight: 400;
     overflow-x: hidden;
     /* 2026-08-29: iPhone X+ notch: a padding-top figyelembe veszi a safe-area-inset-top
        értékét, hogy a tartalom a navbar alatt kezdődjön, ne a notch alatt. */
@@ -102,10 +116,13 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px) { .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } }
 
 h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.02em; line-height: 1.15; color: var(--ink); }
-h1 { font-size: clamp(36px, 5vw, 64px); letter-spacing: -0.03em; }
-h2 { font-size: clamp(28px, 3.5vw, 44px); }
-h3 { font-size: 22px; }
-h4 { font-size: 18px; }
+/* 2026-08-30: USER REPORT — vékonyabb betűk a címekben. A régi 500/700/800
+   helyett 400/500/600 (karcsú, modern). A letter-spacing -0.03em → -0.015em
+   (kevésbé tömör, természetesebb). */
+h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 500; letter-spacing: -0.02em; }
+h2 { font-size: clamp(28px, 3.5vw, 44px); font-weight: 500; letter-spacing: -0.015em; }
+h3 { font-size: 22px; font-weight: 500; letter-spacing: -0.01em; }
+h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
 
 /* ==========================================================================
    NAVBAR — Tesla minimal
@@ -269,12 +286,12 @@ h4 { font-size: 18px; }
     margin-bottom: 24px;
     letter-spacing: 0.02em;
 }
-.page-hero h1 { margin-bottom: 24px; max-width: 820px; font-size: clamp(2.5rem, 4.5vw, 3.75rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+.page-hero h1 { margin-bottom: 24px; max-width: 820px; font-size: clamp(2.5rem, 4.5vw, 3.75rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; }
 .page-hero .lead { font-size: clamp(1.1rem, 1.4vw, 1.3rem); color: var(--ink-2); max-width: 720px; line-height: 1.55; }
 
 .section-head { margin-bottom: 56px; max-width: 720px; }
 .section-head h2 { margin-bottom: 14px; }
-.section-head p { font-size: 17px; color: var(--ink-2); }
+.section-head p { font-size: 18px; color: var(--ink-2); line-height: 1.65; }
 
 .card {
     background: var(--surface);
@@ -288,7 +305,7 @@ h4 { font-size: 18px; }
 .card.feature { background: linear-gradient(135deg, var(--accent-soft), transparent); border-color: rgba(0, 117, 222, 0.3); }
 
 .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
-.card h3 { font-size: 20px; font-weight: 500; letter-spacing: -0.02em; }
+.card h3 { font-size: 20px; /* 2026-08-30: USER REPORT — vékonyabb. 500 marad, de a letter-spacing -0.02em → -0.015em. */ font-weight: 500; letter-spacing: -0.015em; }
 .card p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
 .card .meta { color: var(--ink-3); font-size: 13px; display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
 .card .actions { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
@@ -411,7 +428,7 @@ h4 { font-size: 18px; }
 }
 .calc-output { padding: 28px; background: var(--bg-2); border-radius: var(--radius-lg); }
 .calc-output h3 { font-size: 12px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
-.calc-output .result { font-family: var(--font-display); font-size: clamp(40px, 6vw, 64px); font-weight: 500; letter-spacing: -0.03em; }
+.calc-output .result { font-family: var(--font-display); font-size: clamp(40px, 6vw, 64px); /* 2026-08-30: USER REPORT — vékonyabb. 500 marad, de a letter-spacing -0.03em → -0.02em. */ font-weight: 500; letter-spacing: -0.02em; }
 .calc-output .result-sub { color: var(--ink-3); font-size: 13px; margin-top: 6px; }
 .calc-output .result-list { list-style: none; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
 .calc-output .result-list li { display: flex; justify-content: space-between; padding: 7px 0; font-size: 13px; }
@@ -872,11 +889,13 @@ textarea:focus {
 }
 .hero__title {
     /* 2026-08-23: SEO H1 expansion ("Tesla Model 3 — magyar tudásbázis"), so clamp
-       upper bound lowered from 7rem to 5.5rem to keep the longer title on one line. */
+       upper bound lowered from 7rem to 5.5rem to keep the longer title on one line.
+       2026-08-30: USER REPORT — vékonyabb betűk. 800 → 500, letter-spacing
+       -0.04em → -0.02em (kevésbé tömör, természetesebb). */
     font-size: clamp(3rem, 7.5vw, 5.5rem) !important;
-    font-weight: 800 !important;
+    font-weight: 500 !important;
     line-height: 1.05 !important;
-    letter-spacing: -0.04em !important;
+    letter-spacing: -0.02em !important;
     margin: 1.5rem 0 !important;
     /* 2026-08-30: a .hero__inner text-align:center nem eleg — a .hero__title
        egy block elem, es ha nincs margin:auto, a 720px-nel nem szelesebb cim
@@ -886,14 +905,15 @@ textarea:focus {
 }
 .hero__eyebrow {
     font-size: clamp(1rem, 1.4vw, 1.25rem) !important;
-    font-weight: 600 !important;
+    /* 2026-08-30: USER REPORT — vékonyabb betűk. 600 → 500. */
+    font-weight: 500 !important;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     opacity: 0.85;
 }
 .hero__subtitle {
     font-size: clamp(1.4rem, 2vw, 1.875rem) !important;
-    line-height: 1.4 !important;
+    line-height: 1.5 !important;
     max-width: 720px !important;
     font-weight: 400 !important;
     opacity: 0.95;
@@ -905,13 +925,14 @@ textarea:focus {
     margin-right: auto !important;
 }
 .stat__value {
+    /* 2026-08-30: USER REPORT — vékonyabb stat értékek. 800 → 500. */
     font-size: clamp(3.5rem, 5vw, 5rem) !important;
-    font-weight: 800 !important;
+    font-weight: 500 !important;
     line-height: 1 !important;
 }
 .stat__label {
     font-size: 1.125rem !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     letter-spacing: 0.02em;
 }
 .stat__sub {
@@ -1259,9 +1280,10 @@ body {
 .hero__title {
     font-family: var(--font-display);
     font-size: clamp(3.5rem, 9vw, 7.5rem);
-    font-weight: 800;
+    /* 2026-08-30: USER REPORT — vékonyabb betűk. 800 → 500. */
+    font-weight: 500;
     line-height: 0.95;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     margin: 0 0 1.5rem;
     color: var(--fg);
     text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
@@ -1311,9 +1333,10 @@ body {
 .stat__value {
     font-family: var(--font-display);
     font-size: clamp(2.5rem, 4vw, 3.5rem);
-    font-weight: 800;
+    /* 2026-08-30: USER REPORT — vékonyabb stat értékek. 800 → 500. */
+    font-weight: 500;
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     color: var(--fg);
     margin-bottom: 0.5rem;
 }
@@ -1477,7 +1500,8 @@ body {
 .deg-card__value {
     font-family: var(--font-mono);
     font-size: 2rem;
-    font-weight: 700;
+    /* 2026-08-30: USER REPORT — vékonyabb betűk. 700 → 500. */
+    font-weight: 500;
     color: var(--fg);
     letter-spacing: -0.01em;
 }
@@ -1617,10 +1641,11 @@ body {
 .deg-chart-title {
     font-family: var(--font-display);
     font-size: clamp(1.5rem, 2.5vw, 2.25rem);
-    font-weight: 800;
+    /* 2026-08-30: USER REPORT — vékonyabb betűk. 800 → 500. */
+    font-weight: 500;
     color: #020a14;  /* SÖTÉT cím — fehér chart-háttéren */
     margin: 0 0 0.6rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
     line-height: 1.15;
 }
 .deg-chart-lead {

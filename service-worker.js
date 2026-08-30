@@ -1,12 +1,10 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-30 v8: a 24429b3 commit utan a felhasznalo jelezte, hogy a hero
-   subtitle meg mindig el van csuszva (a `margin: 0 auto` hianya), nincs
-   gorgoetes (a .navbar overflow:hidden levagta a lenyilo menumot), es
-   a diagram szovegei mobilon osszecsuszszanak. Ez a SW egy azonos
-   hash-sel rendelkezik, mint a v7 (ugyanaz a fetch handler), de a
-   CACHE nevet v8-ra leptetjuk, hogy az ujonnan deploy-olt CSS/JS fajlok
-   friss cache-be keruljenek, ne a v7 cache-bol szolgalja ki a bongeszo.
+   2026-08-30 v9: tipografia frissites — Inter Tight (300-700) a
+   display font, body 16px → 17px, line-height 1.55 → 1.65,
+   cim font-weight 700/800 → 500 (vekonyabb, olvashatobb).
+   A CACHE nevet v9-re leptetjuk, hogy a friss CSS/JS fajlok
+   uj cache-be keruljenek.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -14,7 +12,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v8';
+const CACHE = 'tm3-v9';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
