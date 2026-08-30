@@ -962,10 +962,12 @@ html {
     /* iPhone X+ notch: a body ne nyuljon a notch ala, hanem a safe-area
        szelerol induljon. */
     overflow-x: hidden;
-    /* Android Chrome: a body ne legyen pull-to-refresh. */
-    overscroll-behavior-y: none;
-    /* Az egesz oldal szintjen a vizszintes scrollt is megakadalyozzuk. */
-    overscroll-behavior-x: none;
+    /* P3 fix: NE blokkoljuk a scroll-t — a none ertek egyes bongeszokben
+       (Chrome-on egerrel gorgetve) megakasztja a normal scrollt is.
+       A pull-to-refresh nem blokkolasa nem fontos — a hamburger fallback
+       megbirkozik a frissitessel. */
+    /* overscroll-behavior-y: none; eltavolitva — scroll fix */
+    /* overscroll-behavior-x: none; eltavolitva — scroll fix */
 }
 body {
     overflow-x: hidden;
@@ -981,7 +983,15 @@ body {
 .vin-form-card,
 .deg-tabs,
 .page-hero {
+    /* P3: scroll fix — a 'contain' is okozhat scroll-blokkolast Chrome-on.
+       Meghagyjuk a 'contain'-t csak a terkepen es a chart-on, ahol tényleg
+       kell, hogy a scroll ne fusson ki a containerbol. */
     overscroll-behavior-y: contain;
+}
+
+/* P3 fix: a body szinten ne legyen scroll-blokkolo. */
+body {
+    /* overscroll-behavior-y: contain; eltavolitva — scroll fix */
 }
 
 /* Safe-area a fix navbarhoz: a navbar ne takarja el az iPhone notch-ot. */
