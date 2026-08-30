@@ -871,12 +871,16 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
     }
     .main-nav.is-open, .site-nav.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
     .main-nav a, .site-nav a {
-        width: 100%;
-        padding: 14px 18px;
+        /* P3 fix: ne legyen 100% széles — túl széles mobilon, a szöveg
+           tele kitölti a viewportot. Auto szélesség, kontrollált paddinggel. */
+        width: auto;
+        padding: 12px 14px;
         font-size: 15px;
+        line-height: 1.3;
         border-radius: var(--radius);
         /* 2026-08-30: világos lenyíló menü — sötétszürke linkek a fehér háttéren. */
         color: #0A0A0A !important;
+        white-space: nowrap;
     }
     .main-nav a:hover, .main-nav a[aria-current="page"] {
         background: rgba(56, 189, 248, 0.12);
