@@ -1,10 +1,9 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-30 v9: tipografia frissites — Inter Tight (300-700) a
-   display font, body 16px → 17px, line-height 1.55 → 1.65,
-   cim font-weight 700/800 → 500 (vekonyabb, olvashatobb).
-   A CACHE nevet v9-re leptetjuk, hogy a friss CSS/JS fajlok
-   uj cache-be keruljenek.
+   2026-08-30 v10: redesign — világos, modern Tesla-stílusú hero,
+   "Miért készült?" bento szekció, hero CTA a VIN dekóderhez,
+   Article + BreadcrumbList + SoftwareApplication + WebPage
+   schema.org JSON-LD. Magyar menüpontok. CACHE nev v10-re.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -12,7 +11,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v9';
+const CACHE = 'tm3-v10';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,

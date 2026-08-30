@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
-    <title>Tesla Model 3 – Magyar Tudásbázis (2026) | tm3.hu</title>
-    <meta name="description" content="Akkumulátor degradation, töltési ciklusok, VIN dekóder, valós Tesla Model 3 adatok egy helyen — magyar közösségi tudásbázis." />
+    <title>Tesla Model 3 – Magyar Tudásbázis (2026) | Akkumulátor, Degradáció, VIN dekóder · tm3.hu</title>
+    <meta name="description" content="Magyar Tesla Model 3 tudásbázis: valós akkumulátor-degradáció (NCA, NCM811, LFP), TCO kalkulátor, VIN dekóder, magyar szervizek és töltőtérkép. 850+ tulajdonos mérése, 2024–2026." />
     <meta name="keywords" content="tesla model 3 magyar, tesla model 3 akkumulátor, tesla model 3 degradation, tesla model 3 vin dekóder, tesla model 3 töltés, tesla model 3 hibák, tesla model 3 tco, tesla model 3 hatótáv, tesla model 3 szerviz" />
     <meta name="author" content="tm3.hu — Magyar Tesla Model 3 közösség" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -37,8 +37,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="assets/css/site.css?v=2026-08-30-typo" />
-    <script src="assets/js/seo-head.js?v=2026-08-30-typo" defer></script>
+    <link rel="stylesheet" href="assets/css/site.css?v=2026-08-30-redesign" />
+    <script src="assets/js/seo-head.js?v=2026-08-30-redesign" defer></script>
 
     <!-- Rich structured data (JSON-LD) — extra schemas below what seo-head.js injects -->
     <script type="application/ld+json">
@@ -123,6 +123,50 @@
                         }
                     }
                 ]
+            },
+            {
+                "@type": "Article",
+                "@id": "https://tm3.hu/#article",
+                "headline": "Tesla Model 3 — magyar tudásbázis (2026)",
+                "description": "Átfogó magyar nyelvű tudásbázis a Tesla Model 3-ról: akkumulátor-degradáció, TCO, szervizek, VIN dekóder, töltőhálózat és gyakori hibák.",
+                "inLanguage": "hu-HU",
+                "author": {"@id": "https://tm3.hu/#organization"},
+                "publisher": {"@id": "https://tm3.hu/#organization"},
+                "datePublished": "2024-09-15",
+                "dateModified": "2026-08-30",
+                "mainEntityOfPage": {"@type": "WebPage", "@id": "https://tm3.hu/"},
+                "image": "https://tm3.hu/assets/img/og-image.svg",
+                "keywords": "Tesla Model 3, akkumulátor degradáció, TCO, VIN dekóder, szerviz, töltő, Magyarország"
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://tm3.hu/#breadcrumb",
+                "itemListElement": [
+                    {"@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://tm3.hu/"},
+                    {"@type": "ListItem", "position": 2, "name": "Akkumulátor degradáció", "item": "https://tm3.hu/#degradation"},
+                    {"@type": "ListItem", "position": 3, "name": "VIN dekóder", "item": "https://tm3.hu/#vin-checker"}
+                ]
+            },
+            {
+                "@type": "SoftwareApplication",
+                "@id": "https://tm3.hu/#vin-decoder",
+                "name": "Tesla VIN dekóder",
+                "applicationCategory": "UtilitiesApplication",
+                "operatingSystem": "Web",
+                "url": "https://tm3.hu/#vin-checker",
+                "description": "Ingyenes Tesla VIN dekóder: 17 karakteres VIN alapján megmutatja a jármű specifikációit — akkumulátor, hatótáv, hajtás, gyártási év.",
+                "offers": {"@type": "Offer", "price": "0", "priceCurrency": "HUF"},
+                "inLanguage": "hu-HU"
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://tm3.hu/#webpage",
+                "url": "https://tm3.hu/",
+                "name": "Tesla Model 3 – Magyar Tudásbázis",
+                "description": "Magyar Tesla Model 3 tudásbázis: valós akkumulátor-degradáció, TCO kalkulátor, VIN dekóder, magyar szervizek és töltőtérkép.",
+                "inLanguage": "hu-HU",
+                "isPartOf": {"@id": "https://tm3.hu/#website"},
+                "primaryImageOfPage": {"@type": "ImageObject", "url": "https://tm3.hu/assets/img/og-image.svg"}
             }
         ]
     }
@@ -155,10 +199,48 @@
 
     <!-- ===== HERO ===== -->
     <section id="hero" class="hero">
+        <div class="hero__bg" aria-hidden="true">
+            <!-- 2026-08-30: modern Tesla-stílusú hero háttér — finom radial gradient
+                 + egy letisztult Model 3 sziluett SVG a jobb oldalon. -->
+            <svg class="hero__art" viewBox="0 0 600 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tesla Model 3 sziluett">
+                <defs>
+                    <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#E8E8EA" />
+                        <stop offset="100%" stop-color="#A8AAB0" />
+                    </linearGradient>
+                    <linearGradient id="carGlass" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#1B2230" />
+                        <stop offset="100%" stop-color="#3A4254" />
+                    </linearGradient>
+                </defs>
+                <!-- Auto karosszéria -->
+                <path d="M60 160 Q70 110 140 100 L220 90 Q280 80 360 88 L470 100 Q540 110 555 160 L555 175 Q540 185 510 185 L490 185 Q485 200 460 200 Q435 200 430 185 L195 185 Q190 200 165 200 Q140 200 135 185 L115 185 Q85 185 70 175 Z" fill="url(#carBody)" />
+                <!-- Szélvédő + tető -->
+                <path d="M155 105 Q175 70 230 65 L355 65 Q420 70 445 105 Z" fill="url(#carGlass)" opacity="0.92" />
+                <!-- Kerekek -->
+                <circle cx="165" cy="190" r="22" fill="#0A0A0A" />
+                <circle cx="165" cy="190" r="10" fill="#3A3A3A" />
+                <circle cx="460" cy="190" r="22" fill="#0A0A0A" />
+                <circle cx="460" cy="190" r="10" fill="#3A3A3A" />
+                <!-- Fényszóró -->
+                <ellipse cx="540" cy="130" rx="8" ry="4" fill="#E8F4FF" opacity="0.85" />
+            </svg>
+        </div>
         <div class="container hero__inner">
-            <span class="hero__eyebrow">2024-es modellév · Magyarország</span>
+            <span class="hero__eyebrow">2026-os modellév · Magyarország</span>
             <h1 class="hero__title">Tesla Model <em>3</em> — magyar tudásbázis</h1>
-            <p class="hero__subtitle">A villámtöltés, a hatótáv és a vezethetőség újradefiniálása — egy letisztult, minden részletében átgondolt elektromos szedán. Akkumulátor, degradation, TCO, szervizek, VIN dekóder, töltő térkép — minden, amit a Model 3-ról tudni érdemes.</p>
+            <p class="hero__subtitle">A villámtöltés, a hatótáv és a vezethetőség újradefiniálása — egy letisztult, minden részletében átgondolt elektromos szedán. Akkumulátor-degradáció, TCO, szervizek, VIN dekóder és magyar töltőtérkép — minden, amit a Model 3-ról tudni érdemes.</p>
+
+            <!-- 2026-08-30: erős CTA a VIN dekóder kipróbálásához (a főoldal
+                 legfontosabb konverziós pontja). -->
+            <div class="hero__cta">
+                <a href="#vin-checker" class="btn btn-primary btn-lg">
+                    Próbáld ki a VIN dekódot →
+                </a>
+                <a href="#degradation" class="btn btn-ghost btn-lg">
+                    Akkumulátor-degradáció
+                </a>
+            </div>
 
             <div class="hero__stats" role="group" aria-label="Magyarországi Tesla szervizhálózat statisztikái">
                 <div class="stat">
@@ -182,10 +264,38 @@
                     <div class="stat__sub">Budaörs · Budapest</div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- P2: hero CTA-k (Szervizek, TCO kalkulátor) törölve — user kérése:
-                 'a főoldalon csak a főoldal legyen, a többit nem kell felsorolni'.
-                 A navigáció a felső fix menüből történik. -->
+    <!-- ===== MIÉRT KÉSZÜLT? ===== -->
+    <!-- 2026-08-30: USER KÉRÉS — "egy rövid bemutatkozó blokk (Miért készült ez az
+         oldal?)". Egy 3 oszlopos bento, ami elmagyarázza, miért érdemes megbízni
+         a tm3.hu-ban. -->
+    <section class="section section--alt section--why">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Rólunk</span>
+                <h2 class="section-title">Miért készült ez az oldal?</h2>
+                <p class="section-sub">A Tesla Model 3-ról kevés a magyar nyelvű, független, valós adaton alapuló tartalom. A tm3.hu ezt a hiányt tölti be: nyílt forráskódú, közösségi finanszírozású, semleges.</p>
+            </header>
+
+            <div class="bento">
+                <div class="bento-4 card">
+                    <div class="card__icon" aria-hidden="true">📊</div>
+                    <h3 class="card__title">Valós adatok</h3>
+                    <p>Akku-degradáció, fogyasztás, TCO — nem marketing-szöveg, hanem 850+ tulajdonos mérése és a Tesla flottajelentések.</p>
+                </div>
+                <div class="bento-4 card">
+                    <div class="card__icon" aria-hidden="true">🇭🇺</div>
+                    <h3 class="card__title">Magyar kontextus</h3>
+                    <p>Hazai árak, magyar szervizek, itthoni töltőhálózat. Nem amerikai guide-ok fordítása — helyi valóság.</p>
+                </div>
+                <div class="bento-4 card">
+                    <div class="card__icon" aria-hidden="true">🔓</div>
+                    <h3 class="card__title">Független</h3>
+                    <p>Nem kapcsolódunk a Tesla, Inc.-hez. A tartalom CC BY-SA 4.0, a kód MIT licenc alatt nyílt — bárki auditálhatja.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -308,8 +418,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js" defer></script>
-    <script src="script.js?v=2026-08-30-typo" defer></script>
-    <script src="assets/js/site.js?v=2026-08-30-typo" defer></script>
-    <script src="assets/js/vin_checker.js?v=2026-08-30-typo" defer></script>
+    <script src="script.js?v=2026-08-30-redesign" defer></script>
+    <script src="assets/js/site.js?v=2026-08-30-redesign" defer></script>
+    <script src="assets/js/vin_checker.js?v=2026-08-30-redesign" defer></script>
 </body>
 </html>

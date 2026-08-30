@@ -277,6 +277,29 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
 .section { padding: 100px 0; }
 .section-alt { background: var(--bg-2); }
 
+/* 2026-08-30: "Miért készült?" szekció — világos, modern Tesla-stílus,
+   összhangban a hero-val. A sötétebb section-ok (deg, vin) maradnak sötét
+   design system szerint. */
+.section--why {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFAF7 100%);
+    color: #0A0A0A;
+}
+.section--why .section-head h2 { color: #0A0A0A; }
+.section--why .section-head p { color: #3A3A3A; }
+.section--why .section-eyebrow { color: #0075DE; background: rgba(0, 117, 222, 0.08); }
+.section--why .card {
+    background: #FFFFFF;
+    border: 1px solid rgba(10, 10, 10, 0.08);
+    color: #0A0A0A;
+    box-shadow: 0 1px 3px rgba(10, 10, 10, 0.04);
+}
+.section--why .card:hover {
+    border-color: rgba(0, 117, 222, 0.3);
+    box-shadow: 0 8px 24px rgba(10, 10, 10, 0.08);
+}
+.section--why .card p { color: #3A3A3A; }
+.section--why .card__title { color: #0A0A0A; }
+
 .eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 8px 16px;
@@ -309,6 +332,22 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
 .card p { color: var(--ink-2); font-size: 14px; line-height: 1.55; }
 .card .meta { color: var(--ink-3); font-size: 13px; display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
 .card .actions { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+
+/* 2026-08-30: "Miért készült?" bento kártyákhoz — modern Tesla-stílus. */
+.card__icon {
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.card__title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+}
 
 /* ==========================================================================
    BENTO — aszimmetrikus grid
@@ -1214,17 +1253,69 @@ body {
     padding: 0 var(--container-pad);
 }
 
-/* ===== HERO — 100vh, glassmorphism, radial gradient ===== */
+/* ==========================================================================
+   HERO — Tesla modern (világos, letisztult)
+   2026-08-30: USER KÉRÉS — "Adj az oldalnak modern Tesla-stílusú dizájnt.
+   Fehér, szürke, fekete, minimál ikonok, nagy whitespace."
+   A hero most világos (#FAFAF7) hátterű, sötétszürke (#0A0A0A) szöveggel,
+   egy letisztult Model 3 sziluett SVG-vel a jobb oldalon, és egy erős
+   CTA-val a VIN dekóderhez. Az oldal többi része megtartja a sötét
+   összképet (design system kompatibilis), de a hero "belépési pontként"
+   modern, világos, Tesla.com-stílusú.
+   ========================================================================== */
 .hero {
     position: relative;
     min-height: calc(100vh - 64px);
-    min-height: calc(100dvh - 64px);  /* P2: navbar (64px) alatti viewport */
+    min-height: calc(100dvh - 64px);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 4rem 0 6rem;  /* P2: 8rem → 4rem (a body padding-top 64px miatt) */
-    background: var(--bg);
+    padding: 5rem 0 6rem;
+    background: linear-gradient(180deg, #FAFAF7 0%, #FFFFFF 100%);
+    color: #0A0A0A;
+}
+.hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+.hero__bg::before {
+    /* Finom radial gradient a bal felső sarokban — Tesla.com "halo" effekt. */
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 60%;
+    height: 80%;
+    background: radial-gradient(ellipse at center, rgba(0, 117, 222, 0.06) 0%, transparent 60%);
+}
+.hero__bg::after {
+    /* Finom radial gradient a jobb alsó sarokban. */
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    right: -10%;
+    width: 50%;
+    height: 70%;
+    background: radial-gradient(ellipse at center, rgba(167, 139, 250, 0.04) 0%, transparent 60%);
+}
+.hero__art {
+    /* A Model 3 sziluett SVG a jobb oldalon, opcionális dekoráció. */
+    position: absolute;
+    right: 4%;
+    bottom: 8%;
+    width: 480px;
+    height: auto;
+    max-width: 50%;
+    opacity: 0.92;
+    z-index: 1;
+    filter: drop-shadow(0 12px 32px rgba(10, 10, 10, 0.12));
+}
+@media (max-width: 768px) {
+    .hero__art { display: none; }  /* Mobilon nincs sziluett, helyette a szöveg kapja a teljes szélességet. */
 }
 
 /* P2: stat counter animáció — amikor a stat láthatóvá válik */
@@ -1259,20 +1350,23 @@ body {
     text-align: center;
     max-width: 1100px;
     padding: 0 var(--container-pad);
+    /* 2026-08-30: világos hero — a szöveg sötét (#0A0A0A) a #FAFAF7 háttéren. */
+    color: #0A0A0A;
 }
 .hero__eyebrow {
+    /* 2026-08-30: világos hero — sötétszürke glass badge. */
     display: inline-block;
     font-family: var(--font-mono);
     font-size: 0.875rem;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.18em;
-    color: var(--chip-text);
+    color: #1A1A1A;
     padding: 0.5rem 1.25rem;
-    border: 1px solid var(--chip-border);
+    border: 1px solid rgba(10, 10, 10, 0.12);
     border-radius: 100px;
-    background: var(--chip-bg);
-    box-shadow: 0 0 24px var(--chip-glow);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 1px 3px rgba(10, 10, 10, 0.04);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     margin-bottom: 2rem;
@@ -1280,13 +1374,14 @@ body {
 .hero__title {
     font-family: var(--font-display);
     font-size: clamp(3.5rem, 9vw, 7.5rem);
-    /* 2026-08-30: USER REPORT — vékonyabb betűk. 800 → 500. */
+    /* 2026-08-30: USER REPORT — vékonyabb betűk. 500 marad, de a color
+       #0A0A0A (sötét) a világos hero háttéren. A text-shadow eltévolítva,
+       mert a sötét szöveg nem igényel halo-t a világos háttéren. */
     font-weight: 500;
     line-height: 0.95;
     letter-spacing: -0.02em;
     margin: 0 0 1.5rem;
-    color: var(--fg);
-    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+    color: #0A0A0A;
 }
 .hero__title em {
     font-style: normal;
@@ -1303,13 +1398,14 @@ body {
     line-height: 1.5;
     max-width: 720px;
     margin: 0 auto 3rem;
-    color: #D8E3EE;  /* 2026-08-22 BRIGHTER */
+    /* 2026-08-30: világos hero — sötétszürke (#3A3A3A) a #FAFAF7 háttéren. */
+    color: #3A3A3A;
     font-weight: 400;
     width: 100%;
     box-sizing: border-box;
 }
 
-/* Glassmorphism stat cards */
+/* Glassmorphism stat cards — 2026-08-30: világos hero, világos stat kártyák. */
 .hero__stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -1318,17 +1414,19 @@ body {
     margin: 0 auto 3rem;
 }
 .stat {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid var(--border-soft);
-    border-radius: var(--r-md);
+    border: 1px solid rgba(10, 10, 10, 0.08);
+    border-radius: 12px;
     padding: 1.5rem 1.25rem;
-    transition: transform 0.3s var(--ease-out), border-color 0.3s;
+    transition: transform 0.3s var(--ease-out), border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 1px 3px rgba(10, 10, 10, 0.04);
 }
 .stat:hover {
     transform: translateY(-4px);
-    border-color: rgba(232, 33, 39, 0.3);
+    border-color: rgba(10, 10, 10, 0.18);
+    box-shadow: 0 8px 24px rgba(10, 10, 10, 0.08);
 }
 .stat__value {
     font-family: var(--font-display);
@@ -1337,7 +1435,8 @@ body {
     font-weight: 500;
     line-height: 1;
     letter-spacing: -0.01em;
-    color: var(--fg);
+    /* 2026-08-30: világos hero — sötétszürke. */
+    color: #0A0A0A;
     margin-bottom: 0.5rem;
 }
 .stat__value--accent {
@@ -1359,12 +1458,14 @@ body {
     font-weight: 500;
 }
 
-/* Glassmorphism CTA buttons */
+/* ===== HERO CTA — modern, világos ===== */
 .hero__cta {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.875rem;
+    margin: 2.5rem auto 1rem;
+    max-width: 720px;
 }
 .btn {
     display: inline-flex;
@@ -1373,7 +1474,7 @@ body {
     padding: 1rem 2rem;
     font-family: var(--font-body);
     font-size: 1.0625rem;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.01em;
     border-radius: var(--r-sm);
     border: 1px solid transparent;
