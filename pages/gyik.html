@@ -24,6 +24,63 @@
     <link rel="stylesheet" href="../assets/css/site.css?v=2026-08-30-light-v13" />
 
     <script src="../assets/js/seo-head.js?v=2026-08-30-light-v13" defer></script>
+    <!-- P3 fix: inline fallback hamburger toggle — akkor is mukodik, ha a site.js
+         nem toltodik be, vagy a SW cache-bol a regi verzio jon. -->
+    <script>
+        (function() {
+            'use strict';
+            function bindNavToggle() {
+                var btn = document.getElementById('nav-toggle');
+                var nav = document.getElementById('site-main-nav');
+                if (!btn || !nav) return;
+                if (btn.dataset.tm3Bound === '1') return; // ne kotsuk ketszer
+                btn.dataset.tm3Bound = '1';
+
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var open = nav.classList.toggle('is-open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    btn.classList.toggle('open', open);
+                });
+
+                // Linkre kattintas: zarja be a menut
+                var links = nav.querySelectorAll('a');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', function() {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                    });
+                }
+
+                // Kulso kattintas: zarja be a menut
+                document.addEventListener('click', function(e) {
+                    if (!nav.classList.contains('is-open')) return;
+                    if (nav.contains(e.target) || btn.contains(e.target)) return;
+                    nav.classList.remove('is-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.classList.remove('open');
+                });
+
+                // Escape billentyu: zarja be
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                        btn.focus();
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bindNavToggle);
+            } else {
+                bindNavToggle();
+            }
+        })();
+    </script>
 </head>
 <body>
     <header class="navbar" id="site-nav">
