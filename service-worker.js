@@ -1,8 +1,10 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-30 v11: GYIK (Gyakran Ismételt Kérdések) oldal —
-   pages/gyik.html + assets/js/gyik.js, FAQPage JSON-LD schema,
-   18 kidolgozott kérdéssel. CACHE nev v11-re.
+   2026-08-30 v12: teljes vilagos paletta (#FAFAF7 hatter, #0A0A0A szoveg)
+   minden oldalra es szekciora — USER KÉRÉS: "Tesla Model 3 — magyar
+   tudásbázis rossz helyen használsz stilust, azt szeretném látni
+   mindenhol ezt a világosat, minden pagen". A két :root blokk is
+   vilagosra allitva. CACHE nev v12-re.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -10,7 +12,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v11';
+const CACHE = 'tm3-v12';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,

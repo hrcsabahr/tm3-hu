@@ -8,28 +8,33 @@
    ========================================================================== */
 
 :root {
-    /* ---- SZÍNEK (egy helyen, könnyű átírni) ---- */
-    --bg: #06121E;  /* 2026-08-22 OVERRIDE: blue palette */
-    --bg-2: #0E2236;  /* 2026-08-22 OVERRIDE */
-    --surface: var(--bg-card);  /* 2026-08-22 OVERRIDE */  /* 2026-08-22 override: dark theme */
-    --ink: #F0F7FF;  /* 2026-08-22 OVERRIDE — brighter */
-    --ink-2: #D6E2EE;  /* 2026-08-23 BRIGHTER: was #525252 (lum 82, invisible on --bg #06121E). Same value as --fg-muted, so all 15 usages are now readable on the dark sections. */
-    --ink-3: #AFC0D2;  /* 2026-08-23 BRIGHTER: was #A1A1AA (lum 167, low contrast on dark bg). Same value as --fg-dim. */
-    --ink-4: #AFC0D2;  /* 2026-08-23 BRIGHTER: was #D4D4D8 (currently unused, but kept in sync with --fg-dim). */
+    /* ---- SZÍNEK (egy helyen, könnyű átírni) ----
+       2026-08-30: USER KÉRÉS — "Tesla Model 3 — magyar tudásbázis rossz helyen
+       használsz stilust, azt szeretném látni mindenhol ezt a világosat, minden
+       pagen". Teljes világos paletta: a sötét navy hátteret (#06121E) és a
+       világos szövegszíneket (#F0F7FF) lecserélem világos háttérre (#FAFAF7)
+       és sötét szövegre (#0A0A0A). Minden oldal, minden szekció, minden
+       komponens ugyanazt a világos stílust kapja — Tesla.com-hoz hasonló
+       "white, grey, black" minimalista megjelenés. */
+    --bg: #FAFAF7;            /* világos krém — elsődleges háttér */
+    --bg-2: #F4F4F0;          /* világos szürke — alternatív háttér (section--alt) */
+    --surface: #FFFFFF;       /* fehér — kártyák, surface */
+    --ink: #0A0A0A;           /* sötétszürke — elsődleges szöveg */
+    --ink-2: #3A3A3A;         /* sötétszürke — másodlagos szöveg (volt: #D6E2EE) */
+    --ink-3: #5C5C5C;         /* középszürke — harmadlagos szöveg (volt: #AFC0D2) */
+    --ink-4: #7A7A7A;         /* világosszürke — negyedleges szöveg */
 
-    /* 2026-08-23: legacy aliases — several HTML pages use inline style="color:var(--text-muted)"
-       etc., referencing variables that were never defined. Mapping them onto the new
-       design-system tokens keeps those pages readable without rewriting every inline style. */
-    --text: #F0F7FF;            /* → --fg */
-    --text-muted: #D6E2EE;      /* → --fg-muted */
-    --text-dim: #AFC0D2;        /* → --fg-dim */
-    --accent-2: #38BDF8;        /* → --primary */
-    --best: #22c55e;            /* zöld — sötét háttéren kontrasztos */
-    --sport: #f59e0b;           /* narancs — sötét háttéren kontrasztos */
-    --line: rgba(125, 211, 252, 0.15);  /* 2026-08-22 OVERRIDE */  /* 2026-08-22 override: dark theme */
-    --line-strong: rgba(0, 0, 0, 0.14);
+    /* Legacy alias-ok (inline style="color:var(--text-muted)" stb.). */
+    --text: #0A0A0A;
+    --text-muted: #3A3A3A;
+    --text-dim: #5C5C5C;
+    --accent-2: #0075DE;
+    --best: #108C3D;
+    --sport: #B45309;
+    --line: rgba(10, 10, 10, 0.10);            /* sötét átlátszó vonalak (volt: rgba(125, 211, 252, 0.15)) */
+    --line-strong: rgba(10, 10, 10, 0.18);    /* erősebb sötét vonalak */
 
-    --accent: #38BDF8;  /* 2026-08-22 OVERRIDE: blue palette */
+    --accent: #0075DE;        /* Tesla Electric Blue — accent (volt: #38BDF8) */
     --accent-hover: #005BAB;
     --accent-soft: rgba(0, 117, 222, 0.08);
 
@@ -135,16 +140,19 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
     padding: calc(14px + env(safe-area-inset-top, 0px)) 0 14px 0;
     padding-left: env(safe-area-inset-left, 0px);
     padding-right: env(safe-area-inset-right, 0px);
-    background: rgba(11, 11, 13, 0.92);  /* P2: 0.78 → 0.92 (biztosan látszik) */
+    /* 2026-08-30: USER KÉRÉS — teljes világos stílus. A navbar háttér
+       világos (#FAFAF7, 92% átlátszóság) a sötétszürke (rgba(11,11,13,0.92))
+       helyett. A border-bottom sötétszürke átlátszó vonal. */
+    background: rgba(250, 250, 247, 0.92);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(10, 10, 10, 0.10);
     transition: padding var(--t), background var(--t), border-color var(--t);
 }
 .navbar.scrolled, .navbar.is-scrolled {
     padding: 8px 0;
-    background: rgba(11, 11, 13, 0.92);
-    border-bottom-color: rgba(255, 255, 255, 0.14);
+    background: rgba(250, 250, 247, 0.95);
+    border-bottom-color: rgba(10, 10, 10, 0.14);
 }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
 /* 2026-08-30: a navbar soha ne legyen szelesebb a viewport-nal. Ha a .main-nav
@@ -158,8 +166,9 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
 
 .brand, .logo {
     display: inline-flex; align-items: center; gap: 8px;
-    /* P2 fix: sötét glass nav-on a brand szöveg legyen VILÁGOS */
-    color: #F5F5F7 !important; text-decoration: none !important;
+    /* 2026-08-30: USER KÉRÉS — teljes világos stílus. A brand szöveg és
+       logó mostantól sötétszürke (#0A0A0A) a világos navbar háttéren. */
+    color: #0A0A0A !important; text-decoration: none !important;
     font-weight: 600; font-size: 14px; letter-spacing: -0.015em;
 }
 .brand-mark, .logo-mark {
@@ -172,24 +181,21 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
 
 .main-nav, .site-nav {
     display: flex; gap: 2px; align-items: center;
-    /* 2026-08-29: a .main-nav ne nyuljon tul a viewport-on. Ha kevés a hely,
-       a linkek flex-wrap-peljenek egy uj sorba. */
     flex-wrap: wrap;
 }
 .main-nav a, .site-nav a, .site-nav .nav-dropdown-toggle {
     position: relative;
     padding: 7px 9px;
     font-size: 12px; font-weight: 500;
-    /* 2026-08-29: white-space: nowrap, hogy a linkek ne torejenek ket sorba. */
     white-space: nowrap;
-    /* P2 fix: sötét nav-on a linkek VILÁGOSAK */
-    color: #D6E2EE !important;
+    /* 2026-08-30: világos navbar — linkek sötétszürkék (#3A3A3A) a világos háttéren. */
+    color: #3A3A3A !important;
     text-decoration: none !important;
     transition: color var(--t-fast);
 }
 .main-nav a:hover, .site-nav a:hover,
 .main-nav a[aria-current="page"], .site-nav a.active {
-    color: #FFFFFF !important;
+    color: #0A0A0A !important;
 }
 .main-nav a::after, .site-nav a::after, .site-nav .nav-dropdown-toggle::after {
     content: '';
@@ -218,7 +224,8 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
     width: 40px; height: 40px; cursor: pointer;
     flex-direction: column; gap: 5px; align-items: center; justify-content: center; padding: 0;
 }
-.nav-toggle span { width: 18px; height: 1.5px; background: #F5F5F7; border-radius: 1px; transition: var(--t-fast); }  /* P2 fix: hamburger ikon VILÁGOS sötét nav-on */
+/* 2026-08-30: hamburger ikon sötétszürke a világos navbar háttéren. */
+.nav-toggle span { width: 18px; height: 1.5px; background: #0A0A0A; border-radius: 1px; transition: var(--t-fast); }
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -850,15 +857,16 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
     .main-nav, .site-nav {
         position: absolute; top: 100%; left: 0; right: 0;
         flex-direction: column;
-        background: rgba(11, 11, 13, 0.96);
+        /* 2026-08-30: világos lenyíló menü — fehér háttér a világos oldalon. */
+        background: rgba(255, 255, 255, 0.98);
         -webkit-backdrop-filter: blur(20px) saturate(180%);
         backdrop-filter: blur(20px) saturate(180%);
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid rgba(10, 10, 10, 0.10);
         padding: 16px; gap: 4px;
         transform: translateY(-10px); opacity: 0;
         pointer-events: none;
         transition: opacity var(--t-fast), transform var(--t-fast);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 12px 32px rgba(10, 10, 10, 0.08);
         z-index: 9998;
     }
     .main-nav.is-open, .site-nav.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
@@ -867,7 +875,8 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
         padding: 14px 18px;
         font-size: 15px;
         border-radius: var(--radius);
-        color: var(--ink) !important;
+        /* 2026-08-30: világos lenyíló menü — sötétszürke linkek a fehér háttéren. */
+        color: #0A0A0A !important;
     }
     .main-nav a:hover, .main-nav a[aria-current="page"] {
         background: rgba(56, 189, 248, 0.12);
@@ -913,16 +922,18 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
     .main-nav, .site-nav {
         position: absolute; top: 100%; left: 0; right: 0;
         flex-direction: column;
+        /* 2026-08-30: világos lenyíló menü — fehér háttér. */
         background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(20px);
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid rgba(10, 10, 10, 0.10);
         padding: 16px; gap: 4px;
         transform: translateY(-10px); opacity: 0;
         pointer-events: none;
         transition: opacity var(--t-fast), transform var(--t-fast);
     }
     .main-nav.is-open, .site-nav.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
-    .main-nav a, .site-nav a { width: 100%; padding: 12px 16px; font-size: 15px; }
+    /* 2026-08-30: sötétszürke linkek a világos lenyíló menüben. */
+    .main-nav a, .site-nav a { width: 100%; padding: 12px 16px; font-size: 15px; color: #0A0A0A !important; }
 }
 
 /* ==========================================================================
@@ -1341,41 +1352,47 @@ textarea:focus {
     border: 0;
 }
 
-/* ===== 2026-08-22 DESIGN TOKENS (P5 — Soma design concept) ===== */
+/* ===== 2026-08-22 DESIGN TOKENS (P5 — Soma design concept) =====
+   2026-08-30: USER KÉRÉS — "Tesla Model 3 — magyar tudásbázis rossz helyen
+   használsz stilust, azt szeretném látni mindenhol ezt a világosat". Ezt
+   a Soma design concept által definiált sötét (kék-páletta) tokent felülírom
+   világos értékekkel, mert a user a világos stílust kéri mindenhol. A két
+   :root blokk közül ez a második nyer (mert később van), tehát itt kell
+   felülírni a színeket. */
 :root {
-    /* === 2026-08-22 BLUE PALETTE — kékes háttér, kék árnyalatok, sötét kontraszt === */
-    --bg: #06121E;             /* sötét navy kék — elsődleges háttér */
-    --bg-elevated: #0E2236;    /* közepes kék — kártyák, glass-panelek */
-    --bg-card: #122A45;        /* világosabb kék — kiemelt kártyák */
-    --bg-deep: #020A14;        /* extra sötét — kontraszt szegélyek */
+    /* === VILÁGOS PALETTA — Tesla.com "white, grey, black" minimalista stílus === */
+    --bg: #FAFAF7;             /* világos krém — elsődleges háttér */
+    --bg-elevated: #F4F4F0;    /* világos szürke — kártyák, glass-panelek */
+    --bg-card: #FFFFFF;        /* fehér — kiemelt kártyák */
+    --bg-deep: #E8E8E2;        /* kissé sötétebb szürke — kontraszt szegélyek */
 
-        --fg: #F0F7FF;             /* elsődleges szöveg - majdnem fehér, könnyen olvasható */
-    --fg-muted: #D6E2EE;       /* másodlagos szöveg - világos szürke-kék, jól látható sötét háttéren */
-    --fg-dim: #AFC0D2;          /* halvány címke - világosabb szürke, még látható */         /* halvány kék — caption, label */
+    --fg: #0A0A0A;             /* elsődleges szöveg - sötétszürke, könnyen olvasható világos háttéren */
+    --fg-muted: #3A3A3A;       /* másodlagos szöveg */
+    --fg-dim: #5C5C5C;         /* halvány címke */
 
-    --primary: #38BDF8;         /* világos sky blue — elsődleges akcent */
-    --primary-hover: #7DD3FC;   /* világosabb cyan — hover/glow */
-    --primary-glow: rgba(56, 189, 248, 0.50);
+    --primary: #0075DE;        /* Tesla Electric Blue — elsődleges akcent */
+    --primary-hover: #005BAB;
+    --primary-glow: rgba(0, 117, 222, 0.40);
 
-    --secondary: #06B6D4;       /* cyan — másodlagos akcent */
-    --secondary-hover: #22D3EE;
-    --secondary-glow: rgba(6, 182, 212, 0.40);
+    --secondary: #A78BFA;      /* lila — másodlagos akcent (volt cyan) */
+    --secondary-hover: #C4B5FD;
+    --secondary-glow: rgba(167, 139, 250, 0.30);
 
-    --accent: #A78BFA;          /* világos lila — Performance kiemelés */
+    --accent: #A78BFA;         /* lila — Performance kiemelés (megtartva) */
     --accent-hover: #C4B5FD;
 
-    --chip-bg: rgba(56, 189, 248, 0.12);
-    --chip-border: rgba(125, 211, 252, 0.40);
-    --chip-text: #BAE6FD;       /* világos kékes chip text */
-    --chip-glow: rgba(56, 189, 248, 0.30);
+    --chip-bg: rgba(0, 117, 222, 0.08);
+    --chip-border: rgba(0, 117, 222, 0.30);
+    --chip-text: #0075DE;
+    --chip-glow: rgba(0, 117, 222, 0.20);
 
-    --success: #34D399;         /* zöld — valid VIN */
-    --warning: #FBBF24;         /* sárga — figyelem */
-    --danger: #F87171;          /* piros — hiba */
+    --success: #108C3D;        /* zöld — valid VIN */
+    --warning: #B45309;        /* sötétebb sárga — figyelem */
+    --danger: #DC2626;         /* piros — hiba */
 
-    --border: #1E3A5C;          /* közepes kék — elválasztók */
-    --border-soft: rgba(125, 211, 252, 0.12);
-    --border-glow: rgba(56, 189, 248, 0.30);
+    --border: rgba(10, 10, 10, 0.12);          /* sötét átlátszó elválasztó */
+    --border-soft: rgba(10, 10, 10, 0.06);
+    --border-glow: rgba(0, 117, 222, 0.20);
 
     --font-display: 'Inter Tight', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -1393,9 +1410,10 @@ textarea:focus {
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 
-    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-    --shadow-glow: 0 0 40px rgba(232, 33, 39, 0.4);
-    --shadow-glass: 0 24px 60px rgba(0, 0, 0, 0.5);
+    /* 2026-08-30: világos box-shadow-k, nincs sötét glow. */
+    --shadow-card: 0 1px 3px rgba(10, 10, 10, 0.04), 0 4px 12px rgba(10, 10, 10, 0.06);
+    --shadow-glow: 0 0 24px rgba(0, 117, 222, 0.15);
+    --shadow-glass: 0 8px 32px rgba(10, 10, 10, 0.08);
 }
 
 * {

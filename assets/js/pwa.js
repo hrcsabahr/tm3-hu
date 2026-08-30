@@ -9,7 +9,7 @@
     // es a kovetkezo navigacional a tile-ok mar a SW nelkul, kozvetlenul a
     // haloatrol jonnek (a cache-buster query string biztositja a frissesseget).
     if ('serviceWorker' in navigator) {
-        const SW_VERSION = 'tm3-v11-2026-08-30-gyik';
+        const SW_VERSION = 'tm3-v12-2026-08-30-light';
         const SW_URL = '/service-worker.js?v=' + encodeURIComponent(SW_VERSION);
         const isMapPage = /\/pages\/tobberek\.html$/.test(location.pathname);
         if (!isMapPage) {
