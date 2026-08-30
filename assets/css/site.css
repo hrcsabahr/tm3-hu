@@ -130,9 +130,14 @@ h4 { font-size: 18px; }
     border-bottom-color: rgba(255, 255, 255, 0.14);
 }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
-/* 2026-08-29: a navbar soha ne legyen szélesebb a viewport-nal. Ha a .main-nav
-   + .brand + .nav-cta egyutt szélesebb mint 100vw, ne legyen vizszintes scrollbar. */
-.navbar { overflow: hidden; }
+/* 2026-08-30: a navbar soha ne legyen szelesebb a viewport-nal. Ha a .main-nav
+   + .brand + .nav-cta egyutt szelesebb mint 100vw, ne legyen vizszintes scrollbar.
+   2026-08-30: REVERT — az overflow:hidden levagta a lenyilo hamburger menumot
+   (a .main-nav.is-open position:absolute; top:100%-on ul, a navbar dobozan kivul,
+   igy a navbar overflow:hidden miatt nem latszott). Helyette a .nav-wrap
+   flex-wrap-wrap + a .main-nav flex-wrap biztositja, hogy a linkek ne nyuljanak
+   tul a viewporton, es a hamburger menu szabadon megjelenhet. */
+.navbar { max-width: 100vw; }
 
 .brand, .logo {
     display: inline-flex; align-items: center; gap: 8px;
@@ -648,8 +653,16 @@ h4 { font-size: 18px; }
     .container { padding: 0 20px; }
     /* 2026-08-29: checklist #4 — body padding mobilon, hogy a tartalom ne
        erjen a viewport szelehez. A .container mar 20px paddinget ad, de
-       a containeren kivuli elemek (footer, hero overlay) is kapjanak margot. */
-    body { padding: 10px; }
+       a containeren kivuli elemek (footer, hero overlay) is kapjanak margot.
+       2026-08-30: BUG FIX — a `padding: 10px` shorthand felulirta a base body
+       `padding-top: calc(64px + env(safe-area-inset-top, 0px))` erteket,
+       igy a fix navbar 64px-re a hero tetejere ult, es a felso tartalom
+       reszben el volt takarva (gorgoetes utan is latszott a navbar alatt).
+       A padding-top-ot kulon kell tartani, hogy a navbar ne takarja a herot. */
+    body {
+        padding: 10px;
+        padding-top: calc(64px + env(safe-area-inset-top, 0px));
+    }
     /* 2026-08-29: checklist #6 — tablazatok mobilon. A tablazat szethullana,
        ha a cellak szelesebbek mint a viewport. A display:block + overflow-x:auto
        gorgethetove teszi a tablazatot vizszintesen, hogy ne torjen szet. */
@@ -865,6 +878,11 @@ textarea:focus {
     line-height: 1.05 !important;
     letter-spacing: -0.04em !important;
     margin: 1.5rem 0 !important;
+    /* 2026-08-30: a .hero__inner text-align:center nem eleg — a .hero__title
+       egy block elem, es ha nincs margin:auto, a 720px-nel nem szelesebb cim
+       (mobilon a teljes szelesseg) a container bal szeletol indul. */
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 .hero__eyebrow {
     font-size: clamp(1rem, 1.4vw, 1.25rem) !important;
@@ -881,6 +899,10 @@ textarea:focus {
     opacity: 0.95;
     width: 100%;
     box-sizing: border-box;
+    /* 2026-08-30: kozepre igazitas — a 720px-es doboz a .hero__inner 1100px-es
+       kozepeben uljon, ne a bal szeletol induljon. */
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 .stat__value {
     font-size: clamp(3.5rem, 5vw, 5rem) !important;
@@ -1249,7 +1271,12 @@ body {
     background: linear-gradient(90deg, var(--secondary), var(--primary));
     -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-c.hero__subtitle {
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+/* 2026-08-30: a .hero__subtitle masodik deklaracioja — a fo deklaracio (sor ~876)
+   mar tartalmazza a margin-left/right: auto-t. Ez a blokk csak a szin/font beallitasokert felel. */
+.hero__subtitle {
     font-size: clamp(1.125rem, 1.6vw, 1.375rem);
     line-height: 1.5;
     max-width: 720px;
@@ -1258,8 +1285,6 @@ body {
     font-weight: 400;
     width: 100%;
     box-sizing: border-box;
-}026-08-22 BRIGHTER */
-    font-weight: 400;
 }
 
 /* Glassmorphism stat cards */
@@ -1409,10 +1434,16 @@ body {
 /* ===== DEGRADATION — 3-COL CARD GRID + PROGRESS BARS + LIGHT CHART ===== */
 .deg-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.25rem;
     max-width: 1200px;
     margin: 0 auto 3rem;
+}
+/* 2026-08-30: a nagyon kis kepernyokon (360px alatt) a deg-grid ne probaljon
+   280px minmax-ot tartani — egy oszlopba csukja magat, es a card-ok belső
+   flex-jei (deg-card__head) ne csusszanak szet. */
+@media (max-width: 420px) {
+    .deg-grid { grid-template-columns: 1fr; gap: 1rem; }
 }
 .deg-card {
     background: var(--bg-card);
@@ -1433,6 +1464,8 @@ body {
     justify-content: space-between;
     align-items: baseline;
     margin-bottom: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
 .deg-card__label {
     font-family: var(--font-mono);

@@ -1,14 +1,12 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-29 v6: query-string verzió a regisztrációban, így a bongeszo
-   MINDIG ujnak tekinti a SW-t. Az activate event minden tm3-* cache-t
-   torol (kiveve az aktualisat), self.unregister() hív, és a fetch
-   handler a kulso tile-keresekre soha nem valaszol - a bongeszo
-   kozvetlenul a halozatrol tolt. A regi tm3-v3 SW cache-elt
-   "API KEY REQUIRED" PNG-k mostantol elerhetetlenek.
-
-   A tobberek.html NEM tolti ezt a SW-t (lasd pwa.js), igy a terkep
-   oldalon a SW egyáltalán nem fut.
+   2026-08-30 v8: a 24429b3 commit utan a felhasznalo jelezte, hogy a hero
+   subtitle meg mindig el van csuszva (a `margin: 0 auto` hianya), nincs
+   gorgoetes (a .navbar overflow:hidden levagta a lenyilo menumot), es
+   a diagram szovegei mobilon osszecsuszszanak. Ez a SW egy azonos
+   hash-sel rendelkezik, mint a v7 (ugyanaz a fetch handler), de a
+   CACHE nevet v8-ra leptetjuk, hogy az ujonnan deploy-olt CSS/JS fajlok
+   friss cache-be keruljenek, ne a v7 cache-bol szolgalja ki a bongeszo.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -16,7 +14,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v7';
+const CACHE = 'tm3-v8';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
