@@ -1,10 +1,10 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-30 v12: teljes vilagos paletta (#FAFAF7 hatter, #0A0A0A szoveg)
-   minden oldalra es szekciora — USER KÉRÉS: "Tesla Model 3 — magyar
-   tudásbázis rossz helyen használsz stilust, azt szeretném látni
-   mindenhol ezt a világosat, minden pagen". A két :root blokk is
-   vilagosra allitva. CACHE nev v12-re.
+   2026-08-30 v13: hamburger 3-span fix deploy cache-bust.
+   User-feedback: "nincs menu a fooldalon" — a regi tm3-v12 SW cache-bol
+   a 1-span hamburgert szolgalta ki. CACHE nev v13-ra, minden ?v= query
+   string frissitve 2026-08-30-light → 2026-08-30-light-v13, hogy a
+   visszatero latogatok azonnal az uj hamburgert kapjak.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -12,7 +12,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v12';
+const CACHE = 'tm3-v13';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
