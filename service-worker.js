@@ -1,11 +1,9 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-31 v17: pages/gumi.html hozzadva a precache ASSETS listahoz.
-   A user 'nem latom' hibajara: a regi v16 SW nem ismerte az uj oldalt,
-   es a network-first fetch utan a cache.put()-ot megtette, de ha a
-   bongeszo SW-je elobb a regi SW-t toltotte, akkor a network-first
-   branch is a regi cache-t hasznalta. Most mar a v17-ben benne van
-   a gumi.html is, igy a friss SW telepites utan biztosan elerheto.
+   2026-08-31 v18: nav frissites — 'Gumi' menupont hozzadva a fooldal
+   + 11 aloldal navbar-jahoz. A user 'nem latom' panaszara:
+   a gumi.html letezik, csak a tobbi oldal rol nem volt elerheto.
+   Most mar minden oldal navbar-jaban benne van a Gumi link.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -13,7 +11,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v17';
+const CACHE = 'tm3-v18';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
