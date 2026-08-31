@@ -14,7 +14,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v15';
+const CACHE = 'tm3-v16';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
