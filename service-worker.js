@@ -1,12 +1,11 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-31 v15: aloldalak SEO bovitese + scroll-fix
-   - 11 aloldal <head>-jebe beegetve a teljes meta + JSON-LD csomag
-   - site.css: .page-hero overscroll-behavior eltavolitva, body+
-     main/.section/.container touch-action: pan-y
-   - A v14 cache-bol a regi CSS meg jo volt, de a v15 biztositja,
-     hogy a SW cache-bol is a legujabb '?v=2026-08-31-pages-seo-v1'
-     verziozat szolgalhato ki.
+   2026-08-31 v17: pages/gumi.html hozzadva a precache ASSETS listahoz.
+   A user 'nem latom' hibajara: a regi v16 SW nem ismerte az uj oldalt,
+   es a network-first fetch utan a cache.put()-ot megtette, de ha a
+   bongeszo SW-je elobb a regi SW-t toltotte, akkor a network-first
+   branch is a regi cache-t hasznalta. Most mar a v17-ben benne van
+   a gumi.html is, igy a friss SW telepites utan biztosan elerheto.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -14,7 +13,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v16';
+const CACHE = 'tm3-v17';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
@@ -43,7 +42,9 @@ const ASSETS = [
     `${REPO_PREFIX}/pages/kozosseg.html`,
     `${REPO_PREFIX}/pages/gyik.html`,
     `${REPO_PREFIX}/pages/fogyasztas.html`,
-    `${REPO_PREFIX}/pages/jogi.html`,
+        // 2026-08-31: USER REPORT — uj gumi-felni ajanlo oldal a precache-be.
+        `${REPO_PREFIX}/pages/gumi.html`,
+        `${REPO_PREFIX}/pages/jogi.html`,
     // A tobberek.html szandekosan NINCS itt - a terkep oldal nem tolti a SW-t.
     `${REPO_PREFIX}/assets/css/legal.css`,
     `${REPO_PREFIX}/manifest.json`,
