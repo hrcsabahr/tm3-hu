@@ -982,21 +982,36 @@ body {
 }
 
 /* Android-specifikus: a terkep es chart kontener belsejeben görgetni lehessen,
-   de ne triggerelje a body pull-to-refresh-et. */
+   de ne triggerelje a body pull-to-refresh-et.
+   2026-08-31: USER REPORT — az aloldalakon scroll-ujjal csak egy ido utan lehet.
+   A '.page-hero' kikerult a listabol, mert nincs benne belso gorgetes, es a
+   'contain' egy idoig blokkolja a touch scrollt Chrome / Android rendszeren.
+   A 'contain' csak a terkepen es a chart-on kell, ahol tenyleg van belso
+   gorgetheto terulet. */
 .map,
 .deg-chart-inner,
 .vin-form-card,
-.deg-tabs,
-.page-hero {
-    /* P3: scroll fix — a 'contain' is okozhat scroll-blokkolast Chrome-on.
-       Meghagyjuk a 'contain'-t csak a terkepen es a chart-on, ahol tényleg
-       kell, hogy a scroll ne fusson ki a containerbol. */
+.deg-tabs {
     overscroll-behavior-y: contain;
 }
 
-/* P3 fix: a body szinten ne legyen scroll-blokkolo. */
+/* P3 fix: a body szinten ne legyen scroll-blokkolo.
+   2026-08-31: USER REPORT — scroll-ujjal egy ido utan lehet csak.
+   Hozzaadva: explicit 'touch-action: pan-y' a body-n es a tartalmi
+   konteneren, hogy a Chrome biztosan atengedje az elso touch esemenyt
+   azonnal (a 'pan-y' garantalja, hogy a gorgetes horizontalis pinch
+   nelkul azonnal indul). */
 body {
-    /* overscroll-behavior-y: contain; eltavolitva — scroll fix */
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Az oldal fo tartalmi resze — ahol a legtobb gorgetes tortenik —
+   szinten kap explicit pan-y-t. */
+main,
+.section,
+.container {
+    touch-action: pan-y;
 }
 
 /* Safe-area a fix navbarhoz: a navbar ne takarja el az iPhone notch-ot. */

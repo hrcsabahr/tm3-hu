@@ -1,11 +1,12 @@
 /* =====================================================
    tm3.hu - Service Worker (PWA + offline cache)
-   2026-08-30 v14: inline hamburger fallback + lenyilo menu szelesseg fix.
-   User-feedback: "scroll nem jo, hamburger nem reagal a belso oldalakon".
-   A regi tm3-v13 cache a site.js-re tamaszkodott, de a hamburger fallback
-   mostantol inline az index.html-ben van, igy a SW cache frissitese nem
-   kritikus — de a v14 biztositja, hogy a SW cache-bol is a legujabb
-   CSS/JS szolgalhato ki.
+   2026-08-31 v15: aloldalak SEO bovitese + scroll-fix
+   - 11 aloldal <head>-jebe beegetve a teljes meta + JSON-LD csomag
+   - site.css: .page-hero overscroll-behavior eltavolitva, body+
+     main/.section/.container touch-action: pan-y
+   - A v14 cache-bol a regi CSS meg jo volt, de a v15 biztositja,
+     hogy a SW cache-bol is a legujabb '?v=2026-08-31-pages-seo-v1'
+     verziozat szolgalhato ki.
    ===================================================== */
 
 const SW_SCOPE = self.location.pathname.replace(/\/service-worker\.js.*$/, '');
@@ -13,7 +14,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v14';
+const CACHE = 'tm3-v15';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
