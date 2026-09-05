@@ -284,7 +284,15 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
 /* ==========================================================================
    SURFACES — page-hero, section, card, filter, tip-box, badge
    ========================================================================== */
-.page-hero { padding: 100px 0 96px; border-bottom: 1px solid var(--line); }  /* P2: 180px → 100px (body padding-top 64px miatt) */
+.page-hero { padding: 100px 0 96px; border-bottom: 1px solid var(--line); }
+/* 2026-09-05: USER REPORT — 100px+96px padding-top feleslegesen nagy mobilon.
+   80px-re csokkentjuk 768px alatt, 72px-re 480px alatt. */
+@media (max-width: 768px) {
+    .page-hero { padding: 80px 0 48px !important; }
+}
+@media (max-width: 480px) {
+    .page-hero { padding: 72px 0 36px !important; }
+}  /* P2: 180px → 100px (body padding-top 64px miatt) */
 .section { padding: 100px 0; }
 .section-alt { background: var(--bg-2); }
 
@@ -668,6 +676,18 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
     overflow: hidden; font-size: 14px;
+}
+/* 2026-09-05: USER REPORT — a tablazatok (gumi, vasarlas) 768px alatt
+   kinyultak a viewportbol, vizszintes scrollt okozva az egesz oldalon.
+   A `display: block` + `overflow-x: auto` egyutt biztositja, hogy a tabla
+   gorgetheto legyen, de az oldal ne. */
+@media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
 }
 .table th { padding: 12px 18px; background: var(--bg-2); text-align: left; font-size: 11px; font-weight: 700; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--line); }
 .table td { padding: 12px 18px; border-bottom: 1px solid var(--line); color: var(--ink-2); }
@@ -1143,6 +1163,21 @@ textarea:focus {
     min-height: 90vh !important;
     padding: 8rem 0 4rem !important;
 }
+/* 2026-09-05: USER REPORT — mobilon a 90vh hero elnyeli az egesz kepernyot.
+   A user nem latja a fo tartalmat az elso foldon. Reszponziv padding +
+   min-height a kisebb breakpointokon. */
+@media (max-width: 1024px) {
+    .hero {
+        min-height: 70vh !important;
+        padding: 6rem 0 3rem !important;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto !important;
+        padding: 5rem 0 2.5rem !important;
+    }
+}
 .hero__title {
     /* 2026-08-23: SEO H1 expansion ("Tesla Model 3 — magyar tudásbázis"), so clamp
        upper bound lowered from 7rem to 5.5rem to keep the longer title on one line.
@@ -1199,6 +1234,22 @@ textarea:focus {
     font-size: 1.2rem !important;
     padding: 1rem 2rem !important;
     font-weight: 600 !important;
+}
+/* 2026-09-05: USER REPORT — mobilon a ket CTA gomb egymas melle szorult.
+   768px alatt oszlopba rendezzuk, hogy kényelmesen kattinthato legyen. */
+@media (max-width: 768px) {
+    .hero__cta {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .hero__cta .btn {
+        width: 100% !important;
+        text-align: center !important;
+    }
 }
 
 /* ===== 2026-08-22 VIN CHECKER SECTION ===== */
@@ -1527,7 +1578,9 @@ body {
     background: radial-gradient(ellipse at center, rgba(167, 139, 250, 0.04) 0%, transparent 60%);
 }
 .hero__art {
-    /* A Model 3 sziluett SVG a jobb oldalon, opcionális dekoráció. */
+    /* A Model 3 sziluett SVG a jobb oldalon, opcionális dekoráció.
+       2026-09-05: USER REPORT — mobilon a sziluett a cimet es a CTA gombokat
+       takarta. 768px alatt elrejtve, hogy a tartalom tisztan latszodjon. */
     position: absolute;
     right: 4%;
     bottom: 8%;
@@ -1537,6 +1590,9 @@ body {
     opacity: 0.92;
     z-index: 1;
     filter: drop-shadow(0 12px 32px rgba(10, 10, 10, 0.12));
+}
+@media (max-width: 768px) {
+    .hero__art { display: none !important; }
 }
 @media (max-width: 768px) {
     .hero__art { display: none; }  /* Mobilon nincs sziluett, helyette a szöveg kapja a teljes szélességet. */
@@ -1636,6 +1692,21 @@ body {
     gap: 1rem;
     max-width: 960px;
     margin: 0 auto 3rem;
+}
+/* 2026-09-05: USER REPORT — a 180px minmax miatt 360px viewport alatt a 4 stat
+   egymas melle szorult, nehezen olvashatova valt. Mobilon 2x2 grid. */
+@media (max-width: 768px) {
+    .hero__stats {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        max-width: 100% !important;
+    }
+}
+@media (max-width: 380px) {
+    .hero__stats {
+        /* Nagyon kis kepernyon (iPhone SE 1gen, Galaxy Fold) 1 oszlop */
+        grid-template-columns: 1fr !important;
+    }
 }
 .stat {
     background: rgba(255, 255, 255, 0.6);
@@ -2699,6 +2770,8 @@ main #res-megtakaritas {
     text-shadow: 0 0 24px var(--primary-glow);
 }
 
+/* 2026-09-05: USER REPORT — a kovetkezo ures szabaly (result-card/result-box)
+   nem volt lezarva, igy az egesz fajl vegeig ervenyesnek szamitott. Javítva. */
 /* Result cards on sub-pages */
 main .result-card,
 main .result-box,
@@ -2706,6 +2779,9 @@ main #res-kapacitas,
 main #res-eves,
 main #res-10ev,
 main #res-megtakaritas {
+    /* szandekosan ures — a .result-card / .result-box / #res-* elemek stilusait
+       a .result / .result-sub / .highlight szabalyok adjak. */
+}
 
 /* ===== 2026-08-23: Main-page section previews (TCO, szervizek/töltők, hibák, közösség) ===== */
 
