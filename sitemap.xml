@@ -4,7 +4,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://tm3.hu/</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/szervizek.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -28,7 +28,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/tobberek.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/kalkulator.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -52,7 +52,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/tco.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -64,7 +64,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/hibak.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -76,7 +76,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/fogyasztas.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -88,7 +88,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/vasarlas.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -100,7 +100,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/blog.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -112,7 +112,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/kozosseg.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -124,7 +124,7 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/gyik.html</loc>
-    <lastmod>2026-08-30</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -136,9 +136,21 @@
   </url>
   <url>
     <loc>https://tm3.hu/pages/jogi.html</loc>
-    <lastmod>2026-08-29</lastmod>
+    <lastmod>2026-09-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/jogi.html" />
+  </url>
+  <url>
+    <loc>https://tm3.hu/pages/gumi.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://tm3.hu/assets/img/og-image.svg</image:loc>
+      <image:title>Tesla Model 3 gumiabroncs és felni ajánló · tm3.hu</image:title>
+      <image:caption>18/19/20 col gumiabroncsok és felnik a Tesla Model 3-hoz — TOP-listák és hatótáv-veszteség.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://tm3.hu/pages/gumi.html" />
   </url>
 </urlset>

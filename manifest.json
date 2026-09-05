@@ -6,10 +6,14 @@
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#000000",
-  "theme_color": "#0a84ff",
+  "background_color": "#06121E",
+  "theme_color": "#06121E",
   "lang": "hu",
-  "categories": ["education", "lifestyle", "utilities"],
+  "categories": [
+    "education",
+    "lifestyle",
+    "utilities"
+  ],
   "icons": [
     {
       "src": "./assets/img/icon-192.png",
@@ -30,21 +34,36 @@
       "short_name": "Degradation",
       "description": "Akku degradation számítás",
       "url": "./pages/kalkulator.html",
-      "icons": [{ "src": "./assets/img/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "./assets/img/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Töltők",
       "short_name": "Töltők",
       "description": "Töltő térkép",
       "url": "./pages/tobberek.html",
-      "icons": [{ "src": "./assets/img/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "./assets/img/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Szervizek",
       "short_name": "Szervizek",
       "description": "Magyar Tesla-szervizek",
       "url": "./pages/szervizek.html",
-      "icons": [{ "src": "./assets/img/icon-192.png", "sizes": "192x192" }]
+      "icons": [
+        {
+          "src": "./assets/img/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }
