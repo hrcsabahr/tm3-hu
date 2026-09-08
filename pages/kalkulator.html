@@ -231,9 +231,21 @@
                     <div class="calc-field">
                         <label for="valtozat">Variáns</label>
                         <select id="valtozat">
-                            <option value="sr">Model 3 SR+ (LFP, 60 kWh)</option>
-                            <option value="lr" selected>Model 3 Long Range (NCA, 82 kWh)</option>
-                            <option value="perf">Model 3 Performance (NCA, 82 kWh)</option>
+                            <option value="lr_nca_2020_2023" selected>Model 3 LR AWD (NCA, 82 kWh, 2020–2023)</option>
+                            <optgroup label="Standard Range">
+                                <option value="sr_lfp_2024">Model 3 SR+ (LFP, 60 kWh, 2024+)</option>
+                                <option value="sr_nca_2020_2023">Model 3 SR+ (NCA, 55 kWh, 2020–2023)</option>
+                                <option value="sr_nca_2017_2019">Model 3 SR (NCA, 50 kWh, 2017–2019)</option>
+                            </optgroup>
+                            <optgroup label="Long Range AWD">
+                                <option value="lr_nmc_2024">Model 3 LR AWD (NMC, 85 kWh, 2024+ Highland)</option>
+                                <option value="lr_nca_2020_2023">Model 3 LR AWD (NCA, 82 kWh, 2020–2023)</option>
+                                <option value="lr_nca_2017_2019">Model 3 LR AWD (NCA, 75 kWh, 2017–2019)</option>
+                            </optgroup>
+                            <optgroup label="Performance">
+                                <option value="perf_nca_2020_2023">Model 3 Performance (NCA, 82 kWh, 2020–2023)</option>
+                                <option value="perf_nca_2017_2019">Model 3 Performance (NCA, 75 kWh, 2017–2019)</option>
+                            </optgroup>
                         </select>
                     </div>
 
@@ -290,8 +302,13 @@
                     </div>
 
                     <div style="margin-top:16px; font-size:14px; color:var(--text-muted);">
-                        A kalkuláció figyelembe veszi: a kémiát, életkort, kilométert, töltési
-                        szokásokat, klímát és parkolást. A valós érték ±3%-kal térhet el.
+                        A kalkuláció figyelembe veszi a kémiát (LFP / NMC / NCA), életkort, kilométert, SoC-limitet,
+                        DC-töltés arányát, klímát és parkolást. A modell a cohort percentiliseket
+                        <a href="https://www.recurrentauto.com/guides/tesla-model-3" target="_blank" rel="noopener">Recurrent Auto</a>
+                        (12 000+ Tesla, 1.6 millió megfigyelés) és a
+                        <a href="https://teslahubs.com/blogs/tips/teslas-lfp-batteries-hold-up-best-over-time-in-new-study" target="_blank" rel="noopener">Carla/Voltest 2026 cohort</a>
+                        (9 954 svéd EV, 100 000 km retenció) alapján súlyozza.
+                        A tipikus hiba ±2-3% — a cohort szórása ±1.2% retention.
                     </div>
                 </div>
             </div>
@@ -299,11 +316,17 @@
             <div class="tip-box green" style="margin-top:40px;">
                 <strong>🔧 Hogyan javíthatod az akkumulátorod állapotát?</strong>
                 <ul style="margin-top:8px; padding-left:20px;">
-                    <li>Tartsd 20-80% között a mindennapi használat során (csak utazás előtt tölts 90-100%-ra)</li>
-                    <li>Csökkentsd a DC töltési arányt — használj inkább AC-t otthon</li>
-                    <li>Parkolj garázsban télen, vagy használj előmelegítést indulás előtt</li>
-                    <li>Kerüld a 100%-os SoC hosszú ideig tartó állást (pl. nyaralás előtt tölts 50%-ra)</li>
+                    <li><strong>SoC-limit:</strong> tartsd 20–80% között a mindennapi használat során — az NCA-nál a 100% SoC közel 2x gyorsabb calendar aginget okoz, mint a 80% (Keil 2016).</li>
+                    <li><strong>DC-töltés:</strong> 100% Supercharger arány NCA-nál +5-10% extra degradation 100 000 km-en — használj inkább AC-t otthon, hosszú útra tervezetten.</li>
+                    <li><strong>Hőmérséklet:</strong> forró nyári klíma (+35°C átlag) 1.4x calendar aging (Recurrent 2024). Parkolj árnyékban/garázsban, használj előmelegítést indulás előtt.</li>
+                    <li><strong>Hideg tél:</strong> a -10°C-os tél NEM gyorsítja a degradációt (lassabb kinetics), DE a hatótávot 35-45%-kal csökkenti a fűtés és akkumulátor-előmelegítés miatt.</li>
+                    <li><strong>LFP-specifikus:</strong> ha SR+ LFP cellás autód van, a 100% SoC sokkal kevésbé káros — naponta töltheted teljesre, ha kell.</li>
                 </ul>
+                <p style="margin-top:12px; font-size:13px; color:var(--text-muted);">
+                    Források: <a href="https://www.recurrentauto.com/guides/tesla-model-3" target="_blank" rel="noopener">Recurrent Auto Model 3 útmutató</a>,
+                    <a href="https://doi.org/10.3390/batteries7020028" target="_blank" rel="noopener">Keil et al. NCA calendar aging 2016</a>,
+                    <a href="https://insideevs.com/news/801724/tesla-model-3-lpf-degradation" target="_blank" rel="noopener">Voltest LFP vs NCA 2026</a>.
+                </p>
             </div>
         </div>
     </section>
@@ -325,7 +348,7 @@
                 "name": "Hogyan számolja a degradation kalkulátor a kapacitást?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "A kalkulátor figyelembe veszi a kémiát (LFP vs NCA), életkort, kilométert, töltési szokásokat (SoC limit), DC (Supercharger) töltés arányát, klímát és parkolási körülményeket. Az eredmény ±3%-os pontosságú a valós mérési adatokhoz képest."
+                    "text": "A kalkulátor 3 kémiát különböztet meg (CATL LFP, LG Chem NMC, Panasonic NCA), és a Carla/Voltest 2026 cohort study retencióit használja baseline-nak (LFP 93.34%, NMC 92.83%, NCA 89.8% @ 100 000 km). Az S-görbe modell a knee point-ot (~35 000 km, SEI kialakulás) és a lineáris szakaszt is figyelembe veszi. SoC, klíma, DC-töltés és parkolás alapján korrigál. A cohort percentilis σ=1.2% retenció szórással számol (Recurrent Auto ML modellek). A tipikus hiba ±2-3% — egyedi cellaméréshez OBD-II olvasó (Scan My Tesla app) vagy TeslaFi/Recurrent bekötés szükséges."
                 }
             },
             {
@@ -374,7 +397,7 @@
                     <canvas id="degChartKalk" aria-label="Akkumulátor degradáció chart" role="img"></canvas>
                 </div>
 
-                <p class="deg-note">A görbék a Tesla flottajelentések és a P3 Charging ciklustesztek alapján készültek. Az értékek átlagosak, 80% DoD és ~50% DC-töltés mellett.</p>
+                <p class="deg-note">A görbék a Carla/Voltest 2026 cohort study retencióiból (LFP 93.34%, NMC 92.83%, NCA 89.8% @ 100 000 km) és a Recurrent Auto ML modelljeiből származnak. A "knee point" ~35 000 km-nél van (SEI kialakulási fázis), utána lineáris, lassabb ütem. Az értékek átlagosak, 80% SoC-limit és ~20% DC-töltés mellett.</p>
             </div>
         </div>
     </section>

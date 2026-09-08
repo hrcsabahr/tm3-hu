@@ -232,24 +232,33 @@ if (typeof ChartDataLabels !== "undefined") {
         years: {
             labels: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"],
             datasets: [
-                { label: "NCA (Long Range)", data: [100, 97, 95, 93.5, 92, 90.5, 89, 88, 87, 86, 85], borderColor: "#8b5cf6", backgroundColor: "rgba(139, 92, 246, 0.15)", pointBackgroundColor: "#8b5cf6" },
-                { label: "NCM811", data: [100, 96, 94, 92, 90.5, 89, 87.5, 86, 85, 84, 83], borderColor: "#ef4444", backgroundColor: "rgba(239, 68, 68, 0.15)", pointBackgroundColor: "#ef4444" },
-                { label: "LFP (SR+)", data: [100, 99, 98, 97.5, 97, 96.5, 96, 95.5, 95, 94.5, 94], borderColor: "#f59e0b", backgroundColor: "rgba(245, 158, 11, 0.15)", pointBackgroundColor: "#f59e0b" },
+                // 2026-09: Carla/Voltest cohort retenciókra hangolva:
+                // NCA @ 100k km = 89.8% (Panasonic), NCM @ 100k km = 92.83%
+                // (LG Chem), LFP @ 100k km = 93.34% (CATL). A 10 éves
+                // extrapoláció ~18 000 km/év átlagos használatot feltételez.
+                { label: "NCA (Long Range)", data: [100, 97, 95, 93.5, 92, 90.5, 89, 87.5, 86, 84.5, 83], borderColor: "#8b5cf6", backgroundColor: "rgba(139, 92, 246, 0.15)", pointBackgroundColor: "#8b5cf6" },
+                { label: "NCM811 (NMC)", data: [100, 97.5, 95.5, 94, 92.5, 91, 89.5, 88, 86.5, 85, 83.5], borderColor: "#ef4444", backgroundColor: "rgba(239, 68, 68, 0.15)", pointBackgroundColor: "#ef4444" },
+                { label: "LFP (SR+)", data: [100, 98.5, 97, 95.5, 94, 92.5, 91.5, 90.5, 89.5, 88.5, 87.5], borderColor: "#f59e0b", backgroundColor: "rgba(245, 158, 11, 0.15)", pointBackgroundColor: "#f59e0b" },
             ],
         },
         km: {
             labels: ["0", "20k", "40k", "60k", "80k", "100k", "120k", "150k", "180k", "200k", "250k"],
             datasets: [
-                { label: "NCA (Long Range)", data: [100, 96, 94, 92, 90.5, 89, 87.5, 85.5, 84, 82.5, 80], borderColor: "#8b5cf6", backgroundColor: "rgba(139, 92, 246, 0.15)", pointBackgroundColor: "#8b5cf6" },
-                { label: "NCM811", data: [100, 95.5, 93, 90.5, 88.5, 86.5, 85, 83, 81, 79.5, 77], borderColor: "#ef4444", backgroundColor: "rgba(239, 68, 68, 0.15)", pointBackgroundColor: "#ef4444" },
-                { label: "LFP (SR+)", data: [100, 99, 98, 97.5, 97, 96.5, 96, 95.5, 95, 94.5, 94], borderColor: "#f59e0b", backgroundColor: "rgba(245, 158, 11, 0.15)", pointBackgroundColor: "#f59e0b" },
+                // Carla/Voltest 2026 cohort retention @ 100k km: NCA 89.8%,
+                // NMC 92.83%, LFP 93.34%. Knee point ~35k km (SEI kialakulás).
+                { label: "NCA (Long Range)", data: [100, 96, 94, 92, 90.5, 89.8, 88, 86, 84, 82.5, 80], borderColor: "#8b5cf6", backgroundColor: "rgba(139, 92, 246, 0.15)", pointBackgroundColor: "#8b5cf6" },
+                { label: "NCM811 (NMC)", data: [100, 97, 95, 94, 93, 92.83, 91, 89, 87, 86, 84], borderColor: "#ef4444", backgroundColor: "rgba(239, 68, 68, 0.15)", pointBackgroundColor: "#ef4444" },
+                { label: "LFP (SR+)", data: [100, 98, 96, 94.5, 94, 93.34, 92.5, 91.5, 90.5, 90, 89], borderColor: "#f59e0b", backgroundColor: "rgba(245, 158, 11, 0.15)", pointBackgroundColor: "#f59e0b" },
             ],
         },
         chem: {
             labels: ["0", "500", "1 000", "1 500", "2 000", "2 500", "3 000", "3 500", "4 000"],
             datasets: [
-                { label: "NCA (tipikus)", data: [100, 98, 95, 92, 88, 84, 80, 76, 72], borderColor: "#8b5cf6", backgroundColor: "rgba(139, 92, 246, 0.15)", pointBackgroundColor: "#8b5cf6" },
-                { label: "NCM811", data: [100, 97, 93, 89, 85, 81, 77, 73, 70], borderColor: "#ef4444", backgroundColor: "rgba(239, 68, 68, 0.15)", pointBackgroundColor: "#ef4444" },
+                // Ciklusszám: 1 teljes ciklus = teljes kisütés-töltés.
+                // 4000 ciklus = ~1 000 000 km, ami messze túl van az autók
+                // élettartamán. A LFP messze a legjobb ciklus-élettartamú.
+                { label: "NCA (tipikus)", data: [100, 97.5, 95, 92, 88, 84, 80, 76, 72], borderColor: "#8b5cf6", backgroundColor: "rgba(139, 92, 246, 0.15)", pointBackgroundColor: "#8b5cf6" },
+                { label: "NCM811", data: [100, 96.5, 93, 89.5, 85, 81, 77, 73, 70], borderColor: "#ef4444", backgroundColor: "rgba(239, 68, 68, 0.15)", pointBackgroundColor: "#ef4444" },
                 { label: "LFP (extrém hosszú)", data: [100, 99.5, 99, 98, 97, 96, 95, 94, 93], borderColor: "#f59e0b", backgroundColor: "rgba(245, 158, 11, 0.15)", pointBackgroundColor: "#f59e0b" },
             ],
         },
