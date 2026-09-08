@@ -4,18 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
     <meta name="google-site-verification" content="N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4" />
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) — consent mode v2, csak consent utan kuld adatot.
+         A config hivas a consent.js-bol jon (applyToGtag), alapbol minden denied. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-709EQ9B200"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      window.gtag = window.gtag || function () { dataLayer.push(arguments); };
       gtag('js', new Date());
-
-      gtag('config', 'G-709EQ9B200');
     </script>
-
-
-    <meta name="theme-color" content="#06121E" />
+<meta name="theme-color" content="#06121E" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -26,10 +23,10 @@
     <meta property="og:description" content="Impresszum, adatvédelem, cookie, disclaimer — nem hivatalos Tesla információs oldal." />
     <link rel="canonical" href="https://tm3.hu/pages/jogi.html" />
     <title>Jogi tudnivalók — impresszum, adatvédelem, cookie (2026) · tm3.hu</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="../assets/css/fonts.css" as="style" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/site.css?v=2026-08-31-gumi-v1-pages" />
+    <link rel="stylesheet" href="../assets/css/consent.css?v=2026-09-consent-v1" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="../assets/css/legal.css?v=2026-08-31-gumi-v1-pages" />
     <script src="../assets/js/seo-head.js?v=2026-08-31-gumi-v1-pages" defer></script>
@@ -266,21 +263,29 @@
                 <ul class="legal-list">
                     <li>Nem kér regisztrációt, bejelentkezést.</li>
                     <li>Nem kér e-mail címet, nevet vagy egyéb személyes adatot.</li>
-                    <li>Nem üzemeltet saját analytics rendszert (nincs Google Analytics, Matomo, stb.).</li>
-                    <li>Nem tárol felhasználói profilokat vagy sütiket a böngészőben (kivéve a technikai működéshez szükséges, lentebb részletezett cookie-kat).</li>
+                    <li>Nem üzemeltet saját, szerveroldali felhasználói adatbázist.</li>
+                    <li>A Google Analytics 4 kizárólag a felhasználó kifejezett hozzájárulása után, anonimizált IP-vel fut — a consent megtagadása esetén a GA4 egyáltalán nem küld adatot.</li>
+                    <li>A felhasználói bevitelek (fogyasztási bejegyzések, TCO, checklist) a böngésző localStorage-jában, kizárólag a felhasználó saját eszközén tárolódnak.</li>
                 </ul>
 
-                <h3>Milyen cookie-kat használunk?</h3>
-                <p>Az oldal <strong>kizárólag technikai cookie-kat</strong> használ, amelyek a működéshez feltétlenül szükségesek. Ezek a cookie-k személyes adatot nem tartalmaznak, és a GDPR 6. cikk (1) bekezdés f) pontja (jogos érdek) alapján kezelendők:</p>
-                <ul class="legal-list">
-                    <li><strong>Service Worker cache</strong> (PWA funkció): az offline működéshez szükséges, érzékeny adatot nem tartalmaz.</li>
-                </ul>
+                <h3>Milyen cookie-kat és tárolókat használunk?</h3>
+                <p>Az oldal három kategóriában használ sütiket és helyi tárolókat. Mindegyikről a felhasználó a láblécben található „Cookie beállítások” gombra kattintva, vagy az első látogatáskor megjelenő sávon adhat vagy vonhat vissza hozzájárulást.</p>
+
+                <h4>1. Szigorúan szükséges</h4>
+                <p>A PWA offline működéséhez elengedhetetlen Service Worker cache (cache name: <code>tm3-v2</code>). Személyes adatot nem tartalmaz, nem tiltható le. A GDPR 6. cikk (1) bekezdés f) pontja (jogos érdek) alapján kezelt.</p>
+
+                <h4>2. Funkcionális (saját eszközön)</h4>
+                <p>A böngésző <code>localStorage</code>-jába mentett felhasználói beállítások és adatbevitelek (fogyasztási bejegyzések, TCO-számítások, vásárlási checklist-állapot). Ezek <strong>kizárólag a te eszközödön</strong> maradnak, a tm3.hu szervereire nem kerülnek továbbításra. Az ePrivacy irányelv értelmében azonban ezek is a felhasználó hozzájárulásához kötöttek. Ha elutasítod, a helyi tárolók read-only / inaktív módba kapcsolnak.</p>
+
+                <h4>3. Statisztikai</h4>
+                <p>Google Analytics 4 (Measurement ID: <code>G-709EQ9B200</code>), kizárólag a felhasználó kifejezett, a „Cookie beállítások” panelben vagy a banner „Elfogadom” gombjával adott hozzájárulása után aktiválódik. Az IP-cím anonimizálva kerül a Google-nek továbbításra (a GA4 alapértelmezetten az IP utolsó oktettjét elhagyja). A Google adatkezelési tájékoztatója: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
 
                 <h3>Harmadik fél szolgáltatások</h3>
-                <p>Az oldal az alábbi harmadik fél szolgáltatásokat használja, amelyek technikai okokból hozzáférhetnek a böngésződ IP-címéhez és egyéb technikai adataihoz:</p>
+                <p>Az oldal az alábbi harmadik fél szolgáltatásokat használja. A felhasználó IP-címe és technikai adatai kizárólag a működéshez szükséges mértékben jutnak el hozzájuk:</p>
                 <ul class="legal-list">
-                    <li><strong>Google Fonts</strong> (fonts.googleapis.com, fonts.gstatic.com): a betűtípusok betöltéséhez. A Google adatkezelési tájékoztatója: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
-                    <li><strong>Leaflet / OpenStreetMap</strong> (unpkg.com, tile.openstreetmap.org): a töltőtérkép megjelenítéséhez. Adatkezelés: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">osmfoundation.org/wiki/Privacy_Policy</a></li>
+                    <li><strong>Google Analytics 4</strong> (Measurement ID: G-709EQ9B200) — kizárólag a felhasználó kifejezett hozzájárulása után, anonimizált IP-vel. A Google adatkezelési tájékoztatója: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>. A Google által kezelt cookie-k: <code>_ga</code>, <code>_ga_&lt;MEASUREMENT_ID&gt;</code> (13 hónap), <code>_gid</code> (24 óra).</li>
+                    <li><strong>Google Fonts (self-hosted)</strong> — a betűtípusok (Inter, Inter Tight, JetBrains Mono) 2026 szeptembere óta a tm3.hu saját szerveréről töltődnek, így a Google ezekről az oldalletöltésekről nem kap adatot. Korábban a <code>fonts.googleapis.com</code> és <code>fonts.gstatic.com</code> domainekről töltöttek, ami adatkezelési kockázatot jelentett (lásd: LG München I 3 O 17493/20).</li>
+                    <li><strong>Leaflet / OpenStreetMap</strong> (unpkg.com, tile.openstreetmap.org): a töltőtérkép megjelenítéséhez a szerviz- és töltőkereső oldalakon. Adatkezelés: <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">osmfoundation.org/wiki/Privacy_Policy</a></li>
                     <li><strong>GitHub Pages</strong>: az oldal tárhelye. Adatkezelés: <a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank" rel="noopener">docs.github.com</a></li>
                 </ul>
 
@@ -291,27 +296,40 @@
                     <li>Panasszal élni a Nemzeti Adó- és Vámhivatal, vagy a Nemzeti Adatvédelmi és Információszabadság Hatóságnál (NAIH, székhely: 1055 Budapest, Falk Miksa utca 9-11.; <a href="https://www.naih.hu" target="_blank" rel="noopener">www.naih.hu</a>).</li>
                 </ul>
 
-                <p>Mivel személyes adatot nem kezelünk, a fenti jogok gyakorlása jellemzően értelmezhetetlen — de ha bármilyen kérdésed van, a GitHub Discussions fórumon jelezheted.</p>
+                <p>Mivel személyes adatot kizárólag a felhasználó saját eszközén kezelünk (localStorage), és a Google Analytics adatait csak a felhasználó kifejezett hozzájárulásával gyűjtjük, a fenti jogok jellemzően a böngésző beállításaiban (Sütik → Cookie beállítások) vagy a Google Analytics felületén gyakorolhatók. Ha bármilyen kérdésed van, a GitHub Discussions fórumon jelezheted.</p>
             </section>
 
             <!-- IV. Cookie tájékoztató -->
             <section class="legal-section" id="cookie">
                 <h2>IV. Cookie tájékoztató</h2>
 
-                <p>Az oldal az Európai Unió ún. „ePrivacy" irányelve (2002/58/EK, módosítva 2009/136/EK) és a magyar Infotv. alapján kizárólag az alábbi cookie-kat használja:</p>
+                <p>Az oldal az Európai Unió ún. „ePrivacy" irányelve (2002/58/EK, módosítva 2009/136/EK) és a magyar Infotv. alapján az alábbi sütiket és helyi tárolókat használja. A felhasználó a lábléc „Cookie beállítások" gombjával vagy az első látogatáskor megjelenő sávon bármikor módosíthatja a hozzájárulását.</p>
 
                 <table class="legal-table">
-                    <tr><th>Cookie neve</th><th>Célja</th><th>Idatartam</th></tr>
+                    <tr><th>Név / kategória</th><th>Célja</th><th>Időtartam</th><th>Jogalap</th></tr>
                     <tr>
-                        <td>Service Worker cache (cache name: tm3-v2)</td>
-                        <td>Offline működés biztosítása (PWA). Személyes adatot NEM tartalmaz — kizárólag az oldal statikus tartalmát (HTML, CSS, JS, képek).</td>
-                        <td>Az alkalmazás frissítéséig (jellemzően néhány hét).</td>
+                        <td><code>tm3-v2</code> (Service Worker cache)</td>
+                        <td>Offline PWA működés biztosítása. Személyes adatot NEM tartalmaz — kizárólag az oldal statikus tartalmát (HTML, CSS, JS, képek).</td>
+                        <td>Frissítésig (jellemzően néhány hét).</td>
+                        <td>GDPR 6. cikk (1) f) — jogos érdek</td>
+                    </tr>
+                    <tr>
+                        <td><code>tm3:*</code> (localStorage)</td>
+                        <td>Fogyasztási bejegyzések, TCO-számítások, vásárlási checklist-állapot. Kizárólag a felhasználó eszközén.</td>
+                        <td>Korlátlan (a felhasználó törölheti).</td>
+                        <td>GDPR 6. cikk (1) a) — hozzájárulás (consent)</td>
+                    </tr>
+                    <tr>
+                        <td><code>_ga</code>, <code>_ga_G709EQ9B200</code>, <code>_gid</code> (Google Analytics)</td>
+                        <td>Látogatottság mérése, oldal-használati statisztikák. IP-cím anonimizálva.</td>
+                        <td><code>_ga</code>: 13 hónap; <code>_gid</code>: 24 óra.</td>
+                        <td>GDPR 6. cikk (1) a) — hozzájárulás (consent)</td>
                     </tr>
                 </table>
 
-                <p><strong>A cookie-kat a böngésződ beállításaiban bármikor törölheted vagy letilthatod</strong> — ebben az esetben az oldal PWA offline funkciója nem fog működni, de minden más funkció érintetlen marad.</p>
+                <p><strong>A sütiket a böngésződ beállításaiban bármikor törölheted vagy letilthatod</strong> — ekkor a PWA offline funkció nem fog működni, illetve a helyi tárolós funkciók (fogyasztás, TCO, checklist) inaktívvá válnak.</p>
 
-                <p><strong>Nem használunk</strong> marketing-, statisztikai-, követési-, vagy harmadik féltől származó (Google Analytics, Facebook Pixel, stb.) cookie-kat.</p>
+                <p><strong>A statisztikai sütik (Google Analytics) kizárólag a te aktív hozzájárulásoddal aktiválódnak</strong> — a consent megtagadása esetén a GA4 egyáltalán nem küld adatot a Google-nek.</p>
             </section>
 
             <!-- V. Felhasználási feltételek -->
@@ -365,6 +383,7 @@
 
     <script src="../assets/js/util.js?v=2026-08-31-gumi-v1-pages" defer></script>
     <script src="../assets/js/site.js?v=2026-08-31-gumi-v1-pages" defer></script>
+    <script src="../assets/js/consent.js?v=2026-09-consent-v1" defer></script>
 <script>
         // Utolsó frissítés dátuma automatikus
         document.getElementById('legal-update-date').textContent =

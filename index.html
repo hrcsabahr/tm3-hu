@@ -15,18 +15,15 @@
     <meta name="apple-mobile-web-app-title" content="tm3.hu">
     <meta name="format-detection" content="telephone=no">
     <meta name="google-site-verification" content="N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4" />
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) — consent mode v2, csak consent utan kuld adatot.
+         A config hivas a consent.js-bol jon (applyToGtag), alapbol minden denied. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-709EQ9B200"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      window.gtag = window.gtag || function () { dataLayer.push(arguments); };
       gtag('js', new Date());
-
-      gtag('config', 'G-709EQ9B200');
     </script>
-
-
-    <link rel="canonical" href="https://tm3.hu/" />
+<link rel="canonical" href="https://tm3.hu/" />
     <link rel="alternate" hreflang="hu" href="https://tm3.hu/" />
     <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
     <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
@@ -50,10 +47,10 @@
     <meta name="twitter:image" content="https://tm3.hu/assets/img/og-image.svg" />
     <meta name="twitter:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" />
+    <link rel="preload" href="assets/css/fonts.css" as="style" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
     <link rel="stylesheet" href="assets/css/site.css?v=2026-08-30-light-v13" />
+    <link rel="stylesheet" href="assets/css/consent.css?v=2026-09-consent-v1" />
     <script src="assets/js/seo-head.js?v=2026-08-30-light-v13" defer></script>
 
     <!-- P3 fix: inline fallback hamburger toggle — akkor is mukodik, ha a site.js
@@ -497,6 +494,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js" defer></script>
     <script src="script.js?v=2026-08-30-light-v13" defer></script>
     <script src="assets/js/site.js?v=2026-08-30-light-v13" defer></script>
+    <script src="assets/js/consent.js?v=2026-09-consent-v1" defer></script>
     <script src="assets/js/vin_checker.js?v=2026-08-30-light-v13" defer></script>
 </body>
 </html>

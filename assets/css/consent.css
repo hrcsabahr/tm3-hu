@@ -1,0 +1,319 @@
+/* ============================================================
+   tm3.hu — Consent banner + modal stílusok
+   GDPR / ePrivacy kompatibilis süti-kezelő UI
+   Mobil-first, sötét + világos overlay, hozzáférhető.
+   ============================================================ */
+
+/* ------- Banner (fixed bottom) ------- */
+.tm3-consent-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998;
+    padding: 12px;
+    pointer-events: none;
+    transform: translateY(120%);
+    transition: transform 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: var(--font-body, 'Inter', system-ui, -apple-system, sans-serif);
+}
+
+.tm3-consent-banner.is-visible {
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.tm3-consent-box {
+    max-width: 880px;
+    margin: 0 auto;
+    background: #06121E;
+    color: #E7EEF7;
+    border: 1px solid #1F3550;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.35);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+@media (min-width: 720px) {
+    .tm3-consent-box {
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        padding: 20px 24px;
+    }
+}
+
+.tm3-consent-title {
+    margin: 0 0 6px 0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: var(--font-display, 'Inter Tight', 'Inter', sans-serif);
+    color: #FFFFFF;
+}
+
+.tm3-consent-text p {
+    margin: 0;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #B8C7DB;
+}
+
+.tm3-consent-text a {
+    color: #5DA9FF;
+    text-decoration: underline;
+}
+
+.tm3-consent-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-end;
+}
+
+.tm3-btn {
+    font: inherit;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 9px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 120ms ease, border-color 120ms ease, color 120ms ease;
+    white-space: nowrap;
+}
+
+.tm3-btn:focus-visible {
+    outline: 2px solid #5DA9FF;
+    outline-offset: 2px;
+}
+
+.tm3-btn-primary {
+    background: #1E66E0;
+    color: #FFFFFF;
+    border-color: #1E66E0;
+}
+
+.tm3-btn-primary:hover {
+    background: #3B82F6;
+    border-color: #3B82F6;
+}
+
+.tm3-btn-secondary {
+    background: transparent;
+    color: #B8C7DB;
+    border-color: #2C4868;
+}
+
+.tm3-btn-secondary:hover {
+    background: #11253D;
+    color: #FFFFFF;
+}
+
+.tm3-btn-link {
+    background: transparent;
+    color: #5DA9FF;
+    border-color: transparent;
+    padding: 9px 8px;
+}
+
+.tm3-btn-link:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* ------- Modal ------- */
+.tm3-consent-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.tm3-consent-modal[hidden] {
+    display: none;
+}
+
+.tm3-consent-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(3, 8, 14, 0.7);
+    backdrop-filter: blur(2px);
+}
+
+.tm3-consent-card {
+    position: relative;
+    background: #0B1B2D;
+    color: #E7EEF7;
+    border: 1px solid #1F3550;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 560px;
+    max-height: calc(100vh - 32px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55);
+    font-family: var(--font-body, 'Inter', system-ui, -apple-system, sans-serif);
+}
+
+.tm3-consent-card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px 20px;
+    border-bottom: 1px solid #1F3550;
+}
+
+.tm3-consent-card-head h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    font-family: var(--font-display, 'Inter Tight', 'Inter', sans-serif);
+    color: #FFFFFF;
+}
+
+.tm3-consent-close {
+    background: transparent;
+    border: 0;
+    color: #B8C7DB;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.tm3-consent-close:hover {
+    background: #11253D;
+    color: #FFFFFF;
+}
+
+.tm3-consent-card-body {
+    padding: 14px 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.tm3-consent-row {
+    border: 1px solid #1F3550;
+    border-radius: 10px;
+    padding: 14px 16px;
+    background: #0F2238;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+}
+
+.tm3-consent-row h3 {
+    margin: 0 0 4px 0;
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.tm3-consent-row p {
+    margin: 0;
+    font-size: 0.86rem;
+    line-height: 1.5;
+    color: #B8C7DB;
+    grid-column: 1 / -1;
+}
+
+.tm3-consent-row-locked {
+    background: #0A1828;
+}
+
+.tm3-consent-state {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #6FE3A1;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(111, 227, 161, 0.12);
+}
+
+.tm3-consent-card-foot {
+    padding: 14px 20px;
+    border-top: 1px solid #1F3550;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* ------- Toggle switch ------- */
+.tm3-toggle {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.tm3-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.tm3-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: #2C4868;
+    border-radius: 999px;
+    transition: background-color 160ms ease;
+}
+
+.tm3-toggle-slider::before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    top: 3px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    transition: transform 160ms ease;
+}
+
+.tm3-toggle input:checked + .tm3-toggle-slider {
+    background-color: #1E66E0;
+}
+
+.tm3-toggle input:checked + .tm3-toggle-slider::before {
+    transform: translateX(20px);
+}
+
+.tm3-toggle input:focus-visible + .tm3-toggle-slider {
+    outline: 2px solid #5DA9FF;
+    outline-offset: 2px;
+}
+
+/* ------- Body lock, ha modal nyitva ------- */
+html.tm3-modal-open {
+    overflow: hidden;
+}
+
+/* ------- Láblécben lévő "Cookie beállítások" gomb alapstílus ------- */
+.tm3-footer-consent-btn {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    font: inherit;
+    padding: 0;
+}
+
+.tm3-footer-consent-btn:hover {
+    color: #5DA9FF;
+}

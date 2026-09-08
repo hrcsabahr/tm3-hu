@@ -102,7 +102,8 @@
                             <span class="footer-disclaimer">
                                 <strong>⚠️ Nem hivatalos, független oldal.</strong>
                                 A tm3.hu nem kapcsolódik a Tesla, Inc.-hez.
-                                <a href="${footerPrefix}/pages/jogi.html">Jogi tudnivalók</a>.
+                                <a href="${footerPrefix}/pages/jogi.html">Jogi tudnivalók</a> ·
+                                <button type="button" class="tm3-footer-consent-btn" data-tm3-action="open-consent">Cookie beállítások</button>
                             </span>
                         </div>
                     </div>

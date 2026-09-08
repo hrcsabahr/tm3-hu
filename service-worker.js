@@ -11,7 +11,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v18';
+const CACHE = 'tm3-v19';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
@@ -20,8 +20,12 @@ const ASSETS = [
     `${REPO_PREFIX}/assets/css/site.css`,
     `${REPO_PREFIX}/assets/css/design-system.css`,
     `${REPO_PREFIX}/assets/css/_legacy.css`,
+    // 2026-09: self-hosted Google Fonts (Inter, Inter Tight, JetBrains Mono)
+    `${REPO_PREFIX}/assets/css/fonts.css`,
+    `${REPO_PREFIX}/assets/css/consent.css`,
     `${REPO_PREFIX}/assets/js/util.js`,
     `${REPO_PREFIX}/assets/js/site.js`,
+    `${REPO_PREFIX}/assets/js/consent.js`,
     `${REPO_PREFIX}/assets/js/szervizek.js`,
     `${REPO_PREFIX}/assets/js/kalkulator.js`,
     `${REPO_PREFIX}/assets/js/tco.js`,
@@ -53,7 +57,8 @@ const ASSETS = [
     `${REPO_PREFIX}/vendor/leaflet/images/marker-shadow.png`,
     `${REPO_PREFIX}/vendor/leaflet/images/layers.png`,
     `${REPO_PREFIX}/vendor/leaflet/images/layers-2x.png`,
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&display=swap',
+    // Google Fonts CDN eltávolítva (2026-09, self-host). A tm3-v18 cache-ből
+    // a régi bejegyzés az activate hook-ban automatikusan törlődik.
 ];
 
 self.addEventListener('install', (event) => {

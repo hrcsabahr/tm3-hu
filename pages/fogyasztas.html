@@ -4,18 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
     <meta name="google-site-verification" content="N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4" />
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js) — consent mode v2, csak consent utan kuld adatot.
+         A config hivas a consent.js-bol jon (applyToGtag), alapbol minden denied. -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-709EQ9B200"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      window.gtag = window.gtag || function () { dataLayer.push(arguments); };
       gtag('js', new Date());
-
-      gtag('config', 'G-709EQ9B200');
     </script>
-
-
-    <meta name="theme-color" content="#06121E" />
+<meta name="theme-color" content="#06121E" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -26,10 +23,10 @@
     <meta property="og:url" content="https://tm3.hu/pages/fogyasztas.html" />
     <link rel="canonical" href="https://tm3.hu/pages/fogyasztas.html" />
     <title>Tesla Model 3 valós fogyasztási adatbázis · tm3.hu</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preload" href="../assets/css/fonts.css" as="style" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/site.css?v=2026-08-31-gumi-v1" />
+    <link rel="stylesheet" href="../assets/css/consent.css?v=2026-09-consent-v1" />
     
     <script src="../assets/js/seo-head.js?v=2026-08-31-gumi-v1" defer></script>
     <!-- P3 fix: inline fallback hamburger toggle — akkor is mukodik, ha a site.js
@@ -328,6 +325,7 @@
 
     <script src="../assets/js/util.js?v=2026-08-31-gumi-v1" defer></script>
     <script src="../assets/js/site.js?v=2026-08-31-gumi-v1" defer></script>
+    <script src="../assets/js/consent.js?v=2026-09-consent-v1" defer></script>
 <script src="../assets/js/fogyasztas.js?v=2026-08-31-gumi-v1" defer></script>
 </body>
 </html>
