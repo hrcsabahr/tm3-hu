@@ -5,6 +5,130 @@ if (typeof ChartDataLabels !== "undefined") {
 }
 
 /* =====================================================
+   Responsive chart helpers — 2026-09
+   --------------------------------------------------------
+   A három chart (degChart, degChartKalk, tcoChart) opciói
+   reszponzívak: betűméret, datalabels-sűrűség, pointRadius,
+   legend-box méret mind a viewport-hoz igazodnak.
+
+   A Chart.js `responsive: true` + `maintainAspectRatio: false`
+   a magasságot kezeli (CSS), de a BELSŐ opciókat (fontméret,
+   stb.) frissíteni kell resize eseményen.
+   ===================================================== */
+const TM3_CHART_BREAKPOINTS = {
+    mobile: 600,   // < 600 px: kis mobil
+    tablet: 900,   // 600-900 px: tablet
+};
+
+function tm3IsMobile() {
+    return window.innerWidth < TM3_CHART_BREAKPOINTS.mobile;
+}
+function tm3IsTablet() {
+    return window.innerWidth >= TM3_CHART_BREAKPOINTS.mobile
+        && window.innerWidth < TM3_CHART_BREAKPOINTS.tablet;
+}
+
+function tm3FontSize(desktopSize) {
+    if (tm3IsMobile()) return Math.max(9, Math.round(desktopSize * 0.75));
+    if (tm3IsTablet()) return Math.max(10, Math.round(desktopSize * 0.88));
+    return desktopSize;
+}
+
+function tm3PointRadius(desktopRadius) {
+    if (tm3IsMobile()) return Math.max(2, desktopRadius - 2);
+    if (tm3IsTablet()) return Math.max(3, desktopRadius - 1);
+    return desktopRadius;
+}
+
+function tm3DatalabelsStride() {
+    // Mobilon ritkábban (4-ből 1), tableten közepesen (3-ból 1),
+    // desktopon 2-ből 1.
+    if (tm3IsMobile()) return 4;
+    if (tm3IsTablet()) return 3;
+    return 2;
+}
+
+function tm3LegendBoxSize(desktopBox) {
+    if (tm3IsMobile()) return Math.max(8, Math.round(desktopBox * 0.7));
+    return desktopBox;
+}
+
+/* Frissíti a chart options.font méreteket a jelenlegi viewport alapján.
+   A Chart.js-nek a `chart.update()`-et is hívni kell utána.
+   CSAK azokat a fontokat frissíti, amelyek számokkal lettek megadva
+   a baseOptions-ban. */
+function tm3RefreshResponsiveChart(chart) {
+    if (!chart || !chart.options) return;
+    const opts = chart.options;
+
+    // Y-axis ticks font
+    if (opts.scales.y.ticks.font) {
+        opts.scales.y.ticks.font.size = tm3FontSize(15);
+    }
+    // Y-axis title font
+    if (opts.scales.y.title && opts.scales.y.title.font) {
+        opts.scales.y.title.font.size = tm3FontSize(16);
+    }
+    // X-axis ticks font
+    if (opts.scales.x.ticks.font) {
+        opts.scales.x.ticks.font.size = tm3FontSize(14);
+    }
+    // X-axis title font
+    if (opts.scales.x.title && opts.scales.x.title.font) {
+        opts.scales.x.title.font.size = tm3FontSize(16);
+    }
+    // Title font (chart fejléc)
+    if (opts.plugins.title && opts.plugins.title.font) {
+        opts.plugins.title.font.size = tm3FontSize(24);
+    }
+    // Legend label font + box méret
+    if (opts.plugins.legend.labels.font) {
+        opts.plugins.legend.labels.font.size = tm3FontSize(13);
+        opts.plugins.legend.labels.boxWidth = tm3LegendBoxSize(16);
+        opts.plugins.legend.labels.boxHeight = tm3LegendBoxSize(16);
+        opts.plugins.legend.labels.padding = tm3IsMobile() ? 8 : 14;
+    }
+    // Tooltip fontok
+    if (opts.plugins.tooltip && opts.plugins.tooltip.titleFont) {
+        opts.plugins.tooltip.titleFont.size = tm3FontSize(18);
+    }
+    if (opts.plugins.tooltip && opts.plugins.tooltip.bodyFont) {
+        opts.plugins.tooltip.bodyFont.size = tm3FontSize(15);
+    }
+    // Datalabels font + stride
+    if (opts.plugins.datalabels) {
+        const stride = tm3DatalabelsStride();
+        opts.plugins.datalabels.display = (ctx) => ctx.dataIndex % stride === 0;
+        if (opts.plugins.datalabels.font) {
+            opts.plugins.datalabels.font.size = tm3FontSize(12);
+        }
+    }
+    // Point radius (a dataset-ekre)
+    const ptRadius = tm3PointRadius(5);
+    chart.data.datasets.forEach((ds) => {
+        if (ds.pointRadius !== undefined) ds.pointRadius = ptRadius;
+        if (ds.pointHoverRadius !== undefined) ds.pointHoverRadius = ptRadius + 3;
+    });
+    // Line borderWidth — mobilon vékonyabb vonal, hogy ne legyen túl tömör
+    const borderWidth = tm3IsMobile() ? 3 : (tm3IsTablet() ? 4 : 5);
+    chart.data.datasets.forEach((ds) => {
+        if (ds.borderWidth !== undefined) ds.borderWidth = borderWidth;
+    });
+    chart.update();
+}
+
+/* Globális resize handler — a nyitott chart-okat újrarajzolja. */
+window.addEventListener("resize", () => {
+    if (Array.isArray(window.__tm3Charts)) {
+        window.__tm3Charts.forEach((entry) => {
+            if (entry && entry.chart) {
+                tm3RefreshResponsiveChart(entry.chart);
+            }
+        });
+    }
+});
+
+/* =====================================================
    Tesla Model 3 Guide — Interactivity (főoldali szekciók)
    A nav és footer a site.js-ben van.
    ===================================================== */
@@ -177,6 +301,12 @@ if (typeof ChartDataLabels !== "undefined") {
         options: (() => { const o = JSON.parse(JSON.stringify(baseOptions)); o.plugins.title.text = titles.years; o.scales.x.title.text = xLabels.years; return o; })(),
     });
 
+    // 2026-09: responsive chart — regisztráljuk a globális tömbbe,
+    // hogy resize eseményen újra lehessen méretezni.
+    window.__tm3Charts = window.__tm3Charts || [];
+    window.__tm3Charts.push({ chart });
+    tm3RefreshResponsiveChart(chart);
+
     // Tab handler — swaps the chart's data, title and x-axis label.
     const tabs = document.querySelectorAll(".deg-tab");
     tabs.forEach((tab) => {
@@ -323,6 +453,11 @@ if (typeof ChartDataLabels !== "undefined") {
         data: data.years,
         options: (() => { const o = JSON.parse(JSON.stringify(baseOptions)); o.plugins.title.text = titles.years; o.scales.x.title.text = xLabels.years; return o; })(),
     });
+
+    // 2026-09: responsive chart — regisztrálás resize-hoz.
+    window.__tm3Charts = window.__tm3Charts || [];
+    window.__tm3Charts.push({ chart });
+    tm3RefreshResponsiveChart(chart);
 
     const tabs = document.querySelectorAll(".deg-tab");
     tabs.forEach((tab) => {
@@ -475,6 +610,11 @@ console.log(
             },
         },
     });
+
+    // 2026-09: responsive chart — regisztrálás resize-hoz.
+    window.__tm3Charts = window.__tm3Charts || [];
+    window.__tm3Charts.push({ chart });
+    tm3RefreshResponsiveChart(chart);
 })();
 
 /* 2026-08-23: removed the legacy initKalkDegChart() that lived here.

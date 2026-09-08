@@ -1942,6 +1942,11 @@ body {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
     color: #1a1a26;  /* sötét szöveg — fehér chart-háttérhez */
 }
+/* 2026-09: mobilon a 2rem (32px) padding túl sok — csökkentjük,
+   hogy a chart canvas több helyet kapjon. */
+@media (max-width: 600px) {
+    .deg-chart-wrap { padding: 1rem; }
+}
 /* NOTE: .deg-chart-wrap .deg-section-{eyebrow,title,sub} rules removed 2026-08-23 — dead code, no HTML element uses these classes (verified across pages/*.html). Was causing confusion with hardcoded grey #555/#3a3a3a text. */
 .deg-chart-inner {
     position: relative;
@@ -1953,15 +1958,29 @@ body {
        rovid leirasaval egyutt ~60px helyet foglal. */
     height: 680px;
 }
-@media (max-width: 768px) {
-    /* 2026-08-29: noveltuk 480 -> 540 a legend miatt. */
-    .deg-chart-inner { height: 540px; }
+/* 2026-09: reszponzív chart-magasság — mobilon a fix 540px túl nagy.
+   Tablett 540px, nagy mobil 420px, kis mobil 360px. A chart aspect
+   ratioja 16:9-hez közeli marad (320px szélesség -> 380px magasság). */
+@media (max-width: 900px) {
+    .deg-chart-inner { height: 500px; padding: 1.25rem; }
+}
+@media (max-width: 600px) {
+    .deg-chart-inner { height: 420px; padding: 1rem; }
+}
+@media (max-width: 420px) {
+    .deg-chart-inner { height: 360px; padding: 0.75rem; }
 }
 .deg-chart-wrap canvas {
     /* 2026-08-23: was 500px then 760px — replaced by .deg-chart-inner fixed height. */
     width: 100% !important;
     height: 100% !important;
     max-height: none;
+    /* 2026-09: a Chart.js canvas kapjon pinch-zoom + pan-y touch action-t —
+       a tooltip-re kellenek a touch események, de a görgetés maradjon
+       folyékony, ha a chart fölé görget a user. */
+    touch-action: pinch-zoom pan-y;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* 2026-08-29: egyedi HTML legend a degradation chart alatt, a chart-wrapon
@@ -2013,6 +2032,12 @@ body {
 @media (max-width: 720px) {
     .deg-legend { grid-template-columns: 1fr; padding: 14px 16px; }
     .deg-legend-desc { font-size: 12px; }
+}
+/* 2026-09: nagyon keskeny képernyőn a legend még kisebb. */
+@media (max-width: 420px) {
+    .deg-legend { padding: 12px 12px; gap: 10px; }
+    .deg-legend-name { font-size: 13px; }
+    .deg-legend-desc { font-size: 11px; line-height: 1.4; }
 }
 
 /* 2026-08-23 REVERT: removed .deg-chart-section wrappers — main page now uses a
@@ -2072,6 +2097,19 @@ body {
     border-radius: 100px;
     cursor: pointer;
     transition: all 0.2s;
+    /* 2026-09: 44x44 px tap target biztosítása (Apple HIG / Material). */
+    min-height: 44px;
+}
+/* 2026-09: mobilon a tab-gombok kicsit nagyobbak és támogatják a flex-wrap-ot
+   ha a viewport nagyon keskeny. */
+@media (max-width: 480px) {
+    .deg-tab {
+        padding: 0.65rem 1.1rem;
+        font-size: 0.78rem;
+        flex: 1 1 auto;
+        text-align: center;
+    }
+    .deg-tabs { gap: 0.4rem; }
 }
 .deg-tab:hover { background: rgba(11, 11, 15, 0.12); }
 .deg-tab.active {
