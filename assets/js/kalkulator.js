@@ -150,11 +150,38 @@
     // (LFP 93.34%, NMC 92.83%, NCA 89.8%) — ehhez illeszkedik a modell.
     // A 200-300k km-es extrapoláció konzisztens a Tesla saját ígéretével
     // (~85% retention 200 000 mérföld = 320 000 km).
+    //
+    // CALENDAR AGING KORREKCIÓ:
+    // A km-alapú ciklus-degradáció mellett a calendar aging (idő-alapú
+    // öregedés) is hat. A Carla cohort 18 000 km/év átlagos használatot
+    // feltételez. Ha a user ennél kevesebbet használ (alacsony km/év),
+    // az autó TÖBBET áll → több calendar aging → alacsonyabb retention.
+    // Ha többet használ (magas km/év), kevesebb áll → kevesebb calendar
+    // aging → magasabb retention. A korrekció mértéke:
+    //   - NCA: ~0.6%/év calendar aging (Recurrent cohort)
+    //   - NMC: ~0.5%/év
+    //   - LFP: ~0.3%/év
+    // Ha a user km/év rátája eltér a cohort átlagtól, a különbséget
+    // év-ekre vetítjük, és a calendar aging retention-csökkenést okoz.
     const LINEAR_DEGRADATION_PER_KM = {
         nca: 0.00000022,  // 0.22% / 10 000 km — hosszú távú cohort
         nmc: 0.00000020,  // 0.20% / 10 000 km
         lfp: 0.00000010,  // 0.10% / 10 000 km — LFP a legkitartóbb
     };
+
+    // Calendar aging (idő-alapú) retention-csökkenés /év — a cohort
+    // 18 000 km/év átlagához képest. Ha kevesebbet használsz, az
+    // autó többet áll, és a calendar aging többet kopik.
+    const CALENDAR_AGING_PER_YEAR = {
+        nca: 0.006,  // 0.6%/év NCA — Recurrent cohort hosszú távú
+        nmc: 0.005,  // 0.5%/év NMC
+        lfp: 0.003,  // 0.3%/év LFP
+    };
+
+    // A cohort átlagos km/év használata, amihez a baseline retention
+    // tartozik. 18 000 km/év = ~11 200 mérföld/év, ami a Recurrent és
+    // Carla cohort tipikus értéke.
+    const COHORT_AVG_KM_PER_YEAR = 18000;
 
     function retentionFromKm(chemistry, km, ageYears, opts) {
         const socMult = SOC_MULT[chemistry][opts.soc] || 1;
@@ -190,6 +217,7 @@
         // hogy a retention @ 100k km pontosan r100k legyen.
         const rateMedium = (rKnee - r100k) / (100000 - KNEE_KM);
 
+        // Alap km-alapú retention számítás (3-szakaszos lineáris).
         let retention;
         if (km <= KNEE_KM) {
             retention = 1 - rateKnee * Math.max(0, km);
@@ -198,6 +226,24 @@
         } else {
             retention = r100k - (km - 100000) * linearRate * linearStressor;
         }
+
+        // CALENDAR AGING KORREKCIÓ:
+        // Ha a user ageYears és km adataiból számolt km/év ráta
+        // eltér a cohort 18 000 km/év-től, a calendar aging mértéke
+        // más lesz. Példa: 100k km 10 év alatt (10 000 km/év) → 8
+        // "extra" álló év a cohort átlaghoz képest → 8 × CALENDAR_AGING
+        // extra retention-veszteség. (Csak akkor alkalmazzuk, ha az
+        // ageYears > 0 — 0 km-es új autóra nincs calendar aging.)
+        if (ageYears > 0) {
+            const userKmPerYear = km / ageYears;
+            const cohortYearsForSameKm = km / COHORT_AVG_KM_PER_YEAR;
+            const extraYears = Math.max(0, ageYears - cohortYearsForSameKm);
+            const calendarLoss = extraYears * CALENDAR_AGING_PER_YEAR[chemistry];
+            // A calendar aging a stresszorral is szorzódik (forró klíma
+            // → több calendar aging).
+            retention = retention - calendarLoss * linearStressor;
+        }
+
         // Floor 50% — a cella EoL threshold-a.
         return Math.max(0.5, retention);
     }
@@ -325,6 +371,9 @@
 
         $('res-kapacitas').textContent = capacityPct.toFixed(1) + '%';
         $('res-kapacitas-label').textContent = `Maradó kapacitás (${v.name})`;
+        // H3-at is frissítjük, hogy a user lássa, mire számít a becslés.
+        // "Becsült akkumulátor-állapot — Model 3 LR NCA 2020-2023 · 2022 · 50 000 km"
+        $('res-h3').textContent = `Becsült akkumulátor-állapot — ${v.name} · ${state.evjarat} · ${fmt(state.km)} km`;
         $('res-hatótav-új').textContent = fmt(ranges.new) + ' km';
         $('res-hatótav-most').textContent = fmt(ranges.current) + ' km';
         $('res-hatótav-tél').textContent = fmt(ranges.winter) + ' km';
