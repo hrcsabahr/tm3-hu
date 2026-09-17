@@ -27,7 +27,7 @@ Minden nyilvános HTML oldal `<head>` szekciójában (a viewport meta után) sze
 - `pages/tobberek.html`
 - `pages/vasarlas.html`
 
-A Google Search Console-ban hozzáadandó property: **URL-prefix** `https://tm3.hu/` —
+A Google Search Console-ban hozzáadandó property: **URL-prefix** `https://www.tm3.hu/` —
 verifikációs módszer: **HTML tag**. 5 percen belül validálható.
 
 ### 2. DNS TXT rekord (Domain property) — a Rackhost DNS-zónában kell felvenni
@@ -77,9 +77,9 @@ is várhat.
 
 ## Sitemap és robots.txt
 
-- **Sitemap:** `https://tm3.hu/sitemap.xml` — 9 URL (index + 8 belső oldal).
+- **Sitemap:** `https://www.tm3.hu/sitemap.xml` — 9 URL (index + 8 belső oldal).
   Google Search Console → Sitemap menü → `sitemap.xml` beküldése.
-- **Robots.txt:** `https://tm3.hu/robots.txt` — `Allow: /`, sitemap hivatkozással.
+- **Robots.txt:** `https://www.tm3.hu/robots.txt` — `Allow: /`, sitemap hivatkozással.
   A legacy `_idx.html`, `service-worker.js` és a backup fájlok `Disallow:`-olva.
 
 ## Egyéb SEO asset-ek (már élők)

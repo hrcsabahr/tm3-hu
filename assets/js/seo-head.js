@@ -10,19 +10,19 @@
     /* A kanonikus konfiguráció — kézzel karbantartott, de a HEAD-be
        bemásolt JSON-LD blokk így mindig konzisztens a Google-nek. */
     const SITE = {
-        url: 'https://tm3.hu',
+        url: 'https://www.tm3.hu',
         name: 'tm3.hu',
         title: 'Tesla Model 3 — Magyar tudásbázis',
         description: 'Tesla Model 3 SR+, Long Range és Performance — reszponzív magyar tudásbázis: akkumulátor, hatótáv, töltés, degradation, szervizek, VIN dekóder, költségkalkulátor.',
         locale: 'hu_HU',
         twitter: '@tm3hu',
-        ogImage: 'https://tm3.hu/assets/img/og-image.svg',
+        ogImage: 'https://www.tm3.hu/assets/img/og-image.png',
         themeColor: '#06121E',
         publisher: {
             '@type': 'Organization',
             name: 'tm3.hu',
-            url: 'https://tm3.hu',
-            logo: 'https://tm3.hu/assets/img/icon.svg',
+            url: 'https://www.tm3.hu',
+            logo: 'https://www.tm3.hu/assets/img/icon.svg',
         },
     };
 

@@ -8,8 +8,8 @@
 ## Előfeltételek (1 perc)
 
 - ✅ A `N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4` meta tag **már bent van** az `index.html` `<head>` blokkjában (commit `ccf27e0`, 2026-08-30).
-- ✅ A `sitemap.xml` **már fent van** a `https://tm3.hu/sitemap.xml` címen (12 URL, heti/havi frissítés).
-- ✅ A `robots.txt` már `Allow: /` és tartalmazza a `Sitemap: https://tm3.hu/sitemap.xml` direktívát.
+- ✅ A `sitemap.xml` **már fent van** a `https://www.tm3.hu/sitemap.xml` címen (12 URL, heti/havi frissítés).
+- ✅ A `robots.txt` már `Allow: /` és tartalmazza a `Sitemap: https://www.tm3.hu/sitemap.xml` direktívát.
 - ✅ A Google Fonts és Chart.js CDN-ek működnek (külső erőforrások, a Google crawler eléri).
 - ❌ Kell: Google fiók (Gmail). Ha nincs, csinálj egyet a `seo@tm3.hu` címre (a domain saját, így professzionális).
 
@@ -28,7 +28,7 @@
 
 1. A bal felső sarokban van egy **"Add property"** (vagy "Select property" ha már van) legördülő
 2. Válaszd a **"URL Prefix"** opciót (ne a "Domain" opciót, mert az DNS-verifikációt kér, ami bonyolultabb)
-3. Írd be: `https://tm3.hu` (pontosan így, https-sel, trailing slash NÉLKÜL)
+3. Írd be: `https://www.tm3.hu` (pontosan így, https-sel, trailing slash NÉLKÜL)
 4. Kattints a **"Continue"** gombra
 
 ### 1.3 Verifikáció HTML tag-gel (5 perc)
@@ -51,13 +51,13 @@
 5. A Google Search Console-ban:
    - Válaszd az **"HTML tag"** opciót
    - Kattints a **"Verify"** gombra
-   - A Google lekéri a `https://tm3.hu/` oldalt, megnézi a meta tag-et, és ha megvan, **"Ownership confirmed"** zöld pipát mutat
+   - A Google lekéri a `https://www.tm3.hu/` oldalt, megnézi a meta tag-et, és ha megvan, **"Ownership confirmed"** zöld pipát mutat
 
 ### 1.4 Ha a verifikáció nem sikerül (hibaelhárítás, 5 perc)
 
 Ha a Google azt mondja, hogy "Verification failed":
 
-1. **Böngészőben nyisd meg:** `https://tm3.hu/` → View Source (Ctrl+U) → Keresd meg: `google-site-verification`
+1. **Böngészőben nyisd meg:** `https://www.tm3.hu/` → View Source (Ctrl+U) → Keresd meg: `google-site-verification`
 2. Ha **megtalálod** a meta taget, de a Google mégsem találja:
    - Várj 5-10 percet (a Google cache frissítése)
    - Kattints a **"Verify"** gombra újra
@@ -84,8 +84,8 @@ Ha zöld pipa, a tm3.hu property megjelenik a Search Console bal oldali menüjé
 ### 2.2 Új sitemap hozzáadása (2 perc)
 
 1. Az oldal tetején van egy **"Add a new sitemap"** beviteli mező
-2. A legördülőben válaszd a **"https://tm3.hu"**-t (vagy írd be manuálisan a domain prefixet)
-3. A szöveges mezőbe írd: **`sitemap.xml`** (vagy `https://tm3.hu/sitemap.xml`)
+2. A legördülőben válaszd a **"https://www.tm3.hu"**-t (vagy írd be manuálisan a domain prefixet)
+3. A szöveges mezőbe írd: **`sitemap.xml`** (vagy `https://www.tm3.hu/sitemap.xml`)
 4. Kattints a **"Submit"** gombra
 
 ### 2.3 Várakozás és ellenőrzés (2 perc)
@@ -119,7 +119,7 @@ A **Request Indexing** kényszeríti a Googlebot-ot, hogy **azonnal** feltérké
 ### 3.2 Első URL: a főoldal (5 perc)
 
 1. A Search Console tetején van egy **"URL Inspection"** keresőmező (vagy a bal menüben "URL Inspection")
-2. Írd be: **`https://tm3.hu/`**
+2. Írd be: **`https://www.tm3.hu/`**
 3. Nyomj Entert
 4. A Google ellenőrzi az URL-t:
    - **"URL is on Google"** (zöld) — már indexelve van
@@ -134,21 +134,21 @@ A **Request Indexing** kényszeríti a Googlebot-ot, hogy **azonnal** feltérké
 Az alábbi 11 URL-t ismételd meg egyenként (minden URL-re: beírod → Enter → Request Indexing):
 
 **Tier 1 — legfontosabb, pénzügyi szándék:**
-1. `https://tm3.hu/pages/szervizek.html`
-2. `https://tm3.hu/pages/tco.html`
-3. `https://tm3.hu/pages/kalkulator.html`
-4. `https://tm3.hu/pages/vasarlas.html`
-5. `https://tm3.hu/pages/gyik.html`
+1. `https://www.tm3.hu/pages/szervizek.html`
+2. `https://www.tm3.hu/pages/tco.html`
+3. `https://www.tm3.hu/pages/kalkulator.html`
+4. `https://www.tm3.hu/pages/vasarlas.html`
+5. `https://www.tm3.hu/pages/gyik.html`
 
 **Tier 2 — fontos kiegészítő:**
-6. `https://tm3.hu/pages/hibak.html`
-7. `https://tm3.hu/pages/tobberek.html`
-8. `https://tm3.hu/pages/fogyasztas.html`
-9. `https://tm3.hu/pages/blog.html`
+6. `https://www.tm3.hu/pages/hibak.html`
+7. `https://www.tm3.hu/pages/tobberek.html`
+8. `https://www.tm3.hu/pages/fogyasztas.html`
+9. `https://www.tm3.hu/pages/blog.html`
 
 **Tier 3 — kiegészítő:**
-10. `https://tm3.hu/pages/kozosseg.html`
-11. `https://tm3.hu/pages/jogi.html`
+10. `https://www.tm3.hu/pages/kozosseg.html`
+11. `https://www.tm3.hu/pages/jogi.html`
 
 ### 3.4 Mit jelent a "Request Indexing" státusz?
 
@@ -187,7 +187,7 @@ Ez normális. A Google nem ígér gyorsaságot.
 ### 4.1 URL Inspection újra
 
 1. Nyisd meg a Search Console-t
-2. Menj a **"URL Inspection"** → `https://tm3.hu/`
+2. Menj a **"URL Inspection"** → `https://www.tm3.hu/`
 3. Ha **"URL is on Google"** (zöld) — kész, sikeres
 4. Ha még mindig **"URL is not on Google"**:
    - Kattints a **"Coverage"** menüpontra a bal oldalon
@@ -271,20 +271,20 @@ Ha később kapsz spam backlinkeket:
 
 ### "A Google nem találja a verification meta tag-et"
 
-1. Ellenőrizd: `https://tm3.hu/` → Ctrl+U → keresd: `google-site-verification`
+1. Ellenőrizd: `https://www.tm3.hu/` → Ctrl+U → keresd: `google-site-verification`
 2. Ha a GitHub Pages frissítve van (`hrcsabahr.github.io/tm3-hu/`) de a `tm3.hu` nem, akkor a Rackhost CDN cache-eli a régit. Várj 5-15 percet, vagy a Rackhost adminban kényszerítsd a cache törlést.
 3. Ha a meta tag tényleg hiányzik, ellenőrizd az `index.html` 12. sorát.
 
 ### "A sitemap 'Couldn't fetch' státuszban van"
 
-1. Ellenőrizd böngészőben: `https://tm3.hu/sitemap.xml` — betöltődik?
+1. Ellenőrizd böngészőben: `https://www.tm3.hu/sitemap.xml` — betöltődik?
 2. Ha 404-et ad, a `sitemap.xml` nincs fent a Rackhost-on (csak a GitHub Pages-en). Töltsd fel FTP-n vagy a Rackhost fájlkezelőben.
 3. Ha betöltődik, de a Google nem találja, várj 5-10 percet (cache).
 
 ### "Az URL Inspection 'Crawled, currently blocked'-ot mutat"
 
 1. A Google feltérképezte, de valami blokkolja az indexelést.
-2. Ellenőrizd a `robots.txt`-t: `https://tm3.hu/robots.txt` → biztosan `Allow: /`
+2. Ellenőrizd a `robots.txt`-t: `https://www.tm3.hu/robots.txt` → biztosan `Allow: /`
 3. Ellenőrizd az oldal forrását: nincs `<meta name="robots" content="noindex">` ?
 4. Ha minden rendben, kattints a **"Request Indexing"** újra 24 óra múlva.
 

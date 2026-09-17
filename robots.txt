@@ -16,6 +16,6 @@ Disallow: /*_copy.*
 Disallow: /*_backup.*
 Disallow: /*.tmp
 
-Sitemap: https://tm3.hu/sitemap.xml
+Sitemap: https://www.tm3.hu/sitemap.xml
 
 Crawl-delay: 1

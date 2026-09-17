@@ -124,7 +124,7 @@ A `seo-head.js` automatikusan kezeli a FAQPage-t, de egyedi schema kellene:
     "addressCountry": "HU"
   },
   "telephone": "+36-23-555-123",
-  "url": "https://tm3.hu/pages/szervizek.html#budaors",
+  "url": "https://www.tm3.hu/pages/szervizek.html#budaors",
   "priceRange": "$$$",
   "openingHoursSpecification": [...]
 }
@@ -269,7 +269,7 @@ Tárgy: [Sajtóközlemény] tm3.hu — Magyar Tesla Model 3 tudásbázis indult
 
 Tisztelt Szerkesztőség!
 
-A tm3.hu (https://tm3.hu) 2026 augusztusában indult, és célja, hogy a
+A tm3.hu (https://www.tm3.hu) 2026 augusztusában indult, és célja, hogy a
 magyar nyelvű Tesla Model 3 tulajdonosok számára átfogó, független
 tudásbázist nyújtson. Az oldal különlegessége, hogy 850+ magyar
 tulajdonos valós mérési adatait, a Tesla flottajelentéseket és a
@@ -297,7 +297,7 @@ Az oldal teljesen ingyenes, reklámmentes, és a Tesla, Inc.-től
 független. A tartalom CC BY-SA 4.0 licenc alatt nyílt forráskódú.
 
 Háttéranyagok, képek, interjú-lehetőség:
-- Web: https://tm3.hu
+- Web: https://www.tm3.hu
 - Email: seo@tm3.hu
 - GitHub: https://github.com/hrcsabahr/tm3-hu (teljes kód, nyílt)
 
@@ -344,7 +344,7 @@ Kérem, jelezzék, ha érdekli a lehetőség, és melyik témát preferálják.
 Üdvözlettel,
 [tm3.hu]
 seo@tm3.hu
-https://tm3.hu
+https://www.tm3.hu
 ```
 
 ### 5.3 Linkcsere ajánlat (Tier 3)
@@ -354,7 +354,7 @@ Tárgy: Linkcsere ajánlat — tm3.hu ↔ [partner domain]
 
 Kedves [Webmester]!
 
-A tm3.hu (https://tm3.hu) magyar Tesla Model 3 tudásbázis vagyunk,
+A tm3.hu (https://www.tm3.hu) magyar Tesla Model 3 tudásbázis vagyunk,
 amely 2026-ban indult és havonta [X ezer] látogatót ér el.
 
 Szeretnénk linkcsere-együttműködést javasolni:
@@ -397,7 +397,7 @@ Főbb funkciók:
 CC BY-SA 4.0 licenc alatt.
 
 Kérlek, nézzétek meg és jelezzétek, ha van javaslatotok!
-https://tm3.hu
+https://www.tm3.hu
 ```
 
 ---
@@ -407,7 +407,7 @@ https://tm3.hu
 ### Lépésről lépésre:
 
 1. **Regisztráció:** https://search.google.com/search-console
-   - "Add Property" → "URL Prefix" → `https://tm3.hu`
+   - "Add Property" → "URL Prefix" → `https://www.tm3.hu`
    - Verifikáció: HTML tag (legegyszerűbb)
 
 2. **HTML tag verifikáció:**
@@ -419,16 +419,16 @@ https://tm3.hu
    - **Megjegyzés:** ez már bent van az index.html-ben (`N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4`)
 
 3. **Sitemap beküldése:**
-   - Search Console → "Sitemaps" → `https://tm3.hu/sitemap.xml`
+   - Search Console → "Sitemaps" → `https://www.tm3.hu/sitemap.xml`
    - Submit → Várj 24-48 órát
 
 4. **URL Inspection:**
-   - "URL Inspection" → `https://tm3.hu/` → "Request Indexing"
+   - "URL Inspection" → `https://www.tm3.hu/` → "Request Indexing"
    - Ismételd meg a fontos oldalakra:
-     - `https://tm3.hu/pages/szervizek.html`
-     - `https://tm3.hu/pages/tco.html`
-     - `https://tm3.hu/pages/kalkulator.html`
-     - `https://tm3.hu/pages/gyik.html`
+     - `https://www.tm3.hu/pages/szervizek.html`
+     - `https://www.tm3.hu/pages/tco.html`
+     - `https://www.tm3.hu/pages/kalkulator.html`
+     - `https://www.tm3.hu/pages/gyik.html`
 
 5. **Monitorozás (2-4 hét után):**
    - "Performance" → keresési lekérdezések, átkattintási arány (CTR), átlagos helyezés
@@ -438,9 +438,9 @@ https://tm3.hu
 ### Bing Webmaster Tools (opcionális, de érdemes):
 
 1. https://www.bing.com/webmasters
-2. "Add Site" → `https://tm3.hu`
+2. "Add Site" → `https://www.tm3.hu`
 3. Verifikáció: BingSiteAuth.xml feltöltése (CNAME vagy meta tag)
-4. Sitemap beküldése: `https://tm3.hu/sitemap.xml`
+4. Sitemap beküldése: `https://www.tm3.hu/sitemap.xml`
 
 ---
 
