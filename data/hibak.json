@@ -254,6 +254,71 @@
       "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "budapest-buda-tesla"],
       "megelozes": "Kíméld a csomagtér kábelkötegét (ne csípd be), és rendszeresen frissítsd a szoftvert.",
       "megjegyzes": "NHTSA visszahívás (2026. május) 218 868 járműre a késleltetett tolatókép miatt — OTA frissítéssel javítható."
+    },
+    {
+      "id": "fek-korrozio",
+      "kategoria": "mechanikai",
+      "cim": "Féknyereg korrózió / szoruló fék (regen-fékezés miatt)",
+      "evjarat": "2017+",
+      "gyakorisag": "gyakori",
+      "tunetek": [
+        "Koccanó hang elinduláskor parkolás után (a betét leválik a tárcsáról)",
+        "Csikorgás, nyikorgás kis sebességnél, eső után rosszabb",
+        "Egyik kerék melegebb a többinél vezetés után",
+        "Fékezéskor oldalra húz az autó",
+        "Egyenetlen betétkopás, rozsdás, texturált tárcsa"
+      ],
+      "ok": "A regeneratív fékezés a lassítás nagy részét végzi, így a súrlódó fék alig használódik és nem melegszik fel — a nedvesség és a téli só rátapad a féknyereg csúszócsapjaira, amelyek berozsdásodnak és beszorulnak. A hátsó fékek (amelyek kevesebbet dolgoznak) hajlamosabbak rá.",
+      "javitás": "Féknyereg tisztítása és kenése (évente, sós utakon), súlyosabb esetben betét + tárcsa csere",
+      "ido_orak": "1-3",
+      "ar_eur": "150-1050",
+      "ar_huf": "60000-420000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "debrecen-green-mobility", "gyor-ev-tech", "szeged-ecomotive", "szekesfehervar-emobil", "pecs-autovillamos"],
+      "megelozes": "Évente féknyereg-tisztítás és -kenés (sós utakon mindenképp), időnként használd határozottan a fékpedált, hogy a betétek és tárcsák tiszták maradjanak.",
+      "megjegyzes": "Karbantartási jelenség, nem visszahívás. A Tesla saját tech-note-ja (TN-19-33-002/004) írja elő az éves tisztítást és kenést. A 21V-387 visszahívás (laza féknyereg-csavar) ettől független hiba."
+    },
+    {
+      "id": "toltoajto-zar",
+      "kategoria": "villamos",
+      "cim": "Töltőcsatlakozó zár / töltőajtó hiba",
+      "evjarat": "2017+",
+      "gyakorisag": "közepes",
+      "tunetek": [
+        "A töltőkábel nem csatlakoztatható — a zár reteszelve marad",
+        "A kábel nem enged el töltés után (nem old a zár)",
+        "Télen befagy a töltőcsatlakozó zárja",
+        "A töltőajtó (flap) nem nyílik, vagy letörik",
+        "A kézi kioldó fül a csomagtartóban leszakad"
+      ],
+      "ok": "A töltőcsatlakozó retesz-szolenoidja nem megfelelően szigetelt — víz jut be, ami télen befagy, és a zár beszorul. A töltőajtó fedele mechanikailag eltörhet.",
+      "javitás": "Szolenoid / töltőcsatlakozó szerelvény cseréje, vagy a töltőajtó fedél cseréje",
+      "ido_orak": "0.5-2",
+      "ar_eur": "80-350",
+      "ar_huf": "32000-140000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech", "pecs-autovillamos", "miskolc-ev-center"],
+      "megelozes": "Télen használj előfűtést (Climate Defrost) töltés előtt, ne erőltesd a reteszt, és a kézi kioldót óvatosan használd.",
+      "megjegyzes": "A csomagtartóban lévő kézi kioldó füllel vészhelyzetben oldható a zár. A töltőajtó fedél olcsón (kb. 20-30 USD) pótolható."
+    },
+    {
+      "id": "pcs-hiba",
+      "kategoria": "elektronika",
+      "cim": "PCS (Power Conversion System) / fedélzeti töltő hiba",
+      "evjarat": "2018-2020 (főleg), 2017+",
+      "gyakorisag": "közepes",
+      "tunetek": [
+        "AC-töltéskor lecsökken a töltőáram (48A → 32A → 16A)",
+        "Otthoni töltés lassabb, mint korábban",
+        "AC-töltés hibaüzenet, de a Supercharger (DC) működik",
+        "A kocsi egyáltalán nem tölt AC-ről"
+      ],
+      "ok": "A PCS (a HV-akkumulátor 'penthouse'-ában található) 3 db 16A-es töltőmodulja közül egy vagy több meghibásodik. A 2018-as évjárat egyes példányainál gyártási hiba (TSB SB-18-16-011).",
+      "javitás": "PCS szerelvény cseréje (a HV-akkumulátor penthouse-ában)",
+      "ido_orak": "3-6",
+      "ar_eur": "1700-2500",
+      "ar_huf": "680000-1000000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech"],
+      "megelozes": "Nincs konkrét megelőzés — a hiba az alkatrész élettartamához kötött.",
+      "megjegyzes": "Fontos: a Tesla a PCS-t nem tekinti az akkumulátor-garancia részének, így a csere gyakran fizetős még garanciaidőn belül is. A Supercharger (DC) töltést nem érinti, mert az megkerüli a PCS-t."
     }
   ]
 }
