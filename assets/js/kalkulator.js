@@ -209,13 +209,22 @@
 
         const linearRate = LINEAR_DEGRADATION_PER_KM[chemistry];
         const linearStressor = Math.max(0.5, effectiveStressor);
-        // (1) Knee fázis: a SEI kialakulás miatt ~3x gyorsabb,
-        // mint a stabil szakasz (Recurrent 2024 break-in megfigyelés).
-        const rateKnee = 3 * linearRate * linearStressor;
+        // (1) A 0..100k km-es degradáció két fázisra oszlik:
+        //   - Knee fázis (0..35k km): SEI kialakulás, ~3x gyorsabb,
+        //     mint a közepes szakasz (Recurrent 2024 break-in).
+        //   - Közepes fázis (35k..100k km): lassabb, stabil.
+        // A teljes 0..100k veszteség (loss100k = 1 - r100k) már a
+        // stresszorral korrigálva van (r100k), ezért a két rate-et úgy
+        // számoljuk, hogy a 100k-s retention pontosan r100k legyen, ÉS
+        // a knee fázis tényleg gyorsabb legyen, mint a közepes.
+        // (A régi képlet a rateKnee-t a hosszú távú linearRate-ből
+        // számolta, ezért a knee fázis lassabb lett, mint a közepes —
+        // ami ellentmondott a SEI break-in viselkedésnek.)
+        const KNEE_RATIO = 3; // a knee fázis ennyivel gyorsabb a közepesnél
+        // adjustedLoss (= 1 - r100k) a stresszorral már korrigált veszteség.
+        const rateMedium = adjustedLoss / (KNEE_RATIO * KNEE_KM + (100000 - KNEE_KM));
+        const rateKnee = KNEE_RATIO * rateMedium;
         const rKnee = 1 - rateKnee * KNEE_KM;
-        // (2) Közepes lineáris 35k..100k km — ebből számítjuk a rate-et,
-        // hogy a retention @ 100k km pontosan r100k legyen.
-        const rateMedium = (rKnee - r100k) / (100000 - KNEE_KM);
 
         // Alap km-alapú retention számítás (3-szakaszos lineáris).
         let retention;
@@ -256,9 +265,12 @@
        ---------------------------------------------------------- */
     const COHORT_SIGMA_PCT = 1.2; // retention % szórása az azonos korú/kémiájú cohortban
 
-    function cohortPercentile(chemistry, km, capacityPct) {
-        // Becsült cohort retention az adott km-re és kémiára
-        const ageYears = km > 0 ? Math.min(15, km / 18000) : 0; // 18 000 km/év átlag
+    function cohortPercentile(chemistry, km, ageYears, capacityPct) {
+        // A cohort baseline ugyanazzal az életkorral (ageYears) számolva,
+        // mint a user pontszáma — így a calendar-aging korrekció nem
+        // számítódik kétszer. A z-score a user stresszorainak (SoC, DC,
+        // klíma, parkolás) hatását méri a baseline-hoz (80% SoC, 20% DC,
+        // mérsékelt, garázs) képest.
         const baseRetention = retentionFromKm(chemistry, km, ageYears, {
             soc: 80, dcArany: 20, klima: 'mérsékelt', parkol: 'garazs'
         }) * 100;
@@ -372,7 +384,7 @@
 
         const capacityPct = retentionFromKm(v.chemistry, state.km, ageYears, opts) * 100;
         const ranges = estimateRanges(v, capacityPct);
-        const cohort = cohortPercentile(v.chemistry, state.km, capacityPct);
+        const cohort = cohortPercentile(v.chemistry, state.km, ageYears, capacityPct);
 
         $('res-kapacitas').textContent = capacityPct.toFixed(1) + '%';
         $('res-kapacitas-label').textContent = `Maradó kapacitás (${v.name})`;
