@@ -1,21 +1,17 @@
 User-agent: *
 Allow: /
 
-# PWA és asset crawl engedélyezése
-Allow: /assets/
-Allow: /pages/
-
-# Disallow: legacy / belső fájlok
-Disallow: /service-worker.js
-Disallow: /assets/js/util.js
-Disallow: /assets/js/seo-head.js
-Disallow: /assets/css/_legacy.css
+# Belső / fejlesztői fájlok — ezeket ne indexelje a kereső
 Disallow: /CNAME
+Disallow: /_tools/
+Disallow: /tools/
+Disallow: /docs/
+Disallow: /*.md
+Disallow: /*.py
+Disallow: /audit_run.out.json
 Disallow: /*.bak
 Disallow: /*_copy.*
 Disallow: /*_backup.*
 Disallow: /*.tmp
 
 Sitemap: https://www.tm3.hu/sitemap.xml
-
-Crawl-delay: 1
