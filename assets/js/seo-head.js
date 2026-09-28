@@ -37,7 +37,7 @@
             section: 'Főoldal',
         },
         '/pages/szervizek.html': {
-            title: 'Tesla szervizek Magyarországon (2024) · tm3.hu',
+            title: 'Tesla szervizek Magyarországon (2026) · tm3.hu',
             description: 'Magyarországi Tesla-szervizek listája: hivatalos Budaörs, független specialisták Budapesten és vidéken. Árak, nyitvatartás, szolgáltatások.',
             h1: 'Magyarországi Tesla-szervizek',
             type: 'article',
@@ -69,7 +69,7 @@
             type: 'article',
             section: 'Kalkulátor',
             faq: [
-                    { q: 'Mennyi a Tesla Model 3 akkumulátor degradation 10 év után?', a: 'A Tesla Model 3 NCA (Long Range, Performance) akkumulátor 10 év / 150 000 km után 85-88%-os kapacitáson van. Az LFP (Standard Range+) cellák lassabban degradálódnak: 94% feletti 10 év után. A ciklusszám alapján 4000 teljes ciklus után a Performance még 90% felett teljesít.' },
+                    { q: 'Mennyi a Tesla Model 3 akkumulátor degradáció 10 év után?', a: 'A Carla/Voltest 2026 cohort alapján az NCA (Long Range, Performance) ~83%-ot, az NMC ~84%-ot, az LFP (SR+) pedig ~88%-ot tart 10 év / ~180 000 km után. A ciklusszám alapján 4000 teljes ciklus után a Performance még 90% felett teljesít.' },
                     { q: 'Milyen tényezők gyorsítják a degradation?', a: 'A degradation fő gyorsítói: rendszeres DC villámtöltés (Supercharger), magas SoC (90% felett) tartós tárolása, szélsőséges hőmérséklet (tartós -20°C alatt vagy 40°C felett), magas C-ráta (gyorshajtás), és a ritka töltési ciklusok (az akkumulátor szereti a rendszeres, közepes töltéseket).' },
                     { q: 'Mit jelent a State of Health (SoH)?', a: 'Az SoH (State of Health) az akkumulátor aktuális kapacitásának százalékos aránya az eredeti, gyári kapacitáshoz képest. Például egy 75 kWh-os új akku 5 év után 68 kWh-os valós kapacitású, ami 91% SoH-nak felel meg. 70% SoH alatt a Tesla saját szervize akkumulátor-cserét javasolhat.' },
                     { q: 'Mikor érdemes akkumulátort cserélni a Tesla Model 3-ban?', a: 'Akkumulátor-csere akkor indokolt, ha a SoH 70% alá esik, vagy ha a napi hatótáv a használati igények alá csökken. A Tesla Model 3 akkumulátor-modul csere ára Magyarországon 2,5-6 millió Ft (modulmérettől függően). A cserélt modul általában 90%+ SoH-val rendelkezik, és 2-4 évvel meghosszabbítja az autó élettartamát.' },
@@ -82,8 +82,8 @@
             type: 'article',
             section: 'TCO',
             faq: [
-                    { q: 'Megéri-e Tesla Model 3-at venni benzineshez képest 10 évre?', a: 'A 2026-os magyar árakkal számolva igen: egy Model 3 LR 10 év alatt 3-5 millió Ft-tal olcsóbb, mint egy hasonló BMW 330i. A villanyautó előnye az alacsonyabb üzemanyagköltség (15-20 Ft/km vs 50-60 Ft/km), a kisebb szervizigény (nincs olajcsere, vezérműszíj), és az alacsonyabb értékvesztés.' },
-                    { q: 'Mennyi az áramköltsége egy Tesla Model 3-nak 100 km-en?', a: 'Otthoni töltéssel (40 Ft/kWh) 100 km-re 600-900 Ft áramköltség. Supercharger-rel (110 Ft/kWh átlag) 1 800-2 500 Ft/100 km. Vegyes használat (60% otthon + 40% Supercharger) esetén az átlag 1 200-1 600 Ft/100 km, ami a benzines autó 4 000-5 000 Ft/100 km költségének negyede.' },
+                    { q: 'Megéri-e Tesla Model 3-at venni benzineshez képest 10 évre?', a: 'A 2026-os magyar árakkal számolva igen: egy Model 3 10 év alatt jellemzően 6-10 millió Ft-tal olcsóbb, mint egy hasonló BMW 330i (vételár + értékvesztés + üzemeltetés együtt). Az előny az alacsonyabb energia-költség, a gépjárműadó-mentesség és a kisebb szervizigény.' },
+                    { q: 'Mennyi az áramköltsége egy Tesla Model 3-nak 100 km-en?', a: 'Otthoni töltéssel (60 Ft/kWh) 100 km-re ~900-1 000 Ft áramköltség. Supercharger-rel (145 Ft/kWh) ~2 300-2 500 Ft/100 km. Vegyes használat (80% otthon + 20% Supercharger) ~1 200 Ft/100 km, ami a benzines autó 4 000-5 000 Ft/100 km költségének nagyjából a negyede.' },
                     { q: 'Milyen biztosítási költséggel kell számolni egy Tesla Model 3-ra?', a: 'A Tesla Model 3 kötelező biztosítása évi 60 000-110 000 Ft, a casco évi 180 000-350 000 Ft (10%-os önrész, márkától függően). A biztosítási díj magasabb, mint egy hasonló kategóriájú benzines autóé, de a kár-előzmények és a vezetési profil kedvezményt adhatnak.' },
                     { q: 'Mennyit veszít az értékéből a Tesla Model 3 5 év alatt?', a: 'Egy átlagos Tesla Model 3 LR 5 év / 100 000 km után az új ár 45-55%-át tartja meg (2026-os adatok alapján). Ez jobb, mint a hasonló prémium benzines szedánok átlaga (35-45%). Az LFP akkumulátoros SR+ modellek értékállósága kiemelkedő: 5 év után 60-65%.' },
                 ],
@@ -97,7 +97,7 @@
             faq: [
                     { q: 'Milyen tipikus hibák fordulnak elő a Tesla Model 3-ban?', a: 'A leggyakoribb Tesla Model 3 hibák: ajtókilincs meghibásodása (80 000-150 000 Ft), 12V akkumulátor csere (50 000-90 000 Ft, 2-4 évente), MCU (Media Control Unit) meghibásodás (150 000-300 000 Ft), klíma kompresszor hiba (200 000-350 000 Ft), felfüggesztési kopások (60 000-180 000 Ft).' },
                     { q: 'Mikor kell cserélni a 12V akkumulátort a Tesla Model 3-ban?', a: 'A Tesla Model 3 12V akkumulátor (lítium-ion) élettartama 3-5 év, ritkábban 6 év. Cserére utaló jelek: alacsony feszültség figyelmeztetések, indítási nehézségek, random szoftverhibák, bizonytalan érintőképernyő működés. A csere egyszerű, kb. 30 perc, 50 000-90 000 Ft.' },
-                    { q: 'Milyen gyári visszahívások voltak a Tesla Model 3-ra?', a: 'A legfontosabb visszahívások: 2022-es fékpedál modul, 2023-as hátsó lámpák firmware frissítése, 2024-es elülső csomagtartó-zár. A legtöbb visszahívás OTA (over-the-air) szoftverfrissítéssel megoldható, fizikai szervizbejárást nem igényel.' },
+                    { q: 'Milyen gyári visszahívások voltak a Tesla Model 3-ra?', a: 'A legfontosabbak: tolatókamera kábelköteg (2021, 356 ezer autó) és képkésleltetés (2026, 218 ezer), hőszivattyú expanziós szelep (2022), Autopilot Autosteer (2023, 2 millió), féknyereg-csavar (2021). A teljes lista NHTSA-számokkal a Visszahívások oldalon található.' },
                     { q: 'Mennyibe kerül egy ajtókilincs csere a Tesla Model 3-ban?', a: 'Egy Tesla Model 3 ajtókilincs csere munkadíjjal együtt 80 000-150 000 Ft. Az alkatrész ára kb. 35 000-60 000 Ft, a beszerelés 1-2 óra. Gyakori hiba, főleg régebbi (2017-2020) modelleken, de a 2021+ modellekben ritkábbá vált a kialakítás javítása miatt.' },
                 ],
         },
@@ -134,10 +134,9 @@
             type: 'article',
             section: 'Blog',
             faq: [
-                    { q: 'Milyen szoftverfrissítéseket kap a Tesla Model 3 2026-ban?', a: 'A Tesla 2026-ban negyedévente ad ki nagyobb szoftverfrissítéseket. A Model 3 tulajdonosok 2026 első felében várható frissítések: továbbfejlesztett Autopilot vizuális visszajelzés, új alkalmazás-indító, jobb akkumulátor-előmelegítés, Apple Music CarPlay integráció, valamint a Smart Summon továbbfejlesztése.' },
-                    { q: 'Mikor nyílik új Tesla Supercharger Magyarországon?', a: '2026-ban várható új Supercharger-állomások: Pécs, Miskolc, Veszprém, Nyíregyháza és a Budapest Liszt Ferenc repülőtér. A Tesla célja, hogy minden magyar autópálya-csomóponthoz (M1, M3, M5, M7) 10 Supercharger-állomás legyen 2027 végéig.' },
-                    { q: 'Milyen hírek vannak a Tesla Model 3 2026-os frissítéséről (Highland 2)?', a: 'A 2026-os Model 3 frissítés (Highland 2) várható újításai: hosszabb hatótáv (LR: 600+ km WLTP), 50 kW-os V2L (Vehicle-to-Load) külső áramkimenet, továbbfejlesztett HW5 Autopilot számítógép, adaptív futómű, valamint az új Cybertruck-stílusú légterelők.' },
-                    { q: 'Hogyan lehet csatlakozni a magyar Tesla-közösséghez?', a: 'A magyar Tesla-közösség legnagyobb platformjai: a Tesla Club Hungary Facebook csoport (15 000+ tag), a Reddit r/TeslaHungary, valamint a Discord szerverek és a helyi meetup-ok. A tm3.hu oldalon is elérhető egy közösségi fórum, ahol kérdéseket lehet feltenni és tapasztalatokat megosztani.' },
+                    { q: 'Milyen változások jöttek a 2026-os Model 3 kínálatban?', a: 'A Tesla 2026-ra átszervezte a kínálatot: a Long Range-t Premium-ra nevezte át, és bevezetett egy olcsóbb Standard RWD alapváltozatot (LFP, ~64 kWh, 534 km WLTP). Az Edmunds a Model 3 RWD-t választotta 2026 legjobb EV-jének, és a leggazdaságosabbnak mérték.' },
+                    { q: 'Van-e aktuális visszahívás a Tesla Model 3-ra?', a: 'A legutóbbiak: tolatókamera képkésleltetés (2026. május, 218 868 autó, OTA javítás) és a futómű-keresztlengőkar NHTSA-vizsgálata (2026. július, ~1,2 millió autó — még nem visszahívás). A teljes lista a Visszahívások oldalon található.' },
+                    { q: 'Hol találom a legfrissebb Tesla híreket?', a: 'A tm3.hu Hírek oldalán folyamatosan frissülő, forrásmegjelöléssel ellátott cikkeket találsz a szoftverfrissítésekről, Supercharger újdonságokról és a Model 3 változásairól.' },
                 ],
         },
         '/pages/gyik.html': {
@@ -173,6 +172,20 @@
                     { q: 'Hogyan jelenthetek be hibát vagy helytelen információt a tm3.hu-n?', a: 'Hibabejelentést a tm3.hu GitHub Discussions felületén tehetsz (https://github.com/tm3-hu/tm3-hu.github.io/discussions), vagy e-mailben a hello@tm3.hu címen. A bejelentéseket 1-3 munkanapon belül feldolgozzuk, és szükség esetén javítjuk a tartalmat.' },
                 ],
         },
+        '/pages/gumi.html': {
+            title: 'Tesla Model 3 gumiabroncs és felni ajánló · tm3.hu',
+            description: 'Tesla Model 3 gumiabroncs és felni ajánló — 18/19/20 col, TOP-listák, hatótáv-veszteség, téli-nyári ajánlások.',
+            h1: 'Gumiabroncs és felni ajánló',
+            type: 'article',
+            section: 'Gumi',
+        },
+        '/pages/visszahivasok.html': {
+            title: 'Tesla Model 3 visszahívások listája · tm3.hu',
+            description: 'Tesla Model 3 visszahívások listája NHTSA számokkal — tolatókamera, hőszivattyú, futómű, biztonsági öv, légzsák.',
+            h1: 'Tesla Model 3 visszahívások',
+            type: 'article',
+            section: 'Visszahívások',
+        },
     };
 
     function getCurrentPath() {
@@ -185,29 +198,31 @@
     function ensureMeta(name, attr, content) {
         // attr = 'name' | 'property'
         const sel = `meta[${attr}="${name}"]`;
-        let el = document.head.querySelector(sel);
-        if (!el) {
-            el = document.createElement('meta');
-            el.setAttribute(attr, name);
-            document.head.appendChild(el);
-        }
-        el.setAttribute('content', content);
-        return el;
+        const el = document.head.querySelector(sel);
+        // FONTOS: ha a meta tag már létezik az inline HTML-ben, NE írjuk felül —
+        // az inline HTML az irányadó (a PAGES config elavulhat). Csak a hiányzót pótoljuk.
+        if (el) return el;
+        const created = document.createElement('meta');
+        created.setAttribute(attr, name);
+        created.setAttribute('content', content);
+        document.head.appendChild(created);
+        return created;
     }
 
     function ensureLink(rel, href) {
-        let el = document.head.querySelector(`link[rel="${rel}"]`);
-        if (!el) {
-            el = document.createElement('link');
-            el.setAttribute('rel', rel);
-            document.head.appendChild(el);
-        }
-        el.setAttribute('href', href);
-        return el;
+        const el = document.head.querySelector(`link[rel="${rel}"]`);
+        // Inline HTML az irányadó — csak a hiányzó linket pótoljuk.
+        if (el) return el;
+        const created = document.createElement('link');
+        created.setAttribute('rel', rel);
+        created.setAttribute('href', href);
+        document.head.appendChild(created);
+        return created;
     }
 
     function setOrUpdateTitle(t) {
-        if (document.title !== t) document.title = t;
+        // Az inline <title> az irányadó — csak akkor állítjuk be, ha üres.
+        if (!document.title) document.title = t;
     }
 
     function injectJsonLd(page, basePath) {
@@ -265,13 +280,13 @@
 
         const ld = { '@context': 'https://schema.org', '@graph': graph };
 
-        let script = document.head.querySelector('script[type="application/ld+json"]');
-        if (!script) {
-            script = document.createElement('script');
-            script.type = 'application/ld+json';
-            document.head.appendChild(script);
-        }
+        // FONTOS: NE írjuk felül a meglévő inline JSON-LD-t (ami gazdagabb
+        // schema-kat tartalmazhat: Article, SoftwareApplication, ItemList,
+        // FAQPage stb.) — a saját @graph-unkat külön scriptként fűzzük hozzá.
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
         script.textContent = JSON.stringify(ld);
+        document.head.appendChild(script);
     }
 
     function applySeo() {
