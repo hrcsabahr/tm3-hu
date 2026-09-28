@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updated": "2026-08-21",
-    "forras": "Tesla Motors Club fórum, P3 Charging elemzések, hazai szervizek tapasztalatai",
+    "updated": "2026-09-28",
+    "forras": "Tesla Motors Club fórum, P3 Charging elemzések, hazai szervizek tapasztalatai, NHTSA/Reuters visszahívások",
     "megjegyzes": "Az árak tájékoztató jellegűek, 2026 Q2 állapot. A garanciális esetek általában ingyenesek 8 év / 160 000 km-ig a HV-akkura."
   },
   "hibak": [
@@ -170,6 +170,90 @@
       "ar_huf": "220000-480000",
       "megoldo_szerviz": ["budapest-pest-tesla", "budapest-buda-tesla", "budapest-bodyshop"],
       "megjegyzes": "Garanciális javítás, ha a tömítés gyári hibás. Utána saját költségre."
+    },
+    {
+      "id": "lengokar-kopas",
+      "kategoria": "mechanikai",
+      "cim": "Első lengőkar (control arm) szilent kopás — csikorgás",
+      "evjarat": "2017-2021",
+      "gyakorisag": "gyakori",
+      "tunetek": [
+        "Nyikorgó, csikorgó hang lassú tempónál és fekvőrendőrnél",
+        "Kopogás egyenetlen úton, kátyúknál",
+        "Egyenetlen belső éle kopás a gumikon",
+        "Kormány kóválygás autópályán, bizonytalan nyomtartás"
+      ],
+      "ok": "A felső lengőkar gömbfeje és a szilent (gumibak) elhasználódik. A Model 3 nagyobb önsúlya és az azonnali nyomaték a benzineseknél gyorsabban koptatja a futóművet.",
+      "javitás": "Felső lengőkar(ok) cseréje készletben, szükség esetén alsó szilent csere, utána futómű-állítás",
+      "ido_orak": "1-3",
+      "ar_eur": "250-700",
+      "ar_huf": "100000-280000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech", "debrecen-green-mobility", "szeged-ecomotive", "miskolc-ev-center", "pecs-autovillamos", "szekesfehervar-emobil"],
+      "megelozes": "Évente futómű-ellenőrzés, 50 000 km-enként teljes átvizsgálás. A kopott szilentet ne halogasd — további gumikopást és egyenetlen fékhatást okoz.",
+      "megjegyzes": "A leggyakrabban jelentett Model 3 probléma. A 2021 utáni (Highland) futómű továbbfejlesztett, ritkábban hibásodik."
+    },
+    {
+      "id": "hopumpa",
+      "kategoria": "villamos",
+      "cim": "Hőszivattyú / Octovalve hiba — nincs fűtés télen",
+      "evjarat": "2021+ (hőszivattyús modellek)",
+      "gyakorisag": "közepes",
+      "tunetek": [
+        "Télen nem fűt a kabin, hideg levegőt fúj",
+        "VCFRONT_a447 vagy VCFRONT_a192 hibaüzenet",
+        "Hangos, magas visítás indításkor / előfűtéskor (a kompresszor 'sírása')",
+        "A szélvédő nem páramentesíthető"
+      ],
+      "ok": "A hőszivattyús rendszer (supermanifold + Octovalve) kompresszora, hűtőközeg-nyomásérzékelői (PT-szenzorok) vagy expanziós szelepe hibásodik meg. Korai 2021-es példányoknál hűtőfolyadék-hiány is előfordult.",
+      "javitás": "PT-szenzorok cseréje, vagy kompresszor / supermanifold csere + rendszer-átöblítés",
+      "ido_orak": "4-12",
+      "ar_eur": "900-2500",
+      "ar_huf": "360000-1000000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech", "miskolc-ev-center"],
+      "megelozes": "Hidegben használj előfűtést (preconditioning) 10-15 perccel indulás előtt. Ha visító hangot hallasz fagyban, azonnal szervizbe vele — a szétforgácsolt kompresszor az egész rendszert beszennyezi.",
+      "megjegyzes": "NHTSA 22V-063 visszahívás (2022. febr., 26 681 jármű) szoftveres expanziós-szelep hibát javított OTA-val. A PT-szenzor csere a TSB SB-21-18-002 szerint történik."
+    },
+    {
+      "id": "lateral-link",
+      "kategoria": "mechanikai",
+      "cim": "Első alsó keresztlengőkar (lateral link) leválása",
+      "evjarat": "2018-2020",
+      "gyakorisag": "ritka",
+      "tunetek": [
+        "Hirtelen irányíthatóság-vesztés vezetés közben",
+        "Kattanó, recsegő hang kanyarodáskor a leválás előtt",
+        "Az autó félrehúz, a kormány elnehezül",
+        "A jármű megáll és vontatásra szorul"
+      ],
+      "ok": "Az első alsó lateral link rögzítése leválhat a segédvázról, ami irányíthatóság-vesztést okozhat.",
+      "javitás": "Rögzítő csavarok ellenőrzése és cseréje előírt nyomatékkal, szükség esetén a keresztlengőkar cseréje",
+      "ido_orak": "2-4",
+      "ar_eur": "300-800",
+      "ar_huf": "120000-320000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech", "debrecen-green-mobility"],
+      "megelozes": "Figyelj a futómű felől érkező kopogó/kattogó hangokra, és évente ellenőriztesd a futómű-csavarokat.",
+      "megjegyzes": "Az amerikai NHTSA 2026 júliusában vizsgálatot indított ~1,2 millió járműre (2018-2020 Model 3 és 2021-2023 Model Y) 156 panasz alapján. Visszahívás egyelőre nem született, balesetet vagy sérülést nem jelentettek."
+    },
+    {
+      "id": "tolatokamera",
+      "kategoria": "elektronika",
+      "cim": "Tolatókamera képkimaradás / csomagtér kábelköteg",
+      "evjarat": "2017-2020 (kábel), 2024-2025 (szoftver)",
+      "gyakorisag": "közepes",
+      "tunetek": [
+        "Tolatáskor fekete vagy késleltetett kamerakép",
+        "A kamera időnként nem jelenít meg képet",
+        "A hátrameneti kép befagy",
+        "Szakadozó kép a csomagtartó nyitásakor"
+      ],
+      "ok": "A 2017-2020-as Model 3 csomagtér kábelkötege a nyitás-zárás miatt eltörik/elhasználódik. Újabb modelleknél szoftveres képkésleltetés okozhatja.",
+      "javitás": "Kábelköteg csere, vagy szoftverfrissítés (OTA)",
+      "ido_orak": "1-2",
+      "ar_eur": "120-350",
+      "ar_huf": "50000-140000",
+      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "budapest-buda-tesla"],
+      "megelozes": "Kíméld a csomagtér kábelkötegét (ne csípd be), és rendszeresen frissítsd a szoftvert.",
+      "megjegyzes": "NHTSA visszahívás (2026. május) 218 868 járműre a késleltetett tolatókép miatt — OTA frissítéssel javítható."
     }
   ]
 }

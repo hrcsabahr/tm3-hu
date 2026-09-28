@@ -25,6 +25,7 @@
         { href: 'pages/tco.html', label: 'TCO' },
         { href: 'pages/szervizek.html', label: 'Szervizek' },
         { href: 'pages/hibak.html', label: 'Hibák' },
+        { href: 'pages/visszahivasok.html', label: 'Visszahívások' },
         // 2026-08-31: USER REPORT — gumi-felni ajanlo oldal felvetele
         { href: 'pages/gumi.html', label: 'Gumi' },
         { href: 'pages/gyik.html', label: 'GYIK' },

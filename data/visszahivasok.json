@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "updated": "2026-09-28",
+    "forras": "NHTSA visszahívási adatbázis (nhtsa.gov), Tesla support oldal, Reuters",
+    "megjegyzes": "Amerikai (NHTSA) visszahívások, időrendben. Az európai/magyar piac ettől eltérhet — ellenőrizd a VIN-ed a Tesla alkalmazásban vagy a service.tesla.com/vin-recall-search oldalon."
+  },
+  "visszahivasok": [
+    {
+      "id": "knee-bolster-2026",
+      "datum": "2026-07-06",
+      "nhtsa": "26V445000",
+      "evjarat": "2024 Model 3 (+2026 Model Y)",
+      "alkatresz": "Légzsák",
+      "cim": "Térdlégzsák (knee bolster) rögzítés",
+      "leiras": "Egyes 2024-es Model 3 és 2026-os Model Y járműveknél a térdlégzsák rögzítése nem megfelelő, ami ütközéskor befolyásolhatja a védelmet.",
+      "javitas": "szerviz",
+      "darab": null
+    },
+    {
+      "id": "tolatokamera-2026",
+      "datum": "2026-05-03",
+      "nhtsa": "26V283000",
+      "evjarat": "2017, 2021-2023 Model 3",
+      "alkatresz": "Tolatókamera",
+      "cim": "Tolatókamera késleltetett kép",
+      "leiras": "A 2026.8.6-os szoftververziót futtató járműveknél a tolatási kamerakép késleltetve jelenik meg, ami növeli a tolatásos baleset kockázatát.",
+      "javitas": "ota",
+      "darab": 218868
+    },
+    {
+      "id": "hv-kontaktor-2025",
+      "datum": "2025-10-09",
+      "nhtsa": "25V690000",
+      "evjarat": "2025 Model 3 (+2026 Model Y)",
+      "alkatresz": "Hajtás",
+      "cim": "Nagyfeszültségű rendszer biztosíték/kontaktor",
+      "leiras": "Egyes 2025-ös Model 3 és 2026-os Model Y járműveknél a nagyfeszültségű rendszer biztosíték/kontaktor egysége hibás lehet.",
+      "javitas": "szerviz",
+      "darab": null
+    },
+    {
+      "id": "ules-csavar-2025",
+      "datum": "2025-06-17",
+      "nhtsa": "25V410000",
+      "evjarat": "2026 Model 3 (+Model Y)",
+      "alkatresz": "Ülés",
+      "cim": "Ülés kritikus rögzítőcsavarok",
+      "leiras": "Egyes 2026-os Model 3 és Model Y járműveknél az ülések kritikus rögzítőcsavarjai nem megfelelően lettek meghúzva.",
+      "javitas": "szerviz",
+      "darab": null
+    },
+    {
+      "id": "szervokormany-2025",
+      "datum": "2025-02-13",
+      "nhtsa": "25V092000",
+      "evjarat": "2023 Model 3 (+Model Y)",
+      "alkatresz": "Kormányzás",
+      "cim": "Szervokormány rásegítés megszűnése",
+      "leiras": "A 2023.38.4-nél korábbi szoftvert futtató járműveknél a szervokormány rásegítése átmenetileg megszűnhet, megnövelve a kormányzási erőt.",
+      "javitas": "ota",
+      "darab": 376241
+    },
+    {
+      "id": "elektromos-2025",
+      "datum": "2025-01-05",
+      "nhtsa": "25V002000",
+      "evjarat": "2024-2025 Model 3",
+      "alkatresz": "Elektronika",
+      "cim": "Elektromos rendszer hiba",
+      "leiras": "Egyes 2024-2025-ös Model 3 járműveknél elektromos rendszerprobléma léphet fel, amit vezeték nélküli frissítés javít.",
+      "javitas": "ota",
+      "darab": 239382
+    },
+    {
+      "id": "tpms-2024",
+      "datum": "2024-12-16",
+      "nhtsa": "24V935000",
+      "evjarat": "2017-2025 Model 3",
+      "alkatresz": "Gumiabroncs",
+      "cim": "TPMS guminyomás-figyelő",
+      "leiras": "A guminyomás-ellenőrző (TPMS) figyelmeztető lámpa bizonyos esetekben nem világít, amikor kellene.",
+      "javitas": "ota",
+      "darab": null
+    },
+    {
+      "id": "motorhazteto-2024",
+      "datum": "2024-07-23",
+      "nhtsa": "24V554000",
+      "evjarat": "2021-2024 Model 3",
+      "alkatresz": "Karosszéria",
+      "cim": "Motorháztető retesz érzékelés",
+      "leiras": "A motorháztető retesz érzékelője nem mindig jelzi, ha a motorháztető nincs becsukva — menet közben kinyílhat és kitakarhatja a kilátást.",
+      "javitas": "ota",
+      "darab": null
+    },
+    {
+      "id": "ov-figyelmeztetes-2024",
+      "datum": "2024-05-27",
+      "nhtsa": "24V376000",
+      "evjarat": "2017-2023 Model 3",
+      "alkatresz": "Biztonsági öv",
+      "cim": "Biztonsági öv figyelmeztető jelzés",
+      "leiras": "A becsatolatlan biztonsági övre figyelmeztető jelzés és hang bizonyos esetekben nem aktiválódik.",
+      "javitas": "ota",
+      "darab": null
+    },
+    {
+      "id": "autopilot-2023",
+      "datum": "2023-12-12",
+      "nhtsa": "23V838000",
+      "evjarat": "2017-2023 Model 3",
+      "alkatresz": "Autopilot",
+      "cim": "Autosteer visszaélés-megelőzés",
+      "leiras": "Az Autosteer funkció bizonyos körülmények között nem figyelmezteti elég határozottan a vezetőt, így az visszaélhet a 2-es szintű vezetéstámogatással. A legnagyobb Tesla-visszahívás.",
+      "javitas": "ota",
+      "darab": 2031220
+    },
+    {
+      "id": "futomu-2023",
+      "datum": "2023-03-31",
+      "nhtsa": "23V235000",
+      "evjarat": "2018-2019 Model 3",
+      "alkatresz": "Futómű",
+      "cim": "Felfüggesztés hiba",
+      "leiras": "Egyes 2018-2019-es Model 3 járműveknél a felfüggesztés egy alkatrésze hibás lehet.",
+      "javitas": "szerviz",
+      "darab": 422
+    },
+    {
+      "id": "hatso-lampa-2022",
+      "datum": "2022-11-15",
+      "nhtsa": "22V844000",
+      "evjarat": "2023 Model 3",
+      "alkatresz": "Világítás",
+      "cim": "Hátsó lámpa időszakos kimaradás",
+      "leiras": "Egyik vagy mindkét hátsó lámpa időszakosan nem világít — ez éjszaka csökkenti a láthatóságot.",
+      "javitas": "ota",
+      "darab": 321628
+    },
+    {
+      "id": "ov-csat-2022",
+      "datum": "2022-10-21",
+      "nhtsa": "22V798000",
+      "evjarat": "2017-2022 Model 3",
+      "alkatresz": "Biztonsági öv",
+      "cim": "Hátsó középső öv csat/anker hibás szerelés",
+      "leiras": "A hátsó középső ülés öv-ankere és a bal hátsó öv csatja hibásan lett összeszerelve.",
+      "javitas": "szerviz",
+      "darab": 24064
+    },
+    {
+      "id": "ablak-2022",
+      "datum": "2022-09-19",
+      "nhtsa": "22V702000",
+      "evjarat": "2017-2022 Model 3",
+      "alkatresz": "Elektronika",
+      "cim": "Elektromos ablak visszafordulás",
+      "leiras": "Az ablakemelő becsípődés-érzékelője nem mindig fordul vissza, ami becsípheti az utas ujját.",
+      "javitas": "ota",
+      "darab": 1096762
+    },
+    {
+      "id": "boombox-2022",
+      "datum": "2022-04-12",
+      "nhtsa": "22V235000",
+      "evjarat": "2017-2022 Model 3",
+      "alkatresz": "Hang",
+      "cim": "Boombox külső hang funkció",
+      "leiras": "A „Boombox” külső hang funkció elnyomhatja a gyalogosoknak szóló figyelmeztető hangot (az EV-k kötelező hangja).",
+      "javitas": "ota",
+      "darab": 594894
+    },
+    {
+      "id": "hopumpa-2022",
+      "datum": "2022-02-02",
+      "nhtsa": "22V050000",
+      "evjarat": "2021-2022 Model 3",
+      "alkatresz": "Klíma",
+      "cim": "Hőszivattyú expanziós szelep",
+      "leiras": "Az elektronikus expanziós szelep szoftverhibája miatt a hőszivattyú leállhat, ami fűtés- és páramentesítés-kiesést okoz.",
+      "javitas": "ota",
+      "darab": 26681
+    },
+    {
+      "id": "ov-csengo-2022",
+      "datum": "2022-02-01",
+      "nhtsa": "22V045000",
+      "evjarat": "2017-2022 Model 3",
+      "alkatresz": "Biztonsági öv",
+      "cim": "Öv becsatolás figyelmeztető hang",
+      "leiras": "Becsatolatlan biztonsági övvel induláskor nem szólal meg a figyelmeztető csengő.",
+      "javitas": "ota",
+      "darab": 817143
+    },
+    {
+      "id": "tolatokamera-kabel-2021",
+      "datum": "2021-12-21",
+      "nhtsa": "21V00D000",
+      "evjarat": "2017-2020 Model 3",
+      "alkatresz": "Tolatókamera",
+      "cim": "Tolatókamera kábelköteg törés",
+      "leiras": "A csomagtér nyitása-zárása eltörheti a tolatókamera kábelkötegét, így a kép nem jelenik meg. Hardveres javítás: kábelköteg és védőcsatorna csere.",
+      "javitas": "szerviz",
+      "darab": 356309
+    },
+    {
+      "id": "futomu-2021",
+      "datum": "2021-10-25",
+      "nhtsa": "21V835000",
+      "evjarat": "2019-2021 Model 3",
+      "alkatresz": "Futómű",
+      "cim": "Felfüggesztés alkatrész",
+      "leiras": "Egyes 2019-2021-es Model 3 és 2020-2021-es Model Y járműveknél felfüggesztési alkatrész hiba léphet fel.",
+      "javitas": "szerviz",
+      "darab": 2791
+    },
+    {
+      "id": "feknyereg-2021",
+      "datum": "2021-05-25",
+      "nhtsa": "21V387000",
+      "evjarat": "2019-2021 Model 3",
+      "alkatresz": "Fék",
+      "cim": "Laza féknyereg csavarok",
+      "leiras": "A féknyereg rögzítőcsavarjai meglazulhatnak, ami a fékhatás csökkenéséhez vezethet.",
+      "javitas": "szerviz",
+      "darab": 5974
+    }
+  ]
+}

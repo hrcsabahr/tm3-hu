@@ -17,10 +17,16 @@
 
     const SZERVIZ_NEV = {
         'tesla-szervizek': 'Minden Tesla Service Center',
-        'budapest-pest-tesla': 'Tesla SC Budapest (Pest)',
-        'budapest-buda-tesla': 'Tesla SC Budapest (Buda)',
+        'budapest-pest-tesla': 'Tesla Service Center Budaörs',
+        'budapest-buda-tesla': 'Tesla Approved Body Shop Budapest',
         'budapest-ev-specialist': 'EV Specialist Hungary',
-        'budapest-bodyshop': 'Tesla Karosszéria Specialista',
+        'budapest-bodyshop': 'Tesla Karosszéria Specialista Bp.',
+        'debrecen-green-mobility': 'Green Mobility Service',
+        'gyor-ev-tech': 'EV-Tech Győr',
+        'pecs-autovillamos': 'Autóvillamos Pécs',
+        'szeged-ecomotive': 'Ecomotive Szeged',
+        'miskolc-ev-center': 'EV Center Miskolc',
+        'szekesfehervar-emobil': 'EMobil Székesfehérvár',
         'specialista-szervizek': 'Független specialisták',
         'minden-szerviz': 'Bármelyik szerviz',
     };

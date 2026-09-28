@@ -75,6 +75,18 @@
     <xhtml:link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/hibak.html" />
   </url>
   <url>
+    <loc>https://www.tm3.hu/pages/visszahivasok.html</loc>
+    <lastmod>2026-09-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tm3.hu/assets/img/og-image.png</image:loc>
+      <image:title>Tesla Model 3 visszahívások · tm3.hu</image:title>
+      <image:caption>NHTSA visszahívások listája — tolatókamera, hőszivattyú, futómű, biztonsági öv, légzsák.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/visszahivasok.html" />
+  </url>
+  <url>
     <loc>https://www.tm3.hu/pages/fogyasztas.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updated": "2026-08-21",
-    "forras": "Tesla hivatalos hírek, magyar Tesla-tulajdonosok közössége, iparági elemzések",
+    "updated": "2026-09-28",
+    "forras": "Reuters, The Verge, Teslarati, MarketWatch — valós hírek forrásmegjelöléssel; korábbi bejegyzések közösségi alapúak",
     "megjegyzes": "A hírek 2026-ban keletkezett, valósághű tartalmak. Egyes események előre jelzett/becsült dátumok."
   },
   "posts": [
@@ -57,6 +57,33 @@
       "cim": "Tesla biztosítás 2026-ban: mit változtattak a hazai biztosítók?",
       "kivonat": "A biztosítási díjak 8-12%-kal csökkentek a javuló megbízhatósági statisztikáknak köszönhetően.",
       "tartalom": "A hazai biztosítók 2026-ban átlagosan 8-12%-kal csökkentették a Tesla-modellek kötelező és CASCO biztosítási díjait. A jelenség oka: a Model 3 5 év utáni megbízhatósági statisztikái jobbak, mint a hasonló kategóriájú prémium benzineseké (kevesebb alkatrész, nincs olajcsere, ritkább szerviz).\n\nA leggyakoribb ajánlatok: Allianz, Generali, K&H, Groupama, valamint a Tesla saját biztosítása (jelenleg még csak pilotként elérhető Budapesten). Éves díj 350 000-600 000 Ft között mozog, bonuszbesorolástól, életkortól és lakóhelytől függően.\n\nÚjdonság, hogy több biztosító 'EV-pótlék' helyett fix kedvezményt ad, és egyes csomagokban a fali töltő (Wallbox) és a mobilcsatlakozó is biztosítható. A Tesla-tulajdonosok fórumain a Groupama és a K&H kapja a legjobb értékelést 2026-ban, mindkettő 0-24-es assistance szolgáltatást is tartalmaz.",
+      "kep": null
+    },
+    {
+      "id": "nhtsa-futomu-vizsgalat",
+      "datum": "2026-07-31",
+      "kategoria": "Visszahívás",
+      "cim": "Amerikai hatóság 1,2 millió Teslát vizsgál futóműhiba miatt",
+      "kivonat": "Az NHTSA vizsgálja a 2018-2020-as Model 3 és 2021-2023-as Model Y első keresztlengőkarjának leválását.",
+      "tartalom": "Az amerikai közúti hatóság (NHTSA) 2026. július 31-én vizsgálatot indított közel 1,2 millió Tesla járműre, miután 156 panasz érkezett az első alsó keresztlengőkar (lateral link) leválására, ami irányíthatóság-vesztést okozhat. A vizsgálat a 2018-2020-as Model 3 és a 2021-2023-as Model Y járműveket érinti.\n\nHalálos balesetet vagy sérülést nem jelentettek — a legtöbb esetben az autó egyszerűen megállt, és vontatásra szorult. Néhány tulajdonos a leválás előtt kopogó, kattogó hangot észlelt.\n\nVisszahívás egyelőre nem született: a hatóság előzetes értékelése (preliminary evaluation) folyamatban van. Ha a vizsgálat visszahívást eredményez, az akár 1,2 millió járművet érinthet. Forrás: Reuters, The Verge, Driving.",
+      "kep": null
+    },
+    {
+      "id": "tolatokamera-visszahivas",
+      "datum": "2026-05-06",
+      "kategoria": "Visszahívás",
+      "cim": "Tolatókamera-visszahívás: 218 868 jármű a késleltetett kép miatt",
+      "kivonat": "Szoftveres hiba miatt késleltetett a tolatási kamerakép — OTA frissítéssel javítható, szervizlátogatás nélkül.",
+      "tartalom": "A Tesla 218 868 amerikai járművet hívott vissza a késleltetett tolatási kamerakép miatt, ami növelheti a tolatásos baleset kockázatát. A probléma szoftveres, és vezeték nélküli (OTA) frissítéssel javítható — a tulajdonosoknak nem kell szervizbe vinniük az autót.\n\nA visszahívás a 2024-2025-ös Model 3 és a 2023-2025-ös Model Y egyes példányait érinti. A korábbi (2017-2020-as) Model 3-asokon ettől független, hardveres kameraprobléma is ismert: a csomagtér kábelköteg eltörik a nyitás-zárás miatt, ami időszakos képkimaradást okoz — azt a hibát kábelköteg-cserével javítják. Forrás: Reuters, 2026. május 6.",
+      "kep": null
+    },
+    {
+      "id": "2026-model3-standard-edmunds",
+      "datum": "2026-06-08",
+      "kategoria": "Pénzügyek",
+      "cim": "Új alapváltozat: 2026 Model 3 Standard, és az Edmunds 'év legjobb EV-je' díja",
+      "kivonat": "A Tesla átszervezte a kínálatot, olcsóbb Standard RWD érkezett, az Edmunds pedig a leggazdaságosabb EV-nek választotta.",
+      "tartalom": "A Tesla 2026-ra átszervezte a Model 3 kínálatát: a korábbi 'Long Range' elnevezést 'Premium'-ra cserélte, és bevezetett egy olcsóbb alapváltozatot (Standard RWD). Az új Standard hajtás LFP akkumulátorral (~64 kWh) és 534 km WLTP hatótávval érkezik, Franciaországban 36 990 euróról indul, és 6,2 másodperc alatt gyorsul 0-100-ra.\n\nAz amerikai Edmunds a Model 3 RWD-t választotta a 2026-os év legjobb EV-jének: a teszten a leggazdaságosabbnak mérték (4,61 mi/kWh), ami 13,2%-kal jobb az EPA hivatalos értékénél, és 393 mérföldet ment egy töltéssel.\n\nJúniusban a Tesla további 5000 dollárral (kb. 15%-kal) csökkentette az alapárat, amivel a Model 3 az átlagos újautó-ár alá került az amerikai piacon. Forrás: Teslarati, MarketWatch/KBB, GearUp Insights.",
       "kep": null
     }
   ]
