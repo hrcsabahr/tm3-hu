@@ -306,6 +306,11 @@
         // a hatótávot (Recurrent: range ≈ capacity × WLTP × real_factor).
         const realFactor = 0.80; // WLTP → valós átlagos (város + vegyes)
         const baseReal = wltp * realFactor * (capacityPct / 100);
+        // "Új" hatótáv is valós (WLTP × 0.80), hogy a "new vs current"
+        // összehasonlítás a VALÓS degradációt mutassa — ne keverjük a
+        // WLTP-t a valós hatótávval (korábban a WLTP 629 km mellett a
+        // "current" 483 km jelent meg, ami ~3x nagyobb degradációnak
+        // tűnt, mint a valóság).
 
         // Hideg tél hatótáv: -10°C külső hőmérsékleten a fűtés
         // 35-45%-kal növeli a fogyasztást. Akkumulátor-előmelegítés
@@ -318,7 +323,7 @@
         const highwayFactor = 0.68;
 
         return {
-            new: Math.round(wltp),
+            new: Math.round(wltp * realFactor),
             current: Math.round(baseReal),
             winter: Math.round(baseReal * winterFactor),
             highway: Math.round(baseReal * highwayFactor),
@@ -357,7 +362,7 @@
         const v = VARIANTS[state.valtozat];
         if (!v) return;
 
-        const ageYears = 2026 - state.evjarat;
+        const ageYears = (new Date().getFullYear()) - state.evjarat;
         const opts = {
             soc: state.soc,
             dcArany: state.dcArany,
