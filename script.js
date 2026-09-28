@@ -486,49 +486,56 @@ console.log(
 );
 
 
-/* ----- TCO chart (Chart.js) — pages/tco.html ----- */
+/* ----- TCO chart (Chart.js) — pages/tco.html -----
+   A görbéket a tco.js számolja ki (window.tm3Tco.latest), ez a chart csak
+   megjeleníti őket. A tco.js input-változáskor a window.tm3Tco.renderChart()
+   segítségével frissíti az adatokat. */
 (function initTcoChart() {
     const canvas = document.getElementById("tcoChart");
     if (!canvas || typeof Chart === "undefined") return;
 
-    // 10 éves TCO: Tesla Model 3 vs. átlagos benzines szedán.
-    // Forrás: totalcostofownership.com, Tesla EU configurator, magyarországi
-    // üzemanyag- és áramárak 2024 Q4.
     const labels = ["0. év", "1. év", "2. év", "3. év", "4. év", "5. év", "6. év", "7. év", "8. év", "9. év", "10. év"];
 
-    // Kumulatív költségek (millió Ft-ban) — csak illusztratív, a user inputjai alapján frissülnek
-    const data = {
-        tesla: {
-            label: "Tesla Model 3 (villany)",
-            data: [16.5, 17.4, 18.3, 19.2, 20.1, 21.0, 21.9, 22.8, 23.7, 24.6, 25.5],
-            borderColor: "#38BDF8",
-            backgroundColor: "rgba(56, 189, 248, 0.18)",
-            borderWidth: 5,
-            tension: 0.3,
-            fill: true,
-            pointRadius: 6,
-            pointHoverRadius: 10,
-            pointBorderWidth: 3,
-            pointBorderColor: "#ffffff",
-        },
-        benzines: {
-            label: "Benzines szedán (átlag)",
-            data: [14.0, 16.2, 18.5, 20.9, 23.3, 25.8, 28.3, 30.9, 33.5, 36.2, 39.0],
-            borderColor: "#FBBF24",
-            backgroundColor: "rgba(251, 191, 36, 0.18)",
-            borderWidth: 5,
-            tension: 0.3,
-            fill: true,
-            pointRadius: 6,
-            pointHoverRadius: 10,
-            pointBorderWidth: 3,
-            pointBorderColor: "#ffffff",
-        },
-    };
+    const M = (ft) => ft / 1000000; // Ft → millió Ft
+
+    // Kezdeti adat: a tco.js által már kiszámolt görbék, vagy üres.
+    const latest = (window.tm3Tco && window.tm3Tco.latest) || null;
+    const teslaData = latest ? latest.teslaCurve : new Array(11).fill(0);
+    const benzData = latest ? latest.benzCurve : new Array(11).fill(0);
 
     const chart = new Chart(canvas, {
         type: "line",
-        data: { labels, datasets: [data.tesla, data.benzines] },
+        data: {
+            labels,
+            datasets: [
+                {
+                    label: "Tesla Model 3 (villany)",
+                    data: teslaData,
+                    borderColor: "#38BDF8",
+                    backgroundColor: "rgba(56, 189, 248, 0.15)",
+                    borderWidth: 5,
+                    tension: 0.3,
+                    fill: true,
+                    pointRadius: 6,
+                    pointHoverRadius: 10,
+                    pointBorderWidth: 3,
+                    pointBorderColor: "#ffffff",
+                },
+                {
+                    label: "BMW 330i (benzines)",
+                    data: benzData,
+                    borderColor: "#FBBF24",
+                    backgroundColor: "rgba(251, 191, 36, 0.15)",
+                    borderWidth: 5,
+                    tension: 0.3,
+                    fill: true,
+                    pointRadius: 6,
+                    pointHoverRadius: 10,
+                    pointBorderWidth: 3,
+                    pointBorderColor: "#ffffff",
+                },
+            ],
+        },
         options: {
             responsive: true,
             maintainAspectRatio: false,
@@ -540,42 +547,42 @@ console.log(
                     align: "start",
                     labels: {
                         color: "#0a0a14",
-                        font: { family: "Inter", size: 17, weight: "800" },
-                        boxWidth: 22, boxHeight: 22, padding: 22,
+                        font: { family: "Inter", size: 16, weight: "800" },
+                        boxWidth: 20, boxHeight: 20, padding: 20,
                         usePointStyle: true, pointStyle: "circle",
                     },
                 },
                 title: {
                     display: true,
-                    text: "Kumulatív költség 10 év alatt (millió Ft)",
+                    text: "Kumulatív birtoklási költség (vételár + üzemeltetés − maradványérték)",
                     color: "#020a14",
-                    font: { family: "Inter Tight", size: 24, weight: "800" },
-                    padding: { top: 8, bottom: 28 },
+                    font: { family: "Inter Tight", size: 22, weight: "800" },
+                    padding: { top: 8, bottom: 24 },
                 },
-                tooltip: { enabled: false,  /* 2026-08-22 — NO TOOLTIP */
-                backgroundColor: "rgba(8, 47, 73, 0.97)",
+                tooltip: {
+                    enabled: true,
+                    backgroundColor: "rgba(8, 47, 73, 0.97)",
                     titleColor: "#ffffff",
                     bodyColor: "#e0f2fe",
                     borderColor: "#38bdf8",
                     borderWidth: 2,
-                    padding: 16,
+                    padding: 14,
                     cornerRadius: 12,
-                    titleFont: { family: "Inter Tight", size: 18, weight: "800" },
+                    titleFont: { family: "Inter Tight", size: 17, weight: "800" },
                     bodyFont: { family: "Inter", size: 15, weight: "700" },
                     callbacks: {
-                        label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)} M Ft`,
+                        label: (ctx) => `${ctx.dataset.label}: ${M(ctx.parsed.y).toFixed(1)} M Ft`,
                     },
                 },
             },
             scales: {
                 y: {
-                    min: 12,
-                    max: 42,
+                    min: 0,
                     ticks: {
                         color: "#1a1a26",
-                        font: { family: "Inter", size: 16, weight: "700" },
+                        font: { family: "Inter", size: 15, weight: "700" },
                         padding: 8,
-                        callback: (v) => `${v} M Ft`,
+                        callback: (v) => `${M(v).toFixed(0)} M Ft`,
                     },
                     grid: { color: "rgba(8, 47, 73, 0.10)" },
                     border: { color: "rgba(8, 47, 73, 0.35)", display: true, width: 2 },
@@ -583,7 +590,7 @@ console.log(
                         display: true,
                         text: "Összesített költség (millió Ft)",
                         color: "#020a14",
-                        font: { family: "Inter Tight", size: 18, weight: "800" },
+                        font: { family: "Inter Tight", size: 17, weight: "800" },
                         padding: { bottom: 16 },
                     },
                 },
@@ -610,6 +617,15 @@ console.log(
             },
         },
     });
+
+    // Frissítő függvény — a tco.js hívja input-változáskor.
+    window.tm3Tco = window.tm3Tco || {};
+    window.tm3Tco.renderChart = function (r) {
+        if (!r || !chart) return;
+        chart.data.datasets[0].data = r.teslaCurve;
+        chart.data.datasets[1].data = r.benzCurve;
+        chart.update();
+    };
 
     // 2026-09: responsive chart — regisztrálás resize-hoz.
     window.__tm3Charts = window.__tm3Charts || [];

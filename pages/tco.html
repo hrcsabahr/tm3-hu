@@ -258,6 +258,16 @@
                         <label for="gumi">Gumiabroncs csere <small>évente Ft</small></label>
                         <input type="number" id="gumi" value="25000" min="0" step="5000" />
                     </div>
+
+                    <div class="calc-field">
+                        <label for="tesla-ar">Tesla Model 3 vételár <small>Ft</small></label>
+                        <input type="number" id="tesla-ar" value="18000000" min="0" step="500000" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="benz-ar">Benzines (BMW 330i) vételár <small>Ft</small></label>
+                        <input type="number" id="benz-ar" value="22500000" min="0" step="500000" />
+                    </div>
                 </div>
 
                 <div class="calc-output">
@@ -268,7 +278,7 @@
                     <ul class="result-list">
                         <li><span>Otthoni töltés:</span> <strong id="res-otthon">— Ft</strong></li>
                         <li><span>DC / Supercharger:</span> <strong id="res-dc">— Ft</strong></li>
-                        <li><span>Biztosítás + adó:</span> <strong id="res-bizt">— Ft</strong></li>
+                        <li><span>Biztosítás (adó: EV-mentes):</span> <strong id="res-bizt">— Ft</strong></li>
                         <li><span>Szerviz + kopó alkatrész:</span> <strong id="res-szerviz">— Ft</strong></li>
                     </ul>
 
@@ -276,8 +286,9 @@
                         <strong>10 éves TCO:</strong>
                         <p style="font-size:32px;font-weight: 600;color:var(--best);margin:8px 0 0;" id="res-10ev">— Ft</p>
                         <p style="font-size:14px;color:var(--text-dim);margin-top:4px;">
-                            (autó vételár nélkül — csak üzemeltetés)
+                            (vételár + értékvesztés + 10 év üzemeltetés)
                         </p>
+                        <p style="font-size:13px;color:var(--text-dim);margin-top:2px;" id="res-ertekvesztes">ebből értékvesztés: —</p>
                     </div>
 
                     <div class="highlight" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.3);">
@@ -306,11 +317,12 @@
             </div>
 
             <div class="tip-box green" style="margin-top:40px;">
-                <strong>💡 A TCO számítás nem tartalmazza:</strong>
+                <strong>💡 A TCO számítás feltételezései:</strong>
                 <ul style="margin-top:8px; padding-left:20px;">
-                    <li>Az autó vételárát (csak az üzemeltetést)</li>
-                    <li>Értékvesztést (becsülve a Model 3 jobban tartja az értékét, mint a benzines)</li>
-                    <li>Várható akkumulátor-cserét (8 év / 160 000 km garancia általában fedezi)</li>
+                    <li>Tartalmazza a <strong>vételárat</strong>, az <strong>értékvesztést</strong> (10 év utáni maradványérték: Model 3 ~25%, BMW 330i ~30% — becslés) és a 10 év üzemeltetést.</li>
+                    <li>A Tesla <strong>gépjárműadó-mentes</strong> (tisztán elektromos, NAV), a BMW 330i (~190 kW) ~65 000 Ft/év gépjárműadót fizet.</li>
+                    <li>Üzemanyag 630 Ft/l (2026. szept.), otthoni áram 60 Ft/kWh (alapértelmezés), Supercharger 145 Ft/kWh.</li>
+                    <li>Nem tartalmazza a várható akkumulátor-cserét — a 8 év / 160 000 km garancia általában fedezi.</li>
                 </ul>
             </div>
         </div>
@@ -343,7 +355,7 @@
                     <canvas id="tcoChart" aria-label="TCO összehasonlítás chart" role="img"></canvas>
                 </div>
 
-                <p class="deg-note">A Tesla görbe magában foglalja a vételárat, otthoni töltést (70%) + DC-töltést (30%), biztosítást, szervizt és a maradványértéket. A benzines görbe tartalmazza a vételárat, üzemanyagot, biztosítást, szervizt és a maradványértéket. Az értékek átlagos, magyarországi viszonyokra számítva.</p>
+                <p class="deg-note">A görbék a kumulatív birtoklási költséget mutatják: vételár + üzemeltetés − aktuális maradványérték. A Tesla olcsóbb üzemű (áram + adómentesség), a BMW 330i drágább üzemű (üzemanyag + gépjárműadó), de lassabban veszít az értékéből. A görbék a kalkulátor beállításait követik, 2026-os magyar árakon.</p>
             </div>
         </div>
     </section>
