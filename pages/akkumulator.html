@@ -187,8 +187,8 @@
     <section class="section">
         <div class="container">
 
-            <!-- ============ ALAPOK ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:8px;">Alapok — miből épül fel az akkumulátor?</h2>
+            <!-- ============ 1. ALAPOK ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:8px;">1. Alapok — miből épül fel az akkumulátor?</h2>
             <p style="max-width:760px;color:var(--ink-2,#3A3A3A);margin-bottom:24px;">
                 Mielőtt a gyakorlati részbe vágnánk, egy gyors alapozó: miből áll fizikailag az
                 akkumulátor, és milyen elektromos alapelvek szerint működik.
@@ -293,158 +293,8 @@
                 kiegyenlítést (balancing) is végzi.
             </div>
 
-            <!-- ============ 1. TÍPUSOK ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:20px;">1. Melyik akkumulátor van a te Model 3-asodban?</h2>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
-                A Model 3-ashoz az évek során többféle akkumulátor járt. A kettő, ami a magyar utakon
-                leggyakrabban előfordul, az <strong>LFP</strong> (lítium-vas-foszfát) és az <strong>NMC/NCA</strong>
-                (nikkel-mangán-kobalt / nikkel-kobalt-alumínium). Hogy melyik van benned, az az évjárattól és a
-                változattól függ — és nagyban meghatározza, hogyan érdemes töltened.
-            </p>
-
-            <table class="akku">
-                <thead>
-                    <tr><th>Változat / évjárat</th><th>Kémia</th><th>Cella típus</th><th>Nettó kapacitás (közelítő)</th><th>Napi töltési ajánlás</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Standard Range Plus (2019–2020)</td><td>NCA</td><td>2170 hengeres (Panasonic)</td><td>~50–55 kWh</td><td>80%</td></tr>
-                    <tr><td>Standard Range / RWD (2021+)</td><td>LFP</td><td>prismatikus (CATL)</td><td>~55–60 kWh</td><td>100% (heti 1×)</td></tr>
-                    <tr><td>Long Range AWD</td><td>NMC/NCA</td><td>2170 hengeres (Panasonic/LG)</td><td>~75–82 kWh</td><td>80%</td></tr>
-                    <tr><td>Performance AWD</td><td>NMC/NCA</td><td>2170 hengeres</td><td>~82 kWh</td><td>80%</td></tr>
-                </tbody>
-            </table>
-            <p class="akku-note">A Model 3-ban NINCS 4680-as cella — az a Model Y (Austin) és más modellek sajátja. A Model 3 végig 2170-es hengeres (NCA/NMC) vagy CATL prismatikus (LFP) cellákat használt.</p>
-
-            <div class="tip-box blue" style="margin-top:16px;">
-                <strong>🔎 Hogyan tudod meg, melyik van benned?</strong>
-                A legegyszerűbb: nyisd meg a töltési beállítást. Ha az autó <strong>100%-ig</strong> enged tölteni
-                ajánlott napi értékként, akkor LFP-d van. Ha <strong>80%</strong> körül húzza meg a határt
-                „Napi" jelöléssel, akkor NMC/NCA. A pontos cellatípus a Service menüben vagy a gyártási címkén is látható.
-            </div>
-
-            <!-- ============ 2. LFP vs NMC ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">2. LFP vs NMC/NCA — mi a különbség, és miért számít?</h2>
-            <div class="grid grid-2">
-                <div class="card">
-                    <h3>🟢 LFP (lítium-vas-foszfát)</h3>
-                    <p><strong>Előnyök:</strong> olcsóbb, hőstabilabb (biztonságosabb), sokkal több töltési ciklust bír,
-                    kisebb a degradáció, és <strong>nyugodtan tölthető 100%-ra naponta</strong>.</p>
-                    <p><strong>Hátrányok:</strong> kisebb energiasűrűség (rövidebb hatótáv ugyanakkora tömegre),
-                    hidegben pontatlanabb a töltöttség-kijelzés, és hidegben kicsit érzékenyebb a teljesítmény.</p>
-                </div>
-                <div class="card">
-                    <h3>🔵 NMC / NCA (nikkel alapú)</h3>
-                    <p><strong>Előnyök:</strong> nagyobb energiasűrűség → nagyobb hatótáv, stabilabb feszültséggörbe
-                    (pontosabb %-kijelzés), jobb hidegtűrés.</p>
-                    <p><strong>Hátrányok:</strong> drágább, érzékenyebb a tartós 100%-ra és 0%-ra,
-                    ezért <strong>napi szinten 80%-ig ajánlott</strong>, 100% csak hosszú útra.</p>
-                </div>
-            </div>
-            <div class="tip-box green" style="margin-top:16px;">
-                <strong>💡 A lényeg egy mondatban:</strong> LFP = töltsd bátran 100%-ra. NMC/NCA = naponta 80%,
-                100% csak útra. Ezzel a két szabállyal éveket adhatsz az akkumulátorodnak.
-            </div>
-
-            <!-- ============ 3. DEGRADÁCIÓ ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">3. Degradáció — mi a normális, és mi nem?</h2>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
-                Minden lítium-akkumulátor veszít a kapacitásából az idő és a használat során. A kérdés nem az,
-                hogy „degradálódik-e", hanem hogy milyen ütemben. A Tesla Model 3 akkumulátora az iparág
-                legjobban dokumentált, és a statisztikák szerint kifejezetten lassan degradálódik.
-            </p>
-            <div class="grid grid-3">
-                <div class="card"><h3>Első év</h3><p>Jellemzően <strong>~5%</strong> kapacitásvesztés, utána a görbe ellaposodik.</p></div>
-                <div class="card"><h3>Utána</h3><p>Évente nagyjából <strong>~1%</strong> — ez a „beállt" degradáció.</p></div>
-                <div class="card"><h3>8 év után</h3><p>A flotta-átlag jellemzően <strong>85–90% SoH</strong> körül mozog.</p></div>
-            </div>
-            <div class="tip-box orange" style="margin-top:16px;">
-                <strong>⚠ Mikor gyanús?</strong> Ha egy 100 000 km alatti autó 10%-nál többet veszített, az átlagon
-                felüli. Ha a cellafeszültség-eltérés (max delta) tartósan 30 mV fölé megy, az cellaszintű problémára
-                utalhat. Használt vásárláskor mindig nézesd meg a SoH-t. →
-                <a href="kalkulator.html">Degradation kalkulátor megnyitása</a>
-            </div>
-            <p class="akku-note">A degradációt gyorsítja: sok DC-gyorstöltés (Supercharger), a 0% és 100% hosszan
-            tartása, a tartós hőség, és a nagyon mély kisülések. Az AC-töltés (otthoni wallbox) kíméletesebb.</p>
-
-            <!-- ============ 4. TÖLTÉS ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">4. Hogyan töltsd, hogy sokáig bírja?</h2>
-            <div class="grid grid-2">
-                <div class="card">
-                    <h3>Napi rutin</h3>
-                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
-                        <li><strong>NMC/NCA:</strong> 80%-ig töltsd, ha lehet otthon (AC).</li>
-                        <li><strong>LFP:</strong> 100%-ig nyugodtan, és hetente egyszer töltsd 100%-ra (BMS-kalibrálás).</li>
-                        <li>Ha hosszabb ideig áll az autó, tartsd 50% körül, és hagyd bedugva.</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>Mit kerülj</h3>
-                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
-                        <li>Ne hagyd 0% alatt / 100%-on hetekig.</li>
-                        <li>Ne szokj rá a kizárólagos Supercharger-töltésre, ha teheted.</li>
-                        <li>NMC-nél a napi 100% feleslegesen koptat.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="tip-box blue" style="margin-top:16px;">
-                <strong>🔌 AC vs DC röviden:</strong> az otthoni AC (wallbox) kíméletesebb és olcsóbb; a DC
-                (Supercharger) gyors, de több hőt termel, ezért hosszú távon némileg jobban koptat. Utazáshoz
-                nyugodtan használd — a különbség nem drámai, a Tesla hűtése jól kezeli.
-            </div>
-
-            <!-- ============ 5. GARANCIA ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">5. Garancia — pontosan mi jár rá?</h2>
-            <table class="akku">
-                <thead>
-                    <tr><th>Garancia típus</th><th>Időtartam / futás</th><th>Mit fedez</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>Általános járműgarancia</td><td>4 év / 80 000 km</td><td>A jármű nagy része (nem az akku)</td></tr>
-                    <tr><td>Akkumulátor + meghajtóegység — RWD (Standard Range)</td><td>8 év / 160 000 km</td><td>Az akkumulátor és a hajtás, legalább <strong>70% kapacitás-megtartás</strong> mellett</td></tr>
-                    <tr><td>Akkumulátor + meghajtóegység — Long Range / Performance</td><td>8 év / 192 000 km</td><td>Az akkumulátor és a hajtás, legalább <strong>70% kapacitás-megtartás</strong> mellett</td></tr>
-                </tbody>
-            </table>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
-                A kulcs a <strong>70% kapacitás-megtartás</strong>: ha 8 éven (illetve a futáshatáron) belül az
-                akkumulátor kapacitása 70% alá esik, a Tesla cseréli vagy javítja. Ha a degradáció a küszöb fölött
-                marad (és a gyakorlatban ez a jellemző), akkor a „kopás" normális, és nem garanciális.
-            </p>
-            <div class="tip-box orange" style="margin-top:12px;">
-                <strong>⚠ Ami NEM jár rá:</strong> a 12V segédakkumulátor (az külön, olcsó tétel), a fedélzeti
-                töltő (PCS) egyes hibái (a Tesla ezt gyakran nem sorolja az akkugarancia alá), és a normál
-                degradáció 70% fölött. A garancia-állapotot a VIN-eddel ellenőrizheted a
-                <a href="https://service.tesla.com/vin-recall-search" target="_blank" rel="noopener">Tesla VIN/garancia-keresőben</a>.
-            </div>
-
-            <!-- ============ 6. TÉL ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">6. Télen — hogyan viselkedik az akku?</h2>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
-                A hideg nem károsítja az akkumulátort, de <strong>átmenetileg csökkenti a hatótávot és a
-                teljesítményt</strong>, mert az energia egy része a fűtésre és az akku melegítésére megy.
-            </p>
-            <div class="grid grid-3">
-                <div class="card"><h3>Hatótáv</h3><p>Télen jellemzően <strong>15–30%</strong>-kal kevesebb, autópályán akár több is.</p></div>
-                <div class="card"><h3>Regeneratív fék</h3><p>Hidegben korlátozott, amíg az akku fel nem melegszik.</p></div>
-                <div class="card"><h3>LFP télen</h3><p>Hidegben pontatlanabb a %-kijelzés — a 100%-os kalibrálás segít.</p></div>
-            </div>
-            <div class="tip-box green" style="margin-top:16px;">
-                <strong>✅ Mit tegyél:</strong> indítás előtt 10–15 perccel kapcsold be a <strong>preconditioning</strong>-ot
-                (előfűtés) az appból, ha indulásra meleg akkut szeretnél. Ha Superchargerhez tartasz, a navigáció
-                magától előmelegíti az akkut, ami télen akár 25–30%-kal gyorsabb töltést jelent.
-            </div>
-
-            <!-- ============ 7. SoH ELLENŐRZÉS ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">7. Akkumulátor-állapot (SoH) ellenőrzése</h2>
-            <div class="grid grid-3">
-                <div class="card"><h3>Service mód</h3><p>Az autó képernyőjén a Service menüben („Battery health") egyszerű SoH-teszt indítható.</p></div>
-                <div class="card"><h3>Scan My Tesla + OBD</h3><p>Bluetooth OBD-adapterrel részletes cellaadatokat látsz: feszültség, eltérés (delta), hőmérséklet, SoH.</p></div>
-                <div class="card"><h3>TeslaFi / Tessie</h3><p>Felhő-alapú nyomon követés, ha az előző tulajdonos is használta.</p></div>
-            </div>
-            <p class="akku-note">Használt vásárlásnál a legjobb a független szerviz által végzett akkudiagnosztika — a
-            <a href="szervizek.html">szervizkeresőben</a> találsz hozzá specialistát (pl. T-Service, EV Clinic).</p>
-
-            <!-- ============ 8. TECHNIKAI MÉLYSÉG ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">8. Műszaki mélység — szakembereknek</h2>
+            <!-- ============ 2. TECHNIKAI MÉLYSÉG ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">2. Műszaki mélység — szakembereknek</h2>
             <div class="grid grid-2">
                 <div class="card">
                     <h3>Cellakémia és felépítés</h3>
@@ -478,8 +328,158 @@
                 </div>
             </div>
 
-            <!-- ============ 9. PROBLÉMÁK ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">9. Gyakori akkumulátor-körüli problémák</h2>
+            <!-- ============ 3. TÍPUSOK ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:20px;">3. Melyik akkumulátor van a te Model 3-asodban?</h2>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+                A Model 3-ashoz az évek során többféle akkumulátor járt. A kettő, ami a magyar utakon
+                leggyakrabban előfordul, az <strong>LFP</strong> (lítium-vas-foszfát) és az <strong>NMC/NCA</strong>
+                (nikkel-mangán-kobalt / nikkel-kobalt-alumínium). Hogy melyik van benned, az az évjárattól és a
+                változattól függ — és nagyban meghatározza, hogyan érdemes töltened.
+            </p>
+
+            <table class="akku">
+                <thead>
+                    <tr><th>Változat / évjárat</th><th>Kémia</th><th>Cella típus</th><th>Nettó kapacitás (közelítő)</th><th>Napi töltési ajánlás</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Standard Range Plus (2019–2020)</td><td>NCA</td><td>2170 hengeres (Panasonic)</td><td>~50–55 kWh</td><td>80%</td></tr>
+                    <tr><td>Standard Range / RWD (2021+)</td><td>LFP</td><td>prismatikus (CATL)</td><td>~55–60 kWh</td><td>100% (heti 1×)</td></tr>
+                    <tr><td>Long Range AWD</td><td>NMC/NCA</td><td>2170 hengeres (Panasonic/LG)</td><td>~75–82 kWh</td><td>80%</td></tr>
+                    <tr><td>Performance AWD</td><td>NMC/NCA</td><td>2170 hengeres</td><td>~82 kWh</td><td>80%</td></tr>
+                </tbody>
+            </table>
+            <p class="akku-note">A Model 3-ban NINCS 4680-as cella — az a Model Y (Austin) és más modellek sajátja. A Model 3 végig 2170-es hengeres (NCA/NMC) vagy CATL prismatikus (LFP) cellákat használt.</p>
+
+            <div class="tip-box blue" style="margin-top:16px;">
+                <strong>🔎 Hogyan tudod meg, melyik van benned?</strong>
+                A legegyszerűbb: nyisd meg a töltési beállítást. Ha az autó <strong>100%-ig</strong> enged tölteni
+                ajánlott napi értékként, akkor LFP-d van. Ha <strong>80%</strong> körül húzza meg a határt
+                „Napi" jelöléssel, akkor NMC/NCA. A pontos cellatípus a Service menüben vagy a gyártási címkén is látható.
+            </div>
+
+            <!-- ============ 4. LFP vs NMC ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">4. LFP vs NMC/NCA — mi a különbség, és miért számít?</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>🟢 LFP (lítium-vas-foszfát)</h3>
+                    <p><strong>Előnyök:</strong> olcsóbb, hőstabilabb (biztonságosabb), sokkal több töltési ciklust bír,
+                    kisebb a degradáció, és <strong>nyugodtan tölthető 100%-ra naponta</strong>.</p>
+                    <p><strong>Hátrányok:</strong> kisebb energiasűrűség (rövidebb hatótáv ugyanakkora tömegre),
+                    hidegben pontatlanabb a töltöttség-kijelzés, és hidegben kicsit érzékenyebb a teljesítmény.</p>
+                </div>
+                <div class="card">
+                    <h3>🔵 NMC / NCA (nikkel alapú)</h3>
+                    <p><strong>Előnyök:</strong> nagyobb energiasűrűség → nagyobb hatótáv, stabilabb feszültséggörbe
+                    (pontosabb %-kijelzés), jobb hidegtűrés.</p>
+                    <p><strong>Hátrányok:</strong> drágább, érzékenyebb a tartós 100%-ra és 0%-ra,
+                    ezért <strong>napi szinten 80%-ig ajánlott</strong>, 100% csak hosszú útra.</p>
+                </div>
+            </div>
+            <div class="tip-box green" style="margin-top:16px;">
+                <strong>💡 A lényeg egy mondatban:</strong> LFP = töltsd bátran 100%-ra. NMC/NCA = naponta 80%,
+                100% csak útra. Ezzel a két szabállyal éveket adhatsz az akkumulátorodnak.
+            </div>
+
+            <!-- ============ 5. DEGRADÁCIÓ ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">5. Degradáció — mi a normális, és mi nem?</h2>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+                Minden lítium-akkumulátor veszít a kapacitásából az idő és a használat során. A kérdés nem az,
+                hogy „degradálódik-e", hanem hogy milyen ütemben. A Tesla Model 3 akkumulátora az iparág
+                legjobban dokumentált, és a statisztikák szerint kifejezetten lassan degradálódik.
+            </p>
+            <div class="grid grid-3">
+                <div class="card"><h3>Első év</h3><p>Jellemzően <strong>~5%</strong> kapacitásvesztés, utána a görbe ellaposodik.</p></div>
+                <div class="card"><h3>Utána</h3><p>Évente nagyjából <strong>~1%</strong> — ez a „beállt" degradáció.</p></div>
+                <div class="card"><h3>8 év után</h3><p>A flotta-átlag jellemzően <strong>85–90% SoH</strong> körül mozog.</p></div>
+            </div>
+            <div class="tip-box orange" style="margin-top:16px;">
+                <strong>⚠ Mikor gyanús?</strong> Ha egy 100 000 km alatti autó 10%-nál többet veszített, az átlagon
+                felüli. Ha a cellafeszültség-eltérés (max delta) tartósan 30 mV fölé megy, az cellaszintű problémára
+                utalhat. Használt vásárláskor mindig nézesd meg a SoH-t. →
+                <a href="kalkulator.html">Degradation kalkulátor megnyitása</a>
+            </div>
+            <p class="akku-note">A degradációt gyorsítja: sok DC-gyorstöltés (Supercharger), a 0% és 100% hosszan
+            tartása, a tartós hőség, és a nagyon mély kisülések. Az AC-töltés (otthoni wallbox) kíméletesebb.</p>
+
+            <!-- ============ 6. TÖLTÉS ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">6. Hogyan töltsd, hogy sokáig bírja?</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Napi rutin</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
+                        <li><strong>NMC/NCA:</strong> 80%-ig töltsd, ha lehet otthon (AC).</li>
+                        <li><strong>LFP:</strong> 100%-ig nyugodtan, és hetente egyszer töltsd 100%-ra (BMS-kalibrálás).</li>
+                        <li>Ha hosszabb ideig áll az autó, tartsd 50% körül, és hagyd bedugva.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Mit kerülj</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
+                        <li>Ne hagyd 0% alatt / 100%-on hetekig.</li>
+                        <li>Ne szokj rá a kizárólagos Supercharger-töltésre, ha teheted.</li>
+                        <li>NMC-nél a napi 100% feleslegesen koptat.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tip-box blue" style="margin-top:16px;">
+                <strong>🔌 AC vs DC röviden:</strong> az otthoni AC (wallbox) kíméletesebb és olcsóbb; a DC
+                (Supercharger) gyors, de több hőt termel, ezért hosszú távon némileg jobban koptat. Utazáshoz
+                nyugodtan használd — a különbség nem drámai, a Tesla hűtése jól kezeli.
+            </div>
+
+            <!-- ============ 7. GARANCIA ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">7. Garancia — pontosan mi jár rá?</h2>
+            <table class="akku">
+                <thead>
+                    <tr><th>Garancia típus</th><th>Időtartam / futás</th><th>Mit fedez</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Általános járműgarancia</td><td>4 év / 80 000 km</td><td>A jármű nagy része (nem az akku)</td></tr>
+                    <tr><td>Akkumulátor + meghajtóegység — RWD (Standard Range)</td><td>8 év / 160 000 km</td><td>Az akkumulátor és a hajtás, legalább <strong>70% kapacitás-megtartás</strong> mellett</td></tr>
+                    <tr><td>Akkumulátor + meghajtóegység — Long Range / Performance</td><td>8 év / 192 000 km</td><td>Az akkumulátor és a hajtás, legalább <strong>70% kapacitás-megtartás</strong> mellett</td></tr>
+                </tbody>
+            </table>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+                A kulcs a <strong>70% kapacitás-megtartás</strong>: ha 8 éven (illetve a futáshatáron) belül az
+                akkumulátor kapacitása 70% alá esik, a Tesla cseréli vagy javítja. Ha a degradáció a küszöb fölött
+                marad (és a gyakorlatban ez a jellemző), akkor a „kopás" normális, és nem garanciális.
+            </p>
+            <div class="tip-box orange" style="margin-top:12px;">
+                <strong>⚠ Ami NEM jár rá:</strong> a 12V segédakkumulátor (az külön, olcsó tétel), a fedélzeti
+                töltő (PCS) egyes hibái (a Tesla ezt gyakran nem sorolja az akkugarancia alá), és a normál
+                degradáció 70% fölött. A garancia-állapotot a VIN-eddel ellenőrizheted a
+                <a href="https://service.tesla.com/vin-recall-search" target="_blank" rel="noopener">Tesla VIN/garancia-keresőben</a>.
+            </div>
+
+            <!-- ============ 8. TÉL ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">8. Télen — hogyan viselkedik az akku?</h2>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+                A hideg nem károsítja az akkumulátort, de <strong>átmenetileg csökkenti a hatótávot és a
+                teljesítményt</strong>, mert az energia egy része a fűtésre és az akku melegítésére megy.
+            </p>
+            <div class="grid grid-3">
+                <div class="card"><h3>Hatótáv</h3><p>Télen jellemzően <strong>15–30%</strong>-kal kevesebb, autópályán akár több is.</p></div>
+                <div class="card"><h3>Regeneratív fék</h3><p>Hidegben korlátozott, amíg az akku fel nem melegszik.</p></div>
+                <div class="card"><h3>LFP télen</h3><p>Hidegben pontatlanabb a %-kijelzés — a 100%-os kalibrálás segít.</p></div>
+            </div>
+            <div class="tip-box green" style="margin-top:16px;">
+                <strong>✅ Mit tegyél:</strong> indítás előtt 10–15 perccel kapcsold be a <strong>preconditioning</strong>-ot
+                (előfűtés) az appból, ha indulásra meleg akkut szeretnél. Ha Superchargerhez tartasz, a navigáció
+                magától előmelegíti az akkut, ami télen akár 25–30%-kal gyorsabb töltést jelent.
+            </div>
+
+            <!-- ============ 9. SoH ELLENŐRZÉS ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">9. Akkumulátor-állapot (SoH) ellenőrzése</h2>
+            <div class="grid grid-3">
+                <div class="card"><h3>Service mód</h3><p>Az autó képernyőjén a Service menüben („Battery health") egyszerű SoH-teszt indítható.</p></div>
+                <div class="card"><h3>Scan My Tesla + OBD</h3><p>Bluetooth OBD-adapterrel részletes cellaadatokat látsz: feszültség, eltérés (delta), hőmérséklet, SoH.</p></div>
+                <div class="card"><h3>TeslaFi / Tessie</h3><p>Felhő-alapú nyomon követés, ha az előző tulajdonos is használta.</p></div>
+            </div>
+            <p class="akku-note">Használt vásárlásnál a legjobb a független szerviz által végzett akkudiagnosztika — a
+            <a href="szervizek.html">szervizkeresőben</a> találsz hozzá specialistát (pl. T-Service, EV Clinic).</p>
+
+            <!-- ============ 10. PROBLÉMÁK ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">10. Gyakori akkumulátor-körüli problémák</h2>
             <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
                 Az igazán drága HV-akku-hiba ritka — a mindennapos gondok általában a környező, olcsóbb
                 alkatrészekkel vannak. A részletes leírásokat és árakat a Hibák oldalon találod.
@@ -493,8 +493,8 @@
                 <strong>🔧 Bővebben:</strong> <a href="hibak.html">Tipikus hibák és javítási költségek →</a>
             </div>
 
-            <!-- ============ 10. ÖSSZEFOGLALÁS ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">10. A 10 legfontosabb tipp</h2>
+            <!-- ============ 11. ÖSSZEFOGLALÁS ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">11. A 10 legfontosabb tipp</h2>
             <div class="card">
                 <ol style="padding-left:22px;line-height:1.8;color:var(--ink-2,#3A3A3A);">
                     <li>Tudd meg, LFP vagy NMC/NCA van benned — ez dönti el a napi töltési határt.</li>
