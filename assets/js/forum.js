@@ -40,6 +40,14 @@
         ? { 'Accept': 'application/vnd.github+json', 'Authorization': 'Bearer ' + CONFIG.token }
         : { 'Accept': 'application/vnd.github+json' };
 
+    // A két fő kategória — akkor is megjelenjen a szűrőben és az "Új téma"
+    // gombokban, ha még nincs bennük bejegyzés (a GitHub API csak a nem-üres
+    // kategóriákat adja vissza). A slug-ok a GitHub tényleges slug-jai.
+    const KNOWN_CATEGORIES = [
+        { slug: 'hibák-megoldások', name: 'Hibák & megoldások', is_answerable: false },
+        { slug: 'kérdések', name: 'Kérdések', is_answerable: true },
+    ];
+
     function escapeHtml(s) {
         return String(s == null ? '' : s)
             .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -81,16 +89,18 @@
 
     function buildCategories() {
         const seen = {};
+        // 1) A két ismert kategória mindig legyen bent (akkor is, ha üres).
+        KNOWN_CATEGORIES.forEach(function (c) { seen[c.slug] = c; });
+        // 2) Az API kategóriái felülírják/hozzáadják (aktuális slug + név).
         discussions.forEach(function (d) {
-            if (d.category && !seen[d.category.slug]) {
-                seen[d.category.slug] = true;
-                categories.push({
-                    slug: d.category.slug,
-                    name: d.category.name || d.category.slug,
-                    is_answerable: !!d.category.is_answerable,
-                });
-            }
+            if (!d.category) return;
+            seen[d.category.slug] = {
+                slug: d.category.slug,
+                name: d.category.name || d.category.slug,
+                is_answerable: !!d.category.is_answerable,
+            };
         });
+        categories = Object.values(seen);
         categories.sort(function (a, b) { return a.name.localeCompare(b.name, 'hu'); });
 
         catEl.innerHTML = '<option value="">Minden kategória</option>' +
@@ -99,9 +109,13 @@
             }).join('');
     }
 
+    function normalize(s) {
+        return String(s == null ? '' : s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
     function findCategory(nameRe) {
         for (var i = 0; i < categories.length; i++) {
-            if (nameRe.test(categories[i].name)) return categories[i];
+            if (nameRe.test(normalize(categories[i].name))) return categories[i];
         }
         return null;
     }
