@@ -51,6 +51,18 @@
     <xhtml:link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/kalkulator.html" />
   </url>
   <url>
+    <loc>https://www.tm3.hu/pages/akkumulator.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.tm3.hu/assets/img/og-image.png</image:loc>
+      <image:title>Akkumulátor — Tesla Model 3 teljes útmutató · tm3.hu</image:title>
+      <image:caption>Tesla Model 3 akkumulátor: LFP vs NMC, degradáció, töltés, garancia.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/akkumulator.html" />
+  </url>
+  <url>
     <loc>https://www.tm3.hu/pages/tco.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>

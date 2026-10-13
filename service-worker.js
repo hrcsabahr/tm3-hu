@@ -47,6 +47,8 @@ const ASSETS = [
         // 2026-10-13: fórum oldal + JS a precache-be (GitHub Discussions).
         `${REPO_PREFIX}/pages/forum.html`,
         `${REPO_PREFIX}/assets/js/forum.js`,
+        // 2026-10-13: akkumulátor útmutató oldal a precache-be.
+        `${REPO_PREFIX}/pages/akkumulator.html`,
         // 2026-08-31: USER REPORT — uj gumi-felni ajanlo oldal a precache-be.
         `${REPO_PREFIX}/pages/gumi.html`,
         `${REPO_PREFIX}/pages/jogi.html`,

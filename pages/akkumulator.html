@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
+    <meta name="google-site-verification" content="N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4" />
+    <!-- Google tag (gtag.js) — consent mode v2, csak consent utan kuld adatot. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-709EQ9B200"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+    </script>
+<meta name="theme-color" content="#06121E" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="tm3.hu">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Tesla Model 3 akkumulátor: LFP vs NMC, kapacitás, degradáció, töltési szokások, garancia (8 év/160-192 ezer km), téli viselkedés és műszaki mélység — laikusoknak és szakembereknek." />
+    <meta property="og:title" content="Akkumulátor — a teljes Tesla Model 3 útmutató · tm3.hu" />
+    <meta property="og:url" content="https://www.tm3.hu/pages/akkumulator.html" />
+    <link rel="canonical" href="https://www.tm3.hu/pages/akkumulator.html" />
+    <title>Akkumulátor — Tesla Model 3 teljes útmutató · tm3.hu</title>
+    <link rel="preload" href="../assets/css/fonts.css" as="style" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/site.css?v=2026-08-31-gumi-v1" />
+    <link rel="stylesheet" href="../assets/css/consent.css?v=2026-09-consent-v1" />
+    <style>
+        table.akku { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+        table.akku th, table.akku td { border: 1px solid var(--border, rgba(0,0,0,0.12)); padding: 10px 12px; text-align: left; vertical-align: top; }
+        table.akku th { background: var(--bg-elevated, #F4F4F0); font-weight: 600; }
+        .akku-h3 { font-size: 20px; font-weight: 600; margin: 0 0 8px; letter-spacing: -0.01em; }
+        .akku-note { font-size: 13px; color: var(--ink-3, #5C5C5C); margin-top: 6px; }
+    </style>
+    <script src="../assets/js/seo-head.js?v=2026-08-31-gumi-v1" defer></script>
+    <script>
+        (function() {
+            'use strict';
+            function bindNavToggle() {
+                var btn = document.getElementById('nav-toggle');
+                var nav = document.getElementById('site-main-nav');
+                if (!btn || !nav) return;
+                if (btn.dataset.tm3Bound === '1') return;
+                btn.dataset.tm3Bound = '1';
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault(); e.stopPropagation();
+                    var open = nav.classList.toggle('is-open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    btn.classList.toggle('open', open);
+                });
+                var links = nav.querySelectorAll('a');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', function() {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                    });
+                }
+                document.addEventListener('click', function(e) {
+                    if (!nav.classList.contains('is-open')) return;
+                    if (nav.contains(e.target) || btn.contains(e.target)) return;
+                    nav.classList.remove('is-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.classList.remove('open');
+                });
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                        btn.focus();
+                    }
+                });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bindNavToggle);
+            } else { bindNavToggle(); }
+        })();
+    </script>
+    <meta name="keywords" content="tesla model 3 akkumulátor, lfp nmc, akkumulátor degradáció, tesla akkumulátor garancia, tesla töltés, model 3 hatótáv, akkumulátor állapot" />
+    <meta property="og:description" content="Tesla Model 3 akkumulátor: típusok, degradáció, töltés, garancia és műszaki mélység." />
+    <meta name="twitter:description" content="Tesla Model 3 akkumulátor — teljes útmutató." />
+    <meta name="author" content="tm3.hu — Magyar Tesla Model 3 közösség" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="tm3.hu" />
+    <meta property="og:locale" content="hu_HU" />
+    <meta property="og:image" content="https://www.tm3.hu/assets/img/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tm3hu" />
+    <meta name="twitter:creator" content="@tm3hu" />
+    <meta name="twitter:title" content="Akkumulátor — Tesla Model 3 teljes útmutató · tm3.hu" />
+    <meta name="twitter:image" content="https://www.tm3.hu/assets/img/og-image.png" />
+    <meta name="twitter:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+    <link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/akkumulator.html" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/icon.svg" />
+    <link rel="apple-touch-icon" href="../assets/img/icon-192.png" />
+    <script type="application/ld+json">
+[
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://www.tm3.hu/" },
+            { "@type": "ListItem", "position": 2, "name": "Akkumulátor", "item": "https://www.tm3.hu/pages/akkumulator.html" }
+        ]
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://www.tm3.hu/pages/akkumulator.html#article",
+        "headline": "Tesla Model 3 akkumulátor — teljes útmutató",
+        "description": "LFP vs NMC, kapacitás, degradáció, töltési szokások, garancia és műszaki mélység.",
+        "inLanguage": "hu-HU",
+        "isPartOf": { "@id": "https://www.tm3.hu/#website" },
+        "publisher": { "@id": "https://www.tm3.hu/#organization" },
+        "author": { "@type": "Organization", "name": "tm3.hu" }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.tm3.hu/#organization",
+        "name": "tm3.hu",
+        "url": "https://www.tm3.hu",
+        "logo": { "@type": "ImageObject", "url": "https://www.tm3.hu/assets/img/icon.svg" }
+    }
+]
+    </script>
+</head>
+<body>
+    <header class="navbar" id="site-nav">
+        <div class="nav-wrap">
+            <a href="../index.html" class="brand" aria-label="tm3.hu">
+                <span class="brand-mark">M3</span>
+                <span>tm3.hu</span>
+            </a>
+            <nav class="main-nav" id="site-main-nav" aria-label="Fő navigáció">
+                <a href="../index.html">Főoldal</a>
+                <a href="tobberek.html">Töltők</a>
+                <a href="akkumulator.html" aria-current="page">Akkumulátor</a>
+                <a href="kalkulator.html">Degradation</a>
+                <a href="tco.html">TCO</a>
+                <a href="szervizek.html">Szerviz</a>
+                <a href="hibak.html">Hibák</a>
+                <a href="visszahivasok.html">Visszahívások</a>
+                <a href="gumi.html">Gumi</a>
+                <a href="gyik.html">GYIK</a>
+                <a href="blog.html">Hírek</a>
+                <a href="forum.html">Fórum</a>
+                <a href="jogi.html">Jogi</a>
+            </nav>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span aria-current="page">Akkumulátor</span>
+            </div>
+            <span class="eyebrow">🔋 Akkumulátor</span>
+            <h1>A Tesla Model 3 akkumulátora</h1>
+            <p class="lead">
+                A nagyfeszültségű akkumulátor az autó szíve — és a legtöbb kérdés, félelem és tévhit is
+                körülötte forog. Ez az oldal a teljes képet adja: laikusoknak közérthetően, szakembereknek
+                műszaki mélységgel.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <!-- ============ 1. TÍPUSOK ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:20px;">1. Melyik akkumulátor van a te Model 3-asodban?</h2>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+                A Model 3-ashoz az évek során többféle akkumulátor járt. A kettő, ami a magyar utakon
+                leggyakrabban előfordul, az <strong>LFP</strong> (lítium-vas-foszfát) és az <strong>NMC/NCA</strong>
+                (nikkel-mangán-kobalt / nikkel-kobalt-alumínium). Hogy melyik van benned, az az évjárattól és a
+                változattól függ — és nagyban meghatározza, hogyan érdemes töltened.
+            </p>
+
+            <table class="akku">
+                <thead>
+                    <tr><th>Változat / évjárat</th><th>Kémia</th><th>Cella típus</th><th>Nettó kapacitás (közelítő)</th><th>Napi töltési ajánlás</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Standard Range Plus (2019–2020)</td><td>NCA</td><td>2170 hengeres (Panasonic)</td><td>~50–55 kWh</td><td>80%</td></tr>
+                    <tr><td>Standard Range / RWD (2021+)</td><td>LFP</td><td>prismatikus (CATL)</td><td>~55–60 kWh</td><td>100% (heti 1×)</td></tr>
+                    <tr><td>Long Range AWD</td><td>NMC/NCA</td><td>2170 hengeres (Panasonic/LG)</td><td>~75–82 kWh</td><td>80%</td></tr>
+                    <tr><td>Performance AWD</td><td>NMC/NCA</td><td>2170 hengeres</td><td>~82 kWh</td><td>80%</td></tr>
+                </tbody>
+            </table>
+            <p class="akku-note">A Model 3-ban NINCS 4680-as cella — az a Model Y (Austin) és más modellek sajátja. A Model 3 végig 2170-es hengeres (NCA/NMC) vagy CATL prismatikus (LFP) cellákat használt.</p>
+
+            <div class="tip-box blue" style="margin-top:16px;">
+                <strong>🔎 Hogyan tudod meg, melyik van benned?</strong>
+                A legegyszerűbb: nyisd meg a töltési beállítást. Ha az autó <strong>100%-ig</strong> enged tölteni
+                ajánlott napi értékként, akkor LFP-d van. Ha <strong>80%</strong> körül húzza meg a határt
+                „Napi" jelöléssel, akkor NMC/NCA. A pontos cellatípus a Service menüben vagy a gyártási címkén is látható.
+            </div>
+
+            <!-- ============ 2. LFP vs NMC ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">2. LFP vs NMC/NCA — mi a különbség, és miért számít?</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>🟢 LFP (lítium-vas-foszfát)</h3>
+                    <p><strong>Előnyök:</strong> olcsóbb, hőstabilabb (biztonságosabb), sokkal több töltési ciklust bír,
+                    kisebb a degradáció, és <strong>nyugodtan tölthető 100%-ra naponta</strong>.</p>
+                    <p><strong>Hátrányok:</strong> kisebb energiasűrűség (rövidebb hatótáv ugyanakkora tömegre),
+                    hidegben pontatlanabb a töltöttség-kijelzés, és hidegben kicsit érzékenyebb a teljesítmény.</p>
+                </div>
+                <div class="card">
+                    <h3>🔵 NMC / NCA (nikkel alapú)</h3>
+                    <p><strong>Előnyök:</strong> nagyobb energiasűrűség → nagyobb hatótáv, stabilabb feszültséggörbe
+                    (pontosabb %-kijelzés), jobb hidegtűrés.</p>
+                    <p><strong>Hátrányok:</strong> drágább, érzékenyebb a tartós 100%-ra és 0%-ra,
+                    ezért <strong>napi szinten 80%-ig ajánlott</strong>, 100% csak hosszú útra.</p>
+                </div>
+            </div>
+            <div class="tip-box green" style="margin-top:16px;">
+                <strong>💡 A lényeg egy mondatban:</strong> LFP = töltsd bátran 100%-ra. NMC/NCA = naponta 80%,
+                100% csak útra. Ezzel a két szabállyal éveket adhatsz az akkumulátorodnak.
+            </div>
+
+            <!-- ============ 3. DEGRADÁCIÓ ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">3. Degradáció — mi a normális, és mi nem?</h2>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+                Minden lítium-akkumulátor veszít a kapacitásából az idő és a használat során. A kérdés nem az,
+                hogy „degradálódik-e", hanem hogy milyen ütemben. A Tesla Model 3 akkumulátora az iparág
+                legjobban dokumentált, és a statisztikák szerint kifejezetten lassan degradálódik.
+            </p>
+            <div class="grid grid-3">
+                <div class="card"><h3>Első év</h3><p>Jellemzően <strong>~5%</strong> kapacitásvesztés, utána a görbe ellaposodik.</p></div>
+                <div class="card"><h3>Utána</h3><p>Évente nagyjából <strong>~1%</strong> — ez a „beállt" degradáció.</p></div>
+                <div class="card"><h3>8 év után</h3><p>A flotta-átlag jellemzően <strong>85–90% SoH</strong> körül mozog.</p></div>
+            </div>
+            <div class="tip-box orange" style="margin-top:16px;">
+                <strong>⚠ Mikor gyanús?</strong> Ha egy 100 000 km alatti autó 10%-nál többet veszített, az átlagon
+                felüli. Ha a cellafeszültség-eltérés (max delta) tartósan 30 mV fölé megy, az cellaszintű problémára
+                utalhat. Használt vásárláskor mindig nézesd meg a SoH-t. →
+                <a href="kalkulator.html">Degradation kalkulátor megnyitása</a>
+            </div>
+            <p class="akku-note">A degradációt gyorsítja: sok DC-gyorstöltés (Supercharger), a 0% és 100% hosszan
+            tartása, a tartós hőség, és a nagyon mély kisülések. Az AC-töltés (otthoni wallbox) kíméletesebb.</p>
+
+            <!-- ============ 4. TÖLTÉS ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">4. Hogyan töltsd, hogy sokáig bírja?</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Napi rutin</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
+                        <li><strong>NMC/NCA:</strong> 80%-ig töltsd, ha lehet otthon (AC).</li>
+                        <li><strong>LFP:</strong> 100%-ig nyugodtan, és hetente egyszer töltsd 100%-ra (BMS-kalibrálás).</li>
+                        <li>Ha hosszabb ideig áll az autó, tartsd 50% körül, és hagyd bedugva.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Mit kerülj</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
+                        <li>Ne hagyd 0% alatt / 100%-on hetekig.</li>
+                        <li>Ne szokj rá a kizárólagos Supercharger-töltésre, ha teheted.</li>
+                        <li>NMC-nél a napi 100% feleslegesen koptat.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tip-box blue" style="margin-top:16px;">
+                <strong>🔌 AC vs DC röviden:</strong> az otthoni AC (wallbox) kíméletesebb és olcsóbb; a DC
+                (Supercharger) gyors, de több hőt termel, ezért hosszú távon némileg jobban koptat. Utazáshoz
+                nyugodtan használd — a különbség nem drámai, a Tesla hűtése jól kezeli.
+            </div>
+
+            <!-- ============ 5. GARANCIA ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">5. Garancia — pontosan mi jár rá?</h2>
+            <table class="akku">
+                <thead>
+                    <tr><th>Garancia típus</th><th>Időtartam / futás</th><th>Mit fedez</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Általános járműgarancia</td><td>4 év / 80 000 km</td><td>A jármű nagy része (nem az akku)</td></tr>
+                    <tr><td>Akkumulátor + meghajtóegység — RWD (Standard Range)</td><td>8 év / 160 000 km</td><td>Az akkumulátor és a hajtás, legalább <strong>70% kapacitás-megtartás</strong> mellett</td></tr>
+                    <tr><td>Akkumulátor + meghajtóegység — Long Range / Performance</td><td>8 év / 192 000 km</td><td>Az akkumulátor és a hajtás, legalább <strong>70% kapacitás-megtartás</strong> mellett</td></tr>
+                </tbody>
+            </table>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+                A kulcs a <strong>70% kapacitás-megtartás</strong>: ha 8 éven (illetve a futáshatáron) belül az
+                akkumulátor kapacitása 70% alá esik, a Tesla cseréli vagy javítja. Ha a degradáció a küszöb fölött
+                marad (és a gyakorlatban ez a jellemző), akkor a „kopás" normális, és nem garanciális.
+            </p>
+            <div class="tip-box orange" style="margin-top:12px;">
+                <strong>⚠ Ami NEM jár rá:</strong> a 12V segédakkumulátor (az külön, olcsó tétel), a fedélzeti
+                töltő (PCS) egyes hibái (a Tesla ezt gyakran nem sorolja az akkugarancia alá), és a normál
+                degradáció 70% fölött. A garancia-állapotot a VIN-eddel ellenőrizheted a
+                <a href="https://service.tesla.com/vin-recall-search" target="_blank" rel="noopener">Tesla VIN/garancia-keresőben</a>.
+            </div>
+
+            <!-- ============ 6. TÉL ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">6. Télen — hogyan viselkedik az akku?</h2>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+                A hideg nem károsítja az akkumulátort, de <strong>átmenetileg csökkenti a hatótávot és a
+                teljesítményt</strong>, mert az energia egy része a fűtésre és az akku melegítésére megy.
+            </p>
+            <div class="grid grid-3">
+                <div class="card"><h3>Hatótáv</h3><p>Télen jellemzően <strong>15–30%</strong>-kal kevesebb, autópályán akár több is.</p></div>
+                <div class="card"><h3>Regeneratív fék</h3><p>Hidegben korlátozott, amíg az akku fel nem melegszik.</p></div>
+                <div class="card"><h3>LFP télen</h3><p>Hidegben pontatlanabb a %-kijelzés — a 100%-os kalibrálás segít.</p></div>
+            </div>
+            <div class="tip-box green" style="margin-top:16px;">
+                <strong>✅ Mit tegyél:</strong> indítás előtt 10–15 perccel kapcsold be a <strong>preconditioning</strong>-ot
+                (előfűtés) az appból, ha indulásra meleg akkut szeretnél. Ha Superchargerhez tartasz, a navigáció
+                magától előmelegíti az akkut, ami télen akár 25–30%-kal gyorsabb töltést jelent.
+            </div>
+
+            <!-- ============ 7. SoH ELLENŐRZÉS ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">7. Akkumulátor-állapot (SoH) ellenőrzése</h2>
+            <div class="grid grid-3">
+                <div class="card"><h3>Service mód</h3><p>Az autó képernyőjén a Service menüben („Battery health") egyszerű SoH-teszt indítható.</p></div>
+                <div class="card"><h3>Scan My Tesla + OBD</h3><p>Bluetooth OBD-adapterrel részletes cellaadatokat látsz: feszültség, eltérés (delta), hőmérséklet, SoH.</p></div>
+                <div class="card"><h3>TeslaFi / Tessie</h3><p>Felhő-alapú nyomon követés, ha az előző tulajdonos is használta.</p></div>
+            </div>
+            <p class="akku-note">Használt vásárlásnál a legjobb a független szerviz által végzett akkudiagnosztika — a
+            <a href="szervizek.html">szervizkeresőben</a> találsz hozzá specialistát (pl. T-Service, EV Clinic).</p>
+
+            <!-- ============ 8. TECHNIKAI MÉLYSÉG ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">8. Műszaki mélység — szakembereknek</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <h3>Cellakémia és felépítés</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
+                        <li><strong>2170-es cella:</strong> 21 mm átmérő, 70 mm magas. A Model 3 LR/Performance NCA/NMC cellái ilyenek (Panasonic, részben LG).</li>
+                        <li><strong>LFP (CATL):</strong> prismatikus (nem hengeres) cellák, moduláris elrendezés.</li>
+                        <li><strong>Modulszám:</strong> a Long Range jellemzően 4 modulos, a Standard Range 2–4 modulos (évjáratfüggő).</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Feszültség és BMS</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
+                        <li>A Model 3 HV-rendszere <strong>~350–400 V</strong> névlegesen — NEM 800 V (az más architektúra).</li>
+                        <li><strong>BMS</strong> (Battery Management System): cellánként monitorozza a feszültséget, hőmérsékletet, és végzi a kiegyenlítést (balancing).</li>
+                        <li><strong>Normál cella-eltérés:</strong> néhány mV; 30 mV fölött tartósan már vizsgálandó.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Termálmenedzsment</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
+                        <li>Folyadékhűtésű a HV-akku — a hűtőfolyadék körök szabályozzák a hőmérsékletet (töltéshez és terheléshez is).</li>
+                        <li>2021-től <strong>hőszivattyú</strong> (Octovalve / supermanifold) — hatékonyabb téli fűtés, részben az akku hőjét is hasznosítja.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>PCS (fedélzeti töltő)</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
+                        <li>A PCS a HV-akku „penthouse"-ában ül, és az AC-töltést alakítja DC-re.</li>
+                        <li>3 db 16 A-es modulja van; ha az egyik meghibásodik, az AC-töltőáram fokozatosan csökken (48A→32A→16A), de a DC/Supercharger tovább működik.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ============ 9. PROBLÉMÁK ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">9. Gyakori akkumulátor-körüli problémák</h2>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+                Az igazán drága HV-akku-hiba ritka — a mindennapos gondok általában a környező, olcsóbb
+                alkatrészekkel vannak. A részletes leírásokat és árakat a Hibák oldalon találod.
+            </p>
+            <div class="grid grid-3">
+                <div class="card"><h3>12V segédakku</h3><p>4–6 évente cserélendő — a leggyakoribb „akkumulátor-probléma", és olcsó.</p></div>
+                <div class="card"><h3>PCS / fedélzeti töltő</h3><p>AC-töltés lassul vagy megszűnik; a Supercharger ilyenkor is működik.</p></div>
+                <div class="card"><h3>HV-kontaktor</h3><p>Ritka, de komoly — áramtalanítással és szervizzel jár.</p></div>
+            </div>
+            <div class="tip-box blue" style="margin-top:16px;">
+                <strong>🔧 Bővebben:</strong> <a href="hibak.html">Tipikus hibák és javítási költségek →</a>
+            </div>
+
+            <!-- ============ 10. ÖSSZEFOGLALÁS ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">10. A 10 legfontosabb tipp</h2>
+            <div class="card">
+                <ol style="padding-left:22px;line-height:1.8;color:var(--ink-2,#3A3A3A);">
+                    <li>Tudd meg, LFP vagy NMC/NCA van benned — ez dönti el a napi töltési határt.</li>
+                    <li>LFP → 100% nyugodtan; NMC/NCA → napi 80%.</li>
+                    <li>Ne tartsd 0% vagy 100% közelében hetekig.</li>
+                    <li>Hosszabb állásnál 50% körül, bedugva hagyd.</li>
+                    <li>Otthon AC-n tölts, a Superchargert utazáshoz tartogasd.</li>
+                    <li>Télen használj preconditioning-ot indulás előtt.</li>
+                    <li>Évente egyszer nézesd meg a SoH-t (főleg használt vásárlás előtt).</li>
+                    <li>A 12V akkut 4–6 évente cseréltesd, ne várj a hibára.</li>
+                    <li>Ismerd a garanciádat: RWD 8 év/160 000 km, LR/Performance 8 év/192 000 km (70%).</li>
+                    <li>Gyanús degradációnál (100 000 km alatt &gt;10%) vizsgáltasd ki szervizben.</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="../assets/js/util.js?v=2026-08-31-gumi-v1" defer></script>
+    <script src="../assets/js/site.js?v=2026-08-31-gumi-v1" defer></script>
+    <script src="../assets/js/consent.js?v=2026-09-consent-v1" defer></script>
+</body>
+</html>

@@ -21,6 +21,7 @@
     NAV_ITEMS = [
         { href: 'index.html', label: 'Főoldal' },
         { href: 'pages/tobberek.html', label: 'Töltők' },
+        { href: 'pages/akkumulator.html', label: 'Akkumulátor' },
         { href: 'pages/kalkulator.html', label: 'Degradáció' },
         { href: 'pages/tco.html', label: 'TCO' },
         { href: 'pages/szervizek.html', label: 'Szervizek' },
