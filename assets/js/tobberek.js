@@ -103,8 +103,8 @@
                         <h4>${escapeHtml(label)} &mdash; ${escapeHtml(t.varos || '')}</h4>
                         <p><strong>${escapeHtml(t.nev || '')}</strong></p>
                         <p>📍 ${escapeHtml(t.cim || '')}</p>
-                        <p>⚡ <strong>${t.teljesitmeny} kW</strong> &middot; ${t.helyek_szama} állás${t.v3v4 ? ' &middot; V3' : ''}</p>
-                        <p>💰 <strong>${t.ar_huf_kwh} Ft/kWh</strong></p>
+                        <p>⚡ ${t.teljesitmeny ? `<strong>${t.teljesitmeny} kW</strong>` : 'Teljesítmény az appban'}${t.helyek_szama ? ` &middot; ${t.helyek_szama} állás` : ''}${t.v3v4 ? ' &middot; V3/V4' : ''}</p>
+                        <p>💰 ${t.ar_huf_kwh != null ? `<strong>${t.ar_huf_kwh} Ft/kWh</strong>` : 'Ár az appban'}</p>
                         <p>🕒 ${escapeHtml(t.nyitvatartas || '')}</p>
                         ${t.megjegyzes ? `<p style="margin-top:8px;font-style:italic;color:var(--ink-3);">${escapeHtml(t.megjegyzes)}</p>` : ''}
                     </div>`;
