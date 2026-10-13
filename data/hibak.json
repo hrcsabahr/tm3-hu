@@ -22,7 +22,7 @@
       "ido_orak": "1-2",
       "ar_eur": "280-480",
       "ar_huf": "115000-195000",
-      "megoldo_szerviz": ["budapest-bodyshop", "budapest-ev-specialist", "budapest-pest-tesla", "budapest-buda-tesla"],
+      "megoldo_szerviz": ["kecskemet-epa", "gyomro-t-service", "budaors-tesla", "budapest-vaci-ut"],
       "megelozes": "Kerülni a kilincs erőltetését, télen jégtelenítés, kéz nélküli nyitás használata kulcskártyával.",
       "megjegyzes": "A 2021-től gyártott Model 3-asokon a kilincs-kialakítás javult, ritkább a hiba."
     },
@@ -43,7 +43,7 @@
       "ido_orak": "2-3",
       "ar_eur": "850-1650",
       "ar_huf": "340000-680000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "godollo-ev-clinic"],
       "megelozes": "Ritkábban használt funkciók kikapcsolása (Sentry kevesebb, kamera-felvételek ritkábban).",
       "megjegyzes": "MCU3 (2022+) már megbízhatóbb, NAND tárolóval. Tesla garancia ideje alatt ingyenes."
     },
@@ -64,7 +64,7 @@
       "ido_orak": "0.5-1",
       "ar_eur": "120-220",
       "ar_huf": "50000-90000",
-      "megoldo_szerviz": ["budapest-ev-specialist", "debrecen-green-mobility", "gyor-ev-tech", "pecs-autovillamos", "szeged-ecomotive", "miskolc-ev-center", "szekesfehervar-emobil", "budapest-pest-tesla"],
+      "megoldo_szerviz": ["gyomro-t-service", "gyomro-t-service", "godollo-ev-clinic", "gyomro-t-service", "gyomro-t-service", "godollo-ev-clinic", "gyomro-t-service", "budaors-tesla"],
       "megelozes": "5 évente megelőző csere, télen gyakrabban ellenőrizni a feszültséget.",
       "megjegyzes": "2022 után a Tesla Li-ion 12V akkura váltott, élettartama 8-10 év, de cseréje drágább."
     },
@@ -85,7 +85,7 @@
       "ido_orak": "1-3",
       "ar_eur": "150-450",
       "ar_huf": "60000-185000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "debrecen-green-mobility", "gyor-ev-tech", "szeged-ecomotive", "miskolc-ev-center", "szekesfehervar-emobil"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "gyomro-t-service", "godollo-ev-clinic", "gyomro-t-service", "godollo-ev-clinic", "gyomro-t-service"],
       "megelozes": "Évente egyszer futómű-ellenőrzés, 50 000 km-enként teljes átvizsgálás.",
       "megjegyzes": "Ismert visszahívási téma a 2018-2019-es Model 3-asoknál. A Tesla időszakos TSB-ket adott ki rá."
     },
@@ -106,7 +106,7 @@
       "ido_orak": "6-12",
       "ar_eur": "5500-14000",
       "ar_huf": "2200000-5600000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "godollo-ev-clinic"],
       "megelozes": "Nem hagyni rendszeresen 5% alá az akkut, DC-töltés max 80%-ig tartása hosszú távon.",
       "megjegyzes": "Garancia (8 év / 160 000 km) a HV-akkura általában fedezi a cella-modul cserét, ha a degradáció a küszöb feletti."
     },
@@ -127,7 +127,7 @@
       "ido_orak": "3-5",
       "ar_eur": "1600-2800",
       "ar_huf": "650000-1100000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "debrecen-green-mobility", "pecs-autovillamos", "szeged-ecomotive", "szekesfehervar-emobil"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "gyomro-t-service", "gyomro-t-service", "gyomro-t-service", "gyomro-t-service"],
       "megjegyzes": "A hőszivattyús (2021+) modelleken ritkábban fordul elő, de ha igen, drágább a javítás."
     },
     {
@@ -147,7 +147,7 @@
       "ido_orak": "1-4",
       "ar_eur": "320-1700",
       "ar_huf": "130000-690000",
-      "megoldo_szerviz": ["budapest-bodyshop", "budapest-buda-tesla"],
+      "megoldo_szerviz": ["kecskemet-epa", "budapest-vaci-ut"],
       "megelozes": "PPF fólia használata az elején (300-500 ezer Ft), rendszeres viaszolás, kerékjáratok védelme.",
       "megjegyzes": "A Tesla 2022 után vastagabb festékrétegre váltott, a korai modellek különösen érzékenyek."
     },
@@ -168,7 +168,7 @@
       "ido_orak": "2-5",
       "ar_eur": "550-1200",
       "ar_huf": "220000-480000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-buda-tesla", "budapest-bodyshop"],
+      "megoldo_szerviz": ["budaors-tesla", "budapest-vaci-ut", "kecskemet-epa"],
       "megjegyzes": "Garanciális javítás, ha a tömítés gyári hibás. Utána saját költségre."
     },
     {
@@ -188,7 +188,7 @@
       "ido_orak": "1-3",
       "ar_eur": "250-700",
       "ar_huf": "100000-280000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech", "debrecen-green-mobility", "szeged-ecomotive", "miskolc-ev-center", "pecs-autovillamos", "szekesfehervar-emobil"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "godollo-ev-clinic", "gyomro-t-service", "gyomro-t-service", "godollo-ev-clinic", "gyomro-t-service", "gyomro-t-service"],
       "megelozes": "Évente futómű-ellenőrzés, 50 000 km-enként teljes átvizsgálás. A kopott szilentet ne halogasd — további gumikopást és egyenetlen fékhatást okoz.",
       "megjegyzes": "A leggyakrabban jelentett Model 3 probléma. A 2021 utáni (Highland) futómű továbbfejlesztett, ritkábban hibásodik."
     },
@@ -209,7 +209,7 @@
       "ido_orak": "4-12",
       "ar_eur": "900-2500",
       "ar_huf": "360000-1000000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech", "miskolc-ev-center"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "godollo-ev-clinic", "godollo-ev-clinic"],
       "megelozes": "Hidegben használj előfűtést (preconditioning) 10-15 perccel indulás előtt. Ha visító hangot hallasz fagyban, azonnal szervizbe vele — a szétforgácsolt kompresszor az egész rendszert beszennyezi.",
       "megjegyzes": "NHTSA 22V-063 visszahívás (2022. febr., 26 681 jármű) szoftveres expanziós-szelep hibát javított OTA-val. A PT-szenzor csere a TSB SB-21-18-002 szerint történik."
     },
@@ -230,7 +230,7 @@
       "ido_orak": "2-4",
       "ar_eur": "300-800",
       "ar_huf": "120000-320000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech", "debrecen-green-mobility"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "godollo-ev-clinic", "gyomro-t-service"],
       "megelozes": "Figyelj a futómű felől érkező kopogó/kattogó hangokra, és évente ellenőriztesd a futómű-csavarokat.",
       "megjegyzes": "Az amerikai NHTSA 2026 júliusában vizsgálatot indított ~1,2 millió járműre (2018-2020 Model 3 és 2021-2023 Model Y) 156 panasz alapján. Visszahívás egyelőre nem született, balesetet vagy sérülést nem jelentettek."
     },
@@ -251,7 +251,7 @@
       "ido_orak": "1-2",
       "ar_eur": "120-350",
       "ar_huf": "50000-140000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "budapest-buda-tesla"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "budapest-vaci-ut"],
       "megelozes": "Kíméld a csomagtér kábelkötegét (ne csípd be), és rendszeresen frissítsd a szoftvert.",
       "megjegyzes": "NHTSA visszahívás (2026. május) 218 868 járműre a késleltetett tolatókép miatt — OTA frissítéssel javítható."
     },
@@ -273,7 +273,7 @@
       "ido_orak": "1-3",
       "ar_eur": "150-1050",
       "ar_huf": "60000-420000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "debrecen-green-mobility", "gyor-ev-tech", "szeged-ecomotive", "szekesfehervar-emobil", "pecs-autovillamos"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "gyomro-t-service", "godollo-ev-clinic", "gyomro-t-service", "gyomro-t-service", "gyomro-t-service"],
       "megelozes": "Évente féknyereg-tisztítás és -kenés (sós utakon mindenképp), időnként használd határozottan a fékpedált, hogy a betétek és tárcsák tiszták maradjanak.",
       "megjegyzes": "Karbantartási jelenség, nem visszahívás. A Tesla saját tech-note-ja (TN-19-33-002/004) írja elő az éves tisztítást és kenést. A 21V-387 visszahívás (laza féknyereg-csavar) ettől független hiba."
     },
@@ -295,7 +295,7 @@
       "ido_orak": "0.5-2",
       "ar_eur": "80-350",
       "ar_huf": "32000-140000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech", "pecs-autovillamos", "miskolc-ev-center"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "godollo-ev-clinic", "gyomro-t-service", "godollo-ev-clinic"],
       "megelozes": "Télen használj előfűtést (Climate Defrost) töltés előtt, ne erőltesd a reteszt, és a kézi kioldót óvatosan használd.",
       "megjegyzes": "A csomagtartóban lévő kézi kioldó füllel vészhelyzetben oldható a zár. A töltőajtó fedél olcsón (kb. 20-30 USD) pótolható."
     },
@@ -316,7 +316,7 @@
       "ido_orak": "3-6",
       "ar_eur": "1700-2500",
       "ar_huf": "680000-1000000",
-      "megoldo_szerviz": ["budapest-pest-tesla", "budapest-ev-specialist", "gyor-ev-tech"],
+      "megoldo_szerviz": ["budaors-tesla", "gyomro-t-service", "godollo-ev-clinic"],
       "megelozes": "Nincs konkrét megelőzés — a hiba az alkatrész élettartamához kötött.",
       "megjegyzes": "Fontos: a Tesla a PCS-t nem tekinti az akkumulátor-garancia részének, így a csere gyakran fizetős még garanciaidőn belül is. A Supercharger (DC) töltést nem érinti, mert az megkerüli a PCS-t."
     }

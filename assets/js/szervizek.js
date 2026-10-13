@@ -69,14 +69,10 @@
                 </div>
                 <div class="meta">
                     <span>📍 ${s.varos}</span>
-                    <span class="rating">${ratingStars(s.rating)} ${s.rating.toFixed(1)} (${s.reviews})</span>
+                    ${s.rating ? `<span class="rating">${ratingStars(s.rating)} ${s.rating.toFixed(1)} (${s.reviews})</span>` : ''}
                 </div>
-                <div class="meta">
-                    <span>📫 ${s.cim}</span>
-                </div>
-                <div class="meta">
-                    <span>📞 <a href="tel:${s.telefon}" style="color:var(--accent-2);">${s.telefon}</a></span>
-                </div>
+                ${s.cim ? `<div class="meta"><span>📫 ${s.cim}</span></div>` : ''}
+                ${s.telefon ? `<div class="meta"><span>📞 <a href="tel:${s.telefon}" style="color:var(--accent-2);">${s.telefon}</a></span></div>` : ''}
                 <div class="services">
                     ${s.services.map(serviceChip).join('')}
                 </div>
