@@ -110,6 +110,19 @@
       "megjegyzes": "Alternatív hajtás specialista (VW GTE, Tesla, hibrid/EV). Akkumulátor-diagnosztika és -javítás, FAMOS minősített szakemberek."
     },
     {
+      "id": "szekesfehervar-tesben",
+      "nev": "TesBen",
+      "tipus": "specialista",
+      "varos": "Székesfehérvár",
+      "cim": "",
+      "telefon": "+36 30 664 7004",
+      "web": "https://www.facebook.com/tesben.service",
+      "idpont": "https://tesben.reservio.com/",
+      "services": ["hv-rendszer", "futomu", "fek", "klima", "12v", "diagnosztika", "szoftver"],
+      "premium": false,
+      "megjegyzes": "Tesla specialista: diagnosztika, szerviz, javítás, utólagos extrák. WhatsApp: +36 30 664 7004."
+    },
+    {
       "id": "pecel-teslatune",
       "nev": "TESLATUNE",
       "tipus": "specialista",
