@@ -1,8 +1,8 @@
 {
   "meta": {
     "updated": "2026-10-13",
-    "forras": "Tesla Hungary hivatalos szervizkereső + a szervizek saját weboldalai",
-    "megjegyzes": "Valós, ellenőrzött adatok. Az árakat és értékeléseket töröltük (nem volt megbízható forrás). Időpont-egyeztetéshez a megadott elérhetőséget hívd."
+    "forras": "eautoszervizek.hu, hellotesla.hu, villanyautosok.hu + a szervizek saját weboldalai/Facebook-oldalai",
+    "megjegyzes": "Valós, ellenőrzött adatok. Ahol nincs értékelés/ár, ott nincs megbízható forrás. Időpont-egyeztetéshez a megadott elérhetőséget hívd."
   },
   "szervizek": [
     {
@@ -16,7 +16,7 @@
       "idpont": "https://www.tesla.com/hu_HU/appointments",
       "services": ["hv-rendszer", "futomu", "fek", "klima", "12v", "hutofolyadek", "szoftver", "karosszeria"],
       "premium": true,
-      "megjegyzes": "Hivatalos Tesla szervizközpont Budapesten. Garanciális és garancián túli javítások, karbantartás. Időpont a Tesla appban foglalható."
+      "megjegyzes": "Hivatalos Tesla szervizközpont. Garanciális és garancián túli javítások. Időpont a Tesla appban."
     },
     {
       "id": "budaors-tesla",
@@ -29,7 +29,7 @@
       "idpont": "https://www.tesla.com/hu_HU/appointments",
       "services": ["hv-rendszer", "futomu", "fek", "klima", "12v", "hutofolyadek", "szoftver", "karosszeria"],
       "premium": true,
-      "megjegyzes": "Hivatalos Tesla szervizközpont Budaörsön. Időpont a Tesla appban foglalható."
+      "megjegyzes": "Hivatalos Tesla szervizközpont Budaörsön. Időpont a Tesla appban."
     },
     {
       "id": "gyomro-t-service",
@@ -40,9 +40,9 @@
       "telefon": "+36 70 221 1555",
       "web": "https://tservice.hu",
       "idpont": "telefon",
-      "services": ["hv-rendszer", "futomu", "fek", "klima", "12v", "diagnosztika", "szoftver"],
+      "services": ["hv-rendszer", "futomu", "fek", "klima", "12v", "diagnosztika", "szoftver", "karosszeria"],
       "premium": true,
-      "megjegyzes": "Független Tesla/Toyota/Lexus szakszerviz, gyári szintű diagnosztikával. Akkumulátor-ellenőrzés, hajtáslánc- és MCU-javítás."
+      "megjegyzes": "Független Tesla/Toyota/Lexus szakszerviz, gyári szintű diagnosztikával. Non-stop autómentés is. Akkumulátor-, hajtáslánc- és MCU-javítás."
     },
     {
       "id": "godollo-ev-clinic",
@@ -84,6 +84,19 @@
       "megjegyzes": "Független Tesla szerviz Vecsésen."
     },
     {
+      "id": "gyor-tesland",
+      "nev": "Tesland",
+      "tipus": "specialista",
+      "varos": "Győr",
+      "cim": "9011 Győr, Váci Mihály út 140.",
+      "telefon": "+36 20 368 2641",
+      "web": "https://www.facebook.com/p/Tesland-Győr-61558954765939/",
+      "idpont": "telefon",
+      "services": ["hv-rendszer", "futomu", "fek", "klima", "12v", "diagnosztika", "szoftver"],
+      "premium": false,
+      "megjegyzes": "Független Tesla szerviz Győrben (Nyugat-Magyarország). Facebook-oldalon érhető el."
+    },
+    {
       "id": "budapest-kesoto",
       "nev": "Kesoto KFT",
       "tipus": "specialista",
@@ -94,7 +107,176 @@
       "idpont": "telefon",
       "services": ["hv-rendszer", "diagnosztika", "szoftver"],
       "premium": false,
-      "megjegyzes": "Budapest első VW GTE / Tesla / alternatív hajtás specialista szervize. Akkumulátor-diagnosztika és -javítás, FAMOS minősített szakemberek."
+      "megjegyzes": "Alternatív hajtás specialista (VW GTE, Tesla, hibrid/EV). Akkumulátor-diagnosztika és -javítás, FAMOS minősített szakemberek."
+    },
+    {
+      "id": "pecel-teslatune",
+      "nev": "TESLATUNE",
+      "tipus": "specialista",
+      "varos": "Pécel",
+      "cim": "2119 Pécel, Rákóczi út 43.",
+      "telefon": "",
+      "web": "https://teslatune.hu",
+      "idpont": "",
+      "services": ["szoftver"],
+      "premium": false,
+      "megjegyzes": "Tesla Model 3/Y/S/X tuning és felújítás."
+    },
+    {
+      "id": "veszprem-jeg",
+      "nev": "Veszprém Jég (Tesla-partner)",
+      "tipus": "specialista",
+      "varos": "Veszprém",
+      "cim": "8411 Veszprém, Jégvirág utca 1.",
+      "telefon": "",
+      "web": "https://veszprem-jegkar.hu/hu",
+      "idpont": "",
+      "services": ["karosszeria", "fenyezes", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "Hivatalos Tesla-partner karosszéria- és jégkárműhely. Elektromos autó szerviz, karbantartás, diagnosztika."
+    },
+    {
+      "id": "budapest-bdrive",
+      "nev": "BDrive",
+      "tipus": "specialista",
+      "varos": "Budapest",
+      "cim": "1151 Budapest, Bogáncs utca 8.",
+      "telefon": "",
+      "web": "https://www.bdrive.hu",
+      "idpont": "",
+      "services": ["futomu", "fek", "klima", "12v", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "Független BMW és Tesla szerviz. Teljes körű elektromos autó javítás."
+    },
+    {
+      "id": "budapest-hibrid-electric",
+      "nev": "Hibrid Electric Cars",
+      "tipus": "specialista",
+      "varos": "Budapest",
+      "cim": "1047 Budapest, Mildenberger utca 21.",
+      "telefon": "",
+      "web": "https://hecautoexpert.hu",
+      "idpont": "",
+      "services": ["futomu", "fek", "klima", "12v", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "Hibrid és elektromos autók szervize (Tesla, Toyota, KIA). Fék, futómű, hibrid/EV rendszer."
+    },
+    {
+      "id": "budapest-evcsapagyazas",
+      "nev": "EVCsapágyazás",
+      "tipus": "specialista",
+      "varos": "Budapest",
+      "cim": "1173 Budapest, Összekötő u. 4.",
+      "telefon": "",
+      "web": "https://evcsapagyazas.hu",
+      "idpont": "",
+      "services": ["hv-rendszer", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "Villanymotor csapágy- és szimeringcsere (Tesla, Audi, Hyundai, Kia, Mercedes, Renault, VW)."
+    },
+    {
+      "id": "cegled-evcar",
+      "nev": "EVcar Solutions",
+      "tipus": "specialista",
+      "varos": "Cegléd",
+      "cim": "2738 Cegléd, Erdész utca 7.",
+      "telefon": "+36 30 823 1113",
+      "web": "https://evcarsolutions.hu",
+      "idpont": "telefon",
+      "services": ["diagnosztika", "futomu", "gumi"],
+      "premium": false,
+      "megjegyzes": "Diagnosztika, átvizsgálás, csapágyazás, gumi, road asszisztencia (Tesla, BMW, Kia, Hyundai, VW…)."
+    },
+    {
+      "id": "nyiregyhaza-lanzs",
+      "nev": "LANZS Autószerviz",
+      "tipus": "specialista",
+      "varos": "Nyíregyháza",
+      "cim": "4400 Nyíregyháza, Agyag u. 10.",
+      "telefon": "+36 1 300 9123",
+      "web": "https://lanzs.hu",
+      "idpont": "telefon",
+      "services": ["hv-rendszer", "fek", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "EV diagnosztika, HV-akkumulátor állapotfelmérés, fedélzeti töltő (OBC) vizsgálat, műszaki vizsgára felkészítés."
+    },
+    {
+      "id": "balatonfuzfo-evertech",
+      "nev": "EVER-Tech",
+      "tipus": "specialista",
+      "varos": "Balatonfűzfő",
+      "cim": "8175 Balatonfűzfő, Ipari park",
+      "telefon": "+36 21 201 02 43",
+      "web": "https://www.evertech.hu",
+      "idpont": "telefon",
+      "services": ["hv-rendszer", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "Inverter-, fedélzeti töltő- (OBC), hajtómű- és akkumulátor-javítás (Tesla, BMW, Nissan)."
+    },
+    {
+      "id": "budapest-meta",
+      "nev": "MÉTA Autószerviz",
+      "tipus": "specialista",
+      "varos": "Budapest",
+      "cim": "1194 Budapest, Méta u. 13.",
+      "telefon": "+36 30 957 3784",
+      "web": "https://metaautoszerviz.hu",
+      "idpont": "telefon",
+      "services": ["fek", "futomu", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "Fék- és futómű-javítás, diagnosztika (Tesla, BMW, Nissan)."
+    },
+    {
+      "id": "budakeszi-karhaz",
+      "nev": "Kárház Autójavító",
+      "tipus": "specialista",
+      "varos": "Budakeszi",
+      "cim": "2092 Budakeszi, Patyi utca 57.",
+      "telefon": "+36 70 383 0910",
+      "web": "https://karhaz.hu",
+      "idpont": "telefon",
+      "services": ["futomu", "fek", "klima", "12v", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "Teljes körű gépjármű-javítás (Tesla, BMW, Nissan)."
+    },
+    {
+      "id": "pecs-bosch-h2",
+      "nev": "Bosch Car Service – H2 Energy",
+      "tipus": "specialista",
+      "varos": "Pécs",
+      "cim": "7622 Pécs, Siklósi út 2.",
+      "telefon": "",
+      "web": "https://www.bosch-autoszerviz.hu",
+      "idpont": "",
+      "services": ["hv-rendszer", "hutofolyadek", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "Nagyfeszültségű rendszerek diagnosztikája, akkumulátor-állapotvizsgálat, szigetelési mérések, hűtőrendszer-ellenőrzés."
+    },
+    {
+      "id": "dunaegyhaza-kovacs-turbo",
+      "nev": "KOVÁCS TURBÓ Autószerviz",
+      "tipus": "specialista",
+      "varos": "Dunaegyháza",
+      "cim": "6323 Dunaegyháza, Kossuth Lajos u. 61.",
+      "telefon": "+36 30 493 9106",
+      "web": "https://kovacsturbo.hu/elektromos-auto-szervizelese/",
+      "idpont": "telefon",
+      "services": ["hv-rendszer", "diagnosztika"],
+      "premium": false,
+      "megjegyzes": "Elektromos autó szervizelés, karbantartás, diagnosztika (Tesla, BMW, Nissan)."
+    },
+    {
+      "id": "nyirpazony-tuningtibi",
+      "nev": "Tuningtibi autóvillamosság",
+      "tipus": "specialista",
+      "varos": "Nyírpazony",
+      "cim": "4531 Nyírpazony, Árpád u. 170.",
+      "telefon": "",
+      "web": "https://www.facebook.com/Tuningtibi/",
+      "idpont": "",
+      "services": ["diagnosztika", "szoftver"],
+      "premium": false,
+      "megjegyzes": "Autóvillamosság, autóelektronika és diagnosztika (CAN hálózat, vezérlők, akku-lemerülés okai). Facebookon érhető el."
     }
   ]
 }
