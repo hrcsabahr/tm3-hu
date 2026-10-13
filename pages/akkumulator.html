@@ -187,6 +187,112 @@
     <section class="section">
         <div class="container">
 
+            <!-- ============ ALAPOK ============ -->
+            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:8px;">Alapok — miből épül fel az akkumulátor?</h2>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);margin-bottom:24px;">
+                Mielőtt a gyakorlati részbe vágnánk, egy gyors alapozó: miből áll fizikailag az
+                akkumulátor, és milyen elektromos alapelvek szerint működik.
+            </p>
+
+<h3 class="akku-h3" style="margin-top:36px;">Miből épül fel? A lítium-atomtól a 4 416 celláig</h3>
+            <div class="grid grid-2" style="align-items:center; gap:24px;">
+                <div style="text-align:center;">
+                    <svg class="akku-svg" viewBox="0 0 220 220" width="180" height="180" role="img" aria-label="Lítium atom (Bohr-modell)" style="max-width:100%;height:auto;">
+                        <defs>
+                            <radialGradient id="nucGrad" cx="35%" cy="35%" r="70%">
+                                <stop offset="0%" stop-color="#4da3ff"/>
+                                <stop offset="100%" stop-color="#0056a8"/>
+                            </radialGradient>
+                            <radialGradient id="eGradIn" cx="35%" cy="35%" r="70%">
+                                <stop offset="0%" stop-color="#c4b5fd"/>
+                                <stop offset="100%" stop-color="#8b5cf6"/>
+                            </radialGradient>
+                            <radialGradient id="eGradOut" cx="35%" cy="35%" r="70%">
+                                <stop offset="0%" stop-color="#5eead4"/>
+                                <stop offset="100%" stop-color="#0d9488"/>
+                            </radialGradient>
+                        </defs>
+                        <circle cx="110" cy="110" r="55" fill="none" stroke="#C9CDD4" stroke-width="1.5" stroke-dasharray="3 4"/>
+                        <circle cx="110" cy="110" r="95" fill="none" stroke="#C9CDD4" stroke-width="1.5" stroke-dasharray="3 4"/>
+                        <circle class="nucleus" cx="110" cy="110" r="26" fill="url(#nucGrad)"/>
+                        <text x="110" y="115" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">3p⁺ 4n</text>
+                        <g>
+                            <animateTransform attributeName="transform" type="rotate" from="0 110 110" to="360 110 110" dur="8s" repeatCount="indefinite"/>
+                            <circle cx="165" cy="110" r="7" fill="url(#eGradIn)"/>
+                            <circle cx="55" cy="110" r="7" fill="url(#eGradIn)"/>
+                        </g>
+                        <g>
+                            <animateTransform attributeName="transform" type="rotate" from="360 110 110" to="0 110 110" dur="12s" repeatCount="indefinite"/>
+                            <circle cx="110" cy="15" r="7" fill="url(#eGradOut)"/>
+                        </g>
+                    </svg>
+                    <p class="akku-note" style="max-width:260px;margin:10px auto 0;">
+                        A <strong>lítium</strong> (Li, rendszám 3): 3 proton + 3 elektron — a legkönnyebb fém.
+                        Kicsi és könnyű ionja miatt kiváló az energiasűrűsége, ezért ez a mai lítium-ion
+                        akkumulátorok alapja.
+                    </p>
+                </div>
+                <div style="text-align:center;">
+                    <svg class="akku-svg" viewBox="0 0 120 240" width="120" height="210" role="img" aria-label="2170-es hengeres cella" style="max-width:100%;height:auto;">
+                        <defs>
+                            <linearGradient id="cellBody" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#c4c9cf"/>
+                                <stop offset="40%" stop-color="#f5f6f7"/>
+                                <stop offset="100%" stop-color="#b3b8bf"/>
+                            </linearGradient>
+                            <linearGradient id="cellCap" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#f8fafc"/>
+                                <stop offset="100%" stop-color="#d7dce1"/>
+                            </linearGradient>
+                        </defs>
+                        <rect x="35" y="34" width="50" height="160" rx="10" fill="url(#cellBody)" stroke="#9AA0A6" stroke-width="1.5"/>
+                        <ellipse cx="60" cy="34" rx="25" ry="10" fill="url(#cellCap)" stroke="#9AA0A6" stroke-width="1.5"/>
+                        <line x1="35" y1="194" x2="85" y2="194" stroke="#9AA0A6" stroke-width="1.5"/>
+                        <text x="60" y="14" text-anchor="middle" fill="#0075DE" font-size="16" font-weight="700">＋</text>
+                        <text x="60" y="216" text-anchor="middle" fill="#A78BFA" font-size="14" font-weight="700">−</text>
+                        <text x="60" y="116" text-anchor="middle" fill="#1a1a1a" font-size="13" font-weight="700">2170</text>
+                        <text x="60" y="134" text-anchor="middle" fill="#5C5C5C" font-size="10">Ø21 × 70 mm</text>
+                    </svg>
+                    <p class="akku-note" style="max-width:260px;margin:10px auto 0;">
+                        A <strong>2170-es hengeres cella</strong> (21 mm átmérő, 70 mm magas) — ebből épül
+                        a Long Range és Performance pack.
+                    </p>
+                </div>
+            </div>
+            <p style="max-width:760px;color:var(--ink-2,#3A3A3A); margin-top:8px;">
+                A Long Range / Performance pack <strong>4 modulból</strong> áll, modulonként <strong>1 104 cellával</strong> —
+                összesen <strong>4 416 darab 2170-es cella</strong>. A kapcsolás <strong>96 soros × 46 párhuzamos</strong>
+                (96s46p). A korai Standard Range (NCA) kisebb, <strong>2 976 cellás</strong> (96s31p) packot kapott.
+                A 2021 utáni Standard Range <strong>LFP</strong> ezzel szemben nagy, <strong>prismatikus</strong>
+                (nem hengeres) CATL cellákat használ — jóval kevesebb, de nagyobb cellából áll.
+            </p>
+
+            <h3 class="akku-h3" style="margin-top:36px;">Elektromos alapok — feszültség, soros/párhuzamos, cella-eltérés</h3>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Cella feszültség</h3>
+                    <p>Egy NMC/NCA cella névlegesen <strong>~3,6 V</strong>, teljesen töltve <strong>~4,2 V</strong>.
+                    Az LFP cella alacsonyabb: <strong>~3,2 V</strong> (max ~3,65 V).</p>
+                </div>
+                <div class="card">
+                    <h3>Soros vs párhuzamos</h3>
+                    <p><strong>Soros</strong> kötésnél a feszültség adódik össze (96 × ~3,6 V ≈ 350 V).
+                    <strong>Párhuzamos</strong> kötésnél a kapacitás (Ah) adódik össze — ezért van 46 párhuzamos cella.</p>
+                </div>
+                <div class="card">
+                    <h3>Csomag feszültség és energia</h3>
+                    <p>A Model 3 HV-rendszere <strong>~350–400 V</strong> (96s elrendezés). Az energia:
+                    <strong>kWh = feszültség (V) × kapacitás (Ah) ÷ 1000</strong>.</p>
+                </div>
+            </div>
+            <div class="tip-box blue" style="margin-top:16px;">
+                <strong>🔋 Cella-feszültség-eltérés (max delta):</strong> egészséges packban a cellák feszültsége
+                néhány mV-on belül egyezik. A „max delta" (a legnagyobb és a legkisebb cellafeszültség különbsége)
+                normál esetben <strong>&lt;20–30 mV</strong>. Ha tartósan 30 mV fölé megy, az kiegyenlítetlenségre
+                vagy cella-hibára utal. A <strong>BMS</strong> folyamatosan monitorozza az összes cellát, és a
+                kiegyenlítést (balancing) is végzi.
+            </div>
+
             <!-- ============ 1. TÍPUSOK ============ -->
             <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:20px;">1. Melyik akkumulátor van a te Model 3-asodban?</h2>
             <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
@@ -370,105 +476,6 @@
                         <li>3 db 16 A-es modulja van; ha az egyik meghibásodik, az AC-töltőáram fokozatosan csökken (48A→32A→16A), de a DC/Supercharger tovább működik.</li>
                     </ul>
                 </div>
-            </div>
-
-            <h3 class="akku-h3" style="margin-top:36px;">Miből épül fel? A lítium-atomtól a 4 416 celláig</h3>
-            <div class="grid grid-2" style="align-items:center; gap:24px;">
-                <div style="text-align:center;">
-                    <svg class="akku-svg" viewBox="0 0 220 220" width="180" height="180" role="img" aria-label="Lítium atom (Bohr-modell)" style="max-width:100%;height:auto;">
-                        <defs>
-                            <radialGradient id="nucGrad" cx="35%" cy="35%" r="70%">
-                                <stop offset="0%" stop-color="#4da3ff"/>
-                                <stop offset="100%" stop-color="#0056a8"/>
-                            </radialGradient>
-                            <radialGradient id="eGradIn" cx="35%" cy="35%" r="70%">
-                                <stop offset="0%" stop-color="#c4b5fd"/>
-                                <stop offset="100%" stop-color="#8b5cf6"/>
-                            </radialGradient>
-                            <radialGradient id="eGradOut" cx="35%" cy="35%" r="70%">
-                                <stop offset="0%" stop-color="#5eead4"/>
-                                <stop offset="100%" stop-color="#0d9488"/>
-                            </radialGradient>
-                        </defs>
-                        <circle cx="110" cy="110" r="55" fill="none" stroke="#C9CDD4" stroke-width="1.5" stroke-dasharray="3 4"/>
-                        <circle cx="110" cy="110" r="95" fill="none" stroke="#C9CDD4" stroke-width="1.5" stroke-dasharray="3 4"/>
-                        <circle class="nucleus" cx="110" cy="110" r="26" fill="url(#nucGrad)"/>
-                        <text x="110" y="115" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">3p⁺ 4n</text>
-                        <g>
-                            <animateTransform attributeName="transform" type="rotate" from="0 110 110" to="360 110 110" dur="8s" repeatCount="indefinite"/>
-                            <circle cx="165" cy="110" r="7" fill="url(#eGradIn)"/>
-                            <circle cx="55" cy="110" r="7" fill="url(#eGradIn)"/>
-                        </g>
-                        <g>
-                            <animateTransform attributeName="transform" type="rotate" from="360 110 110" to="0 110 110" dur="12s" repeatCount="indefinite"/>
-                            <circle cx="110" cy="15" r="7" fill="url(#eGradOut)"/>
-                        </g>
-                    </svg>
-                    <p class="akku-note" style="max-width:260px;margin:10px auto 0;">
-                        A <strong>lítium</strong> (Li, rendszám 3): 3 proton + 3 elektron — a legkönnyebb fém.
-                        Kicsi és könnyű ionja miatt kiváló az energiasűrűsége, ezért ez a mai lítium-ion
-                        akkumulátorok alapja.
-                    </p>
-                </div>
-                <div style="text-align:center;">
-                    <svg class="akku-svg" viewBox="0 0 120 240" width="120" height="210" role="img" aria-label="2170-es hengeres cella" style="max-width:100%;height:auto;">
-                        <defs>
-                            <linearGradient id="cellBody" x1="0" y1="0" x2="1" y2="0">
-                                <stop offset="0%" stop-color="#c4c9cf"/>
-                                <stop offset="40%" stop-color="#f5f6f7"/>
-                                <stop offset="100%" stop-color="#b3b8bf"/>
-                            </linearGradient>
-                            <linearGradient id="cellCap" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0%" stop-color="#f8fafc"/>
-                                <stop offset="100%" stop-color="#d7dce1"/>
-                            </linearGradient>
-                        </defs>
-                        <rect x="35" y="34" width="50" height="160" rx="10" fill="url(#cellBody)" stroke="#9AA0A6" stroke-width="1.5"/>
-                        <ellipse cx="60" cy="34" rx="25" ry="10" fill="url(#cellCap)" stroke="#9AA0A6" stroke-width="1.5"/>
-                        <line x1="35" y1="194" x2="85" y2="194" stroke="#9AA0A6" stroke-width="1.5"/>
-                        <text x="60" y="14" text-anchor="middle" fill="#0075DE" font-size="16" font-weight="700">＋</text>
-                        <text x="60" y="216" text-anchor="middle" fill="#A78BFA" font-size="14" font-weight="700">−</text>
-                        <text x="60" y="116" text-anchor="middle" fill="#1a1a1a" font-size="13" font-weight="700">2170</text>
-                        <text x="60" y="134" text-anchor="middle" fill="#5C5C5C" font-size="10">Ø21 × 70 mm</text>
-                    </svg>
-                    <p class="akku-note" style="max-width:260px;margin:10px auto 0;">
-                        A <strong>2170-es hengeres cella</strong> (21 mm átmérő, 70 mm magas) — ebből épül
-                        a Long Range és Performance pack.
-                    </p>
-                </div>
-            </div>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A); margin-top:8px;">
-                A Long Range / Performance pack <strong>4 modulból</strong> áll, modulonként <strong>1 104 cellával</strong> —
-                összesen <strong>4 416 darab 2170-es cella</strong>. A kapcsolás <strong>96 soros × 46 párhuzamos</strong>
-                (96s46p). A korai Standard Range (NCA) kisebb, <strong>2 976 cellás</strong> (96s31p) packot kapott.
-                A 2021 utáni Standard Range <strong>LFP</strong> ezzel szemben nagy, <strong>prismatikus</strong>
-                (nem hengeres) CATL cellákat használ — jóval kevesebb, de nagyobb cellából áll.
-            </p>
-
-            <h3 class="akku-h3" style="margin-top:36px;">Elektromos alapok — feszültség, soros/párhuzamos, cella-eltérés</h3>
-            <div class="grid grid-3">
-                <div class="card">
-                    <h3>Cella feszültség</h3>
-                    <p>Egy NMC/NCA cella névlegesen <strong>~3,6 V</strong>, teljesen töltve <strong>~4,2 V</strong>.
-                    Az LFP cella alacsonyabb: <strong>~3,2 V</strong> (max ~3,65 V).</p>
-                </div>
-                <div class="card">
-                    <h3>Soros vs párhuzamos</h3>
-                    <p><strong>Soros</strong> kötésnél a feszültség adódik össze (96 × ~3,6 V ≈ 350 V).
-                    <strong>Párhuzamos</strong> kötésnél a kapacitás (Ah) adódik össze — ezért van 46 párhuzamos cella.</p>
-                </div>
-                <div class="card">
-                    <h3>Csomag feszültség és energia</h3>
-                    <p>A Model 3 HV-rendszere <strong>~350–400 V</strong> (96s elrendezés). Az energia:
-                    <strong>kWh = feszültség (V) × kapacitás (Ah) ÷ 1000</strong>.</p>
-                </div>
-            </div>
-            <div class="tip-box blue" style="margin-top:16px;">
-                <strong>🔋 Cella-feszültség-eltérés (max delta):</strong> egészséges packban a cellák feszültsége
-                néhány mV-on belül egyezik. A „max delta" (a legnagyobb és a legkisebb cellafeszültség különbsége)
-                normál esetben <strong>&lt;20–30 mV</strong>. Ha tartósan 30 mV fölé megy, az kiegyenlítetlenségre
-                vagy cella-hibára utal. A <strong>BMS</strong> folyamatosan monitorozza az összes cellát, és a
-                kiegyenlítést (balancing) is végzi.
             </div>
 
             <!-- ============ 9. PROBLÉMÁK ============ -->
