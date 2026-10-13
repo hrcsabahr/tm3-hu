@@ -135,6 +135,18 @@
     <xhtml:link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/kozosseg.html" />
   </url>
   <url>
+    <loc>https://www.tm3.hu/pages/forum.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.tm3.hu/assets/img/og-image.png</image:loc>
+      <image:title>Közösségi fórum — hibák és megoldások · tm3.hu</image:title>
+      <image:caption>Tesla Model 3 hibák és megoldások feltöltése, kérdezz-felelek, tapasztalatok.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/forum.html" />
+  </url>
+  <url>
     <loc>https://www.tm3.hu/pages/gyik.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>weekly</changefreq>

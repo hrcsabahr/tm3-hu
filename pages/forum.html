@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
+    <meta name="google-site-verification" content="N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4" />
+    <!-- Google tag (gtag.js) — consent mode v2, csak consent utan kuld adatot. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-709EQ9B200"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+    </script>
+<meta name="theme-color" content="#06121E" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="tm3.hu">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Tesla Model 3 közösségi fórum: hibák és megoldások feltöltése, kérdezz-felelek, tapasztalatok megosztása magyar tulajdonosok között." />
+    <meta property="og:title" content="Fórum — Hibák & megoldások · tm3.hu" />
+    <meta property="og:url" content="https://www.tm3.hu/pages/forum.html" />
+    <link rel="canonical" href="https://www.tm3.hu/pages/forum.html" />
+    <title>Közösségi fórum — hibák és megoldások · tm3.hu</title>
+    <link rel="preload" href="../assets/css/fonts.css" as="style" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/site.css?v=2026-08-31-gumi-v1" />
+    <link rel="stylesheet" href="../assets/css/consent.css?v=2026-09-consent-v1" />
+    <style>
+        /* Fórum-specifikus, önállóan tartott stílusok */
+        .forum-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+        .forum-card h3 a:hover { color: var(--accent); }
+        .forum-excerpt { margin: 4px 0 12px; color: var(--ink-2, var(--fg-muted, #3A3A3A)); font-size: 14px; line-height: 1.55; }
+        .forum-badges { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+        .forum-meta { display: flex; gap: 16px; flex-wrap: wrap; color: var(--ink-3, var(--fg-dim, #5C5C5C)); font-size: 13px; align-items: center; }
+        .forum-meta .avatar { width: 18px; height: 18px; border-radius: 50%; display: inline-block; vertical-align: -3px; margin-right: 4px; }
+    </style>
+    <script src="../assets/js/seo-head.js?v=2026-08-31-gumi-v1" defer></script>
+    <script>
+        (function() {
+            'use strict';
+            function bindNavToggle() {
+                var btn = document.getElementById('nav-toggle');
+                var nav = document.getElementById('site-main-nav');
+                if (!btn || !nav) return;
+                if (btn.dataset.tm3Bound === '1') return;
+                btn.dataset.tm3Bound = '1';
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var open = nav.classList.toggle('is-open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    btn.classList.toggle('open', open);
+                });
+                var links = nav.querySelectorAll('a');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', function() {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                    });
+                }
+                document.addEventListener('click', function(e) {
+                    if (!nav.classList.contains('is-open')) return;
+                    if (nav.contains(e.target) || btn.contains(e.target)) return;
+                    nav.classList.remove('is-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.classList.remove('open');
+                });
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                        btn.focus();
+                    }
+                });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bindNavToggle);
+            } else {
+                bindNavToggle();
+            }
+        })();
+    </script>
+    <meta name="keywords" content="tesla model 3 fórum, tesla hiba megoldás, tesla kérdések, tesla tulajdonosi közösség, tesla magyar fórum" />
+    <meta property="og:description" content="Tesla Model 3 közösségi fórum: hibák és megoldások, kérdezz-felelek, tapasztalatok." />
+    <meta name="twitter:description" content="Tesla Model 3 közösségi fórum — hibák, megoldások, kérdések." />
+    <meta name="author" content="tm3.hu — Magyar Tesla Model 3 közösség" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="tm3.hu" />
+    <meta property="og:locale" content="hu_HU" />
+    <meta property="og:image" content="https://www.tm3.hu/assets/img/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tm3hu" />
+    <meta name="twitter:creator" content="@tm3hu" />
+    <meta name="twitter:title" content="Közösségi fórum — hibák és megoldások · tm3.hu" />
+    <meta name="twitter:image" content="https://www.tm3.hu/assets/img/og-image.png" />
+    <meta name="twitter:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+    <link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/forum.html" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/icon.svg" />
+    <link rel="apple-touch-icon" href="../assets/img/icon-192.png" />
+    <script type="application/ld+json">
+[
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://www.tm3.hu/" },
+            { "@type": "ListItem", "position": 2, "name": "Fórum", "item": "https://www.tm3.hu/pages/forum.html" }
+        ]
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://www.tm3.hu/pages/forum.html#webpage",
+        "url": "https://www.tm3.hu/pages/forum.html",
+        "name": "Közösségi fórum — hibák és megoldások · tm3.hu",
+        "description": "Tesla Model 3 közösségi fórum: hibák és megoldások feltöltése, kérdezz-felelek.",
+        "inLanguage": "hu-HU",
+        "isPartOf": { "@id": "https://www.tm3.hu/#website" },
+        "publisher": { "@id": "https://www.tm3.hu/#organization" },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.tm3.hu/assets/img/og-image.png" }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.tm3.hu/#organization",
+        "name": "tm3.hu",
+        "url": "https://www.tm3.hu",
+        "logo": { "@type": "ImageObject", "url": "https://www.tm3.hu/assets/img/icon.svg" }
+    }
+]
+    </script>
+</head>
+<body>
+    <header class="navbar" id="site-nav">
+        <div class="nav-wrap">
+            <a href="../index.html" class="brand" aria-label="tm3.hu">
+                <span class="brand-mark">M3</span>
+                <span>tm3.hu</span>
+            </a>
+            <nav class="main-nav" id="site-main-nav" aria-label="Fő navigáció">
+                <a href="../index.html">Főoldal</a>
+                <a href="tobberek.html">Töltők</a>
+                <a href="kalkulator.html">Degradation</a>
+                <a href="tco.html">TCO</a>
+                <a href="szervizek.html">Szerviz</a>
+                <a href="hibak.html">Hibák</a>
+                <a href="visszahivasok.html">Visszahívások</a>
+                <a href="gumi.html">Gumi</a>
+                <a href="gyik.html">GYIK</a>
+                <a href="blog.html">Hírek</a>
+                <a href="forum.html" aria-current="page">Fórum</a>
+                <a href="jogi.html">Jogi</a>
+            </nav>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span aria-current="page">Fórum</span>
+            </div>
+            <span class="eyebrow">💬 Fórum</span>
+            <h1>Közösségi fórum — hibák és megoldások</h1>
+            <p class="lead">
+                Találtál egy hibát, és már meg is oldottad? Írd le, másnak is segíthet.
+                Vagy csak kérdezz: „ki tapasztalt már ilyet, merre próbálkozzak?"
+                A fórum ingyenes, GitHub-fiókkal írhatsz.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="forum-actions">
+                <a id="btn-new-hiba" class="btn btn-primary" href="https://github.com/hrcsabahr/tm3-hu/discussions/new" target="_blank" rel="noopener">🔧 Új hiba + megoldás</a>
+                <a id="btn-new-kerdes" class="btn btn-ghost" href="https://github.com/hrcsabahr/tm3-hu/discussions/new" target="_blank" rel="noopener">❓ Új kérdés</a>
+            </div>
+
+            <div class="tip-box blue" style="margin-bottom:24px;">
+                <strong>ℹ Hogyan működik?</strong> A témák a GitHub Discussions rendszerében tárolódnak — ingyenes, reklám- és nyomkövetés-mentes.
+                Írni GitHub-fiókkal tudsz (a gomb megnyitja a bejelentkezést, ha kell). Az adataid nem kerülnek hozzánk.
+            </div>
+
+            <div class="filter-bar" style="margin-bottom:24px;">
+                <input type="text" id="forum-search" placeholder="🔍 Keresés a témák között…" />
+                <select id="forum-cat" aria-label="Kategória">
+                    <option value="">Minden kategória</option>
+                </select>
+                <select id="forum-state" aria-label="Állapot">
+                    <option value="open">Nyitott témák</option>
+                    <option value="all">Mind (lezárttal)</option>
+                </select>
+            </div>
+
+            <div id="forum-loading" style="text-align:center; padding:32px; color:var(--ink-3, #5C5C5C);">Betöltés…</div>
+            <div id="forum-list"></div>
+            <div id="forum-empty" class="empty-state" style="display:none;">
+                <h3>Még nincs téma</h3>
+                <p>Legyél te az első: írd le a hibádat és a megoldását, vagy tedd fel a kérdésed.</p>
+            </div>
+
+            <div class="tip-box orange" style="margin-top:32px;">
+                <strong>🛠 Nem találtad, amit kerestél?</strong> A szerkesztett, ellenőrzött hibaleírásokat a
+                <a href="hibak.html">Hibák</a> oldalon találod. A fórum a közösségi tapasztalatok helye — a jó leírásokat
+                idővel beemeljük az ellenőrzött listába is.
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="../assets/js/util.js?v=2026-08-31-gumi-v1" defer></script>
+    <script src="../assets/js/site.js?v=2026-08-31-gumi-v1" defer></script>
+    <script src="../assets/js/consent.js?v=2026-09-consent-v1" defer></script>
+    <script src="../assets/js/forum.js?v=2026-10-13-forum-v1" defer></script>
+</body>
+</html>

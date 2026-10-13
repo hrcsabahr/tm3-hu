@@ -29,6 +29,7 @@
         // 2026-08-31: USER REPORT — gumi-felni ajanlo oldal felvetele
         { href: 'pages/gumi.html', label: 'Gumi' },
         { href: 'pages/gyik.html', label: 'GYIK' },
+        { href: 'pages/forum.html', label: 'Fórum' },
         { href: 'pages/jogi.html', label: 'Jogi' },
     ];
 

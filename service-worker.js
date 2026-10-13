@@ -11,7 +11,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v20';
+const CACHE = 'tm3-v21';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
@@ -44,6 +44,9 @@ const ASSETS = [
     `${REPO_PREFIX}/pages/kozosseg.html`,
     `${REPO_PREFIX}/pages/gyik.html`,
     `${REPO_PREFIX}/pages/fogyasztas.html`,
+        // 2026-10-13: fórum oldal + JS a precache-be (GitHub Discussions).
+        `${REPO_PREFIX}/pages/forum.html`,
+        `${REPO_PREFIX}/assets/js/forum.js`,
         // 2026-08-31: USER REPORT — uj gumi-felni ajanlo oldal a precache-be.
         `${REPO_PREFIX}/pages/gumi.html`,
         `${REPO_PREFIX}/pages/jogi.html`,
