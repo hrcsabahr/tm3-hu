@@ -56,10 +56,10 @@
             type: 'article',
             section: 'Töltők',
             faq: [
-                    { q: 'Mennyibe kerül egy Tesla Supercharger töltés Magyarországon?', a: 'A Tesla Supercharger ára lokációtól és napszaktól függően 89-129 Ft/kWh. Átlagos Tesla Model 3 (60 kWh akku) 0-80%-ra töltése nagyjából 4 500-7 000 Ft, ami 400-500 km hatótávot ad. Villámtöltés (V3, 250 kW) a Model 3 LR és Performance modelleken érhető el.' },
-                    { q: 'Hány Tesla Supercharger van Magyarországon?', a: '2026-ban 8 Tesla Supercharger állomás működik Magyarországon: Budaörs, Budapest (3 telephely), Szeged, Győr, Balatonfüred, Debrecen, Székesfehérvár. A teljes hazai töltőhálózat (Tesla + más szolgáltatók) 50+ lokációból áll, Mobiliti, E.ON, Shell Recharge és Volteum üzemeltetésében.' },
+                    { q: 'Mennyibe kerül egy Tesla Supercharger töltés Magyarországon?', a: 'A Tesla Supercharger ára lokációtól és napszaktól függően jellemzően 135-155 Ft/kWh. Átlagos Tesla Model 3 (60 kWh akku) 10-80%-ra töltése nagyjából 6 000-7 000 Ft, ami 400-500 km hatótávot ad. Villámtöltés (V3, 250 kW) a Model 3 LR és Performance modelleken érhető el.' },
+                    { q: 'Hány Tesla Supercharger van Magyarországon?', a: '2026-ban 16 Tesla Supercharger állomás működik Magyarországon: Budapest (Óbuda), Székesfehérvár, Szeged (2), Debrecen, Győr, Pécs, Miskolc, Siófok, Fót, Sormás, Kiskunfélegyháza, Szigetszentmiklós, Szombathely, Tatabánya (Vértesszőlős) és Törökbálint. A teljes hazai töltőhálózat (Tesla + más szolgáltatók) ennél jóval több helyszínből áll, Mobiliti, E.ON, Shell Recharge és Volteum üzemeltetésében.' },
                     { q: 'Tölthetek-e nem-Tesla autóval Supercharger-t?', a: 'Igen, a Tesla 2022-től megnyitotta a Magic Dock (CCS adapter) Supercharger-állomásokat nem-Tesla elektromos autók előtt is. A Tesla mobilapplikációban aktiválható a használat, és a töltés ára megegyezik a Tesla-ügyfelekével (esetenként 10-20%-kal magasabb).' },
-                    { q: 'Melyik a leggyorsabb töltő Magyarországon?', a: 'A Tesla V3 Supercharger (Budaörs, Budapest) 250 kW csúcsteljesítményt ad, ami a Model 3 LR és Performance modellek esetén 5-25 perc alatt 10-80%-ra tölt. Az E.ON és Shell HPC (High Power Charger) állomások 150-300 kW teljesítményűek, hasonló töltési idővel.' },
+                    { q: 'Melyik a leggyorsabb töltő Magyarországon?', a: 'A Tesla V3 Supercharger (pl. Budapest Óbuda, Székesfehérvár, Győr) 250 kW csúcsteljesítményt ad, ami a Model 3 LR és Performance modellek esetén 5-25 perc alatt 10-80%-ra tölt. Az E.ON és Shell HPC (High Power Charger) állomások 150-300 kW teljesítményűek, hasonló töltési idővel.' },
                 ],
         },
         '/pages/kalkulator.html': {
