@@ -76,13 +76,13 @@
                 ],
         },
         '/pages/tco.html': {
-            title: 'Tesla Model 3 TCO kalkulátor — villanyautó vs benzines · tm3.hu',
-            description: 'Tesla Model 3 10 éves TCO — villanyautó vs benzines (BMW 330i). Üzemanyagárak, áramárak, szervizköltségek Magyarországon.',
-            h1: '10 éves teljes birtoklási költség',
+            title: 'Tesla Model 3 üzemeltetési költség — villany vs benzines · tm3.hu',
+            description: 'Tesla Model 3 üzemeltetési költsége villany vs benzines: áramár, benzinár, gépjárműadó. Mennyit spórolsz 10 év alatt? 2026-os magyar árakon.',
+            h1: 'Mennyit spórolsz egy benzineshez képest?',
             type: 'article',
             section: 'TCO',
             faq: [
-                    { q: 'Megéri-e Tesla Model 3-at venni benzineshez képest 10 évre?', a: 'A 2026-os magyar árakkal számolva igen: egy Model 3 10 év alatt jellemzően 6-10 millió Ft-tal olcsóbb, mint egy hasonló BMW 330i (vételár + értékvesztés + üzemeltetés együtt). Az előny az alacsonyabb energia-költség, a gépjárműadó-mentesség és a kisebb szervizigény.' },
+                    { q: 'Megéri-e Tesla Model 3-at venni benzineshez képest 10 évre?', a: 'A 2026-os magyar árakkal számolva igen. Csak az üzemeltetésen (áram vs benzin + gépjárműadó-mentesség) egy Model 3 évi több százezer Ft-ot, 10 év alatt jellemzően 4-7 millió Ft-ot spórol egy átlagos benzineshez (7 L/100 km) képest. Vételárral és értékvesztéssel együtt (a legbizonytalanabb tényező) a teljes TCO-előny jellemzően 6-10 millió Ft.' },
                     { q: 'Mennyi az áramköltsége egy Tesla Model 3-nak 100 km-en?', a: 'Otthoni töltéssel (60 Ft/kWh) 100 km-re ~900-1 000 Ft áramköltség. Supercharger-rel (145 Ft/kWh) ~2 300-2 500 Ft/100 km. Vegyes használat (80% otthon + 20% Supercharger) ~1 200 Ft/100 km, ami a benzines autó 4 000-5 000 Ft/100 km költségének nagyjából a negyede.' },
                     { q: 'Milyen biztosítási költséggel kell számolni egy Tesla Model 3-ra?', a: 'A Tesla Model 3 kötelező biztosítása évi 60 000-110 000 Ft, a casco évi 180 000-350 000 Ft (10%-os önrész, márkától függően). A biztosítási díj magasabb, mint egy hasonló kategóriájú benzines autóé, de a kár-előzmények és a vezetési profil kedvezményt adhatnak.' },
                     { q: 'Mennyit veszít az értékéből a Tesla Model 3 5 év alatt?', a: 'Egy átlagos Tesla Model 3 LR 5 év / 100 000 km után az új ár 45-55%-át tartja meg (2026-os adatok alapján). Ez jobb, mint a hasonló prémium benzines szedánok átlaga (35-45%). Az LFP akkumulátoros SR+ modellek értékállósága kiemelkedő: 5 év után 60-65%.' },

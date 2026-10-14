@@ -18,11 +18,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="tm3.hu">
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" content="Tesla Model 3 10 éves TCO — villanyautó vs benzines (BMW 330i). Üzemanyagárak, áramárak, szervizköltségek Magyarországon." />
-    <meta property="og:title" content="10 éves TCO kalkulátor · tm3.hu" />
+    <meta name="description" content="Tesla Model 3 üzemeltetési költsége villany vs benzines: áramár, benzinár, gépjárműadó. Mennyit spórolsz 10 év alatt? 2026-os magyar árakon." />
+    <meta property="og:title" content="Tesla Model 3 költségkalkulátor · tm3.hu" />
     <meta property="og:url" content="https://www.tm3.hu/pages/tco.html" />
     <link rel="canonical" href="https://www.tm3.hu/pages/tco.html" />
-    <title>Tesla Model 3 TCO kalkulátor — villanyautó vs benzines · tm3.hu</title>
+    <title>Tesla Model 3 üzemeltetési költség — villany vs benzines · tm3.hu</title>
     <link rel="preload" href="../assets/css/fonts.css" as="style" />
     <link rel="stylesheet" href="../assets/css/fonts.css" />
     <link rel="stylesheet" href="../assets/css/site.css?v=2026-08-31-gumi-v1" />
@@ -87,9 +87,9 @@
         })();
     </script>
         <!-- SEO-META-START — auto-generated, ido: 2026-08-31 -->
-    <meta name="keywords" content="tesla model 3 tco, villanyautó vs benzines költség, bmw 330i vs tesla, 10 éves autó költség, áramár benzinár" />
-    <meta property="og:description" content="Tesla Model 3 10 éves TCO — villanyautó vs benzines (BMW 330i). Üzemanyagárak, áramárak, szervizköltségek." />
-    <meta name="twitter:description" content="Tesla Model 3 vs BMW 330i — 10 éves TCO összehasonlítás." />
+    <meta name="keywords" content="tesla model 3 tco, villanyautó vs benzines költség, tesla üzemeltetési költség, elektromos autó megtakarítás, áramár benzinár, gépjárműadó mentesség" />
+    <meta property="og:description" content="Tesla Model 3 üzemeltetési költsége villany vs benzines: áramár, benzinár, gépjárműadó. Mennyit spórolsz 10 év alatt?" />
+    <meta name="twitter:description" content="Villany vs benzines — 10 éves üzemeltetési megtakarítás, magyar árakon." />
     <meta name="author" content="tm3.hu — Magyar Tesla Model 3 közösség" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <meta property="og:type" content="article" />
@@ -102,7 +102,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@tm3hu" />
     <meta name="twitter:creator" content="@tm3hu" />
-    <meta name="twitter:title" content="Tesla Model 3 TCO kalkulátor — villanyautó vs benzines · tm3.hu" />
+    <meta name="twitter:title" content="Tesla Model 3 üzemeltetési költség — villany vs benzines · tm3.hu" />
     <meta name="twitter:image" content="https://www.tm3.hu/assets/img/og-image.png" />
     <meta name="twitter:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
     <link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/tco.html" />
@@ -135,8 +135,8 @@
                 "@type": "WebPage",
                 "@id": "https://www.tm3.hu/pages/tco.html#webpage",
                 "url": "https://www.tm3.hu/pages/tco.html",
-                "name": "Tesla Model 3 TCO kalkulátor — villanyautó vs benzines · tm3.hu",
-                "description": "Tesla Model 3 10 éves TCO — villanyautó vs benzines (BMW 330i). Üzemanyagárak, áramárak, szervizköltségek.",
+                "name": "Tesla Model 3 üzemeltetési költség — villany vs benzines · tm3.hu",
+                "description": "Tesla Model 3 üzemeltetési költsége villany vs benzines: áramár, benzinár, gépjárműadó. Mennyit spórolsz 10 év alatt?",
                 "inLanguage": "hu-HU",
                 "isPartOf": {
                         "@id": "https://www.tm3.hu/#website"
@@ -164,6 +164,31 @@
 ]
     </script>
     <!-- JSONLD-END -->
+    <style>
+        /* TCO kalkulátor — oldal-specifikus stílusok (2026-10) */
+        .tco-result-green { color: var(--best) !important; }
+        .tco-compare { margin-top: 40px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 28px; }
+        .tco-compare h3 { font-size: 15px; color: var(--ink-2); margin-bottom: 20px; font-weight: 600; }
+        .tco-bar-row { display: grid; grid-template-columns: 200px 1fr 120px; gap: 16px; align-items: center; margin-bottom: 16px; }
+        .tco-bar-row:last-child { margin-bottom: 0; }
+        .tco-bar-label { font-size: 13px; color: var(--ink-2); font-weight: 600; }
+        .tco-bar { height: 26px; background: var(--bg-2); border-radius: 8px; overflow: hidden; }
+        .tco-bar-fill { height: 100%; border-radius: 8px; transition: width .25s ease; min-width: 2px; }
+        .tco-bar-fill.tesla { background: var(--accent); }
+        .tco-bar-fill.benz { background: var(--sport); }
+        .tco-bar-val { font-size: 14px; font-weight: 700; color: var(--ink); text-align: right; font-variant-numeric: tabular-nums; }
+        .tco-advanced { margin-top: 32px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 0 28px; }
+        .tco-advanced summary { cursor: pointer; padding: 22px 0; font-weight: 600; font-size: 15px; color: var(--ink); list-style: none; }
+        .tco-advanced summary::-webkit-details-marker { display: none; }
+        .tco-advanced summary::before { content: "▸ "; color: var(--accent); }
+        .tco-advanced[open] summary::before { content: "▾ "; }
+        .tco-advanced .adv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding-bottom: 4px; }
+        @media (max-width: 700px) {
+            .tco-bar-row { grid-template-columns: 1fr 1fr; }
+            .tco-bar-row .tco-bar { grid-column: 1 / -1; grid-row: 2; }
+            .tco-advanced .adv-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
     <!-- P2: inline statikus navbar — JS nélkül is látható. -->
@@ -202,15 +227,13 @@
             <div class="breadcrumb">
                 <a href="../index.html">Főoldal</a>
                 <span class="breadcrumb-sep">/</span>
-                <a href="../index.html#tco-preview">Kalkulátorok</a>
-                <span class="breadcrumb-sep">/</span>
-                <span aria-current="page">10 éves TCO</span>
+                <span aria-current="page">Költségkalkulátor</span>
             </div>
             <span class="eyebrow">💰 Költségkalkulátor</span>
-            <h1>10 éves teljes birtoklási költség</h1>
+            <h1>Mennyit spórolsz egy benzineshez képest?</h1>
             <p class="lead">
-                Számold ki a Tesla Model 3 teljes 10 éves költségét, és hasonlítsd össze egy
-                hasonló kategóriájú benzines autóval.
+                Áram, benzin és gépjárműadó — a jól becsülhető rész. A vételárat és az
+                értékvesztést külön, becslésként mutatjuk, mert az a legbizonytalanabb.
             </p>
         </div>
     </section>
@@ -223,23 +246,13 @@
 
                     <div class="calc-field">
                         <label>Éves futásteljesítmény <small id="lbl-km">15 000 km</small></label>
-                        <input type="range" id="eves-km" min="5000" max="50000" step="1000" value="15000" />
+                        <input type="range" id="eves-km" min="5000" max="40000" step="1000" value="15000" />
                     </div>
 
                     <div class="calc-field">
-                        <label>Otthoni áram ára <small id="lbl-aram">60 Ft/kWh</small></label>
-                        <input type="range" id="aram-ar" min="30" max="120" step="5" value="60" />
-                    </div>
-
-                    <div class="calc-field">
-                        <label>Supercharger / DC töltés arány <small id="lbl-dc">20%</small></label>
-                        <input type="range" id="dc-arany" min="0" max="100" step="5" value="20" />
-                    </div>
-
-                    <div class="calc-field">
-                        <label for="fogyasztas">Fogyasztás <small>kWh/100 km</small></label>
+                        <label for="fogyasztas">Tesla fogyasztás <small>kWh/100 km</small></label>
                         <select id="fogyasztas">
-                            <option value="14">14 — nagyon takarékos (városi, nyár)</option>
+                            <option value="14">14 — nagyon takarékos (város, nyár)</option>
                             <option value="16" selected>16 — átlagos vegyes</option>
                             <option value="19">19 — autópálya / tél</option>
                             <option value="22">22 — sportos / hideg</option>
@@ -247,84 +260,93 @@
                     </div>
 
                     <div class="calc-field">
-                        <label>Balesetmentes bónusz <small id="lbl-bonusz">B10 (50% kedvezmény)</small></label>
-                        <input type="range" id="bonusz" min="0" max="100" step="10" value="50" />
+                        <label for="aram-ar">Otthoni áram ára <small>Ft/kWh</small></label>
+                        <select id="aram-ar">
+                            <option value="37">37 Ft — rezsicsökkentett lakossági</option>
+                            <option value="60" selected>60 Ft — vegyes / piaci</option>
+                            <option value="75">75 Ft — piaci / nyilvános</option>
+                        </select>
                     </div>
 
                     <div class="calc-field">
-                        <label for="szerviz">Éves szervizkeret <small>Ft</small></label>
-                        <input type="number" id="szerviz" value="35000" min="0" step="5000" />
-                    </div>
-
-                    <div class="calc-field">
-                        <label for="gumi">Gumiabroncs csere <small>évente Ft</small></label>
-                        <input type="number" id="gumi" value="25000" min="0" step="5000" />
-                    </div>
-
-                    <div class="calc-field">
-                        <label for="tesla-ar">Tesla Model 3 vételár <small>Ft</small></label>
-                        <input type="number" id="tesla-ar" value="18000000" min="0" step="500000" />
-                    </div>
-
-                    <div class="calc-field">
-                        <label for="benz-ar">Benzines (BMW 330i) vételár <small>Ft</small></label>
-                        <input type="number" id="benz-ar" value="22500000" min="0" step="500000" />
+                        <label for="benz-fogy">Benzines referencia fogyasztás <small>L/100 km</small></label>
+                        <select id="benz-fogy">
+                            <option value="6">6 L — takarékos benzines</option>
+                            <option value="7" selected>7 L — átlagos (BMW 330i szint)</option>
+                            <option value="9">9 L — erős / nagy benzines</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="calc-output">
-                    <h3>Éves költség</h3>
-                    <div class="result" id="res-eves">— Ft</div>
-                    <div class="result-sub">Évente</div>
+                    <h3>Mennyit spórolsz?</h3>
+                    <div class="result tco-result-green" id="res-megtak-10ev" style="font-size:clamp(28px, 3.5vw, 40px);">— Ft</div>
+                    <div class="result-sub">10 év alatt (áram/üzemanyag + gépjárműadó)</div>
+
+                    <div class="highlight" style="background:var(--green-soft);border-color:rgba(16,140,61,0.25);">
+                        <strong style="color:var(--green);">💰 Éves megtakarítás: <span id="res-megtak-ev">— Ft</span></strong>
+                    </div>
 
                     <ul class="result-list">
-                        <li><span>Otthoni töltés:</span> <strong id="res-otthon">— Ft</strong></li>
-                        <li><span>DC / Supercharger:</span> <strong id="res-dc">— Ft</strong></li>
-                        <li><span>Biztosítás (adó: EV-mentes):</span> <strong id="res-bizt">— Ft</strong></li>
-                        <li><span>Szerviz + kopó alkatrész:</span> <strong id="res-szerviz">— Ft</strong></li>
+                        <li><span>⚡ Tesla áram:</span> <strong id="res-tesla">— Ft/év</strong></li>
+                        <li><span>⛽ Benzines üzemanyag:</span> <strong id="res-benz">— Ft/év</strong></li>
+                        <li><span>🏛️ Gépjárműadó:</span> <strong id="res-ado">Tesla 0 Ft · benzines — Ft/év</strong></li>
                     </ul>
 
-                    <div class="highlight">
-                        <strong>10 éves TCO:</strong>
-                        <p style="font-size:32px;font-weight: 600;color:var(--best);margin:8px 0 0;" id="res-10ev">— Ft</p>
-                        <p style="font-size:14px;color:var(--text-dim);margin-top:4px;">
-                            (vételár + értékvesztés + 10 év üzemeltetés)
-                        </p>
-                        <p style="font-size:13px;color:var(--text-dim);margin-top:2px;" id="res-ertekvesztes">ebből értékvesztés: —</p>
-                    </div>
-
-                    <div class="highlight" style="background:rgba(245,158,11,0.08);border-color:rgba(245,158,11,0.3);">
-                        <strong style="color:var(--sport);">🚗 Benzines referenciával (BMW 330i):</strong>
-                        <p style="margin:8px 0 0;font-size:14px;color:var(--text);">
-                            Hasonló kategóriájú benzines autó 10 éves TCO: <strong id="res-benzines">— Ft</strong><br>
-                            Megtakarítás: <strong style="color:var(--best);" id="res-megtakaritas">— Ft</strong>
-                        </p>
-                    </div>
+                    <p style="font-size:13px;color:var(--ink-3);margin-top:16px;line-height:1.5;">
+                        Ez csak az üzemeltetés (áram/üzemanyag + adó). Vételár, értékvesztés,
+                        biztosítás és szerviz nincs benne — azokat külön becsüljük lentebb.
+                    </p>
                 </div>
             </div>
 
-            <div class="grid grid-3" style="margin-top:48px;">
-                <div class="stat-box">
-                    <strong id="stat-ev">—</strong>
-                    <span>Ft / km</span>
+            <!-- Oszlopdiagram: Tesla vs benzines éves költség -->
+            <div class="tco-compare">
+                <h3>Éves üzemeltetési költség összehasonlítva</h3>
+                <div class="tco-bar-row">
+                    <span class="tco-bar-label">⚡ Tesla (áram)</span>
+                    <div class="tco-bar"><div class="tco-bar-fill tesla" id="bar-tesla" style="width:0%"></div></div>
+                    <span class="tco-bar-val" id="bar-tesla-val">— Ft/év</span>
                 </div>
-                <div class="stat-box">
-                    <strong id="stat-100">—</strong>
-                    <span>Ft / 100 km</span>
-                </div>
-                <div class="stat-box">
-                    <strong id="stat-toltes">—</strong>
-                    <span>DC + AC kWh/év</span>
+                <div class="tco-bar-row">
+                    <span class="tco-bar-label">⛽ Benzines (üzemanyag + adó)</span>
+                    <div class="tco-bar"><div class="tco-bar-fill benz" id="bar-benz" style="width:0%"></div></div>
+                    <span class="tco-bar-val" id="bar-benz-val">— Ft/év</span>
                 </div>
             </div>
 
+            <!-- Haladó: teljes TCO vételárral -->
+            <details class="tco-advanced">
+                <summary>Haladó: teljes TCO vételárral és értékvesztéssel</summary>
+                <div class="adv-grid">
+                    <div class="calc-field">
+                        <label for="tesla-ar">Tesla Model 3 vételár <small>Ft</small></label>
+                        <input type="number" id="tesla-ar" value="18000000" min="0" step="500000" />
+                    </div>
+                    <div class="calc-field">
+                        <label for="benz-ar">Benzines vételár <small>Ft</small></label>
+                        <input type="number" id="benz-ar" value="22500000" min="0" step="500000" />
+                    </div>
+                </div>
+                <ul class="result-list" style="margin-top:0;padding-top:0;border-top:0;padding-bottom:8px;">
+                    <li><span>⚡ Tesla 10 éves TCO:</span> <strong id="res-tco-tesla">— Ft</strong></li>
+                    <li><span>⛽ Benzines 10 éves TCO:</span> <strong id="res-tco-benz">— Ft</strong></li>
+                    <li><span>💰 Különbség:</span> <strong id="res-tco-megtak" style="color:var(--best);">— Ft</strong></li>
+                </ul>
+                <p style="font-size:13px;color:var(--ink-3);padding-bottom:24px;margin-top:0;line-height:1.5;">
+                    Becslés: 10 év utáni maradványérték Model 3 ~25%, benzines ~30% — ez a
+                    legbizonytalanabb tényező, ezért kezeljük külön.
+                </p>
+            </details>
+
+            <!-- Feltételezések / források -->
             <div class="tip-box green" style="margin-top:40px;">
-                <strong>💡 A TCO számítás feltételezései:</strong>
+                <strong>💡 Mit számoltunk — és honnan jönnek a számok?</strong>
                 <ul style="margin-top:8px; padding-left:20px;">
-                    <li>Tartalmazza a <strong>vételárat</strong>, az <strong>értékvesztést</strong> (10 év utáni maradványérték: Model 3 ~25%, BMW 330i ~30% — becslés) és a 10 év üzemeltetést.</li>
-                    <li>A Tesla <strong>gépjárműadó-mentes</strong> (tisztán elektromos, NAV), a BMW 330i (~190 kW) ~65 000 Ft/év gépjárműadót fizet.</li>
-                    <li>Üzemanyag 630 Ft/l (2026. szept.), otthoni áram 60 Ft/kWh (alapértelmezés), Supercharger 145 Ft/kWh.</li>
-                    <li>Nem tartalmazza a várható akkumulátor-cserét — a 8 év / 160 000 km garancia általában fedezi.</li>
+                    <li>Benzin: <strong>630 Ft/l</strong> (holtankoljak.hu, 2026. szept.) — rögzített érték.</li>
+                    <li>Áram: te választod (37 / 60 / 75 Ft/kWh).</li>
+                    <li>Gépjárműadó: Tesla <strong>0 Ft</strong> (tisztán elektromos, NAV-mentes), benzines <strong>~65 000 Ft/év</strong> (150–190 kW-os autóra).</li>
+                    <li>A fenti megtakarítás <strong>nem tartalmazza</strong>: vételárat, értékvesztést, biztosítást, szervizt, gumit — ezek bizonytalanabbak, ezért külön kezeljük.</li>
                 </ul>
             </div>
         </div>
@@ -332,37 +354,9 @@
 
     <footer id="footer"></footer>
 
-    <script src="../assets/js/util.js?v=2026-08-31-gumi-v1" defer></script>
+    <script src="../assets/js/util.js?v=2026-10-tco-v2" defer></script>
     <script src="../assets/js/site.js?v=2026-08-31-gumi-v1" defer></script>
     <script src="../assets/js/consent.js?v=2026-09-consent-v1" defer></script>
-<script src="../assets/js/tco.js?v=2026-08-31-gumi-v1" defer></script>
-
-
-    <!-- ===== 10 ÉVES TCO ÖSSZEHASONLÍTÁS — CHART ===== -->
-    <section class="section section--alt">
-        <div class="container">
-            <header class="section-head">
-                <span class="section-eyebrow">Vizualizáció</span>
-                <h2 class="section-title">10 év alatt: mennyit takarítasz meg?</h2>
-                <p class="section-sub">Egy átlagos magyarországi sofőr évi 15 000 km-t fut. A Tesla Model 3 villanyüzeme és alacsony szervizigénye 10 év alatt milliókban mérhető megtakarítást jelent egy hasonló benzines szedánhoz képest.</p>
-            </header>
-
-            <div class="deg-chart-wrap">
-                <header class="section-head" style="margin-bottom: 1.5rem;">
-                    <span class="section-eyebrow">Adatok · valós TCO</span>
-                    <h3 class="section-title" style="font-size: clamp(1.5rem, 2.5vw, 2.25rem);">Kumulatív költség összehasonlítás</h3>
-                </header>
-
-                <div class="deg-chart-inner">
-                    <canvas id="tcoChart" aria-label="TCO összehasonlítás chart" role="img"></canvas>
-                </div>
-
-                <p class="deg-note">A görbék a kumulatív birtoklási költséget mutatják: vételár + üzemeltetés − aktuális maradványérték. A Tesla olcsóbb üzemű (áram + adómentesség), a BMW 330i drágább üzemű (üzemanyag + gépjárműadó), de lassabban veszít az értékéből. A görbék a kalkulátor beállításait követik, 2026-os magyar árakon.</p>
-            </div>
-        </div>
-    </section>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js" defer></script>
-<script src="../script.js" defer></script>
+    <script src="../assets/js/tco.js?v=2026-10-tco-v2" defer></script>
 </body>
 </html>

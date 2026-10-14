@@ -1,7 +1,8 @@
 /* =====================================================
-   TCO — 10 éves teljes birtoklási költség (vételár + értékvesztés + üzemeltetés)
-   Források: NAV gépjárműadó-mentesség, holtankoljak.hu (2026. szept.),
-   a site saját töltőárai (tobberek.json).
+   TCO — üzemeltetési költség kalkulátor (villany vs benzines)
+   Csak a jól becsülhető részt számoljuk: áram/üzemanyag + gépjárműadó.
+   Vételár + értékvesztés külön, a "Haladó" blokkban (becslés).
+   Források: holtankoljak.hu (benzinár, 2026. szept.), NAV gépjárműadó-mentesség.
    ===================================================== */
 
 (function () {
@@ -9,113 +10,78 @@
     const fmtHuf = (n) => new Intl.NumberFormat('hu-HU', { style: 'currency', currency: 'HUF', maximumFractionDigits: 0 }).format(n);
     const fmtNum = (n) => new Intl.NumberFormat('hu-HU').format(n);
 
-    // Konstansok — 2026 Q3, Magyarország
-    const DC_AR = 145;             // Supercharger Ft/kWh (a site tobberek.json szerint)
-    const BENZIN_AR = 630;         // 95-ös benzin Ft/L (2026. szept., holtankoljak.hu)
-    const BENZIN_FOGY = 7.0;       // BMW 330i ~7 L/100 km vegyes
-    const BIZT_ALAP = 500000;      // Tesla CASCO+kgfb alap (bónusz nélkül), Ft/év
-    const BENZ_BIZT_FAKTOR = 1.1;  // BMW biztosítás ~10%-kal drágább
-    const ADO_EV = 0;              // tisztán elektromos: gépjárműadó-mentes (NAV, 5E/5Z)
-    const ADO_BENZIN = 65000;      // BMW 330i (~190 kW) gépjárműadó ~65 000 Ft/év
-    const BENZ_SZERVIZ_FAKTOR = 1.9;
-    const TESLA_MARADEK = 0.25;    // 10 év utáni maradványérték (becslés)
-    const BENZ_MARADEK = 0.30;     // 10 év utáni maradványérték (becslés)
+    const BENZIN_AR = 630;      // Ft/l — 95-ös benzin (holtankoljak.hu, 2026. szept.)
+    const ADO_BENZIN = 65000;   // Ft/év — ~150–190 kW-os benzines gépjárműadó
+    const ADO_EV = 0;           // Ft/év — tisztán elektromos: NAV-mentes
 
-    function readInputs() {
-        const num = (id, fallback) => {
+    const TESLA_MARADEK = 0.25; // 10 év utáni maradványérték (becslés)
+    const BENZ_MARADEK = 0.30;  // 10 év utáni maradványérték (becslés)
+
+    function read() {
+        const num = (id, fb) => {
             const el = $(id);
             const v = el ? parseFloat(el.value) : NaN;
-            return isFinite(v) ? v : fallback;
+            return isFinite(v) ? v : fb;
         };
         return {
-            evesKm: num('eves-km', 15000),
-            aramAr: num('aram-ar', 60),
-            dcArany: num('dc-arany', 20),
-            fogyasztas: num('fogyasztas', 16),
-            bonusz: num('bonusz', 50),
-            szerviz: num('szerviz', 0),
-            gumi: num('gumi', 0),
+            km: num('eves-km', 15000),
+            fogy: num('fogyasztas', 16),
+            aram: num('aram-ar', 60),
+            benzFogy: num('benz-fogy', 7),
             teslaAr: num('tesla-ar', 18000000),
             benzAr: num('benz-ar', 22500000),
         };
     }
 
-    function calc(inp) {
-        // ---- Tesla energia ----
-        const kWhPerYear = (inp.evesKm / 100) * inp.fogyasztas;
-        const kWhOthon = kWhPerYear * (1 - inp.dcArany / 100);
-        const kWhDc = kWhPerYear * (inp.dcArany / 100);
-        const aramKoltseg = kWhOthon * inp.aramAr;
-        const dcKoltseg = kWhDc * DC_AR;
-        const biztositas = BIZT_ALAP * (1 - inp.bonusz / 100);
-        const szervizKoltseg = inp.szerviz + inp.gumi;
-        const teslaUzemEves = aramKoltseg + dcKoltseg + biztositas + ADO_EV + szervizKoltseg;
-        const teslaErtekvesztes = inp.teslaAr * (1 - TESLA_MARADEK);
-        const teslaTCO10 = teslaUzemEves * 10 + teslaErtekvesztes;
+    function calc(i) {
+        // Éves üzemeltetés (áram/üzemanyag + adó)
+        const teslaAram = (i.km / 100) * i.fogy * i.aram;
+        const benzUzemanyag = (i.km / 100) * i.benzFogy * BENZIN_AR;
+        const teslaUzem = teslaAram + ADO_EV;
+        const benzUzem = benzUzemanyag + ADO_BENZIN;
 
-        // ---- Benzines (BMW 330i) ----
-        const benzUzemanyag = (inp.evesKm / 100) * BENZIN_FOGY * BENZIN_AR;
-        const benzBizt = biztositas * BENZ_BIZT_FAKTOR;
-        const benzSzerviz = szervizKoltseg * BENZ_SZERVIZ_FAKTOR;
-        const benzUzemEves = benzUzemanyag + benzBizt + ADO_BENZIN + benzSzerviz;
-        const benzErtekvesztes = inp.benzAr * (1 - BENZ_MARADEK);
-        const benzTCO10 = benzUzemEves * 10 + benzErtekvesztes;
+        const megtakEv = benzUzem - teslaUzem;
+        const megtak10 = megtakEv * 10;
 
-        const megtakaritas = benzTCO10 - teslaTCO10;
-
-        // Kumulatív TCO görbe: vételár + kumulált üzemeltetés − aktuális maradványérték
-        function curve(vetelar, uzemEves, maradekFrac) {
-            const pts = [];
-            for (let t = 0; t <= 10; t++) {
-                const maradek = vetelar * (1 - (1 - maradekFrac) * t / 10);
-                pts.push(Math.round(vetelar + t * uzemEves - maradek));
-            }
-            return pts;
-        }
+        // Teljes TCO (vételár + értékvesztés + 10 év üzemeltetés) — becslés
+        const teslaTCO10 = teslaUzem * 10 + i.teslaAr * (1 - TESLA_MARADEK);
+        const benzTCO10 = benzUzem * 10 + i.benzAr * (1 - BENZ_MARADEK);
+        const tcoMegtak = benzTCO10 - teslaTCO10;
 
         return {
-            inp, kWhPerYear, aramKoltseg, dcKoltseg, biztositas, szervizKoltseg,
-            teslaUzemEves, teslaTCO10, teslaErtekvesztes,
-            benzUzemanyag, benzUzemEves, benzTCO10, benzErtekvesztes,
-            megtakaritas,
-            teslaCurve: curve(inp.teslaAr, teslaUzemEves, TESLA_MARADEK),
-            benzCurve: curve(inp.benzAr, benzUzemEves, BENZ_MARADEK),
+            teslaAram, benzUzemanyag, teslaUzem, benzUzem,
+            megtakEv, megtak10, teslaTCO10, benzTCO10, tcoMegtak,
         };
     }
 
-    function render(r) {
-        $('lbl-km').textContent = fmtNum(r.inp.evesKm) + ' km';
-        $('lbl-aram').textContent = r.inp.aramAr + ' Ft/kWh';
-        $('lbl-dc').textContent = r.inp.dcArany + '%';
-        $('lbl-bonusz').textContent = 'B' + Math.round(r.inp.bonusz / 10) + ' (' + r.inp.bonusz + '% kedvezmény)';
+    function render(i, r) {
+        $('lbl-km').textContent = fmtNum(i.km) + ' km';
 
-        $('res-eves').textContent = fmtHuf(r.teslaUzemEves);
-        $('res-otthon').textContent = fmtHuf(r.aramKoltseg);
-        $('res-dc').textContent = fmtHuf(r.dcKoltseg);
-        $('res-bizt').textContent = fmtHuf(r.biztositas + ADO_EV);
-        $('res-szerviz').textContent = fmtHuf(r.szervizKoltseg);
-        $('res-10ev').textContent = fmtHuf(r.teslaTCO10);
-        $('res-benzines').textContent = fmtHuf(r.benzTCO10);
-        $('res-megtakaritas').textContent = fmtHuf(r.megtakaritas);
+        $('res-megtak-ev').textContent = fmtHuf(r.megtakEv);
+        $('res-megtak-10ev').textContent = fmtHuf(r.megtak10);
+        $('res-tesla').textContent = fmtHuf(r.teslaAram);
+        $('res-benz').textContent = fmtHuf(r.benzUzemanyag);
+        $('res-ado').textContent = 'Tesla 0 Ft · benzines ' + fmtHuf(ADO_BENZIN);
 
-        // Értékvesztés megjelenítése a 10 éves TCO alatt
-        const evEl = $('res-ertekvesztes');
-        if (evEl) evEl.textContent = 'ebből értékvesztés: ' + fmtHuf(r.teslaErtekvesztes);
+        // Oszlopdiagram (Tesla vs benzines éves költség)
+        const max = Math.max(r.teslaUzem, r.benzUzem, 1);
+        $('bar-tesla').style.width = (r.teslaUzem / max * 100).toFixed(1) + '%';
+        $('bar-benz').style.width = (r.benzUzem / max * 100).toFixed(1) + '%';
+        $('bar-tesla-val').textContent = fmtHuf(r.teslaUzem);
+        $('bar-benz-val').textContent = fmtHuf(r.benzUzem);
 
-        $('stat-ev').textContent = fmtHuf(r.teslaUzemEves / r.inp.evesKm).replace(' Ft', '');
-        $('stat-100').textContent = fmtHuf(r.teslaUzemEves / r.inp.evesKm * 100).replace(' Ft', '');
-        $('stat-toltes').textContent = fmtNum(Math.round(r.kWhPerYear));
+        // Haladó: teljes TCO
+        $('res-tco-tesla').textContent = fmtHuf(r.teslaTCO10);
+        $('res-tco-benz').textContent = fmtHuf(r.benzTCO10);
+        $('res-tco-megtak').textContent = fmtHuf(r.tcoMegtak);
     }
 
     function update() {
-        const r = calc(readInputs());
-        render(r);
-        window.tm3Tco = window.tm3Tco || {};
-        window.tm3Tco.latest = r;
-        if (window.tm3Tco.renderChart) window.tm3Tco.renderChart(r);
+        const i = read();
+        render(i, calc(i));
     }
 
-    ['eves-km', 'aram-ar', 'dc-arany', 'fogyasztas', 'bonusz', 'szerviz', 'gumi', 'tesla-ar', 'benz-ar'].forEach((id) => {
+    ['eves-km', 'fogyasztas', 'aram-ar', 'benz-fogy', 'tesla-ar', 'benz-ar'].forEach((id) => {
         const el = $(id);
         if (!el) return;
         el.addEventListener('input', update);
