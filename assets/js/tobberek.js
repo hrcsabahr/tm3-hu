@@ -127,6 +127,9 @@
                 latLngs.push([t.lat, t.lng]);
             });
 
+            // Töltőállomások listája — mindig látható szöveges lista, a térkép nélkül is.
+            renderList(adat.toltoallomasok);
+
             // ---- "Mutasd mind" gomb: fitBounds az osszes markerre ----
             const fitBtn = document.getElementById('map-fit');
             if (fitBtn && latLngs.length > 0) {
@@ -159,5 +162,37 @@
             .replace(/>/g, '&gt;')
             .replace(/"/g, '&quot;')
             .replace(/'/g, '&#39;');
+    }
+
+    // Töltőállomások listája — a térkép nélkül is látható szöveges lista,
+    // hálózatonként csoportosítva (2026-10).
+    function renderList(stations) {
+        const container = document.getElementById('tolto-lista-content');
+        if (!container) return;
+
+        const order = [
+            ['supercharger', '⚡ Tesla Supercharger'],
+            ['mobiliti', '🔋 Mobiliti'],
+            ['eon', '🟡 E.ON Drive'],
+            ['shell', '🐚 Shell Recharge'],
+            ['volteum', '⚪ Volteum'],
+        ];
+
+        let html = '';
+        order.forEach(([tipus, label]) => {
+            const items = stations.filter((s) => s.tipus === tipus);
+            if (!items.length) return;
+            html += '<div class="map-list-group">';
+            html += '<h3>' + label + ' <span class="map-list-count">(' + items.length + ')</span></h3><ul>';
+            items.forEach((s) => {
+                html += '<li><strong>' + escapeHtml(s.varos || '') + '</strong>';
+                html += ' <span class="map-list-cim">· ' + escapeHtml(s.cim || '') + '</span>';
+                if (s.megjegyzes) html += '<span class="map-list-note">' + escapeHtml(s.megjegyzes) + '</span>';
+                html += '</li>';
+            });
+            html += '</ul></div>';
+        });
+
+        container.innerHTML = html;
     }
 })();
