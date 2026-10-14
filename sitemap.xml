@@ -63,6 +63,18 @@
     <xhtml:link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/akkumulator.html" />
   </url>
   <url>
+    <loc>https://www.tm3.hu/pages/hoszivattyu.html</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.tm3.hu/assets/img/og-image.png</image:loc>
+      <image:title>PTC vs hőszivattyú — Model 3 fűtés · tm3.hu</image:title>
+      <image:caption>PTC ellenállásos fűtés vs hőszivattyú a Tesla Model 3-ban — működés, fogyasztás, téli hatótáv.</image:caption>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/hoszivattyu.html" />
+  </url>
+  <url>
     <loc>https://www.tm3.hu/pages/tco.html</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>monthly</changefreq>

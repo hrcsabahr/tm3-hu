@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
+    <meta name="google-site-verification" content="N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4" />
+    <!-- Google tag (gtag.js) — consent mode v2, csak consent utan kuld adatot. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-709EQ9B200"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+    </script>
+<meta name="theme-color" content="#06121E" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="tm3.hu">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Tesla Model 3 fűtés: PTC ellenállásos (2017-2020) vs hőszivattyú (2021+). Hogyan működik, mennyit fogyaszt, mekkora a téli hatótáv-különbség? Részletes magyarázat ábrákkal." />
+    <meta property="og:title" content="PTC vs hőszivattyú — hogyan fűt a Model 3 · tm3.hu" />
+    <meta property="og:url" content="https://www.tm3.hu/pages/hoszivattyu.html" />
+    <link rel="canonical" href="https://www.tm3.hu/pages/hoszivattyu.html" />
+    <title>PTC vs hőszivattyú — hogyan fűt a Tesla Model 3 télen · tm3.hu</title>
+    <link rel="preload" href="../assets/css/fonts.css" as="style" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/site.css?v=2026-08-31-gumi-v1" />
+    <link rel="stylesheet" href="../assets/css/consent.css?v=2026-09-consent-v1" />
+    
+    <script src="../assets/js/seo-head.js?v=2026-08-31-gumi-v1" defer></script>
+    <!-- P3 fix: inline fallback hamburger toggle -->
+    <script>
+        (function() {
+            'use strict';
+            function bindNavToggle() {
+                var btn = document.getElementById('nav-toggle');
+                var nav = document.getElementById('site-main-nav');
+                if (!btn || !nav) return;
+                if (btn.dataset.tm3Bound === '1') return;
+                btn.dataset.tm3Bound = '1';
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var open = nav.classList.toggle('is-open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    btn.classList.toggle('open', open);
+                });
+                var links = nav.querySelectorAll('a');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', function() {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                    });
+                }
+                document.addEventListener('click', function(e) {
+                    if (!nav.classList.contains('is-open')) return;
+                    if (nav.contains(e.target) || btn.contains(e.target)) return;
+                    nav.classList.remove('is-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.classList.remove('open');
+                });
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                        btn.focus();
+                    }
+                });
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bindNavToggle);
+            } else {
+                bindNavToggle();
+            }
+        })();
+    </script>
+        <!-- SEO-META-START -->
+    <meta name="keywords" content="tesla model 3 hőszivattyú, tesla model 3 ptc fűtés, tesla téli hatótáv, hőszivattyú vs ptc, model 3 fűtés, octovalve" />
+    <meta property="og:description" content="PTC ellenállásos fűtés (2017-2020) vs hőszivattyú (2021+): működési elv, fogyasztás, téli hatótáv-különbség — ábrákkal." />
+    <meta name="twitter:description" content="PTC vs hőszivattyú — hogyan fűt a Tesla Model 3, és mennyit számít télen." />
+    <meta name="author" content="tm3.hu — Magyar Tesla Model 3 közösség" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="tm3.hu" />
+    <meta property="og:locale" content="hu_HU" />
+    <meta property="og:image" content="https://www.tm3.hu/assets/img/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tm3hu" />
+    <meta name="twitter:creator" content="@tm3hu" />
+    <meta name="twitter:title" content="PTC vs hőszivattyú — hogyan fűt a Tesla Model 3 télen · tm3.hu" />
+    <meta name="twitter:image" content="https://www.tm3.hu/assets/img/og-image.png" />
+    <meta name="twitter:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+    <link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/hoszivattyu.html" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/icon.svg" />
+    <link rel="apple-touch-icon" href="../assets/img/icon-192.png" />
+    <!-- SEO-META-END -->
+        <!-- JSONLD-START -->
+    <script type="application/ld+json">
+[
+        {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://www.tm3.hu/" },
+                        { "@type": "ListItem", "position": 2, "name": "Fűtés", "item": "https://www.tm3.hu/pages/hoszivattyu.html" }
+                ]
+        },
+        {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://www.tm3.hu/pages/hoszivattyu.html#webpage",
+                "url": "https://www.tm3.hu/pages/hoszivattyu.html",
+                "name": "PTC vs hőszivattyú — hogyan fűt a Tesla Model 3 télen · tm3.hu",
+                "description": "Tesla Model 3 fűtés: PTC ellenállásos (2017-2020) vs hőszivattyú (2021+). Működési elv, fogyasztás, téli hatótáv.",
+                "inLanguage": "hu-HU",
+                "isPartOf": { "@id": "https://www.tm3.hu/#website" },
+                "publisher": { "@id": "https://www.tm3.hu/#organization" },
+                "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.tm3.hu/assets/img/og-image.png" },
+                "articleSection": "Fűtés"
+        },
+        {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://www.tm3.hu/#organization",
+                "name": "tm3.hu",
+                "url": "https://www.tm3.hu",
+                "logo": { "@type": "ImageObject", "url": "https://www.tm3.hu/assets/img/icon.svg" }
+        }
+]
+    </script>
+    <!-- JSONLD-END -->
+</head>
+<body>
+    <!-- P2: inline statikus navbar — JS nélkül is látható. -->
+    <header class="navbar" id="site-nav">
+        <div class="nav-wrap">
+            <a href="../index.html" class="brand" aria-label="tm3.hu">
+                <span class="brand-mark">M3</span>
+                <span>tm3.hu</span>
+            </a>
+            <nav class="main-nav" id="site-main-nav" aria-label="Fő navigáció">
+                <a href="../index.html">Főoldal</a>
+                <a href="tobberek.html">Töltők</a>
+                <a href="akkumulator.html">Akkumulátor</a>
+                <a href="hoszivattyu.html" aria-current="page">Fűtés</a>
+                <a href="kalkulator.html">Degradation</a>
+                <a href="tco.html">TCO</a>
+                <a href="szervizek.html">Szerviz</a>
+                <a href="hibak.html">Hibák</a>
+                <a href="visszahivasok.html">Visszahívások</a>
+                <a href="gumi.html">Gumi</a>
+                <a href="gyik.html">GYIK</a>
+                <a href="blog.html">Hírek</a>
+                <a href="forum.html">Fórum</a>
+                <a href="jogi.html">Jogi</a>
+            </nav>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span aria-current="page">Fűtés</span>
+            </div>
+            <span class="eyebrow">🌡️ Fűtés</span>
+            <h1>PTC vs hőszivattyú — hogyan fűt a Model 3, és mennyit számít télen?</h1>
+            <p class="lead">
+                A 2020 előtti Model 3 ellenállásos (PTC) fűtőt használ, a 2021-es frissítéstől
+                hőszivattyút. A különbség télen akár 10-20% hatótáv is lehet. Itt a mély magyarázat,
+                ábrákkal.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+
+            <h2 style="font-size:clamp(24px,3vw,32px);margin-bottom:20px;">Gyors összefoglaló</h2>
+            <div style="overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--surface);">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>PTC (ellenállásos)</th>
+                            <th>Hőszivattyú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Elv</strong></td><td>Áram → ellenállás → hő (100%)</td><td>Hőt mozgat (COP 2-4×)</td></tr>
+                        <tr><td><strong>Kabinfűtés fogyasztása</strong></td><td>3-5 kW</td><td>1-1,5 kW</td></tr>
+                        <tr><td><strong>Téli hatótáv-veszteség</strong></td><td>~25-35%</td><td>~15-20%</td></tr>
+                        <tr><td><strong>Melyik Model 3-ban</strong></td><td>2017-2020</td><td>2021+ (Model Y mindig)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 style="margin:56px 0 8px;font-size:clamp(20px,2.5vw,26px);">Hogyan működik a PTC fűtő?</h3>
+            <p style="color:var(--ink-2);font-size:16px;line-height:1.65;max-width:820px;">
+                A PTC fűtés a legegyszerűbb elv: az elektromos áram áthalad egy ellenálláson, az
+                elektronok „súrlódnak", és hő keletkezik (Joule-hő, P = I²R). A hatásfoka
+                <strong>100%</strong> — minden watt áram egy watt hővé alakul. Ez jól hangzik, de
+                valójában pont ez a gyenge pontja: <strong>annyi áramot eszik, amennyi hőt ad</strong>,
+                és a kabin fűtése télen 3-5 kW-ot igényel.
+            </p>
+            <p style="color:var(--ink-2);font-size:16px;line-height:1.65;max-width:820px;">
+                A „PTC" (pozitív hőmérsékleti együttható) a trükk: ahogy az ellenállás melegszik,
+                <strong>az ellenállása nő, ezért az áram automatikusan csökken</strong>. Gyorsan
+                felfűt, majd magától visszavesz — és nem tud túlmelegedni, mert önszabályozó.
+            </p>
+
+            <div style="max-width:620px;margin:24px auto 0;">
+            <svg viewBox="0 0 520 170" width="100%" style="max-width:620px;height:auto;" role="img" aria-label="PTC fűtés energiaáram">
+                <text x="0" y="20" font-size="13" font-weight="700" fill="#1a1a1a">PTC — az áram közvetlenül hővé alakul</text>
+                <rect x="0" y="66" width="112" height="56" rx="8" fill="#93c5fd" stroke="#0075DE" stroke-width="1.5"/>
+                <text x="56" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Akkumulátor</text>
+                <text x="56" y="108" text-anchor="middle" font-size="10" fill="#5C5C5C">(egyenáram)</text>
+                <line x1="112" y1="94" x2="182" y2="94" stroke="#0075DE" stroke-width="2.5"/>
+                <text x="147" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#0075DE">áram</text>
+                <rect x="182" y="58" width="140" height="72" rx="8" fill="#fdba74" stroke="#B45309" stroke-width="1.5"/>
+                <text x="252" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">PTC fűtőszál</text>
+                <text x="252" y="108" text-anchor="middle" font-size="10" fill="#5C5C5C">(ellenállás)</text>
+                <line x1="322" y1="94" x2="392" y2="94" stroke="#B45309" stroke-width="2.5"/>
+                <text x="357" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#B45309">hő</text>
+                <rect x="392" y="66" width="128" height="56" rx="8" fill="#fca5a5" stroke="#DC2626" stroke-width="1.5"/>
+                <text x="456" y="90" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Kabin</text>
+                <text x="456" y="108" text-anchor="middle" font-size="10" fill="#5C5C5C">(meleg levegő)</text>
+                <text x="260" y="152" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">1 kW áram → 1 kW hő (100%, de 3-5 kW-ot eszik)</text>
+            </svg>
+            </div>
+
+            <h3 style="margin:56px 0 8px;font-size:clamp(20px,2.5vw,26px);">Hogyan működik a hőszivattyú?</h3>
+            <p style="color:var(--ink-2);font-size:16px;line-height:1.65;max-width:820px;">
+                A hőszivattyú <strong>nem hőt termel, hanem mozgat</strong> — pont mint egy hűtőszekrény,
+                csak fordítva. Egy hűtőközeg körbe-körbe áramlik egy zárt körben, és a hőt a
+                hidegebb oldalról (külső levegő, motor, akkumulátor) a melegebb oldalra (kabin)
+                szállítja. Mivel csak a szállításhoz kell energia, <strong>1 kW árammal 2-4 kW hőt
+                tud mozgatni</strong> — ezt hívják COP-nak (teljesítménytényező).
+            </p>
+
+            <div style="max-width:620px;margin:24px auto 0;">
+            <svg viewBox="0 0 520 300" width="100%" style="max-width:620px;height:auto;" role="img" aria-label="Hőszivattyú hűtőkör">
+                <text x="0" y="18" font-size="13" font-weight="700" fill="#1a1a1a">Hőszivattyú hűtőkör — a hőt mozgatja, nem termeli</text>
+                <rect x="20" y="30" width="160" height="64" rx="8" fill="#fdba74" stroke="#B45309" stroke-width="1.5"/>
+                <text x="100" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Kompresszor</text>
+                <text x="100" y="76" text-anchor="middle" font-size="10" fill="#5C5C5C">összenyom → forró gáz</text>
+                <rect x="340" y="30" width="160" height="64" rx="8" fill="#fca5a5" stroke="#DC2626" stroke-width="1.5"/>
+                <text x="420" y="56" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Kondenzátor</text>
+                <text x="420" y="76" text-anchor="middle" font-size="10" fill="#5C5C5C">hőt ad a kabinnak</text>
+                <rect x="340" y="206" width="160" height="64" rx="8" fill="#93c5fd" stroke="#0075DE" stroke-width="1.5"/>
+                <text x="420" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Expanziós szelep</text>
+                <text x="420" y="252" text-anchor="middle" font-size="10" fill="#5C5C5C">nyomásesés → kihűl</text>
+                <rect x="20" y="206" width="160" height="64" rx="8" fill="#a5d8ff" stroke="#0075DE" stroke-width="1.5"/>
+                <text x="100" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Párologtató</text>
+                <text x="100" y="252" text-anchor="middle" font-size="10" fill="#5C5C5C">hőt vesz fel kintről</text>
+                <line x1="180" y1="62" x2="340" y2="62" stroke="#B45309" stroke-width="2.5"/>
+                <text x="260" y="54" text-anchor="middle" font-size="10" font-weight="700" fill="#B45309">forró gáz →</text>
+                <line x1="420" y1="94" x2="420" y2="206" stroke="#DC2626" stroke-width="2.5"/>
+                <text x="432" y="150" font-size="10" font-weight="700" fill="#DC2626">↓ lecsapódik</text>
+                <line x1="340" y1="238" x2="180" y2="238" stroke="#0075DE" stroke-width="2.5"/>
+                <text x="260" y="230" text-anchor="middle" font-size="10" font-weight="700" fill="#0075DE">← hideg folyadék</text>
+                <line x1="100" y1="206" x2="100" y2="94" stroke="#0075DE" stroke-width="2.5"/>
+                <text x="88" y="150" text-anchor="end" font-size="10" font-weight="700" fill="#0075DE">↑ gáz lesz</text>
+                <text x="260" y="286" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">1 kW áram → 2-4 kW hő (COP 2-4)</text>
+            </svg>
+            </div>
+
+            <h3 style="margin:56px 0 8px;font-size:clamp(20px,2.5vw,26px);">A Tesla trükkje: az Octovalve</h3>
+            <p style="color:var(--ink-2);font-size:16px;line-height:1.65;max-width:820px;">
+                A Tesla hőszivattyúja egyetlen nyolcállású szeleppel — az <strong>Octovalve</strong> —
+                irányítja a hűtőközeget a <strong>motor</strong>, az <strong>akkumulátor</strong> és a
+                <strong>kabin</strong> között. A legfontosabb: a rendszer begyűjti a
+                <strong>hulladékhőt</strong> — a motor statorjai szándékosan „rossz hatásfokkal"
+                üzemelve hőt termelnek, amit a hőszivattyú a kabinba tud pumpálni. Így a hő nem
+                vész el, hanem oda megy, ahol kell.
+            </p>
+            <p style="color:var(--ink-2);font-size:16px;line-height:1.65;max-width:820px;">
+                Nagyon hidegben (kb. -10°C alatt) a hőszivattyú hatásfoka csökken, mert kevés hőt tud
+                kintről felvenni. A Tesla erre is felkészült: a kompresszor képes „veszteséges"
+                módban közvetlenül hőt termelni — így <strong>legrosszabb esetben sem rosszabb a
+                PTC-nél</strong>.
+            </p>
+
+            <div style="max-width:620px;margin:24px auto 0;">
+            <svg viewBox="0 0 520 220" width="100%" style="max-width:620px;height:auto;" role="img" aria-label="Octovalve hőelosztás">
+                <text x="0" y="18" font-size="13" font-weight="700" fill="#1a1a1a">Octovalve — a hulladékhőt is begyűjti</text>
+                <rect x="20" y="44" width="130" height="50" rx="8" fill="#fdba74" stroke="#B45309" stroke-width="1.5"/>
+                <text x="85" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Motor</text>
+                <text x="85" y="86" text-anchor="middle" font-size="9" fill="#5C5C5C">(hulladékhő)</text>
+                <rect x="20" y="132" width="130" height="50" rx="8" fill="#93c5fd" stroke="#0075DE" stroke-width="1.5"/>
+                <text x="85" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Akkumulátor</text>
+                <text x="85" y="174" text-anchor="middle" font-size="9" fill="#5C5C5C">(hulladékhő)</text>
+                <rect x="370" y="132" width="130" height="50" rx="8" fill="#a5d8ff" stroke="#0075DE" stroke-width="1.5"/>
+                <text x="435" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Külső levegő</text>
+                <text x="435" y="174" text-anchor="middle" font-size="9" fill="#5C5C5C">(hideg hőforrás)</text>
+                <rect x="370" y="44" width="130" height="50" rx="8" fill="#fca5a5" stroke="#DC2626" stroke-width="1.5"/>
+                <text x="435" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#1a1a1a">Kabin</text>
+                <text x="435" y="86" text-anchor="middle" font-size="9" fill="#5C5C5C">(meleg levegő)</text>
+                <polygon points="260,74 285,95 285,125 260,146 235,125 235,95" fill="#e5e7eb" stroke="#374151" stroke-width="1.5"/>
+                <text x="260" y="115" text-anchor="middle" font-size="10" font-weight="700" fill="#1a1a1a">Octo-</text>
+                <text x="260" y="127" text-anchor="middle" font-size="10" font-weight="700" fill="#1a1a1a">valve</text>
+                <line x1="150" y1="69" x2="236" y2="98" stroke="#B45309" stroke-width="2"/>
+                <line x1="150" y1="157" x2="236" y2="122" stroke="#0075DE" stroke-width="2"/>
+                <line x1="370" y1="157" x2="285" y2="122" stroke="#0075DE" stroke-width="2"/>
+                <line x1="285" y1="98" x2="370" y2="69" stroke="#DC2626" stroke-width="2.5"/>
+                <text x="260" y="205" text-anchor="middle" font-size="11" fill="#1a1a1a">A hőt oda irányítja, ahol kell — a kabinba, vagy vissza az akkumulátorba előkondicionáláskor</text>
+            </svg>
+            </div>
+
+            <h3 style="margin:56px 0 8px;font-size:clamp(20px,2.5vw,26px);">Mit mutatnak a valós mérések?</h3>
+            <p style="color:var(--ink-2);font-size:16px;line-height:1.65;max-width:820px;">
+                Bjørn Nyland (ismert norvég EV-tesztelő) tesztje: két Model 3 kabinját fűtötte 3 órán
+                át. A hőszivattyús autó <strong>~735 W-ot</strong> fogyasztott óránként (3% akku),
+                a PTC-s pedig <strong>~2 170 W-ot</strong> (10% akku) — nagyjából
+                <strong>háromszoros</strong> különbség. Egy másik tulajdonosi mérés szerint a PTC-s
+                fűtés télen <strong>+26%</strong>-kal növeli a fogyasztást, a hőszivattyús csak
+                <strong>+8%</strong>-kal.
+            </p>
+
+            <div style="max-width:620px;margin:24px auto 0;">
+            <svg viewBox="0 0 520 190" width="100%" style="max-width:620px;height:auto;" role="img" aria-label="Kabinfűtés fogyasztása PTC vs hőszivattyú">
+                <text x="0" y="18" font-size="13" font-weight="700" fill="#1a1a1a">Kabinfűtés fogyasztása óránként (Nyland-teszt)</text>
+                <text x="150" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#B45309">PTC (2017-2020)</text>
+                <rect x="40" y="66" width="220" height="26" rx="5" fill="#fdba74" stroke="#B45309" stroke-width="1.5"/>
+                <text x="270" y="84" font-size="12" font-weight="700" fill="#1a1a1a">~2 170 W</text>
+                <text x="150" y="128" text-anchor="middle" font-size="11" font-weight="700" fill="#108C3D">Hőszivattyú (2021+)</text>
+                <rect x="40" y="136" width="74" height="26" rx="5" fill="#a7f3d0" stroke="#108C3D" stroke-width="1.5"/>
+                <text x="124" y="154" font-size="12" font-weight="700" fill="#1a1a1a">~735 W</text>
+                <text x="260" y="180" text-anchor="middle" font-size="11" fill="#5C5C5C">~3× kevesebb áram a hőszivattyúval</text>
+            </svg>
+            </div>
+
+            <h3 style="margin:56px 0 8px;font-size:clamp(20px,2.5vw,26px);">Melyik Model 3-ban melyik van?</h3>
+            <div class="grid grid-2" style="margin-top:16px;">
+                <div class="card">
+                    <h3>PTC (2017-2020)</h3>
+                    <p>A 2020. októberi frissítés <strong>előtti</strong> Model 3 minden változata
+                    (SR+, LR, Performance) ellenállásos PTC fűtőt kapott. Télen, főleg rövid
+                    utakon, érezhetően többet fogyaszt.</p>
+                </div>
+                <div class="card">
+                    <h3>Hőszivattyú (2021+)</h3>
+                    <p>A 2020. októbertől gyártott „facelift" Model 3 (2021-es modellév) alapfelszereltségként
+                    kapta a hőszivattyút. A Model Y a kezdetektől hőszivattyús. Ezzel együtt jött a
+                    dupla üvegezés elöl és a jobb zajszigetelés is.</p>
+                </div>
+            </div>
+
+            <div class="tip-box green" style="margin-top:40px;">
+                <strong>💡 Gyakorlati tanácsok télen:</strong>
+                <ul style="margin-top:8px; padding-left:20px;">
+                    <li><strong>Előkondicionálás:</strong> fűtsd fel a kabint és az akkut, amíg az autó a töltőn van — így a falról fűt, nem az akkuból.</li>
+                    <li><strong>Ülés- és kormányfűtés:</strong> sokkal hatékonyabb, mint a teljes kabin levegőjét fűteni — PTC-s autóknál főleg.</li>
+                    <li><strong>Rövid utak:</strong> a PTC-s autó minden indulásnál újra felfűt, ezért rövid távon jobban esik a hatótáv.</li>
+                    <li><strong>Használt vásárlás:</strong> ha sokat vezetsz télen rövid távon, a 2021+ (hőszivattyús) érezhetően jobb választás.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="../assets/js/util.js?v=2026-10-hoszivattyu-v1" defer></script>
+    <script src="../assets/js/site.js?v=2026-08-31-gumi-v1" defer></script>
+    <script src="../assets/js/consent.js?v=2026-09-01-consent-v1" defer></script>
+</body>
+</html>

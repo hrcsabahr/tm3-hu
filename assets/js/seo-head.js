@@ -62,6 +62,18 @@
                     { q: 'Melyik a leggyorsabb töltő Magyarországon?', a: 'A Tesla V3 Supercharger (pl. Budapest Óbuda, Székesfehérvár, Győr) 250 kW csúcsteljesítményt ad, ami a Model 3 LR és Performance modellek esetén 5-25 perc alatt 10-80%-ra tölt. Az E.ON és Shell HPC (High Power Charger) állomások 150-300 kW teljesítményűek, hasonló töltési idővel.' },
                 ],
         },
+        '/pages/hoszivattyu.html': {
+            title: 'PTC vs hőszivattyú — hogyan fűt a Tesla Model 3 télen · tm3.hu',
+            description: 'Tesla Model 3 fűtés: PTC ellenállásos (2017-2020) vs hőszivattyú (2021+). Működési elv, fogyasztás, téli hatótáv-különbség.',
+            h1: 'PTC vs hőszivattyú — hogyan fűt a Model 3?',
+            type: 'article',
+            section: 'Fűtés',
+            faq: [
+                    { q: 'Melyik Tesla Model 3-ban van hőszivattyú?', a: 'A 2020. októbertől gyártott (2021-es modellévű) Model 3 kapott hőszivattyút alapfelszereltségként. A 2017-2020 közötti évjáratok hagyományos PTC (ellenállásos) fűtőt használnak. A Model Y a kezdetektől hőszivattyús.' },
+                    { q: 'Mennyit spórol a hőszivattyú télen?', a: 'A hőszivattyú ~3× hatékonyabb a kabinfűtésnél: 1 kW árammal 2-4 kW hőt mozgat, szemben a PTC 1:1 arányával. A téli hatótáv-veszteség hőszivattyúval ~15-20%, PTC-vel ~25-35% (0°C körül).' },
+                    { q: 'Mennyi a PTC és a hőszivattyú fogyasztáskülönbsége?', a: 'Egy norvég tesztben 3 óra kabinfűtés a PTC-s autónál ~2 170 W-ot, a hőszivattyúsnál ~735 W-ot fogyasztott óránként — nagyjából háromszoros a különbség.' },
+            ],
+        },
         '/pages/kalkulator.html': {
             title: 'Tesla Model 3 akkumulátor degradation kalkulátor · tm3.hu',
             description: 'Számold ki a Tesla Model 3 akkumulátor-degradationját évek, kilométer és töltési ciklusok alapján. NCA, NCM811, LFP cellák összehasonlítása.',
