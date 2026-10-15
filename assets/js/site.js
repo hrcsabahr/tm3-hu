@@ -20,17 +20,17 @@
     // from the home-page H2 cards and the footer sitemap.
     NAV_ITEMS = [
         { href: 'index.html', label: 'Főoldal' },
-        { href: 'pages/tobberek.html', label: 'Töltők' },
         { href: 'pages/akkumulator.html', label: 'Akkumulátor' },
         { href: 'pages/hoszivattyu.html', label: 'Fűtés' },
-        { href: 'pages/kalkulator.html', label: 'Degradáció' },
-        { href: 'pages/tco.html', label: 'TCO' },
+        { href: 'pages/gumi.html', label: 'Gumi' },
+        { href: 'pages/tobberek.html', label: 'Töltők' },
         { href: 'pages/szervizek.html', label: 'Szervizek' },
         { href: 'pages/hibak.html', label: 'Hibák' },
         { href: 'pages/visszahivasok.html', label: 'Visszahívások' },
-        // 2026-08-31: USER REPORT — gumi-felni ajanlo oldal felvetele
-        { href: 'pages/gumi.html', label: 'Gumi' },
+        { href: 'pages/kalkulator.html', label: 'Degradáció' },
+        { href: 'pages/tco.html', label: 'TCO' },
         { href: 'pages/gyik.html', label: 'GYIK' },
+        { href: 'pages/blog.html', label: 'Hírek' },
         { href: 'pages/forum.html', label: 'Fórum' },
         { href: 'pages/jogi.html', label: 'Jogi' },
     ];
