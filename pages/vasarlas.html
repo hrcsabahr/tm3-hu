@@ -199,7 +199,7 @@
     </header>
     <!-- NAV: a site.js rendereli -->
 
-        <section class="page-hero">
+            <section class="page-hero">
         <div class="container">
             <div class="breadcrumb">
                 <a href="../index.html">Főoldal</a>
@@ -210,190 +210,288 @@
             <h1>Tesla Model 3 vásárlási útmutató</h1>
             <p class="lead">
                 Új vagy használt? Mennyit ér az akkumulátor állapota? Mire figyelj, ha nem értesz a villanyautókhoz?
-                Végigvezetünk a vásárláson lépésről lépésre — közérthetően, szakszargón nélkül, hogy ne fizess
-                feleslegesen egy rossz döntésért.
+                Végigvezetünk a vásárláson lépésről lépésre — közérthetően, szakszargón nélkül.
             </p>
         </div>
     </section>
 
-    <section class="section">
-        <div class="container" style="max-width: 880px;">
-
-            <div class="tip-box green">
-                <strong>⭐ A lényeg 30 másodpercben</strong>
-                <p style="margin:8px 0 0;">
+    <!-- ===== 1. A LÉNYEG ===== -->
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">Kezdd itt</span>
+                <h2 class="section-title">A lényeg 30 másodpercben</h2>
+                <p class="section-sub">
                     Egyetlen dolog van, ami mindennél többet számít: <strong>az akkumulátor állapota</strong>.
                     Ez a legdrágább alkatrész (a csere 2,5–6 millió Ft), és pont ezt nem látod ránézésre.
                     Minden más — szín, felni, évjárat — csak ezután jön.
                 </p>
-                <ul style="margin-top:10px; padding-left:20px;">
-                    <li><strong>SoH 90% felett</strong> = kiváló, nyugodt vétel</li>
-                    <li><strong>85–90%</strong> = normális, jó vétel lehet</li>
-                    <li><strong>85% alatt</strong> egy fiatal autónál = gyanús, alkudj vagy állj el</li>
-                </ul>
-                <p style="margin-top:10px;">
-                    (SoH = State of Health, vagyis hogy az akkumulátor az eredeti kapacitásának hány százalékát tudja.
-                    Lentebb elmagyarázzuk.)
-                </p>
+            </header>
+            <div class="grid grid-3">
+                <div class="card" style="border-top:3px solid var(--green);">
+                    <div class="card__icon">✅</div>
+                    <h3 class="card__title">SoH 90% felett</h3>
+                    <p>Kiváló állapot — nyugodt vétel, ritka az ilyen.</p>
+                </div>
+                <div class="card" style="border-top:3px solid var(--orange);">
+                    <div class="card__icon">👍</div>
+                    <h3 class="card__title">SoH 85–90%</h3>
+                    <p>Normális — a korhoz és futáshoz illő, jó vétel lehet.</p>
+                </div>
+                <div class="card" style="border-top:3px solid #dc2626;">
+                    <div class="card__icon">⚠️</div>
+                    <h3 class="card__title">SoH 85% alatt</h3>
+                    <p>Fiatal autónál gyanús — alkudj, vagy állj el.</p>
+                </div>
             </div>
+            <p style="text-align:center;margin-top:18px;color:var(--ink-3);font-size:13px;">
+                SoH = State of Health, vagyis hogy az akkumulátor az eredeti kapacitásának hány százalékát tudja. Lentebb elmagyarázzuk.
+            </p>
+        </div>
+    </section>
 
-                        <div class="card" id="modell-tanacsado" style="border-color: rgba(0,117,222,0.35);">
-                <h3><span class="tag accent">✨</span> Melyik modell illik hozzád?</h3>
-                <p style="color:var(--ink-2);">
+    <!-- ===== 2. KALKULÁTOR ===== -->
+    <section class="section" id="modell-tanacsado">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">✨ Tanácsadó</span>
+                <h2 class="section-title">Melyik modell illik hozzád?</h2>
+                <p class="section-sub">
                     Válaszolj 4 gyors kérdésre — megmondjuk, melyik Model 3 a te életedhez való, és mekkora
                     hatótávra számíts télen-nyáron.
                 </p>
-                <div class="calc-grid" style="margin-top:16px;">
-                    <div>
-                        <div class="calc-field">
-                            <label for="va-km">Mennyit vezetsz évente?</label>
-                            <select id="va-km">
-                                <option value="keves">10 000 km alatt</option>
-                                <option value="atlag" selected>10–20 000 km</option>
-                                <option value="sok">20–30 000 km</option>
-                                <option value="nagysok">30 000 km felett</option>
-                            </select>
-                        </div>
-                        <div class="calc-field">
-                            <label for="va-ut">Hol vezetsz legtöbbet?</label>
-                            <select id="va-ut">
-                                <option value="varos" selected>Főleg városban</option>
-                                <option value="vegyes">Vegyes (város + országút)</option>
-                                <option value="autopalya">Sok autópálya</option>
-                            </select>
-                        </div>
-                        <div class="calc-field">
-                            <label for="va-hol">Hol laksz?</label>
-                            <select id="va-hol">
-                                <option value="nagyvaros" selected>Nagyvárosban</option>
-                                <option value="kisvaros">Kisvárosban / elővárosban</option>
-                                <option value="videk">Vidéken (falu)</option>
-                            </select>
-                        </div>
-                        <div class="calc-field">
-                            <label for="va-toltes">Van otthoni töltési lehetőséged?</label>
-                            <select id="va-toltes">
-                                <option value="igen" selected>Igen (garázs / kert)</option>
-                                <option value="nem">Nincs</option>
-                            </select>
-                        </div>
+            </header>
+            <div class="calc-grid">
+                <div class="calc-card calc-inputs">
+                    <div class="calc-field">
+                        <label for="va-km">Mennyit vezetsz évente?</label>
+                        <select id="va-km">
+                            <option value="keves">10 000 km alatt</option>
+                            <option value="atlag" selected>10–20 000 km</option>
+                            <option value="sok">20–30 000 km</option>
+                            <option value="nagysok">30 000 km felett</option>
+                        </select>
                     </div>
-                    <div class="calc-output">
-                        <h3>Számodra ez a legjobb</h3>
-                        <div id="va-eredmeny" style="font-size:clamp(22px,3vw,30px);font-weight:600;line-height:1.15;">—</div>
-                        <p class="result-sub" id="va-indok">Válaszolj a kérdésekre.</p>
-                        <ul class="result-list" id="va-reszletek" style="display:none;">
-                            <li><span>Napi futás (becslés):</span> <strong id="va-napi">—</strong></li>
-                            <li><span>Valós hatótáv — nyár:</span> <strong id="va-nyar">—</strong></li>
-                            <li><span>Valós hatótáv — tél:</span> <strong id="va-tel">—</strong></li>
-                            <li><span>Napi töltési ajánlás:</span> <strong id="va-toltes-ajanlas">—</strong></li>
-                            <li><span>Új ár (tájékoztató):</span> <strong id="va-ar">—</strong></li>
-                        </ul>
-                        <div class="highlight" id="va-tipp" style="display:none;"></div>
+                    <div class="calc-field">
+                        <label for="va-ut">Hol vezetsz legtöbbet?</label>
+                        <select id="va-ut">
+                            <option value="varos" selected>Főleg városban</option>
+                            <option value="vegyes">Vegyes (város + országút)</option>
+                            <option value="autopalya">Sok autópálya</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label for="va-hol">Hol laksz?</label>
+                        <select id="va-hol">
+                            <option value="nagyvaros" selected>Nagyvárosban</option>
+                            <option value="kisvaros">Kisvárosban / elővárosban</option>
+                            <option value="videk">Vidéken (falu)</option>
+                        </select>
+                    </div>
+                    <div class="calc-field">
+                        <label for="va-toltes">Van otthoni töltési lehetőséged?</label>
+                        <select id="va-toltes">
+                            <option value="igen" selected>Igen (garázs / kert)</option>
+                            <option value="nem">Nincs</option>
+                        </select>
                     </div>
                 </div>
-            </div>
-
-<div class="card">
-                <h3><span class="tag accent">1</span> Új vagy használt?</h3>
-                <p>
-                    A döntés két dolgon múlik: a költségvetésen és azon, mekkora kockázatot vállalsz. Az új drágább,
-                    de nulla előélet; a használt olcsóbb, de a buktatókat neked kell kiszűrnöd.
-                </p>
-                <div style="margin-top:16px;">
-                    <h4 style="font-size:15px;font-weight:500;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;">Tájékoztató árak 2026-ban</h4>
-                    <table class="table" style="margin:0;">
-                        <thead>
-                            <tr><th>Variáns</th><th>Új (listaár)</th><th>1–2 éves használt</th><th>3–5 éves használt</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Model 3 RWD (SR+)</td><td>~14,9 M Ft</td><td>~12–14 M Ft</td><td>~9–11 M Ft</td></tr>
-                            <tr><td>Model 3 Long Range AWD</td><td>~19,2 M Ft</td><td>~16–18 M Ft</td><td>~12–15 M Ft</td></tr>
-                            <tr><td>Model 3 Performance</td><td>~21,5 M Ft</td><td>~19–22 M Ft</td><td>~14–17 M Ft</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="guide-tip" style="margin-top:16px;">
-                    <strong>Ökölszabály:</strong> ha megengedheted, az új a legbiztonságosabb — teljes gyári garancia,
-                    friss szoftver, ismert előélet. Használtnál a 20–35%-os spórolás csak akkor éri meg, ha az
-                    akkumulátort ellenőriztetted, különben a „megtakarítás" egy drága javításban köthet ki.
+                <div class="calc-output">
+                    <h3>Számodra ez a legjobb</h3>
+                    <div id="va-eredmeny" style="font-size:clamp(24px,3vw,32px);font-weight:600;line-height:1.15;">—</div>
+                    <p class="result-sub" id="va-indok">Válaszolj a kérdésekre.</p>
+                    <ul class="result-list" id="va-reszletek" style="display:none;">
+                        <li><span>Napi futás (becslés):</span> <strong id="va-napi">—</strong></li>
+                        <li><span>Valós hatótáv — nyár:</span> <strong id="va-nyar">—</strong></li>
+                        <li><span>Valós hatótáv — tél:</span> <strong id="va-tel">—</strong></li>
+                        <li><span>Napi töltési ajánlás:</span> <strong id="va-toltes-ajanlas">—</strong></li>
+                        <li><span>Új ár (tájékoztató):</span> <strong id="va-ar">—</strong></li>
+                    </ul>
+                    <div class="highlight" id="va-tipp" style="display:none;"></div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <h3><span class="tag accent">2</span> Mi számít igazán? (sorrendben)</h3>
-                <p>Laikusként ezt a sorrendet kövesd — elöl a legfontosabb, hátul a legkevésbé:</p>
-                <ol style="padding-left:22px; line-height:1.9;">
-                    <li><strong>Akkumulátor állapot (SoH).</strong> A legdrágább rész — ezt nézd meg elsőnek, mindig.</li>
-                    <li><strong>Baleseti előzmény.</strong> Festékvastagság, illesztési rések: a karosszéria „mesél".</li>
-                    <li><strong>Futásteljesítmény és évjárat együtt.</strong> A kevés km egy 2018-asban nem mindig jobb, mint a több km egy 2022-esben — az akku a kor miatt is öregszik.</li>
-                    <li><strong>Szerviztörténet.</strong> Rendszeres karbantartás? A garanciális munkákat elvégezték?</li>
-                    <li><strong>Felszereltség.</strong> 2021-től hőszivattyú + gyorsabb MCU3 — ez télen és a fedélzeti rendszerben is sokat számít.</li>
-                    <li><strong>Szín és felni.</strong> A használatban szinte lényegtelen — ne ez döntsön.</li>
-                </ol>
-                <div class="guide-tip">
-                    <strong>⚠ A leggyakoribb hiba:</strong> a vásárló a színe és a felni alapján dönt, és egy szép
-                    külsejű, de 80% alatti akkus autót visz haza. A festék olcsón javítható — az akkumulátor nem.
+    <!-- ===== 3. ÚJ VAGY HASZNÁLT ===== -->
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">1. Döntés</span>
+                <h2 class="section-title">Új vagy használt?</h2>
+                <p class="section-sub">
+                    A döntés a költségvetéseden és a kockázatvállaláson múlik: az új drágább, de nulla előélet;
+                    a használt olcsóbb, de a buktatókat neked kell kiszűrnöd.
+                </p>
+            </header>
+            <div class="grid grid-2" style="margin-bottom:40px;">
+                <div class="card" style="border-color: rgba(16,140,61,0.35);">
+                    <div class="card-head"><span class="card-tag" style="background:rgba(16,140,61,0.12);color:#108C3D;">Új autó</span></div>
+                    <h3 class="card__title">🟢 Biztonságos, de drágább</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2);line-height:1.7;">
+                        <li>Teljes gyári garancia (4 év / 80 000 km + 8 év az akkura)</li>
+                        <li>Friss szoftver, ismert előélet, nulla kockázat</li>
+                        <li>Drágább, és az értékvesztés az első években a legnagyobb</li>
+                    </ul>
+                </div>
+                <div class="card" style="border-color: rgba(0,117,222,0.35);">
+                    <div class="card-head"><span class="card-tag" style="background:rgba(0,117,222,0.12);color:#0075DE;">Használt autó</span></div>
+                    <h3 class="card__title">🔵 Olcsóbb, de ellenőrizni kell</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2);line-height:1.7;">
+                        <li>20–35%-kal olcsóbb, azonnal elvihető</li>
+                        <li>Rövidebb garancia, ismeretlen előélet</li>
+                        <li>Csak ellenőrzött akkumulátorral éri meg igazán</li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="card">
-                <h3><span class="tag accent">3</span> Az akkumulátor — érthetően</h3>
-                <p>
-                    <strong>Mi az a „degradáció"?</strong> Ahogy egy régi telefon, úgy a villanyautó akkuja is egyre
-                    kevesebb energiát tud tárolni az idő múlásával. Ezt százalékban mérik: a <strong>SoH (State of Health)</strong>
-                    megmondja, hány százaléka maradt meg az eredeti kapacitásnak. 100% = új, 90% = 10%-ot veszített.
-                </p>
-                <p style="margin-top:8px;">
-                    <strong>Mi a normális?</strong> Az első évben ~5% veszteség (utána lelassul), onnantól évente nagyjából
-                    1%. Egy 8 éves, átlagosan használt Model 3 jellemzően 85–90% körül áll. Ha egy 100 000 km alatti autó
-                    10%-nál többet veszített, az gyanús.
-                </p>
-                <p style="margin-top:8px;">
-                    <strong>Hogyan nézd meg te magad?</strong> Három út, a legegyszerűbbtől a haladóig:
-                </p>
-                <ul style="margin-top:8px;">
-                    <li><strong>Az autó képernyőjén:</strong> Szerviz menü → akkumulátor-állapot teszt — akár a helyszínen is lefuttathatod.</li>
-                    <li><strong>Független Tesla-szerviz:</strong> 30–50 ezer Ft-ért átvizsgálják (a <a href="szervizek.html">szervizkeresőnkben</a> találsz specialistát).</li>
-                    <li><strong>Haladóknak:</strong> Scan My Tesla app + OBD-adapter — cellaszintű adatok, de nem kötelező.</li>
-                </ul>
-                <p style="margin-top:8px;">
-                    <strong>LFP vagy NMC — egy percben:</strong> ha az autó engedi, hogy napi szinten 100%-ra töltsd,
-                    LFP-s (ez a hosszabb élettartamú, az SR+ modellekben). Ha 80%-ot ajánl napi töltésnek, NMC/NCA-s.
-                    Nem döntő, csak hasznos tudni.
-                </p>
-                <p style="margin-top:16px;">
-                    <a href="kalkulator.html" class="btn btn-primary btn-sm">→ Degradáció-kalkulátor megnyitása</a>
-                </p>
+            <h3 style="text-align:center;font-size:15px;font-weight:600;color:var(--ink-2);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:16px;">Tájékoztató árak 2026-ban</h3>
+            <div class="table-wrap" style="max-width:760px;margin:0 auto;">
+                <table class="table">
+                    <thead>
+                        <tr><th>Variáns</th><th>Új (listaár)</th><th>1–2 éves használt</th><th>3–5 éves használt</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Model 3 RWD (SR+)</td><td>~14,9 M Ft</td><td>~12–14 M Ft</td><td>~9–11 M Ft</td></tr>
+                        <tr><td>Model 3 Long Range AWD</td><td>~19,2 M Ft</td><td>~16–18 M Ft</td><td>~12–15 M Ft</td></tr>
+                        <tr><td>Model 3 Performance</td><td>~21,5 M Ft</td><td>~19–22 M Ft</td><td>~14–17 M Ft</td></tr>
+                    </tbody>
+                </table>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <h3><span class="tag accent">4</span> Ellenőrzőlista lépésről lépésre</h3>
-                <p><strong>Vásárlás előtt (papíron):</strong></p>
-                <ul>
-                    <li>Kérd el a <a href="../index.html#vin-checker">VIN-t</a> és dekódold — egyezzen a gyártási év a hirdetéssel.</li>
-                    <li>Kérd el a szerviztörténetet (a Tesla appban vagy hivatalos szervizben lekérhető).</li>
-                    <li>Komoly ajánlatnál ellenőriztesd az akkumulátort egy független szervizzel.</li>
-                </ul>
-                <p style="margin-top:10px;"><strong>Próbaúton:</strong></p>
-                <ul>
-                    <li>Ajtókilincsek: mind a 4 rendesen kijön és visszahúzódik? (2017–2020-asoknál gyakori hiba.)</li>
-                    <li>Fűtés és klíma: hidegen is teszteld — a hőszivattyú javítása drága.</li>
-                    <li>Futómű: zörgés, kopogás fekvőrendőrön? Kormány kóválygása autópályán?</li>
-                    <li>Regeneratív fékezés és az autopilot működése.</li>
-                    <li>Fényezés: kerékjáratok, az autó eleje — kavicsfelverődés nyomai.</li>
-                </ul>
-                <p style="margin-top:10px;"><strong>Átvétel után:</strong></p>
-                <ul>
-                    <li>5+ éves autónál cseréltesd a 12V akkumulátort (olcsó, de ha lemerül, az autó „megáll").</li>
-                    <li>Nézd meg a gumikat — a Performance abroncsok drágák.</li>
-                    <li>Vedd meg az e-matricát, mielőtt autópályára mész.</li>
-                </ul>
+    <!-- ===== 4. MI SZÁMÍT ===== -->
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">2. Prioritás</span>
+                <h2 class="section-title">Mi számít igazán?</h2>
+                <p class="section-sub">Laikusként ezt a sorrendet kövesd — elöl a legfontosabb, hátul a legkevésbé.</p>
+            </header>
+            <div class="grid grid-3">
+                <div class="card" style="border-color: rgba(220,38,38,0.35);">
+                    <div class="card-head"><span class="card-tag" style="background:rgba(220,38,38,0.12);color:#dc2626;">1. legfontosabb</span></div>
+                    <h3 class="card__title">🔋 Akkumulátor állapot (SoH)</h3>
+                    <p>A legdrágább rész — ezt nézd meg elsőnek, mindig.</p>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="card-tag">2.</span></div>
+                    <h3 class="card__title">🚗 Baleseti előzmény</h3>
+                    <p>Festékvastagság, illesztési rések: a karosszéria „mesél".</p>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="card-tag">3.</span></div>
+                    <h3 class="card__title">📏 Km és évjárat együtt</h3>
+                    <p>A kevés km egy 2018-asban nem mindig jobb, mint a több km egy 2022-esben — az akku a kor miatt is öregszik.</p>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="card-tag">4.</span></div>
+                    <h3 class="card__title">📋 Szerviztörténet</h3>
+                    <p>Rendszeres karbantartás? A garanciális munkákat elvégezték?</p>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="card-tag">5.</span></div>
+                    <h3 class="card__title">⚙️ Felszereltség</h3>
+                    <p>2021-től hőszivattyú + gyorsabb MCU3 — télen és a fedélzeti rendszerben is sokat számít.</p>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="card-tag">6. legkevésbé</span></div>
+                    <h3 class="card__title">🎨 Szín és felni</h3>
+                    <p>A használatban szinte lényegtelen — ne ez döntsön.</p>
+                </div>
             </div>
+            <div class="tip-box orange" style="max-width:760px;margin:32px auto 0;">
+                <strong>⚠ A leggyakoribb hiba:</strong> a vásárló a színe és a felni alapján dönt, és egy szép
+                külsejű, de 80% alatti akkus autót visz haza. A festék olcsón javítható — az akkumulátor nem.
+            </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <h3><span class="tag accent">5</span> Piros zászlók — mikor állj el</h3>
-                <ul>
+    <!-- ===== 5. AKKUMULÁTOR ===== -->
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">3. A legfontosabb</span>
+                <h2 class="section-title">Az akkumulátor — érthetően</h2>
+                <p class="section-sub">Két perc alatt megtanulod, mi az a degradáció, és hogyan nézd meg te magad.</p>
+            </header>
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card__icon">🔎</div>
+                    <h3 class="card__title">Mi az a „degradáció"?</h3>
+                    <p>Ahogy egy régi telefon, úgy a villanyautó akkuja is egyre kevesebb energiát tud tárolni az idő múlásával. Ezt százalékban mérik: a <strong>SoH (State of Health)</strong> megmondja, hány százaléka maradt meg az eredeti kapacitásnak. 100% = új, 90% = 10%-ot veszített.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">📉</div>
+                    <h3 class="card__title">Mi a normális?</h3>
+                    <p>Az első évben ~5% veszteség (utána lelassul), onnantól évente nagyjából 1%. Egy 8 éves, átlagosan használt Model 3 jellemzően 85–90% körül áll. Ha egy 100 000 km alatti autó 10%-nál többet veszített, az gyanús.</p>
+                </div>
+                <div class="card">
+                    <div class="card__icon">🛠️</div>
+                    <h3 class="card__title">Hogyan nézd meg te magad?</h3>
+                    <ul style="padding-left:18px;color:var(--ink-2);line-height:1.7;">
+                        <li><strong>Az autó képernyőjén:</strong> Szerviz menü → akkumulátor-állapot teszt.</li>
+                        <li><strong>Független Tesla-szerviz:</strong> 30–50 ezer Ft-ért átvizsgálják (<a href="szervizek.html">szervizkereső</a>).</li>
+                        <li><strong>Haladóknak:</strong> Scan My Tesla app + OBD-adapter.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card__icon">⚡</div>
+                    <h3 class="card__title">LFP vagy NMC — egy percben</h3>
+                    <p>Ha az autó engedi, hogy napi szinten 100%-ra töltsd, LFP-s (ez a hosszabb élettartamú, az SR+ modellekben). Ha 80%-ot ajánl napi töltésnek, NMC/NCA-s. Nem döntő, csak hasznos tudni.</p>
+                    <p style="margin-top:12px;"><a href="kalkulator.html" class="btn btn-primary btn-sm">→ Degradáció-kalkulátor</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. ELLENŐRZŐLISTA ===== -->
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">4. Gyakorlat</span>
+                <h2 class="section-title">Ellenőrzőlista lépésről lépésre</h2>
+                <p class="section-sub">Három fázis, hogy ne maradjon ki semmi.</p>
+            </header>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-head"><span class="card-tag" style="background:rgba(0,117,222,0.12);color:#0075DE;">Vásárlás előtt</span></div>
+                    <ul style="padding-left:18px;color:var(--ink-2);line-height:1.7;">
+                        <li>Kérd el a <a href="../index.html#vin-checker">VIN-t</a> és dekódold — egyezzen a gyártási év a hirdetéssel.</li>
+                        <li>Kérd el a szerviztörténetet (Tesla app / hivatalos szerviz).</li>
+                        <li>Komoly ajánlatnál ellenőriztesd az akkut független szervizzel.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="card-tag" style="background:rgba(0,117,222,0.12);color:#0075DE;">Próbaúton</span></div>
+                    <ul style="padding-left:18px;color:var(--ink-2);line-height:1.7;">
+                        <li>Ajtókilincsek: mind a 4 rendesen kijön és visszahúzódik?</li>
+                        <li>Fűtés és klíma hidegen is — a hőszivattyú javítása drága.</li>
+                        <li>Futómű: zörgés, kopogás fekvőrendőrön?</li>
+                        <li>Regeneratív fékezés és az autopilot működése.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-head"><span class="card-tag" style="background:rgba(16,140,61,0.12);color:#108C3D;">Átvétel után</span></div>
+                    <ul style="padding-left:18px;color:var(--ink-2);line-height:1.7;">
+                        <li>5+ éves autónál cseréltesd a 12V akkumulátort (olcsó, de ha lemerül, az autó „megáll").</li>
+                        <li>Nézd meg a gumikat — a Performance abroncsok drágák.</li>
+                        <li>Vedd meg az e-matricát, mielőtt autópályára mész.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. PIROS ZÁSZLÓK ===== -->
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">5. Vigyázat</span>
+                <h2 class="section-title">Piros zászlók — mikor állj el</h2>
+            </header>
+            <div class="tip-box orange" style="max-width:760px;margin:0 auto;padding:24px 28px;font-size:15px;">
+                <ul style="line-height:2;padding-left:20px;">
                     <li>10%-nál nagyobb akku-veszteség 100 000 km alatt.</li>
                     <li>„Visszaminősített" vagy „felújított" akkumulátor.</li>
                     <li>MCU2-ről MCU3-ra utólag frissített rendszer (gyakran egy korábbi MCU2-hibát takargat).</li>
@@ -402,49 +500,69 @@
                     <li>Balesetre utaló jelek: egyenetlen illesztési rések, eltérő festékvastagság.</li>
                     <li>Hiányzó szerviztörténet + védekező eladó.</li>
                 </ul>
-                <div class="guide-tip">
-                    <strong>Ha bármelyiket látod,</strong> ne dőlj be az „olcsón adom, mert sietek" szövegnek.
-                    Egy gyanús autón spórolt 1–2 millió forint könnyen elúszik az első nagyobb javításon.
-                </div>
+                <p style="margin-top:12px;"><strong>Ha bármelyiket látod,</strong> ne dőlj be az „olcsón adom, mert sietek" szövegnek — egy gyanús autón spórolt 1–2 millió forint könnyen elúszik az első nagyobb javításon.</p>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <h3><span class="tag accent">6</span> Rejtett költségek</h3>
-                <ul>
-                    <li><strong>Kötelező biztosítás (KGFB):</strong> 35–80 000 Ft/év (értéktől és bónusztól függ).</li>
-                    <li><strong>Casco:</strong> 180–450 000 Ft/év — villanyautónál főleg érdemes.</li>
-                    <li><strong>Gépjárműadó:</strong> tisztán elektromos autóra 0 Ft.</li>
-                    <li><strong>E-matrica (D1):</strong> 5 750 Ft / 10 nap, 13 840 Ft / havi, 49 190 Ft / éves.</li>
-                    <li><strong>Otthoni töltő (11 kW):</strong> 200–450 000 Ft telepítéssel — éjszakai árammal ez hozza a legolcsóbb üzemeltetést.</li>
-                </ul>
-                <p style="margin-top:12px;">
-                    A biztosítást mindig hasonlítsd össze online (Netrisk, Biztosítás.hu, BiztHozam) — ugyanarra az autóra
-                    nagy szórás lehet az ajánlatok között.
-                </p>
+    <!-- ===== 8. REJTETT KÖLTSÉGEK ===== -->
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">6. Költségek</span>
+                <h2 class="section-title">Rejtett költségek</h2>
+                <p class="section-sub">A vételáron felül ezekkel számolj.</p>
+            </header>
+            <div class="grid grid-3">
+                <div class="card"><div class="card__icon">🛡️</div><h3 class="card__title">Biztosítás</h3><p><strong>KGFB:</strong> 35–80 ezer Ft/év · <strong>Casco:</strong> 180–450 ezer Ft/év — villanyautónál főleg érdemes.</p></div>
+                <div class="card"><div class="card__icon">🏛️</div><h3 class="card__title">Adó és matrica</h3><p><strong>Gépjárműadó:</strong> 0 Ft (tisztán elektromos). <strong>E-matrica (D1):</strong> 5 750 Ft / 10 nap, 49 190 Ft / év.</p></div>
+                <div class="card"><div class="card__icon">🔌</div><h3 class="card__title">Otthoni töltő</h3><p>11 kW-os töltő telepítéssel <strong>200–450 ezer Ft</strong> — éjszakai árammal ez hozza a legolcsóbb üzemeltetést.</p></div>
             </div>
+            <p style="text-align:center;margin-top:20px;color:var(--ink-3);font-size:13px;">
+                A biztosítást mindig hasonlítsd össze online (Netrisk, Biztosítás.hu, BiztHozam) — ugyanarra az autóra nagy szórás lehet az ajánlatok között.
+            </p>
+        </div>
+    </section>
 
-            <div class="card">
-                <h3><span class="tag accent">7</span> Papírok és ügyintézés</h3>
-                <ul>
-                    <li><strong>Első forgalomba helyezés:</strong> okmányiroda, ~15 000 Ft illeték.</li>
-                    <li><strong>Rendszám:</strong> magyar sorozatú, 35 000 Ft.</li>
-                    <li><strong>Regisztrációs adó:</strong> elektromos autóra 0 Ft (mentesség).</li>
-                    <li><strong>Átírás:</strong> okmányirodában, adásvételivel — az új rendszám kiadása 5–10 munkanap.</li>
-                </ul>
+    <!-- ===== 9. PAPÍROK ===== -->
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">7. Ügyintézés</span>
+                <h2 class="section-title">Papírok és ügyintézés</h2>
+            </header>
+            <div class="grid grid-4">
+                <div class="card"><div class="card__icon">📄</div><h3 class="card__title">Forgalomba helyezés</h3><p>Okmányiroda, ~15 000 Ft illeték.</p></div>
+                <div class="card"><div class="card__icon">🔢</div><h3 class="card__title">Rendszám</h3><p>Magyar sorozatú, 35 000 Ft.</p></div>
+                <div class="card"><div class="card__icon">💶</div><h3 class="card__title">Regisztrációs adó</h3><p>Elektromos autóra 0 Ft (mentesség).</p></div>
+                <div class="card"><div class="card__icon">🔄</div><h3 class="card__title">Átírás</h3><p>Adásvételivel, az új rendszám 5–10 munkanap.</p></div>
             </div>
+        </div>
+    </section>
 
-            <div class="card">
-                <h3><span class="tag accent">8</span> Ajánlott felszereltség</h3>
-                <ul>
-                    <li><strong>PPF fólia</strong> az autó elejére és a kerékjáratokra (250–450 000 Ft) — megóvja a vékony fényezést.</li>
-                    <li><strong>Kerámia bevonat</strong> (150–300 000 Ft, 3–5 év védelem).</li>
-                    <li><strong>Prémium gumi</strong> (Continental, Michelin, Hankook) — télre külön szett.</li>
-                    <li><strong>Type 2 töltőkábel</strong> (7 m, 22 kW, ~50–80 000 Ft) nyilvános AC-töltőkhöz.</li>
-                </ul>
+    <!-- ===== 10. FELSZERELTSÉG ===== -->
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">8. Extra</span>
+                <h2 class="section-title">Ajánlott felszereltség</h2>
+            </header>
+            <div class="grid grid-4">
+                <div class="card"><div class="card__icon">🛡️</div><h3 class="card__title">PPF fólia</h3><p>Autó eleje + kerékjáratok (250–450 ezer Ft) — megóvja a vékony fényezést.</p></div>
+                <div class="card"><div class="card__icon">✨</div><h3 class="card__title">Kerámia bevonat</h3><p>150–300 ezer Ft, 3–5 év védelem.</p></div>
+                <div class="card"><div class="card__icon">🛞</div><h3 class="card__title">Prémium gumi</h3><p>Continental, Michelin, Hankook — télre külön szett.</p></div>
+                <div class="card"><div class="card__icon">🔌</div><h3 class="card__title">Type 2 kábel</h3><p>7 m, 22 kW, ~50–80 ezer Ft — nyilvános AC-töltőkhöz.</p></div>
             </div>
+        </div>
+    </section>
 
-            <h2 style="margin: 48px 0 20px; font-size: clamp(24px, 3vw, 32px); font-weight: 600;">Gyakori kérdések</h2>
-
+    <!-- ===== 11. GYIK ===== -->
+    <section class="section section--alt">
+        <div class="container" style="max-width:820px;">
+            <header class="section-head">
+                <span class="section-eyebrow">Kérdések</span>
+                <h2 class="section-title">Gyakori kérdések</h2>
+            </header>
             <details class="faq-item">
                 <summary class="faq-q">Hány éves Model 3-at vegyek?</summary>
                 <div class="faq-a">Ha a megbízhatóság a szempont, 2021 utánit: ekkor jött a hőszivattyú (jobb téli fűtés) és a gyorsabb MCU3 fedélzeti rendszer. A 2017–2020-asok olcsóbbak, de ott több a típushiba (ajtókilincs, MCU2, tetőtömítés).</div>
@@ -461,7 +579,6 @@
                 <summary class="faq-q">Honnan tudom, hogy balesetes volt?</summary>
                 <div class="faq-a">Egyenetlen illesztési rések, eltérő festékvastagság, rozsdafoltok a karosszérián. A Tesla hivatalos szervize a VIN alapján meg tudja mondani, milyen munkákat végeztek rajta.</div>
             </details>
-
         </div>
     </section>
 <footer id="footer"></footer>
