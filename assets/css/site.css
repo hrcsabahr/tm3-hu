@@ -1830,7 +1830,6 @@ body {
     border: 1px solid var(--chip-border);
     border-radius: 100px;
     background: var(--chip-bg);
-    box-shadow: 0 0 20px var(--chip-glow);
     margin-bottom: 1.25rem;
 }
 .section-title {
@@ -2594,7 +2593,6 @@ body {
     border: 1px solid var(--chip-border);
     border-radius: 100px;
     background: var(--chip-bg);
-    box-shadow: 0 0 24px var(--chip-glow);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     margin-bottom: 2rem;
