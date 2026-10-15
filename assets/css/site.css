@@ -260,7 +260,7 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
 .btn-card {
     display: inline-flex; align-items: center; justify-content: center; gap: 8px;
     padding: 12px 24px;             /* P2: kompakt 16px 28px → 12px 24px */
-    background: #3E6AE1;            /* Tesla Electric Blue */
+    background: var(--accent);         /* Tesla brand kék #0075DE (egységes) */
     color: #FFFFFF !important;
     font-size: 15px; font-weight: 500;  /* P2: 16px/700 → 15px/500 (Tesla-minta) */
     border-radius: 4px;             /* P2: 12px → 4px (Tesla-minta) */
@@ -270,7 +270,7 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
     text-decoration: none !important;
 }
 .btn-card:hover {
-    background: #2C4FB8;            /* Tesla hover: sötétebb blue */
+    background: var(--accent-hover);   /* Tesla hover: sötétebb kék */
     transform: translateY(-1px);
     color: #FFFFFF !important;
 }
@@ -515,7 +515,7 @@ h4 { font-size: 18px; font-weight: 500; letter-spacing: -0.005em; }
     box-shadow: var(--shadow-sm);
     transition: box-shadow var(--t), transform var(--t), border-color var(--t);
 }
-.card:hover { box-shadow: var(--shadow); transform: translateY(-2px); border-color: var(--line-strong); }
+.card:hover { box-shadow: var(--shadow); transform: translateY(-2px); border-color: rgba(0, 117, 222, 0.45); }
 .card.feature { background: linear-gradient(135deg, var(--accent-soft), transparent); border-color: rgba(0, 117, 222, 0.3); }
 
 .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 12px; }
