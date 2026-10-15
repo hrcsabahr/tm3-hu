@@ -1487,9 +1487,9 @@ textarea:focus {
     --container-pad: clamp(16px, 4vw, 48px);
     --section-py: clamp(4rem, 8vw, 7rem);
 
-    --r-sm: 8px;
-    --r-md: 14px;
-    --r-lg: 20px;
+    --r-sm: 0px;
+    --r-md: 0px;
+    --r-lg: 0px;
     --r-xl: 32px;
 
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
