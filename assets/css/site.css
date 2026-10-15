@@ -1610,9 +1610,8 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(56, 189, 248, 0.30), transparent 60%),
-                radial-gradient(ellipse 60% 80% at 100% 100%, rgba(6, 182, 212, 0.20), transparent 60%),
-                radial-gradient(ellipse 50% 50% at 0% 100%, rgba(167, 139, 250, 0.15), transparent 60%);
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 117, 222, 0.10), transparent 60%),
+                radial-gradient(ellipse 60% 80% at 100% 100%, rgba(0, 117, 222, 0.05), transparent 60%);
     z-index: 0;
     pointer-events: none;
 }
@@ -2546,9 +2545,8 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(56, 189, 248, 0.30), transparent 60%),
-                radial-gradient(ellipse 60% 80% at 100% 100%, rgba(6, 182, 212, 0.20), transparent 60%),
-                radial-gradient(ellipse 50% 50% at 0% 100%, rgba(167, 139, 250, 0.15), transparent 60%);
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0, 117, 222, 0.10), transparent 60%),
+                radial-gradient(ellipse 60% 80% at 100% 100%, rgba(0, 117, 222, 0.05), transparent 60%);
     z-index: 0;
     pointer-events: none;
 }
