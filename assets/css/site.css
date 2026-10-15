@@ -16,8 +16,8 @@
        és sötét szövegre (#0A0A0A). Minden oldal, minden szekció, minden
        komponens ugyanazt a világos stílust kapja — Tesla.com-hoz hasonló
        "white, grey, black" minimalista megjelenés. */
-    --bg: #FAFAF7;            /* világos krém — elsődleges háttér */
-    --bg-2: #F4F4F0;          /* világos szürke — alternatív háttér (section--alt) */
+    --bg: #F7F9FB;            /* világos krém — elsődleges háttér */
+    --bg-2: #EFF3F7;          /* világos szürke — alternatív háttér (section--alt) */
     --surface: #FFFFFF;       /* fehér — kártyák, surface */
     --ink: #0A0A0A;           /* sötétszürke — elsődleges szöveg */
     --ink-2: #3A3A3A;         /* sötétszürke — másodlagos szöveg (volt: #D6E2EE) */
@@ -47,8 +47,8 @@
 
     /* ---- MÉRETEK ---- */
     --radius-sm: 6px;
-    --radius: 10px;
-    --radius-lg: 16px;
+    --radius: 0px;
+    --radius-lg: 0px;
     --radius-pill: 9999px;
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -1446,10 +1446,10 @@ textarea:focus {
    felülírni a színeket. */
 :root {
     /* === VILÁGOS PALETTA — Tesla.com "white, grey, black" minimalista stílus === */
-    --bg: #FAFAF7;             /* világos krém — elsődleges háttér */
-    --bg-elevated: #F4F4F0;    /* világos szürke — kártyák, glass-panelek */
+    --bg: #F7F9FB;             /* világos krém — elsődleges háttér */
+    --bg-elevated: #EFF3F7;    /* világos szürke — kártyák, glass-panelek */
     --bg-card: #FFFFFF;        /* fehér — kiemelt kártyák */
-    --bg-deep: #E8E8E2;        /* kissé sötétebb szürke — kontraszt szegélyek */
+    --bg-deep: #E3E9EF;        /* kissé sötétebb szürke — kontraszt szegélyek */
 
     --fg: #0A0A0A;             /* elsődleges szöveg - sötétszürke, könnyen olvasható világos háttéren */
     --fg-muted: #3A3A3A;       /* másodlagos szöveg */
@@ -1830,6 +1830,7 @@ body {
     border: 1px solid var(--chip-border);
     border-radius: 100px;
     background: var(--chip-bg);
+    box-shadow: 0 0 20px var(--chip-glow);
     margin-bottom: 1.25rem;
 }
 .section-title {
@@ -2593,6 +2594,7 @@ body {
     border: 1px solid var(--chip-border);
     border-radius: 100px;
     background: var(--chip-bg);
+    box-shadow: 0 0 24px var(--chip-glow);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     margin-bottom: 2rem;
