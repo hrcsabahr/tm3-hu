@@ -23,6 +23,7 @@
         { href: 'pages/akkumulator.html', label: 'Akkumulátor' },
         { href: 'pages/hoszivattyu.html', label: 'Fűtés' },
         { href: 'pages/gumi.html', label: 'Gumi' },
+        { href: 'pages/vasarlas.html', label: 'Vásárlás' },
         { href: 'pages/tobberek.html', label: 'Töltők' },
         { href: 'pages/szervizek.html', label: 'Szervizek' },
         { href: 'pages/hibak.html', label: 'Hibák' },
