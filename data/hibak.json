@@ -80,7 +80,7 @@
         "Futómű-ellenőrzés során laza csavarok a lengőkaroknál",
         "Rövidebb fékút, instabil fékezés"
       ],
-      "ok": "A felfüggesztés csavarok nem lettek megfelelő nyomatékkal meghúzva a gyárban, vagy a kopás miatt lazulnak.",
+      "ok": "A felfüggesztés csavarjai nem lettek megfelelő nyomatékkal meghúzva a gyárban, vagy a kopás miatt lazulnak.",
       "javitás": "Csavarok meghúzása előírt nyomatékkal, esetenként teljes lengőkar csere",
       "ido_orak": "1-3",
       "ar_eur": "150-450",
@@ -101,7 +101,7 @@
         "Egyenetlen cellafeszültség, nagy szórás (>30 mV modulok közt)",
         "Töltési sebesség drasztikus csökkenése"
       ],
-      "ok": "Cellák degradációja, gyártási hiba, vagy fizikai sérülés (alvázaszkár).",
+      "ok": "Cellák degradációja, gyártási hiba, vagy fizikai sérülés (alvázsérülés).",
       "javitás": "Modulonkénti csere (általában 1-4 modul), ritkán teljes pack csere",
       "ido_orak": "6-12",
       "ar_eur": "5500-14000",
@@ -266,7 +266,7 @@
         "Csikorgás, nyikorgás kis sebességnél, eső után rosszabb",
         "Egyik kerék melegebb a többinél vezetés után",
         "Fékezéskor oldalra húz az autó",
-        "Egyenetlen betétkopás, rozsdás, texturált tárcsa"
+        "Egyenetlen betétkopás, rozsdás, bordázott tárcsa"
       ],
       "ok": "A regeneratív fékezés a lassítás nagy részét végzi, így a súrlódó fék alig használódik és nem melegszik fel — a nedvesség és a téli só rátapad a féknyereg csúszócsapjaira, amelyek berozsdásodnak és beszorulnak. A hátsó fékek (amelyek kevesebbet dolgoznak) hajlamosabbak rá.",
       "javitás": "Féknyereg tisztítása és kenése (évente, sós utakon), súlyosabb esetben betét + tárcsa csere",

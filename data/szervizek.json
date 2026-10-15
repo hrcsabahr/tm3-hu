@@ -42,7 +42,7 @@
       "idpont": "telefon",
       "services": ["hv-rendszer", "futomu", "fek", "klima", "12v", "diagnosztika", "szoftver", "karosszeria"],
       "premium": true,
-      "megjegyzes": "Független Tesla/Toyota/Lexus szakszerviz, gyári szintű diagnosztikával. Non-stop autómentés is. Akkumulátor-, hajtáslánc- és MCU-javítás."
+      "megjegyzes": "Független Tesla/Toyota/Lexus szakszerviz, gyári szintű diagnosztikával. 0-24 autómentés is. Akkumulátor-, hajtáslánc- és MCU-javítás."
     },
     {
       "id": "godollo-ev-clinic",
@@ -198,7 +198,7 @@
       "idpont": "telefon",
       "services": ["diagnosztika", "futomu", "gumi"],
       "premium": false,
-      "megjegyzes": "Diagnosztika, átvizsgálás, csapágyazás, gumi, road asszisztencia (Tesla, BMW, Kia, Hyundai, VW…)."
+      "megjegyzes": "Diagnosztika, átvizsgálás, csapágyazás, gumi, műszaki mentés (Tesla, BMW, Kia, Hyundai, VW…)."
     },
     {
       "id": "nyiregyhaza-lanzs",

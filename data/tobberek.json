@@ -2,7 +2,7 @@
   "meta": {
     "updated": "2026-10-14",
     "forras": "Tesla hivatalos Supercharger-térkép (tesla.com/findus/list/superchargers/Hungary) + magyar üzemeltetők (Mobiliti, E.ON Drive, Shell Recharge, Volteum)",
-    "megjegyzes": "A Superchargerek helyszíne a Tesla hivatalos listája alapján (16 állomás, 2026. okt.). A pontos teljesítmény, állásszám és ár változó — a Tesla appban látható. A nem-Tesla töltők hálózat szintű bejegyzések (sok helyszín), a pontos állomást az üzemeltető appjában ellenőrizd. A koordináták közelítőek (városi szintűek)."
+    "megjegyzes": "A Superchargerek helyszíne a Tesla hivatalos listája alapján (16 állomás, 2026. okt.). A pontos teljesítmény, állásszám és ár változó — a Tesla appban látható. A nem-Tesla töltők hálózatszintű bejegyzések (sok helyszín), a pontos állomást az üzemeltető appjában ellenőrizd. A koordináták közelítőek (városi szintűek)."
   },
   "toltoallomasok": [
     {

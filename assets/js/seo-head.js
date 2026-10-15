@@ -13,7 +13,7 @@
         url: 'https://www.tm3.hu',
         name: 'tm3.hu',
         title: 'Tesla Model 3 — Magyar tudásbázis',
-        description: 'Tesla Model 3 SR+, Long Range és Performance — reszponzív magyar tudásbázis: akkumulátor, hatótáv, töltés, degradation, szervizek, VIN dekóder, költségkalkulátor.',
+        description: 'Tesla Model 3 SR+, Long Range és Performance — reszponzív magyar tudásbázis: akkumulátor, hatótáv, töltés, degradáció, szervizek, VIN dekóder, költségkalkulátor.',
         locale: 'hu_HU',
         twitter: '@tm3hu',
         ogImage: 'https://www.tm3.hu/assets/img/og-image.png',
@@ -31,7 +31,7 @@
     const PAGES = {
         '/': {
             title: 'Tesla Model 3 – Magyar Tudásbázis (2026) | tm3.hu',
-            description: 'Akkumulátor degradation, töltési ciklusok, VIN dekóder, valós Tesla Model 3 adatok egy helyen — magyar közösségi tudásbázis.',
+            description: 'Akkumulátor degradáció, töltési ciklusok, VIN dekóder, valós Tesla Model 3 adatok egy helyen — magyar közösségi tudásbázis.',
             h1: 'Tesla Model 3 — magyar tudásbázis',
             type: 'website',
             section: 'Főoldal',
@@ -43,7 +43,7 @@
             type: 'article',
             section: 'Szervizek',
             faq: [
-                    { q: 'Mennyibe kerül egy Tesla Model 3 szerviz Magyarországon?', a: 'A hivatalos Tesla-szerviz Budaörsön órabér alapú, jellemzően 25 000-45 000 Ft + alkatrész. A független specialisták 15 000-25 000 Ft-os óradíjjal dolgoznak. Egyszerűbb műveletek (12V akkumulátor, klítafeltöltés) 30-80 000 Ft, nagyobb javítások (felfüggesztés, MCU) 200 000-600 000 Ft.' },
+                    { q: 'Mennyibe kerül egy Tesla Model 3 szerviz Magyarországon?', a: 'A hivatalos Tesla-szerviz Budaörsön órabér alapú, jellemzően 25 000-45 000 Ft + alkatrész. A független specialisták 15 000-25 000 Ft-os óradíjjal dolgoznak. Egyszerűbb műveletek (12V akkumulátor, klímafeltöltés) 30-80 000 Ft, nagyobb javítások (felfüggesztés, MCU) 200 000-600 000 Ft.' },
                     { q: 'Hivatalos Tesla-szerviz van-e Budapesten kívül?', a: 'A Tesla hivatalos szervize jelenleg Budaörsön működik. Országosan több független, Tesla-re specializálódott szerviz is elérhető (Debrecen, Szeged, Pécs, Győr), amelyek szoftveres diagnosztikát, alkatrészbeszerzést és javítást is vállalnak.' },
                     { q: 'Érvényes a Tesla garancia független szervizben?', a: 'A gyári garancia (4 év / 80 000 km) csak a hivatalos Tesla-szervizben végzett munkáknál marad érvényben. Független szerviz használata a jótállás elvesztésével járhat. Az Extended Service Agreement (ESA) kiterjesztett garancia megvásárolható.' },
                     { q: 'Milyen gyakran kell vinni a Tesla Model 3-at szervizbe?', a: 'A Tesla Model 3 karbantartása ritka: évente 1 alkalom, jellemzően 20 000 km-enként. Fékfolyadék-csere 2 évente, klímafertőtlenítés évente, gumi forgatás 10 000 km-enként ajánlott. Az akkumulátor és motor nem igényel rutin karbantartást.' },
@@ -75,14 +75,14 @@
             ],
         },
         '/pages/kalkulator.html': {
-            title: 'Tesla Model 3 akkumulátor degradation kalkulátor · tm3.hu',
-            description: 'Számold ki a Tesla Model 3 akkumulátor-degradationját évek, kilométer és töltési ciklusok alapján. NCA, NCM811, LFP cellák összehasonlítása.',
-            h1: 'Degradation kalkulátor',
+            title: 'Tesla Model 3 akkumulátor degradáció-kalkulátor · tm3.hu',
+            description: 'Számold ki a Tesla Model 3 akkumulátor-degradációját évek, kilométer és töltési ciklusok alapján. NCA, NCM811, LFP cellák összehasonlítása.',
+            h1: 'Degradáció-kalkulátor',
             type: 'article',
             section: 'Kalkulátor',
             faq: [
                     { q: 'Mennyi a Tesla Model 3 akkumulátor degradáció 10 év után?', a: 'A Carla/Voltest 2026 cohort alapján az NCA (Long Range, Performance) ~83%-ot, az NMC ~84%-ot, az LFP (SR+) pedig ~88%-ot tart 10 év / ~180 000 km után. A ciklusszám alapján 4000 teljes ciklus után a Performance még 90% felett teljesít.' },
-                    { q: 'Milyen tényezők gyorsítják a degradation?', a: 'A degradation fő gyorsítói: rendszeres DC villámtöltés (Supercharger), magas SoC (90% felett) tartós tárolása, szélsőséges hőmérséklet (tartós -20°C alatt vagy 40°C felett), magas C-ráta (gyorshajtás), és a ritka töltési ciklusok (az akkumulátor szereti a rendszeres, közepes töltéseket).' },
+                    { q: 'Milyen tényezők gyorsítják a degradáció?', a: 'A degradáció fő gyorsítói: rendszeres DC villámtöltés (Supercharger), magas SoC (90% felett) tartós tárolása, szélsőséges hőmérséklet (tartós -20°C alatt vagy 40°C felett), magas C-ráta (gyorshajtás), és a ritka töltési ciklusok (az akkumulátor szereti a rendszeres, közepes töltéseket).' },
                     { q: 'Mit jelent a State of Health (SoH)?', a: 'Az SoH (State of Health) az akkumulátor aktuális kapacitásának százalékos aránya az eredeti, gyári kapacitáshoz képest. Például egy 75 kWh-os új akku 5 év után 68 kWh-os valós kapacitású, ami 91% SoH-nak felel meg. 70% SoH alatt a Tesla saját szervize akkumulátor-cserét javasolhat.' },
                     { q: 'Mikor érdemes akkumulátort cserélni a Tesla Model 3-ban?', a: 'Akkumulátor-csere akkor indokolt, ha a SoH 70% alá esik, vagy ha a napi hatótáv a használati igények alá csökken. A Tesla Model 3 akkumulátor-modul csere ára Magyarországon 2,5-6 millió Ft (modulmérettől függően). A cserélt modul általában 90%+ SoH-val rendelkezik, és 2-4 évvel meghosszabbítja az autó élettartamát.' },
                 ],
@@ -167,7 +167,7 @@
             faq: [
                     { q: 'Hogyan csatlakozhatok a magyar Tesla-közösséghez?', a: 'Több aktív platformon is csatlakozhatsz: a Tesla Club Hungary Facebook csoport (15 000+ tag), a Discord szerverek, a Reddit r/TeslaHungary, valamint a helyi meetup-ok Budapesten, Debrecenben, Szegeden és Pécsen. A tm3.hu oldalon is van egy belső fórum, ahol kérdéseket lehet feltenni.' },
                     { q: 'Vannak-e Tesla-találkozók (meetup-ok) Magyarországon?', a: 'Igen, 2026-ban havi 2-3 alkalommal szerveznek Tesla-találkozókat országszerte: Budapest (Hősök tere, Normafa), Balatonfüred (nyári szezon), Debrecen, Szeged, Győr, Pécs. A meetup-okon általában 20-80 autó vesz részt, és a közösség nyitott minden Tesla-tulajdonos és érdeklődő előtt.' },
-                    { q: 'Milyen tapasztalatokat osztanak meg egymással a magyar Tesla-tulajdonosok?', a: 'Tipikus témák: akkumulátor-degradation hosszú távú mérések, töltési tippek és trükkök, szerviz-tapasztalatok (hivatalos és független), hosszú utak (route planning, Supercharger-élmény), szoftverfrissítések first-impression, hideg időjárási tapasztalatok, és a FSD (Full Self-Driving) funkciók tesztelése.' },
+                    { q: 'Milyen tapasztalatokat osztanak meg egymással a magyar Tesla-tulajdonosok?', a: 'Tipikus témák: akkumulátor-degradáció hosszú távú mérések, töltési tippek és trükkök, szerviz-tapasztalatok (hivatalos és független), hosszú utak (route planning, Supercharger-élmény), szoftverfrissítések first-impression, hideg időjárási tapasztalatok, és a FSD (Full Self-Driving) funkciók tesztelése.' },
                     { q: 'Segítséget kaphatok-e a Tesla Model 3 vásárláshoz a közösségben?', a: 'Igen, a magyar Tesla-közösség egyik legértékesebb funkciója a vásárlási tanácsadás. Tagok segítenek használt Tesla Model 3 vásárlás előtt (SoH-ellenőrzés, kilométer-ellenőrzés, szerviz-történet), ajánlanak szervizeket, és megosztják a tapasztalataikat a különböző modellekkel (SR+, LR, Performance) kapcsolatban.' },
                 ],
         },

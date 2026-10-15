@@ -1,5 +1,5 @@
 {
-  "_comment": "Tesla Model 3 VIN decoder lookup. A Tesla VIN 17 karakter, ahol az 4-8. karakter a modell/konfiguráció kódolja. Ezek a 2017-2024 közötti Model 3 variánsok publikus adatok — a Tesla weboldalán és a TM3 subreddit-en dokumentálva.",
+  "_comment": "Tesla Model 3 VIN decoder lookup. A Tesla VIN 17 karakter, ahol az 4-8. karakter a modell/konfiguráció kódolja. Ezek a 2017-2024 közötti Model 3 variánsok publikus adatok — a Tesla weboldalán és a TM3 subredditen dokumentálva.",
   "_source": "Tesla Model 3 owner's manual + TM3 VIN decoder thread + tesla.com configurator 2024",
   "variants": {
     "SR_2017_2019": {

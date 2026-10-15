@@ -1,7 +1,7 @@
 {
-  "name": "tm3.hu — Tesla Model 3 Guide",
+  "name": "tm3.hu — Tesla Model 3 útmutató",
   "short_name": "tm3.hu",
-  "description": "Magyar Tesla Model 3 tudásbázis: akkumulátor, degradation, TCO, szervizek, töltők, közösség.",
+  "description": "Magyar Tesla Model 3 tudásbázis: akkumulátor, degradáció, TCO, szervizek, töltők, közösség.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
@@ -30,9 +30,9 @@
   ],
   "shortcuts": [
     {
-      "name": "Degradation kalkulátor",
-      "short_name": "Degradation",
-      "description": "Akku degradation számítás",
+      "name": "Degradáció-kalkulátor",
+      "short_name": "Degradáció",
+      "description": "Akku degradáció számítás",
       "url": "./pages/kalkulator.html",
       "icons": [
         {
