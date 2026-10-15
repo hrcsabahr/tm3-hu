@@ -78,7 +78,7 @@
         "Zörgő, kopogó hang egyenetlen úton, fekvőrendőrnél",
         "Kormány holtjáték növekedése, bizonytalan irányítás",
         "Futómű-ellenőrzés során laza csavarok a lengőkaroknál",
-        "Rövidebb fékút, instabil fékezés"
+        "Hosszabb fékút, instabil fékezés"
       ],
       "ok": "A felfüggesztés csavarjai nem lettek megfelelő nyomatékkal meghúzva a gyárban, vagy a kopás miatt lazulnak.",
       "javitás": "Csavarok meghúzása előírt nyomatékkal, esetenként teljes lengőkar csere",
