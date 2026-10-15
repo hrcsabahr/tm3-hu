@@ -236,7 +236,64 @@
                 </p>
             </div>
 
-            <div class="card">
+                        <div class="card" id="modell-tanacsado" style="border-color: rgba(0,117,222,0.35);">
+                <h3><span class="tag accent">✨</span> Melyik modell illik hozzád?</h3>
+                <p style="color:var(--ink-2);">
+                    Válaszolj 4 gyors kérdésre — megmondjuk, melyik Model 3 a te életedhez való, és mekkora
+                    hatótávra számíts télen-nyáron.
+                </p>
+                <div class="calc-grid" style="margin-top:16px;">
+                    <div>
+                        <div class="calc-field">
+                            <label for="va-km">Mennyit vezetsz évente?</label>
+                            <select id="va-km">
+                                <option value="keves">10 000 km alatt</option>
+                                <option value="atlag" selected>10–20 000 km</option>
+                                <option value="sok">20–30 000 km</option>
+                                <option value="nagysok">30 000 km felett</option>
+                            </select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="va-ut">Hol vezetsz legtöbbet?</label>
+                            <select id="va-ut">
+                                <option value="varos" selected>Főleg városban</option>
+                                <option value="vegyes">Vegyes (város + országút)</option>
+                                <option value="autopalya">Sok autópálya</option>
+                            </select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="va-hol">Hol laksz?</label>
+                            <select id="va-hol">
+                                <option value="nagyvaros" selected>Nagyvárosban</option>
+                                <option value="kisvaros">Kisvárosban / elővárosban</option>
+                                <option value="videk">Vidéken (falu)</option>
+                            </select>
+                        </div>
+                        <div class="calc-field">
+                            <label for="va-toltes">Van otthoni töltési lehetőséged?</label>
+                            <select id="va-toltes">
+                                <option value="igen" selected>Igen (garázs / kert)</option>
+                                <option value="nem">Nincs</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="calc-output">
+                        <h3>Számodra ez a legjobb</h3>
+                        <div id="va-eredmeny" style="font-size:clamp(22px,3vw,30px);font-weight:600;line-height:1.15;">—</div>
+                        <p class="result-sub" id="va-indok">Válaszolj a kérdésekre.</p>
+                        <ul class="result-list" id="va-reszletek" style="display:none;">
+                            <li><span>Napi futás (becslés):</span> <strong id="va-napi">—</strong></li>
+                            <li><span>Valós hatótáv — nyár:</span> <strong id="va-nyar">—</strong></li>
+                            <li><span>Valós hatótáv — tél:</span> <strong id="va-tel">—</strong></li>
+                            <li><span>Napi töltési ajánlás:</span> <strong id="va-toltes-ajanlas">—</strong></li>
+                            <li><span>Új ár (tájékoztató):</span> <strong id="va-ar">—</strong></li>
+                        </ul>
+                        <div class="highlight" id="va-tipp" style="display:none;"></div>
+                    </div>
+                </div>
+            </div>
+
+<div class="card">
                 <h3><span class="tag accent">1</span> Új vagy használt?</h3>
                 <p>
                     A döntés két dolgon múlik: a költségvetésen és azon, mekkora kockázatot vállalsz. Az új drágább,
@@ -411,5 +468,6 @@
     <script src="../assets/js/util.js?v=2026-08-31-gumi-v1" defer></script>
     <script src="../assets/js/site.js?v=2026-08-31-gumi-v1" defer></script>
     <script src="../assets/js/consent.js?v=2026-09-consent-v1" defer></script>
+    <script src="../assets/js/vasarlas.js?v=2026-10-vasarlas-v1" defer></script>
 </body>
 </html>
