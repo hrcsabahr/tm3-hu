@@ -185,7 +185,7 @@
         rowF.appendChild(el('h3', { text: 'Funkcionális (saját eszközön tárolt)' }));
         rowF.appendChild(el('p', { text:
             'A böngésződ localStorage-jába mentett fogyasztási bejegyzések, TCO-számítások ' +
-            'és vásárlási checklist-állapot. Kizárólag a te eszközödön marad, ' +
+            'és vásárlási ellenőrzőlista-állapot. Kizárólag a te eszközödön marad, ' +
             'nem kerül továbbításra.'
         }));
         var toggleF = el('label', { class: 'tm3-toggle' });
