@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updated": "2026-10-14",
+    "updated": "2026-11-03",
     "forras": "Tesla hivatalos Supercharger-térkép (tesla.com/findus/list/superchargers/Hungary) + magyar üzemeltetők (Mobiliti, E.ON Drive, Shell Recharge, Volteum)",
-    "megjegyzes": "A Superchargerek helyszíne a Tesla hivatalos listája alapján (16 állomás, 2026. okt.). A pontos teljesítmény, állásszám és ár változó — a Tesla appban látható. A nem-Tesla töltők hálózatszintű bejegyzések (sok helyszín), a pontos állomást az üzemeltető appjában ellenőrizd. A koordináták közelítőek (városi szintűek)."
+    "megjegyzes": "A Superchargerek helyszíne a Tesla hivatalos listája alapján (18 állomás, 2026. nov.). A pontos teljesítmény, állásszám és ár változó — a Tesla appban látható. A nem-Tesla töltők hálózatszintű bejegyzések (sok helyszín), a pontos állomást az üzemeltető appjában ellenőrizd. A koordináták közelítőek (városi szintűek)."
   },
   "toltoallomasok": [
     {
@@ -260,6 +260,38 @@
       "nyitvatartas": "0-24",
       "v3v4": null,
       "megjegyzes": "Budapest agglomeráció. Teljesítmény, állásszám és ár a Tesla appban."
+    },
+    {
+      "id": "sc-erd",
+      "tipus": "supercharger",
+      "nev": "Tesla Supercharger Érd",
+      "operator": "Tesla",
+      "varos": "Érd",
+      "cim": "2030 Érd, Budafoki út 2-4. (Tesco)",
+      "lat": 47.379,
+      "lng": 18.936,
+      "teljesitmeny": 500,
+      "helyek_szama": 8,
+      "ar_huf_kwh": null,
+      "nyitvatartas": "0-24",
+      "v3v4": "V4",
+      "megjegyzes": "8 oszlop, max 500 kW — az ország első valódi V4-es (800 V-os) állomása. 2026. okt. 29-én nyílt. Ár a Tesla appban."
+    },
+    {
+      "id": "sc-zalaegerszeg",
+      "tipus": "supercharger",
+      "nev": "Tesla Supercharger Zalaegerszeg",
+      "operator": "Tesla",
+      "varos": "Zalaegerszeg",
+      "cim": "8900 Zalaegerszeg, Balatoni út 5-7. (Zone Bevásárlópark)",
+      "lat": 46.845,
+      "lng": 16.842,
+      "teljesitmeny": 250,
+      "helyek_szama": 8,
+      "ar_huf_kwh": null,
+      "nyitvatartas": "0-24",
+      "v3v4": "V4",
+      "megjegyzes": "8 oszlop, max 250 kW (v3.5 rendszer, nem 800 V). 2026. okt. 28-án nyílt. Ár a Tesla appban."
     },
     {
       "id": "mobiliti-halozat",
