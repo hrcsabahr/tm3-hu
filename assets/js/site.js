@@ -18,7 +18,7 @@
     // Kept at 8 items (the original count) so the navbar doesn't overflow on
     // mid-width viewports — 'Vásárlás' and 'Közösség' are still reachable
     // from the home-page H2 cards and the footer sitemap.
-    NAV_ITEMS = [
+    const NAV_ITEMS = [
         { href: 'index.html', label: 'Főoldal' },
         { href: 'pages/akkumulator.html', label: 'Akkumulátor' },
         { href: 'pages/hoszivattyu.html', label: 'Fűtés' },
@@ -103,7 +103,7 @@
                     <div class="footer-minimal">
                         <div class="footer-brand">tm3.hu — magyar Tesla Model 3 tudásbázis</div>
                         <div class="footer-bottom">
-                            <span>© ${new Date().getFullYear()} tm3.hu · Tartalom: CC BY-SA 4.0 · Kód: MIT</span>
+                            <span>© ${new Date().getFullYear()} tm3.hu · Utolsó frissítés: 2026. november · Tartalom: CC BY-SA 4.0 · Kód: MIT</span>
                             <span class="footer-disclaimer">
                                 <strong>⚠️ Nem hivatalos, független oldal.</strong>
                                 A tm3.hu nem kapcsolódik a Tesla, Inc.-hez.

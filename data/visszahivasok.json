@@ -1,10 +1,21 @@
 {
   "meta": {
-    "updated": "2026-09-28",
+    "updated": "2026-11-03",
     "forras": "NHTSA visszahívási adatbázis (nhtsa.gov), Tesla support oldal, Reuters",
     "megjegyzes": "Amerikai (NHTSA) visszahívások, időrendben. Az európai/magyar piac ettől eltérhet — ellenőrizd a VIN-ed a Tesla alkalmazásban vagy a service.tesla.com/vin-recall-search oldalon."
   },
   "visszahivasok": [
+    {
+      "id": "fenyoszoro-2026",
+      "datum": "2026-08-03",
+      "nhtsa": "26V507000",
+      "evjarat": "2017-2023 Model 3 (+2020-2023 Model Y)",
+      "alkatresz": "Világítás",
+      "cim": "Tompított fényszóró túl erős fény",
+      "leiras": "A tompított fényszóró túl erős fényt ad, meghaladja az FMVSS 108 szabvány felső határát (a mért fényerő a megengedettnél ~84%-kal magasabb volt). Javítás: szervizben, ingyenesen cserélik a fényszórókat.",
+      "javitas": "szerviz",
+      "darab": 20349
+    },
     {
       "id": "knee-bolster-2026",
       "datum": "2026-07-06",

@@ -1,10 +1,28 @@
 {
   "meta": {
-    "updated": "2026-10-13",
+    "updated": "2026-11-03",
     "forras": "NHTSA visszahívási adatbázis, Reuters — valós, ellenőrizhető események",
     "megjegyzes": "Csak forrással alátámasztott hírek. A dátumok a bejelentés dátumai. A hírek folyamatosan bővülnek."
   },
   "posts": [
+    {
+      "id": "cybercab-inverter-2026",
+      "datum": "2026-11-01",
+      "kategoria": "Technológia",
+      "cim": "A 2026-os Model 3 a Cybercab inverterét kapja",
+      "kivonat": "Kevesebb alkatrész, több beszállító: a Model 3 új hajtásinvertere a Cybercab tervezésén alapul — hatótáv- és árváltozás nélkül.",
+      "tartalom": "A Tesla a Cybercab robottaxiba tervezett inverter egy változatát hozza át a Model 3-ba 2026-ban. Nick Verzini, a Tesla hajtáslánc-mérnökségének vezetője egy gyárlátogatáson (Munro Live) mondta el: az új nyomtatott áramköri panel és teljesítményfokozat lényegesen kevesebb elektronikai alkatrészt tartalmaz, és több beszállítótól is fogad alkatrészeket.\n\nAz inverter az akkumulátor egyenáramát váltja váltóárammá a motor számára, tehát a hatékonyságot és a költséget is befolyásolja. A Tesla szerint hatótáv-, hatékonyság- és árváltozás nem várható — a cél a kevesebb alkatrész és a beszállítói kitettség csökkentése. Forrás: Autoblog, Drive Tesla Canada.",
+      "kep": null
+    },
+    {
+      "id": "fenyoszoro-visszahivas-2026",
+      "datum": "2026-08-04",
+      "kategoria": "Visszahívás",
+      "cim": "Fényszóró-visszahívás: ~20 ezer Model 3/Y a túl erős tompított miatt",
+      "kivonat": "A tompított fényszóró meghaladja a megengedett fényerőt — a Tesla szervizben, ingyen cseréli a fényszórókat.",
+      "tartalom": "A Tesla 20 349 járművet hívott vissza (1 614 Model 3 a 2017–2023-as évjáratokból és 18 735 Model Y a 2020–2023-as évjáratokból), mert a tompított fényszóró túl erős fényt ad. Az NHTSA mérése szerint a Marelli (Mexikó) által gyártott fényszóró-modulok fényereje a megengedett felső határ ~84%-ával magasabb volt — ez elvakíthatja a szembejövőket.\n\nA hiba szoftveresen nem javítható: a Tesla szervizben, ingyenesen cseréli a fényszórókat. A visszahívás száma 26V507000 (Tesla: SB-24-17-003). Forrás: NHTSA, USA Today, Cars.com.",
+      "kep": null
+    },
     {
       "id": "nhtsa-futomu-vizsgalat",
       "datum": "2025-07-31",
