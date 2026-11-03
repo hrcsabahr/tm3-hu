@@ -40,7 +40,15 @@
         }
         .akku-svg { transition: transform 300ms ease; }
         .akku-svg:hover { transform: scale(1.06); }
-    </style>
+    
+        .akku-toc { background: var(--surface); border: 1px solid var(--line); padding: 24px 28px; margin-bottom: 8px; }
+        .akku-toc__head { margin-bottom: 14px; }
+        .akku-toc__list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 6px 28px; }
+        .akku-toc__list a { display: flex; align-items: baseline; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15px; padding: 4px 0; border-bottom: 1px solid transparent; }
+        .akku-toc__list a span { color: var(--accent); font-family: var(--font-mono); font-size: 13px; }
+        .akku-toc__list a:hover { color: var(--accent); }
+        [id] { scroll-margin-top: 96px; }
+        </style>
     <script src="../assets/js/seo-head.js?v=2026-08-31-gumi-v1" defer></script>
     <script>
         (function() {
@@ -186,16 +194,37 @@
         </div>
     </section>
 
-    <section class="section">
+        <section class="section" style="padding-bottom:0;">
         <div class="container">
+            <nav class="akku-toc" aria-label="Tartalomjegyzék">
+                <div class="akku-toc__head"><span class="section-eyebrow" style="margin-bottom:0;">Tartalom</span></div>
+                <ol class="akku-toc__list">
+                    <li><a href="#akku-1"><span>01</span>Alapok</a></li>
+                    <li><a href="#akku-2"><span>02</span>Műszaki mélység</a></li>
+                    <li><a href="#akku-3"><span>03</span>Melyik akkumulátor van a te Model 3-asodban?</a></li>
+                    <li><a href="#akku-4"><span>04</span>LFP vs NMC/NCA</a></li>
+                    <li><a href="#akku-5"><span>05</span>Degradáció</a></li>
+                    <li><a href="#akku-6"><span>06</span>Hogyan töltsd, hogy sokáig bírja?</a></li>
+                    <li><a href="#akku-7"><span>07</span>Garancia</a></li>
+                    <li><a href="#akku-8"><span>08</span>Télen</a></li>
+                    <li><a href="#akku-9"><span>09</span>Akkumulátor-állapot</a></li>
+                    <li><a href="#akku-10"><span>10</span>Gyakori akkumulátor-körüli problémák</a></li>
+                    <li><a href="#akku-11"><span>11</span>A 10 legfontosabb tipp</a></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
 
-            <!-- ============ 1. ALAPOK ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:8px;">1. Alapok — miből épül fel az akkumulátor?</h2>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);margin-bottom:24px;">
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">01 · Alapok</span>
+                <h2 class="section-title" id="akku-1">Alapok — miből épül fel az akkumulátor?</h2>
+                <p class="section-sub">
                 Mielőtt a gyakorlati részbe vágnánk, egy gyors alapozó: miből áll fizikailag az
                 akkumulátor, és milyen elektromos alapelvek szerint működik.
             </p>
-
+            </header>
 <h3 class="akku-h3" style="margin-top:36px;">Miből épül fel? A lítium-atomtól a 4 416 celláig</h3>
             <div class="grid grid-2" style="align-items:center; gap:24px;">
                 <div style="text-align:center;">
@@ -335,10 +364,17 @@
             <text x="270" y="104" font-size="11" fill="#5C5C5C">3 × Ah = nagyobb kapacitás — a feszültség marad</text>
             </svg>
             </div>
+        </div>
+    </section>
 
-            <!-- ============ 2. TECHNIKAI MÉLYSÉG ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">2. Műszaki mélység — szakembereknek</h2>
-            <div class="grid grid-2">
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">02 · Műszaki mélység</span>
+                <h2 class="section-title" id="akku-2">Műszaki mélység — szakembereknek</h2>
+                <p class="section-sub">Cellakémia, feszültség, BMS, termálmenedzsment és a fedélzeti töltő — a technikai részletek.</p>
+            </header>
+<div class="grid grid-2">
                 <div class="card">
                     <h3>Cellakémia és felépítés</h3>
                     <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
@@ -398,17 +434,22 @@
 <text x="250" y="184" font-size="12" fill="#5C5C5C">delta &lt; 30 mV</text>
 </svg>
             </div>
+        </div>
+    </section>
 
-            <!-- ============ 3. TÍPUSOK ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin-bottom:20px;">3. Melyik akkumulátor van a te Model 3-asodban?</h2>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">03 · Melyik van benned</span>
+                <h2 class="section-title" id="akku-3">Melyik akkumulátor van a te Model 3-asodban?</h2>
+                <p class="section-sub">
                 A Model 3-ashoz az évek során többféle akkumulátor járt. A kettő, ami a magyar utakon
                 leggyakrabban előfordul, az <strong>LFP</strong> (lítium-vas-foszfát) és az <strong>NMC/NCA</strong>
                 (nikkel-mangán-kobalt / nikkel-kobalt-alumínium). Hogy melyik van benned, az az évjárattól és a
                 változattól függ — és nagyban meghatározza, hogyan érdemes töltened.
             </p>
-
-            <table class="akku">
+            </header>
+<table class="akku">
                 <thead>
                     <tr><th>Változat / évjárat</th><th>Kémia</th><th>Cella típus</th><th>Nettó kapacitás (közelítő)</th><th>Napi töltési ajánlás</th></tr>
                 </thead>
@@ -427,10 +468,17 @@
                 ajánlott napi értékként, akkor LFP-d van. Ha <strong>80%</strong> körül húzza meg a határt
                 „Napi" jelöléssel, akkor NMC/NCA. A pontos cellatípus a Service menüben vagy a gyártási címkén is látható.
             </div>
+        </div>
+    </section>
 
-            <!-- ============ 4. LFP vs NMC ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">4. LFP vs NMC/NCA — mi a különbség, és miért számít?</h2>
-            <div class="grid grid-2">
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">04 · LFP vs NMC</span>
+                <h2 class="section-title" id="akku-4">LFP vs NMC/NCA — mi a különbség, és miért számít?</h2>
+                <p class="section-sub">A két kémia eltérő erősségei, és hogy ez mit jelent a mindennapi használatban.</p>
+            </header>
+<div class="grid grid-2">
                 <div class="card">
                     <h3>🟢 LFP (lítium-vas-foszfát)</h3>
                     <p><strong>Előnyök:</strong> olcsóbb, hőstabilabb (biztonságosabb), sokkal több töltési ciklust bír,
@@ -450,15 +498,21 @@
                 <strong>💡 A lényeg egy mondatban:</strong> LFP = töltsd bátran 100%-ra. NMC/NCA = naponta 80%,
                 100% csak útra. Ezzel a két szabállyal éveket adhatsz az akkumulátorodnak.
             </div>
+        </div>
+    </section>
 
-            <!-- ============ 5. DEGRADÁCIÓ ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">5. Degradáció — mi a normális, és mi nem?</h2>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">05 · Degradáció</span>
+                <h2 class="section-title" id="akku-5">Degradáció — mi a normális, és mi nem?</h2>
+                <p class="section-sub">
                 Minden lítium-akkumulátor veszít a kapacitásából az idő és a használat során. A kérdés nem az,
                 hogy „degradálódik-e", hanem hogy milyen ütemben. A Tesla Model 3 akkumulátora az iparág
                 legjobban dokumentált, és a statisztikák szerint kifejezetten lassan degradálódik.
             </p>
-            <div class="grid grid-3">
+            </header>
+<div class="grid grid-3">
                 <div class="card"><h3>Első év</h3><p>Jellemzően <strong>~5%</strong> kapacitásvesztés, utána a görbe ellaposodik.</p></div>
                 <div class="card"><h3>Utána</h3><p>Évente nagyjából <strong>~1%</strong> — ez a „beállt" degradáció.</p></div>
                 <div class="card"><h3>8 év után</h3><p>A flotta-átlag jellemzően <strong>85–90% SoH</strong> körül mozog.</p></div>
@@ -491,10 +545,17 @@
             <text x="250" y="132" font-size="10" fill="#0d9488" font-weight="700">~88% (8 év)</text>
             </svg>
             </div>
+        </div>
+    </section>
 
-            <!-- ============ 6. TÖLTÉS ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">6. Hogyan töltsd, hogy sokáig bírja?</h2>
-            <div class="grid grid-2">
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">06 · Töltés</span>
+                <h2 class="section-title" id="akku-6">Hogyan töltsd, hogy sokáig bírja?</h2>
+                <p class="section-sub">A napi rutin és az, amit érdemes kerülni — a gyakorlatban.</p>
+            </header>
+<div class="grid grid-2">
                 <div class="card">
                     <h3>Napi rutin</h3>
                     <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
@@ -535,10 +596,17 @@
             <text x="285" y="112" font-size="10" fill="#5C5C5C">Lassul (CV)</text>
             </svg>
             </div>
+        </div>
+    </section>
 
-            <!-- ============ 7. GARANCIA ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">7. Garancia — pontosan mi jár rá?</h2>
-            <table class="akku">
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">07 · Garancia</span>
+                <h2 class="section-title" id="akku-7">Garancia — pontosan mi jár rá?</h2>
+                <p class="section-sub">Időtartam, futáskilométer és a 70%-os kapacitásküszöb — pontosan mi jár rá.</p>
+            </header>
+<table class="akku">
                 <thead>
                     <tr><th>Garancia típus</th><th>Időtartam / futás</th><th>Mit fedez</th></tr>
                 </thead>
@@ -559,14 +627,20 @@
                 degradáció 70% fölött. A garancia-állapotot a VIN-eddel ellenőrizheted a
                 <a href="https://service.tesla.com/vin-recall-search" target="_blank" rel="noopener">Tesla VIN/garancia-keresőben</a>.
             </div>
+        </div>
+    </section>
 
-            <!-- ============ 8. TÉL ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">8. Télen — hogyan viselkedik az akku?</h2>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">08 · Tél</span>
+                <h2 class="section-title" id="akku-8">Télen — hogyan viselkedik az akku?</h2>
+                <p class="section-sub">
                 A hideg nem károsítja az akkumulátort, de <strong>átmenetileg csökkenti a hatótávot és a
                 teljesítményt</strong>, mert az energia egy része a fűtésre és az akku melegítésére megy.
             </p>
-            <div class="grid grid-3">
+            </header>
+<div class="grid grid-3">
                 <div class="card"><h3>Hatótáv</h3><p>Télen jellemzően <strong>15–30%</strong>-kal kevesebb, autópályán akár több is.</p></div>
                 <div class="card"><h3>Regeneratív fék</h3><p>Hidegben korlátozott, amíg az akku fel nem melegszik.</p></div>
                 <div class="card"><h3>LFP télen</h3><p>Hidegben pontatlanabb a %-kijelzés — a 100%-os kalibrálás segít.</p></div>
@@ -588,24 +662,37 @@
             <text x="56" y="100" font-size="10" fill="#5C5C5C">Szemléltetés — a téli hatótáv-vesztés jellemzően 15–30%.</text>
             </svg>
             </div>
+        </div>
+    </section>
 
-            <!-- ============ 9. SoH ELLENŐRZÉS ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">9. Akkumulátor-állapot (SoH) ellenőrzése</h2>
-            <div class="grid grid-3">
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">09 · SoH ellenőrzés</span>
+                <h2 class="section-title" id="akku-9">Akkumulátor-állapot (SoH) ellenőrzése</h2>
+                <p class="section-sub">Hogyan nézd meg te magad, és mit nézessen meg a szerviz használt vásárlás előtt.</p>
+            </header>
+<div class="grid grid-3">
                 <div class="card"><h3>Service mód</h3><p>Az autó képernyőjén a Service menüben („Battery health") egyszerű SoH-teszt indítható.</p></div>
                 <div class="card"><h3>Scan My Tesla + OBD</h3><p>Bluetooth OBD-adapterrel részletes cellaadatokat látsz: feszültség, eltérés (delta), hőmérséklet, SoH.</p></div>
                 <div class="card"><h3>TeslaFi / Tessie</h3><p>Felhő-alapú nyomon követés, ha az előző tulajdonos is használta.</p></div>
             </div>
             <p class="akku-note">Használt vásárlásnál a legjobb a független szerviz által végzett akkudiagnosztika — a
             <a href="szervizek.html">szervizkeresőben</a> találsz hozzá specialistát (pl. T-Service, EV Clinic).</p>
+        </div>
+    </section>
 
-            <!-- ============ 10. PROBLÉMÁK ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">10. Gyakori akkumulátor-körüli problémák</h2>
-            <p style="max-width:760px;color:var(--ink-2,#3A3A3A);">
+    <section class="section">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">10 · Problémák</span>
+                <h2 class="section-title" id="akku-10">Gyakori akkumulátor-körüli problémák</h2>
+                <p class="section-sub">
                 Az igazán drága HV-akku-hiba ritka — a mindennapos gondok általában a környező, olcsóbb
                 alkatrészekkel vannak. A részletes leírásokat és árakat a Hibák oldalon találod.
             </p>
-            <div class="grid grid-3">
+            </header>
+<div class="grid grid-3">
                 <div class="card"><h3>12V segédakku</h3><p>4–6 évente cserélendő — a leggyakoribb „akkumulátor-probléma", és olcsó.</p></div>
                 <div class="card"><h3>PCS / fedélzeti töltő</h3><p>AC-töltés lassul vagy megszűnik; a Supercharger ilyenkor is működik.</p></div>
                 <div class="card"><h3>HV-kontaktor</h3><p>Ritka, de komoly — áramtalanítással és szervizzel jár.</p></div>
@@ -613,10 +700,17 @@
             <div class="tip-box blue" style="margin-top:16px;">
                 <strong>🔧 Bővebben:</strong> <a href="hibak.html">Tipikus hibák és javítási költségek →</a>
             </div>
+        </div>
+    </section>
 
-            <!-- ============ 11. ÖSSZEFOGLALÁS ============ -->
-            <h2 style="font-size:clamp(24px,3vw,32px);font-weight:600;margin:48px 0 20px;">11. A 10 legfontosabb tipp</h2>
-            <div class="card">
+    <section class="section section--alt">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">11 · Összefoglaló</span>
+                <h2 class="section-title" id="akku-11">A 10 legfontosabb tipp</h2>
+                <p class="section-sub">A legfontosabb teendők, egy oldalnyi összefoglalóban.</p>
+            </header>
+<div class="card">
                 <ol style="padding-left:22px;line-height:1.8;color:var(--ink-2,#3A3A3A);">
                     <li>Tudd meg, LFP vagy NMC/NCA van benned — ez dönti el a napi töltési határt.</li>
                     <li>LFP → 100% nyugodtan; NMC/NCA → napi 80%.</li>
@@ -630,9 +724,10 @@
                     <li>Gyanús degradációnál (100 000 km alatt &gt;10%) vizsgáltasd ki szervizben.</li>
                 </ol>
             </div>
-
         </div>
     </section>
+
+
 
     <footer id="footer"></footer>
 
