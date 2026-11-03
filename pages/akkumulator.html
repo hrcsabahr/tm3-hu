@@ -321,17 +321,17 @@
             <h3 class="akku-h3" style="margin-top:36px;">Elektromos alapok — feszültség, soros/párhuzamos, cella-eltérés</h3>
             <div class="grid grid-3">
                 <div class="card">
-                    <h3>Cella feszültség</h3>
+                    <span class="card-tag">ALAPOK</span><h3>🔋 Cella feszültség</h3>
                     <p>Egy NMC/NCA cella névlegesen <strong>~3,6 V</strong>, teljesen töltve <strong>~4,2 V</strong>.
                     Az LFP cella alacsonyabb: <strong>~3,2 V</strong> (max ~3,65 V).</p>
                 </div>
                 <div class="card">
-                    <h3>Soros vs párhuzamos</h3>
+                    <span class="card-tag">ALAPOK</span><h3>⚡ Soros vs párhuzamos</h3>
                     <p><strong>Soros</strong> kötésnél a feszültség adódik össze (96 × ~3,6 V ≈ 350 V).
                     <strong>Párhuzamos</strong> kötésnél a kapacitás (Ah) adódik össze — ezért van 46 párhuzamos cella.</p>
                 </div>
                 <div class="card">
-                    <h3>Csomag feszültség és energia</h3>
+                    <span class="card-tag">ALAPOK</span><h3>🔌 Csomag feszültség és energia</h3>
                     <p>A Model 3 HV-rendszere <strong>~350–400 V</strong> (96s elrendezés). Az energia:
                     <strong>kWh = feszültség (V) × kapacitás (Ah) ÷ 1000</strong>.</p>
                 </div>
@@ -376,7 +376,7 @@
             </header>
 <div class="grid grid-2">
                 <div class="card">
-                    <h3>Cellakémia és felépítés</h3>
+                    <span class="card-tag">KÉMIA</span><h3>🧪 Cellakémia és felépítés</h3>
                     <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
                         <li><strong>2170-es cella:</strong> 21 mm átmérő, 70 mm magas. A Model 3 LR/Performance NCA/NMC cellái ilyenek (Panasonic, részben LG).</li>
                         <li><strong>LFP (CATL):</strong> prismatikus (nem hengeres) cellák, moduláris elrendezés.</li>
@@ -384,7 +384,7 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Feszültség és BMS</h3>
+                    <span class="card-tag">ELEKTRONIKA</span><h3>🖥️ Feszültség és BMS</h3>
                     <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
                         <li>A Model 3 HV-rendszere <strong>~350–400 V</strong> névlegesen — NEM 800 V (az más architektúra).</li>
                         <li><strong>BMS</strong> (Battery Management System): cellánként monitorozza a feszültséget, hőmérsékletet, és végzi a kiegyenlítést.</li>
@@ -392,14 +392,14 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Termálmenedzsment</h3>
+                    <span class="card-tag">HŰTÉS</span><h3>🌡️ Termálmenedzsment</h3>
                     <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
                         <li>Folyadékhűtésű a HV-akku — a hűtőfolyadék körök szabályozzák a hőmérsékletet (töltéshez és terheléshez is).</li>
                         <li>2021-től <strong>hőszivattyú</strong> (Octovalve / supermanifold) — hatékonyabb téli fűtés, részben az akku hőjét is hasznosítja.</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>PCS (fedélzeti töltő)</h3>
+                    <span class="card-tag">TÖLTÉS</span><h3>🔌 PCS (fedélzeti töltő)</h3>
                     <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
                         <li>A PCS a HV-akku „penthouse"-ában ül, és az AC-töltést alakítja DC-re.</li>
                         <li>3 db 16 A-es modulja van; ha az egyik meghibásodik, az AC-töltőáram fokozatosan csökken (48A→32A→16A), de a DC/Supercharger tovább működik.</li>
@@ -480,14 +480,14 @@
             </header>
 <div class="grid grid-2">
                 <div class="card">
-                    <h3>🟢 LFP (lítium-vas-foszfát)</h3>
+                    <span class="card-tag">LFP</span><h3>🟢 LFP (lítium-vas-foszfát)</h3>
                     <p><strong>Előnyök:</strong> olcsóbb, hőstabilabb (biztonságosabb), sokkal több töltési ciklust bír,
                     kisebb a degradáció, és <strong>nyugodtan tölthető 100%-ra naponta</strong>.</p>
                     <p><strong>Hátrányok:</strong> kisebb energiasűrűség (rövidebb hatótáv ugyanakkora tömegre),
                     hidegben pontatlanabb a töltöttség-kijelzés, és hidegben kicsit érzékenyebb a teljesítmény.</p>
                 </div>
                 <div class="card">
-                    <h3>🔵 NMC / NCA (nikkel alapú)</h3>
+                    <span class="card-tag">NMC/NCA</span><h3>🔵 NMC / NCA (nikkel alapú)</h3>
                     <p><strong>Előnyök:</strong> nagyobb energiasűrűség → nagyobb hatótáv, stabilabb feszültséggörbe
                     (pontosabb %-kijelzés), jobb hidegtűrés.</p>
                     <p><strong>Hátrányok:</strong> drágább, érzékenyebb a tartós 100%-ra és 0%-ra,
@@ -513,9 +513,9 @@
             </p>
             </header>
 <div class="grid grid-3">
-                <div class="card"><h3>Első év</h3><p>Jellemzően <strong>~5%</strong> kapacitásvesztés, utána a görbe ellaposodik.</p></div>
-                <div class="card"><h3>Utána</h3><p>Évente nagyjából <strong>~1%</strong> — ez a „beállt" degradáció.</p></div>
-                <div class="card"><h3>8 év után</h3><p>A flotta-átlag jellemzően <strong>85–90% SoH</strong> körül mozog.</p></div>
+                <div class="card"><span class="card-tag">~5%</span><h3>📉 Első év</h3><p>Jellemzően <strong>~5%</strong> kapacitásvesztés, utána a görbe ellaposodik.</p></div>
+                <div class="card"><span class="card-tag">~1% / ÉV</span><h3>📈 Utána</h3><p>Évente nagyjából <strong>~1%</strong> — ez a „beállt" degradáció.</p></div>
+                <div class="card"><span class="card-tag">85–90% SoH</span><h3>✅ 8 év után</h3><p>A flotta-átlag jellemzően <strong>85–90% SoH</strong> körül mozog.</p></div>
             </div>
             <div class="tip-box orange" style="margin-top:16px;">
                 <strong>⚠ Mikor gyanús?</strong> Ha egy 100 000 km alatti autó 10%-nál többet veszített, az átlagon
@@ -557,7 +557,7 @@
             </header>
 <div class="grid grid-2">
                 <div class="card">
-                    <h3>Napi rutin</h3>
+                    <span class="card-tag">TENNI</span><h3>✅ Napi rutin</h3>
                     <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
                         <li><strong>NMC/NCA:</strong> 80%-ig töltsd, ha lehet otthon (AC).</li>
                         <li><strong>LFP:</strong> 100%-ig nyugodtan, és hetente egyszer töltsd 100%-ra (BMS-kalibrálás).</li>
@@ -565,7 +565,7 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Mit kerülj</h3>
+                    <span class="card-tag">KERÜLNI</span><h3>⚠️ Mit kerülj</h3>
                     <ul style="padding-left:18px;color:var(--ink-2,#3A3A3A);">
                         <li>Ne hagyd 0% alatt / 100%-on hetekig.</li>
                         <li>Ne szokj rá a kizárólagos Supercharger-töltésre, ha teheted.</li>
@@ -641,9 +641,9 @@
             </p>
             </header>
 <div class="grid grid-3">
-                <div class="card"><h3>Hatótáv</h3><p>Télen jellemzően <strong>15–30%</strong>-kal kevesebb, autópályán akár több is.</p></div>
-                <div class="card"><h3>Regeneratív fék</h3><p>Hidegben korlátozott, amíg az akku fel nem melegszik.</p></div>
-                <div class="card"><h3>LFP télen</h3><p>Hidegben pontatlanabb a %-kijelzés — a 100%-os kalibrálás segít.</p></div>
+                <div class="card"><span class="card-tag">TÉL</span><h3>🛣️ Hatótáv</h3><p>Télen jellemzően <strong>15–30%</strong>-kal kevesebb, autópályán akár több is.</p></div>
+                <div class="card"><span class="card-tag">TÉL</span><h3>🔄 Regeneratív fék</h3><p>Hidegben korlátozott, amíg az akku fel nem melegszik.</p></div>
+                <div class="card"><span class="card-tag">TÉL</span><h3>❄️ LFP télen</h3><p>Hidegben pontatlanabb a %-kijelzés — a 100%-os kalibrálás segít.</p></div>
             </div>
             <div class="tip-box green" style="margin-top:16px;">
                 <strong>✅ Mit tegyél:</strong> indítás előtt 10–15 perccel kapcsold be a <strong>preconditioning</strong>-ot
@@ -673,9 +673,9 @@
                 <p class="section-sub">Hogyan nézd meg te magad, és mit nézessen meg a szerviz használt vásárlás előtt.</p>
             </header>
 <div class="grid grid-3">
-                <div class="card"><h3>Service mód</h3><p>Az autó képernyőjén a Service menüben („Battery health") egyszerű SoH-teszt indítható.</p></div>
-                <div class="card"><h3>Scan My Tesla + OBD</h3><p>Bluetooth OBD-adapterrel részletes cellaadatokat látsz: feszültség, eltérés (delta), hőmérséklet, SoH.</p></div>
-                <div class="card"><h3>TeslaFi / Tessie</h3><p>Felhő-alapú nyomon követés, ha az előző tulajdonos is használta.</p></div>
+                <div class="card"><span class="card-tag">INGYENES</span><h3>🖥️ Service mód</h3><p>Az autó képernyőjén a Service menüben („Battery health") egyszerű SoH-teszt indítható.</p></div>
+                <div class="card"><span class="card-tag">RÉSZLETES</span><h3>📱 Scan My Tesla + OBD</h3><p>Bluetooth OBD-adapterrel részletes cellaadatokat látsz: feszültség, eltérés (delta), hőmérséklet, SoH.</p></div>
+                <div class="card"><span class="card-tag">FELHŐ</span><h3>☁️ TeslaFi / Tessie</h3><p>Felhő-alapú nyomon követés, ha az előző tulajdonos is használta.</p></div>
             </div>
             <p class="akku-note">Használt vásárlásnál a legjobb a független szerviz által végzett akkudiagnosztika — a
             <a href="szervizek.html">szervizkeresőben</a> találsz hozzá specialistát (pl. T-Service, EV Clinic).</p>
@@ -693,9 +693,9 @@
             </p>
             </header>
 <div class="grid grid-3">
-                <div class="card"><h3>12V segédakku</h3><p>4–6 évente cserélendő — a leggyakoribb „akkumulátor-probléma", és olcsó.</p></div>
-                <div class="card"><h3>PCS / fedélzeti töltő</h3><p>AC-töltés lassul vagy megszűnik; a Supercharger ilyenkor is működik.</p></div>
-                <div class="card"><h3>HV-kontaktor</h3><p>Ritka, de komoly — áramtalanítással és szervizzel jár.</p></div>
+                <div class="card"><span class="card-tag">GYAKORI</span><h3>🔋 12V segédakku</h3><p>4–6 évente cserélendő — a leggyakoribb „akkumulátor-probléma", és olcsó.</p></div>
+                <div class="card"><span class="card-tag">GYAKORI</span><h3>🔌 PCS / fedélzeti töltő</h3><p>AC-töltés lassul vagy megszűnik; a Supercharger ilyenkor is működik.</p></div>
+                <div class="card"><span class="card-tag">RITKA</span><h3>⚡ HV-kontaktor</h3><p>Ritka, de komoly — áramtalanítással és szervizzel jár.</p></div>
             </div>
             <div class="tip-box blue" style="margin-top:16px;">
                 <strong>🔧 Bővebben:</strong> <a href="hibak.html">Tipikus hibák és javítási költségek →</a>
