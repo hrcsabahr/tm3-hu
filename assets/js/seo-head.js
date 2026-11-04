@@ -101,7 +101,7 @@
                 ],
         },
         '/pages/okolabnyom.html': {
-            title: 'Ökolábnyom — villany vs benzines, teljes életciklus · tm3.hu',
+            title: 'Ökolábnyom — villanyautó vs benzines, teljes életciklus · tm3.hu',
             description: 'Mennyivel tisztább valójában egy villanyautó? Teljes életciklus-elemzés: akkumulátorgyártás, bányászat, vízhasználat és használat, idézett forrásokkal.',
             h1: 'Mennyivel tisztább valójában egy villanyautó?',
             type: 'article',
