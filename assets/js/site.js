@@ -155,22 +155,10 @@
     }
 
     // ----- Mobile nav toggle -----
-    function initNavToggle() {
-        const toggle = document.getElementById('nav-toggle');
-        const nav = document.getElementById('site-main-nav');
-        if (!toggle || !nav) return;
-        toggle.addEventListener('click', () => {
-            const open = nav.classList.toggle('is-open');
-            toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-        // Close on link click
-        nav.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => {
-                nav.classList.remove('is-open');
-                toggle.setAttribute('aria-expanded', 'false');
-            });
-        });
-    }
+    // (Eltávolítva 2026-11-04: a hamburger-toggle az inline fallback scriptben
+    //  van bekötve MINDEN oldalon (index + 16 aloldal). Ha itt is bekötöttük,
+    //  két click-handler egyszerre toggle-olta az .is-open osztályt — kioltották
+    //  egymást, ezért a mobil menü nem nyílt ki.)
 
     // ----- Footer & KPI helpers (kept for backward compat) -----
     function renderFooterYear() {
@@ -264,7 +252,6 @@
         renderFooter();
         initReveal();
         initNavScroll();
-        initNavToggle();
         renderFooterYear();
         bindKpi();
         initStatCounters();
