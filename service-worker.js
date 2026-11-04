@@ -11,7 +11,7 @@ const REPO_PREFIX = SW_SCOPE.endsWith('/tm3-hu') || SW_SCOPE === '/tm3-hu'
     ? '/tm3-hu'
     : '';
 
-const CACHE = 'tm3-v22';
+const CACHE = 'tm3-v23';
 
 const ASSETS = [
     `${REPO_PREFIX}/`,
@@ -29,6 +29,7 @@ const ASSETS = [
     `${REPO_PREFIX}/assets/js/szervizek.js`,
     `${REPO_PREFIX}/assets/js/kalkulator.js`,
     `${REPO_PREFIX}/assets/js/tco.js`,
+    `${REPO_PREFIX}/assets/js/okolabnyom.js`,
     `${REPO_PREFIX}/assets/js/fogyasztas.js`,
     `${REPO_PREFIX}/assets/js/hibak.js`,
     `${REPO_PREFIX}/assets/js/vasarlas.js`,
@@ -37,6 +38,7 @@ const ASSETS = [
     `${REPO_PREFIX}/assets/js/pwa.js`,
     `${REPO_PREFIX}/pages/kalkulator.html`,
     `${REPO_PREFIX}/pages/tco.html`,
+        `${REPO_PREFIX}/pages/okolabnyom.html`,
     `${REPO_PREFIX}/pages/blog.html`,
     `${REPO_PREFIX}/pages/szervizek.html`,
     `${REPO_PREFIX}/pages/hibak.html`,

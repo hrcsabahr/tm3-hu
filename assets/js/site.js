@@ -30,6 +30,7 @@
         { href: 'pages/visszahivasok.html', label: 'Visszahívások' },
         { href: 'pages/kalkulator.html', label: 'Degradáció' },
         { href: 'pages/tco.html', label: 'TCO' },
+        { href: 'pages/okolabnyom.html', label: 'Ökolábnyom' },
         { href: 'pages/gyik.html', label: 'GYIK' },
         { href: 'pages/blog.html', label: 'Hírek' },
         { href: 'pages/forum.html', label: 'Fórum' },

@@ -100,6 +100,18 @@
                     { q: 'Mennyit veszít az értékéből a Tesla Model 3 5 év alatt?', a: 'Egy átlagos Tesla Model 3 LR 5 év / 100 000 km után az új ár 45-55%-át tartja meg (2026-os adatok alapján). Ez jobb, mint a hasonló prémium benzines szedánok átlaga (35-45%). Az LFP akkumulátoros SR+ modellek értékállósága kiemelkedő: 5 év után 60-65%.' },
                 ],
         },
+        '/pages/okolabnyom.html': {
+            title: 'Ökolábnyom — villany vs benzines, teljes életciklus · tm3.hu',
+            description: 'Mennyivel tisztább valójában egy villanyautó? Teljes életciklus-elemzés: akkumulátorgyártás, bányászat, vízhasználat és használat, idézett forrásokkal.',
+            h1: 'Mennyivel tisztább valójában egy villanyautó?',
+            type: 'article',
+            section: 'Ökolábnyom',
+            faq: [
+                    { q: 'Mennyivel tisztább egy villanyautó egy benzinesnél?', a: 'Az ICCT 2025-ös európai életciklus-elemzése szerint egy villanyautó teljes kibocsátása 63 g CO2e/km, szemben a benzines 235 g CO2e/km-ével — vagyis ~73%-kal alacsonyabb. A magasabb gyártási terhet (főleg az akku) ~17 000 km alatt dolgozza le.' },
+                    { q: 'Tényleg szennyező az akkumulátor gyártása?', a: 'Igen, de a mértéke csökken: a 2017-es IVL-jelentés 150-200 kg CO2e/kWh-t írt, a 2019-es frissítés már 61-106 kg CO2e/kWh-t. Egy 60 kWh-s akku így ~4-6 tonna CO2-t jelent gyártáskor — ezt a tiszta használat pár tízezer km alatt ledolgozza.' },
+                    { q: 'Mennyi vizet használ a lítiumbányászat?', a: 'A chilei Salar de Atacama-ban 1 tonna lítium-karbonát előállításához ~500 000 liter sóoldat-vizet párologtatnak el, a talajvízszint 15 év alatt több mint 10 métert süllyedt. Ez a villanyautó bányászati lábnyomának legsúlyosabb része.' },
+            ],
+        },
         '/pages/hibak.html': {
             title: 'Tipikus Tesla Model 3 hibák és javítási költségek · tm3.hu',
             description: 'Tesla Model 3 meghibásodások, visszahívások, 12V akkumulátor, ajtókilincs, futómű — javítási költségekkel és garanciával.',

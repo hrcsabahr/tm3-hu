@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
+    <meta name="google-site-verification" content="N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4" />
+    <!-- Google tag (gtag.js) — consent mode v2, csak consent utan kuld adatot. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-709EQ9B200"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+    </script>
+    <meta name="theme-color" content="#06121E" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="tm3.hu">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Ökolábnyom: mennyivel tisztább valójában egy villanyautó? Teljes életciklus (gyártás, akkumulátor, bányászat, víz, használat) bizonyított forrásokkal — EV vs benzines." />
+    <meta property="og:title" content="Ökolábnyom — villany vs benzines, a teljes életciklus · tm3.hu" />
+    <meta property="og:url" content="https://www.tm3.hu/pages/okolabnyom.html" />
+    <link rel="canonical" href="https://www.tm3.hu/pages/okolabnyom.html" />
+    <title>Ökolábnyom — villany vs benzines, teljes életciklus · tm3.hu</title>
+    <link rel="preload" href="../assets/css/fonts.css" as="style" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/site.css?v=2026-10-15-v7" />
+    <link rel="stylesheet" href="../assets/css/consent.css?v=2026-09-consent-v1" />
+
+    <script src="../assets/js/seo-head.js?v=2026-08-31-gumi-v1" defer></script>
+    <!-- P3 fix: inline fallback hamburger toggle -->
+    <script>
+        (function() {
+            'use strict';
+            function bindNavToggle() {
+                var btn = document.getElementById('nav-toggle');
+                var nav = document.getElementById('site-main-nav');
+                if (!btn || !nav) return;
+                if (btn.dataset.tm3Bound === '1') return;
+                btn.dataset.tm3Bound = '1';
+
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var open = nav.classList.toggle('is-open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    btn.classList.toggle('open', open);
+                });
+
+                var links = nav.querySelectorAll('a');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', function() {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                    });
+                }
+
+                document.addEventListener('click', function(e) {
+                    if (!nav.classList.contains('is-open')) return;
+                    if (nav.contains(e.target) || btn.contains(e.target)) return;
+                    nav.classList.remove('is-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.classList.remove('open');
+                });
+
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                        btn.focus();
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bindNavToggle);
+            } else {
+                bindNavToggle();
+            }
+        })();
+    </script>
+    <meta name="keywords" content="villanyautó ökolábnyom, elektromos autó környezeti hatás, EV vs benzines co2, akkumulátor gyártás környezet, lítium bányászat víz, teljes életciklus elemzés" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="tm3.hu" />
+    <meta property="og:locale" content="hu_HU" />
+    <meta property="og:image" content="https://www.tm3.hu/assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ökolábnyom — villany vs benzines, a teljes életciklus · tm3.hu" />
+    <link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/okolabnyom.html" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/icon.svg" />
+    <link rel="apple-touch-icon" href="../assets/img/icon-192.png" />
+    <script type="application/ld+json">
+[
+        {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Főoldal", "item": "https://www.tm3.hu/" },
+                        { "@type": "ListItem", "position": 2, "name": "Ökolábnyom", "item": "https://www.tm3.hu/pages/okolabnyom.html" }
+                ]
+        },
+        {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "@id": "https://www.tm3.hu/pages/okolabnyom.html#webpage",
+                "url": "https://www.tm3.hu/pages/okolabnyom.html",
+                "name": "Ökolábnyom — villany vs benzines, teljes életciklus · tm3.hu",
+                "description": "Mennyivel tisztább valójában egy villanyautó? Teljes életciklus-elemzés: akkumulátorgyártás, bányászat, vízhasználat és használat, idézett forrásokkal.",
+                "inLanguage": "hu-HU",
+                "isPartOf": { "@id": "https://www.tm3.hu/#website" },
+                "publisher": { "@id": "https://www.tm3.hu/#organization" }
+        }
+]
+    </script>
+    <style>
+        /* Ökolábnyom — oldal-specifikus stílusok (2026-11) */
+        .oko-toc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 40px; }
+        .oko-toc ol { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+        .oko-toc ol a { display: block; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--ink); text-decoration: none; transition: border-color .15s, background .15s; }
+        .oko-toc ol a:hover { border-color: var(--accent); background: var(--accent-soft); }
+        [id] { scroll-margin-top: 96px; }
+        .oko-num { color: var(--accent); font-weight: 700; margin-right: 6px; }
+        .oko-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 20px 0; background: var(--surface); }
+        .oko-table th, .oko-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+        .oko-table th { background: var(--bg-2); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .03em; color: var(--ink-2); }
+        .oko-table td strong { color: var(--ink); }
+        .oko-src { font-size: 12px; color: var(--ink-3); }
+        .oko-src a { color: var(--ink-3); text-decoration: underline; }
+        .oko-vs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 720px) { .oko-vs-grid { grid-template-columns: 1fr; } }
+        .oko-badge-green { color: var(--best); font-weight: 700; }
+        .oko-badge-orange { color: var(--sport); font-weight: 700; }
+        .oko-verdict { background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--best); border-radius: var(--radius-lg); padding: 24px 28px; margin: 28px 0; }
+        .oko-verdict.warn { border-left-color: var(--sport); }
+        .oko-result-green { color: var(--best) !important; }
+    </style>
+</head>
+<body>
+    <header class="navbar" id="site-nav">
+        <div class="nav-wrap">
+            <a href="../index.html" class="brand" aria-label="tm3.hu">
+                <span class="brand-mark">M3</span>
+                <span>tm3.hu</span>
+            </a>
+                                    <nav class="main-nav" id="site-main-nav" aria-label="Fő navigáció">
+                <a href="../index.html">Főoldal</a>
+                <a href="akkumulator.html">Akkumulátor</a>
+                <a href="hoszivattyu.html">Fűtés</a>
+                <a href="gumi.html">Gumi</a>
+                <a href="vasarlas.html">Vásárlás</a>
+                <a href="tobberek.html">Töltők</a>
+                <a href="szervizek.html">Szervizek</a>
+                <a href="hibak.html">Hibák</a>
+                <a href="visszahivasok.html">Visszahívások</a>
+                <a href="kalkulator.html">Degradáció</a>
+                <a href="tco.html">TCO</a>
+                <a href="okolabnyom.html" aria-current="page">Ökolábnyom</a>
+                <a href="gyik.html">GYIK</a>
+                <a href="blog.html">Hírek</a>
+                <a href="forum.html">Fórum</a>
+                <a href="jogi.html">Jogi</a>
+            </nav>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span aria-current="page">Ökolábnyom</span>
+            </div>
+            <span class="eyebrow">🌍 Ökolábnyom · teljes életciklus</span>
+            <h1>Mennyivel tisztább valójában egy villanyautó?</h1>
+            <p class="lead">
+                Az „autó kipufogójánál" kezdődő és ott is végződő gondolkodás félrevezető.
+                Ez az oldal a teljes életciklust nézi: akkumulátorgyártás, bányászat, vízhasználat,
+                földmozgatás, majd a használat — mindezt idézett forrásokkal, nem kitalált számokkal.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <nav class="oko-toc" aria-label="Tartalomjegyzék">
+                <strong>Miről van szó?</strong>
+                <ol>
+                    <li><a href="#modszer"><span class="oko-num">1</span>Módszer: mit mérünk?</a></li>
+                    <li><a href="#akkugyartas"><span class="oko-num">2</span>Akkumulátor gyártása</a></li>
+                    <li><a href="#banyaszat"><span class="oko-num">3</span>Bányászat: lítium, kobalt, nikkel</a></li>
+                    <li><a href="#hasznalat"><span class="oko-num">4</span>Használat: áram vs benzin</a></li>
+                    <li><a href="#osszehasonlitas"><span class="oko-num">5</span>A teljes kép: EV vs benzines</a></li>
+                    <li><a href="#kalkulator"><span class="oko-num">6</span>Kalkulátor</a></li>
+                    <li><a href="#ujrahasznositas"><span class="oko-num">7</span>Újrahasznosítás és a jövő</a></li>
+                    <li><a href="#forrasok"><span class="oko-num">8</span>Források</a></li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- ===== 1. MÓDSZER ===== -->
+    <section class="section section--alt" id="modszer">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">01 · módszer</span>
+                <h2 class="section-title">Mit mérünk, és miért pont így?</h2>
+                <p class="section-sub">A tisztességes összehasonlítás az életciklus-elemzés (LCA): a nyersanyag kibányászásától az autó élete végéig.</p>
+            </header>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="card-tag">FOGALOM</span>
+                    <h3>⛽ „Well-to-wheel" (a kúttól a kerékig)</h3>
+                    <p>A benzines autónál a kipufogó csak a sztori fele. A kőolaj kitermelése, szállítása és finomítása is szennyez — ez a „well-to-tank" rész, ami nagyjából <strong>+20–25%-ot</strong> tesz a kipufogó kibocsátásához képest. 1 liter benzin elégetése ~2,31 kg CO₂, a teljes lánc viszont ~2,8 kg CO₂/liter.</p>
+                    <p class="oko-src">Forrás: NETL well-to-wheels baseline (2015); SLU LCA review — well-to-tank 10–15 g CO₂e/MJ a 73–78 g/MJ égés mellett.</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">FOGALOM</span>
+                    <h3>🔋 „Cradle-to-grave" (a bölcsőtől a sírig)</h3>
+                    <p>Az elektromos autónál a „szennyezés" nem a tankolásnál van, hanem <strong>előre tolódik</strong> a gyártásba. Az akkumulátor előállítása energia- és vízigényes, és a nyersanyagok (lítium, kobalt, nikkel, réz) bányászata hagy nyomot. Ezt a gyártási terhet kell „levárnia" a tiszta használatnak.</p>
+                    <p class="oko-src">Forrás: ICCT életciklus-briefing; IVL akkugyártás-jelentés.</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">ŐSZINTESÉG</span>
+                    <h3>⚖️ Mit tudunk pontosan számolni — és mit nem?</h3>
+                    <p>A <strong>CO₂-életciklus</strong> a legjobban mérhető, ezt tudjuk megbízhatóan összehasonlítani. A <strong>víz, a földmozgatás és az élőhely-pusztítás</strong> valós és súlyos, de nem fér egyetlen összehasonlítható számba a CO₂ mellé — ezért ezeket külön, konkrét adatokkal mutatjuk, nem keverjük bele a kalkulátorba.</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">RÖVID VÁLASZ</span>
+                    <h3>📊 A lényeg egy mondatban</h3>
+                    <p>Európában egy villanyautó teljes életciklus-kibocsátása <strong>~73%-kal alacsonyabb</strong> egy benzinesénél (63 vs 235 g CO₂e/km), és a magasabb gyártási terhet <strong>~17 000 km</strong> alatt „ledolgozza". A „de az akkugyártás szennyez!" érv igaz, de csak az első pár évben billenti a mérleget.</p>
+                    <p class="oko-src">Forrás: ICCT 2025 (Európa, teljes életciklus).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 2. AKKUMULÁTOR GYÁRTÁS ===== -->
+    <section class="section" id="akkugyartas">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">02 · akkumulátor</span>
+                <h2 class="section-title">Az akkumulátor: a villanyautó legnagyobb gyártási terhe</h2>
+                <p class="section-sub">Egy 60 kWh-s akkupakk előállítása nagyjából 4–6 tonna CO₂-t bocsát ki — ez a villanyautó gyártási lábnyomának nagy része.</p>
+            </header>
+
+            <div class="oko-verdict">
+                <strong>💡 Hány kiló CO₂ egy kWh akku?</strong>
+                <p style="margin:10px 0 0;">A 2017-es IVL-jelentés szerint <strong>150–200 kg CO₂e/kWh</strong> volt az akkugyártás lábnyoma. A gyárak hatékonyabbak lettek, ezért a 2019-es frissítés már <strong>61–106 kg CO₂e/kWh</strong>-t ír (fosszilismetes vs. fosszilis áramú gyártás). A hely a lényeg: a svédországi (tiszta áramú) gyártás ~45 kg, a kínai ~108 kg CO₂e/kWh.</p>
+                <p class="oko-src" style="margin-top:8px;">Forrás: IVL Swedish Environmental Research Institute (2017, 2019); Transport &amp; Environment (2020).</p>
+            </div>
+
+            <table class="oko-table">
+                <thead><tr><th>Gyártási hely / feltétel</th><th>CO₂-kibocsátás (kg CO₂e / kWh)</th><th>60 kWh-s akkura (tonna CO₂)</th></tr></thead>
+                <tbody>
+                    <tr><td>Svédország (fosszilismnetes áram)</td><td>~45</td><td>~2,7 t</td></tr>
+                    <tr><td>IVL 2019, fosszilismnetes</td><td>61</td><td>~3,7 t</td></tr>
+                    <tr><td>EU átlag / vegyes</td><td>~80</td><td>~4,8 t</td></tr>
+                    <tr><td>IVL 2019, fosszilis áram</td><td>106</td><td>~6,4 t</td></tr>
+                    <tr><td>Kína (fosszilis nehéz hálózat)</td><td>~108</td><td>~6,5 t</td></tr>
+                    <tr><td>IVL 2017 (régi, kevésbé hatékony gyárak)</td><td>150–200</td><td>9–12 t</td></tr>
+                </tbody>
+            </table>
+            <p class="oko-src">Forrás: IVL (2017, 2019); Transport &amp; Environment „How clean are electric cars?" (2020); ICCT briefing (2018, 56–494 kg/kWh tartomány a szakirodalomban).</p>
+
+            <h3 style="margin-top:32px;">💧 A gyártás vize — magyar gyárak, konkrét számok</h3>
+            <p>Az akkugyár nem „száraz" üzem. A hűtés, az elektróda-gyártás, a mosás és a szennyvízkezelés mind vizet visz. Egy friss, magyar gyárakra alapuló tudományos felmérés (MDPI, 2025) konkrét, bejelentett adatokkal dolgozik:</p>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="card-tag">VÍZ / KWH</span>
+                    <h3>🏭 CATL (Debrecen)</h3>
+                    <p><strong>27,9 L víz / kWh</strong> akkucella. 40 GWh/év kapacitás.</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">VÍZ / KWH</span>
+                    <h3>🏭 Samsung (Göd)</h3>
+                    <p><strong>55,7 L víz / kWh</strong>. 2022-ben 1,46 millió m³ vizet vont ki.</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">VÍZ / KWH</span>
+                    <h3>🏭 SK Innovation</h3>
+                    <p><strong>67 L víz / kWh</strong>. A három gyár együtt ~30–35 kWh energiát és ~10 kg CO₂e-t használ kWh-ként (csak a gyártás, nyersanyag nélkül).</p>
+                </div>
+            </div>
+            <p style="margin-top:20px;">Tehát egy 60 kWh-s akku <strong>gyári vízigénye durván 1 700–4 000 liter</strong>, a nyersanyag-bányászat vizét még nem is számolva. Ez sok, de kontextusban kell nézni: a benzines autó használat közben (az üzemanyag kitermelését és finomítását beleértve) folyamatosan „fogyasztja" a környezetet, míg az akku vize egyszeri tétel.</p>
+            <p class="oko-src">Forrás: MDPI, Energies (2025) — három magyar akkugyár energia-, CO₂- és vízlábnyoma; az NMC-cella teljes vízlábnyoma (bányászattal együtt) a szakirodalomban 411–456 L/kWh.</p>
+        </div>
+    </section>
+
+    <!-- ===== 3. BÁNYÁSZAT ===== -->
+    <section class="section section--alt" id="banyaszat">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">03 · bányászat</span>
+                <h2 class="section-title">A bányászat: víz, föld és esőerdő</h2>
+                <p class="section-sub">A villanyautó több bányászott anyagot igényel. Ennek ára van — konkrét, idézhető számokkal.</p>
+            </header>
+
+            <h3>🧂 Lítium: a chilei sivatag vize</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="card-tag">VÍZ</span>
+                    <h3>💧 A Salar de Atacama</h3>
+                    <p>A világ lítiumának nagy része chilei sós síkságokról (sóból párologtatással) jön. <strong>1 tonna lítium-karbonát</strong> előállításához átlagosan <strong>~500 000 liter</strong> sóoldat-vizet párologtatnak el — egy hiperarid sivatagban. A talajvízszint <strong>15 év alatt több mint 10 métert</strong> süllyedt, a sós síkság évente 1–2 cm-t süllyed.</p>
+                    <p class="oko-src">Forrás: Mongabay / OC jelentés (2025); IEEE tanulmány a Salar süllyedéséről.</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">VÍZLÁBNYOM</span>
+                    <h3>📏 Pontosított számok</h3>
+                    <p>Egy 2024-es akadémiai vízlábnyom-vizsgálat (TU Berlin) szerint 1 tonna lítium-termékhez <strong>217 m³ sóoldat</strong> + 4,5 m³ talajvíz + 7,5 m³ sótalanított víz kell; a „kék víz" felhasználás ~107 m³/tonna. A számok javulnak (2020–2021 és 2022–2023 között 9–42%-kal), de a vízterhelés a sivatagi környezetben súlyos marad.</p>
+                    <p class="oko-src">Forrás: TU Berlin / Journal of Cleaner Production (2024).</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top:32px;">🪙 Kobalt és nikkel: esőerdő és földmozgatás</h3>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="card-tag">FÖLDMOZGATÁS</span>
+                    <h3>⛏️ Mennyi földet mozgat meg?</h3>
+                    <p>A kobalt átlagos érctartalma mindössze <strong>0,35%</strong>: 1 tonna kobaltért <strong>317 tonna ércet</strong> kell kibányászni. Az indonéz nikkelnél (1,5%-os érc) <strong>78 tonna ércet</strong> tonnánként. A tudományos „rock-to-metal" arány (RMR) a kobaltnál ~859 (a réznél ~100–200). A mélyebb, szegényebb ércek miatt ez az arány idővel romlik.</p>
+                    <p class="oko-src">Forrás: Benchmark Mineral Intelligence (2023); Nature / „Rock-to-Metal" ratio tanulmány (2021).</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">ERDŐ</span>
+                    <h3>🌴 Indonézia és Kongó</h3>
+                    <p>A világ kobaltjának <strong>75%-a Kongóból</strong>, nikkeljének <strong>50%-a Indonéziából</strong> jön. 1 kg kobalt kibányászása ~<strong>3,6 kg CO₂e</strong> erdei szenet pusztít el; 1 kg nikkel 7–9,4 kg CO₂e-t. Indonéziában a nikkelbányászat a Cahaya-kitermelési terület erdőveszteségének akár kétharmadáért felelős.</p>
+                    <p class="oko-src">Forrás: Benchmark (2023); The Guardian / Nature Communications (2025) az indonéz erdőirtásról.</p>
+                </div>
+            </div>
+
+            <div class="tip-box orange" style="margin-top:28px;">
+                <strong>⚠️ Ez a villanyautó igazi árnyoldala</strong>
+                <p style="margin-top:8px;">Ezt őszintén ki kell mondani: a jelenlegi akkutechnológia bányászati lábnyoma valós, és egyes ellátási láncok erdőirtáshoz, vízkimerüléshez és rossz munkakörülményekhez kötődnek. Ez <strong>nem érv a benzines mellett</strong> — a kőolaj-kitermelésnek is súlyos a víz- és földlábnyoma —, de érv amellett, hogy az akkutechnológia még messze nem „tiszta", és a hatékonyabb újrahasznosítás kritikus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 4. HASZNÁLAT ===== -->
+    <section class="section" id="hasznalat">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">04 · használat</span>
+                <h2 class="section-title">Használat: áram vs benzin</h2>
+                <p class="section-sub">Itt billen át a mérleg — a villanyautó működés közben sokkal tisztább, de csak annyira, amennyire az áram tisztább.</p>
+            </header>
+
+            <div class="oko-vs-grid">
+                <div class="card">
+                    <span class="card-tag">BENZINES</span>
+                    <h3>⛽ A benzin teljes lánca</h3>
+                    <p>1 liter benzin égése <strong>2,31 kg CO₂</strong>. A kitermelés + finomítás + szállítás ehhez <strong>+20–25%-ot</strong> tesz hozzá → összesen <strong>~2,8 kg CO₂/liter</strong>. Egy 7 l/100 km-es benzines így <strong>~196 g CO₂/km</strong>-t bocsát ki a teljes láncon. Ezt soha nem lehet „letisztítani" — a benzin mindig ugyanannyira szennyez, akárhány évet használod az autót.</p>
+                    <p class="oko-src">Forrás: NETL (2015); SLU LCA review.</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">VILLANY</span>
+                    <h3>⚡ Az áram — és hogy miből van</h3>
+                    <p>Egy Model 3 ~<strong>16 kWh/100 km</strong>-t fogyaszt. A kibocsátás attól függ, milyen árammal töltöd:</p>
+                    <ul style="margin:12px 0 0 18px; padding:0;">
+                        <li>Szén: ~800 g/kWh → <strong>~128 g CO₂/km</strong></li>
+                        <li>EU átlag: ~250 g/kWh → <strong>~40 g CO₂/km</strong></li>
+                        <li>Tiszta (víz/szél/nap): ~50 g/kWh → <strong>~8 g CO₂/km</strong></li>
+                    </ul>
+                    <p style="margin-top:12px;">A kulcs: a villanyautó <strong>idővel tisztább lesz</strong>, ahogy az áramhálózat zöldül. A benzin nem.</p>
+                    <p class="oko-src">Forrás: EEA / IEA áramintenzitás-adatok; Model 3 vegyes fogyasztás.</p>
+                </div>
+            </div>
+
+            <div class="tip-box green" style="margin-top:28px;">
+                <strong>💡 A legfontosabb összefüggés</strong>
+                <p style="margin-top:8px;">A villanyautó teljes lábnyomának <strong>a hálózat tisztasága a legnagyobb mozgatórugója</strong>. Ugyanaz az autó szénnel töltve ~3x szennyezőbb használatban, mint tiszta árammal. A gyártási terhet viszont mindig egyszer fizeted — ezért a kérdés nem „villany vagy benzin", hanem „mekkora távot futsz, és milyen árammal töltesz".</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 5. ÖSSZEHASONLÍTÁS ===== -->
+    <section class="section section--alt" id="osszehasonlitas">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">05 · a teljes kép</span>
+                <h2 class="section-title">EV vs benzines — a teljes életciklus</h2>
+                <p class="section-sub">Az összes fenti tényezőt összeadva, független tanulmányok szerint.</p>
+            </header>
+
+            <div class="oko-verdict">
+                <strong>📊 A mérce: ICCT 2025 (Európa)</strong>
+                <p style="margin:10px 0 0;">A villanyautó teljes életciklus-kibocsátása <strong>63 g CO₂e/km</strong>, a benzinesé <strong>235 g CO₂e/km</strong> — vagyis a villany <strong>73%-kal alacsonyabb</strong>. A villanyautó gyártása ~40%-kal szennyezőbb (főleg az akku miatt), de ezt a többletet <strong>~17 000 km</strong> alatt ledolgozza. Tiszta árammal a megtakarítás 78%.</p>
+                <p class="oko-src" style="margin-top:8px;">Forrás: ICCT, „Life-cycle greenhouse gas emissions from passenger cars in the EU" (2025).</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <span class="card-tag">ÁTLAG</span>
+                    <h3>🇪🇺 EU átlag</h3>
+                    <p>Villany <strong class="oko-badge-green">75 g CO₂/km</strong> vs benzines <strong class="oko-badge-orange">241 g CO₂/km</strong> → <strong>69%-kal</strong> (3x) kevesebb.</p>
+                    <p class="oko-src">Forrás: Transport &amp; Environment.</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">LEGROSSZABB ESET</span>
+                    <h3>🏭 Kínai akku + lengyel hálózat</h3>
+                    <p>Még a legrosszabb kombinációban is <strong>37%-kal</strong> tisztább a villany. A kritikusok által hivatkozott „700 000 km" téves: a realisztikus szélsőérték <strong>~67 000–151 000 km</strong> megtérülés.</p>
+                    <p class="oko-src">Forrás: T&amp;E; Argonne / Reuters (2021); Damien Ernst felülvizsgált becslése.</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">LEGJOBB ESET</span>
+                    <h3>🇸🇪 Svéd akku + svéd hálózat</h3>
+                    <p>Svédországi (tiszta) gyártású akkuval, tiszta árammal töltve <strong>83%-kal</strong> tisztább. Norvégiában (vízenergia) a megtérülés már <strong>~13 500 km</strong>-nél bekövetkezik.</p>
+                    <p class="oko-src">Forrás: T&amp;E; Argonne / Reuters (Norvégia-eset).</p>
+                </div>
+            </div>
+
+            <div class="tip-box green" style="margin-top:28px;">
+                <strong>✅ A mérleg egyértelmű</strong>
+                <p style="margin-top:8px;">A „villanyautó gyártása szennyez, tehát nem tisztább" állítás <strong>nem állja meg a helyét</strong> a teljes életcikluson. A gyártási többlet valós (főleg az akku), de az autó élete során a benzin folyamatos szennyezése messze meghaladja azt. A pontos megtérülési táv függ az árammix-től: 13 500 km (tiszta) és ~150 000 km (szélsőségesen szén) között.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 6. KALKULÁTOR ===== -->
+    <section class="section" id="kalkulator">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">06 · kalkulátor</span>
+                <h2 class="section-title">Számold ki a te esetedet</h2>
+                <p class="section-sub">Átlátszó modell — minden konstans a fenti, idézett forrásokból jön. A víz- és földlábnyom nincs belekeverve (az nem fér egyetlen számba).</p>
+            </header>
+
+            <div class="calc-grid">
+                <div class="calc-card calc-inputs">
+                    <h3 style="margin-bottom:24px;">A te paramétereid</h3>
+
+                    <div class="calc-field">
+                        <label>Éves futásteljesítmény <small id="lbl-oko-km">15 000 km</small></label>
+                        <input type="range" id="oko-eves-km" min="5000" max="40000" step="1000" value="15000" />
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="oko-ev">Tervezett élettartam</label>
+                        <select id="oko-ev">
+                            <option value="8">8 év</option>
+                            <option value="12" selected>12 év</option>
+                            <option value="16">16 év</option>
+                            <option value="20">20 év</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="oko-akku">Akkumulátor méret <small>kWh</small></label>
+                        <select id="oko-akku">
+                            <option value="40">40 kWh (kisautó)</option>
+                            <option value="60" selected>60 kWh (Model 3 / közép)</option>
+                            <option value="80">80 kWh (nagy)</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="oko-akkugy">Akkugyártás helye <small>kg CO₂e/kWh</small></label>
+                        <select id="oko-akkugy">
+                            <option value="45">Tiszta áram (Svédország) — 45</option>
+                            <option value="80" selected>EU átlag — 80</option>
+                            <option value="108">Kína / fosszilis — 108</option>
+                        </select>
+                    </div>
+
+                    <div class="calc-field">
+                        <label for="oko-mix">Árammix a töltéshez <small>g CO₂e/kWh</small></label>
+                        <select id="oko-mix">
+                            <option value="50">Tiszta (víz/szél/nap) — 50</option>
+                            <option value="250" selected>EU átlag — 250</option>
+                            <option value="800">Szén — 800</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="calc-output">
+                    <h3>Teljes életciklus-kibocsátás</h3>
+                    <div class="result" id="res-oko-km" style="font-size:clamp(22px, 3vw, 34px);">— km</div>
+                    <div class="result-sub">Teljes futásteljesítmény a tervezett élettartam alatt</div>
+
+                    <ul class="result-list">
+                        <li><span>⚡ Villanyautó (teljes):</span> <strong id="res-oko-ev">— t CO₂</strong></li>
+                        <li><span>⛽ Benzines (teljes):</span> <strong id="res-oko-benz">— t CO₂</strong></li>
+                        <li><span>🌱 Megtakarítás:</span> <strong id="res-oko-diff" class="oko-result-green">— t CO₂</strong></li>
+                    </ul>
+
+                    <div class="highlight" style="background:var(--green-soft);border-color:rgba(16,140,61,0.25);">
+                        <strong style="color:var(--green);">📍 Megtérülési pont: <span id="res-oko-breakeven">— km</span></strong>
+                    </div>
+
+                    <p style="font-size:13px;color:var(--ink-3);margin-top:16px;line-height:1.5;">
+                        A gyártási többlet (akku) ennyi km után térül meg a tisztább használatból.
+                        Ha a megtérülési pont a teljes futásnál nagyobb, a benzines nyer a te paramétereiddel —
+                        ez jellemzően csak nagyon kevés futásnál és széntüzelésű hálózatnál fordul elő.
+                    </p>
+                </div>
+            </div>
+
+            <div class="tip-box" style="margin-top:32px;">
+                <strong>🧮 Mit számoltunk pontosan?</strong>
+                <ul style="margin-top:8px; padding-left:20px;">
+                    <li><strong>Gyártás:</strong> karosszéria + hajtáslánc ~7 t CO₂e (mindkettőnél) + akku = kWh × intenzitás (45/80/108).</li>
+                    <li><strong>Használat (villany):</strong> km × 0,16 kWh/km × árammix.</li>
+                    <li><strong>Használat (benzines):</strong> km × 0,07 L/km × 2,8 kg CO₂/l (égés + kitermelés).</li>
+                    <li>Ez egy <strong>egyszerűsített, átlátható modell</strong> — a független tanulmányok (ICCT, T&amp;E) finomabb módszertannal dolgoznak, de ugyanezt az irányt mutatják.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 7. ÚJRAHASZNOSÍTÁS ===== -->
+    <section class="section section--alt" id="ujrahasznositas">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">07 · jövő</span>
+                <h2 class="section-title">Újrahasznosítás: a terhet csökkenteni lehet</h2>
+                <p class="section-sub">A bányászati lábnyom az egyetlen, ami újrahasznosítással ténylegesen csökkenthető.</p>
+            </header>
+            <div class="grid-2">
+                <div class="card">
+                    <span class="card-tag">AKKU</span>
+                    <h3>♻️ Az akkupakk második élete</h3>
+                    <p>Az akku a jármű élete után is ~70–80% kapacitással bír — otthoni/ipari tárolóként évekig használható. Az ICCT szerint az újrahasznosítás <strong>4–10%-kal</strong> csökkentheti az akku fajlagos kibocsátását (1–2,5 kg CO₂ megtakarítás kg akkuanyagonként).</p>
+                    <p class="oko-src">Forrás: ICCT briefing (2018).</p>
+                </div>
+                <div class="card">
+                    <span class="card-tag">TREND</span>
+                    <h3>📉 A görbe lefelé megy</h3>
+                    <p>Az akkugyártás CO₂-intenzitása egy évtized alatt a <strong>harmadára–ötödére</strong> esett (150–200 → 45–108 kg/kWh). A folyamatosan zöldülő áramhálózat és a jobb újrahasznosítás tovább javítja a mérleget — a benzines lánca viszont nem tud érdemben javulni.</p>
+                    <p class="oko-src">Forrás: IVL (2017 vs 2019); T&amp;E 2030-as előrejelzés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 8. FORRÁSOK ===== -->
+    <section class="section" id="forrasok">
+        <div class="container">
+            <header class="section-head">
+                <span class="section-eyebrow">08 · források</span>
+                <h2 class="section-title">Honnan jönnek a számok?</h2>
+                <p class="section-sub">Minden állítás ellenőrizhető. Itt a teljes lista.</p>
+            </header>
+            <ul style="font-size:14px; line-height:1.8; max-width:820px;">
+                <li>IVL Swedish Environmental Research Institute — „The life cycle energy consumption and GHG emissions from lithium-ion batteries" (2017; 2019-es frissítés: 61–106 kg CO₂e/kWh).</li>
+                <li>Transport &amp; Environment — „How clean are electric cars?" (2020): EU-átlag 75 vs 241 g CO₂e/km.</li>
+                <li>ICCT — „Life-cycle greenhouse gas emissions from passenger cars in the EU: a 2025 update": BEV 63 vs 235 g CO₂e/km, megtérülés ~17 000 km.</li>
+                <li>ICCT briefing (2018) — akkugyártás CO₂-intenzitása (56–494 kg/kWh tartomány), újrahasznosítási megtakarítás.</li>
+                <li>Argonne National Laboratory (Reuters-elemzés, 2021) — megtérülési távok: USA ~24 000–32 000 km, Norvégia ~13 500 km, szénhálózat ~126 000 km.</li>
+                <li>MDPI, Energies (2025) — „Energy Use and Environmental Impact of Three Lithium-Ion Battery Factories" (magyar gyárak: CATL 27,9 / Samsung 55,7 / SK 67 L/kWh).</li>
+                <li>TU Berlin / Journal of Cleaner Production (2024) — a Salar de Atacama lítium vízlábnyoma.</li>
+                <li>Mongabay / OC jelentés (2025) — lítiumbányászat vízhatásai Chilében (~500 000 L sóoldat / tonna Li₂CO₃).</li>
+                <li>Benchmark Mineral Intelligence (2023) — kobalt/nikkel bányászat erdei szenes hatásai (317:1 kobalt, 78:1 nikkel érchányad).</li>
+                <li>The Guardian / Nature Communications (2025) — indonéz nikkelbányászat és erdőirtás.</li>
+                <li>NETL (2015) — benzin well-to-wheels életciklusa; SLU LCA review — benzin well-to-tank adatai.</li>
+                <li>„Rock-to-Metal ratio" tanulmány (2021) — a bányászati földmozgatás mérése.</li>
+            </ul>
+            <p class="oko-src" style="margin-top:20px;">Megjegyzés: a számok független, publikált tanulmányokból származnak, és a módszertan függvényében eltérhetnek egymástól — ezért adunk tartományokat, nem egyetlen „igazságot".</p>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="../assets/js/util.js?v=2026-10-tco-v2" defer></script>
+    <script src="../assets/js/site.js?v=2026-11-04-menu-fix" defer></script>
+    <script src="../assets/js/consent.js?v=2026-09-consent-v1" defer></script>
+    <script src="../assets/js/okolabnyom.js?v=2026-11-04-oko-v1" defer></script>
+</body>
+</html>
