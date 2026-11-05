@@ -21,10 +21,10 @@
   <!-- Felső akcent vonal -->
   <line x1="96" y1="160" x2="416" y2="160" stroke="url(#line)" stroke-width="2"/>
 
-  <!-- "M3" szöveg -->
+  <!-- "tm3" szöveg -->
   <text x="256" y="305" font-family="Inter, -apple-system, sans-serif"
-        font-size="220" font-weight="800" fill="#ffffff"
-        text-anchor="middle" letter-spacing="-8">M3</text>
+        font-size="150" font-weight="800" fill="#ffffff"
+        text-anchor="middle" letter-spacing="-4">tm3</text>
 
   <!-- Alsó akcent vonal -->
   <line x1="96" y1="360" x2="416" y2="360" stroke="url(#line)" stroke-width="2"/>

@@ -55,10 +55,10 @@ serif = ImageFont.truetype(F + "georgia.ttf", 80)
 serif_italic = ImageFont.truetype(F + "georgiai.ttf", 80)
 sub = ImageFont.truetype(F + "segoeui.ttf", 22)
 
-# Logo mark: rounded rect 80x80 at (80,80) with blue gradient + "M3"
+# Logo mark: rounded rect 80x80 at (80,80) with blue gradient + "tm3"
 gradient_rounded_rect(d, [80, 80, 160, 160], 18)
-m3 = ImageFont.truetype(F + "segoeuib.ttf", 44)
-d.text((120, 118), "M3", font=m3, fill=(255, 255, 255), anchor="mm")
+m3 = ImageFont.truetype(F + "segoeuib.ttf", 40)
+d.text((120, 118), "tm3", font=m3, fill=(255, 255, 255), anchor="mm")
 
 # Brand "tm3.hu"
 d.text((180, 120), "tm3.hu", font=sans_semibold, fill=(26, 26, 26), anchor="lm")
