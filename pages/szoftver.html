@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
+    <meta name="google-site-verification" content="N-NXAZpS0CxpyfE5e35mcbnsHWk2k7Ib47be6x2qiI4" />
+    <!-- Google tag (gtag.js) — consent mode v2, csak consent utan kuld adatot.
+         A config hivas a consent.js-bol jon (applyToGtag), alapbol minden denied. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-709EQ9B200"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+    </script>
+<meta name="theme-color" content="#06121E" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="tm3.hu">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="A legújabb Tesla Model 3 szoftververzió és az elmúlt időszak frissítései — release notes-szal, FSD verzióval és flotta-megoszlással. Óránként automatikusan frissül." />
+    <meta property="og:title" content="Tesla Model 3 szoftververziók · tm3.hu" />
+    <meta property="og:url" content="https://www.tm3.hu/pages/szoftver.html" />
+    <link rel="canonical" href="https://www.tm3.hu/pages/szoftver.html" />
+    <title>Tesla Model 3 szoftververziók · tm3.hu</title>
+    <link rel="preload" href="../assets/css/fonts.css" as="style" />
+    <link rel="stylesheet" href="../assets/css/fonts.css" />
+    <link rel="stylesheet" href="../assets/css/site.css?v=2026-10-15-v7" />
+    <link rel="stylesheet" href="../assets/css/consent.css?v=2026-09-consent-v1" />
+    
+    <script src="../assets/js/seo-head.js?v=2026-08-31-gumi-v1" defer></script>
+    <!-- P3 fix: inline fallback hamburger toggle — akkor is mukodik, ha a site.js
+         nem toltodik be, vagy a SW cache-bol a regi verzio jon. -->
+    <script>
+        (function() {
+            'use strict';
+            function bindNavToggle() {
+                var btn = document.getElementById('nav-toggle');
+                var nav = document.getElementById('site-main-nav');
+                if (!btn || !nav) return;
+                if (btn.dataset.tm3Bound === '1') return; // ne kotsuk ketszer
+                btn.dataset.tm3Bound = '1';
+
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    var open = nav.classList.toggle('is-open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    btn.classList.toggle('open', open);
+                });
+
+                // Linkre kattintas: zarja be a menut
+                var links = nav.querySelectorAll('a');
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', function() {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                    });
+                }
+
+                // Kulso kattintas: zarja be a menut
+                document.addEventListener('click', function(e) {
+                    if (!nav.classList.contains('is-open')) return;
+                    if (nav.contains(e.target) || btn.contains(e.target)) return;
+                    nav.classList.remove('is-open');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.classList.remove('open');
+                });
+
+                // Escape billentyu: zarja be
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+                        nav.classList.remove('is-open');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.classList.remove('open');
+                        btn.focus();
+                    }
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', bindNavToggle);
+            } else {
+                bindNavToggle();
+            }
+        })();
+    </script>
+    <!-- SEO-META-START -->
+    <meta name="keywords" content="tesla model 3 szoftververzió, tesla szoftverfrissítés, tesla release notes, tesla FSD verzió, tesla firmware, tesla OTA frissítés" />
+    <meta property="og:description" content="A legújabb Tesla Model 3 szoftververzió és a korábbi frissítések — release notes-szal, FSD verzióval. Óránként frissül." />
+    <meta name="twitter:description" content="Tesla Model 3 szoftververziók — release notes-szal, FSD verzióval." />
+    <meta name="author" content="tm3.hu — Magyar Tesla Model 3 közösség" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="tm3.hu" />
+    <meta property="og:locale" content="hu_HU" />
+    <meta property="og:image" content="https://www.tm3.hu/assets/img/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tm3hu" />
+    <meta name="twitter:creator" content="@tm3hu" />
+    <meta name="twitter:title" content="Tesla Model 3 szoftververziók · tm3.hu" />
+    <meta name="twitter:image" content="https://www.tm3.hu/assets/img/og-image.png" />
+    <meta name="twitter:image:alt" content="Tesla Model 3 — magyar tudásbázis" />
+    <link rel="alternate" hreflang="hu" href="https://www.tm3.hu/pages/szoftver.html" />
+    <link rel="icon" type="image/svg+xml" href="../assets/img/icon.svg" />
+    <link rel="apple-touch-icon" href="../assets/img/icon-192.png" />
+    <!-- SEO-META-END -->
+    <!-- JSONLD-START -->
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Főoldal",
+                    "item": "https://www.tm3.hu/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Szoftververziók",
+                    "item": "https://www.tm3.hu/pages/szoftver.html"
+                }
+            ]
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://www.tm3.hu/pages/szoftver.html#webpage",
+            "url": "https://www.tm3.hu/pages/szoftver.html",
+            "name": "Tesla Model 3 szoftververziók · tm3.hu",
+            "description": "A legújabb Tesla Model 3 szoftververzió és a korábbi frissítések — release notes-szal, FSD verzióval.",
+            "inLanguage": "hu-HU",
+            "isPartOf": {
+                "@id": "https://www.tm3.hu/#website"
+            },
+            "publisher": {
+                "@id": "https://www.tm3.hu/#organization"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://www.tm3.hu/assets/img/og-image.png"
+            },
+            "articleSection": "Szoftververziók"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://www.tm3.hu/#organization",
+            "name": "tm3.hu",
+            "url": "https://www.tm3.hu",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.tm3.hu/assets/img/icon.svg"
+            }
+        }
+    ]
+    </script>
+    <!-- JSONLD-END -->
+</head>
+<body>
+    <!-- P2: inline statikus navbar — JS nélkül is látható. -->
+    <header class="navbar" id="site-nav">
+        <div class="nav-wrap">
+            <a href="../index.html" class="brand" aria-label="tm3.hu">
+                <span class="brand-mark">tm3</span>
+                <span>tm3.hu</span>
+            </a>
+                                    <nav class="main-nav" id="site-main-nav" aria-label="Fő navigáció">
+                <a href="../index.html">Főoldal</a>
+                <a href="akkumulator.html">Akkumulátor</a>
+                <a href="hoszivattyu.html">Fűtés</a>
+                <a href="gumi.html">Gumi</a>
+                <a href="vasarlas.html">Vásárlás</a>
+                <a href="tobberek.html">Töltők</a>
+                <a href="szervizek.html">Szervizek</a>
+                <a href="hibak.html">Hibák</a>
+                <a href="visszahivasok.html">Visszahívások</a>
+                <a href="szoftver.html" aria-current="page">Szoftver</a>
+                <a href="kalkulator.html">Degradáció</a>
+                <a href="tco.html">TCO</a>
+                <a href="okolabnyom.html">Ökolábnyom</a>
+                <a href="gyik.html">GYIK</a>
+                <a href="blog.html">Hírek</a>
+                <a href="forum.html">Fórum</a>
+                <a href="jogi.html">Jogi</a>
+            </nav>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menü megnyitása" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+    <!-- NAV: a site.js rendereli -->
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Főoldal</a>
+                <span class="breadcrumb-sep">/</span>
+                <span aria-current="page">Szoftververziók</span>
+            </div>
+            <span class="eyebrow">📱 Szoftververziók</span>
+            <h1>Tesla Model 3 szoftverfrissítések</h1>
+            <p class="lead">
+                A legújabb Tesla szoftververzió és az elmúlt időszak frissítései —
+                release notes-szal, FSD-verzióval és flotta-megoszlással.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="tip-box green" style="margin-bottom:24px;">
+                <strong>🔁 Automatikusan frissül</strong>
+                <p style="margin:8px 0 0;">
+                    Az adatok a <strong>Teslascope</strong> közösségi flotta-adataiból jönnek, és
+                    <strong>óránként automatikusan frissülnek</strong>. A százalékok a Teslascope
+                    flottáját tükrözik — az európai és magyar rollout ettől eltérhet, a frissítést
+                    a saját autód az érintőképernyőn (Vezérlés → Szoftver) jelzi, amikor elérhető.
+                </p>
+            </div>
+
+            <div id="szoftver-latest"></div>
+
+            <h2 class="section-title" style="margin-top:40px;">Korábbi verziók</h2>
+            <p class="deg-note" id="szoftver-count" style="margin-bottom:16px;"></p>
+            <div id="szoftver-list"></div>
+            <div id="szoftver-empty" class="empty-state" style="display:none;">
+                <h3>Nincs adat</h3>
+                <p>Az adatbetöltés nem sikerült, próbáld újra később.</p>
+            </div>
+
+            <div class="tip-box orange" style="margin-top:40px;">
+                <strong>ℹ Fontos megjegyzés:</strong>
+                <p style="margin:8px 0 0;">
+                    A verziószámok (pl. 2026.44.1) a kiadás évét és hetét jelzik (2026, 44. hét).
+                    A „HW3 / HW4" a hardver (autopilot-számítógép) generációjára utal — a frissítések
+                    hardvertől függően eltérő ütemben érkeznek. Forrás: teslascope.com, tájékoztató jellegű.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script src="../assets/js/util.js?v=2026-08-31-gumi-v1" defer></script>
+    <script src="../assets/js/site.js?v=2026-11-04-menu-fix" defer></script>
+    <script src="../assets/js/consent.js?v=2026-09-consent-v1" defer></script>
+<script src="../assets/js/szoftver.js?v=2026-11-19-szoftver-v1" defer></script>
+</body>
+</html>

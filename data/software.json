@@ -1,0 +1,1273 @@
+{
+  "meta": {
+    "updated": "2026-11-19T17:26:20.000000Z",
+    "forras": "Teslascope publikus API (teslascope.com/api/software)",
+    "megjegyzes": "Automatikusan frissül GitHub Actions cron-nal (óránként). A flotta-adatok (darab, %) a Teslascope közösségi flottájából származnak; az európai/magyar rollout ettől eltérhet."
+  },
+  "latest": {
+    "version": "2026.44.1",
+    "datum": "2026-11-17",
+    "fsd": "HW3 14.3 Lite",
+    "fsd_hw3": "14.3 Lite",
+    "fsd_hw4": null,
+    "flotta_db": 140,
+    "flotta_osszes": 3256,
+    "flotta_pct": 4.3,
+    "rollout": {
+      "teljes": 79,
+      "elérhető": 6,
+      "letöltés": 2,
+      "telepítés": 1
+    },
+    "orszagok": [
+      "USA",
+      "Egyesült Királyság",
+      "Franciaország",
+      "Németország",
+      "Svájc",
+      "Kanada",
+      "Spanyolország",
+      "Tajvan",
+      "Hollandia",
+      "Dánia",
+      "Csehország",
+      "Belgium",
+      "Mexikó",
+      "Svédország",
+      "Magyarország",
+      "Lengyelország",
+      "Olaszország",
+      "Szlovákia",
+      "Ausztria",
+      "Írország",
+      "Ukrajna"
+    ],
+    "features": [
+      {
+        "cim": "Arrival Options",
+        "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+        "customer_version": "2026.44.1"
+      },
+      {
+        "cim": "Charger Network View",
+        "leiras": "Charger pins on the map now cluster at normal zoom levels, showing network coverage as you zoom out.",
+        "customer_version": "2026.44.1"
+      },
+      {
+        "cim": "FSD (Supervised) v14.3 Lite",
+        "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+        "customer_version": "2026.44.1"
+      },
+      {
+        "cim": "Full Self-Driving (Supervised)",
+        "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. \n\nYou and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. Full Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+        "customer_version": "2026.44.1"
+      },
+      {
+        "cim": "Security Improvements",
+        "leiras": "This update includes important security fixes and improvements.",
+        "customer_version": "2026.44.1"
+      },
+      {
+        "cim": "Speed Profiles",
+        "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+        "customer_version": "2026.44.1"
+      },
+      {
+        "cim": "Start Self-Driving from Park",
+        "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). You can enable Brake Confirm in Self-Driving > Brake Confirm.\n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+        "customer_version": "2026.44.1"
+      },
+      {
+        "cim": "UI Improvements",
+        "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+        "customer_version": "2026.44.1"
+      }
+    ],
+    "feature_cimek": [
+      "Arrival Options",
+      "Charger Network View",
+      "FSD (Supervised) v14.3 Lite",
+      "Full Self-Driving (Supervised)",
+      "Security Improvements",
+      "Speed Profiles",
+      "Start Self-Driving from Park",
+      "UI Improvements"
+    ]
+  },
+  "verziok": [
+    {
+      "version": "2026.39.100",
+      "datum": "2026-11-11",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 36,
+      "flotta_osszes": 3256,
+      "flotta_pct": 1.1,
+      "rollout": {
+        "teljes": 8,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "Hollandia",
+        "Csehország",
+        "Dánia",
+        "Belgium",
+        "Szlovákia",
+        "Finnország",
+        "Lithuania",
+        "Estonia",
+        "Slovenia"
+      ],
+      "features": [
+        {
+          "cim": "FSD (Supervised) Naming Update",
+          "leiras": "This change only updates the name of certain features and text in your vehicle, and does not change the way your features behave.",
+          "customer_version": "2026.39.100"
+        },
+        {
+          "cim": "Minor Fixes",
+          "leiras": "This release contains minor fixes and improvements",
+          "customer_version": "2026.39.100"
+        },
+        {
+          "cim": "Tesla Assisted Driving",
+          "leiras": "Under your supervision, Tesla Assisted Driving can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and stop at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent.  \n\nTesla Assisted Driving is enabled on your vehicle. To use the feature, first watch the tutorial and take the quiz, available in the Assisted Driving App or in Control > Assisted Driving. Then press the Start Assisted Driving button on the UI, or press the right scroll wheel button once. You can disable Tesla Assisted Driving in Assisted Driving Settings.",
+          "customer_version": "2026.39.100"
+        }
+      ],
+      "feature_cimek": [
+        "FSD (Supervised) Naming Update",
+        "Minor Fixes",
+        "Tesla Assisted Driving"
+      ]
+    },
+    {
+      "version": "2026.39.6",
+      "datum": "2026-10-29",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 42,
+      "flotta_osszes": 3256,
+      "flotta_pct": 1.3,
+      "rollout": {
+        "teljes": 1,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "Hollandia",
+        "Belgium",
+        "Csehország",
+        "Dánia",
+        "Szlovákia",
+        "Slovenia",
+        "Lithuania",
+        "Estonia"
+      ],
+      "features": [
+        {
+          "cim": "FSD (Supervised)",
+          "leiras": "Under your supervision, FSD (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and stop at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent.  \n\nFSD (Supervised) is enabled on your vehicle. To use the feature, first watch the tutorial and take the quiz, available in the new Self-Driving App or in Control > Self-Driving. Then press the Start FSD (Supervised) button on the UI, or press the right scroll wheel button once. You can disable FSD (Supervised) in Self-Driving Settings.",
+          "customer_version": "2026.39.6"
+        },
+        {
+          "cim": "Minor Fixes",
+          "leiras": "This release contains minor fixes and improvements",
+          "customer_version": "2026.39.6"
+        }
+      ],
+      "feature_cimek": [
+        "FSD (Supervised)",
+        "Minor Fixes"
+      ]
+    },
+    {
+      "version": "2026.38.6.1",
+      "datum": "2026-10-29",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 133,
+      "flotta_osszes": 3256,
+      "flotta_pct": 4.1,
+      "rollout": {
+        "teljes": 11,
+        "elérhető": 0,
+        "letöltés": 1,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "Ausztrália",
+        "Új-Zéland"
+      ],
+      "features": [
+        {
+          "cim": "Minor Fixes",
+          "leiras": "This release contains minor fixes and improvements",
+          "customer_version": "2026.38.6.1"
+        }
+      ],
+      "feature_cimek": [
+        "Minor Fixes"
+      ]
+    },
+    {
+      "version": "2026.38.6",
+      "datum": "2026-10-29",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 343,
+      "flotta_osszes": 3256,
+      "flotta_pct": 10.5,
+      "rollout": {
+        "teljes": 34,
+        "elérhető": 1,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Egyesült Királyság",
+        "Németország",
+        "Franciaország",
+        "Kanada",
+        "Dánia",
+        "Hollandia",
+        "Svájc",
+        "Ausztria",
+        "Olaszország",
+        "Lengyelország",
+        "Spanyolország",
+        "Belgium",
+        "Portugal",
+        "Csehország",
+        "Norvégia",
+        "Svédország",
+        "Magyarország",
+        "Tajvan",
+        "Ukrajna",
+        "Izrael",
+        "Greece",
+        "Írország",
+        "Szlovákia",
+        "Iceland",
+        "Malajzia",
+        "Törökország",
+        "Bulgaria",
+        "Ausztrália",
+        "Egyesült Arab Emírségek",
+        "Katar",
+        "Szingapúr",
+        "Hongkong",
+        "Slovenia",
+        "Thaiföld",
+        "Romania",
+        "Kolumbia",
+        "Lithuania",
+        "Fülöp-szigetek"
+      ],
+      "features": [
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "customer_version": "2026.38.6"
+        }
+      ],
+      "feature_cimek": [
+        "Security Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.5.13",
+      "datum": "2026-11-13",
+      "fsd": "HW4 14.3.13",
+      "fsd_hw3": null,
+      "fsd_hw4": "14.3.13",
+      "flotta_db": 615,
+      "flotta_osszes": 3256,
+      "flotta_pct": 18.9,
+      "rollout": {
+        "teljes": 46,
+        "elérhető": 1,
+        "letöltés": 2,
+        "telepítés": 1
+      },
+      "orszagok": [
+        "USA",
+        "Kanada",
+        "Puerto Rico",
+        "Mexikó"
+      ],
+      "features": [
+        {
+          "cim": "Automatic Collision Evasion",
+          "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "customer_version": "2026.38.5.13"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.13",
+          "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.38.5.13"
+        },
+        {
+          "cim": "Full Self-Driving (Supervised)",
+          "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "customer_version": "2026.38.5.13"
+        },
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "customer_version": "2026.38.5.13"
+        }
+      ],
+      "feature_cimek": [
+        "Automatic Collision Evasion",
+        "FSD (Supervised) v14.3.13",
+        "Full Self-Driving (Supervised)",
+        "Security Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.5.12",
+      "datum": "2026-11-04",
+      "fsd": "HW4 14.3.13",
+      "fsd_hw3": null,
+      "fsd_hw4": "14.3.13",
+      "flotta_db": 607,
+      "flotta_osszes": 3256,
+      "flotta_pct": 18.6,
+      "rollout": {
+        "teljes": 1,
+        "elérhető": 0,
+        "letöltés": 1,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Kanada",
+        "Mexikó",
+        "Puerto Rico"
+      ],
+      "features": [
+        {
+          "cim": "Automatic Collision Evasion",
+          "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "customer_version": "2026.38.5.12"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.13",
+          "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.38.5.12"
+        },
+        {
+          "cim": "Full Self-Driving (Supervised)",
+          "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "customer_version": "2026.38.5.12"
+        },
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "customer_version": "2026.38.5.12"
+        }
+      ],
+      "feature_cimek": [
+        "Automatic Collision Evasion",
+        "FSD (Supervised) v14.3.13",
+        "Full Self-Driving (Supervised)",
+        "Security Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.5.11",
+      "datum": "2026-10-24",
+      "fsd": "HW4 14.3.13 · HW3 14.3 Lite",
+      "fsd_hw3": "14.3 Lite",
+      "fsd_hw4": "14.3.13",
+      "flotta_db": 1027,
+      "flotta_osszes": 3256,
+      "flotta_pct": 31.5,
+      "rollout": {
+        "teljes": 10,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 1
+      },
+      "orszagok": [
+        "USA",
+        "Kanada",
+        "Mexikó",
+        "Puerto Rico",
+        "Ukrajna"
+      ],
+      "features": [
+        {
+          "cim": "Arrival Options",
+          "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "customer_version": "2026.38.5.11"
+        },
+        {
+          "cim": "Automatic Collision Evasion",
+          "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "customer_version": "2026.38.5.11"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3 Lite",
+          "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "customer_version": "2026.38.5.11"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.13",
+          "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.38.5.11"
+        },
+        {
+          "cim": "Full Self-Driving (Supervised)",
+          "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "customer_version": "2026.38.5.11"
+        },
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "customer_version": "2026.38.5.11"
+        },
+        {
+          "cim": "Speed Profiles",
+          "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "customer_version": "2026.38.5.11"
+        },
+        {
+          "cim": "Start Self-Driving from Park",
+          "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "customer_version": "2026.38.5.11"
+        },
+        {
+          "cim": "UI Improvements",
+          "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "customer_version": "2026.38.5.11"
+        }
+      ],
+      "feature_cimek": [
+        "Arrival Options",
+        "Automatic Collision Evasion",
+        "FSD (Supervised) v14.3 Lite",
+        "FSD (Supervised) v14.3.13",
+        "Full Self-Driving (Supervised)",
+        "Security Improvements",
+        "Speed Profiles",
+        "Start Self-Driving from Park",
+        "UI Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.5.10",
+      "datum": "2026-10-20",
+      "fsd": "HW4 14.3.13 · HW3 14.3 Lite",
+      "fsd_hw3": "14.3 Lite",
+      "fsd_hw4": "14.3.13",
+      "flotta_db": 93,
+      "flotta_osszes": 3256,
+      "flotta_pct": 2.9,
+      "rollout": {
+        "teljes": 0,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Kanada",
+        "Mexikó"
+      ],
+      "features": [
+        {
+          "cim": "Arrival Options",
+          "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "customer_version": "2026.38.5.10"
+        },
+        {
+          "cim": "Automatic Collision Evasion",
+          "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "customer_version": "2026.38.5.10"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3 Lite",
+          "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "customer_version": "2026.38.5.10"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.13",
+          "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.38.5.10"
+        },
+        {
+          "cim": "Full Self-Driving (Supervised)",
+          "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "customer_version": "2026.38.5.10"
+        },
+        {
+          "cim": "Speed Profiles",
+          "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "customer_version": "2026.38.5.10"
+        },
+        {
+          "cim": "Start Self-Driving from Park",
+          "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "customer_version": "2026.38.5.10"
+        },
+        {
+          "cim": "UI Improvements",
+          "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "customer_version": "2026.38.5.10"
+        }
+      ],
+      "feature_cimek": [
+        "Arrival Options",
+        "Automatic Collision Evasion",
+        "FSD (Supervised) v14.3 Lite",
+        "FSD (Supervised) v14.3.13",
+        "Full Self-Driving (Supervised)",
+        "Speed Profiles",
+        "Start Self-Driving from Park",
+        "UI Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.5.6",
+      "datum": "2026-10-24",
+      "fsd": "HW4 14.3.12",
+      "fsd_hw3": null,
+      "fsd_hw4": "14.3.12",
+      "flotta_db": 150,
+      "flotta_osszes": 3256,
+      "flotta_pct": 4.6,
+      "rollout": {
+        "teljes": 4,
+        "elérhető": 1,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "Ausztrália",
+        "Új-Zéland"
+      ],
+      "features": [
+        {
+          "cim": "Arrival Options",
+          "leiras": "- You can now select an arrival option such as Carpark, Indoor Carpark, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination. \n- Our reasoning model will assess the suitable options for your destination and pick an intuitive default. \n- The navigation pin will be adjusted based on the selected Arrival Option.",
+          "customer_version": "2026.38.5.6"
+        },
+        {
+          "cim": "Brake Confirm",
+          "leiras": "Brake Confirm for the Start Self-Driving button is now defaulted off. When disabled, Start Self-Driving will not require you to press and release the brake to confirm engagement. \n\nYou can enable Brake Confirm in Self-Driving > Brake Confirm.",
+          "customer_version": "2026.38.5.6"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.12 Down Under",
+          "leiras": "Full Self-Driving (Supervised) v14.3.12 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.38.5.6"
+        },
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "customer_version": "2026.38.5.6"
+        },
+        {
+          "cim": "Speed Profiles",
+          "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed. \n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph or km/h.\n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL.\n- Introduced new speed profile MAD MAX, which comes with higher speeds than HURRY.",
+          "customer_version": "2026.38.5.6"
+        },
+        {
+          "cim": "UI Improvements",
+          "leiras": "- You can now view your Self-Driving stats under Controls > Self-Driving. \n- Start Self-Driving with a tap of the touchscreen from Park, or any time during your drive. \n- Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "customer_version": "2026.38.5.6"
+        }
+      ],
+      "feature_cimek": [
+        "Arrival Options",
+        "Brake Confirm",
+        "FSD (Supervised) v14.3.12 Down Under",
+        "Security Improvements",
+        "Speed Profiles",
+        "UI Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.5.5",
+      "datum": "2026-10-21",
+      "fsd": "HW4 14.3.12",
+      "fsd_hw3": null,
+      "fsd_hw4": "14.3.12",
+      "flotta_db": 136,
+      "flotta_osszes": 3256,
+      "flotta_pct": 4.2,
+      "rollout": {
+        "teljes": 1,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "Ausztrália",
+        "Új-Zéland"
+      ],
+      "features": [
+        {
+          "cim": "Arrival Options",
+          "leiras": "- You can now select an arrival option such as Carpark, Indoor Carpark, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination. \n- Our reasoning model will assess the suitable options for your destination and pick an intuitive default. \n- The navigation pin will be adjusted based on the selected Arrival Option.",
+          "customer_version": "2026.38.5.5"
+        },
+        {
+          "cim": "Brake Confirm",
+          "leiras": "Brake Confirm for the Start Self-Driving button is now defaulted off. When disabled, Start Self-Driving will not require you to press and release the brake to confirm engagement. \n\nYou can enable Brake Confirm in Self-Driving > Brake Confirm.",
+          "customer_version": "2026.38.5.5"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.12 Down Under",
+          "leiras": "Full Self-Driving (Supervised) v14.3.12 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.38.5.5"
+        },
+        {
+          "cim": "Speed Profiles",
+          "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed. \n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph or km/h.\n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL.\n- Introduced new speed profile MAD MAX, which comes with higher speeds than HURRY.",
+          "customer_version": "2026.38.5.5"
+        },
+        {
+          "cim": "UI Improvements",
+          "leiras": "- You can now view your Self-Driving stats under Controls > Self-Driving. \n- Start Self-Driving with a tap of the touchscreen from Park, or any time during your drive. \n- Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "customer_version": "2026.38.5.5"
+        }
+      ],
+      "feature_cimek": [
+        "Arrival Options",
+        "Brake Confirm",
+        "FSD (Supervised) v14.3.12 Down Under",
+        "Speed Profiles",
+        "UI Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.5.1",
+      "datum": "2026-10-13",
+      "fsd": "HW4 14.3.12 · HW3 14.3 Lite",
+      "fsd_hw3": "14.3 Lite",
+      "fsd_hw4": "14.3.12",
+      "flotta_db": 1030,
+      "flotta_osszes": 3256,
+      "flotta_pct": 31.6,
+      "rollout": {
+        "teljes": 6,
+        "elérhető": 1,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Kanada",
+        "Mexikó",
+        "Ukrajna",
+        "Puerto Rico"
+      ],
+      "features": [
+        {
+          "cim": "Arrival Options",
+          "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "customer_version": "2026.38.5.1"
+        },
+        {
+          "cim": "Automatic Collision Evasion",
+          "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage in the following situations while you are driving manually:\n- Scenario 1: A frontal collision is imminent and braking alone may not avoid it.\n- Scenario 2: Your vehicle detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "customer_version": "2026.38.5.1"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3 Lite",
+          "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "customer_version": "2026.38.5.1"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.12",
+          "leiras": "Full Self-Driving (Supervised) v14.3.12 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.38.5.1"
+        },
+        {
+          "cim": "Full Self-Driving (Supervised)",
+          "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "customer_version": "2026.38.5.1"
+        },
+        {
+          "cim": "Minor Fixes",
+          "leiras": "This release contains minor fixes and improvements",
+          "customer_version": "2026.38.5.1"
+        },
+        {
+          "cim": "Speed Profiles",
+          "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "customer_version": "2026.38.5.1"
+        },
+        {
+          "cim": "Start Self-Driving from Park",
+          "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "customer_version": "2026.38.5.1"
+        },
+        {
+          "cim": "UI Improvements",
+          "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "customer_version": "2026.38.5.1"
+        }
+      ],
+      "feature_cimek": [
+        "Arrival Options",
+        "Automatic Collision Evasion",
+        "FSD (Supervised) v14.3 Lite",
+        "FSD (Supervised) v14.3.12",
+        "Full Self-Driving (Supervised)",
+        "Minor Fixes",
+        "Speed Profiles",
+        "Start Self-Driving from Park",
+        "UI Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.5",
+      "datum": "2026-10-10",
+      "fsd": "HW4 14.3.12 · HW3 14.3 Lite",
+      "fsd_hw3": "14.3 Lite",
+      "fsd_hw4": "14.3.12",
+      "flotta_db": 135,
+      "flotta_osszes": 3250,
+      "flotta_pct": 4.2,
+      "rollout": {
+        "teljes": 0,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Kanada",
+        "Mexikó",
+        "Puerto Rico"
+      ],
+      "features": [
+        {
+          "cim": "Arrival Options",
+          "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "customer_version": "2026.38.5"
+        },
+        {
+          "cim": "Automatic Collision Evasion",
+          "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage in the following situations while you are driving manually:\n- Scenario 1: A frontal collision is imminent and braking alone may not avoid it.\n- Scenario 2: Your vehicle detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "customer_version": "2026.38.5"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3 Lite",
+          "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "customer_version": "2026.38.5"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.12",
+          "leiras": "Full Self-Driving (Supervised) v14.3.12 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.38.5"
+        },
+        {
+          "cim": "Full Self-Driving (Supervised)",
+          "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "customer_version": "2026.38.5"
+        },
+        {
+          "cim": "Speed Profiles",
+          "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "customer_version": "2026.38.5"
+        },
+        {
+          "cim": "Start Self-Driving from Park",
+          "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "customer_version": "2026.38.5"
+        },
+        {
+          "cim": "UI Improvements",
+          "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "customer_version": "2026.38.5"
+        }
+      ],
+      "feature_cimek": [
+        "Arrival Options",
+        "Automatic Collision Evasion",
+        "FSD (Supervised) v14.3 Lite",
+        "FSD (Supervised) v14.3.12",
+        "Full Self-Driving (Supervised)",
+        "Speed Profiles",
+        "Start Self-Driving from Park",
+        "UI Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.4.5",
+      "datum": "2026-11-10",
+      "fsd": "HW4 14.3.13 · HW3 14.2 Lite",
+      "fsd_hw3": "14.2 Lite",
+      "fsd_hw4": "14.3.13",
+      "flotta_db": 4,
+      "flotta_osszes": 3256,
+      "flotta_pct": 0.1,
+      "rollout": {
+        "teljes": 0,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "Dél-Korea"
+      ],
+      "features": [
+        {
+          "cim": "FSD (Supervised) v14.2 Lite",
+          "leiras": "FSD (Supervised) v14.2 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced unparking and reversing capabilities.\n- Introduced Speed Profiles to further customize driving style preference.",
+          "customer_version": "2026.38.4.5"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.13",
+          "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.38.4.5"
+        },
+        {
+          "cim": "Speed Profiles",
+          "leiras": "FSD (Supervised) will determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Driver profile has a strong impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down will adjust the Speed Profile from SLOTH, CHILL, STANDARD, or HURRY.",
+          "customer_version": "2026.38.4.5"
+        },
+        {
+          "cim": "Start Self-Driving from Park",
+          "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "customer_version": "2026.38.4.5"
+        },
+        {
+          "cim": "UI Improvements",
+          "leiras": "Adjust settings like the Speed Profile directly from the Self-Driving visualization on the center display.",
+          "customer_version": "2026.38.4.5"
+        }
+      ],
+      "feature_cimek": [
+        "FSD (Supervised) v14.2 Lite",
+        "FSD (Supervised) v14.3.13",
+        "Speed Profiles",
+        "Start Self-Driving from Park",
+        "UI Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.3.2",
+      "datum": "2026-10-22",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 360,
+      "flotta_osszes": 3256,
+      "flotta_pct": 11.1,
+      "rollout": {
+        "teljes": 3,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Egyesült Királyság",
+        "Németország",
+        "Franciaország",
+        "Dánia",
+        "Svájc",
+        "Olaszország",
+        "Kanada",
+        "Hollandia",
+        "Ausztria",
+        "Lengyelország",
+        "Spanyolország",
+        "Norvégia",
+        "Belgium",
+        "Csehország",
+        "Portugal",
+        "Magyarország",
+        "Japán",
+        "Tajvan",
+        "Svédország",
+        "Dél-Korea",
+        "Greece",
+        "Új-Zéland",
+        "Izrael",
+        "Lithuania",
+        "Iceland",
+        "Egyesült Arab Emírségek",
+        "Bulgaria",
+        "Írország",
+        "Ausztrália",
+        "Slovenia",
+        "Hongkong",
+        "Finnország",
+        "Törökország",
+        "Katar",
+        "Malajzia",
+        "Fülöp-szigetek",
+        "Romania",
+        "Thaiföld",
+        "Kolumbia",
+        "Ukrajna",
+        "Szingapúr",
+        "Morocco",
+        "Szlovákia"
+      ],
+      "features": [
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "customer_version": "2026.38.3.2"
+        }
+      ],
+      "feature_cimek": [
+        "Security Improvements"
+      ]
+    },
+    {
+      "version": "2026.38.3.1",
+      "datum": "2026-10-08",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 327,
+      "flotta_osszes": 3256,
+      "flotta_pct": 10.0,
+      "rollout": {
+        "teljes": 2,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Egyesült Királyság",
+        "Németország",
+        "Franciaország",
+        "Svájc",
+        "Dánia",
+        "Olaszország",
+        "Kanada",
+        "Ausztria",
+        "Hollandia",
+        "Lengyelország",
+        "Spanyolország",
+        "Norvégia",
+        "Tajvan",
+        "Csehország",
+        "Belgium",
+        "Ukrajna",
+        "Magyarország",
+        "Lithuania",
+        "Japán",
+        "Iceland",
+        "Portugal",
+        "Egyesült Arab Emírségek",
+        "Új-Zéland",
+        "Bulgaria",
+        "Izrael",
+        "Svédország",
+        "Törökország",
+        "Hongkong",
+        "Thaiföld",
+        "Fülöp-szigetek",
+        "Szingapúr",
+        "Katar",
+        "Szlovákia",
+        "Malajzia",
+        "Slovenia",
+        "Morocco",
+        "Romania",
+        "Kolumbia",
+        "Írország"
+      ],
+      "features": [
+        {
+          "cim": "Emergency Drive Away",
+          "leiras": "Emergency Drive Away lets you shift into Drive while a Supercharger cable is still connected. Use it only in an emergency: driving away with the cable attached will damage your vehicle and the Supercharger, and you may be responsible for repair costs. When you activate this feature, short recordings from your vehicle's cameras are shared with Tesla.",
+          "customer_version": "2026.38.3.1"
+        },
+        {
+          "cim": "Halloween Mode",
+          "leiras": "Spread holiday fear year round with Halloween Mode. Put a Ghost Costume on your car visualization. Turn on Trick or Treat Mode to play spooky sounds and flicker the lights when visitors approach. Schedule a haunting light show, and turn your car into a chilling Photobooth!",
+          "customer_version": "2026.38.3.1"
+        },
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "customer_version": "2026.38.3.1"
+        },
+        {
+          "cim": "Set Arrival Energy",
+          "leiras": "Set your desired Arrival Energy for any trip from your phone. Open the location tab in the Tesla Mobile App, enter your destination, and tap Set Arrival Energy. Requires Mobile App v4.58.0 or later.",
+          "customer_version": "2026.38.3.1"
+        }
+      ],
+      "feature_cimek": [
+        "Emergency Drive Away",
+        "Halloween Mode",
+        "Security Improvements",
+        "Set Arrival Energy"
+      ]
+    },
+    {
+      "version": "2026.38.3",
+      "datum": "2026-10-06",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 7,
+      "flotta_osszes": 3250,
+      "flotta_pct": 0.2,
+      "rollout": {
+        "teljes": 1,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "Egyesült Királyság",
+        "Spanyolország",
+        "Németország",
+        "Tajvan",
+        "Norvégia",
+        "USA"
+      ],
+      "features": [
+        {
+          "cim": "Emergency Drive Away",
+          "leiras": "Emergency Drive Away lets you shift into Drive while a Supercharger cable is still connected. Use it only in an emergency: driving away with the cable attached will damage your vehicle and the Supercharger, and you may be responsible for repair costs. When you activate this feature, short recordings from your vehicle's cameras are shared with Tesla.",
+          "customer_version": "2026.38.3"
+        },
+        {
+          "cim": "Halloween Mode",
+          "leiras": "Spread holiday fear year round with Halloween Mode. Put a Ghost Costume on your car visualization. Turn on Trick or Treat Mode to play spooky sounds and flicker the lights when visitors approach. Schedule a haunting light show, and turn your car into a chilling Photobooth!",
+          "customer_version": "2026.38.3"
+        },
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "customer_version": "2026.38.3"
+        },
+        {
+          "cim": "Set Arrival Energy",
+          "leiras": "Set your desired Arrival Energy for any trip from your phone. Open the location tab in the Tesla Mobile App, enter your destination, and tap Set Arrival Energy. Requires Mobile App v4.58.0 or later.",
+          "customer_version": "2026.38.3"
+        }
+      ],
+      "feature_cimek": [
+        "Emergency Drive Away",
+        "Halloween Mode",
+        "Security Improvements",
+        "Set Arrival Energy"
+      ]
+    },
+    {
+      "version": "2026.38",
+      "datum": "2026-09-30",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 69,
+      "flotta_osszes": 3250,
+      "flotta_pct": 2.1,
+      "rollout": {
+        "teljes": 0,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Egyesült Királyság",
+        "Németország",
+        "Svájc",
+        "Hollandia",
+        "Olaszország",
+        "Csehország",
+        "Ausztria",
+        "Tajvan",
+        "Franciaország",
+        "Lengyelország",
+        "Belgium",
+        "Spanyolország",
+        "Izrael",
+        "Ukrajna",
+        "Dánia",
+        "Morocco",
+        "Kanada",
+        "Norvégia",
+        "Törökország"
+      ],
+      "features": [
+        {
+          "cim": "Dynamic Headlight Leveling",
+          "leiras": "Low beams will automatically adjust their aim based on driving conditions and nearby traffic to maximize your visibility while reducing glare for other road users.",
+          "customer_version": "2026.38"
+        },
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "customer_version": "2026.38"
+        },
+        {
+          "cim": "Supercharger Site Maps",
+          "leiras": "You can now see a detailed view of select Tesla Superchargers by tapping \"View Site Map.\" When navigating to a pilot location, the site layout and live occupancy (Available / Occupied / Down) will be displayed upon arrival.",
+          "customer_version": "2026.38"
+        },
+        {
+          "cim": "Visual Updates",
+          "leiras": "The center display now features higher quality images of your Tesla, and an enhanced park scene environment.",
+          "customer_version": "2026.38"
+        }
+      ],
+      "feature_cimek": [
+        "Dynamic Headlight Leveling",
+        "Security Improvements",
+        "Supercharger Site Maps",
+        "Visual Updates"
+      ]
+    },
+    {
+      "version": "2026.33.100",
+      "datum": "2026-10-06",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 42,
+      "flotta_osszes": 3256,
+      "flotta_pct": 1.3,
+      "rollout": {
+        "teljes": 0,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "Hollandia",
+        "Belgium",
+        "Dánia",
+        "Csehország",
+        "Lithuania",
+        "Szlovákia",
+        "Slovenia",
+        "Estonia"
+      ],
+      "features": [
+        {
+          "cim": "FSD (Supervised)",
+          "leiras": "Under your supervision, FSD (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and stop at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent.  \n\nFSD (Supervised) is enabled on your vehicle. To use the feature, first watch the tutorial and take the quiz, available in the new Self-Driving App or in Control > Self-Driving. Then press the Start FSD (Supervised) button on the UI, or press the right scroll wheel button once. You can disable FSD (Supervised) in Self-Driving Settings.",
+          "customer_version": "2026.33.100"
+        },
+        {
+          "cim": "Minor Fixes",
+          "leiras": "This release contains minor fixes and improvements",
+          "customer_version": "2026.33.100"
+        }
+      ],
+      "feature_cimek": [
+        "FSD (Supervised)",
+        "Minor Fixes"
+      ]
+    },
+    {
+      "version": "2026.33.5",
+      "datum": "2026-10-07",
+      "fsd": "HW4 14.3.11 · HW3 14.3 Lite",
+      "fsd_hw3": "14.3 Lite",
+      "fsd_hw4": "14.3.11",
+      "flotta_db": 101,
+      "flotta_osszes": 3250,
+      "flotta_pct": 3.1,
+      "rollout": {
+        "teljes": 2,
+        "elérhető": 0,
+        "letöltés": 1,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Kanada"
+      ],
+      "features": [
+        {
+          "cim": "Arrival Options",
+          "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "customer_version": "2026.33.5"
+        },
+        {
+          "cim": "Automatic Collision Evasion",
+          "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "customer_version": "2026.33.5"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3 Lite",
+          "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "customer_version": "2026.33.5"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3.11",
+          "leiras": "Full Self-Driving (Supervised) v14.3.11 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "customer_version": "2026.33.5"
+        },
+        {
+          "cim": "Full Self-Driving (Supervised)",
+          "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "customer_version": "2026.33.5"
+        },
+        {
+          "cim": "Speed Profiles",
+          "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "customer_version": "2026.33.5"
+        },
+        {
+          "cim": "Start Self-Driving from Park",
+          "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "customer_version": "2026.33.5"
+        },
+        {
+          "cim": "UI Improvements",
+          "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "customer_version": "2026.33.5"
+        }
+      ],
+      "feature_cimek": [
+        "Arrival Options",
+        "Automatic Collision Evasion",
+        "FSD (Supervised) v14.3 Lite",
+        "FSD (Supervised) v14.3.11",
+        "Full Self-Driving (Supervised)",
+        "Speed Profiles",
+        "Start Self-Driving from Park",
+        "UI Improvements"
+      ]
+    },
+    {
+      "version": "2026.32.300",
+      "datum": "2026-10-27",
+      "fsd": null,
+      "fsd_hw3": null,
+      "fsd_hw4": null,
+      "flotta_db": 0,
+      "flotta_osszes": 3256,
+      "flotta_pct": 0.0,
+      "rollout": {
+        "teljes": 0,
+        "elérhető": 0,
+        "letöltés": 0,
+        "telepítés": 0
+      },
+      "orszagok": [],
+      "features": [],
+      "feature_cimek": []
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+name: Tesla szoftverfrissítések (auto)
+
+on:
+  schedule:
+    # Óránként (percenként 0-kor). A Teslascope flotta-adatokat néhány óránként frissíti.
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: software-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Szoftververziók lekérése
+        run: python3 _tools/fetch_software.py --n 20 --out data/software.json
+
+      - name: Commit és push (ha változott)
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/software.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Nincs változás a software.json-ban — nincs commit."
+          else
+            git commit -m "chore: Tesla szoftververziók frissítése (automata)"
+            git push origin HEAD:main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Deploy elindítása (csak ha változott)
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

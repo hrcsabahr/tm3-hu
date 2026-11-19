@@ -28,6 +28,7 @@
         { href: 'pages/szervizek.html', label: 'Szervizek' },
         { href: 'pages/hibak.html', label: 'Hibák' },
         { href: 'pages/visszahivasok.html', label: 'Visszahívások' },
+        { href: 'pages/szoftver.html', label: 'Szoftver' },
         { href: 'pages/kalkulator.html', label: 'Degradáció' },
         { href: 'pages/tco.html', label: 'TCO' },
         { href: 'pages/okolabnyom.html', label: 'Ökolábnyom' },
