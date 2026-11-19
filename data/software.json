@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updated": "2026-11-19T18:09:18.000000Z",
+    "updated": "2026-11-19T19:18:01.000000Z",
     "forras": "Teslascope publikus API (teslascope.com/api/software)",
-    "megjegyzes": "Automatikusan frissül GitHub Actions cron-nal (óránként). A flotta-adatok (darab, %) a Teslascope közösségi flottájából származnak; az európai/magyar rollout ettől eltérhet."
+    "megjegyzes": "Automatikusan frissül GitHub Actions cron-nal (naponta). A flotta-adatok (darab, %) a Teslascope közösségi flottájából származnak; az európai/magyar rollout ettől eltérhet."
   },
   "latest": {
     "version": "2026.44.1",
@@ -10,9 +10,9 @@
     "fsd": "HW3 14.3 Lite",
     "fsd_hw3": "14.3 Lite",
     "fsd_hw4": null,
-    "flotta_db": 141,
+    "flotta_db": 142,
     "flotta_osszes": 3258,
-    "flotta_pct": 4.3,
+    "flotta_pct": 4.4,
     "rollout": {
       "teljes": 77,
       "elérhető": 6,

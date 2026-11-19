@@ -197,7 +197,7 @@ def main() -> int:
                         or dt.datetime.now(dt.timezone.utc).isoformat()),
             "forras": "Teslascope publikus API (teslascope.com/api/software)",
             "megjegyzes": (
-                "Automatikusan frissül GitHub Actions cron-nal (óránként). "
+                "Automatikusan frissül GitHub Actions cron-nal (naponta). "
                 "A flotta-adatok (darab, %) a Teslascope közösségi flottájából származnak; "
                 "az európai/magyar rollout ettől eltérhet."
             ),

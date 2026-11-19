@@ -2,8 +2,9 @@ name: Tesla szoftverfrissítések (auto)
 
 on:
   schedule:
-    # Óránként (percenként 0-kor). A Teslascope flotta-adatokat néhány óránként frissíti.
-    - cron: '0 * * * *'
+    # Naponta egyszer, 06:00 UTC-kor (07:00 magyar idő). A Teslascope flotta-adatokat
+    # naponta néhányszor frissíti, így a napi egy lekérdezés bőven elég.
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 permissions:
