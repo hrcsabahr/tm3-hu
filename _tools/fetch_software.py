@@ -23,6 +23,8 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import json
+import os
+import re
 import sys
 import time
 import urllib.request
@@ -30,6 +32,32 @@ import urllib.error
 
 BASE = "https://teslascope.com/api/software"
 UA = "tm3.hu software updater (+https://www.tm3.hu)"
+
+_HERE = os.path.dirname(os.path.abspath(__file__))
+HU_FILE = os.path.join(_HERE, "software_hu.json")
+
+
+def _norm(s: str | None) -> str:
+    """Whitespace-normalizálás a magyar fordítások kulcs-illesztéséhez
+    (a \xa0 nem törő szóköz és a sortörések is egységes szóközzé válnak)."""
+    return re.sub(r"[\s\u00a0]+", " ", s or "").strip()
+
+
+def load_hu() -> dict:
+    """Betölti a magyar fordításokat (cimek + leirasok). Ha a fájl hiányzik,
+    üres mapot ad vissza — ilyenkor angol marad a szöveg, de a script nem száll el."""
+    try:
+        with open(HU_FILE, encoding="utf-8") as fp:
+            data = json.load(fp)
+    except (OSError, json.JSONDecodeError):
+        return {"cimek": {}, "leirasok": {}}
+    leirasok = {}
+    for en, hu in (data.get("leirasok") or {}).items():
+        leirasok[_norm(en)] = hu
+    return {"cimek": data.get("cimek") or {}, "leirasok": leirasok}
+
+
+_HU = load_hu()
 
 
 def get(url: str, tries: int = 3) -> dict:
@@ -96,9 +124,15 @@ def country_names(codes) -> list:
 def build_entry(r: dict) -> dict:
     feats = []
     for f in (r.get("features") or []):
+        cim = (f.get("title") or "").strip()
+        leiras = (f.get("description") or "").strip()
+        cim_hu = _HU["cimek"].get(cim)
+        leiras_hu = _HU["leirasok"].get(_norm(leiras))
         feats.append({
-            "cim": (f.get("title") or "").strip(),
-            "leiras": (f.get("description") or "").strip(),
+            "cim": cim,
+            "leiras": leiras,
+            "cim_hu": cim_hu,
+            "leiras_hu": leiras_hu,
             "customer_version": f.get("customer_version"),
         })
     total = r.get("totalCount") or 0
@@ -121,7 +155,7 @@ def build_entry(r: dict) -> dict:
         },
         "orszagok": country_names(r.get("countries")),
         "features": feats,
-        "feature_cimek": [f["cim"] for f in feats if f["cim"]],
+        "feature_cimek": [f["cim_hu"] or f["cim"] for f in feats if f["cim"]],
     }
 
 

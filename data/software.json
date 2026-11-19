@@ -46,53 +46,69 @@
       {
         "cim": "Arrival Options",
         "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+        "cim_hu": "Érkezési opciók",
+        "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.",
         "customer_version": "2026.44.1"
       },
       {
         "cim": "Charger Network View",
         "leiras": "Charger pins on the map now cluster at normal zoom levels, showing network coverage as you zoom out.",
+        "cim_hu": "Töltőhálózat nézet",
+        "leiras_hu": "A töltőpont-jelölők a térképen normál nagyításnál mostantól csoportosulnak, így kifelé nagyítva látható a hálózat lefedettsége.",
         "customer_version": "2026.44.1"
       },
       {
         "cim": "FSD (Supervised) v14.3 Lite",
         "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+        "cim_hu": "FSD (Felügyelt) v14.3 Lite",
+        "leiras_hu": "Az FSD (Felügyelt) v14.3 Lite újdonságai:\n- A HW4 V14 intelligenciáját átültettük a HW3-ba. Így a HW3 közvetlenül, a HW4 V14-et útmutatóként használva tanulja meg a helyzetek kezelését. Ez a folyamat felszabadítja a HW4-hez készült fejlesztéseket — köztük a megerősítéses tanulást (RL) és az offline modelleket — a HW3 számára.\n- Javult a proaktív és reaktív reagálókészség a helyzetek széles körében: navigációkezelés, sávváltás és elágazások, gyalogos-interakciók, jelzőlámpák és beváltós (cut-in) szituációk.\n- Javult az általános komfort a megszokott helyzetekben: kevesebb téves lassítás, simább kormányzás és egyenletesebb sávközépen tartás.\n- Új parkolási, kiparkolási és tolatási képességek.\n- Hozzáadtuk az érkezési opciókat, hogy kiválaszd, hol húzódjon félre vagy parkoljon az FSD: parkolóban, az utcán vagy kocsifelhajtón.\n- A sebességprofilok mostantól mindig elérhetők, hogy tovább finomíthasd a vezetési stílust.",
         "customer_version": "2026.44.1"
       },
       {
         "cim": "Full Self-Driving (Supervised)",
         "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. \n\nYou and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. Full Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+        "cim_hu": "FSD (Felügyelt)",
+        "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
         "customer_version": "2026.44.1"
       },
       {
         "cim": "Security Improvements",
         "leiras": "This update includes important security fixes and improvements.",
+        "cim_hu": "Biztonsági fejlesztések",
+        "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
         "customer_version": "2026.44.1"
       },
       {
         "cim": "Speed Profiles",
         "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+        "cim_hu": "Sebességprofilok",
+        "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph/km/h-ban.",
         "customer_version": "2026.44.1"
       },
       {
         "cim": "Start Self-Driving from Park",
         "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). You can enable Brake Confirm in Self-Driving > Brake Confirm.\n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+        "cim_hu": "Önvezetés indítása parkoló állapotból",
+        "leiras_hu": "A gomb akkor jelenik meg a képernyőn, ha a vezetőre vonatkozó feltételek teljesülnek. A feltételek (többek között):\n- A vezető a vezetőülésben ül\n- A vezető be van kötve\n- Az utastéri kamera látóterét semmi nem takarja\n\nA Fék-visszaigazolás megköveteli, hogy a vezető megnyomja és elengedje a fékpedált, mielőtt az FSD (Felügyelt) aktiválható. Ha a Fék-visszaigazolás ki van kapcsolva, a gomb megnyomásával az önvezetés fékezhet és aktiválhatja az FSD-t (Felügyelt). A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.\n\nEz a funkció nem teszi önvezetővé az autót, és folyamatosan figyelned kell, készen arra, hogy bármikor átvedd az irányítást. Csak a jármű vezetésére jogosult, érvényes jogosítvánnyal rendelkező személy foglalhatja el a vezetőülést, amíg a jármű nincs Színház vagy Játéktermi módban.",
         "customer_version": "2026.44.1"
       },
       {
         "cim": "UI Improvements",
         "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+        "cim_hu": "Kezelőfelület-fejlesztések",
+        "leiras_hu": "Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
         "customer_version": "2026.44.1"
       }
     ],
     "feature_cimek": [
-      "Arrival Options",
-      "Charger Network View",
-      "FSD (Supervised) v14.3 Lite",
-      "Full Self-Driving (Supervised)",
-      "Security Improvements",
-      "Speed Profiles",
-      "Start Self-Driving from Park",
-      "UI Improvements"
+      "Érkezési opciók",
+      "Töltőhálózat nézet",
+      "FSD (Felügyelt) v14.3 Lite",
+      "FSD (Felügyelt)",
+      "Biztonsági fejlesztések",
+      "Sebességprofilok",
+      "Önvezetés indítása parkoló állapotból",
+      "Kezelőfelület-fejlesztések"
     ]
   },
   "verziok": [
@@ -126,23 +142,29 @@
         {
           "cim": "FSD (Supervised) Naming Update",
           "leiras": "This change only updates the name of certain features and text in your vehicle, and does not change the way your features behave.",
+          "cim_hu": "FSD (Felügyelt) elnevezés-frissítés",
+          "leiras_hu": "Ez a változás csak bizonyos funkciók és szövegek elnevezését frissíti az autódban, a funkciók működését nem változtatja meg.",
           "customer_version": "2026.39.100"
         },
         {
           "cim": "Minor Fixes",
           "leiras": "This release contains minor fixes and improvements",
+          "cim_hu": "Kisebb javítások",
+          "leiras_hu": "Ez a kiadás kisebb javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.39.100"
         },
         {
           "cim": "Tesla Assisted Driving",
           "leiras": "Under your supervision, Tesla Assisted Driving can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and stop at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent.  \n\nTesla Assisted Driving is enabled on your vehicle. To use the feature, first watch the tutorial and take the quiz, available in the Assisted Driving App or in Control > Assisted Driving. Then press the Start Assisted Driving button on the UI, or press the right scroll wheel button once. You can disable Tesla Assisted Driving in Assisted Driving Settings.",
+          "cim_hu": "Tesla Asszisztált Vezetés",
+          "leiras_hu": "A Tesla Asszisztált Vezetés a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és megáll a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. A Tesla Asszisztált Vezetés engedélyezve van a járműveden. A használathoz először nézd meg az oktatóanyagot és töltsd ki a kvízt (az Asszisztált Vezetés alkalmazásban vagy a Vezérlés > Asszisztált Vezetés menüben). Ezután nyomd meg az Asszisztált Vezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. A Tesla Asszisztált Vezetést az Asszisztált Vezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.39.100"
         }
       ],
       "feature_cimek": [
-        "FSD (Supervised) Naming Update",
-        "Minor Fixes",
-        "Tesla Assisted Driving"
+        "FSD (Felügyelt) elnevezés-frissítés",
+        "Kisebb javítások",
+        "Tesla Asszisztált Vezetés"
       ]
     },
     {
@@ -174,17 +196,21 @@
         {
           "cim": "FSD (Supervised)",
           "leiras": "Under your supervision, FSD (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and stop at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent.  \n\nFSD (Supervised) is enabled on your vehicle. To use the feature, first watch the tutorial and take the quiz, available in the new Self-Driving App or in Control > Self-Driving. Then press the Start FSD (Supervised) button on the UI, or press the right scroll wheel button once. You can disable FSD (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és megáll a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz először nézd meg az oktatóanyagot és töltsd ki a kvízt (az új Önvezetés alkalmazásban vagy a Vezérlés > Önvezetés menüben). Ezután nyomd meg az FSD (Felügyelt) indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.39.6"
         },
         {
           "cim": "Minor Fixes",
           "leiras": "This release contains minor fixes and improvements",
+          "cim_hu": "Kisebb javítások",
+          "leiras_hu": "Ez a kiadás kisebb javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.39.6"
         }
       ],
       "feature_cimek": [
-        "FSD (Supervised)",
-        "Minor Fixes"
+        "FSD (Felügyelt)",
+        "Kisebb javítások"
       ]
     },
     {
@@ -210,11 +236,13 @@
         {
           "cim": "Minor Fixes",
           "leiras": "This release contains minor fixes and improvements",
+          "cim_hu": "Kisebb javítások",
+          "leiras_hu": "Ez a kiadás kisebb javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.6.1"
         }
       ],
       "feature_cimek": [
-        "Minor Fixes"
+        "Kisebb javítások"
       ]
     },
     {
@@ -277,11 +305,13 @@
         {
           "cim": "Security Improvements",
           "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.6"
         }
       ],
       "feature_cimek": [
-        "Security Improvements"
+        "Biztonsági fejlesztések"
       ]
     },
     {
@@ -309,29 +339,37 @@
         {
           "cim": "Automatic Collision Evasion",
           "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "cim_hu": "Automatikus ütközés-elkerülés",
+          "leiras_hu": "Az Automatikus ütközés-elkerülés aktiválja az FSD-t (Felügyelt), hogy megpróbálja biztonságban tartani az autót, majd folytassa a vezetést. Akkor kapcsol be, ha kézi vezetés közben érzékeli, hogy nem figyelsz kellően az útra (például a hátsó ülés felé nyúlsz), és hogy az FSD (Felügyelt) véletlenül kikapcsolódhatott. Több részletért lásd a használati útmutatót.",
           "customer_version": "2026.38.5.13"
         },
         {
           "cim": "FSD (Supervised) v14.3.13",
           "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.13",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.13 újdonságai:\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Egységesítettük a modellt az Actually Smart Summon, az FSD és a Robotaxi között a megbízhatóbb viselkedésért.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\n- A parkolási opciók mostantól megjelennek a térképen, amikor megérkezel a célállomásra.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.38.5.13"
         },
         {
           "cim": "Full Self-Driving (Supervised)",
           "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.38.5.13"
         },
         {
           "cim": "Security Improvements",
           "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.5.13"
         }
       ],
       "feature_cimek": [
-        "Automatic Collision Evasion",
-        "FSD (Supervised) v14.3.13",
-        "Full Self-Driving (Supervised)",
-        "Security Improvements"
+        "Automatikus ütközés-elkerülés",
+        "FSD (Felügyelt) v14.3.13",
+        "FSD (Felügyelt)",
+        "Biztonsági fejlesztések"
       ]
     },
     {
@@ -359,29 +397,37 @@
         {
           "cim": "Automatic Collision Evasion",
           "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "cim_hu": "Automatikus ütközés-elkerülés",
+          "leiras_hu": "Az Automatikus ütközés-elkerülés aktiválja az FSD-t (Felügyelt), hogy megpróbálja biztonságban tartani az autót, majd folytassa a vezetést. Akkor kapcsol be, ha kézi vezetés közben érzékeli, hogy nem figyelsz kellően az útra (például a hátsó ülés felé nyúlsz), és hogy az FSD (Felügyelt) véletlenül kikapcsolódhatott. Több részletért lásd a használati útmutatót.",
           "customer_version": "2026.38.5.12"
         },
         {
           "cim": "FSD (Supervised) v14.3.13",
           "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.13",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.13 újdonságai:\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Egységesítettük a modellt az Actually Smart Summon, az FSD és a Robotaxi között a megbízhatóbb viselkedésért.\n- Az Actually Smart Summon maximális sebessége 8 mph-ra (13 km/h) nőtt.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\n- A parkolási opciók mostantól megjelennek a térképen, amikor megérkezel a célállomásra.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.38.5.12"
         },
         {
           "cim": "Full Self-Driving (Supervised)",
           "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.38.5.12"
         },
         {
           "cim": "Security Improvements",
           "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.5.12"
         }
       ],
       "feature_cimek": [
-        "Automatic Collision Evasion",
-        "FSD (Supervised) v14.3.13",
-        "Full Self-Driving (Supervised)",
-        "Security Improvements"
+        "Automatikus ütközés-elkerülés",
+        "FSD (Felügyelt) v14.3.13",
+        "FSD (Felügyelt)",
+        "Biztonsági fejlesztések"
       ]
     },
     {
@@ -410,59 +456,77 @@
         {
           "cim": "Arrival Options",
           "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "cim_hu": "Érkezési opciók",
+          "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.",
           "customer_version": "2026.38.5.11"
         },
         {
           "cim": "Automatic Collision Evasion",
           "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "cim_hu": "Automatikus ütközés-elkerülés",
+          "leiras_hu": "Az Automatikus ütközés-elkerülés aktiválja az FSD-t (Felügyelt), hogy megpróbálja biztonságban tartani az autót, majd folytassa a vezetést. Akkor kapcsol be, ha kézi vezetés közben érzékeli, hogy nem figyelsz kellően az útra (például a hátsó ülés felé nyúlsz), és hogy az FSD (Felügyelt) véletlenül kikapcsolódhatott. Több részletért lásd a használati útmutatót.",
           "customer_version": "2026.38.5.11"
         },
         {
           "cim": "FSD (Supervised) v14.3 Lite",
           "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "cim_hu": "FSD (Felügyelt) v14.3 Lite",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3 Lite újdonságai:\n- A HW4 V14 intelligenciáját átültettük a HW3-ba. Így a HW3 közvetlenül, a HW4 V14-et útmutatóként használva tanulja meg a helyzetek kezelését. Ez a folyamat felszabadítja a HW4-hez készült fejlesztéseket — köztük a megerősítéses tanulást (RL) és az offline modelleket — a HW3 számára.\n- Javult a proaktív és reaktív reagálókészség a helyzetek széles körében: navigációkezelés, sávváltás és elágazások, gyalogos-interakciók, jelzőlámpák és beváltós (cut-in) szituációk.\n- Javult az általános komfort a megszokott helyzetekben: kevesebb téves lassítás, simább kormányzás és egyenletesebb sávközépen tartás.\n- Új parkolási, kiparkolási és tolatási képességek.\n- Hozzáadtuk az érkezési opciókat, hogy kiválaszd, hol húzódjon félre vagy parkoljon az FSD: parkolóban, az utcán vagy kocsifelhajtón.\n- A sebességprofilok mostantól mindig elérhetők, hogy tovább finomíthasd a vezetési stílust.",
           "customer_version": "2026.38.5.11"
         },
         {
           "cim": "FSD (Supervised) v14.3.13",
           "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.13",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.13 újdonságai:\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Egységesítettük a modellt az Actually Smart Summon, az FSD és a Robotaxi között a megbízhatóbb viselkedésért.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\n- A parkolási opciók mostantól megjelennek a térképen, amikor megérkezel a célállomásra.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.38.5.11"
         },
         {
           "cim": "Full Self-Driving (Supervised)",
           "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.38.5.11"
         },
         {
           "cim": "Security Improvements",
           "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.5.11"
         },
         {
           "cim": "Speed Profiles",
           "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "cim_hu": "Sebességprofilok",
+          "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph/km/h-ban.",
           "customer_version": "2026.38.5.11"
         },
         {
           "cim": "Start Self-Driving from Park",
           "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "cim_hu": "Önvezetés indítása parkoló állapotból",
+          "leiras_hu": "A gomb akkor jelenik meg a képernyőn, ha a vezetőre vonatkozó feltételek teljesülnek. A feltételek (többek között):\n- A vezető a vezetőülésben ül\n- A vezető be van kötve\n- Az utastéri kamera látóterét semmi nem takarja\n\nA Fék-visszaigazolás megköveteli, hogy a vezető megnyomja és elengedje a fékpedált, mielőtt az FSD (Felügyelt) aktiválható. Ha a Fék-visszaigazolás ki van kapcsolva, a gomb megnyomásával az önvezetés fékezhet és aktiválhatja az FSD-t (Felügyelt). Ha a vezetőfelismerés feltételei nem teljesülnek, vagy az FSD (Felügyelt) nem érzékeli a vezetőt, meg kell nyomnod és el kell engedned a fékpedált a megerősítéshez. A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.\n\nEz a funkció nem teszi önvezetővé az autót, és folyamatosan figyelned kell, készen arra, hogy bármikor átvedd az irányítást. Csak a jármű vezetésére jogosult, érvényes jogosítvánnyal rendelkező személy foglalhatja el a vezetőülést, amíg a jármű nincs Színház vagy Játéktermi módban.",
           "customer_version": "2026.38.5.11"
         },
         {
           "cim": "UI Improvements",
           "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "cim_hu": "Kezelőfelület-fejlesztések",
+          "leiras_hu": "Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
           "customer_version": "2026.38.5.11"
         }
       ],
       "feature_cimek": [
-        "Arrival Options",
-        "Automatic Collision Evasion",
-        "FSD (Supervised) v14.3 Lite",
-        "FSD (Supervised) v14.3.13",
-        "Full Self-Driving (Supervised)",
-        "Security Improvements",
-        "Speed Profiles",
-        "Start Self-Driving from Park",
-        "UI Improvements"
+        "Érkezési opciók",
+        "Automatikus ütközés-elkerülés",
+        "FSD (Felügyelt) v14.3 Lite",
+        "FSD (Felügyelt) v14.3.13",
+        "FSD (Felügyelt)",
+        "Biztonsági fejlesztések",
+        "Sebességprofilok",
+        "Önvezetés indítása parkoló állapotból",
+        "Kezelőfelület-fejlesztések"
       ]
     },
     {
@@ -489,53 +553,69 @@
         {
           "cim": "Arrival Options",
           "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "cim_hu": "Érkezési opciók",
+          "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.",
           "customer_version": "2026.38.5.10"
         },
         {
           "cim": "Automatic Collision Evasion",
           "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "cim_hu": "Automatikus ütközés-elkerülés",
+          "leiras_hu": "Az Automatikus ütközés-elkerülés aktiválja az FSD-t (Felügyelt), hogy megpróbálja biztonságban tartani az autót, majd folytassa a vezetést. Akkor kapcsol be, ha kézi vezetés közben érzékeli, hogy nem figyelsz kellően az útra (például a hátsó ülés felé nyúlsz), és hogy az FSD (Felügyelt) véletlenül kikapcsolódhatott. Több részletért lásd a használati útmutatót.",
           "customer_version": "2026.38.5.10"
         },
         {
           "cim": "FSD (Supervised) v14.3 Lite",
           "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "cim_hu": "FSD (Felügyelt) v14.3 Lite",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3 Lite újdonságai:\n- A HW4 V14 intelligenciáját átültettük a HW3-ba. Így a HW3 közvetlenül, a HW4 V14-et útmutatóként használva tanulja meg a helyzetek kezelését. Ez a folyamat felszabadítja a HW4-hez készült fejlesztéseket — köztük a megerősítéses tanulást (RL) és az offline modelleket — a HW3 számára.\n- Javult a proaktív és reaktív reagálókészség a helyzetek széles körében: navigációkezelés, sávváltás és elágazások, gyalogos-interakciók, jelzőlámpák és beváltós (cut-in) szituációk.\n- Javult az általános komfort a megszokott helyzetekben: kevesebb téves lassítás, simább kormányzás és egyenletesebb sávközépen tartás.\n- Új parkolási, kiparkolási és tolatási képességek.\n- Hozzáadtuk az érkezési opciókat, hogy kiválaszd, hol húzódjon félre vagy parkoljon az FSD: parkolóban, az utcán vagy kocsifelhajtón.\n- A sebességprofilok mostantól mindig elérhetők, hogy tovább finomíthasd a vezetési stílust.",
           "customer_version": "2026.38.5.10"
         },
         {
           "cim": "FSD (Supervised) v14.3.13",
           "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.13",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.13 újdonságai:\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Egységesítettük a modellt az Actually Smart Summon, az FSD és a Robotaxi között a megbízhatóbb viselkedésért.\n- Az Actually Smart Summon maximális sebessége 8 mph-ra (13 km/h) nőtt.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\n- A parkolási opciók mostantól megjelennek a térképen, amikor megérkezel a célállomásra.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.38.5.10"
         },
         {
           "cim": "Full Self-Driving (Supervised)",
           "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.38.5.10"
         },
         {
           "cim": "Speed Profiles",
           "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "cim_hu": "Sebességprofilok",
+          "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph/km/h-ban.",
           "customer_version": "2026.38.5.10"
         },
         {
           "cim": "Start Self-Driving from Park",
           "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "cim_hu": "Önvezetés indítása parkoló állapotból",
+          "leiras_hu": "A gomb akkor jelenik meg a képernyőn, ha a vezetőre vonatkozó feltételek teljesülnek. A feltételek (többek között):\n- A vezető a vezetőülésben ül\n- A vezető be van kötve\n- Az utastéri kamera látóterét semmi nem takarja\n\nA Fék-visszaigazolás megköveteli, hogy a vezető megnyomja és elengedje a fékpedált, mielőtt az FSD (Felügyelt) aktiválható. Ha a Fék-visszaigazolás ki van kapcsolva, a gomb megnyomásával az önvezetés fékezhet és aktiválhatja az FSD-t (Felügyelt). Ha a vezetőfelismerés feltételei nem teljesülnek, vagy az FSD (Felügyelt) nem érzékeli a vezetőt, meg kell nyomnod és el kell engedned a fékpedált a megerősítéshez. A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.\n\nEz a funkció nem teszi önvezetővé az autót, és folyamatosan figyelned kell, készen arra, hogy bármikor átvedd az irányítást. Csak a jármű vezetésére jogosult, érvényes jogosítvánnyal rendelkező személy foglalhatja el a vezetőülést, amíg a jármű nincs Színház vagy Játéktermi módban.",
           "customer_version": "2026.38.5.10"
         },
         {
           "cim": "UI Improvements",
           "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "cim_hu": "Kezelőfelület-fejlesztések",
+          "leiras_hu": "Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
           "customer_version": "2026.38.5.10"
         }
       ],
       "feature_cimek": [
-        "Arrival Options",
-        "Automatic Collision Evasion",
-        "FSD (Supervised) v14.3 Lite",
-        "FSD (Supervised) v14.3.13",
-        "Full Self-Driving (Supervised)",
-        "Speed Profiles",
-        "Start Self-Driving from Park",
-        "UI Improvements"
+        "Érkezési opciók",
+        "Automatikus ütközés-elkerülés",
+        "FSD (Felügyelt) v14.3 Lite",
+        "FSD (Felügyelt) v14.3.13",
+        "FSD (Felügyelt)",
+        "Sebességprofilok",
+        "Önvezetés indítása parkoló állapotból",
+        "Kezelőfelület-fejlesztések"
       ]
     },
     {
@@ -561,41 +641,53 @@
         {
           "cim": "Arrival Options",
           "leiras": "- You can now select an arrival option such as Carpark, Indoor Carpark, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination. \n- Our reasoning model will assess the suitable options for your destination and pick an intuitive default. \n- The navigation pin will be adjusted based on the selected Arrival Option.",
+          "cim_hu": "Érkezési opciók",
+          "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, fedett parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.\n- A gondolkodó (reasoning) modellünk felméri a célállomásodhoz illő opciókat, és intuitív alapértelmezést választ.\n- A navigációs jelölő a kiválasztott érkezési opcióhoz igazodik.",
           "customer_version": "2026.38.5.6"
         },
         {
           "cim": "Brake Confirm",
           "leiras": "Brake Confirm for the Start Self-Driving button is now defaulted off. When disabled, Start Self-Driving will not require you to press and release the brake to confirm engagement. \n\nYou can enable Brake Confirm in Self-Driving > Brake Confirm.",
+          "cim_hu": "Fék-visszaigazolás",
+          "leiras_hu": "Az Önvezetés indítása gomb Fék-visszaigazolása mostantól alapból ki van kapcsolva. Kikapcsolt állapotban az Önvezetés indításához nem kell megnyomnod és elengedned a féket a bekapcsolás megerősítéséhez. A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.",
           "customer_version": "2026.38.5.6"
         },
         {
           "cim": "FSD (Supervised) v14.3.12 Down Under",
           "leiras": "Full Self-Driving (Supervised) v14.3.12 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.12 (Ausztrália/Új-Zéland)",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.12 újdonságai (Ausztrália/Új-Zéland):\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\n- A parkolási opciók mostantól megjelennek a térképen, amikor megérkezel a célállomásra.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.38.5.6"
         },
         {
           "cim": "Security Improvements",
           "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.5.6"
         },
         {
           "cim": "Speed Profiles",
           "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed. \n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph or km/h.\n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL.\n- Introduced new speed profile MAD MAX, which comes with higher speeds than HURRY.",
+          "cim_hu": "Sebességprofilok",
+          "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph-ban vagy km/h-ban.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- Új MAD MAX sebességprofil: nagyobb sebességek, mint a HURRY.",
           "customer_version": "2026.38.5.6"
         },
         {
           "cim": "UI Improvements",
           "leiras": "- You can now view your Self-Driving stats under Controls > Self-Driving. \n- Start Self-Driving with a tap of the touchscreen from Park, or any time during your drive. \n- Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "cim_hu": "Kezelőfelület-fejlesztések",
+          "leiras_hu": "Mostantól megtekintheted az önvezetési statisztikáidat a Vezérlés > Önvezetés menüben.\n- Indítsd el az önvezetést egyetlen érintéssel a képernyőn parkoló állapotból, vagy bármikor vezetés közben.\n- Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
           "customer_version": "2026.38.5.6"
         }
       ],
       "feature_cimek": [
-        "Arrival Options",
-        "Brake Confirm",
-        "FSD (Supervised) v14.3.12 Down Under",
-        "Security Improvements",
-        "Speed Profiles",
-        "UI Improvements"
+        "Érkezési opciók",
+        "Fék-visszaigazolás",
+        "FSD (Felügyelt) v14.3.12 (Ausztrália/Új-Zéland)",
+        "Biztonsági fejlesztések",
+        "Sebességprofilok",
+        "Kezelőfelület-fejlesztések"
       ]
     },
     {
@@ -621,35 +713,45 @@
         {
           "cim": "Arrival Options",
           "leiras": "- You can now select an arrival option such as Carpark, Indoor Carpark, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination. \n- Our reasoning model will assess the suitable options for your destination and pick an intuitive default. \n- The navigation pin will be adjusted based on the selected Arrival Option.",
+          "cim_hu": "Érkezési opciók",
+          "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, fedett parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.\n- A gondolkodó (reasoning) modellünk felméri a célállomásodhoz illő opciókat, és intuitív alapértelmezést választ.\n- A navigációs jelölő a kiválasztott érkezési opcióhoz igazodik.",
           "customer_version": "2026.38.5.5"
         },
         {
           "cim": "Brake Confirm",
           "leiras": "Brake Confirm for the Start Self-Driving button is now defaulted off. When disabled, Start Self-Driving will not require you to press and release the brake to confirm engagement. \n\nYou can enable Brake Confirm in Self-Driving > Brake Confirm.",
+          "cim_hu": "Fék-visszaigazolás",
+          "leiras_hu": "Az Önvezetés indítása gomb Fék-visszaigazolása mostantól alapból ki van kapcsolva. Kikapcsolt állapotban az Önvezetés indításához nem kell megnyomnod és elengedned a féket a bekapcsolás megerősítéséhez. A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.",
           "customer_version": "2026.38.5.5"
         },
         {
           "cim": "FSD (Supervised) v14.3.12 Down Under",
           "leiras": "Full Self-Driving (Supervised) v14.3.12 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.12 (Ausztrália/Új-Zéland)",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.12 újdonságai (Ausztrália/Új-Zéland):\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\n- A parkolási opciók mostantól megjelennek a térképen, amikor megérkezel a célállomásra.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.38.5.5"
         },
         {
           "cim": "Speed Profiles",
           "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed. \n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph or km/h.\n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL.\n- Introduced new speed profile MAD MAX, which comes with higher speeds than HURRY.",
+          "cim_hu": "Sebességprofilok",
+          "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph-ban vagy km/h-ban.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- Új MAD MAX sebességprofil: nagyobb sebességek, mint a HURRY.",
           "customer_version": "2026.38.5.5"
         },
         {
           "cim": "UI Improvements",
           "leiras": "- You can now view your Self-Driving stats under Controls > Self-Driving. \n- Start Self-Driving with a tap of the touchscreen from Park, or any time during your drive. \n- Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "cim_hu": "Kezelőfelület-fejlesztések",
+          "leiras_hu": "Mostantól megtekintheted az önvezetési statisztikáidat a Vezérlés > Önvezetés menüben.\n- Indítsd el az önvezetést egyetlen érintéssel a képernyőn parkoló állapotból, vagy bármikor vezetés közben.\n- Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
           "customer_version": "2026.38.5.5"
         }
       ],
       "feature_cimek": [
-        "Arrival Options",
-        "Brake Confirm",
-        "FSD (Supervised) v14.3.12 Down Under",
-        "Speed Profiles",
-        "UI Improvements"
+        "Érkezési opciók",
+        "Fék-visszaigazolás",
+        "FSD (Felügyelt) v14.3.12 (Ausztrália/Új-Zéland)",
+        "Sebességprofilok",
+        "Kezelőfelület-fejlesztések"
       ]
     },
     {
@@ -678,59 +780,77 @@
         {
           "cim": "Arrival Options",
           "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "cim_hu": "Érkezési opciók",
+          "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.",
           "customer_version": "2026.38.5.1"
         },
         {
           "cim": "Automatic Collision Evasion",
           "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage in the following situations while you are driving manually:\n- Scenario 1: A frontal collision is imminent and braking alone may not avoid it.\n- Scenario 2: Your vehicle detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "cim_hu": "Automatikus ütközés-elkerülés",
+          "leiras_hu": "Az Automatikus ütközés-elkerülés aktiválja az FSD-t (Felügyelt), hogy megpróbálja biztonságban tartani az autót, majd folytassa a vezetést. Kézi vezetés közben a következő helyzetekben kapcsol be:\n- 1. eset: A frontális ütközés közvetlenül fenyeget, és önmagában a fékezés sem biztos, hogy elkerüli.\n- 2. eset: Az autó érzékeli, hogy nem figyelsz kellően az útra (például a hátsó ülés felé nyúlsz), és hogy az FSD (Felügyelt) véletlenül kikapcsolódhatott.\n\nTöbb részletért lásd a használati útmutatót.",
           "customer_version": "2026.38.5.1"
         },
         {
           "cim": "FSD (Supervised) v14.3 Lite",
           "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "cim_hu": "FSD (Felügyelt) v14.3 Lite",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3 Lite újdonságai:\n- A HW4 V14 intelligenciáját átültettük a HW3-ba. Így a HW3 közvetlenül, a HW4 V14-et útmutatóként használva tanulja meg a helyzetek kezelését. Ez a folyamat felszabadítja a HW4-hez készült fejlesztéseket — köztük a megerősítéses tanulást (RL) és az offline modelleket — a HW3 számára.\n- Javult a proaktív és reaktív reagálókészség a helyzetek széles körében: navigációkezelés, sávváltás és elágazások, gyalogos-interakciók, jelzőlámpák és beváltós (cut-in) szituációk.\n- Javult az általános komfort a megszokott helyzetekben: kevesebb téves lassítás, simább kormányzás és egyenletesebb sávközépen tartás.\n- Új parkolási, kiparkolási és tolatási képességek.\n- Hozzáadtuk az érkezési opciókat, hogy kiválaszd, hol húzódjon félre vagy parkoljon az FSD: parkolóban, az utcán vagy kocsifelhajtón.\n- A sebességprofilok mostantól mindig elérhetők, hogy tovább finomíthasd a vezetési stílust.",
           "customer_version": "2026.38.5.1"
         },
         {
           "cim": "FSD (Supervised) v14.3.12",
           "leiras": "Full Self-Driving (Supervised) v14.3.12 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.12",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.12 újdonságai:\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Egységesítettük a modellt az Actually Smart Summon, az FSD és a Robotaxi között a megbízhatóbb viselkedésért.\n- Az Actually Smart Summon maximális sebessége 8 mph-ra (13 km/h) nőtt.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\n- A parkolási opciók mostantól megjelennek a térképen, amikor megérkezel a célállomásra.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.38.5.1"
         },
         {
           "cim": "Full Self-Driving (Supervised)",
           "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.38.5.1"
         },
         {
           "cim": "Minor Fixes",
           "leiras": "This release contains minor fixes and improvements",
+          "cim_hu": "Kisebb javítások",
+          "leiras_hu": "Ez a kiadás kisebb javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.5.1"
         },
         {
           "cim": "Speed Profiles",
           "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "cim_hu": "Sebességprofilok",
+          "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph/km/h-ban.",
           "customer_version": "2026.38.5.1"
         },
         {
           "cim": "Start Self-Driving from Park",
           "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "cim_hu": "Önvezetés indítása parkoló állapotból",
+          "leiras_hu": "A gomb akkor jelenik meg a képernyőn, ha a vezetőre vonatkozó feltételek teljesülnek. A feltételek (többek között):\n- A vezető a vezetőülésben ül\n- A vezető be van kötve\n- Az utastéri kamera látóterét semmi nem takarja\n\nA Fék-visszaigazolás megköveteli, hogy a vezető megnyomja és elengedje a fékpedált, mielőtt az FSD (Felügyelt) aktiválható. Ha a Fék-visszaigazolás ki van kapcsolva, a gomb megnyomásával az önvezetés fékezhet és aktiválhatja az FSD-t (Felügyelt). Ha a vezetőfelismerés feltételei nem teljesülnek, vagy az FSD (Felügyelt) nem érzékeli a vezetőt, meg kell nyomnod és el kell engedned a fékpedált a megerősítéshez. A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.\n\nEz a funkció nem teszi önvezetővé az autót, és folyamatosan figyelned kell, készen arra, hogy bármikor átvedd az irányítást. Csak a jármű vezetésére jogosult, érvényes jogosítvánnyal rendelkező személy foglalhatja el a vezetőülést, amíg a jármű nincs Színház vagy Játéktermi módban.",
           "customer_version": "2026.38.5.1"
         },
         {
           "cim": "UI Improvements",
           "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "cim_hu": "Kezelőfelület-fejlesztések",
+          "leiras_hu": "Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
           "customer_version": "2026.38.5.1"
         }
       ],
       "feature_cimek": [
-        "Arrival Options",
-        "Automatic Collision Evasion",
-        "FSD (Supervised) v14.3 Lite",
-        "FSD (Supervised) v14.3.12",
-        "Full Self-Driving (Supervised)",
-        "Minor Fixes",
-        "Speed Profiles",
-        "Start Self-Driving from Park",
-        "UI Improvements"
+        "Érkezési opciók",
+        "Automatikus ütközés-elkerülés",
+        "FSD (Felügyelt) v14.3 Lite",
+        "FSD (Felügyelt) v14.3.12",
+        "FSD (Felügyelt)",
+        "Kisebb javítások",
+        "Sebességprofilok",
+        "Önvezetés indítása parkoló állapotból",
+        "Kezelőfelület-fejlesztések"
       ]
     },
     {
@@ -758,53 +878,69 @@
         {
           "cim": "Arrival Options",
           "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "cim_hu": "Érkezési opciók",
+          "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.",
           "customer_version": "2026.38.5"
         },
         {
           "cim": "Automatic Collision Evasion",
           "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage in the following situations while you are driving manually:\n- Scenario 1: A frontal collision is imminent and braking alone may not avoid it.\n- Scenario 2: Your vehicle detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "cim_hu": "Automatikus ütközés-elkerülés",
+          "leiras_hu": "Az Automatikus ütközés-elkerülés aktiválja az FSD-t (Felügyelt), hogy megpróbálja biztonságban tartani az autót, majd folytassa a vezetést. Kézi vezetés közben a következő helyzetekben kapcsol be:\n- 1. eset: A frontális ütközés közvetlenül fenyeget, és önmagában a fékezés sem biztos, hogy elkerüli.\n- 2. eset: Az autó érzékeli, hogy nem figyelsz kellően az útra (például a hátsó ülés felé nyúlsz), és hogy az FSD (Felügyelt) véletlenül kikapcsolódhatott.\n\nTöbb részletért lásd a használati útmutatót.",
           "customer_version": "2026.38.5"
         },
         {
           "cim": "FSD (Supervised) v14.3 Lite",
           "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "cim_hu": "FSD (Felügyelt) v14.3 Lite",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3 Lite újdonságai:\n- A HW4 V14 intelligenciáját átültettük a HW3-ba. Így a HW3 közvetlenül, a HW4 V14-et útmutatóként használva tanulja meg a helyzetek kezelését. Ez a folyamat felszabadítja a HW4-hez készült fejlesztéseket — köztük a megerősítéses tanulást (RL) és az offline modelleket — a HW3 számára.\n- Javult a proaktív és reaktív reagálókészség a helyzetek széles körében: navigációkezelés, sávváltás és elágazások, gyalogos-interakciók, jelzőlámpák és beváltós (cut-in) szituációk.\n- Javult az általános komfort a megszokott helyzetekben: kevesebb téves lassítás, simább kormányzás és egyenletesebb sávközépen tartás.\n- Új parkolási, kiparkolási és tolatási képességek.\n- Hozzáadtuk az érkezési opciókat, hogy kiválaszd, hol húzódjon félre vagy parkoljon az FSD: parkolóban, az utcán vagy kocsifelhajtón.\n- A sebességprofilok mostantól mindig elérhetők, hogy tovább finomíthasd a vezetési stílust.",
           "customer_version": "2026.38.5"
         },
         {
           "cim": "FSD (Supervised) v14.3.12",
           "leiras": "Full Self-Driving (Supervised) v14.3.12 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.12",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.12 újdonságai:\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Egységesítettük a modellt az Actually Smart Summon, az FSD és a Robotaxi között a megbízhatóbb viselkedésért.\n- Az Actually Smart Summon maximális sebessége 8 mph-ra (13 km/h) nőtt.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\n- A parkolási opciók mostantól megjelennek a térképen, amikor megérkezel a célállomásra.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.38.5"
         },
         {
           "cim": "Full Self-Driving (Supervised)",
           "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.38.5"
         },
         {
           "cim": "Speed Profiles",
           "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "cim_hu": "Sebességprofilok",
+          "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph/km/h-ban.",
           "customer_version": "2026.38.5"
         },
         {
           "cim": "Start Self-Driving from Park",
           "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "cim_hu": "Önvezetés indítása parkoló állapotból",
+          "leiras_hu": "A gomb akkor jelenik meg a képernyőn, ha a vezetőre vonatkozó feltételek teljesülnek. A feltételek (többek között):\n- A vezető a vezetőülésben ül\n- A vezető be van kötve\n- Az utastéri kamera látóterét semmi nem takarja\n\nA Fék-visszaigazolás megköveteli, hogy a vezető megnyomja és elengedje a fékpedált, mielőtt az FSD (Felügyelt) aktiválható. Ha a Fék-visszaigazolás ki van kapcsolva, a gomb megnyomásával az önvezetés fékezhet és aktiválhatja az FSD-t (Felügyelt). Ha a vezetőfelismerés feltételei nem teljesülnek, vagy az FSD (Felügyelt) nem érzékeli a vezetőt, meg kell nyomnod és el kell engedned a fékpedált a megerősítéshez. A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.\n\nEz a funkció nem teszi önvezetővé az autót, és folyamatosan figyelned kell, készen arra, hogy bármikor átvedd az irányítást. Csak a jármű vezetésére jogosult, érvényes jogosítvánnyal rendelkező személy foglalhatja el a vezetőülést, amíg a jármű nincs Színház vagy Játéktermi módban.",
           "customer_version": "2026.38.5"
         },
         {
           "cim": "UI Improvements",
           "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "cim_hu": "Kezelőfelület-fejlesztések",
+          "leiras_hu": "Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
           "customer_version": "2026.38.5"
         }
       ],
       "feature_cimek": [
-        "Arrival Options",
-        "Automatic Collision Evasion",
-        "FSD (Supervised) v14.3 Lite",
-        "FSD (Supervised) v14.3.12",
-        "Full Self-Driving (Supervised)",
-        "Speed Profiles",
-        "Start Self-Driving from Park",
-        "UI Improvements"
+        "Érkezési opciók",
+        "Automatikus ütközés-elkerülés",
+        "FSD (Felügyelt) v14.3 Lite",
+        "FSD (Felügyelt) v14.3.12",
+        "FSD (Felügyelt)",
+        "Sebességprofilok",
+        "Önvezetés indítása parkoló állapotból",
+        "Kezelőfelület-fejlesztések"
       ]
     },
     {
@@ -829,35 +965,45 @@
         {
           "cim": "FSD (Supervised) v14.2 Lite",
           "leiras": "FSD (Supervised) v14.2 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced unparking and reversing capabilities.\n- Introduced Speed Profiles to further customize driving style preference.",
+          "cim_hu": "FSD (Felügyelt) v14.2 Lite",
+          "leiras_hu": "Az FSD (Felügyelt) v14.2 Lite újdonságai:\n- A HW4 V14 intelligenciáját átültettük a HW3-ba. Így a HW3 közvetlenül, a HW4 V14-et útmutatóként használva tanulja meg a helyzetek kezelését. Ez a folyamat felszabadítja a HW4-hez készült fejlesztéseket — köztük a megerősítéses tanulást (RL) és az offline modelleket — a HW3 számára.\n- Javult a proaktív és reaktív reagálókészség a helyzetek széles körében: navigációkezelés, sávváltás és elágazások, gyalogos-interakciók, jelzőlámpák és beváltós (cut-in) szituációk.\n- Javult az általános komfort a megszokott helyzetekben: kevesebb téves lassítás, simább kormányzás és egyenletesebb sávközépen tartás.\n- Új kiparkolási és tolatási képességek.\n- Új sebességprofilok a vezetési stílus további finomításához.",
           "customer_version": "2026.38.4.5"
         },
         {
           "cim": "FSD (Supervised) v14.3.13",
           "leiras": "Full Self-Driving (Supervised) v14.3.13 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.13",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.13 újdonságai:\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Egységesítettük a modellt az Actually Smart Summon, az FSD és a Robotaxi között a megbízhatóbb viselkedésért.\n- Az Actually Smart Summon maximális sebessége 8 mph-ra (13 km/h) nőtt.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.38.4.5"
         },
         {
           "cim": "Speed Profiles",
           "leiras": "FSD (Supervised) will determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Driver profile has a strong impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down will adjust the Speed Profile from SLOTH, CHILL, STANDARD, or HURRY.",
+          "cim_hu": "Sebességprofilok",
+          "leiras_hu": "Az FSD (Felügyelt) a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- A vezetői profil erősen befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le a sebességprofilt állítja: SLOTH, CHILL, STANDARD vagy HURRY.",
           "customer_version": "2026.38.4.5"
         },
         {
           "cim": "Start Self-Driving from Park",
           "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "cim_hu": "Önvezetés indítása parkoló állapotból",
+          "leiras_hu": "A gomb akkor jelenik meg a képernyőn, ha a vezetőre vonatkozó feltételek teljesülnek. A feltételek (többek között):\n- A vezető a vezetőülésben ül\n- A vezető be van kötve\n- Az utastéri kamera látóterét semmi nem takarja\n\nA Fék-visszaigazolás megköveteli, hogy a vezető megnyomja és elengedje a fékpedált, mielőtt az FSD (Felügyelt) aktiválható. Ha a Fék-visszaigazolás ki van kapcsolva, a gomb megnyomásával az önvezetés fékezhet és aktiválhatja az FSD-t (Felügyelt). Ha a vezetőfelismerés feltételei nem teljesülnek, vagy az FSD (Felügyelt) nem érzékeli a vezetőt, meg kell nyomnod és el kell engedned a fékpedált a megerősítéshez. A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.\n\nEz a funkció nem teszi önvezetővé az autót, és folyamatosan figyelned kell, készen arra, hogy bármikor átvedd az irányítást. Csak a jármű vezetésére jogosult, érvényes jogosítvánnyal rendelkező személy foglalhatja el a vezetőülést, amíg a jármű nincs Színház vagy Játéktermi módban.",
           "customer_version": "2026.38.4.5"
         },
         {
           "cim": "UI Improvements",
           "leiras": "Adjust settings like the Speed Profile directly from the Self-Driving visualization on the center display.",
+          "cim_hu": "Kezelőfelület-fejlesztések",
+          "leiras_hu": "Állítsd be a sebességprofilt közvetlenül a központi kijelző önvezetés-vizualizációjából.",
           "customer_version": "2026.38.4.5"
         }
       ],
       "feature_cimek": [
-        "FSD (Supervised) v14.2 Lite",
-        "FSD (Supervised) v14.3.13",
-        "Speed Profiles",
-        "Start Self-Driving from Park",
-        "UI Improvements"
+        "FSD (Felügyelt) v14.2 Lite",
+        "FSD (Felügyelt) v14.3.13",
+        "Sebességprofilok",
+        "Önvezetés indítása parkoló állapotból",
+        "Kezelőfelület-fejlesztések"
       ]
     },
     {
@@ -925,11 +1071,13 @@
         {
           "cim": "Security Improvements",
           "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.3.2"
         }
       ],
       "feature_cimek": [
-        "Security Improvements"
+        "Biztonsági fejlesztések"
       ]
     },
     {
@@ -993,29 +1141,37 @@
         {
           "cim": "Emergency Drive Away",
           "leiras": "Emergency Drive Away lets you shift into Drive while a Supercharger cable is still connected. Use it only in an emergency: driving away with the cable attached will damage your vehicle and the Supercharger, and you may be responsible for repair costs. When you activate this feature, short recordings from your vehicle's cameras are shared with Tesla.",
+          "cim_hu": "Vészhelyzeti elhajtás",
+          "leiras_hu": "A Vészhelyzeti elhajtás lehetővé teszi, hogy D (hajtás) fokozatba válts, miközben a Supercharger kábel még csatlakoztatva van. Csak vészhelyzetben használd: a csatlakoztatott kábellel való elhajtás károsítja az autót és a Superchargert, és a javítási költségek téged terhelhetnek. A funkció aktiválásakor az autó kameráinak rövid felvételeit megosztjuk a Teslával.",
           "customer_version": "2026.38.3.1"
         },
         {
           "cim": "Halloween Mode",
           "leiras": "Spread holiday fear year round with Halloween Mode. Put a Ghost Costume on your car visualization. Turn on Trick or Treat Mode to play spooky sounds and flicker the lights when visitors approach. Schedule a haunting light show, and turn your car into a chilling Photobooth!",
+          "cim_hu": "Halloween mód",
+          "leiras_hu": "A Halloween mód egész évben hozza az ünnepi borzongást. Tegyél szellemjelmezt az autó megjelenítésére. Kapcsold be a Trick or Treat módot, hogy ijesztő hangok szólaljanak meg és villogjanak a fények, amikor látogatók közelednek. Ütemezz kísérteties fényshow-t, és alakítsd az autódat hátborzongató fotófülkévé!",
           "customer_version": "2026.38.3.1"
         },
         {
           "cim": "Security Improvements",
           "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.3.1"
         },
         {
           "cim": "Set Arrival Energy",
           "leiras": "Set your desired Arrival Energy for any trip from your phone. Open the location tab in the Tesla Mobile App, enter your destination, and tap Set Arrival Energy. Requires Mobile App v4.58.0 or later.",
+          "cim_hu": "Érkezési energia beállítása",
+          "leiras_hu": "Állítsd be a kívánt érkezési energiát bármely úthoz a telefonodról. Nyisd meg a hely fület a Tesla mobilalkalmazásban, add meg a célállomást, és koppints az Érkezési energia beállítása gombra. A mobilalkalmazás 4.58.0-s vagy újabb verziója szükséges.",
           "customer_version": "2026.38.3.1"
         }
       ],
       "feature_cimek": [
-        "Emergency Drive Away",
-        "Halloween Mode",
-        "Security Improvements",
-        "Set Arrival Energy"
+        "Vészhelyzeti elhajtás",
+        "Halloween mód",
+        "Biztonsági fejlesztések",
+        "Érkezési energia beállítása"
       ]
     },
     {
@@ -1045,29 +1201,37 @@
         {
           "cim": "Emergency Drive Away",
           "leiras": "Emergency Drive Away lets you shift into Drive while a Supercharger cable is still connected. Use it only in an emergency: driving away with the cable attached will damage your vehicle and the Supercharger, and you may be responsible for repair costs. When you activate this feature, short recordings from your vehicle's cameras are shared with Tesla.",
+          "cim_hu": "Vészhelyzeti elhajtás",
+          "leiras_hu": "A Vészhelyzeti elhajtás lehetővé teszi, hogy D (hajtás) fokozatba válts, miközben a Supercharger kábel még csatlakoztatva van. Csak vészhelyzetben használd: a csatlakoztatott kábellel való elhajtás károsítja az autót és a Superchargert, és a javítási költségek téged terhelhetnek. A funkció aktiválásakor az autó kameráinak rövid felvételeit megosztjuk a Teslával.",
           "customer_version": "2026.38.3"
         },
         {
           "cim": "Halloween Mode",
           "leiras": "Spread holiday fear year round with Halloween Mode. Put a Ghost Costume on your car visualization. Turn on Trick or Treat Mode to play spooky sounds and flicker the lights when visitors approach. Schedule a haunting light show, and turn your car into a chilling Photobooth!",
+          "cim_hu": "Halloween mód",
+          "leiras_hu": "A Halloween mód egész évben hozza az ünnepi borzongást. Tegyél szellemjelmezt az autó megjelenítésére. Kapcsold be a Trick or Treat módot, hogy ijesztő hangok szólaljanak meg és villogjanak a fények, amikor látogatók közelednek. Ütemezz kísérteties fényshow-t, és alakítsd az autódat hátborzongató fotófülkévé!",
           "customer_version": "2026.38.3"
         },
         {
           "cim": "Security Improvements",
           "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38.3"
         },
         {
           "cim": "Set Arrival Energy",
           "leiras": "Set your desired Arrival Energy for any trip from your phone. Open the location tab in the Tesla Mobile App, enter your destination, and tap Set Arrival Energy. Requires Mobile App v4.58.0 or later.",
+          "cim_hu": "Érkezési energia beállítása",
+          "leiras_hu": "Állítsd be a kívánt érkezési energiát bármely úthoz a telefonodról. Nyisd meg a hely fület a Tesla mobilalkalmazásban, add meg a célállomást, és koppints az Érkezési energia beállítása gombra. A mobilalkalmazás 4.58.0-s vagy újabb verziója szükséges.",
           "customer_version": "2026.38.3"
         }
       ],
       "feature_cimek": [
-        "Emergency Drive Away",
-        "Halloween Mode",
-        "Security Improvements",
-        "Set Arrival Energy"
+        "Vészhelyzeti elhajtás",
+        "Halloween mód",
+        "Biztonsági fejlesztések",
+        "Érkezési energia beállítása"
       ]
     },
     {
@@ -1111,29 +1275,37 @@
         {
           "cim": "Dynamic Headlight Leveling",
           "leiras": "Low beams will automatically adjust their aim based on driving conditions and nearby traffic to maximize your visibility while reducing glare for other road users.",
+          "cim_hu": "Dinamikus fényszóró-szintezés",
+          "leiras_hu": "A tompított fényszórók mostantól automatikusan igazítják a fényirányt a vezetési körülmények és a környező forgalom alapján, hogy maximalizálják a látásod, miközben csökkentik a többi közlekedő vakítását.",
           "customer_version": "2026.38"
         },
         {
           "cim": "Security Improvements",
           "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.38"
         },
         {
           "cim": "Supercharger Site Maps",
           "leiras": "You can now see a detailed view of select Tesla Superchargers by tapping \"View Site Map.\" When navigating to a pilot location, the site layout and live occupancy (Available / Occupied / Down) will be displayed upon arrival.",
+          "cim_hu": "Supercharger helyszín-térképek",
+          "leiras_hu": "Mostantól részletes nézetet láthatsz egyes Tesla Superchargerekről a „Helyszín-térkép megtekintése” megérintésével. Amikor egy kísérleti helyszínre navigálsz, megérkezéskor megjelenik a helyszín elrendezése és az élő foglaltság (Szabad / Foglalt / Üzemen kívül).",
           "customer_version": "2026.38"
         },
         {
           "cim": "Visual Updates",
           "leiras": "The center display now features higher quality images of your Tesla, and an enhanced park scene environment.",
+          "cim_hu": "Vizuális frissítések",
+          "leiras_hu": "A központi kijelző mostantól jobb minőségű képeket mutat a Tesládról, és továbbfejlesztett parkolási környezet jelenik meg.",
           "customer_version": "2026.38"
         }
       ],
       "feature_cimek": [
-        "Dynamic Headlight Leveling",
-        "Security Improvements",
-        "Supercharger Site Maps",
-        "Visual Updates"
+        "Dinamikus fényszóró-szintezés",
+        "Biztonsági fejlesztések",
+        "Supercharger helyszín-térképek",
+        "Vizuális frissítések"
       ]
     },
     {
@@ -1165,17 +1337,21 @@
         {
           "cim": "FSD (Supervised)",
           "leiras": "Under your supervision, FSD (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and stop at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent.  \n\nFSD (Supervised) is enabled on your vehicle. To use the feature, first watch the tutorial and take the quiz, available in the new Self-Driving App or in Control > Self-Driving. Then press the Start FSD (Supervised) button on the UI, or press the right scroll wheel button once. You can disable FSD (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és megáll a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz először nézd meg az oktatóanyagot és töltsd ki a kvízt (az új Önvezetés alkalmazásban vagy a Vezérlés > Önvezetés menüben). Ezután nyomd meg az FSD (Felügyelt) indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.33.100"
         },
         {
           "cim": "Minor Fixes",
           "leiras": "This release contains minor fixes and improvements",
+          "cim_hu": "Kisebb javítások",
+          "leiras_hu": "Ez a kiadás kisebb javításokat és fejlesztéseket tartalmaz.",
           "customer_version": "2026.33.100"
         }
       ],
       "feature_cimek": [
-        "FSD (Supervised)",
-        "Minor Fixes"
+        "FSD (Felügyelt)",
+        "Kisebb javítások"
       ]
     },
     {
@@ -1201,53 +1377,69 @@
         {
           "cim": "Arrival Options",
           "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "cim_hu": "Érkezési opciók",
+          "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.",
           "customer_version": "2026.33.5"
         },
         {
           "cim": "Automatic Collision Evasion",
           "leiras": "Automatic Collision Evasion activates Full Self-Driving (Supervised) to try to keep your vehicle safe and then continue driving. It can engage while you are driving manually and detects that you are not sufficiently attentive to the road (for example, reaching toward the back seat), and that Full Self-Driving (Supervised) may have been unintentionally disengaged.\n\nSee your Owner's Manual for more details.",
+          "cim_hu": "Automatikus ütközés-elkerülés",
+          "leiras_hu": "Az Automatikus ütközés-elkerülés aktiválja az FSD-t (Felügyelt), hogy megpróbálja biztonságban tartani az autót, majd folytassa a vezetést. Akkor kapcsol be, ha kézi vezetés közben érzékeli, hogy nem figyelsz kellően az útra (például a hátsó ülés felé nyúlsz), és hogy az FSD (Felügyelt) véletlenül kikapcsolódhatott. Több részletért lásd a használati útmutatót.",
           "customer_version": "2026.33.5"
         },
         {
           "cim": "FSD (Supervised) v14.3 Lite",
           "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "cim_hu": "FSD (Felügyelt) v14.3 Lite",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3 Lite újdonságai:\n- A HW4 V14 intelligenciáját átültettük a HW3-ba. Így a HW3 közvetlenül, a HW4 V14-et útmutatóként használva tanulja meg a helyzetek kezelését. Ez a folyamat felszabadítja a HW4-hez készült fejlesztéseket — köztük a megerősítéses tanulást (RL) és az offline modelleket — a HW3 számára.\n- Javult a proaktív és reaktív reagálókészség a helyzetek széles körében: navigációkezelés, sávváltás és elágazások, gyalogos-interakciók, jelzőlámpák és beváltós (cut-in) szituációk.\n- Javult az általános komfort a megszokott helyzetekben: kevesebb téves lassítás, simább kormányzás és egyenletesebb sávközépen tartás.\n- Új parkolási, kiparkolási és tolatási képességek.\n- Hozzáadtuk az érkezési opciókat, hogy kiválaszd, hol húzódjon félre vagy parkoljon az FSD: parkolóban, az utcán vagy kocsifelhajtón.\n- A sebességprofilok mostantól mindig elérhetők, hogy tovább finomíthasd a vezetési stílust.",
           "customer_version": "2026.33.5"
         },
         {
           "cim": "FSD (Supervised) v14.3.11",
           "leiras": "Full Self-Driving (Supervised) v14.3.11 includes:\n\n- Upgraded the Reinforcement Learning (RL) stage of training the FSD neural network, resulting in improvements in a wide variety of driving scenarios.\n- Upgraded the neural network vision encoder, improving understanding in rare and low-visibility scenarios, strengthening 3D geometry understanding, and expanding traffic sign understanding.\n- Rewrote the AI compiler and runtime from the ground up with MLIR, resulting in 20% faster reaction time and improving model iteration speed.\n- Mitigated unnecessary lane biasing and minor tailgating behaviors.\n- Increased decisiveness of parking spot selection and maneuvering. \n- Improved parking location pin prediction, now shown on a map with a P icon.\n- Enhanced response to emergency vehicles, school buses, right-of-way violators, and other rare vehicles. \n- Improved handling of small animals by focusing RL training on harder examples and adding rewards for better proactive safety.\n- Improved traffic light handling at complex intersections with compound lights, curved roads, and yellow light stopping — driven by training on hard RL examples sourced from the Tesla fleet.\n- Improved handling for rare and unusual objects extending, hanging, or leaning into the vehicle path by sourcing infrequent events from the fleet.\n- Improved handling of temporary system degradations by maintaining control and automatically recovering without driver intervention, reducing unnecessary disengagements.\n- Improved driver monitoring system sensitivity with better eye gaze tracking, eye wear handling, and higher accuracy in variable lighting conditions. \n- Unified the model between Actually Smart Summon, FSD, and Robotaxi for more capable and reliable behavior.\n- Actually Smart Summon max speed is now increased to 8mph (13km/h).\n- Help Tesla improve Self-Driving by selecting an intervention reason on the main screen after taking over.\n- You can now see distance traveled in FSD (Supervised) without an intervention. The Self-Driving App will also show your longest intervention-free streak.\n- Parking options now display on the map when arriving at your destination.\n\nUpcoming Improvements:\n- Expand reasoning to all behaviors beyond destination handling.\n- Add pothole avoidance.",
+          "cim_hu": "FSD (Felügyelt) v14.3.11",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3.11 újdonságai:\n- Továbbfejlesztettük az FSD neurális hálózat megerősítéses tanulás (RL) fázisát, ami a vezetési helyzetek széles körében hoz javulást.\n- Továbbfejlesztettük a neurális hálózat látó-enkóderét: jobb megértés ritka és rossz látási viszonyok között, erősebb 3D geometriai értelmezés és bővülő közúti jelzés-megértés.\n- Az MI-fordítót és futási környezetet alapjaitól újraírtuk MLIR-rel, ami 20%-kal gyorsabb reakcióidőt és gyorsabb modell-iterációt eredményez.\n- Csökkentettük a szükségtelen sávba-húzódást és a kisebb farolási (tailgating) viselkedéseket.\n- Határozottabb parkolóhely-kiválasztás és manőverezés.\n- Jobb parkolási hely-jelölő előrejelzés, amely mostantól térképen, P ikonnal jelenik meg.\n- Jobb reakció mentőautókra, iskolabuszokra, az elsőbbséget megsértőkre és más ritka járművekre.\n- Javult a kis állatok kezelése: az RL-tanítást nehezebb példákra fókuszáltuk, és jutalmakat adtunk a proaktív biztonsághoz.\n- Javult a jelzőlámpa-kezelés összetett kereszteződésekben (kombinált lámpák, íves utak, sárgánál megállás) — a Tesla-flottából származó nehéz RL-példákon tanítva.\n- Javult a ritka és szokatlan tárgyak (kilógó, lógó, az útra benyúló) kezelése a flottából gyűjtött ritka események alapján.\n- Javult az ideiglenes rendszer-romlások kezelése: az autó megtartja az irányítást és automatikusan helyreáll a vezető beavatkozása nélkül, csökkentve a felesleges kikapcsolásokat.\n- Érzékenyebb vezetőfigyelő rendszer jobb tekintetkövetéssel, jobb szemüveg-kezeléssel és nagyobb pontossággal változó fényviszonyok között.\n- Egységesítettük a modellt az Actually Smart Summon, az FSD és a Robotaxi között a megbízhatóbb viselkedésért.\n- Az Actually Smart Summon maximális sebessége 8 mph-ra (13 km/h) nőtt.\n- Segíts a Teslának fejleszteni az önvezetést: az irányítás átvétele után válassz beavatkozási okot a főképernyőn.\n- Mostantól látod az FSD-vel (Felügyelt) beavatkozás nélkül megtett távolságot. Az Önvezetés alkalmazás a leghosszabb beavatkozás-mentes sorozatodat is mutatja.\n- A parkolási opciók mostantól megjelennek a térképen, amikor megérkezel a célállomásra.\nKövetkező fejlesztések:\n- A gondolkodás (reasoning) kiterjesztése minden viselkedésre a célállomás-kezelésen túl.\n- Kátyú-elkerülés hozzáadása.",
           "customer_version": "2026.33.5"
         },
         {
           "cim": "Full Self-Driving (Supervised)",
           "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. \n\nFull Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
           "customer_version": "2026.33.5"
         },
         {
           "cim": "Speed Profiles",
           "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "cim_hu": "Sebességprofilok",
+          "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph/km/h-ban.",
           "customer_version": "2026.33.5"
         },
         {
           "cim": "Start Self-Driving from Park",
           "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). If driver detection requirements are not met or if FSD (Supervised) does not detect a driver, you will be required to press and release the brake pedal to confirm. You can enable Brake Confirm in Self-Driving > Brake Confirm. \n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "cim_hu": "Önvezetés indítása parkoló állapotból",
+          "leiras_hu": "A gomb akkor jelenik meg a képernyőn, ha a vezetőre vonatkozó feltételek teljesülnek. A feltételek (többek között):\n- A vezető a vezetőülésben ül\n- A vezető be van kötve\n- Az utastéri kamera látóterét semmi nem takarja\n\nA Fék-visszaigazolás megköveteli, hogy a vezető megnyomja és elengedje a fékpedált, mielőtt az FSD (Felügyelt) aktiválható. Ha a Fék-visszaigazolás ki van kapcsolva, a gomb megnyomásával az önvezetés fékezhet és aktiválhatja az FSD-t (Felügyelt). Ha a vezetőfelismerés feltételei nem teljesülnek, vagy az FSD (Felügyelt) nem érzékeli a vezetőt, meg kell nyomnod és el kell engedned a fékpedált a megerősítéshez. A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.\n\nEz a funkció nem teszi önvezetővé az autót, és folyamatosan figyelned kell, készen arra, hogy bármikor átvedd az irányítást. Csak a jármű vezetésére jogosult, érvényes jogosítvánnyal rendelkező személy foglalhatja el a vezetőülést, amíg a jármű nincs Színház vagy Játéktermi módban.",
           "customer_version": "2026.33.5"
         },
         {
           "cim": "UI Improvements",
           "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "cim_hu": "Kezelőfelület-fejlesztések",
+          "leiras_hu": "Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
           "customer_version": "2026.33.5"
         }
       ],
       "feature_cimek": [
-        "Arrival Options",
-        "Automatic Collision Evasion",
-        "FSD (Supervised) v14.3 Lite",
-        "FSD (Supervised) v14.3.11",
-        "Full Self-Driving (Supervised)",
-        "Speed Profiles",
-        "Start Self-Driving from Park",
-        "UI Improvements"
+        "Érkezési opciók",
+        "Automatikus ütközés-elkerülés",
+        "FSD (Felügyelt) v14.3 Lite",
+        "FSD (Felügyelt) v14.3.11",
+        "FSD (Felügyelt)",
+        "Sebességprofilok",
+        "Önvezetés indítása parkoló állapotból",
+        "Kezelőfelület-fejlesztések"
       ]
     },
     {

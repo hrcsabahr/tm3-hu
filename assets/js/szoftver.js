@@ -54,8 +54,8 @@
         if (!v) { latestEl.innerHTML = ''; return; }
         const feats = (v.features || []).map(f => (
             '<li style="margin:10px 0;">'
-            + '<strong>' + esc(f.cim) + '</strong>'
-            + (f.leiras ? '<br><span style="color:var(--ink-2);">' + nl2br(f.leiras) + '</span>' : '')
+            + '<strong>' + esc(f.cim_hu || f.cim) + '</strong>'
+            + ((f.leiras_hu || f.leiras) ? '<br><span style="color:var(--ink-2);">' + nl2br(f.leiras_hu || f.leiras) + '</span>' : '')
             + '</li>'
         )).join('');
 
@@ -91,21 +91,28 @@
             return;
         }
         if (emptyEl) emptyEl.style.display = 'none';
-        listEl.innerHTML = items.map(v => (
-            '<article class="card">' +
+        listEl.innerHTML = items.map(v => {
+            const feats = (v.features || []).map(f => {
+                const title = f.cim_hu || f.cim;
+                const desc = f.leiras_hu || f.leiras;
+                return '<details style="margin:8px 0;">' +
+                    '<summary style="cursor:pointer;font-weight:600;">' + esc(title) + '</summary>' +
+                    '<div style="color:var(--ink-2);font-size:14px;line-height:1.6;padding:6px 0 0 14px;">'
+                    + (desc ? nl2br(desc) : '<em>Nincs leírás.</em>') + '</div>' +
+                    '</details>';
+            }).join('');
+            return '<article class="card">' +
                 '<div class="card-head">' +
-                    '<h3 style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;">' + esc(v.version) + '</h3>'
-                    + (v.fsd ? '<span class="tag accent">' + esc(v.fsd) + '</span>' : '') +
+                    '<h3 style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;">' + esc(v.version) + '</h3>' +
+                    (v.fsd ? '<span class="tag accent">' + esc(v.fsd) + '</span>' : '') +
                 '</div>' +
-                '<div style="color:var(--ink-3);font-size:13px;margin-bottom:8px;">' + fmtDate(v.datum)
-                    + (v.flotta_db ? ' · 🚗 ' + tm3.fmt.num(v.flotta_db) + ' jármű' : '') + '</div>'
-                + (v.feature_cimek && v.feature_cimek.length
-                    ? '<p style="color:var(--ink-2);font-size:14px;line-height:1.6;margin:0;">'
-                      + v.feature_cimek.slice(0, 3).map(esc).join(' · ')
-                      + (v.feature_cimek.length > 3 ? ' …' : '') + '</p>'
-                    : '<p style="color:var(--ink-3);font-size:14px;margin:0;">Nincs részletes leírás.</p>') +
-            '</article>'
-        )).join('');
+                '<div style="color:var(--ink-3);font-size:13px;margin-bottom:8px;">' + fmtDate(v.datum) +
+                    (v.flotta_db ? ' · 🚗 ' + tm3.fmt.num(v.flotta_db) + ' jármű' : '') + '</div>' +
+                (feats
+                    ? feats
+                    : '<p style="color:var(--ink-3);font-size:14px;margin:0;">Ehhez a verzióhoz nincs release notes.</p>') +
+            '</article>';
+        }).join('');
     }
 
     (async function () {
