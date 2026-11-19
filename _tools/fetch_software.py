@@ -121,9 +121,20 @@ def country_names(codes) -> list:
     return out
 
 
+def _is_model3(f: dict) -> bool:
+    """Igaz, ha a feature a Model 3-ra is vonatkozik. Üres car_types = flottaszintű
+    (megtartjuk). Ellenkező esetben csak akkor tartjuk meg, ha van model3_* bejegyzés."""
+    ct = f.get("car_types") or []
+    if not ct:
+        return True
+    return any(str(c).startswith("model3") for c in ct)
+
+
 def build_entry(r: dict) -> dict:
     feats = []
     for f in (r.get("features") or []):
+        if not _is_model3(f):
+            continue
         cim = (f.get("title") or "").strip()
         leiras = (f.get("description") or "").strip()
         cim_hu = _HU["cimek"].get(cim)
