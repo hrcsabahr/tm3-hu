@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-11-19T19:18:01.000000Z",
+    "updated": "2026-11-20T13:16:30.000000Z",
     "forras": "Teslascope publikus API (teslascope.com/api/software)",
     "megjegyzes": "Automatikusan frissül GitHub Actions cron-nal (naponta). A flotta-adatok (darab, %) a Teslascope közösségi flottájából származnak; az európai/magyar rollout ettől eltérhet."
   },
@@ -10,35 +10,36 @@
     "fsd": "HW3 14.3 Lite",
     "fsd_hw3": "14.3 Lite",
     "fsd_hw4": null,
-    "flotta_db": 142,
-    "flotta_osszes": 3258,
-    "flotta_pct": 4.4,
+    "flotta_db": 169,
+    "flotta_osszes": 3249,
+    "flotta_pct": 5.2,
     "rollout": {
-      "teljes": 77,
+      "teljes": 53,
       "elérhető": 6,
-      "letöltés": 2,
-      "telepítés": 1
+      "letöltés": 1,
+      "telepítés": 0
     },
     "orszagok": [
       "USA",
       "Egyesült Királyság",
-      "Franciaország",
-      "Németország",
-      "Svájc",
       "Kanada",
+      "Németország",
+      "Franciaország",
+      "Svájc",
       "Spanyolország",
-      "Tajvan",
-      "Hollandia",
       "Dánia",
+      "Tajvan",
+      "Ausztria",
+      "Hollandia",
+      "Olaszország",
+      "Bulgaria",
       "Csehország",
       "Belgium",
       "Mexikó",
       "Svédország",
       "Magyarország",
       "Lengyelország",
-      "Olaszország",
       "Szlovákia",
-      "Ausztria",
       "Írország",
       "Ukrajna"
     ],
@@ -119,7 +120,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 36,
-      "flotta_osszes": 3258,
+      "flotta_osszes": 3249,
       "flotta_pct": 1.1,
       "rollout": {
         "teljes": 8,
@@ -174,7 +175,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 42,
-      "flotta_osszes": 3258,
+      "flotta_osszes": 3249,
       "flotta_pct": 1.3,
       "rollout": {
         "teljes": 1,
@@ -212,7 +213,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 133,
-      "flotta_osszes": 3258,
+      "flotta_osszes": 3249,
       "flotta_pct": 4.1,
       "rollout": {
         "teljes": 11,
@@ -243,11 +244,11 @@
       "fsd": null,
       "fsd_hw3": null,
       "fsd_hw4": null,
-      "flotta_db": 343,
-      "flotta_osszes": 3258,
-      "flotta_pct": 10.5,
+      "flotta_db": 344,
+      "flotta_osszes": 3249,
+      "flotta_pct": 10.6,
       "rollout": {
-        "teljes": 34,
+        "teljes": 33,
         "elérhető": 1,
         "letöltés": 0,
         "telepítés": 0
@@ -312,11 +313,11 @@
       "fsd": "HW4 14.3.13",
       "fsd_hw3": null,
       "fsd_hw4": "14.3.13",
-      "flotta_db": 615,
-      "flotta_osszes": 3258,
-      "flotta_pct": 18.9,
+      "flotta_db": 622,
+      "flotta_osszes": 3249,
+      "flotta_pct": 19.1,
       "rollout": {
-        "teljes": 46,
+        "teljes": 40,
         "elérhető": 1,
         "letöltés": 2,
         "telepítés": 1
@@ -371,8 +372,8 @@
       "fsd_hw3": null,
       "fsd_hw4": "14.3.13",
       "flotta_db": 607,
-      "flotta_osszes": 3258,
-      "flotta_pct": 18.6,
+      "flotta_osszes": 3249,
+      "flotta_pct": 18.7,
       "rollout": {
         "teljes": 1,
         "elérhető": 0,
@@ -429,10 +430,10 @@
       "fsd_hw3": "14.3 Lite",
       "fsd_hw4": "14.3.13",
       "flotta_db": 1027,
-      "flotta_osszes": 3258,
-      "flotta_pct": 31.5,
+      "flotta_osszes": 3249,
+      "flotta_pct": 31.6,
       "rollout": {
-        "teljes": 10,
+        "teljes": 9,
         "elérhető": 0,
         "letöltés": 0,
         "telepítés": 1
@@ -528,7 +529,7 @@
       "fsd_hw3": "14.3 Lite",
       "fsd_hw4": "14.3.13",
       "flotta_db": 93,
-      "flotta_osszes": 3258,
+      "flotta_osszes": 3249,
       "flotta_pct": 2.9,
       "rollout": {
         "teljes": 0,
@@ -617,7 +618,7 @@
       "fsd_hw3": null,
       "fsd_hw4": "14.3.12",
       "flotta_db": 150,
-      "flotta_osszes": 3258,
+      "flotta_osszes": 3249,
       "flotta_pct": 4.6,
       "rollout": {
         "teljes": 4,
@@ -689,7 +690,7 @@
       "fsd_hw3": null,
       "fsd_hw4": "14.3.12",
       "flotta_db": 136,
-      "flotta_osszes": 3258,
+      "flotta_osszes": 3249,
       "flotta_pct": 4.2,
       "rollout": {
         "teljes": 1,
@@ -753,8 +754,8 @@
       "fsd_hw3": "14.3 Lite",
       "fsd_hw4": "14.3.12",
       "flotta_db": 1030,
-      "flotta_osszes": 3258,
-      "flotta_pct": 31.6,
+      "flotta_osszes": 3249,
+      "flotta_pct": 31.7,
       "rollout": {
         "teljes": 6,
         "elérhető": 1,
@@ -844,7 +845,7 @@
       "fsd_hw3": "14.3 Lite",
       "fsd_hw4": "14.3.12",
       "flotta_db": 135,
-      "flotta_osszes": 3250,
+      "flotta_osszes": 3251,
       "flotta_pct": 4.2,
       "rollout": {
         "teljes": 0,
@@ -933,13 +934,13 @@
       "fsd": "HW4 14.3.13 · HW3 14.2 Lite",
       "fsd_hw3": "14.2 Lite",
       "fsd_hw4": "14.3.13",
-      "flotta_db": 4,
-      "flotta_osszes": 3258,
-      "flotta_pct": 0.1,
+      "flotta_db": 6,
+      "flotta_osszes": 3249,
+      "flotta_pct": 0.2,
       "rollout": {
-        "teljes": 0,
+        "teljes": 4,
         "elérhető": 0,
-        "letöltés": 0,
+        "letöltés": 1,
         "telepítés": 0
       },
       "orszagok": [
@@ -989,8 +990,8 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 360,
-      "flotta_osszes": 3258,
-      "flotta_pct": 11.0,
+      "flotta_osszes": 3249,
+      "flotta_pct": 11.1,
       "rollout": {
         "teljes": 3,
         "elérhető": 0,
@@ -1063,8 +1064,8 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 327,
-      "flotta_osszes": 3258,
-      "flotta_pct": 10.0,
+      "flotta_osszes": 3249,
+      "flotta_pct": 10.1,
       "rollout": {
         "teljes": 2,
         "elérhető": 0,
@@ -1157,7 +1158,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 7,
-      "flotta_osszes": 3250,
+      "flotta_osszes": 3251,
       "flotta_pct": 0.2,
       "rollout": {
         "teljes": 1,
@@ -1209,7 +1210,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 69,
-      "flotta_osszes": 3250,
+      "flotta_osszes": 3251,
       "flotta_pct": 2.1,
       "rollout": {
         "teljes": 0,
@@ -1283,7 +1284,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 42,
-      "flotta_osszes": 3258,
+      "flotta_osszes": 3249,
       "flotta_pct": 1.3,
       "rollout": {
         "teljes": 0,
@@ -1329,7 +1330,7 @@
       "fsd_hw3": "14.3 Lite",
       "fsd_hw4": "14.3.11",
       "flotta_db": 101,
-      "flotta_osszes": 3250,
+      "flotta_osszes": 3251,
       "flotta_pct": 3.1,
       "rollout": {
         "teljes": 2,
@@ -1417,7 +1418,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 0,
-      "flotta_osszes": 3258,
+      "flotta_osszes": 3249,
       "flotta_pct": 0.0,
       "rollout": {
         "teljes": 0,
