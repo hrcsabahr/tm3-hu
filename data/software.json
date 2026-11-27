@@ -1,124 +1,153 @@
 {
   "meta": {
-    "updated": "2026-11-26T10:06:30.000000Z",
+    "updated": "2026-11-27T06:53:42.000000Z",
     "forras": "Teslascope publikus API (teslascope.com/api/software)",
     "megjegyzes": "Automatikusan frissül GitHub Actions cron-nal (naponta). A flotta-adatok (darab, %) a Teslascope közösségi flottájából származnak; az európai/magyar rollout ettől eltérhet."
   },
   "latest": {
-    "version": "2026.44.1",
-    "datum": "2026-11-17",
-    "fsd": "HW4 14.3.13 · HW3 14.3 Lite",
-    "fsd_hw3": "14.3 Lite",
-    "fsd_hw4": "14.3.13",
-    "flotta_db": 504,
-    "flotta_osszes": 3356,
-    "flotta_pct": 15.0,
+    "version": "2026.44.3.1",
+    "datum": "2026-11-27",
+    "fsd": null,
+    "fsd_hw3": null,
+    "fsd_hw4": null,
+    "flotta_db": 0,
+    "flotta_osszes": 3350,
+    "flotta_pct": 0.0,
     "rollout": {
-      "teljes": 57,
-      "elérhető": 4,
-      "letöltés": 2,
+      "teljes": 5,
+      "elérhető": 1,
+      "letöltés": 0,
       "telepítés": 0
     },
-    "orszagok": [
-      "USA",
-      "Egyesült Királyság",
-      "Kanada",
-      "Németország",
-      "Franciaország",
-      "Svájc",
-      "Dánia",
-      "Hollandia",
-      "Ausztria",
-      "Spanyolország",
-      "Tajvan",
-      "Norvégia",
-      "Belgium",
-      "Olaszország",
-      "Lengyelország",
-      "Magyarország",
-      "Ukrajna",
-      "Iceland",
-      "Bulgaria",
-      "Csehország",
-      "Svédország",
-      "Írország",
-      "Mexikó",
-      "Izrael",
-      "Törökország",
-      "Malajzia",
-      "Szlovákia",
-      "Lithuania"
-    ],
+    "orszagok": [],
     "features": [
       {
-        "cim": "Arrival Options",
-        "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
-        "cim_hu": "Érkezési opciók",
-        "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.",
-        "customer_version": "2026.44.1"
-      },
-      {
-        "cim": "Charger Network View",
-        "leiras": "Charger pins on the map now cluster at normal zoom levels, showing network coverage as you zoom out.",
-        "cim_hu": "Töltőhálózat nézet",
-        "leiras_hu": "A töltőpont-jelölők a térképen normál nagyításnál mostantól csoportosulnak, így kifelé nagyítva látható a hálózat lefedettsége.",
-        "customer_version": "2026.44.1"
-      },
-      {
-        "cim": "FSD (Supervised) v14.3 Lite",
-        "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
-        "cim_hu": "FSD (Felügyelt) v14.3 Lite",
-        "leiras_hu": "Az FSD (Felügyelt) v14.3 Lite újdonságai:\n- A HW4 V14 intelligenciáját átültettük a HW3-ba. Így a HW3 közvetlenül, a HW4 V14-et útmutatóként használva tanulja meg a helyzetek kezelését. Ez a folyamat felszabadítja a HW4-hez készült fejlesztéseket — köztük a megerősítéses tanulást (RL) és az offline modelleket — a HW3 számára.\n- Javult a proaktív és reaktív reagálókészség a helyzetek széles körében: navigációkezelés, sávváltás és elágazások, gyalogos-interakciók, jelzőlámpák és sávba beváltó (cut-in) helyzetek.\n- Javult az általános komfort a megszokott helyzetekben: kevesebb téves lassítás, simább kormányzás és egyenletesebb sávközépen tartás.\n- Új parkolási, kiparkolási és tolatási képességek.\n- Hozzáadtuk az érkezési opciókat, hogy kiválaszd, hol húzódjon félre vagy parkoljon az FSD: parkolóban, az utcán vagy kocsifelhajtón.\n- A sebességprofilok mostantól mindig elérhetők, hogy tovább finomíthasd a vezetési stílust.",
-        "customer_version": "2026.44.1"
-      },
-      {
-        "cim": "Full Self-Driving (Supervised)",
-        "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. \n\nYou and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. Full Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
-        "cim_hu": "FSD (Felügyelt)",
-        "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
-        "customer_version": "2026.44.1"
-      },
-      {
-        "cim": "Security Improvements",
-        "leiras": "This update includes important security fixes and improvements.",
-        "cim_hu": "Biztonsági fejlesztések",
-        "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
-        "customer_version": "2026.44.1"
-      },
-      {
-        "cim": "Speed Profiles",
-        "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
-        "cim_hu": "Sebességprofilok",
-        "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph/km/h-ban.",
-        "customer_version": "2026.44.1"
-      },
-      {
-        "cim": "Start Self-Driving from Park",
-        "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). You can enable Brake Confirm in Self-Driving > Brake Confirm.\n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
-        "cim_hu": "Önvezetés indítása parkoló állapotból",
-        "leiras_hu": "A gomb akkor jelenik meg a képernyőn, ha a vezetőre vonatkozó feltételek teljesülnek. A feltételek (többek között):\n- A vezető a vezetőülésben ül\n- A vezető be van kötve\n- Az utastéri kamera látóterét semmi nem takarja\n\nA Fék-visszaigazolás megköveteli, hogy a vezető megnyomja és elengedje a fékpedált, mielőtt az FSD (Felügyelt) aktiválható. Ha a Fék-visszaigazolás ki van kapcsolva, a gomb megnyomásával az önvezetés fékezhet és aktiválhatja az FSD-t (Felügyelt). A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.\n\nEz a funkció nem teszi önvezetővé az autót, és folyamatosan figyelned kell, készen arra, hogy bármikor átvedd az irányítást. Csak a jármű vezetésére jogosult, érvényes jogosítvánnyal rendelkező személy foglalhatja el a vezetőülést, amíg a jármű nincs Színház vagy Játéktermi módban.",
-        "customer_version": "2026.44.1"
-      },
-      {
-        "cim": "UI Improvements",
-        "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
-        "cim_hu": "Kezelőfelület-fejlesztések",
-        "leiras_hu": "Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
-        "customer_version": "2026.44.1"
+        "cim": "Minor Fixes",
+        "leiras": "This release contains minor fixes and improvements",
+        "cim_hu": "Kisebb javítások",
+        "leiras_hu": "Ez a kiadás kisebb javításokat és fejlesztéseket tartalmaz.",
+        "customer_version": "2026.44.3.1"
       }
     ],
     "feature_cimek": [
-      "Érkezési opciók",
-      "Töltőhálózat nézet",
-      "FSD (Felügyelt) v14.3 Lite",
-      "FSD (Felügyelt)",
-      "Biztonsági fejlesztések",
-      "Sebességprofilok",
-      "Önvezetés indítása parkoló állapotból",
-      "Kezelőfelület-fejlesztések"
+      "Kisebb javítások"
     ]
   },
   "verziok": [
+    {
+      "version": "2026.44.1",
+      "datum": "2026-11-17",
+      "fsd": "HW4 14.3.13 · HW3 14.3 Lite",
+      "fsd_hw3": "14.3 Lite",
+      "fsd_hw4": "14.3.13",
+      "flotta_db": 507,
+      "flotta_osszes": 3350,
+      "flotta_pct": 15.1,
+      "rollout": {
+        "teljes": 53,
+        "elérhető": 4,
+        "letöltés": 2,
+        "telepítés": 0
+      },
+      "orszagok": [
+        "USA",
+        "Egyesült Királyság",
+        "Kanada",
+        "Németország",
+        "Franciaország",
+        "Svájc",
+        "Dánia",
+        "Hollandia",
+        "Ausztria",
+        "Spanyolország",
+        "Tajvan",
+        "Belgium",
+        "Norvégia",
+        "Olaszország",
+        "Lengyelország",
+        "Magyarország",
+        "Iceland",
+        "Svédország",
+        "Ukrajna",
+        "Csehország",
+        "Bulgaria",
+        "Lithuania",
+        "Malajzia",
+        "Törökország",
+        "Izrael",
+        "Mexikó",
+        "Szlovákia",
+        "Írország"
+      ],
+      "features": [
+        {
+          "cim": "Arrival Options",
+          "leiras": "- You can now select an arrival option such as Parking Lot, Street, Driveway, and Pull Over for Robotaxi-style drop offs. \n- Your preferences for arrival options and preferred parking positions are persisted for each destination.",
+          "cim_hu": "Érkezési opciók",
+          "leiras_hu": "Mostantól kiválaszthatod az érkezési opciót (például parkoló, utca, kocsifelhajtó vagy lehúzódás) a Robotaxi-stílusú kiszálláshoz.\n- Az érkezési opciókra és a preferált parkolási helyre vonatkozó beállításaid minden célállomásnál megjegyződnek.",
+          "customer_version": "2026.44.1"
+        },
+        {
+          "cim": "Charger Network View",
+          "leiras": "Charger pins on the map now cluster at normal zoom levels, showing network coverage as you zoom out.",
+          "cim_hu": "Töltőhálózat nézet",
+          "leiras_hu": "A töltőpont-jelölők a térképen normál nagyításnál mostantól csoportosulnak, így kifelé nagyítva látható a hálózat lefedettsége.",
+          "customer_version": "2026.44.1"
+        },
+        {
+          "cim": "FSD (Supervised) v14.3 Lite",
+          "leiras": "FSD (Supervised) v14.3 Lite includes:\n\n- Distilled the intelligence from HW4 V14 into HW3. This allows HW3 to directly learn how to handle scenarios using HW4 V14 as a guide. This process unlocks the improvements that have been made to HW4 including Reinforcement Learning (RL) and offline models for HW3.\n- Improved both proactive and reactive responsiveness across a wide variety of categories including navigation handling, merges and forks, pedestrian interactions, traffic lights, and vehicle cut-in scenarios.\n- Improved general comfort in nominal scenarios through fewer false slowdowns, smoother steering and more consistent lane centering.\n- Introduced parking, unparking, and reversing capabilities.\n- Added Arrival Options for you to select where FSD should pull over or park: in a Parking Lot, on the Street, in a Driveway.\n- Speed Profiles are now available at all times, to further customize driving style preference.",
+          "cim_hu": "FSD (Felügyelt) v14.3 Lite",
+          "leiras_hu": "Az FSD (Felügyelt) v14.3 Lite újdonságai:\n- A HW4 V14 intelligenciáját átültettük a HW3-ba. Így a HW3 közvetlenül, a HW4 V14-et útmutatóként használva tanulja meg a helyzetek kezelését. Ez a folyamat felszabadítja a HW4-hez készült fejlesztéseket — köztük a megerősítéses tanulást (RL) és az offline modelleket — a HW3 számára.\n- Javult a proaktív és reaktív reagálókészség a helyzetek széles körében: navigációkezelés, sávváltás és elágazások, gyalogos-interakciók, jelzőlámpák és sávba beváltó (cut-in) helyzetek.\n- Javult az általános komfort a megszokott helyzetekben: kevesebb téves lassítás, simább kormányzás és egyenletesebb sávközépen tartás.\n- Új parkolási, kiparkolási és tolatási képességek.\n- Hozzáadtuk az érkezési opciókat, hogy kiválaszd, hol húzódjon félre vagy parkoljon az FSD: parkolóban, az utcán vagy kocsifelhajtón.\n- A sebességprofilok mostantól mindig elérhetők, hogy tovább finomíthasd a vezetési stílust.",
+          "customer_version": "2026.44.1"
+        },
+        {
+          "cim": "Full Self-Driving (Supervised)",
+          "leiras": "Under your supervision, Full Self-Driving (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and park at your destination. \n\nYou and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent. Full Self-Driving (Supervised) is enabled on your vehicle. To use the feature, press the Start Self-Driving button on the UI, or press the right scroll wheel button once. You can disable Full Self-Driving (Supervised) in Self-Driving Settings.",
+          "cim_hu": "FSD (Felügyelt)",
+          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és leparkol a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz nyomd meg az Önvezetés indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
+          "customer_version": "2026.44.1"
+        },
+        {
+          "cim": "Security Improvements",
+          "leiras": "This update includes important security fixes and improvements.",
+          "cim_hu": "Biztonsági fejlesztések",
+          "leiras_hu": "Ez a frissítés fontos biztonsági javításokat és fejlesztéseket tartalmaz.",
+          "customer_version": "2026.44.1"
+        },
+        {
+          "cim": "Speed Profiles",
+          "leiras": "FSD (Supervised) will now determine the appropriate speed based on a mix of driver profile, speed limit, and surrounding traffic. \n- Introduced new Speed Profile SLOTH, which comes with lower speeds & more conservative lane selection than CHILL. \n- Driver profile now has a stronger impact on behavior. The more assertive the profile, the higher the max speed.\n- Right scroll-wheel up/down now adjusts Speed Profile setting rather than your precise max speed offset selection in mph/kph.",
+          "cim_hu": "Sebességprofilok",
+          "leiras_hu": "Az FSD (Felügyelt) mostantól a vezetői profil, a sebességkorlát és a környező forgalom alapján határozza meg a megfelelő sebességet.\n- Új SLOTH sebességprofil: alacsonyabb sebességek és konzervatívabb sávválasztás, mint a CHILL.\n- A vezetői profil mostantól erősebben befolyásolja a viselkedést: minél magabiztosabb a profil, annál nagyobb a maximális sebesség.\n- A jobb oldali görgő fel/le mostantól a sebességprofilt állítja, nem pedig a pontos maximális sebesség-eltolást mph/km/h-ban.",
+          "customer_version": "2026.44.1"
+        },
+        {
+          "cim": "Start Self-Driving from Park",
+          "leiras": "A button will appear on the screen when driver requirements are met. Driver requirements include (but are not limited to):\n- Driver is seated in driver's seat\n- Driver is buckled\n- Cabin Camera is unobstructed\n\nBrake Confirm requires the driver to press and release the brake pedal before FSD (Supervised) can be activated. When Brake Confirm is disabled, pressing the button will allow Self-Driving to apply the brakes and engage FSD (Supervised). You can enable Brake Confirm in Self-Driving > Brake Confirm.\n\nThis feature does not make your vehicle autonomous and you must remain attentive and be ready to take over at any time. Only a licensed driver authorized to operate the vehicle should be allowed access to the driver's seat position any time the vehicle is not in Theater or Arcade modes.",
+          "cim_hu": "Önvezetés indítása parkoló állapotból",
+          "leiras_hu": "A gomb akkor jelenik meg a képernyőn, ha a vezetőre vonatkozó feltételek teljesülnek. A feltételek (többek között):\n- A vezető a vezetőülésben ül\n- A vezető be van kötve\n- Az utastéri kamera látóterét semmi nem takarja\n\nA Fék-visszaigazolás megköveteli, hogy a vezető megnyomja és elengedje a fékpedált, mielőtt az FSD (Felügyelt) aktiválható. Ha a Fék-visszaigazolás ki van kapcsolva, a gomb megnyomásával az önvezetés fékezhet és aktiválhatja az FSD-t (Felügyelt). A Fék-visszaigazolást az Önvezetés > Fék-visszaigazolás menüben kapcsolhatod be.\n\nEz a funkció nem teszi önvezetővé az autót, és folyamatosan figyelned kell, készen arra, hogy bármikor átvedd az irányítást. Csak a jármű vezetésére jogosult, érvényes jogosítvánnyal rendelkező személy foglalhatja el a vezetőülést, amíg a jármű nincs Színház vagy Játéktermi módban.",
+          "customer_version": "2026.44.1"
+        },
+        {
+          "cim": "UI Improvements",
+          "leiras": "Adjust settings like the Speed Profile and Arrival Options directly from the Self-Driving visualization on the center display.",
+          "cim_hu": "Kezelőfelület-fejlesztések",
+          "leiras_hu": "Állítsd be a sebességprofilt és az érkezési opciókat közvetlenül a központi kijelző önvezetés-vizualizációjából.",
+          "customer_version": "2026.44.1"
+        }
+      ],
+      "feature_cimek": [
+        "Érkezési opciók",
+        "Töltőhálózat nézet",
+        "FSD (Felügyelt) v14.3 Lite",
+        "FSD (Felügyelt)",
+        "Biztonsági fejlesztések",
+        "Sebességprofilok",
+        "Önvezetés indítása parkoló állapotból",
+        "Kezelőfelület-fejlesztések"
+      ]
+    },
     {
       "version": "2026.39.100",
       "datum": "2026-11-11",
@@ -126,7 +155,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 44,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 1.3,
       "rollout": {
         "teljes": 8,
@@ -182,7 +211,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 42,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 1.3,
       "rollout": {
         "teljes": 1,
@@ -220,7 +249,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 0,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 0.0,
       "rollout": {
         "teljes": 0,
@@ -238,8 +267,8 @@
       "fsd": "HW4 15.0.1",
       "fsd_hw3": null,
       "fsd_hw4": "15.0.1",
-      "flotta_db": 30,
-      "flotta_osszes": 3356,
+      "flotta_db": 31,
+      "flotta_osszes": 3350,
       "flotta_pct": 0.9,
       "rollout": {
         "teljes": 0,
@@ -260,7 +289,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 136,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 4.1,
       "rollout": {
         "teljes": 9,
@@ -292,10 +321,10 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 350,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 10.4,
       "rollout": {
-        "teljes": 20,
+        "teljes": 19,
         "elérhető": 1,
         "letöltés": 0,
         "telepítés": 0
@@ -360,11 +389,11 @@
       "fsd": "HW4 14.3.13",
       "fsd_hw3": null,
       "fsd_hw4": "14.3.13",
-      "flotta_db": 648,
-      "flotta_osszes": 3356,
-      "flotta_pct": 19.3,
+      "flotta_db": 651,
+      "flotta_osszes": 3350,
+      "flotta_pct": 19.4,
       "rollout": {
-        "teljes": 25,
+        "teljes": 23,
         "elérhető": 0,
         "letöltés": 1,
         "telepítés": 0
@@ -419,7 +448,7 @@
       "fsd_hw3": null,
       "fsd_hw4": "14.3.13",
       "flotta_db": 607,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 18.1,
       "rollout": {
         "teljes": 1,
@@ -477,8 +506,8 @@
       "fsd_hw3": "14.3 Lite",
       "fsd_hw4": "14.3.13",
       "flotta_db": 1031,
-      "flotta_osszes": 3356,
-      "flotta_pct": 30.7,
+      "flotta_osszes": 3350,
+      "flotta_pct": 30.8,
       "rollout": {
         "teljes": 6,
         "elérhető": 0,
@@ -576,7 +605,7 @@
       "fsd_hw3": "14.3 Lite",
       "fsd_hw4": "14.3.13",
       "flotta_db": 93,
-      "flotta_osszes": 3353,
+      "flotta_osszes": 3351,
       "flotta_pct": 2.8,
       "rollout": {
         "teljes": 0,
@@ -665,7 +694,7 @@
       "fsd_hw3": null,
       "fsd_hw4": "14.3.12",
       "flotta_db": 151,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 4.5,
       "rollout": {
         "teljes": 3,
@@ -737,7 +766,7 @@
       "fsd_hw3": null,
       "fsd_hw4": "14.3.12",
       "flotta_db": 136,
-      "flotta_osszes": 3353,
+      "flotta_osszes": 3351,
       "flotta_pct": 4.1,
       "rollout": {
         "teljes": 1,
@@ -801,7 +830,7 @@
       "fsd_hw3": "14.3 Lite",
       "fsd_hw4": "14.3.12",
       "flotta_db": 1030,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 30.7,
       "rollout": {
         "teljes": 6,
@@ -892,7 +921,7 @@
       "fsd_hw3": "14.3 Lite",
       "fsd_hw4": "14.3.12",
       "flotta_db": 135,
-      "flotta_osszes": 3353,
+      "flotta_osszes": 3351,
       "flotta_pct": 4.0,
       "rollout": {
         "teljes": 0,
@@ -982,7 +1011,7 @@
       "fsd_hw3": "14.2 Lite",
       "fsd_hw4": "14.3.13",
       "flotta_db": 8,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 0.2,
       "rollout": {
         "teljes": 0,
@@ -1037,7 +1066,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 360,
-      "flotta_osszes": 3356,
+      "flotta_osszes": 3350,
       "flotta_pct": 10.7,
       "rollout": {
         "teljes": 3,
@@ -1111,8 +1140,8 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 327,
-      "flotta_osszes": 3356,
-      "flotta_pct": 9.7,
+      "flotta_osszes": 3350,
+      "flotta_pct": 9.8,
       "rollout": {
         "teljes": 2,
         "elérhető": 0,
@@ -1205,7 +1234,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 7,
-      "flotta_osszes": 3353,
+      "flotta_osszes": 3351,
       "flotta_pct": 0.2,
       "rollout": {
         "teljes": 1,
@@ -1257,7 +1286,7 @@
       "fsd_hw3": null,
       "fsd_hw4": null,
       "flotta_db": 69,
-      "flotta_osszes": 3353,
+      "flotta_osszes": 3351,
       "flotta_pct": 2.1,
       "rollout": {
         "teljes": 0,
@@ -1322,52 +1351,6 @@
         "Biztonsági fejlesztések",
         "Supercharger helyszín-térképek",
         "Vizuális frissítések"
-      ]
-    },
-    {
-      "version": "2026.33.100",
-      "datum": "2026-10-06",
-      "fsd": null,
-      "fsd_hw3": null,
-      "fsd_hw4": null,
-      "flotta_db": 42,
-      "flotta_osszes": 3356,
-      "flotta_pct": 1.3,
-      "rollout": {
-        "teljes": 0,
-        "elérhető": 0,
-        "letöltés": 0,
-        "telepítés": 0
-      },
-      "orszagok": [
-        "Hollandia",
-        "Belgium",
-        "Dánia",
-        "Csehország",
-        "Lithuania",
-        "Szlovákia",
-        "Slovenia",
-        "Estonia"
-      ],
-      "features": [
-        {
-          "cim": "FSD (Supervised)",
-          "leiras": "Under your supervision, FSD (Supervised) can drive your Tesla almost anywhere. It will start from a parked position, make lane changes, select forks to follow your navigation route, navigate around other vehicles and objects, make left and right turns and stop at your destination. You and anyone you authorize must use additional caution and remain attentive. It does not make your vehicle autonomous. Do not become complacent.  \n\nFSD (Supervised) is enabled on your vehicle. To use the feature, first watch the tutorial and take the quiz, available in the new Self-Driving App or in Control > Self-Driving. Then press the Start FSD (Supervised) button on the UI, or press the right scroll wheel button once. You can disable FSD (Supervised) in Self-Driving Settings.",
-          "cim_hu": "FSD (Felügyelt)",
-          "leiras_hu": "Az FSD (Felügyelt) a felügyeleted mellett szinte bárhová elvezeti a Tesládat. Parkoló állapotból indul, sávot vált, kiválasztja az elágazásokat a navigációs útvonalat követve, kikerüli a többi járművet és akadályt, balra-jobbra kanyarodik, és megáll a célállomásnál. Neked és mindenkinek, akit felhatalmazol, fokozott óvatossággal és figyelemmel kell lenned. Ez nem teszi önvezetővé az autót. Ne légy elbizakodott. Az FSD (Felügyelt) engedélyezve van a járműveden. A használathoz először nézd meg az oktatóanyagot és töltsd ki a kvízt (az új Önvezetés alkalmazásban vagy a Vezérlés > Önvezetés menüben). Ezután nyomd meg az FSD (Felügyelt) indítása gombot a kijelzőn, vagy egyszer a jobb oldali görgőt. Az FSD-t (Felügyelt) az Önvezetés beállításaiban kapcsolhatod ki.",
-          "customer_version": "2026.33.100"
-        },
-        {
-          "cim": "Minor Fixes",
-          "leiras": "This release contains minor fixes and improvements",
-          "cim_hu": "Kisebb javítások",
-          "leiras_hu": "Ez a kiadás kisebb javításokat és fejlesztéseket tartalmaz.",
-          "customer_version": "2026.33.100"
-        }
-      ],
-      "feature_cimek": [
-        "FSD (Felügyelt)",
-        "Kisebb javítások"
       ]
     }
   ]
